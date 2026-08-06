@@ -51,6 +51,28 @@ up:
 
 `entities/*.md`의 `mapmarker:` 값(city·region·river·sea·building·island·battlefield·mountain·lake·cape, 10종)이 Leaflet 플러그인의 마커 등록표에 없으면 회색 기본 마커로 대체되며 경고가 뜬다 — 지도 기능 자체엔 지장 없다. 신경 쓰인다면 플러그인 설정 > Leaflet > Marker Icons에서 위 10종을 등록하면 된다.
 
+## 미리보기 스크린샷
+
+GitHub 웹 화면에서는 위키링크·Dataview 쿼리·Leaflet 지도가 코드블록 텍스트로만 보인다. 실제 Obsidian에서 열었을 때 모습을 스크린샷으로 남긴다. 이해를 돕는 사진은 계속 추가될 예정이다.
+
+![온톨로지 MOC 진입 화면 — 객체 619개·관계 603개·좌표 220개 규모 요약](screenshots/01-ontology-overview.png)
+`로마제국쇠망사_온톨로지.md` 진입 화면. Properties 패널과 "규모" 요약, 설계 근거·병합 이력 링크가 보인다.
+
+![카이사르 엔티티 노트의 Properties 패널](screenshots/02-entity-caesar-properties.png)
+`entities/카이사르.md`. entity_type·points·aliases·생몰년 등 인물 엔티티 프론트매터 스키마 예시.
+
+![카이사르 엔티티 노트의 관계 섹션](screenshots/03-entity-caesar-relations.png)
+같은 노트의 "관계" 섹션. 위키링크로 연결된 다른 엔티티와의 관계가 화살표+연도로 나열된다.
+
+![카이사르 이동 경로 Leaflet 지도](screenshots/04-entity-caesar-route-map.png)
+"이동 경로" 섹션. Leaflet 지도에 갈리아 정복~내전 승리(기원전 58~45년) 경로가 점·선으로, 신뢰도가 색으로 표시된다.
+
+![서고트 왕국 엔티티 노트의 Properties 패널](screenshots/05-entity-visigoths-properties.png)
+`entities/서고트 왕국.md`. entity_type: group — 인물과 필드 구성이 다른 집단 타입 프론트매터 예시.
+
+![서고트 왕국 영토 Leaflet 지도](screenshots/06-entity-visigoths-territory-map.png)
+"영토" 섹션. 418~711년 영토가 폴리곤으로, 신뢰도가 음영 진하기로 표시된다.
+
 ## AI 에이전트가 이 레포를 다룰 때
 
 - **진입점 둘** — 책을 읽으려면 [[00_목차]](`points/`), 데이터를 다루려면 [[로마제국쇠망사_온톨로지]](루트). 설계 근거는 [[로마제국쇠망사_온톨로지_설계]].
