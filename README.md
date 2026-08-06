@@ -37,6 +37,30 @@ up:
 
 원전은 두 계통이다. `chapters/`·`source/`는 기번 영문 원전 계통이고, `points/`·`ontology/`·`entities/`는 가나모리 시게나리 편역 30포인트 한국어판 계통이다. 진입점은 [[로마제국쇠망사_온톨로지]].
 
+## Obsidian에서 보기
+
+이 폴더는 Obsidian Flavored Markdown으로 쓰였다 — 위키링크(`[[문서명]]`)·frontmatter·Dataview 쿼리·Leaflet 지도 블록이 섞여 있다. GitHub 웹 화면이나 일반 텍스트 편집기에서는 이 문법이 렌더링되지 않고 그대로 글자로 보인다. 원래 모습대로 보려면 Obsidian 앱이 필요하다.
+
+이미 산업스터디 볼트를 쓰고 있다면 이 레포는 그 볼트 안 `Books/로마제국쇠망사/`의 미러이므로 볼트에서 그대로 열면 된다. 새로 클론한 경우엔 이 폴더를 Obsidian에서 "폴더를 볼트로 열기"로 열면 된다.
+
+지도·표까지 보려면 커뮤니티 플러그인이 필요하다.
+
+- **Leaflet** — `entities/` 안 장소 노트 290여 개가 `location:` 좌표로 미니 지도를 그린다. 없으면 ` ```leaflet ` 코드블록이 그대로 텍스트로 보인다.
+- **Dataview** — [[로마제국쇠망사_온톨로지]]의 인물·지명·사건·30포인트 목록이 이걸로 자동 생성된다.
+- 족보(`family/*.canvas`)는 Obsidian 코어 Canvas 기능이라 플러그인 없이도 열린다.
+
+`entities/*.md`의 `mapmarker:` 값(city·region·river·sea·building·island·battlefield·mountain·lake·cape, 10종)이 Leaflet 플러그인의 마커 등록표에 없으면 회색 기본 마커로 대체되며 경고가 뜬다 — 지도 기능 자체엔 지장 없다. 신경 쓰인다면 플러그인 설정 > Leaflet > Marker Icons에서 위 10종을 등록하면 된다.
+
+## AI 에이전트가 이 레포를 다룰 때
+
+- **진입점 둘** — 책을 읽으려면 [[00_목차]](`points/`), 데이터를 다루려면 [[로마제국쇠망사_온톨로지]](루트). 설계 근거는 [[로마제국쇠망사_온톨로지_설계]].
+- **`entities/` 프론트매터 스키마** — `entity_type`(person/place/event/group/institution/work), `entity_id`, `location`([위도, 경도], place만), `mapmarker`, `points`(등장 포인트 번호 배열), `aliases`, `up: [[로마제국쇠망사_온톨로지]]`.
+- **원전 두 계통을 섞지 말 것** — `chapters/`·`source/`는 기번 영문 원전 계통, `points/`·`_raw/`·`ontology/`·`entities/`는 30포인트 한국어판 계통이다. 인물·사건 서술을 인용·요약할 때 두 계통을 혼동하면 사실관계가 어긋난다.
+- **`_raw/`·`points/`는 시판 중인 도서(북프렌즈 『30포인트로 읽어내는 로마 제국 쇠망사』)의 OCR 원문·재서술이다** — 이 레포가 private인 이유. 외부 공개·재배포 목적으로 가공하거나 이 두 폴더를 public 레포·서비스로 옮기지 말 것.
+- **`ontology/_scripts/`**에 엔티티·관계 데이터를 재생성하는 파이썬 스크립트가 있다. `entities/*.md`를 대량으로 손으로 고치기 전에 스크립트로 재생성하는 쪽이 나은지 먼저 확인한다.
+- **위키링크 해석** — `[[문서명]]`은 확장자 없는 파일명(또는 frontmatter `aliases`)과 매칭된다. GitHub이나 일반 마크다운 도구로 읽을 땐 이 링크가 렌더링되지 않으므로, 참조 대상을 찾으려면 `entities/`·`points/` 안에서 같은 이름의 `.md` 파일을 직접 찾으면 된다.
+- **정합성 규칙** — 연대·인물 생몰년 등 핵심 수치는 파일마다 다르면 안 된다. 다르면 어느 쪽이 채택값인지 명시하고 통일한다.
+
 ## 목차 진행상황
 
 | 장 | 제목 | 번역 | 해설 |
