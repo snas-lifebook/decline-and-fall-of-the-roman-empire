@@ -1,0 +1,104 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "하이모이시아 속주 — 하이모이시아 속주",
+    "description": "[대략] 트라키아 관구를 잘게 쪼갠 소속주 중 하나. 모이시아(도나우 방위선)와는 산맥으로 갈리고, 트라키아(관구 전체)의 일부일 뿐이다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.0,
+       42.3
+      ],
+      [
+       26.6,
+       42.6
+      ],
+      [
+       27.8,
+       42.7
+      ],
+      [
+       27.9,
+       41.9
+      ],
+      [
+       26.6,
+       41.5
+      ],
+      [
+       25.3,
+       41.7
+      ],
+      [
+       25.0,
+       42.3
+      ],
+      [
+       25.0,
+       42.3
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "하드리아노폴리스",
+    "description": "[주요 도시] 4세기 — 하이모이시아 속주의 핵심 도시(현 에디르네).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.56,
+     41.68
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "앙키알루스",
+    "description": "[항구도시] 4세기 — 흑해 연안의 항구도시(현 포모리에).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.65,
+     42.56
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "데벨투스",
+    "description": "[주요 도시] 4세기 — 흑해 인근 내륙 도시(현 부르가스 인근).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.47,
+     42.5
+    ]
+   }
+  }
+ ]
+}

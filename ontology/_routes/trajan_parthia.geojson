@@ -1,0 +1,127 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트라야누스의 파르티아 원정",
+    "period": "113~117"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      12.4862,
+      41.8917
+     ],
+     [
+      45.0382,
+      40.0691
+     ],
+     [
+      43.5,
+      33.7
+     ],
+     [
+      70.0,
+      20.0
+     ],
+     [
+      32.2,
+      36.28
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "year": 113,
+    "description": "[대략] 113 — 카이사르가 구상하고 안토니우스가 착수했던 동방 정복을 완성하고자 예순 살이 넘은 나이로 페르시아 원정을 일으킴",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4862,
+     41.8917
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아르메니아",
+    "year": 114,
+    "description": "[확실] 114 — 아르메니아를 정복하여 로마의 속주로 편입",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.0382,
+     40.0691
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메소포타미아",
+    "year": 115,
+    "description": "[확실] 115 — 메소포타미아를 정복하여 로마의 속주로 편입",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     43.5,
+     33.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "인도양",
+    "year": 116,
+    "description": "[확실] 116 — 정복 영역이 마침내 인도양에 이르러 로마 제국사 최대의 판도를 이룸. 인도·중국 공격을 위해 홍해에서 아라비아해를 건너는 외양 함대를 건조했으나 노쇠한 나이로 단념",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     70.0,
+     20.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "셀리누스",
+    "year": 117,
+    "description": "[확실] 117 — 정복지의 반란을 진압하며 로마로 귀환하던 중 소아시아의 셀리누스에서 악성 수종으로 경련을 일으켜 예순네 살의 나이로 사망",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.2,
+     36.28
+    ]
+   }
+  }
+ ]
+}

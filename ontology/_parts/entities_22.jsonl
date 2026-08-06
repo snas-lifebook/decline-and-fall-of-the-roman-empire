@@ -1,0 +1,18 @@
+{"name":"율리아누스","type":"person","aliases":["Julian"],"attrs":{"role":"emperor","reign":"361-363"},"points":[22],"desc":"동로마 황제. 페르시아 정벌 중 화살에 맞아 사망했고, 후계자를 지명하지 못해 제국에 혼란을 초래했다."}
+{"name":"발렌티니아누스","type":"person","aliases":["Valentinian I"],"attrs":{"role":"emperor","reign":"364-375"},"points":[22],"desc":"서로마 황제. 엄격한 군인이자 혹독한 통치자였으나 복지 정책도 추진했으며, 친동생 발렌스를 공치제로 삼아 제국을 동서로 분할했다."}
+{"name":"발렌스","type":"person","aliases":["Valens"],"attrs":{"role":"emperor","reign":"364-378"},"points":[22],"desc":"동로마 황제. 발렌티니아누스의 동생으로 공치제가 되었으나 의지박약하여 여러 문제에 대응하지 못했다."}
+{"name":"요비아누스","type":"person","aliases":["Jovian"],"attrs":{"role":"emperor","reign":"363-364"},"points":[22],"desc":"로마 황제. 율리아누스의 죽음 이후 역전의 사령관으로서 추대되었으나 귀로 중 일산화탄소 중독사했다."}
+{"name":"프로코피우스","type":"person","aliases":["Procopius"],"attrs":{"role":"general"},"points":[22],"desc":"율리아누스의 먼 친척으로 발렌스 황제에 대해 반란을 일으켰으나 병사들의 배신으로 체포되어 처형되었다."}
+{"name":"에우독수스","type":"person","attrs":{"role":"bishop"},"points":[22],"desc":"콘스탄티노플의 주교. 아리우스파에 속했으며 발렌스 황제에게 세례를 주었다."}
+{"name":"테오도시우스 1세","type":"person","attrs":{"role":"emperor"},"points":[22],"desc":"발렌스 황제의 뒤를 이은 황제. 아리우스파를 정식으로 이단 판정했다."}
+{"name":"막시미누스","type":"person","attrs":{"role":"governor"},"points":[22],"desc":"갈리아 민정 총독. 발렌티니아누스 황제의 잔혹함을 따라 명문 일가를 살해했다."}
+{"name":"샤푸르","type":"person","attrs":{"role":"king","title":"페르시아 왕"},"points":[22],"desc":"페르시아 왕. 로마와의 전쟁에서 율리아누스를 격퇴했다."}
+{"name":"콘스탄티누스","type":"person","attrs":{"role":"emperor"},"points":[22],"desc":"로마 제국을 통일했던 황제."}
+{"name":"로마","type":"place","aliases":["Roma"],"attrs":{"region":"도시"},"points":[22],"desc":"로마 제국의 중심 도시."}
+{"name":"콘스탄티노플","type":"place","aliases":["Constantinople"],"attrs":{"region":"도시"},"points":[22],"desc":"로마 동부의 수도. 콘스탄티누스가 건설했다."}
+{"name":"밀라노","type":"place","aliases":["Milan"],"attrs":{"region":"도시"},"points":[22],"desc":"발렌티니아누스 황제의 거처가 있던 도시."}
+{"name":"도나우 강","type":"place","attrs":{"region":"강"},"points":[22],"desc":"로마 제국의 북부 경계선이 되는 강."}
+{"name":"페르시아","type":"place","attrs":{"region":"국가"},"points":[22],"desc":"로마의 오랜 숙적. 율리아누스가 정벌했던 지역."}
+{"name":"아리우스파","type":"group","aliases":["Arianism"],"attrs":{"role":"religious sect"},"points":[22],"desc":"기독교의 분파. 발렌스 황제가 지지했으나 정통파로부터 이단 취급을 받았다."}
+{"name":"원로원","type":"institution","attrs":{"role":"governing body"},"points":[22],"desc":"로마 제국의 최고 의결 기구."}
+{"name":"공치제제","type":"institution","attrs":{"role":"system"},"points":[22],"desc":"제국을 두 명의 황제가 함께 다스리는 제도."}

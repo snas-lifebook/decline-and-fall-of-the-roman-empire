@@ -1,0 +1,171 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라인 강",
+    "period": "기원전 1세기~서기 5세기"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      8.67,
+      46.77
+     ],
+     [
+      7.59,
+      47.56
+     ],
+     [
+      7.75,
+      48.58
+     ],
+     [
+      8.2736,
+      49.9994
+     ],
+     [
+      6.9603,
+      50.9375
+     ],
+     [
+      5.87,
+      51.85
+     ],
+     [
+      4.48,
+      51.93
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라인 강 발원지(토마 호)",
+    "year": null,
+    "description": "[대략] ? — 스위스 알프스에서 발원. 로마인에게는 세계의 북쪽 끝자락으로 여겨진 산악 수원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.67,
+     46.77
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "바젤",
+    "year": null,
+    "description": "[대략] ? — 로마 게르마니아 프리마 속주와 강 북안 게르만족 사이의 경계 도시",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.59,
+     47.56
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스트라스부르",
+    "year": null,
+    "description": "[확실] ? — 로마 군단 기지 아르겐토라툼. 357년 율리아누스가 알레만니족을 대파한 전장 인근",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.75,
+     48.58
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라인 강",
+    "year": null,
+    "description": "[확실] ? — 모군티아쿰(마인츠). 로마 게르마니아 수페리오르 속주의 중심 군단기지이자 강 건너 게르만족과 대치하는 리메스의 요충",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.2736,
+     49.9994
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "쾰른",
+    "year": null,
+    "description": "[확실] ? — 콜로니아 아그리피넨시스. 게르마니아 인페리오르 속주의 수도",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9603,
+     50.9375
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "리메스 북단 구간(니메겐 인근)",
+    "year": null,
+    "description": "[대략] ? — 라인 강이 사실상 로마 제국의 영구적 북방 국경선으로 고착된 구간. 강 건너는 로마 지배가 미치지 않는 자유 게르마니아",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.87,
+     51.85
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "북해 하구",
+    "year": null,
+    "description": "[대략] ? — 북해로 흘러드는 하구",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.48,
+     51.93
+    ]
+   }
+  }
+ ]
+}

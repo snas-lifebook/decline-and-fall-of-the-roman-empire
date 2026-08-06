@@ -1,0 +1,28 @@
+{"name":"콘스탄티누스 11세","type":"person","aliases":[],"attrs":{"role":"Byzantine emperor","reign":"1449-1453","death":"battle"},"points":[30],"desc":"콘스탄티노플의 마지막 황제로 항복하지 않고 제국과 운명을 함께하겠다며 전투의 최전선으로 뛰어들어 전사했다."}
+{"name":"메메트 2세","type":"person","aliases":["Mehmed II"],"attrs":{"role":"Ottoman sultan","reign":"1444-1446, 1451-1481","age_at_conquest":21},"points":[30],"desc":"콘스탄티노플을 공략한 오스만투르크의 술탄으로 전대미문의 기책으로 도시를 함락시켰다."}
+{"name":"마누엘 2세","type":"person","aliases":[],"attrs":{"role":"Byzantine emperor","reign":"1391-1425"},"points":[30],"desc":"콘스탄티노플을 포위한 오스만투르크의 위협으로부터 유럽 국가들의 지원을 요청했던 황제."}
+{"name":"헨리 4세","type":"person","aliases":[],"attrs":{"role":"king of England","reign":"1399-1413"},"points":[30],"desc":"마누엘 2세가 방문하여 군사 지원을 요청한 영국 국왕."}
+{"name":"티무르","type":"person","aliases":["Tamerlane"],"attrs":{"role":"Central Asian conqueror","empire":"Timurid Empire"},"points":[30],"desc":"1402년 오스만투르크에 결정적인 타격을 가한 중앙아시아의 제국 지도자."}
+{"name":"유스티니아니","type":"person","aliases":[],"attrs":{"role":"Genoese commander","battlefield":"Constantinople"},"points":[30],"desc":"수도 방위의 중추였던 제노바 출신 사령관으로 팔에 총을 맞은 후 전의를 상실하고 도망쳤다."}
+{"name":"프란자","type":"person","aliases":[],"attrs":{"role":"witness","reliability":"disputed"},"points":[30],"desc":"이 전투에 참가했다고 증언한 인물로 기번은 그의 증언 신빙성을 의심했다."}
+{"name":"콘스탄티누스 대제","type":"person","aliases":["Constantine I"],"attrs":{"role":"Roman emperor","achievement":"built Constantinople"},"points":[30],"desc":"콘스탄티노플을 건설한 로마 황제로 함락 직전 성당 앞 광장의 그의 주랑에서 기적이 일어날 것으로 믿어졌다."}
+{"name":"기번","type":"person","aliases":["Edward Gibbon"],"attrs":{"role":"historian"},"points":[30],"desc":"이 전투를 자세히 묘사하고 싶지 않았던 역사가."}
+{"name":"콘스탄티노플","type":"place","aliases":["Constantinople"],"attrs":{"region":"Asia Minor","type":"city","shape":"triangle","founding":"4th century","fall":1453},"points":[30],"desc":"삼각형 모양의 도시로 마르마라해와 항구에 면하고 10킬로미터 이중 성벽과 30미터 해자로 둘러싸여 있었다."}
+{"name":"발칸 반도","type":"place","aliases":[],"attrs":{"region":"Europe","type":"region"},"points":[30],"desc":"15세기 중반 콘스탄티노플 근교를 제외하고 이슬람의 영토였다."}
+{"name":"소아시아","type":"place","aliases":[],"attrs":{"region":"Middle East","type":"region"},"points":[30],"desc":"15세기 중반 이슬람의 영토였던 지역."}
+{"name":"성 소피아 성당","type":"place","aliases":["Hagia Sophia"],"attrs":{"location":"Constantinople","type":"religious building"},"points":[30],"desc":"콘스탄티노플의 주요 성당으로 함락 직전 시민들이 피난처로 삼았고 오스만투르크 군이 포위했다."}
+{"name":"성 로마누스 교회","type":"place","aliases":[],"attrs":{"location":"Constantinople","type":"church"},"points":[30],"desc":"콘스탄티노플의 성벽 근처에 있던 교회로 오스만투르크 군의 대포에 탑이 무너졌다가 하룻밤 만에 복구되었다."}
+{"name":"성 로마누스 문","type":"place","aliases":[],"attrs":{"location":"Constantinople","type":"gate"},"points":[30],"desc":"콘스탄티노플의 성벽에 있는 문으로 근처의 네 개 탑이 오스만투르크 군의 화력에 완전히 무너졌다."}
+{"name":"보스포루스 해협","type":"place","aliases":[],"attrs":{"region":"Middle East","type":"strait","importance":"strategic location"},"points":[30],"desc":"콘스탄티노플 근처의 해협으로 오스만투르크 함대가 300척으로 봉쇄했다."}
+{"name":"마르마라해","type":"place","aliases":[],"attrs":{"type":"sea"},"points":[30],"desc":"콘스탄티노플의 한 변이 면해 있던 해역."}
+{"name":"에게해","type":"place","aliases":[],"attrs":{"type":"sea"},"points":[30],"desc":"동로마 황제가 물자를 공급받으려 요청한 지역에 있는 섬들."}
+{"name":"시칠리아","type":"place","aliases":[],"attrs":{"type":"region"},"points":[30],"desc":"동로마 황제가 물자 공급을 요청한 곳."}
+{"name":"아프라시아브","type":"place","aliases":["Samarkand"],"attrs":{"location":"Central Asia","type":"city"},"points":[30],"desc":"중앙아시아의 최고 도시로 함락된 콘스탄티노플이 자갈산이 된 것을 보고 메메트 2세가 인용한 시에 나오는 도시."}
+{"name":"오스만 제국","type":"group","aliases":["Ottoman Empire"],"attrs":{"type":"Islamic empire","founder":"Osman"},"points":[30],"desc":"콘스탄티노플을 공략하고 함락시킨 이슬람 왕조."}
+{"name":"오스만투르크","type":"group","aliases":["Ottoman Turks"],"attrs":{"type":"military force","origin":"Central Asia"},"points":[30],"desc":"메메트 2세를 중심으로 콘스탄티노플을 포위하고 함락시킨 군대."}
+{"name":"동로마 제국","type":"group","aliases":["Byzantine Empire"],"attrs":{"type":"empire","lifespan":"330-1453"},"points":[30],"desc":"콘스탄티노플을 수도로 한 제국으로 2200년간 이어져온 로마 제국의 마지막 형태."}
+{"name":"예니체리","type":"group","aliases":[],"attrs":{"type":"military unit","status":"elite force"},"points":[30],"desc":"오스만투르크 군이 자랑하는 무적의 정예군으로 전투 개시 2시간 후 돌격했다."}
+{"name":"제노바","type":"group","aliases":[],"attrs":{"type":"maritime republic"},"points":[30],"desc":"함락 직전 원군을 보내고 근린 해양제국으로 구원의 손길을 기대했던 국가."}
+{"name":"베네치아","type":"group","aliases":[],"attrs":{"type":"maritime republic"},"points":[30],"desc":"콘스탄티노플에 원군을 보낸 해양제국."}
+{"name":"기독교도","type":"group","aliases":[],"attrs":{"type":"religious group"},"points":[30],"desc":"콘스탄티노플의 주민과 방위군."}
+{"name":"이슬람교도","type":"group","aliases":[],"attrs":{"type":"religious group"},"points":[30],"desc":"오스만투르크 군과 메메트 2세의 종교 신앙."}

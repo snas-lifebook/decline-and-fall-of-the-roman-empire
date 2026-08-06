@@ -1,0 +1,52 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "삼니움인 — 삼니움 (기원전 4세기, 삼니움 전쟁 이전)",
+    "description": "[확실] 기원전 4세기, 로마와의 삼니움 전쟁(기원전 343~290년) 발발 이전 삼니움 부족 연맹의 대략적 영역 — 아펜니노 산맥 중남부 내륙.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.5,
+       42.3
+      ],
+      [
+       14.7,
+       42.0
+      ],
+      [
+       14.9,
+       41.3
+      ],
+      [
+       14.5,
+       40.9
+      ],
+      [
+       13.7,
+       41.2
+      ],
+      [
+       13.4,
+       41.8
+      ],
+      [
+       13.5,
+       42.3
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트라키아 — 트라키아 관구",
+    "description": "[확실] 모이시아(도나우 남안, 더 서쪽·북쪽)와는 하이무스 산맥으로 나뉘고, 하이모이시아 속주(이 관구를 잘게 쪼갠 소속주 중 하나)보다 훨씬 넓다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       23.0,
+       42.8
+      ],
+      [
+       24.7,
+       43.2
+      ],
+      [
+       27.5,
+       43.7
+      ],
+      [
+       28.6,
+       42.5
+      ],
+      [
+       28.0,
+       41.0
+      ],
+      [
+       26.6,
+       40.9
+      ],
+      [
+       24.9,
+       41.0
+      ],
+      [
+       23.0,
+       42.0
+      ],
+      [
+       23.0,
+       42.8
+      ],
+      [
+       23.0,
+       42.8
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "필리포폴리스",
+    "description": "[주요 도시] 3세기 — 트라키아 내륙의 핵심 도시(현 플로브디프).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     24.75,
+     42.15
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "하드리아노폴리스",
+    "description": "[주요 도시] 378 — 378년 하드리아노폴리스 전투가 벌어진 곳.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.56,
+     41.68
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비잔티움",
+    "description": "[관구 최대 도시] 4세기 — 훗날 콘스탄티노플로 개칭되는 트라키아 관구의 중심.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.98,
+     41.01
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페린투스",
+    "description": "[항구도시] 4세기 — 마르마라해 연안의 항구(현 마르마라 에레일리시).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.95,
+     40.97
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{"point":6,"from":"카이사르","rel":"동맹","to":"폼페이우스","from_year":-60,"to_year":-49,"basis":"chronology"}
+{"point":6,"from":"카이사르","rel":"동맹","to":"크라수스","from_year":-60,"to_year":-53,"basis":"chronology"}
+{"point":6,"from":"카이사르","rel":"참전·관여","to":"갈리아 정복","from_year":-58,"to_year":-51,"basis":"chronology"}
+{"point":6,"from":"베르킹게토릭스","rel":"참전·관여","to":"갈리아 정복","from_year":-53,"to_year":-51,"basis":"chronology"}
+{"point":6,"from":"카이사르","rel":"통치","to":"갈리아","from_year":-58,"to_year":-50,"basis":"chronology"}
+{"point":6,"from":"카이사르","rel":"참전·관여","to":"제1차 삼두정치","from_year":-60,"to_year":-49,"basis":"chronology"}
+{"point":6,"from":"폼페이우스","rel":"참전·관여","to":"제1차 삼두정치","from_year":-60,"to_year":-49,"basis":"chronology"}
+{"point":6,"from":"크라수스","rel":"참전·관여","to":"제1차 삼두정치","from_year":-60,"to_year":-49,"basis":"chronology"}
+{"point":6,"from":"게르마니아인","rel":"적대","to":"갈리아","from_year":-58,"to_year":-58,"basis":"chronology"}
+{"point":6,"from":"헬베티족","rel":"적대","to":"갈리아","from_year":-58,"to_year":-58,"basis":"chronology"}
+{"point":6,"from":"켈트족","rel":"적대","to":"로마","from_year":-58,"to_year":-51,"basis":"chronology"}
+{"point":6,"from":"베르킹게토릭스","rel":"참전·관여","to":"알레시아 포위전","from_year":-52,"to_year":-52,"basis":"chronology"}
+{"point":6,"from":"카이사르","rel":"참전·관여","to":"알레시아 포위전","from_year":-52,"to_year":-52,"basis":"chronology"}
+{"point":6,"from":"밀로","rel":"적대","to":"클로디우스","from_year":-52,"to_year":-52,"basis":"chronology"}
+{"point":12,"from":"네로","rel":"통치","to":"로마","from_year":54,"to_year":68,"basis":"chronology"}
+{"point":12,"from":"갈바","rel":"계승","to":"네로","from_year":68,"to_year":68,"basis":"chronology"}
+{"point":12,"from":"갈바","rel":"통치","to":"로마","from_year":68,"to_year":69,"basis":"chronology"}
+{"point":12,"from":"네로","rel":"적대","to":"기독교","from_year":64,"to_year":64,"basis":"text"}
+{"point":12,"from":"빈덱스","rel":"동맹","to":"갈바","from_year":68,"to_year":68,"basis":"chronology"}
+{"point":18,"from":"발레리아누스","rel":"통치","to":"로마","from_year":253,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"발레리아누스","rel":"참전·관여","to":"에데사의 전투","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"샤푸르","rel":"참전·관여","to":"에데사의 전투","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"샤푸르","rel":"참전·관여","to":"아르메니아 정복","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"갈리에누스","rel":"동맹","to":"오다이나투스","from_year":260,"to_year":268,"basis":"chronology"}
+{"point":18,"from":"오다이나투스","rel":"적대","to":"샤푸르","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"에데사의 전투","rel":"참전·관여","to":"로마 군","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"에데사의 전투","rel":"참전·관여","to":"페르시아 군","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"데모스테네스","rel":"참전·관여","to":"카이사레아","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":18,"from":"발레리아누스","rel":"적대","to":"샤푸르","from_year":260,"to_year":260,"basis":"chronology"}
+{"point":24,"from":"테오도시우스","rel":"동맹","to":"고트족","from_year":382,"to_year":395,"basis":"text"}
+{"point":24,"from":"알라리크","rel":"통치","to":"고트족","from_year":395,"to_year":410,"basis":"chronology"}
+{"point":24,"from":"알라리크","rel":"적대","to":"로마","from_year":395,"to_year":410,"basis":"chronology"}
+{"point":24,"from":"고트족","rel":"적대","to":"로마","from_year":395,"to_year":410,"basis":"chronology"}
+{"point":24,"from":"알라리크","rel":"적대","to":"콘스탄티노플","from_year":395,"to_year":400,"basis":"inferred"}
+{"point":24,"from":"알라리크","rel":"적대","to":"그리스","from_year":395,"to_year":400,"basis":"chronology"}
+{"point":24,"from":"알라리크","rel":"적대","to":"에페이로스","from_year":395,"to_year":400,"basis":"chronology"}
+{"point":24,"from":"로마 시 함락","rel":"발생지","to":"로마","from_year":410,"to_year":410,"basis":"chronology"}
+{"point":30,"from":"콘스탄티누스 11세","rel":"통치","to":"콘스탄티노플","from_year":1449,"to_year":1453,"basis":"chronology"}
+{"point":30,"from":"콘스탄티누스 11세","rel":"통치","to":"동로마 제국","from_year":1449,"to_year":1453,"basis":"chronology"}
+{"point":30,"from":"메메트 2세","rel":"소속","to":"오스만투르크","from_year":1451,"to_year":1481,"basis":"chronology"}
+{"point":30,"from":"메메트 2세","rel":"정복","to":"콘스탄티노플","from_year":1453,"to_year":1453,"basis":"chronology"}
+{"point":30,"from":"마누엘 2세","rel":"통치","to":"동로마 제국","from_year":1391,"to_year":1425,"basis":"chronology"}
+{"point":30,"from":"티무르","rel":"적대","to":"오스만 제국","from_year":1402,"to_year":1402,"basis":"text"}
+{"point":30,"from":"유스티니아니","rel":"참전·관여","to":"콘스탄티노플","from_year":1453,"to_year":1453,"basis":"chronology"}
+{"point":30,"from":"오스만투르크","rel":"정복","to":"콘스탄티노플","from_year":1453,"to_year":1453,"basis":"chronology"}
+{"point":30,"from":"오스만투르크","rel":"적대","to":"동로마 제국","from_year":1402,"to_year":1453,"basis":"chronology"}

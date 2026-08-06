@@ -1,0 +1,116 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스칸디나비아 반도 — 스칸디나비아 반도 (노르웨이·스웨덴 중심)",
+    "description": "[불확실] 반도의 지형 윤곽은 현대 지리로 확정되지만, 이를 고트족 발상지로 보는 요르다네스의 전승 자체가 신빙성 낮은 전설이라 전체 신뢰도를 낮게 표시했다",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       5.0,
+       58.0
+      ],
+      [
+       7.0,
+       62.0
+      ],
+      [
+       10.0,
+       65.0
+      ],
+      [
+       14.0,
+       67.5
+      ],
+      [
+       16.0,
+       69.0
+      ],
+      [
+       20.0,
+       69.5
+      ],
+      [
+       24.0,
+       68.5
+      ],
+      [
+       23.0,
+       65.5
+      ],
+      [
+       21.0,
+       63.0
+      ],
+      [
+       18.5,
+       60.0
+      ],
+      [
+       17.5,
+       58.5
+      ],
+      [
+       13.0,
+       55.5
+      ],
+      [
+       10.5,
+       57.0
+      ],
+      [
+       7.5,
+       58.0
+      ],
+      [
+       5.0,
+       58.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "고틀란드",
+    "description": "[전승상 고트 원향] 전설상 — 요르다네스가 말한 'Gotiscandza', 고트족 이름의 유래로 추정되는 섬",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.5,
+     57.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "웁살라",
+    "description": "[전승상 종교 중심] 전설상 — 게르만 신화 속 스칸디나비아 종교·왕권의 상징적 중심지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.64,
+     59.86
+    ]
+   }
+  }
+ ]
+}

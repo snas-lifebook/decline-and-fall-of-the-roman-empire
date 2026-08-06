@@ -1,0 +1,165 @@
+{
+  "name": "동고트 왕국",
+  "period": "493~553",
+  "summary": "테오도리크 대왕이 이탈리아에 세운 게르만 왕국. 유스티니아누스의 고트 전쟁(535~553)으로 멸망.",
+  "territory": [
+    {
+      "part": "이탈리아 반도",
+      "note": "테오도리크 치세 최대 판도(493~526). 526년 테오도리크 사망 후 유스티니아누스 전쟁으로 축소.",
+      "confidence": "high",
+      "ring": [
+        [13.0, 46.5],
+        [14.5, 45.5],
+        [16.0, 44.5],
+        [18.0, 42.0],
+        [18.5, 40.5],
+        [14.5, 40.5],
+        [14.0, 40.0],
+        [13.5, 39.0],
+        [12.5, 41.0],
+        [9.5, 43.0],
+        [9.0, 44.5],
+        [10.5, 45.5],
+        [12.0, 46.0],
+        [13.0, 46.5]
+      ]
+    },
+    {
+      "part": "시칠리아",
+      "note": "493년부터 왕국 영토에 포함",
+      "confidence": "high",
+      "ring": [
+        [15.5, 38.5],
+        [16.0, 38.0],
+        [15.0, 37.5],
+        [14.5, 37.0],
+        [13.0, 37.5],
+        [12.5, 38.0],
+        [13.0, 38.5],
+        [15.5, 38.5]
+      ]
+    },
+    {
+      "part": "달마티아",
+      "note": "아드리아해 동쪽 해안(현 크로아티아). 경계 확도 불확정.",
+      "confidence": "medium",
+      "ring": [
+        [16.0, 45.0],
+        [16.5, 43.5],
+        [17.0, 42.5],
+        [17.5, 42.0],
+        [18.5, 43.0],
+        [17.0, 44.0],
+        [16.0, 45.0]
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "place": "라벤나",
+      "lat": 44.4157,
+      "lon": 12.1966,
+      "year": 493,
+      "role": "수도",
+      "event": "테오도리크가 오도아케르를 죽이고 라벤나를 왕국의 수도로 삼았다.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "로마",
+      "lat": 41.8917,
+      "lon": 12.4862,
+      "year": 493,
+      "role": "주요도시",
+      "event": "동고트 왕국의 상징적 도시. 유스티니아누스 전쟁 이후 폐허가 됨.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "밀라노",
+      "lat": 45.4643,
+      "lon": 9.1895,
+      "year": 493,
+      "role": "주요도시",
+      "event": "북부 주요 도시. 493년 테오도리크 왕국에 포함.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "팔레르모",
+      "lat": 38.118,
+      "lon": 13.363,
+      "year": 493,
+      "role": "항구",
+      "event": "시칠리아 주요 항구. 왕국 해양 무역의 중심.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "메시나",
+      "lat": 38.1923,
+      "lon": 15.5566,
+      "year": 493,
+      "role": "항구",
+      "event": "시칠리아 북동부 항구. 해협 통제의 전략적 요충지.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "시라쿠사",
+      "lat": 37.0639,
+      "lon": 15.293,
+      "year": 493,
+      "role": "주요도시",
+      "event": "시칠리아 남동부 주요 도시.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "브린디시",
+      "lat": 40.633,
+      "lon": 17.933,
+      "year": 493,
+      "role": "항구",
+      "event": "이탈리아 남동부 항구. 아드리아해 통제.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "토리노",
+      "lat": 45.0792,
+      "lon": 7.6761,
+      "year": 493,
+      "role": "주요도시",
+      "event": "북부 알프스 기슭 도시. 왕국의 북서쪽 경계.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "타란토",
+      "lat": 40.4711,
+      "lon": 17.2431,
+      "year": 493,
+      "role": "항구",
+      "event": "남부 이탈리아 항구. 왕국의 남동쪽 요충지.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "스폴레토",
+      "lat": 42.7352,
+      "lon": 12.7403,
+      "year": 493,
+      "role": "주요도시",
+      "event": "중부 이탈리아 도시. 로마와 북부를 연결하는 전략적 위치.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Ostrogothic Kingdom",
+    "Wikipedia: Theodoric the Great",
+    "Britannica: Theodoric",
+    "Procopius: De Bellis (고트 전쟁)"
+  ]
+}

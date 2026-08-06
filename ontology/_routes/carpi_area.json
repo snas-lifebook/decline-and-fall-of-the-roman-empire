@@ -1,0 +1,26 @@
+{
+  "name": "카르피족",
+  "subject": "카르피족",
+  "color": "#558B2F",
+  "period": "2세기~3세기",
+  "summary": "다키아족과 계통이 가까운 것으로 추정되는 부족으로, 트라야누스의 다키아 정복(106년) 이후 동카르파티아·몰다비아 일대에 자리 잡아 3세기 내내 로마 도나우 변경을 습격했다.",
+  "territory": [
+    {
+      "part": "동카르파티아·몰다비아",
+      "note": "2~3세기. 다키아 왕국 멸망 이후 이 일대에 자리 잡은 것으로 사료에 등장. 정확한 경계는 로마 측 기록에 의존해 근사치.",
+      "confidence": "medium",
+      "ring": [
+        [25.0, 48.0],
+        [28.0, 48.0],
+        [28.5, 46.0],
+        [25.5, 45.5],
+        [24.5, 46.5]
+      ]
+    }
+  ],
+  "cities": [],
+  "sources": [
+    "Wikipedia: Carpi (people) (https://en.wikipedia.org/wiki/Carpi_(people))",
+    "Zosimus, Historia Nova"
+  ]
+}

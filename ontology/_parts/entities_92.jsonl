@@ -1,0 +1,32 @@
+{"name": "쾰른", "type": "place", "aliases": ["Colonia Agrippina"], "attrs": {}, "points": [19], "desc": "포스투무스가 제위를 칭하고 갈리아 제국의 근거지로 삼았다."}
+{"name": "트리어", "type": "place", "aliases": ["Augusta Treverorum"], "attrs": {}, "points": [19], "desc": "갈리아 제국의 마지막 수도였다."}
+{"name": "보르도", "type": "place", "aliases": ["Burdigala"], "attrs": {}, "points": [19], "desc": "갈리아 제국 시기의 중요 도시였다."}
+{"name": "스트라스부르", "type": "place", "aliases": ["Argentoratum"], "attrs": {}, "points": [19], "desc": "갈리아 제국의 국경 요새였다."}
+{"name": "요크", "type": "place", "aliases": ["Eboracum"], "attrs": {}, "points": [19], "desc": "갈리아 제국 시기 브리타니아의 로마 군사 기지였다."}
+{"name": "메리다", "type": "place", "aliases": ["Emerita Augusta"], "attrs": {}, "points": [19], "desc": "갈리아 제국의 히스파니아 거점이었다."}
+{"name": "파비아", "type": "place", "aliases": ["Ticinum"], "attrs": {}, "points": [29], "desc": "롬바르드 왕국의 수도가 되었다."}
+{"name": "베르가모", "type": "place", "aliases": ["Bergomum"], "attrs": {}, "points": [29], "desc": "롬바르드 왕국의 요새 도시였다."}
+{"name": "베로나", "type": "place", "aliases": ["Verona"], "attrs": {}, "points": [29], "desc": "롬바르드 왕국의 동부 거점이었다."}
+{"name": "브레시아", "type": "place", "aliases": ["Brixia"], "attrs": {}, "points": [29], "desc": "롬바르드 왕국의 주요 도시였다."}
+{"name": "크레모나", "type": "place", "aliases": ["Cremona"], "attrs": {}, "points": [29], "desc": "롬바르드 왕국의 포강 유역 거점이었다."}
+{"name": "베네벤토", "type": "place", "aliases": ["Beneventum"], "attrs": {}, "points": [29], "desc": "롬바르드 시대 베네벤토 공국의 수도였다."}
+{"name": "테르니", "type": "place", "aliases": ["Interamna"], "attrs": {}, "points": [29], "desc": "스폴레토 공국의 산악 도시였다."}
+{"name": "리에티", "type": "place", "aliases": ["Reate"], "attrs": {}, "points": [29], "desc": "스폴레토 공국의 동쪽 거점이었다."}
+{"name": "크테시폰", "type": "place", "aliases": ["Ctesiphon"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 겨울 수도였다."}
+{"name": "에크바타나", "type": "place", "aliases": ["Ecbatana"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 여름 수도였다."}
+{"name": "바빌론", "type": "place", "aliases": ["Babylon"], "attrs": {}, "points": [18], "desc": "사산조 페르시아 시대의 거주 도시였다."}
+{"name": "수사", "type": "place", "aliases": ["Susa"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 쿠제스탄 주요 도시였다."}
+{"name": "곤디샤푸르", "type": "place", "aliases": ["Gundeshapur"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 의료·학문 중심지였다."}
+{"name": "비샤푸르", "type": "place", "aliases": ["Bishapur"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 그리스식 도시였다."}
+{"name": "니샤푸르", "type": "place", "aliases": ["Nishapur"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 호라산 거점이었다."}
+{"name": "마르브", "type": "place", "aliases": ["Merv"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 비단길 거점이었다."}
+{"name": "헤라트", "type": "place", "aliases": ["Herat"], "attrs": {}, "points": [18], "desc": "사산조 페르시아의 동서 무역로 교점이었다."}
+{"name": "발흐", "type": "place", "aliases": ["Balkh"], "attrs": {}, "points": [18], "desc": "사산조 페르시아가 정복한 박트리아 중심 도시였다."}
+{"name": "툴루즈", "type": "place", "aliases": ["Tolosa"], "attrs": {}, "points": [28], "desc": "서고트 왕국의 첫 번째 수도였다."}
+{"name": "톨레도", "type": "place", "aliases": ["Toledo"], "attrs": {}, "points": [28], "desc": "서고트 왕국의 마지막 수도였다."}
+{"name": "세비야", "type": "place", "aliases": ["Hispalis"], "attrs": {}, "points": [28], "desc": "서고트 왕국의 무역 중심지였다."}
+{"name": "바르셀로나", "type": "place", "aliases": ["Barcino"], "attrs": {}, "points": [28], "desc": "서고트 왕국의 임시 수도였다."}
+{"name": "나르본느", "type": "place", "aliases": ["Narbo"], "attrs": {}, "points": [28], "desc": "셉티마니아의 서고트 거점이었다."}
+{"name": "아그드", "type": "place", "aliases": ["Agatha"], "attrs": {}, "points": [28], "desc": "셉티마니아의 해안 무역 도시였다."}
+{"name": "베지에", "type": "place", "aliases": ["Baeterrae"], "attrs": {}, "points": [28], "desc": "셉티마니아의 서고트 교역 중심지였다."}
+{"name": "드레파나", "type": "place", "aliases": ["Drepana"], "attrs": {}, "points": [4], "desc": "카르타고의 제1차 포에니 전쟁 거점이었다."}

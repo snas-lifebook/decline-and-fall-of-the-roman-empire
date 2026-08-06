@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마르마라해 — 마르마라해 전역",
+    "description": "[확실] 콘스탄티노플 남쪽 해안을 둘러싼 작은 내해. 프로코네소스 섬이 이 안에 있다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       27.0,
+       40.7
+      ],
+      [
+       27.5,
+       41.0
+      ],
+      [
+       28.5,
+       41.1
+      ],
+      [
+       29.2,
+       40.9
+      ],
+      [
+       29.0,
+       40.5
+      ],
+      [
+       28.0,
+       40.3
+      ],
+      [
+       27.3,
+       40.4
+      ],
+      [
+       27.0,
+       40.7
+      ],
+      [
+       27.0,
+       40.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄티노플",
+    "description": "[수도] 330 — 신수도 건설, 남쪽 해안이 마르마라해에 면함",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9784,
+     41.0082
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니코메디아",
+    "description": "[주요 도시]  — 디오클레티아누스 시대 동방 수도로 쓰인 마르마라해 연안 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.92,
+     40.77
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "키지쿠스",
+    "description": "[항구]  — 마르마라해 남안의 주요 항구도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.88,
+     40.38
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{"name":"갈리아","lat":47.0000,"lon":2.5000,"ancient":"Gallia","modern":"프랑스","kind":"region","confidence":"medium","source":"Wikidata Pleiades 993"}
+{"name":"도나우 강","lat":48.0000,"lon":17.0000,"ancient":"Danubius, Ister","modern":"다뉴브 강, 중부 유럽","kind":"river","confidence":"low","source":"Livius: Danubius"}
+{"name":"보스포루스 해협","lat":41.0086,"lon":28.9802,"ancient":"Bosporus","modern":"보스포루스 해협, 튀르키예","kind":"sea","confidence":"high","source":"Wikipedia: Bosporus"}
+{"name":"트라키아","lat":42.5000,"lon":22.5000,"ancient":"Thracia","modern":"터키 북동부·불가리아","kind":"region","confidence":"high","source":"Pleiades 992078"}
+{"name":"시라쿠사","lat":37.0639,"lon":15.2930,"ancient":"Syracusae","modern":"시라쿠사, 이탈리아","kind":"city","confidence":"high","source":"Pleiades: Syracuse"}
+{"name":"카푸아","lat":41.0860,"lon":14.2500,"ancient":"Capua","modern":"산타 마리아 카푸아 베테레, 이탈리아","kind":"city","confidence":"high","source":"Pleiades 432754"}
+{"name":"푸키누스 호수","lat":41.9950,"lon":13.5472,"ancient":"Lacus Fucinus","modern":"푸치노 호수, 이탈리아","kind":"lake","confidence":"high","source":"Topostext: Fucinus Lake"}
+{"name":"독일","lat":52.5000,"lon":7.5000,"ancient":"Germania","modern":"독일","kind":"region","confidence":"medium","source":"Pleiades 20468"}
+{"name":"리미니","lat":44.0603,"lon":12.5754,"ancient":"Ariminum","modern":"리미니, 이탈리아","kind":"city","confidence":"high","source":"Pleiades: Ariminum"}
+{"name":"바그다드","lat":33.3153,"lon":44.3661,"ancient":"","modern":"바그다드, 이라크","kind":"city","confidence":"high","source":"Wikipedia: Baghdad"}
+{"name":"비잔티움","lat":41.0085,"lon":28.9799,"ancient":"Byzantium","modern":"이스탄불, 튀르키예","kind":"city","confidence":"high","source":"Syriaca: Constantinople"}
+{"name":"스키타이","lat":46.6887,"lon":29.4751,"ancient":"Scythia","modern":"북흑해 지역","kind":"region","confidence":"high","source":"Pleiades 1273"}
+{"name":"안티움","lat":41.4479,"lon":12.6291,"ancient":"Antium","modern":"안치오, 이탈리아","kind":"city","confidence":"high","source":"Topostext: Antium"}
+{"name":"오판토 강","lat":41.2303,"lon":16.0200,"ancient":"Aufidus","modern":"오판토 강, 이탈리아","kind":"river","confidence":"high","source":"Topostext: Aufidus River"}
+{"name":"인도양","lat":20.0000,"lon":70.0000,"ancient":"","modern":"인도양","kind":"sea","confidence":"low","source":"미확인"}
+{"name":"카이사레아","lat":38.7225,"lon":35.4875,"ancient":"Caesarea","modern":"카이세리, 튀르키예","kind":"city","confidence":"high","source":"Topostext: Caesarea Cappadocia"}
+{"name":"킬리키아","lat":37.0100,"lon":34.0100,"ancient":"Cilicia","modern":"터키 남부","kind":"region","confidence":"high","source":"Topostext: Cilicia"}
+{"name":"투르키스탄","lat":43.0000,"lon":67.0000,"ancient":"Turán","modern":"투르키스탄, 카자흐스탄","kind":"region","confidence":"low","source":"미확인"}
+{"name":"폰투스","lat":40.6500,"lon":35.8333,"ancient":"Pontus","modern":"터키 북부","kind":"region","confidence":"high","source":"Britannica: Pontus"}

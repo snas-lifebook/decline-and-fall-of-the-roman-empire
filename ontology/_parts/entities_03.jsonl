@@ -1,0 +1,43 @@
+{"name":"한니발","type":"person","aliases":["한니발 바르카스"],"attrs":{"role":"general","origin":"카르타고","reign":"-218~-183"},"points":[3],"desc":"천재 전략가. 아홉 살에 고향을 떠났으며 알프스를 넘어 이탈리아로 진격하여 칸나이 전투에서 대승을 거두었으나 최후에는 조국의 배신으로 자살함."}
+{"name":"푸블리우스 스키피오","type":"person","aliases":[],"attrs":{"role":"general"},"points":[3],"desc":"로마의 장군. 한니발의 동생이 제압한 이베리아 반도로 진격했다."}
+{"name":"그나이우스 스키피오","type":"person","aliases":[],"attrs":{"role":"general"},"points":[3],"desc":"로마의 장군. 이베리아 반도 동부로 향했다."}
+{"name":"셈프로니우스","type":"person","aliases":[],"attrs":{"role":"집정관"},"points":[3],"desc":"로마의 집정관. 꽁꽁 얼어붙은 트레비아 강을 건너 한니발과 전투를 벌였으나 완패함."}
+{"name":"플라미니우스","type":"person","aliases":[],"attrs":{"role":"대장"},"points":[3],"desc":"로마의 대장. 한니발의 계략에 빠져 전멸당하고 전사함."}
+{"name":"파비우스 막시무스","type":"person","aliases":[],"attrs":{"role":"독재관"},"points":[3],"desc":"로마의 독재관. '당당한 무위' 작전으로 한니발을 견제함."}
+{"name":"가이우스 테렌티우스 바로","type":"person","aliases":[],"attrs":{"role":"집정관"},"points":[3],"desc":"로마의 신임 집정관. 칸나이 전투에서 가까스로 목숨을 부지함."}
+{"name":"루키우스 아밀리우스 파울루스","type":"person","aliases":[],"attrs":{"role":"집정관"},"points":[3],"desc":"로마의 집정관. 칸나이 전투에서 전사함."}
+{"name":"필리포스 5세","type":"person","aliases":[],"attrs":{"role":"king","origin":"마케도니아"},"points":[3],"desc":"마케도니아의 왕. 한니발과 우호 협정을 체결했으나 나중에 로마와 화의를 맺음."}
+{"name":"아르키메데스","type":"person","aliases":[],"attrs":{"role":"수학자","origin":"시라쿠사"},"points":[3],"desc":"고대 최고의 수학자. 시라쿠사의 참모로 로마군에 대항했으나 결국 살해됨."}
+{"name":"하스드루발","type":"person","aliases":[],"attrs":{"role":"general","origin":"카르타고"},"points":[3],"desc":"한니발의 동생. 이베리아 반도를 제압했으나 로마 군에 습격받아 전멸당하고 참수됨."}
+{"name":"마시니사","type":"person","aliases":[],"attrs":{"role":"king","origin":"누미디아"},"points":[3],"desc":"누미디아의 왕. 한니발을 쫓고 있다가 스키피오와 의기투합하여 무적의 기병군단을 이끌고 로마 군에 합류함."}
+{"name":"푸블리우스 코르넬리우스 스키피오","type":"person","aliases":["대 스키피오"],"attrs":{"role":"general"},"points":[3],"desc":"로마의 명장. 에스파냐 전장에서 아버지와 백부가 쓰러졌으나 스물네 살의 나이에 후임 사령관으로 임명되어 카르타헤나를 함락하고 최후에 한니발을 격파함."}
+{"name":"에스파냐","type":"place","aliases":["이베리아 반도"],"attrs":{},"points":[3],"desc":"한니발의 군대가 집결한 지역."}
+{"name":"사군툼","type":"place","aliases":["사군토"],"attrs":{"region":"이베리아 반도"},"points":[3],"desc":"한니발이 포위하여 8개월 만에 함락시킨 도시."}
+{"name":"에브로 강","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"로마와 카르타고의 군사적 경계."}
+{"name":"론 강","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발의 군대가 도착한 남프랑스의 강."}
+{"name":"알프스","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발이 기병대와 코끼리 부대를 이끌고 넘은 산맥."}
+{"name":"이탈리아 반도","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발이 진격한 목표 지역."}
+{"name":"포 강","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발의 군대가 알프스를 내려와 도착한 강."}
+{"name":"티키누스 강","type":"place","aliases":["티치노 강"],"attrs":{},"points":[3],"desc":"로마 군이 처음으로 카르타고 군과 부딪힌 곳."}
+{"name":"트레비아 강","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"셈프로니우스가 12월에 건넌 얼어붙은 강으로 전투가 벌어짐."}
+{"name":"갈리아키살피나","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발이 8개월에 걸쳐 제압한 로마 제3속주국."}
+{"name":"칸나이 평원","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"기원전 216년 6월 고대사상 최대의 전투가 벌어진 곳."}
+{"name":"오판토 강","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"칸나이 평원에 도착한 로마 군의 위치."}
+{"name":"아풀리아","type":"place","aliases":["풀리아"],"attrs":{"region":"이탈리아 남동부"},"points":[3],"desc":"한니발이 주둔한 지역."}
+{"name":"아프리카","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"스키피오가 진격한 지역으로 최후의 전투가 벌어짐."}
+{"name":"누미디아","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"누미디아인의 본거지. 마시니사 왕이 통치함."}
+{"name":"시칠리아 섬","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"시라쿠사가 위치한 섬."}
+{"name":"시라쿠사","type":"place","aliases":[],"attrs":{"region":"시칠리아 섬"},"points":[3],"desc":"한니발의 활약 중에 로마를 적대시키게 된 도시."}
+{"name":"카르타헤나","type":"place","aliases":[],"attrs":{"region":"에스파냐"},"points":[3],"desc":"스키피오가 함락한 도시."}
+{"name":"크레타 섬","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"마그네시아 전투 후 한니발이 도망간 섬."}
+{"name":"소아시아","type":"place","aliases":["터키 아나톨리아"],"attrs":{},"points":[3],"desc":"한니발이 도망친 최후의 목표지."}
+{"name":"제2차 포에니 전쟁","type":"event","aliases":[],"attrs":{"duration":"기원전 218~201년"},"points":[3],"desc":"한니발이 주도한 로마와 카르타고 간의 전쟁."}
+{"name":"칸나이 전투","type":"event","aliases":[],"attrs":{"year":"-216"},"points":[3],"desc":"기원전 216년 6월 고대사상 최대의 전투. 한니발이 초승달 대형으로 로마 군을 포위하여 대승을 거둠."}
+{"name":"마그네시아 전투","type":"event","aliases":[],"attrs":{},"points":[3],"desc":"스키피오가 한니발을 격파한 아프리카 전투."}
+{"name":"코끼리 부대","type":"group","aliases":[],"attrs":{},"points":[3],"desc":"한니발이 이끈 37마리의 코끼리로 구성된 부대."}
+{"name":"누미디아인","type":"group","aliases":[],"attrs":{},"points":[3],"desc":"한니발의 군대에 속한 기병 부족."}
+{"name":"갈리아인","type":"group","aliases":[],"attrs":{},"points":[3],"desc":"한니발의 군대에 속했던 병사들로 피로로 인해 탈락함."}
+{"name":"에스파냐인","type":"group","aliases":[],"attrs":{},"points":[3],"desc":"한니발의 군대의 주요 구성원."}
+{"name":"리비아인","type":"group","aliases":[],"attrs":{},"points":[3],"desc":"한니발의 군대의 주요 구성원."}
+{"name":"로마","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발과의 제2차 포에니 전쟁을 거쳐 지중해의 패자가 된 국가."}
+{"name":"카르타고","type":"place","aliases":[],"attrs":{},"points":[3],"desc":"한니발이 36년 만에 돌아온 조국으로 최후에 그를 배신함."}

@@ -1,0 +1,149 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "론 강",
+    "period": "기원전 218~1세기"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      8.4,
+      46.61
+     ],
+     [
+      6.15,
+      46.2
+     ],
+     [
+      4.83,
+      45.76
+     ],
+     [
+      5.0,
+      44.5
+     ],
+     [
+      4.6256,
+      43.677
+     ],
+     [
+      4.85,
+      43.4
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "론 강 발원지(론 빙하)",
+    "year": null,
+    "description": "[대략] ? — 스위스 알프스 론 빙하에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.4,
+     46.61
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "레만 호",
+    "year": null,
+    "description": "[대략] ? — 레만 호(제네바 호)를 거쳐 흐른다",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.15,
+     46.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "리옹",
+    "year": null,
+    "description": "[확실] ? — 손 강과 합류하는 지점. 훗날 갈리아 속주 수도 루그두눔이 들어선다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.83,
+     45.76
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "론 강",
+    "year": null,
+    "description": "[확실] ? — 기원전 218년 한니발이 코끼리 부대와 함께 도하한 구간. 로마 정찰대가 해안 쪽에 진을 치고 기다렸으나 한니발은 이곳에서 북쪽으로 우회했다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.0,
+     44.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아를",
+    "year": null,
+    "description": "[대략] ? — 하류의 주요 로마 도시(아렐라테). 강이 삼각주로 갈라지기 전 마지막 큰 항구",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.6256,
+     43.677
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "지중해 하구(카마르그 삼각주)",
+    "year": null,
+    "description": "[대략] ? — 지중해로 흘러드는 하구. 갈리아 나르보넨시스 속주의 관문",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.85,
+     43.4
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아 속주 — 갈리아 트란살피나 (초기 속주 범위)",
+    "description": "[확실] 지중해 연안 좁은 회랑, 이탈리아~에스파냐 연결로 확보 목적. 이후 나르보넨시스로 명칭·경계 정비",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       3.0,
+       42.4
+      ],
+      [
+       4.8,
+       43.3
+      ],
+      [
+       6.2,
+       43.1
+      ],
+      [
+       7.6,
+       44.0
+      ],
+      [
+       6.9,
+       45.2
+      ],
+      [
+       4.9,
+       44.9
+      ],
+      [
+       3.2,
+       44.0
+      ],
+      [
+       2.2,
+       43.0
+      ],
+      [
+       3.0,
+       42.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "나르본느",
+    "description": "[속주 수도] 기원전 118 — 로마 최초의 갈리아 식민시, '프로방스' 어원이 된 속주의 행정 중심",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.0043,
+     43.1839
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마살리아",
+    "description": "[동맹 항구도시] 기원전 121 — 로마의 갈리아 개입 명분(마살리아 보호) 제공",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.3698,
+     43.2965
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "님",
+    "description": "[주요 도시] 기원전 1세기 — 아우구스투스기 대형 신전·수도교 건설",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3601,
+     43.8367
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아를",
+    "description": "[항구도시] 기원전 46 — 카이사르 퇴역병 식민시로 성장",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.6278,
+     43.6766
+    ]
+   }
+  }
+ ]
+}

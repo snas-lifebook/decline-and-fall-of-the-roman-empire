@@ -1,0 +1,207 @@
+{
+  "name": "반달 왕국",
+  "period": "435~534",
+  "summary": "가이세리크가 북아프리카 카르타고를 중심으로 세운 게르만 왕국. 439년 카르타고 함락으로 성립, 533-534년 유스티니아누스의 벨리사리우스에게 멸망.",
+  "territory": [
+    {
+      "part": "아프리카 속주 (Africa Proconsularis)",
+      "note": "북튀니지의 카르타고를 중심으로 한 로마의 가장 부유한 속주. 442년 조약으로 반달 왕국에 정식 할양됨",
+      "confidence": "high",
+      "ring": [
+        [9.0, 37.2],
+        [10.0, 37.5],
+        [11.0, 37.3],
+        [11.5, 36.9],
+        [11.2, 36.2],
+        [10.5, 36.0],
+        [9.5, 36.1],
+        [9.0, 36.3],
+        [8.5, 36.5],
+        [8.5, 37.0]
+      ]
+    },
+    {
+      "part": "비자케나 (Byzacena)",
+      "note": "동튀니지 사헬 지역. 442년 조약으로 반달 왕국 영토 편입. 대도시 하드루메툼(현 수스) 포함",
+      "confidence": "high",
+      "ring": [
+        [9.5, 36.1],
+        [11.2, 36.2],
+        [11.5, 35.5],
+        [11.0, 34.3],
+        [9.8, 34.2],
+        [9.0, 34.5],
+        [8.8, 35.2],
+        [9.2, 35.8]
+      ]
+    },
+    {
+      "part": "누미디아 (Numidia, 동부 및 해안)",
+      "note": "알제리 북동부. 435년 협약으로 반달에 할양되었으나 내륙은 베르베르족 통제 아래. 서쪽 경계는 키르타(콘스탄티나)",
+      "confidence": "medium",
+      "ring": [
+        [5.5, 36.5],
+        [7.5, 37.0],
+        [8.5, 36.8],
+        [8.5, 36.2],
+        [7.0, 35.5],
+        [6.0, 35.3],
+        [5.0, 35.6],
+        [4.8, 36.0],
+        [5.2, 36.3]
+      ]
+    },
+    {
+      "part": "트리폴리타니아 (Tripolitania)",
+      "note": "리비아 해안 지역. 동부 레푸티스 마그나(렙티스 마그나)와 사브라타 포함. 내륙 경계는 명확한 선이 아닌 근사",
+      "confidence": "medium",
+      "ring": [
+        [11.5, 33.0],
+        [14.5, 33.2],
+        [15.0, 32.5],
+        [14.8, 31.8],
+        [13.5, 31.5],
+        [12.0, 31.8],
+        [11.0, 32.3],
+        [10.8, 32.8]
+      ]
+    },
+    {
+      "part": "사르데냐",
+      "note": "지중해 섬. 455년경 반달이 점령, 534년 벨리사리우스 재정복까지 지배",
+      "confidence": "high",
+      "ring": [
+        [8.0, 41.2],
+        [9.8, 41.3],
+        [9.9, 38.9],
+        [8.2, 38.8]
+      ]
+    },
+    {
+      "part": "코르시카",
+      "note": "지중해 섬. 반달 왕국의 해상력 기반 중 하나. 정확한 점령 시기는 문헌에 명시되지 않았으나 455년 이후 것으로 추정",
+      "confidence": "high",
+      "ring": [
+        [8.2, 42.8],
+        [9.2, 42.9],
+        [9.3, 41.4],
+        [8.4, 41.3]
+      ]
+    },
+    {
+      "part": "발레아레스 제도 (Balearic Islands)",
+      "note": "스페인 동쪽 지중해 섬들. 반달의 해상 통제 아래. 455년경 정복으로 추정",
+      "confidence": "medium",
+      "ring": [
+        [1.2, 39.8],
+        [4.0, 39.9],
+        [4.1, 38.6],
+        [1.0, 38.5]
+      ]
+    },
+    {
+      "part": "시칠리아 (부분적 통제, 한때)",
+      "note": "468년경 반달이 점령했으나 곧 상실. 5세기 전반 자주 반달의 습격 대상. 지속적 통제 지역은 불명확",
+      "confidence": "low",
+      "ring": [
+        [12.5, 38.2],
+        [15.7, 38.3],
+        [15.8, 36.7],
+        [12.6, 36.7]
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "place": "카르타고",
+      "lat": 36.8528,
+      "lon": 10.3233,
+      "year": 439,
+      "role": "수도",
+      "event": "439년 6월 가이세리크가 점령, 이후 반달 왕국의 행정 및 해군 중심지로 534년까지 지배",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "히포 레기우스",
+      "lat": 36.9,
+      "lon": 7.7667,
+      "year": 435,
+      "role": "초기 수도",
+      "event": "435년부터 439년까지 반달의 첫 번째 수도. 카르타고 점령 후 중요도 저하. 현재 알제리 아나바",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "우티카",
+      "lat": 37.0569,
+      "lon": 10.0619,
+      "year": 439,
+      "role": "주요 도시",
+      "event": "카르타고 북쪽 해안 도시. 반달 왕국 치하에서 무역 중심지로 기능",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "렙티스 마그나",
+      "lat": 32.6392,
+      "lon": 14.2906,
+      "year": 439,
+      "role": "항구도시",
+      "event": "트리폴리타니아 중심 도시. 리비아 해안. 반달의 동쪽 해상 진출 거점",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "사브라타",
+      "lat": 32.7933,
+      "lon": 12.4885,
+      "year": 439,
+      "role": "항구",
+      "event": "트리폴리타니아 해안 도시. 5세기 반달 통제하에 대부분 폐기되었으나 교역 거점 유지",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "키르타",
+      "lat": 36.3675,
+      "lon": 6.6119,
+      "year": 435,
+      "role": "요새",
+      "event": "누미디아 왕국의 옛 수도. 442년 조약으로 반달 통제 서쪽 경계. 현재 알제리 콘스탄티나",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "팔레르모",
+      "lat": 38.1157,
+      "lon": 13.3615,
+      "year": 455,
+      "role": "약탈 대상",
+      "event": "시칠리아 주요 도시. 반달의 해상 습격 대상. 468년 일시 점령했을 가능성 있음",
+      "in_gazetteer": false,
+      "confidence": "low"
+    },
+    {
+      "place": "시라쿠사",
+      "lat": 37.0639,
+      "lon": 15.293,
+      "year": 455,
+      "role": "약탈 대상",
+      "event": "시칠리아 동부 주요 항구도시. 반달의 습격 대상이었으나 지속 통제 미확인",
+      "in_gazetteer": true,
+      "confidence": "low"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Vandal Kingdom (https://en.wikipedia.org/wiki/Vandal_Kingdom)",
+    "Wikipedia: Vandal conquest of Roman Africa (https://en.wikipedia.org/wiki/Vandal_conquest_of_Roman_Africa)",
+    "Wikipedia: Siege of Hippo Regius (https://en.wikipedia.org/wiki/Siege_of_Hippo_Regius)",
+    "Wikipedia: Capture of Carthage (439) (https://en.wikipedia.org/wiki/Capture_of_Carthage_(439))",
+    "Procopius, De Bellis III (Byzantine Wars Book III on Vandals)",
+    "World History Encyclopedia: Map of the Kingdom of the Vandals (435–534 CE)",
+    "Leptis Magna Wikipedia: https://en.wikipedia.org/wiki/Leptis_Magna",
+    "Sabratha Wikipedia: https://en.wikipedia.org/wiki/Sabratha",
+    "Byzacena Wikipedia: https://en.wikipedia.org/wiki/Byzacena"
+  ]
+}

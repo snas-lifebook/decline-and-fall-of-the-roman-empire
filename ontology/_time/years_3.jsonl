@@ -1,0 +1,111 @@
+{"point": 3, "from": "한니발", "rel": "통치", "to": "카르타고", "from_year": -221, "to_year": -201, "basis": "chronology"}
+{"point": 3, "from": "한니발", "rel": "적대", "to": "로마", "from_year": -218, "to_year": -201, "basis": "chronology"}
+{"point": 3, "from": "한니발", "rel": "참전·관여", "to": "제2차 포에니 전쟁", "from_year": -218, "to_year": -201, "basis": "chronology"}
+{"point": 3, "from": "한니발", "rel": "참전·관여", "to": "칸나이 전투", "from_year": -216, "to_year": -216, "basis": "text"}
+{"point": 3, "from": "푸블리우스 스키피오", "rel": "참전·관여", "to": "에스파냐", "from_year": -218, "to_year": -211, "basis": "chronology"}
+{"point": 3, "from": "그나이우스 스키피오", "rel": "통치", "to": "에스파냐", "from_year": -212, "to_year": -211, "basis": "chronology"}
+{"point": 3, "from": "셈프로니우스", "rel": "참전·관여", "to": "트레비아 강", "from_year": -218, "to_year": -218, "basis": "chronology"}
+{"point": 3, "from": "플라미니우스", "rel": "적대", "to": "한니발", "from_year": -217, "to_year": -217, "basis": "chronology"}
+{"point": 3, "from": "파비우스 막시무스", "rel": "통치", "to": "로마", "from_year": -217, "to_year": -209, "basis": "chronology"}
+{"point": 3, "from": "루키우스 아밀리우스 파울루스", "rel": "참전·관여", "to": "칸나이 전투", "from_year": -216, "to_year": -216, "basis": "text"}
+{"point": 3, "from": "가이우스 테렌티우스 바로", "rel": "참전·관여", "to": "칸나이 전투", "from_year": -216, "to_year": -216, "basis": "text"}
+{"point": 3, "from": "필리포스 5세", "rel": "동맹", "to": "한니발", "from_year": -215, "to_year": -205, "basis": "chronology"}
+{"point": 3, "from": "아르키메데스", "rel": "통치", "to": "시라쿠사", "from_year": -287, "to_year": -212, "basis": "chronology"}
+{"point": 3, "from": "하스드루발", "rel": "통치", "to": "에스파냐", "from_year": -221, "to_year": -207, "basis": "chronology"}
+{"point": 3, "from": "하스드루발", "rel": "적대", "to": "로마", "from_year": -218, "to_year": -207, "basis": "chronology"}
+{"point": 3, "from": "마시니사", "rel": "통치", "to": "누미디아", "from_year": -210, "to_year": -148, "basis": "chronology"}
+{"point": 3, "from": "마시니사", "rel": "동맹", "to": "로마", "from_year": -210, "to_year": -202, "basis": "chronology"}
+{"point": 3, "from": "푸블리우스 코르넬리우스 스키피오", "rel": "통치", "to": "에스파냐", "from_year": -211, "to_year": -206, "basis": "chronology"}
+{"point": 3, "from": "푸블리우스 코르넬리우스 스키피오", "rel": "적대", "to": "한니발", "from_year": -202, "to_year": -202, "basis": "text"}
+{"point": 3, "from": "제2차 포에니 전쟁", "rel": "발생지", "to": "로마", "from_year": -218, "to_year": -201, "basis": "chronology"}
+{"point": 3, "from": "제2차 포에니 전쟁", "rel": "발생지", "to": "카르타고", "from_year": -218, "to_year": -201, "basis": "chronology"}
+{"point": 3, "from": "칸나이 전투", "rel": "발생지", "to": "칸나이 평원", "from_year": -216, "to_year": -216, "basis": "text"}
+{"point": 3, "from": "한니발", "rel": "참전·관여", "to": "알프스", "from_year": -218, "to_year": -218, "basis": "text"}
+{"point": 3, "from": "로마", "rel": "적대", "to": "카르타고", "from_year": -218, "to_year": -201, "basis": "chronology"}
+{"point": 9, "from": "클레오파트라 7세", "rel": "동맹", "to": "안토니우스", "from_year": -41, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "클레오파트라 7세", "rel": "적대", "to": "아우구스투스", "from_year": -32, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "클레오파트라 7세", "rel": "통치", "to": "알렉산드리아", "from_year": -51, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "아우구스투스", "rel": "적대", "to": "클레오파트라 7세", "from_year": -32, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "아우구스투스", "rel": "적대", "to": "안토니우스", "from_year": -32, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "아우구스투스", "rel": "동맹", "to": "레피두스", "from_year": -43, "to_year": -36, "basis": "chronology"}
+{"point": 9, "from": "안토니우스", "rel": "동맹", "to": "클레오파트라 7세", "from_year": -41, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "안토니우스", "rel": "적대", "to": "아우구스투스", "from_year": -32, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "안토니우스", "rel": "동맹", "to": "레피두스", "from_year": -43, "to_year": -36, "basis": "chronology"}
+{"point": 9, "from": "레피두스", "rel": "동맹", "to": "아우구스투스", "from_year": -43, "to_year": -36, "basis": "chronology"}
+{"point": 9, "from": "레피두스", "rel": "동맹", "to": "안토니우스", "from_year": -43, "to_year": -36, "basis": "chronology"}
+{"point": 9, "from": "카이사리온", "rel": "통치", "to": "알렉산드리아", "from_year": -44, "to_year": -30, "basis": "chronology"}
+{"point": 9, "from": "옥타비아", "rel": "동맹", "to": "안토니우스", "from_year": -40, "to_year": -32, "basis": "chronology"}
+{"point": 9, "from": "악티움 해전", "rel": "참전·관여", "to": "아우구스투스", "from_year": -31, "to_year": -31, "basis": "text"}
+{"point": 9, "from": "악티움 해전", "rel": "참전·관여", "to": "안토니우스", "from_year": -31, "to_year": -31, "basis": "text"}
+{"point": 9, "from": "티베리우스", "rel": "계승", "to": "아우구스투스", "from_year": 14, "to_year": 14, "basis": "chronology"}
+{"point": 9, "from": "스크리보니아", "rel": "동맹", "to": "아우구스투스", "from_year": -38, "to_year": -32, "basis": "chronology"}
+{"point": 9, "from": "리비아 드루실라", "rel": "동맹", "to": "아우구스투스", "from_year": -38, "to_year": 29, "basis": "chronology"}
+{"point": 15, "from": "베스파시아누스", "rel": "통치", "to": "로마 제국", "from_year": 69, "to_year": 79, "basis": "chronology"}
+{"point": 15, "from": "티투스", "rel": "참전·관여", "to": "유대", "from_year": 66, "to_year": 70, "basis": "chronology"}
+{"point": 15, "from": "도미티아누스", "rel": "통치", "to": "로마 제국", "from_year": 81, "to_year": 96, "basis": "chronology"}
+{"point": 15, "from": "네르바", "rel": "통치", "to": "로마 제국", "from_year": 96, "to_year": 98, "basis": "chronology"}
+{"point": 15, "from": "트라야누스", "rel": "계승", "to": "네르바", "from_year": 98, "to_year": 98, "basis": "chronology"}
+{"point": 15, "from": "트라야누스", "rel": "통치", "to": "로마 제국", "from_year": 98, "to_year": 117, "basis": "chronology"}
+{"point": 15, "from": "트라야누스", "rel": "참전·관여", "to": "메소포타미아", "from_year": 114, "to_year": 117, "basis": "chronology"}
+{"point": 15, "from": "트라야누스", "rel": "참전·관여", "to": "페르시아", "from_year": 114, "to_year": 117, "basis": "chronology"}
+{"point": 15, "from": "트라야누스", "rel": "참전·관여", "to": "시리아", "from_year": 114, "to_year": 117, "basis": "chronology"}
+{"point": 15, "from": "트라야누스", "rel": "참전·관여", "to": "아르메니아", "from_year": 114, "to_year": 117, "basis": "chronology"}
+{"point": 15, "from": "하드리아누스", "rel": "계승", "to": "트라야누스", "from_year": 117, "to_year": 117, "basis": "chronology"}
+{"point": 15, "from": "하드리아누스", "rel": "동맹", "to": "플로티나", "from_year": 117, "to_year": 138, "basis": "chronology"}
+{"point": 15, "from": "하드리아누스", "rel": "통치", "to": "로마 제국", "from_year": 117, "to_year": 138, "basis": "chronology"}
+{"point": 15, "from": "하드리아누스", "rel": "참전·관여", "to": "이집트", "from_year": 130, "to_year": 131, "basis": "text"}
+{"point": 15, "from": "하드리아누스", "rel": "참전·관여", "to": "게르마니아", "from_year": 120, "to_year": 137, "basis": "chronology"}
+{"point": 15, "from": "하드리아누스", "rel": "참전·관여", "to": "브리타니아", "from_year": 122, "to_year": 122, "basis": "text"}
+{"point": 15, "from": "플로티나", "rel": "동맹", "to": "하드리아누스", "from_year": 117, "to_year": 138, "basis": "chronology"}
+{"point": 15, "from": "안토니누스 피우스", "rel": "계승", "to": "하드리아누스", "from_year": 138, "to_year": 138, "basis": "chronology"}
+{"point": 15, "from": "안토니누스 피우스", "rel": "통치", "to": "로마 제국", "from_year": 138, "to_year": 161, "basis": "chronology"}
+{"point": 15, "from": "마르쿠스 아우렐리우스", "rel": "계승", "to": "안토니누스 피우스", "from_year": 161, "to_year": 161, "basis": "chronology"}
+{"point": 15, "from": "마르쿠스 아우렐리우스", "rel": "통치", "to": "로마 제국", "from_year": 161, "to_year": 180, "basis": "chronology"}
+{"point": 15, "from": "마르쿠스 아우렐리우스", "rel": "동맹", "to": "루키우스 베루스", "from_year": 161, "to_year": 169, "basis": "chronology"}
+{"point": 15, "from": "루키우스 베루스", "rel": "동맹", "to": "마르쿠스 아우렐리우스", "from_year": 161, "to_year": 169, "basis": "chronology"}
+{"point": 15, "from": "루키우스 베루스", "rel": "적대", "to": "파르티아족", "from_year": 162, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "루키우스 베루스", "rel": "참전·관여", "to": "안티오키아", "from_year": 162, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "루키우스 베루스", "rel": "동맹", "to": "판테아", "from_year": 162, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "판테아", "rel": "동맹", "to": "루키우스 베루스", "from_year": 162, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "루킬라", "rel": "동맹", "to": "루키우스 베루스", "from_year": 161, "to_year": 169, "basis": "chronology"}
+{"point": 15, "from": "카시우스", "rel": "적대", "to": "파르티아족", "from_year": 162, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "콤모두스", "rel": "참전·관여", "to": "게르마니아", "from_year": 169, "to_year": 180, "basis": "chronology"}
+{"point": 15, "from": "파우스티나", "rel": "동맹", "to": "안토니누스 피우스", "from_year": 138, "to_year": 161, "basis": "chronology"}
+{"point": 15, "from": "아그리콜라", "rel": "통치", "to": "브리타니아", "from_year": 78, "to_year": 84, "basis": "chronology"}
+{"point": 15, "from": "아그리콜라", "rel": "적대", "to": "도미티아누스", "from_year": 81, "to_year": 84, "basis": "chronology"}
+{"point": 15, "from": "사투르니누스", "rel": "적대", "to": "도미티아누스", "from_year": 89, "to_year": 89, "basis": "text"}
+{"point": 15, "from": "테우토니족", "rel": "적대", "to": "트라야누스", "from_year": 98, "to_year": 100, "basis": "chronology"}
+{"point": 15, "from": "다키아족", "rel": "적대", "to": "로마 군", "from_year": 85, "to_year": 89, "basis": "chronology"}
+{"point": 15, "from": "파르티아족", "rel": "적대", "to": "루키우스 베루스", "from_year": 162, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "페스트균", "rel": "참전·관여", "to": "루키우스 베루스", "from_year": 165, "to_year": 166, "basis": "chronology"}
+{"point": 15, "from": "페스트균", "rel": "발생지", "to": "로마", "from_year": 165, "to_year": 180, "basis": "chronology"}
+{"point": 15, "from": "5현제 시대", "rel": "소속", "to": "팍스 로마나", "from_year": 96, "to_year": 180, "basis": "chronology"}
+{"point": 15, "from": "팍스 로마나", "rel": "발생지", "to": "로마 제국", "from_year": 96, "to_year": 180, "basis": "chronology"}
+{"point": 21, "from": "콘스탄티누스", "rel": "통치", "to": "로마 제국", "from_year": 306, "to_year": 337, "basis": "chronology"}
+{"point": 21, "from": "콘스탄티누스", "rel": "적대", "to": "막센티우스", "from_year": 312, "to_year": 312, "basis": "text"}
+{"point": 21, "from": "콘스탄티누스", "rel": "적대", "to": "리키니우스", "from_year": 314, "to_year": 323, "basis": "chronology"}
+{"point": 21, "from": "콘스탄티누스", "rel": "통치", "to": "콘스탄티노플", "from_year": 330, "to_year": 337, "basis": "chronology"}
+{"point": 21, "from": "크리스푸스", "rel": "적대", "to": "리키니우스", "from_year": 323, "to_year": 323, "basis": "text"}
+{"point": 21, "from": "콘스탄티아", "rel": "동맹", "to": "리키니우스", "from_year": 323, "to_year": 323, "basis": "text"}
+{"point": 21, "from": "리키니우스", "rel": "발생지", "to": "비잔티움", "from_year": 313, "to_year": 323, "basis": "chronology"}
+{"point": 21, "from": "마르티니아누스", "rel": "동맹", "to": "리키니우스", "from_year": 323, "to_year": 323, "basis": "text"}
+{"point": 21, "from": "마르티니아누스", "rel": "발생지", "to": "비잔티움", "from_year": 323, "to_year": 323, "basis": "text"}
+{"point": 27, "from": "청파", "rel": "동맹", "to": "유스티니아누스", "from_year": 527, "to_year": 532, "basis": "chronology"}
+{"point": 27, "from": "녹파", "rel": "동맹", "to": "아나스타시우스 황제", "from_year": 491, "to_year": 518, "basis": "chronology"}
+{"point": 27, "from": "청파", "rel": "참전·관여", "to": "니카의 반란", "from_year": 532, "to_year": 532, "basis": "text"}
+{"point": 27, "from": "녹파", "rel": "참전·관여", "to": "니카의 반란", "from_year": 532, "to_year": 532, "basis": "text"}
+{"point": 27, "from": "히파티우스", "rel": "참전·관여", "to": "니카의 반란", "from_year": 532, "to_year": 532, "basis": "text"}
+{"point": 27, "from": "칼리굴라", "rel": "동맹", "to": "청파", "from_year": 37, "to_year": 41, "basis": "chronology"}
+{"point": 27, "from": "칼리굴라", "rel": "동맹", "to": "녹파", "from_year": 37, "to_year": 41, "basis": "chronology"}
+{"point": 27, "from": "네로", "rel": "동맹", "to": "청파", "from_year": 54, "to_year": 68, "basis": "chronology"}
+{"point": 27, "from": "네로", "rel": "동맹", "to": "녹파", "from_year": 54, "to_year": 68, "basis": "chronology"}
+{"point": 27, "from": "비텔리우스", "rel": "동맹", "to": "청파", "from_year": 69, "to_year": 69, "basis": "text"}
+{"point": 27, "from": "베루스", "rel": "동맹", "to": "청파", "from_year": 161, "to_year": 169, "basis": "chronology"}
+{"point": 27, "from": "콤모두스", "rel": "동맹", "to": "청파", "from_year": 180, "to_year": 192, "basis": "chronology"}
+{"point": 27, "from": "카라칼라", "rel": "동맹", "to": "청파", "from_year": 211, "to_year": 217, "basis": "chronology"}
+{"point": 27, "from": "엘라가발루스", "rel": "동맹", "to": "청파", "from_year": 218, "to_year": 222, "basis": "chronology"}
+{"point": 27, "from": "테오도리쿠스", "rel": "동맹", "to": "녹파", "from_year": 493, "to_year": 526, "basis": "chronology"}
+{"point": 27, "from": "유스티니아누스 2세", "rel": "적대", "to": "청파", "from_year": 685, "to_year": 695, "basis": "chronology"}
+{"point": 27, "from": "유스티니아누스 2세", "rel": "적대", "to": "녹파", "from_year": 685, "to_year": 695, "basis": "chronology"}
+{"point": 27, "from": "테오도라", "rel": "동맹", "to": "청파", "from_year": 527, "to_year": 565, "basis": "chronology"}
+{"point": 27, "from": "유스티니아누스", "rel": "참전·관여", "to": "니카의 반란", "from_year": 532, "to_year": 532, "basis": "text"}

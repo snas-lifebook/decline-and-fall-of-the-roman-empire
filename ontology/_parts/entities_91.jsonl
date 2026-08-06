@@ -1,0 +1,13 @@
+{"name":"트라시메노 호수","type":"place","aliases":["Lacus Trasimenus","Trasimenus Lacus"],"attrs":{"region":"에트루리아"},"points":[3],"desc":"기원전 217년 한니발이 로마 군을 호수 부근에서 매복 공격하여 대패시킨 전장. 로마군 약 1만5천 명과 집정관 플라미니우스가 전사했다."}
+{"name":"크로톤","type":"place","aliases":["Croton","Kroton"],"attrs":{"region":"칼라브리아"},"points":[3],"desc":"남부 이탈리아의 그리스 식민지. 한니발 전쟁 말기 한니발의 마지막 거점으로, 스키피오의 아프리카 침공 소식에 한니발이 204년 경 아프리카로 철수한 출항지."}
+{"name":"폴렌티아","type":"place","aliases":["Pollentia"],"attrs":{"region":"롬바르디아"},"points":[24],"desc":"북부 이탈리아 도시. 402년 알라릭의 고트족이 스티리코 원정대에 의해 격퇴되었으나 알라릭의 아내와 자녀를 상실했다."}
+{"name":"콘센티아","type":"place","aliases":["Consentia"],"attrs":{"region":"칼라브리아"},"points":[24],"desc":"남부 이탈리아의 고대 도시. 410년 알라릭이 말라리아로 사망한 지점이며, 그의 시신이 부센토 강에 매장되었다는 전승이 전한다."}
+{"name":"히포 레기우스","type":"place","aliases":["Hippo Regius"],"attrs":{"region":"누미디아"},"points":[25],"desc":"북부 아프리카 항구 도시(현 알제리 아나바). 반달이 435~439년 첫 번째 수도로 삼다가 카르타고 점령 후 중요도가 하락했다."}
+{"name":"우티카","type":"place","aliases":["Utica"],"attrs":{"region":"아프리카 프로콘술라리스"},"points":[25],"desc":"카르타고 북쪽 해안의 고대 페니키아 도시(현 튀니지). 반달 왕국 치하에서 해상 무역의 중요 거점으로 기능했다."}
+{"name":"렙티스 마그나","type":"place","aliases":["Leptis Magna","Lepcis Magna"],"attrs":{"region":"트리폴리타니아"},"points":[25],"desc":"리비아 해안의 로마 도시. 트리폴리타니아의 중심 도시로서 반달의 동쪽 해상 진출 거점 역할을 했다."}
+{"name":"사브라타","type":"place","aliases":["Sabratha","Sabrat"],"attrs":{"region":"트리폴리타니아"},"points":[25],"desc":"트리폴리타니아 해안의 로마 도시(현 리비아). 5세기 반달 통제하에 대부분 폐기되었으나 교역 거점으로서 부분적 기능을 유지했다."}
+{"name":"카푸트바다","type":"place","aliases":["Caput Vada","Caputvada"],"attrs":{"region":"비자켐"},"points":[25],"desc":"튀니지 해안의 항구(현 셰바). 533년 유스티니아누스의 동로마 함대가 반달 전쟁 중 상륙한 지점으로, 현지 주민이 무방비 상태임을 확인했다."}
+{"name":"탄아이스","type":"place","aliases":["Tanais"],"attrs":{"region":"스키타이"},"points":[17],"desc":"돈 강 삼각주의 고대 그리스 도시(현 러시아). 3세기 중반 고트족이 파괴한 그리스 식민지로, 고트족 이동 시기의 동쪽 경계를 표시한다."}
+{"name":"일레르다","type":"place","aliases":["Ilerda","Lerida"],"attrs":{"region":"타라고넨시스"},"points":[8],"desc":"스페인의 도시(현 레이다). 기원전 49년 5~7월 카이사르가 폼페이우스파 스페인 군대를 격퇴한 전장으로, 케사르의 내전 초반 중요한 승리."}
+{"name":"디르하키움","type":"place","aliases":["Dyrrhachium","Durazzo"],"attrs":{"region":"에피루스"},"points":[8],"desc":"아드리아해 해안의 고대 도시(현 알바니아 두레스). 기원전 48년 카이사르와 폼페이우스의 격전지로, 로마 내전의 그리스 전역 개시점."}
+{"name":"젤라","type":"place","aliases":["Zela"],"attrs":{"region":"폰투스"},"points":[8],"desc":"소아시아 폰투스의 도시(현 터키 질레). 기원전 47년 8월 카이사르가 폰투스의 왕 파르나케스 2세를 격퇴한 전장으로, '왔노라 보았노라 이겼노라' 일화의 배경."}

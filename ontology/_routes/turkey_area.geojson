@@ -1,0 +1,203 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "터키 — 아나톨리아 (아시아 쪽 본토)",
+    "description": "[대략] 로마 속주 아시아(서부 해안 일부)보다 훨씬 넓어 아나톨리아 전역을 포함한다. 대륙 아시아 전체가 아니라 현대 터키의 아시아 쪽 영토만을 가리킨다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       26.7,
+       38.4
+      ],
+      [
+       28.0,
+       37.0
+      ],
+      [
+       31.5,
+       36.5
+      ],
+      [
+       35.0,
+       36.2
+      ],
+      [
+       38.0,
+       36.7
+      ],
+      [
+       42.0,
+       37.3
+      ],
+      [
+       44.0,
+       39.5
+      ],
+      [
+       42.0,
+       41.3
+      ],
+      [
+       38.5,
+       41.5
+      ],
+      [
+       35.0,
+       42.0
+      ],
+      [
+       31.5,
+       41.7
+      ],
+      [
+       28.9,
+       40.7
+      ],
+      [
+       28.9,
+       40.7
+      ],
+      [
+       27.0,
+       40.1
+      ],
+      [
+       26.7,
+       38.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "터키 — 유럽령 트라키아 (터키 영토)",
+    "description": "[대략] 고대 트라키아 관구의 극히 일부이자, 현대 터키 국경 중 유럽 대륙 쪽에 속한 부분.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       26.0,
+       40.0
+      ],
+      [
+       26.4,
+       41.7
+      ],
+      [
+       27.5,
+       41.9
+      ],
+      [
+       28.6,
+       41.4
+      ],
+      [
+       29.1,
+       41.1
+      ],
+      [
+       28.9,
+       40.9
+      ],
+      [
+       27.0,
+       40.05
+      ],
+      [
+       26.0,
+       40.0
+      ],
+      [
+       26.0,
+       40.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "보스포루스 해협",
+    "description": "[최대 도시] 현대 — 옛 콘스탄티노플·비잔티움. 아시아와 유럽을 잇는 해협 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.98,
+     41.01
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "앙카라",
+    "description": "[수도] 현대 — 현대 터키의 수도, 아나톨리아 중부.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.86,
+     39.93
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이즈미르",
+    "description": "[주요 도시] 현대 — 옛 스미르나. 로마 속주 아시아의 핵심 도시였다.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.14,
+     38.42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에데사",
+    "description": "[지방 도시] 현대 — 고대 에데사의 현대 위치(볼트 항목 '터키'가 가리키는 지점).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.79,
+     37.16
+    ]
+   }
+  }
+ ]
+}

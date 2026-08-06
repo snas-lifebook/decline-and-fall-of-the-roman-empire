@@ -1,0 +1,49 @@
+{
+  "name": "다키아족",
+  "subject": "다키아족",
+  "color": "#00695C",
+  "period": "기원전 1세기~기원후 2세기",
+  "summary": "카르파티아산맥·트란실바니아를 중심으로 부레비스타·데케발루스 왕들 아래 강성했던 트라키아계 부족. 106년 트라야누스에게 정복되며 로마 속주 다키아로 편입되었다(속주 판도는 [[다키아]]·[[다키아 정복]] 참조).",
+  "territory": [
+    {
+      "part": "카르파티아·트란실바니아 핵심지",
+      "note": "기원전 1세기~기원후 2세기. 부레비스타(기원전 1세기)와 데케발루스(1~2세기) 치세의 왕국 중심지. 106년 로마에 정복됨.",
+      "confidence": "high",
+      "ring": [
+        [22.0, 47.0],
+        [26.0, 47.5],
+        [26.5, 45.5],
+        [23.0, 44.8],
+        [21.5, 45.8]
+      ]
+    },
+    {
+      "part": "다키아계 부족 확산지 (왈라키아·몰다비아)",
+      "note": "동시기. 트란실바니아 핵심지 주변에서 다키아족과 계통이 가깝거나 영향권에 있던 부족들의 활동 범위(카르피족 인접지). 경계 근사치.",
+      "confidence": "medium",
+      "ring": [
+        [23.0, 45.0],
+        [28.0, 46.0],
+        [27.0, 44.0],
+        [24.0, 43.7]
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "place": "사르미제게투사",
+      "lat": 45.6167,
+      "lon": 23.3167,
+      "year": -82,
+      "role": "수도",
+      "event": "다키아 왕국의 종교·정치 중심지. 106년 트라야누스에게 함락됨.",
+      "in_gazetteer": false,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Cassius Dio, Roman History",
+    "Wikipedia: Dacians (https://en.wikipedia.org/wiki/Dacians)",
+    "Wikipedia: Sarmizegetusa Regia (https://en.wikipedia.org/wiki/Sarmizegetusa_Regia)"
+  ]
+}

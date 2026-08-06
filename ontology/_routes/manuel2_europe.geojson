@@ -1,0 +1,127 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마누엘 2세의 서유럽 순방",
+    "period": "1399~1402"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9498,
+      41.0198
+     ],
+     [
+      12.3155,
+      45.4408
+     ],
+     [
+      2.3522,
+      48.8566
+     ],
+     [
+      -0.0889,
+      51.5133
+     ],
+     [
+      28.9498,
+      41.0198
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄티노플",
+    "year": 1399,
+    "description": "[확실] 1399 — 오스만투르크에 포위당한 끝에 서유럽 제국의 군사원조를 요청하기 위해 출발",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9498,
+     41.0198
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "베네치아",
+    "year": 1399,
+    "description": "[불확실] 1399 — 이탈리아 첫 기착지로 추정. 책 본문은 '서유럽 제국으로 떠나'라고만 서술하며 구체 도시명은 밝히지 않음",
+    "confidence": "low",
+    "marker-color": "#c62828",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.3155,
+     45.4408
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "파리",
+    "year": 1400,
+    "description": "[불확실] 1400 — 프랑스 궁정 체류로 추정. 책 본문은 '이탈리아·프랑스를 거쳐'라는 취지로 서술하나 구체 도시명은 없음",
+    "confidence": "low",
+    "marker-color": "#c62828",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3522,
+     48.8566
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브리타니아",
+    "year": 1401,
+    "description": "[확실] 1401 — 잉글랜드 섬까지 건너가서 영국 국왕 헨리 4세에게 군사 지원을 요청. 각국 왕들은 경의는 표했으나 동방정교를 버리지 않는 한 원조하지 않겠다는 태도를 보임",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0889,
+     51.5133
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄티노플",
+    "year": 1402,
+    "description": "[확실] 1402 — 유럽 각국의 원조를 얻어내지 못한 채 실의에 빠져 콘스탄티노플로 귀환. 같은 해 오스만투르크가 티무르 제국에게 결정적 타격을 입었으나 동로마는 이미 원군을 보낼 여력이 없었음",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9498,
+     41.0198
+    ]
+   }
+  }
+ ]
+}

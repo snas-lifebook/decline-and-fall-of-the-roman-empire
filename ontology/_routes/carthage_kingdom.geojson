@@ -1,0 +1,495 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고 제국 — 북아프리카 해안 (튀니지/리비아)",
+    "description": "[대략] 카르타고중심의코어영토. 북서쪽우티카부터남동쪽렙티스마그나까지약1500km해안선. 내륙경계는누미디아와모호하며사막으로대략제한됨",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       9.5,
+       37.2
+      ],
+      [
+       10.1,
+       37.1
+      ],
+      [
+       10.3,
+       36.85
+      ],
+      [
+       10.8,
+       36.5
+      ],
+      [
+       11.0,
+       35.6
+      ],
+      [
+       11.5,
+       35.8
+      ],
+      [
+       11.5,
+       35.5
+      ],
+      [
+       13.0,
+       35.0
+      ],
+      [
+       14.5,
+       34.5
+      ],
+      [
+       15.2,
+       33.5
+      ],
+      [
+       14.8,
+       32.8
+      ],
+      [
+       14.3,
+       32.64
+      ],
+      [
+       12.9,
+       32.6
+      ],
+      [
+       12.5,
+       32.8
+      ],
+      [
+       12.0,
+       33.5
+      ],
+      [
+       11.5,
+       34.5
+      ],
+      [
+       10.0,
+       36.2
+      ],
+      [
+       8.2,
+       36.8
+      ],
+      [
+       8.2,
+       36.8
+      ],
+      [
+       9.5,
+       37.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고 제국 — 사르데냐 섬",
+    "description": "[확실] 완전통제지역. 전략적거점이며금속과농업자원제공",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.6,
+       41.2
+      ],
+      [
+       9.8,
+       41.0
+      ],
+      [
+       9.5,
+       39.2
+      ],
+      [
+       8.2,
+       39.0
+      ],
+      [
+       8.1,
+       40.0
+      ],
+      [
+       8.6,
+       41.2
+      ],
+      [
+       8.6,
+       41.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고 제국 — 코르시카 섬",
+    "description": "[확실] 완전통제지역. 이탈리아과사르데냐사이의전략거점",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.7,
+       42.2
+      ],
+      [
+       8.85,
+       41.8
+      ],
+      [
+       9.15,
+       42.0
+      ],
+      [
+       9.3,
+       42.9
+      ],
+      [
+       9.1,
+       43.0
+      ],
+      [
+       8.9,
+       42.6
+      ],
+      [
+       8.9,
+       42.6
+      ],
+      [
+       8.7,
+       42.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고 제국 — 시칠리아 서부",
+    "description": "[확실] 두개의주요요새도시리리바에움(마르살라)과드레파나(트라파니)를중심으로통제. 제1차포에니전쟁초반에로마와경쟁하던지역",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.0,
+       37.9
+      ],
+      [
+       12.5,
+       38.1
+      ],
+      [
+       12.7,
+       38.0
+      ],
+      [
+       12.6,
+       37.6
+      ],
+      [
+       12.3,
+       37.4
+      ],
+      [
+       12.0,
+       37.9
+      ],
+      [
+       12.0,
+       37.9
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고 제국 — 발레아레스 제도",
+    "description": "[대략] 소규모섬들. 카르타고의지중해교역로상중요한거점",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       1.5,
+       39.3
+      ],
+      [
+       2.0,
+       39.0
+      ],
+      [
+       1.8,
+       38.6
+      ],
+      [
+       1.3,
+       38.8
+      ],
+      [
+       1.5,
+       39.3
+      ],
+      [
+       1.5,
+       39.3
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고 제국 — 이베리아 남부 해안",
+    "description": "[불확실] 가디르(카디스)지역중심. 페니키아계선착지가많았으며,본격적인카르타고팽창은기원전237년이후하밀카르바르카의정복활동으로시작",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -7.5,
+       36.5
+      ],
+      [
+       -6.2,
+       36.6
+      ],
+      [
+       -6.0,
+       36.3
+      ],
+      [
+       -7.5,
+       36.2
+      ],
+      [
+       -7.5,
+       36.2
+      ],
+      [
+       -7.5,
+       36.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고",
+    "description": "[수도] -264 — 지중해 서부 해양 제국의 중심. 페니키아계 도시국가로서 무역 네트워크 통제",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3233,
+     36.8528
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "우티카",
+    "description": "[주요도시] -264 — 북아프리카의 중요한 항구. 카르타고보다 오래된 페니키아 식민지로, 2차 포에니 전쟁 후 지역의 주도권 재탈취",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.0619,
+     37.0569
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "렙티스 마그나",
+    "description": "[주요도시] -264 — 리비아 동부의 부유한 항구 도시. 사하라 횡단 무역로의 최단 경로 종점. 금·상아·향료 거래 중심",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.2906,
+     32.6392
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사브라타",
+    "description": "[주요도시] -264 — 리비아 중부 항구. 렙티스 마그나와 함께 카르타고의 동방 전초기지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4885,
+     32.7933
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타프수스",
+    "description": "[항구] -264 — 튀니지 중부 남해안의 항구 도시. 갈대 습지와 소금 생산으로 유명",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.0417,
+     35.6208
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마르살라 만",
+    "description": "[요새] -264 — 시칠리아 서부 마르살라 지역. 모티아 파괴(기원전 397년) 이후 카르타고의 시칠리아 주요 군사 거점으로 건설. 아프리카와 시칠리아 연결",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4342,
+     37.7981
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "드레파나",
+    "description": "[요새] -264 — 시칠리아 서부 트라파니 지역. 엘리미안 도시로 시작했으나 카르타고가 해군 기지로 강화. 낫 모양의 항구 특징. 제1차 포에니 전쟁의 주요 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.5125,
+     38.015
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "팔레르모",
+    "description": "[주요도시] -264 — 시칠리아 북부. 카르타고 점령 이전부터 그리스 세력과의 경쟁 무대. 기원전 264년 당시 카르타고 영향 하의 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.363,
+     38.118
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카디스",
+    "description": "[항구] -264 — 이베리아 남부 카디스 만의 페니키아 식민지. 개인(gadir). 금·주석·구리 무역의 관문. 본격적 카르타고 지배는 기원전 237년 이후",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.2947,
+     36.5298
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "자마",
+    "description": "[항구] -264 — 튀니지 중부 해안. 로마-카르타고 전쟁 중 주요 전투지가 됨. 카르타고 영향권의 남부 전초기지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4492,
+     36.2989
+    ]
+   }
+  }
+ ]
+}

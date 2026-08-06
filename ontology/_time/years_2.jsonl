@@ -1,0 +1,65 @@
+{"point":2,"from":"클라우디우스 풀케르","rel":"참전·관여","to":"메시나 전투","from_year":264,"to_year":264,"basis":"text"}
+{"point":2,"from":"마메르티니","rel":"동맹","to":"로마","from_year":264,"to_year":264,"basis":"text"}
+{"point":2,"from":"제1차 포에니 전쟁","rel":"발생지","to":"로마","from_year":264,"to_year":241,"basis":"text"}
+{"point":2,"from":"제1차 포에니 전쟁","rel":"발생지","to":"카르타고","from_year":264,"to_year":241,"basis":"text"}
+{"point":2,"from":"메시나 전투","rel":"발생지","to":"메시나","from_year":264,"to_year":264,"basis":"text"}
+{"point":2,"from":"로마","rel":"통치","to":"시칠리아","from_year":241,"to_year":null,"basis":"text"}
+{"point":2,"from":"로마","rel":"통치","to":"사르데냐 섬","from_year":241,"to_year":null,"basis":"text"}
+{"point":2,"from":"로마","rel":"통치","to":"코르시카","from_year":241,"to_year":null,"basis":"text"}
+{"point":8,"from":"카이사르","rel":"적대","to":"폼페이우스","from_year":-49,"to_year":-45,"basis":"chronology"}
+{"point":8,"from":"파르나케스","rel":"동맹","to":"폼페이우스","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"마르쿠스 안토니우스","rel":"소속","to":"카이사르","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"브루투스","rel":"적대","to":"카이사르","from_year":-44,"to_year":-44,"basis":"text"}
+{"point":8,"from":"카시우스","rel":"동맹","to":"브루투스","from_year":-44,"to_year":-44,"basis":"text"}
+{"point":8,"from":"카시우스","rel":"적대","to":"카이사르","from_year":-44,"to_year":-44,"basis":"text"}
+{"point":8,"from":"폼페이우스","rel":"참전·관여","to":"에스파냐","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"폼페이우스","rel":"적대","to":"카이사르","from_year":-49,"to_year":-45,"basis":"chronology"}
+{"point":8,"from":"문다 평원","rel":"발생지","to":"카이사르","from_year":-45,"to_year":-45,"basis":"text"}
+{"point":8,"from":"칼푸르니아","rel":"동맹","to":"카이사르","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"클레오파트라","rel":"동맹","to":"카이사르","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"아우구스투스","rel":"계승","to":"카이사르","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"아우구스투스","rel":"자녀","to":"율리아","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"스푸린나","rel":"적대","to":"카이사르","from_year":null,"to_year":null,"basis":"text"}
+{"point":8,"from":"카스카","rel":"적대","to":"카이사르","from_year":-44,"to_year":-44,"basis":"text"}
+{"point":8,"from":"키케로","rel":"적대","to":"카이사르","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"가이우스 그라쿠스","rel":"소속","to":"소맥법","from_year":-123,"to_year":-123,"basis":"text"}
+{"point":14,"from":"술라","rel":"적대","to":"소맥법","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"아우렐리우스 코타","rel":"동맹","to":"소맥법","from_year":-75,"to_year":-75,"basis":"text"}
+{"point":14,"from":"카이사르","rel":"통치","to":"로마 시민","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"아우구스투스","rel":"통치","to":"로마 시민","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"클라우디우스","rel":"참전·관여","to":"모의 해전","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"아그리피나","rel":"참전·관여","to":"모의 해전","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"네로","rel":"참전·관여","to":"투우 경기","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"베스파시아누스","rel":"소속","to":"콜로세움","from_year":72,"to_year":80,"basis":"chronology"}
+{"point":14,"from":"티투스","rel":"소속","to":"콜로세움","from_year":72,"to_year":80,"basis":"chronology"}
+{"point":14,"from":"검투사","rel":"참전·관여","to":"검투 시합","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"검투사","rel":"발생지","to":"콜로세움","from_year":80,"to_year":null,"basis":"chronology"}
+{"point":14,"from":"연극배우","rel":"참전·관여","to":"연극","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"로마 시민","rel":"참전·관여","to":"전차 경주","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"로마 시민","rel":"참전·관여","to":"검투 시합","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"로마 시민","rel":"참전·관여","to":"연극","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"로마 시민","rel":"참전·관여","to":"모의 해전","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"전차 경주","rel":"발생지","to":"원형 대경기장","from_year":null,"to_year":null,"basis":"text"}
+{"point":14,"from":"검투 시합","rel":"발생지","to":"콜로세움","from_year":80,"to_year":null,"basis":"chronology"}
+{"point":14,"from":"모의 해전","rel":"발생지","to":"푸키누스 호수","from_year":null,"to_year":null,"basis":"text"}
+{"point":20,"from":"디오클레티아누스","rel":"통치","to":"로마 제국","from_year":284,"to_year":305,"basis":"text"}
+{"point":20,"from":"디오클레티아누스","rel":"동맹","to":"막시미아누스","from_year":285,"to_year":305,"basis":"chronology"}
+{"point":20,"from":"디오클레티아누스","rel":"동맹","to":"갈레리우스","from_year":305,"to_year":305,"basis":"text"}
+{"point":20,"from":"디오클레티아누스","rel":"동맹","to":"콘스탄티우스 1세","from_year":305,"to_year":305,"basis":"text"}
+{"point":20,"from":"막시미아누스","rel":"통치","to":"이탈리아","from_year":285,"to_year":305,"basis":"chronology"}
+{"point":20,"from":"막시미아누스","rel":"통치","to":"아프리카","from_year":285,"to_year":305,"basis":"chronology"}
+{"point":20,"from":"갈레리우스","rel":"통치","to":"일리리쿰","from_year":305,"to_year":311,"basis":"chronology"}
+{"point":20,"from":"콘스탄티우스 1세","rel":"통치","to":"갈리아","from_year":305,"to_year":null,"basis":"chronology"}
+{"point":20,"from":"콘스탄티우스 1세","rel":"통치","to":"에스파냐","from_year":305,"to_year":null,"basis":"chronology"}
+{"point":20,"from":"콘스탄티우스 1세","rel":"통치","to":"브리타니아","from_year":305,"to_year":null,"basis":"chronology"}
+{"point":26,"from":"테오도라","rel":"혼인","to":"유스티니아누스","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"테오도라","rel":"자녀","to":"아카키우스","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"산비탈레 성당","rel":"발생지","to":"라벤나","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"테오도라","rel":"적대","to":"청파","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"테오도라","rel":"적대","to":"녹파","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"유스티니아누스","rel":"자녀","to":"황비 루피키나","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"벨리사리우스","rel":"소속","to":"프로코피우스","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"테오도라","rel":"참전·관여","to":"니카의 반란","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"유스티니아누스","rel":"참전·관여","to":"니카의 반란","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"아카키우스","rel":"소속","to":"아나스타시우스 황제","from_year":null,"to_year":null,"basis":"text"}
+{"point":26,"from":"테오도라","rel":"통치","to":"콘스탄티노플","from_year":null,"to_year":null,"basis":"text"}

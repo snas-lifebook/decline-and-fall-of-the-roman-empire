@@ -1,0 +1,128 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페니키아 — 레바논 해안 전역 (티레-트리폴리)",
+    "description": "[확실] 산맥과 바다 사이에 낀 좁은 해안 평야. 194년 이전은 시리아 속주 소속, 이후는 독립 속주 페니케",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.2,
+       33.27
+      ],
+      [
+       35.37,
+       33.56
+      ],
+      [
+       35.5,
+       33.89
+      ],
+      [
+       35.65,
+       34.12
+      ],
+      [
+       35.85,
+       34.44
+      ],
+      [
+       36.05,
+       34.35
+      ],
+      [
+       36.0,
+       33.9
+      ],
+      [
+       35.9,
+       33.5
+      ],
+      [
+       35.75,
+       33.15
+      ],
+      [
+       35.2,
+       33.27
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티레",
+    "description": "[주요 항구도시] 기원전 64 — 고대 자색염료·유리 교역 중심지, 알렉산드로스 공성전(기원전 332)으로 유명",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2,
+     33.27
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시돈",
+    "description": "[주요 항구도시] 기원전 64 — 페니키아 도시 중 로마기에도 자치권 존속",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.37,
+     33.56
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "베리투스",
+    "description": "[법학교 소재지] 서기 194 — 로마 법학 교육의 중심지로 명성, 독립 속주 페니케 시기 번성",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.5,
+     33.89
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비블로스",
+    "description": "[주요도시] 기원전 64 — 세계 최고(最古) 도시 중 하나, 파피루스 교역 유래지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.65,
+     34.12
+    ]
+   }
+  }
+ ]
+}

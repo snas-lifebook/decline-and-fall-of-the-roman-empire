@@ -1,0 +1,237 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카이사르의 정복과 내전",
+    "period": "기원전 58~45"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      4.5006,
+      47.5392
+     ],
+     [
+      12.4431,
+      44.1681
+     ],
+     [
+      17.933,
+      40.633
+     ],
+     [
+      -1.0,
+      41.3667
+     ],
+     [
+      19.45,
+      41.32
+     ],
+     [
+      22.3833,
+      39.3
+     ],
+     [
+      29.9079,
+      31.1982
+     ],
+     [
+      35.883,
+      40.3
+     ],
+     [
+      11.0417,
+      35.6208
+     ],
+     [
+      -5.2167,
+      37.35
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알레시아",
+    "year": -52,
+    "description": "[확실] 기원전 52 — 갈리아 정복 완성. 베르킹게토릭스 항복. 갈리아 통일 저항의 종말",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.5006,
+     47.5392
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "루비콘 강",
+    "year": -49,
+    "description": "[확실] 기원전 49 — 루비콘 도하 (기원전 49년 1월 10일). 내전 개시의 상징적 경계 통과",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4431,
+     44.1681
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브린디시",
+    "year": -49,
+    "description": "[확실] 기원전 49 — 폼페이우스 항구 도주. 카이사르의 남부 이탈리아 장악",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.933,
+     40.633
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "일레르다",
+    "year": -49,
+    "description": "[확실] 기원전 49 — 스페인 전투 (기원전 49년 5~7월). 폼페이우스파 스페인 군대 항복",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.0,
+     41.3667
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "디르하키움",
+    "year": -48,
+    "description": "[확실] 기원전 48 — 아드리아해 전역 개시. 폼페이우스와의 대결 (기원전 48년 7월)",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.45,
+     41.32
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "파르살루스",
+    "year": -48,
+    "description": "[확실] 기원전 48 — 그리스 결정전 (기원전 48년 8월 9일). 폼페이우스 궤멸, 이집트로 도주",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.3833,
+     39.3
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알렉산드리아",
+    "year": -47,
+    "description": "[확실] 기원전 47 — 알렉산드리아 전투. 클레오파트라와의 동맹, 이집트 통제",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.9079,
+     31.1982
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "젤라",
+    "year": -47,
+    "description": "[확실] 기원전 47 — 젤라 전투 (기원전 47년). 판나케스 2세 격퇴, '왔노라 보았노라 이겼노라'",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.883,
+     40.3
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타프수스",
+    "year": -46,
+    "description": "[확실] 기원전 46 — 북아프리카 전투 (기원전 46년 2월 6일). 폼페이우스 세력 최후 저항 격퇴",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.0417,
+     35.6208
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "문다 평원",
+    "year": -45,
+    "description": "[확실] 기원전 45 — 스페인 최종전 (기원전 45년 3월 17일). 라비에누스 전사, 내전 완전 종료",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.2167,
+     37.35
+    ]
+   }
+  }
+ ]
+}

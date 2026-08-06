@@ -1,0 +1,136 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "동 일리리쿰 — 동 일리리쿰 관구 (마케도니아+다키아 관구, 트라키아 제외)",
+    "description": "[불확실] 일리리쿰(초기 속주)이 달마티아·판노니아 중심이었다면, 동 일리리쿰은 그 이름을 계승했지만 실제 범위는 전혀 달라 도나우 이남 발칸 서부·남부 전역과 그리스를 포함한다. 다만 트라키아 관구는 별도로 동방 관구(Oriens) 소속이라 여기서 제외한다. 경계는 정치적으로 계속 다투어져 불확실성이 크다.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       19.0,
+       45.5
+      ],
+      [
+       20.5,
+       44.8
+      ],
+      [
+       22.9,
+       44.0
+      ],
+      [
+       23.3,
+       42.7
+      ],
+      [
+       23.7,
+       41.5
+      ],
+      [
+       24.5,
+       40.0
+      ],
+      [
+       23.7,
+       38.0
+      ],
+      [
+       22.0,
+       36.8
+      ],
+      [
+       21.0,
+       38.5
+      ],
+      [
+       19.8,
+       39.7
+      ],
+      [
+       19.3,
+       41.3
+      ],
+      [
+       18.9,
+       42.5
+      ],
+      [
+       19.0,
+       43.5
+      ],
+      [
+       19.6,
+       44.8
+      ],
+      [
+       19.0,
+       45.5
+      ],
+      [
+       19.0,
+       45.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테살로니카",
+    "description": "[관구 행정 중심] 379 — 동 일리리쿰 관구의 실질적 행정·군사 중심지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.94,
+     40.64
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "세르디카",
+    "description": "[다키아 관구 도시] 379 — 다키아 관구(Dacia Mediterranea)의 주요 도시(현 소피아).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.32,
+     42.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니코폴리스",
+    "description": "[에페이로스 도시] 395~400 — 알라리크가 관할하며 침공한 서부 그리스 지역의 거점.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.73,
+     39.02
+    ]
+   }
+  }
+ ]
+}

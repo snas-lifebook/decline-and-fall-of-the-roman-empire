@@ -1,0 +1,377 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아 제국 — 갈리아 본토",
+    "description": "[확실] 존속 기간 내내 핵심 지배 영역. 포스투무스 260년 근거지 쾰른, 271년 테트리쿠스가 수도를 트리어로 이전.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -4.5,
+       48.5
+      ],
+      [
+       -3.5,
+       47.5
+      ],
+      [
+       -1.5,
+       45.5
+      ],
+      [
+       -0.5,
+       43.5
+      ],
+      [
+       0.5,
+       43.0
+      ],
+      [
+       2.0,
+       43.5
+      ],
+      [
+       4.0,
+       44.0
+      ],
+      [
+       5.5,
+       45.0
+      ],
+      [
+       6.5,
+       46.0
+      ],
+      [
+       7.5,
+       47.0
+      ],
+      [
+       8.0,
+       48.0
+      ],
+      [
+       8.5,
+       49.5
+      ],
+      [
+       7.5,
+       50.5
+      ],
+      [
+       5.0,
+       50.5
+      ],
+      [
+       3.0,
+       50.0
+      ],
+      [
+       -4.5,
+       48.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아 제국 — 브리타니아",
+    "description": "[확실] 전체 기간(260~274) 동안 갈리아 제국의 일부로 유지됨. 빅토리누스와 테트리쿠스 시대에도 인정함.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -4.0,
+       55.0
+      ],
+      [
+       -2.0,
+       55.5
+      ],
+      [
+       0.0,
+       56.0
+      ],
+      [
+       2.0,
+       54.0
+      ],
+      [
+       1.5,
+       51.5
+      ],
+      [
+       0.5,
+       50.5
+      ],
+      [
+       -1.0,
+       50.5
+      ],
+      [
+       -2.0,
+       51.0
+      ],
+      [
+       -4.0,
+       52.0
+      ],
+      [
+       -4.0,
+       55.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아 제국 — 히스파니아",
+    "description": "[대략] 포스투무스 초기(260~269)에 포함되었으나, 269년 히스파니아가 클라우디우스 고티쿠스에 항복하면서 상실. 이후 빅토리누스·테트리쿠스 시대에는 인정하지 않음.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -9.0,
+       43.0
+      ],
+      [
+       -8.5,
+       41.0
+      ],
+      [
+       -4.0,
+       37.0
+      ],
+      [
+       0.0,
+       36.0
+      ],
+      [
+       2.0,
+       38.0
+      ],
+      [
+       1.5,
+       41.0
+      ],
+      [
+       -0.5,
+       42.0
+      ],
+      [
+       -1.5,
+       43.0
+      ],
+      [
+       -9.0,
+       43.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아 제국 — 게르마니아(라인 우측)",
+    "description": "[불확실] 라인 강 동쪽 일부(Germania Superior/Inferior 접경). 정확한 범위와 지배 시기가 불명확하므로 confidence 하향. 포스투무스 초기에 인정받았을 가능성.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.5,
+       49.0
+      ],
+      [
+       10.0,
+       48.5
+      ],
+      [
+       11.0,
+       49.0
+      ],
+      [
+       10.5,
+       50.5
+      ],
+      [
+       9.0,
+       51.0
+      ],
+      [
+       8.0,
+       50.0
+      ],
+      [
+       8.5,
+       49.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "쾰른",
+    "description": "[수도] 260 — 포스투무스가 제위를 칭하고 갈리아 제국의 근거지로 삼았다. 이후 271년까지 주요 거점.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9603,
+     50.9375
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트리어",
+    "description": "[수도] 271 — 테트리쿠스 I가 271년 수도를 트리어(Augusta Treverorum)로 이전. 제국의 마지막 수도로서 274년까지 유지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.43,
+     49.75
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아를",
+    "description": "[주요도시] 260 — 갈리아 남부의 주요 행정·무역 중심지. 포스투무스 정권 초기에 지배.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.6256,
+     43.677
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "보르도",
+    "description": "[주요도시] 271 — 테트리쿠스 I가 제위를 추대받은 지역. 아키텐 주(Aquitania) 중심지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.57,
+     44.84
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스트라스부르",
+    "description": "[요새] 260 — 라인 강 동쪽 국경 요새. 테트리쿠스 시대 일부 반란 세력의 거점(Argentoratum으로도 불림).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.75,
+     48.58
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브리타니아",
+    "description": "[주요도시] 260 — 브리타니아의 주요 로마 도시(Londinium). 갈리아 제국의 지배 하에 있었음.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.127,
+     51.51
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "요크",
+    "description": "[요새] 260 — 브리타니아 북부의 로마 군사 기지(Eboracum). 갈리아 제국 시기 북쪽 국경 방위.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.08,
+     53.96
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메리다",
+    "description": "[주요도시] 260 — 히스파니아 남부 주요 도시(Emerita Augusta). 포스투무스 초기에 포함되었으나 269년 상실.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.34,
+     38.92
+    ]
+   }
+  }
+ ]
+}

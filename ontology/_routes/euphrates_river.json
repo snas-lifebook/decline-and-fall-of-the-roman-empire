@@ -1,0 +1,61 @@
+{
+  "name": "유프라테스 강",
+  "subject": "유프라테스 강",
+  "period": "서기 2~3세기",
+  "summary": "로마와 파르티아·사산조 페르시아 사이의 오랜 경계선. 여러 로마 도시가 이 강 건너편에서 침공을 받아 파괴·약탈당했다.",
+  "waypoints": [
+    {
+      "place": "유프라테스 강 발원지(아나톨리아 동부)",
+      "lat": 39.71,
+      "lon": 40.51,
+      "event": "아나톨리아 동부 산지에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "사모사타 인근",
+      "lat": 37.52,
+      "lon": 38.57,
+      "event": "카파도키아·시리아 속주 방면 로마 군단기지가 늘어선 국경 구간",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "제우그마 도하 지점",
+      "lat": 37.06,
+      "lon": 37.87,
+      "event": "로마와 파르티아·사산조 페르시아가 서로 도하하며 충돌한 주요 나루터. 여러 차례 로마 도시가 강 건너편에서 침공을 받아 파괴·약탈당했다",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "두라 에우로포스",
+      "lat": 34.75,
+      "lon": 40.73,
+      "event": "유프라테스 강변의 로마 국경 도시. 3세기 사산조의 공세로 함락됐다",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "바그다드",
+      "lat": 33.3153,
+      "lon": 44.3661,
+      "event": "메소포타미아 중류 구간",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "유프라테스 강",
+      "lat": 31.005,
+      "lon": 47.4419,
+      "event": "페르시아만으로 흘러드는 하류. 서기 116년 트라야누스가 한때 도달했으나 이듬해 하드리아누스가 곧바로 포기한 로마 최동단 경계선",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Euphrates",
+    "Wikipedia: Roman–Persian Wars",
+    "Wikipedia: Dura-Europos"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헬베티족 — 헬베티아 (스위스 고원, 기원전 1세기)",
+    "description": "[확실] 기원전 58년 이주 시도 이전 헬베티족의 본거지 — 레만호와 보덴호 사이 스위스 중앙 고원. 카이사르 갈리아 전쟁기 기록 기준.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       6.1,
+       46.2
+      ],
+      [
+       7.5,
+       47.0
+      ],
+      [
+       9.3,
+       47.5
+      ],
+      [
+       9.5,
+       46.8
+      ],
+      [
+       8.0,
+       46.0
+      ],
+      [
+       6.8,
+       46.1
+      ],
+      [
+       6.1,
+       46.2
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

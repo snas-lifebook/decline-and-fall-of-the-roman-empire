@@ -1,0 +1,40 @@
+{"name":"고트족","type":"group","aliases":["Goths"],"attrs":{"origin":"스칸디나비아 반도","language":"독일어계"},"points":[17],"desc":"게르만계 유목민족. 문맹 야만족으로 취급받았으나 백병전에 능했고 지도자에 대한 충성심이 강했다."}
+{"name":"세베루스","type":"person","aliases":[],"attrs":{"role":"emperor","reign":"222-235"},"points":[17],"desc":"로마 황제. 고트족이 다키아를 처음 침략한 시대의 황제."}
+{"name":"데키우스","type":"person","aliases":["Decius"],"attrs":{"role":"emperor","reign":"249-251"},"points":[17],"desc":"로마 황제. 고트족의 침입에 대응하려다 늪지대 전투에서 전사하고 그 시체를 찾지 못했다."}
+{"name":"트라야누스","type":"person","aliases":["Trajan"],"attrs":{"role":"emperor"},"points":[17],"desc":"로마 황제. 106년 다키아를 정복했고 마르키아노폴리스 도시를 설립했다."}
+{"name":"반달족","type":"group","attrs":{"origin":"독일 지역"},"points":[17],"desc":"게르만계 민족. 고트족과 같은 조상, 종교, 언어를 공유했다."}
+{"name":"프리스쿠스","type":"person","attrs":{"role":"prince"},"points":[17],"desc":"전 황제 필리푸스의 동생. 필리포폴리스 함락 후 고트족의 비호 아래 자의를 입었다."}
+{"name":"필리푸스","type":"person","attrs":{"role":"emperor"},"points":[17],"desc":"로마 황제. 니코폴리스 건설과 관련된 인물이며 그의 동생 프리스쿠스는 필리포폴리스에서 항복했다."}
+{"name":"갈루스","type":"person","attrs":{"role":"emperor","reign":"251-253"},"points":[17],"desc":"로마 황제. 어린 호스틸리아누스와 공동 통치했으나 고트족과 굴욕적인 조약을 체결했고 민중의 비난을 받았다."}
+{"name":"호스틸리아누스","type":"person","attrs":{"role":"emperor"},"points":[17],"desc":"데키우스의 아들. 어린 나이에 황제가 되어 갈루스와 공동 통치했으나 고트족과의 전쟁을 거부했다."}
+{"name":"아이밀리아누스","type":"person","attrs":{"role":"governor","title":"주지사"},"points":[17],"desc":"모이시아 지방의 총독. 갈루스의 명령으로 고트족을 격퇴했고 부하들에게 추대되어 황제가 되었으나 4개월 후 살해되었다."}
+{"name":"카르피족","type":"group","points":[17],"desc":"야만족. 고트족이 필리포폴리스를 점령한 후 로마를 침입했다."}
+{"name":"원로원","type":"group","points":[17],"desc":"로마 제국의 최고 의결기관. 갈루스의 죽음 후 아이밀리아누스를 황제로 정식 승인했다."}
+{"name":"로마 군","type":"group","points":[17],"desc":"로마 제국의 군대. 고트족 앞에서 처음으로 패주했고 많은 병사들이 고트족에 귀순했다."}
+{"name":"스칸디나비아 반도","type":"place","points":[17],"desc":"고트족의 발상지로 전설에는 전해지나 신빙성은 낮다."}
+{"name":"오데르 강","type":"place","points":[17],"desc":"로마 시대 초기 고트족이 거주했던 지역."}
+{"name":"독일","type":"place","points":[17],"desc":"고트족의 본거지 일부. 독일 평원지역에는 고급민족들이 살았다."}
+{"name":"폴란드","type":"place","points":[17],"desc":"고트족의 이동 경로 중 하나. 비수아 강 유역에 고트족이 정착했다."}
+{"name":"러시아","type":"place","points":[17],"desc":"고트족의 이동 경로를 통과한 지역."}
+{"name":"우크라이나","type":"place","points":[17],"desc":"고트족이 눈깜짝할 사이에 점령한 지역. 매우 풍요로웠으나 고트족은 여기에 정착하지 않았다."}
+{"name":"다키아","type":"place","points":[17],"desc":"로마 제국의 영토. 106년 트라야누스가 정복했으나 방위가 소홀했고 고트족의 침략을 받았다."}
+{"name":"루마니아","type":"place","points":[17],"desc":"현재 다키아 지역의 위치."}
+{"name":"트란실바니아","type":"place","points":[17],"desc":"루마니아 북부의 숲 지역. 다키아 북쪽에 위치했다."}
+{"name":"비수아 강","type":"place","points":[17],"desc":"고트족이 서기 1년경에 정착했던 지역."}
+{"name":"도나우 강","type":"place","points":[17],"desc":"다키아와 모이시아를 나누는 강. 고트족은 저항 없이 건널 수 있었다."}
+{"name":"마르키아노폴리스","type":"place","points":[17],"desc":"흑해 연안의 성. 트라야누스의 여동생 마르키아나의 이름을 본따 만들어졌다."}
+{"name":"흑해","type":"place","points":[17],"desc":"고트족의 제2차 이동 목적지 근처."}
+{"name":"모이시아","type":"place","points":[17],"desc":"유고슬라비아 동남부와 불가리아 북부의 로마 속주. 고트족에게 약탈당했다."}
+{"name":"필리포폴리스","type":"place","points":[17],"desc":"트라키아의 수도. 고트족에게 포위되어 10만 시민이 학살되었다."}
+{"name":"발칸","type":"place","points":[17],"desc":"필리포스가 발칸 산맥 근처에 도시를 만들었다."}
+{"name":"트라키아","type":"place","points":[17],"desc":"필리포폴리스가 있던 지역."}
+{"name":"필리피","type":"place","points":[17],"desc":"필리포폴리스의 다른 이름."}
+{"name":"니코폴리스","type":"place","points":[17],"desc":"트라야누스 황제가 조성한 도시 중 하나. 250년 고트족에게 포위되었다."}
+{"name":"포룸 테레브로니","type":"place","points":[17],"desc":"모이시아 속주 교외의 작은 마을. 데키우스 황제가 고트족과 전투한 장소."}
+{"name":"스폴레토","type":"place","points":[17],"desc":"이탈리아 중부. 갈루스 황제가 군대를 진격시킨 장소."}
+{"name":"이탈리아","type":"place","points":[17],"desc":"로마 제국의 중심지."}
+{"name":"제2차 이동기","type":"event","attrs":{"years":"약 70년"},"points":[17],"desc":"고트족이 발트해에서 흑해로 옮겨간 대규모 이동. 세베루스 황제 시대에 시작."}
+{"name":"다키아 정복","type":"event","attrs":{"year":"106"},"points":[17],"desc":"트라야누스 황제가 다키아를 정복한 사건."}
+{"name":"필리포폴리스 함락","type":"event","points":[17],"desc":"고트족이 필리포폴리스를 포위하여 10만 시민을 학살하고 함락한 사건."}
+{"name":"늪지대 전투","type":"event","points":[17],"desc":"포룸 테레브로니 근처의 습지대에서 벌어진 전투. 데키우스 황제가 전사했다."}
+{"name":"공치황제제","type":"institution","points":[17],"desc":"두 명 이상의 황제가 공동으로 통치하는 제도. 갈루스와 호스틸리아누스, 그리고 이후 여러 황제들이 채택했다."}

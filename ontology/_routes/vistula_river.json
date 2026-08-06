@@ -1,0 +1,44 @@
+{
+  "name": "비수아 강",
+  "subject": "비수아 강",
+  "period": "서기 1세기경",
+  "summary": "발트해로 흘러드는 강. 고트족이 흑해 방면으로 남하하기 전 최초로 정착했다고 전해지는 유역이다.",
+  "waypoints": [
+    {
+      "place": "비수아 강 발원지(실레지아)",
+      "lat": 49.62,
+      "lon": 18.86,
+      "event": "폴란드 남부 산지에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "크라쿠프 인근",
+      "lat": 50.06,
+      "lon": 19.94,
+      "event": "상류를 지나는 구간",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "바르샤바 인근",
+      "lat": 52.23,
+      "lon": 21.01,
+      "event": "중류 구간. 고트족이 발트해 연안에서 남하해 서기 1세기경 이 유역 일대에 정착했다고 전해진다",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "비수아 강",
+      "lat": 54.3617,
+      "lon": 18.9519,
+      "event": "발트해로 흘러드는 하구. 로마 상인들의 호박길(암베르 로드) 북쪽 종점이자 고트족의 최초 정착 전승지",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Vistula",
+    "Jordanes: Getica (고트족 기원 전승)"
+  ]
+}

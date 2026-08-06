@@ -1,0 +1,33 @@
+{"from":"한니발","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":3}
+{"from":"한니발","from_type":"person","to":"로마","to_type":"place","rel":"opposed","point":3}
+{"from":"한니발","from_type":"person","to":"제2차 포에니 전쟁","to_type":"event","rel":"participated_in","point":3}
+{"from":"한니발","from_type":"person","to":"칸나이 전투","to_type":"event","rel":"participated_in","point":3}
+{"from":"한니발","from_type":"person","to":"하스드루발","to_type":"person","rel":"child_of","point":3}
+{"from":"푸블리우스 스키피오","from_type":"person","to":"에스파냐","to_type":"place","rel":"participated_in","point":3}
+{"from":"그나이우스 스키피오","from_type":"person","to":"에스파냐","to_type":"place","rel":"ruled","point":3}
+{"from":"셈프로니우스","from_type":"person","to":"트레비아 강","to_type":"place","rel":"participated_in","point":3}
+{"from":"플라미니우스","from_type":"person","to":"한니발","to_type":"person","rel":"opposed","point":3}
+{"from":"파비우스 막시무스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":3}
+{"from":"루키우스 아밀리우스 파울루스","from_type":"person","to":"칸나이 전투","to_type":"event","rel":"participated_in","point":3}
+{"from":"가이우스 테렌티우스 바로","from_type":"person","to":"칸나이 전투","to_type":"event","rel":"participated_in","point":3}
+{"from":"필리포스 5세","from_type":"person","to":"한니발","to_type":"person","rel":"allied_with","point":3}
+{"from":"필리포스 5세","from_type":"person","to":"마케도니아","to_type":"place","rel":"ruled","point":3}
+{"from":"아르키메데스","from_type":"person","to":"시라쿠사","to_type":"place","rel":"ruled","point":3}
+{"from":"하스드루발","from_type":"person","to":"에스파냐","to_type":"place","rel":"ruled","point":3}
+{"from":"하스드루발","from_type":"person","to":"로마","to_type":"place","rel":"opposed","point":3}
+{"from":"마시니사","from_type":"person","to":"누미디아","to_type":"place","rel":"ruled","point":3}
+{"from":"마시니사","from_type":"person","to":"로마","to_type":"place","rel":"allied_with","point":3}
+{"from":"푸블리우스 코르넬리우스 스키피오","from_type":"person","to":"에스파냐","to_type":"place","rel":"ruled","point":3}
+{"from":"푸블리우스 코르넬리우스 스키피오","from_type":"person","to":"한니발","to_type":"person","rel":"opposed","point":3}
+{"from":"푸블리우스 코르넬리우스 스키피오","from_type":"person","to":"마그네시아 전투","to_type":"event","rel":"participated_in","point":3}
+{"from":"제2차 포에니 전쟁","from_type":"event","to":"로마","to_type":"place","rel":"occurred_at","point":3}
+{"from":"제2차 포에니 전쟁","from_type":"event","to":"카르타고","to_type":"place","rel":"occurred_at","point":3}
+{"from":"칸나이 전투","from_type":"event","to":"칸나이 평원","to_type":"place","rel":"occurred_at","point":3}
+{"from":"한니발","from_type":"person","to":"알프스","to_type":"place","rel":"participated_in","point":3}
+{"from":"한니발","from_type":"person","to":"칸나이 전투","to_type":"event","rel":"participated_in","point":3}
+{"from":"로마","from_type":"place","to":"카르타고","to_type":"place","rel":"opposed","point":3}
+{"from":"코끼리 부대","from_type":"group","to":"한니발","to_type":"person","rel":"member_of","point":3}
+{"from":"누미디아인","from_type":"group","to":"한니발","to_type":"person","rel":"member_of","point":3}
+{"from":"에스파냐인","from_type":"group","to":"한니발","to_type":"person","rel":"member_of","point":3}
+{"from":"리비아인","from_type":"group","to":"한니발","to_type":"person","rel":"member_of","point":3}
+{"from":"갈리아인","from_type":"group","to":"한니발","to_type":"person","rel":"member_of","point":3}

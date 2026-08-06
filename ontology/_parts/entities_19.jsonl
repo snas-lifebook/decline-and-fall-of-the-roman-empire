@@ -1,0 +1,19 @@
+{"name":"갈리에누스","type":"person","aliases":["Gallienus"],"attrs":{"role":"emperor","reign":"260-268"},"points":[19],"desc":"로마 제국의 황제. 아버지 발레리아누스가 페르시아 군에게 포로가 되자 단독 황제가 되었으나 무능하고 잔혹하여 30명의 참주가 출현하는 사태를 초래했다."}
+{"name":"발레리아누스","type":"person","aliases":["Valerian"],"attrs":{"role":"emperor","reign":"217-260"},"points":[19],"desc":"로마 제국의 황제. 260년 페르시아 군에게 체포되었으며, 아들 갈리에누스에 의해 구원받지 못하고 옥사했다."}
+{"name":"오다이나투스","type":"person","aliases":[],"attrs":{"role":"제국의 왕","region":"시리아"},"points":[19],"desc":"페르시아 군을 물리친 로마의 은인이며 시리아의 유명한 장군. 원로원으로부터 제국의 왕이라는 칭호를 받은 유일한 참주이다."}
+{"name":"제노비아","type":"person","aliases":["Zenobia"],"attrs":{"role":"팔미라 여왕"},"points":[19],"desc":"오다이나투스의 미망인으로 어린 아들을 옹립하여 팔미라의 여왕이 되었다. 7만 군대를 이끌고 로마 제국의 영토를 침략했으나 아우렐리아누스에 의해 격파되었다."}
+{"name":"아우렐리아누스","type":"person","aliases":["Aurelian"],"attrs":{"role":"emperor","reign":"270-275"},"points":[19],"desc":"로마 제국의 황제. 팔미라의 위협을 느껴 팔미라 대토벌 군을 출전시켜 제노비아의 세력을 단숨에 섬멸했다."}
+{"name":"마리우스","type":"person","aliases":[],"attrs":{"role":"참주","occupation":"대장장이"},"points":[19],"desc":"투구와 갑옷을 만드는 대장장이에서 참주가 된 인물. 괴력과 배짱으로 병사들에게 많은 사랑을 받았으나 황제의 자질이 부족했다."}
+{"name":"테트리쿠스","type":"person","aliases":[],"attrs":{"role":"참주","origin":"원로원 의원"},"points":[19],"desc":"황제를 사칭한 참주 중 유일한 원로원 의원이었다."}
+{"name":"칼푸르니우스 피소","type":"person","aliases":["Piso"],"attrs":{"role":"참주"},"points":[19],"desc":"로마의 명문가 칼푸르니우스 가문 출신의 참주. 귀족 출신으로 고결함을 인정받아 황제 갈리에누스에게도 예우를 받았다."}
+{"name":"인게누스","type":"person","aliases":[],"attrs":{"role":"참주","region":"일리리쿰"},"points":[19],"desc":"일리리쿰에서 황제를 사칭한 참주로, 진압된 후 갈리에누스의 엄한 칙서에 의해 잔혹한 보복의 대상이 되었다."}
+{"name":"페르시아","type":"place","aliases":["Persia"],"attrs":{"region":"동방"},"points":[19],"desc":"로마 제국의 오랜 숙적. 샤푸르 왕이 로마에 대해 잔혹한 정복자의 얼굴을 보였으며, 이후 로마와 여러 차례 전쟁을 벌였다."}
+{"name":"팔미라","type":"place","aliases":["Palmyra"],"attrs":{"region":"시리아"},"points":[19],"desc":"제노비아의 여왕국으로, 7만 군대를 거느리고 로마 제국의 영토를 침략했으나 아우렐리아누스에 의해 멸망했다."}
+{"name":"갈리아","type":"place","aliases":["Gaul"],"attrs":{"region":"서방"},"points":[19],"desc":"로마 제국의 서쪽 속주. 참주들이 많이 등장한 지역으로 14명의 황제 사칭자가 나타났다."}
+{"name":"시리아","type":"place","aliases":[],"attrs":{"region":"동방"},"points":[19],"desc":"로마 제국의 동방 영토. 오다이나투스가 지배했던 지역이며, 제노비아의 팔미라 제국이 침략했다."}
+{"name":"이집트","type":"place","aliases":["Egypt"],"attrs":{},"points":[19],"desc":"로마 제국의 남방 속주. 팔미라 군이 원정을 갔던 지역이며 아마표라는 수공예품의 산지였다."}
+{"name":"소아시아","type":"place","aliases":["Asia Minor"],"attrs":{"region":"동방"},"points":[19],"desc":"로마 제국의 동방 영토. 팔미라 군이 대부분을 정복하여 대팔미라 제국의 일부가 되었다."}
+{"name":"일리리쿰","type":"place","aliases":["Illyricum"],"attrs":{"region":"북방"},"points":[19],"desc":"로마 제국의 북방 속주. 참주 인게누스가 황제를 사칭했던 지역이다."}
+{"name":"로마","type":"place","aliases":["Rome"],"attrs":{},"points":[19],"desc":"로마 제국의 중심지이자 영원의 도시. 갈리에누스의 부덕으로 인한 내란의 중심무대였다."}
+{"name":"원로원","type":"group","aliases":[],"attrs":{},"points":[19],"desc":"로마 제국의 최고 입법 기관. 참주들이 공인되지 않은 반면, 갈리에누스와 오다이나투스는 정식으로 인정했다."}
+{"name":"참주","type":"institution","aliases":[],"attrs":{},"points":[19],"desc":"무력으로 황위를 찬탈하여 황제의 칭호를 사칭하는 자. 갈리에누스 시대에 30명 또는 19명이 등장했다고 기록된다."}

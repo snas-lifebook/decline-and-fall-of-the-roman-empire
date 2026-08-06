@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트라야누스의 다키아 원정",
+    "period": "98~106"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      10,
+      51
+     ],
+     [
+      12.4862,
+      41.8917
+     ],
+     [
+      17.0,
+      48.0
+     ],
+     [
+      22.5,
+      47.5
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "게르마니아",
+    "year": 98,
+    "description": "[확실] 98 — 테우토니족과의 분쟁을 치르던 중 네르바 황제의 후계자로서 황제에 즉위",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10,
+     51
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "year": 100,
+    "description": "[확실] 100 — 즉위 2년 만에 로마로 돌아와 비로소 황제의 직무를 수행",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4862,
+     41.8917
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "도나우 강",
+    "year": 101,
+    "description": "[확실] 101 — 다키아 원정을 위해 도나우 강을 도하. 건축가 아폴로도로스가 놓은 다리('일야교 건축' 전설)로 유명",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.0,
+     48.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "다키아",
+    "year": 106,
+    "description": "[확실] 106 — 다키아 지방을 정복하여 로마의 속주로 편입. 이후 아우렐리아누스 황제 때(270~275)까지 로마령으로 유지됨",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.5,
+     47.5
+    ]
+   }
+  }
+ ]
+}

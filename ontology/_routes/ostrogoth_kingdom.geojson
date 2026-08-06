@@ -1,0 +1,350 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "동고트 왕국 — 이탈리아 반도",
+    "description": "[확실] 테오도리크 치세 최대 판도(493~526). 526년 테오도리크 사망 후 유스티니아누스 전쟁으로 축소.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.0,
+       46.5
+      ],
+      [
+       14.5,
+       45.5
+      ],
+      [
+       16.0,
+       44.5
+      ],
+      [
+       18.0,
+       42.0
+      ],
+      [
+       18.5,
+       40.5
+      ],
+      [
+       14.5,
+       40.5
+      ],
+      [
+       14.0,
+       40.0
+      ],
+      [
+       13.5,
+       39.0
+      ],
+      [
+       12.5,
+       41.0
+      ],
+      [
+       9.5,
+       43.0
+      ],
+      [
+       9.0,
+       44.5
+      ],
+      [
+       10.5,
+       45.5
+      ],
+      [
+       12.0,
+       46.0
+      ],
+      [
+       13.0,
+       46.5
+      ],
+      [
+       13.0,
+       46.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "동고트 왕국 — 시칠리아",
+    "description": "[확실] 493년부터 왕국 영토에 포함",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       15.5,
+       38.5
+      ],
+      [
+       16.0,
+       38.0
+      ],
+      [
+       15.0,
+       37.5
+      ],
+      [
+       14.5,
+       37.0
+      ],
+      [
+       13.0,
+       37.5
+      ],
+      [
+       12.5,
+       38.0
+      ],
+      [
+       13.0,
+       38.5
+      ],
+      [
+       15.5,
+       38.5
+      ],
+      [
+       15.5,
+       38.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "동고트 왕국 — 달마티아",
+    "description": "[대략] 아드리아해 동쪽 해안(현 크로아티아). 경계 확도 불확정.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       16.0,
+       45.0
+      ],
+      [
+       16.0,
+       45.0
+      ],
+      [
+       17.0,
+       44.0
+      ],
+      [
+       18.5,
+       43.0
+      ],
+      [
+       17.5,
+       42.0
+      ],
+      [
+       17.0,
+       42.5
+      ],
+      [
+       16.5,
+       43.5
+      ],
+      [
+       16.0,
+       45.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라벤나",
+    "description": "[수도] 493 — 테오도리크가 오도아케르를 죽이고 라벤나를 왕국의 수도로 삼았다.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.1966,
+     44.4157
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "description": "[주요도시] 493 — 동고트 왕국의 상징적 도시. 유스티니아누스 전쟁 이후 폐허가 됨.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4862,
+     41.8917
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "밀라노",
+    "description": "[주요도시] 493 — 북부 주요 도시. 493년 테오도리크 왕국에 포함.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1895,
+     45.4643
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "팔레르모",
+    "description": "[항구] 493 — 시칠리아 주요 항구. 왕국 해양 무역의 중심.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.363,
+     38.118
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메시나",
+    "description": "[항구] 493 — 시칠리아 북동부 항구. 해협 통제의 전략적 요충지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.5566,
+     38.1923
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시라쿠사",
+    "description": "[주요도시] 493 — 시칠리아 남동부 주요 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.293,
+     37.0639
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브린디시",
+    "description": "[항구] 493 — 이탈리아 남동부 항구. 아드리아해 통제.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.933,
+     40.633
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "토리노",
+    "description": "[주요도시] 493 — 북부 알프스 기슭 도시. 왕국의 북서쪽 경계.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.6761,
+     45.0792
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타란토",
+    "description": "[항구] 493 — 남부 이탈리아 항구. 왕국의 남동쪽 요충지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.2431,
+     40.4711
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스폴레토",
+    "description": "[주요도시] 493 — 중부 이탈리아 도시. 로마와 북부를 연결하는 전략적 위치.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.7403,
+     42.7352
+    ]
+   }
+  }
+ ]
+}

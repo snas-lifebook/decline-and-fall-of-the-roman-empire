@@ -1,0 +1,38 @@
+{"name":"카이사르","type":"person","aliases":["Julius Caesar"],"attrs":{"role":"Roman general","title":"dictator"},"points":[8],"desc":"로마의 최고 지위에 오른 독재관. 왕권을 손에 넣으려 했으나 원로원 의원들에 의해 암살되었다."}
+{"name":"칼비누스","type":"person","attrs":{"role":"Roman officer"},"points":[8],"desc":"카이사르의 부관. 폰투스의 파르나케스 왕을 격멸한 군단을 이끌었다."}
+{"name":"파르나케스","type":"person","attrs":{"role":"King of Pontus"},"points":[8],"desc":"흑해 연안 폰투스 왕국의 왕. 카이사르에게 격멸당했다."}
+{"name":"폰투스","type":"place","aliases":["Kingdom of Pontus"],"attrs":{"region":"흑해 연안"},"points":[8],"desc":"옛 왕국. 파르나케스가 통치했으며 카이사르에 의해 정복되었다."}
+{"name":"타란토","type":"place","attrs":{"region":"이탈리아 남부"},"points":[8],"desc":"이탈리아 반도 남단의 도시. 카이사르가 1년 9개월 만에 귀환한 장소이다."}
+{"name":"마르스 광장","type":"place","attrs":{"region":"로마"},"points":[8],"desc":"로마의 공공 광장. 카이사르가 반란한 군대를 수습한 장소이다."}
+{"name":"아프라니우스","type":"person","attrs":{"role":"Roman commander"},"points":[8],"desc":"폼페이우스파의 지휘자. 로마가 무방비 상태일 때 일거에 습격할 것을 주장했다."}
+{"name":"테살리아","type":"place","attrs":{"region":"그리스"},"points":[8],"desc":"그리스의 지역. 마르쿠스 안토니우스의 군대가 전진한 장소이다."}
+{"name":"파르살루스","type":"place","aliases":["Pharsalus"],"attrs":{"region":"그리스"},"points":[8],"desc":"카이사르와 폼페이우스 사이의 결전지. 카이사르가 승리했다."}
+{"name":"라리사","type":"place","attrs":{"region":"그리스"},"points":[8],"desc":"폼페이우스가 패주한 도시. 브루투스가 카이사르에게 사면을 탄원한 장소이다."}
+{"name":"폼페이우스","type":"person","aliases":["Pompey"],"attrs":{"role":"Roman general"},"points":[8],"desc":"카이사르의 정치적 적. 파르살루스에서 패배하고 이집트에서 살해되었다."}
+{"name":"브루투스","type":"person","aliases":["Marcus Junius Brutus"],"attrs":{"role":"Roman senator"},"points":[8],"desc":"카이사르의 총애를 받던 자. 결국 암살 음모에 가담했다."}
+{"name":"카시우스","type":"person","aliases":["Gaius Cassius Longinus"],"attrs":{"role":"Roman senator"},"points":[8],"desc":"카이사르 암살 음모의 주도자. 브루투스와 의형제를 맺었다."}
+{"name":"마르쿠스 안토니우스","type":"person","aliases":["Mark Antony"],"attrs":{"role":"Roman general"},"points":[8],"desc":"카이사르의 친근한 부관. 후에 안토니우스로 불렸다."}
+{"name":"칼푸르니아","type":"person","attrs":{"role":"Caesar's wife"},"points":[8],"desc":"카이사르의 아내. 남편의 죽음에 대한 악몽을 꾸었다."}
+{"name":"클레오파트라","type":"person","attrs":{"role":"Egypt pharaoh"},"points":[8],"desc":"이집트 여왕. 로마에 머물 때 카이사르에게 보호받았다."}
+{"name":"에스파냐","type":"place","attrs":{"region":"current Spain"},"points":[8],"desc":"로마의 속주. 폼페이우스파의 아들들이 군을 일으킨 곳이다."}
+{"name":"코르도바","type":"place","attrs":{"region":"에스파냐"},"points":[8],"desc":"에스파냐의 도시. 카이사르가 병으로 쓰러진 곳이다."}
+{"name":"그나이우스 폼페이우스","type":"person","attrs":{"role":"son of Pompey"},"points":[8],"desc":"폼페이우스의 아들. 에스파냐에서 군을 일으켰으나 패배하여 살해되었다."}
+{"name":"섹스투스","type":"person","attrs":{"role":"son of Pompey"},"points":[8],"desc":"폼페이우스의 또 다른 아들. 형 그나이우스와 함께 에스파냐에서 군을 일으켰다."}
+{"name":"문다 평원","type":"place","attrs":{"region":"에스파냐"},"points":[8],"desc":"폼페이우스파가 8만 군을 집결시킨 전장. 카이사르가 마지막 승리를 거둔 곳이다."}
+{"name":"타프수스","type":"place","attrs":{"region":"튀니지 해안"},"points":[8],"desc":"누미디아 왕국의 동쪽 해안. 카이사르가 점거한 장소이다."}
+{"name":"누미디아","type":"place","attrs":{"region":"북아프리카"},"points":[8],"desc":"아프리카 왕국. 유바 1세가 폼페이우스파를 지원했다."}
+{"name":"유바 1세","type":"person","attrs":{"role":"King of Numidia"},"points":[8],"desc":"누미디아의 왕. 폼페이우스파에 6만의 병력을 지원했다."}
+{"name":"아테네","type":"place","attrs":{"region":"그리스"},"points":[8],"desc":"그리스의 도시. 카이사르가 최첨단 지식을 습득한 곳이다."}
+{"name":"로도스 섬","type":"place","attrs":{"region":"지중해"},"points":[8],"desc":"지중해의 섬. 카이사르가 학습한 장소이다."}
+{"name":"알렉산드리아","type":"place","attrs":{"region":"이집트"},"points":[8],"desc":"이집트의 수도. 카이사르가 방문했던 도시이다."}
+{"name":"율리우스력","type":"work","attrs":{"innovation":"calendar system","year":365},"points":[8],"desc":"카이사르가 시행한 력법. 1년을 365일로 나누는 체계이다."}
+{"name":"옥타비아누스","type":"person","aliases":["Augustus","Gaius Julius Caesar Octavianus"],"attrs":{"role":"Caesar's heir","successor":"emperor"},"points":[8],"desc":"카이사르의 양자이자 후계자. 훗날 로마의 초대 황제 아우구스투스가 되었다."}
+{"name":"율리아","type":"person","attrs":{"role":"Caesar's niece"},"points":[8],"desc":"카이사르의 여동생. 옥타비아누스의 할머니이다."}
+{"name":"아우구스투스","type":"person","aliases":["Octavianus","Augustus Caesar"],"attrs":{"role":"first emperor"},"points":[8],"desc":"카이사르의 후계자인 옥타비아누스가 훗날 취한 이름. 로마의 초대 황제가 되었다."}
+{"name":"스푸린나","type":"person","attrs":{"role":"soothsayer"},"points":[8],"desc":"점성가. 카이사르에게 3월 15일을 주의하라고 경고했다."}
+{"name":"카스카","type":"person","attrs":{"role":"senator"},"points":[8],"desc":"원로원 의원. 암살 때 처음 카이사르의 등을 찔렀다."}
+{"name":"키케로","type":"person","attrs":{"role":"orator"},"points":[8],"desc":"유명한 로마 연설가. 삼두정치 시대에 목과 오른손이 잘려 처형되었다."}
+{"name":"카토","type":"person","attrs":{"role":"senator"},"points":[8],"desc":"로마 원로원 의원. 카이사르를 반대했으나 추격을 받으며 자살했다."}
+{"name":"마르켈루스","type":"person","attrs":{"role":"senator"},"points":[8],"desc":"원로원 의원. 카토와 함께 카이사르에 반대했다."}
+{"name":"렌툴루스","type":"person","attrs":{"role":"consul"},"points":[8],"desc":"로마 집정관. 폼페이우스에게 국가보안 전권을 위임했다."}
+{"name":"시칠리아","type":"place","attrs":{"region":"지중해"},"points":[8],"desc":"로마의 속주. 카이사르의 부관이 공격한 장소이다."}

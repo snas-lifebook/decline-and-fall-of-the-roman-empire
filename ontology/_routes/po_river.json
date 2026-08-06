@@ -1,0 +1,52 @@
+{
+  "name": "포 강",
+  "subject": "포 강",
+  "period": "기원전 218",
+  "summary": "이탈리아 북부를 관통하는 이탈리아 최대의 강. 한니발이 알프스를 넘어 내려와 처음 마주한 평야 강이다.",
+  "waypoints": [
+    {
+      "place": "포 강 발원지(몬비소 산)",
+      "lat": 44.67,
+      "lon": 7.08,
+      "event": "서알프스 몬비소 산에서 발원",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "토리노",
+      "lat": 45.0792,
+      "lon": 7.6761,
+      "event": "로마 식민도시 아우구스타 타우리노룸이 들어선 상류 도시",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "피아첸차 인근 평야",
+      "lat": 45.05,
+      "lon": 9.68,
+      "event": "기원전 218년 한니발이 알프스를 넘어 내려온 뒤 처음 마주한 평야 강. 보병 2만, 기병 6천, 코끼리 37마리로 줄어든 병력이 여기서 재정비했다",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "만토바 인근",
+      "lat": 45.0,
+      "lon": 10.79,
+      "event": "중하류 구간",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "포 강",
+      "lat": 44.9687,
+      "lon": 12.5415,
+      "event": "아드리아해로 흘러드는 삼각주 하구",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Polybius: Histories (Book III)",
+    "Wikipedia: Po (river)"
+  ]
+}

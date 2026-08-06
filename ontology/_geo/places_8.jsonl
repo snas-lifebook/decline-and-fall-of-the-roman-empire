@@ -1,0 +1,19 @@
+{"name":"시칠리아","lat":37.5000,"lon":14.0000,"ancient":"Sicilia","modern":"시칠리아 섬, 이탈리아","kind":"island","confidence":"medium","source":"Wikipedia: Sicily (섬 대표 중심점)"}
+{"name":"카르타고","lat":36.8528,"lon":10.3233,"ancient":"Carthago","modern":"카르타고, 튀니지 (튀니스 북동 15km)","kind":"city","confidence":"high","source":"Wikipedia: Carthage"}
+{"name":"아시아","lat":37.9411,"lon":27.3419,"ancient":"Asia (provincia)","modern":"아나톨리아 서부, 튀르키예 (대표점: 에페소스)","kind":"region","confidence":"medium","source":"Wikipedia: Asia (Roman province) + Wikipedia: Ephesus (속주 수도 대표점)"}
+{"name":"나일 강","lat":30.1725,"lon":31.1400,"ancient":"Nilus","modern":"나일 강 삼각주 기점(카이로 인근), 이집트","kind":"river","confidence":"medium","source":"Wikipedia: Nile (하구/삼각주 좌표)"}
+{"name":"예루살렘","lat":31.7789,"lon":35.2256,"ancient":"Hierosolyma","modern":"예루살렘","kind":"city","confidence":"high","source":"Wikipedia: Jerusalem"}
+{"name":"콜로세움","lat":41.8903,"lon":12.4922,"ancient":"Amphitheatrum Flavium","modern":"로마, 이탈리아","kind":"building","confidence":"high","source":"Wikipedia: Colosseum"}
+{"name":"골고다","lat":31.7786,"lon":35.2294,"ancient":"Golgotha / Calvariae Locus","modern":"성묘교회, 예루살렘 구시가","kind":"building","confidence":"medium","source":"Wikipedia: Calvary (전통 비정지=성묘교회. 위치에 학계 합의 없음)"}
+{"name":"라인 강","lat":49.9994,"lon":8.2736,"ancient":"Rhenus","modern":"마인츠(Mogontiacum), 독일","kind":"river","confidence":"medium","source":"Wikipedia: Mainz (게르마니아 국경 리메스 구간 대표점)"}
+{"name":"마르스 광장","lat":41.8978,"lon":12.4772,"ancient":"Campus Martius","modern":"로마 캄포 마르치오, 이탈리아","kind":"building","confidence":"high","source":"Wikipedia: Campus Martius"}
+{"name":"발트해","lat":58.0000,"lon":20.0000,"ancient":"Mare Suebicum","modern":"발트해 (북유럽)","kind":"sea","confidence":"medium","source":"Wikipedia: Baltic Sea (해역 대표 중심점)"}
+{"name":"사산조 페르시아","lat":33.0936,"lon":44.5806,"ancient":"Ctesiphon (수도)","modern":"살만 팍, 이라크 (바그다드 남동 35km)","kind":"region","confidence":"medium","source":"Wikipedia: Ctesiphon (제국 수도를 대표점으로)"}
+{"name":"아라비아","lat":23.0000,"lon":46.0000,"ancient":"Arabia","modern":"아라비아 반도 (사우디아라비아 등)","kind":"region","confidence":"medium","source":"Wikipedia: Arabian Peninsula"}
+{"name":"에게해","lat":39.0000,"lon":25.0000,"ancient":"Aegaeum Mare","modern":"에게해 (그리스·튀르키예 사이)","kind":"sea","confidence":"medium","source":"Wikipedia: Aegean Sea (해역 대표 중심점)"}
+{"name":"원형 대경기장","lat":41.8859,"lon":12.4857,"ancient":"Circus Maximus","modern":"로마, 이탈리아","kind":"building","confidence":"high","source":"Wikipedia: Circus Maximus"}
+{"name":"장안","lat":34.3083,"lon":108.8583,"ancient":"長安","modern":"시안, 중국 산시성","kind":"city","confidence":"high","source":"Wikipedia: Chang'an"}
+{"name":"칸나이 평원","lat":41.3064,"lon":16.1325,"ancient":"Cannae","modern":"바를레타 인근, 풀리아주, 이탈리아","kind":"battlefield","confidence":"high","source":"Wikipedia: Battle of Cannae"}
+{"name":"탈라모네","lat":42.5551,"lon":11.1328,"ancient":"Telamon","modern":"탈라모네, 토스카나주, 이탈리아","kind":"battlefield","confidence":"high","source":"Wikipedia: Talamone (기원전 225년 텔라몬 전투지)"}
+{"name":"티볼리","lat":41.9597,"lon":12.7981,"ancient":"Tibur","modern":"티볼리, 라치오주, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Tivoli, Lazio (하드리아누스 별장 소재)"}
+{"name":"프로코네소스","lat":40.6200,"lon":27.6300,"ancient":"Proconnesus","modern":"마르마라 섬, 튀르키예","kind":"island","confidence":"high","source":"Wikipedia: Marmara Island (프로코네소스 대리석 채석장)"}

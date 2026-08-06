@@ -1,0 +1,21 @@
+{"from":"카이사르","from_type":"person","to":"폼페이우스","to_type":"person","rel":"opposed","point":8}
+{"from":"칼비누스","from_type":"person","to":"카이사르","to_type":"person","rel":"member_of","point":8}
+{"from":"파르나케스","from_type":"person","to":"폼페이우스","to_type":"person","rel":"allied_with","point":8}
+{"from":"마르쿠스 안토니우스","from_type":"person","to":"카이사르","to_type":"person","rel":"member_of","point":8}
+{"from":"마르쿠스 안토니우스","from_type":"person","to":"테살리아","to_type":"place","rel":"occurred_at","point":8}
+{"from":"파르살루스","from_type":"place","to":"카이사르","to_type":"person","rel":"occurred_at","point":8}
+{"from":"라리사","from_type":"place","to":"브루투스","to_type":"person","rel":"occurred_at","point":8}
+{"from":"브루투스","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":8}
+{"from":"카시우스","from_type":"person","to":"브루투스","to_type":"person","rel":"allied_with","point":8}
+{"from":"카시우스","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":8}
+{"from":"그나이우스 폼페이우스","from_type":"person","to":"에스파냐","to_type":"place","rel":"participated_in","point":8}
+{"from":"그나이우스 폼페이우스","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":8}
+{"from":"문다 평원","from_type":"place","to":"카이사르","to_type":"person","rel":"occurred_at","point":8}
+{"from":"칼푸르니아","from_type":"person","to":"카이사르","to_type":"person","rel":"allied_with","point":8}
+{"from":"클레오파트라","from_type":"person","to":"카이사르","to_type":"person","rel":"allied_with","point":8}
+{"from":"유바 1세","from_type":"person","to":"폼페이우스파","to_type":"group","rel":"member_of","point":8}
+{"from":"옥타비아누스","from_type":"person","to":"카이사르","to_type":"person","rel":"succeeded","point":8}
+{"from":"옥타비아누스","from_type":"person","to":"율리아","to_type":"person","rel":"child_of","point":8}
+{"from":"스푸린나","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":8}
+{"from":"카스카","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":8}
+{"from":"키케로","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":8}

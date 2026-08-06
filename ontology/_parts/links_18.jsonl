@@ -1,0 +1,18 @@
+{"from":"발레리아누스","from_type":"person","to":"갈리에누스","to_type":"person","rel":"child_of","point":18}
+{"from":"발레리아누스","from_type":"person","to":"에데사의 전투","to_type":"event","rel":"participated_in","point":18}
+{"from":"발레리아누스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":18}
+{"from":"갈리에누스","from_type":"person","to":"발레리아누스","to_type":"person","rel":"child_of","point":18}
+{"from":"갈리에누스","from_type":"person","to":"오다이나투스","to_type":"person","rel":"allied_with","point":18}
+{"from":"샤푸르","from_type":"person","to":"아르메니아 정복","to_type":"event","rel":"participated_in","point":18}
+{"from":"샤푸르","from_type":"person","to":"에데사의 전투","to_type":"event","rel":"participated_in","point":18}
+{"from":"코스로에스","from_type":"person","to":"아르메니아","to_type":"place","rel":"ruled","point":18}
+{"from":"키리아데스","from_type":"person","to":"갈리에누스","to_type":"person","rel":"succeeded","point":18}
+{"from":"데모스테네스","from_type":"person","to":"카이사레아","to_type":"place","rel":"participated_in","point":18}
+{"from":"오다이나투스","from_type":"person","to":"팔미라","to_type":"place","rel":"member_of","point":18}
+{"from":"오다이나투스","from_type":"person","to":"샤푸르","to_type":"person","rel":"opposed","point":18}
+{"from":"에데사의 전투","from_type":"event","to":"에데사","to_type":"place","rel":"occurred_at","point":18}
+{"from":"에데사의 전투","from_type":"event","to":"로마 군","to_type":"group","rel":"participated_in","point":18}
+{"from":"에데사의 전투","from_type":"event","to":"페르시아 군","to_type":"group","rel":"participated_in","point":18}
+{"from":"아르메니아 정복","from_type":"event","to":"아르메니아","to_type":"place","rel":"occurred_at","point":18}
+{"from":"발레리아누스","from_type":"person","to":"샤푸르","to_type":"person","rel":"opposed","point":18}
+{"from":"오다이나투스","from_type":"person","to":"원로원","to_type":"group","rel":"member_of","point":18}

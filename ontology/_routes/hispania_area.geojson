@@ -1,0 +1,234 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에스파냐 — 타라코넨시스 (Hispania Tarraconensis)",
+    "description": "[확실] 반도 북부·동부·중부 대부분을 아우르는 최대 속주. 원로원이 아닌 황제 직할 속주",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -9.0,
+       43.0
+      ],
+      [
+       -1.8,
+       43.4
+      ],
+      [
+       3.2,
+       42.4
+      ],
+      [
+       0.2,
+       39.5
+      ],
+      [
+       -1.0,
+       37.2
+      ],
+      [
+       -4.0,
+       38.0
+      ],
+      [
+       -6.5,
+       40.0
+      ],
+      [
+       -7.5,
+       42.0
+      ],
+      [
+       -9.0,
+       43.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에스파냐 — 바이티카 (Hispania Baetica)",
+    "description": "[확실] 과달키비르강 유역 남부, 원로원 속주. 로마화가 가장 깊이 진행되어 트라야누스·하드리아누스의 출신지",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -7.5,
+       37.2
+      ],
+      [
+       -5.6,
+       36.0
+      ],
+      [
+       -2.2,
+       36.7
+      ],
+      [
+       -1.0,
+       37.2
+      ],
+      [
+       -4.0,
+       38.0
+      ],
+      [
+       -6.3,
+       38.2
+      ],
+      [
+       -7.5,
+       37.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에스파냐 — 루시타니아 (Hispania Lusitania)",
+    "description": "[대략] 대략 오늘날 포르투갈+에스트레마두라. 기원전 25년경 최종 정복",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -9.5,
+       38.7
+      ],
+      [
+       -9.4,
+       41.8
+      ],
+      [
+       -7.5,
+       42.0
+      ],
+      [
+       -6.5,
+       40.0
+      ],
+      [
+       -6.3,
+       38.2
+      ],
+      [
+       -7.5,
+       37.2
+      ],
+      [
+       -9.5,
+       38.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타라코",
+    "description": "[타라코넨시스 수도] 기원전 27 — 아우구스투스가 칸타브리아 전쟁 지휘 중 체류한 속주 수도(현 타라고나)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.2445,
+     41.1189
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "코르도바",
+    "description": "[바이티카 수도] 기원전 169 — 로마-라틴 혼합 식민시로 건설, 후일 세네카·루카누스 배출",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.7794,
+     37.8882
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메리다",
+    "description": "[루시타니아 수도] 기원전 25 — 아우구스투스 퇴역병 식민시로 건설(현 메리다)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.3433,
+     38.9165
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카디스",
+    "description": "[항구도시] 기원전 206 — 페니키아계 고대 항구, 로마 시민권 획득 초기 사례",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.2886,
+     36.5271
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이탈리카",
+    "description": "[식민시] 기원전 206 — 스키피오가 건설한 최초의 로마 식민시 중 하나, 트라야누스·하드리아누스 출생지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.0355,
+     37.4429
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{"name":"카이사르","type":"person","aliases":["가이우스 율리우스 카이사르","Julius Caesar"],"attrs":{"birth":"-100","death":"-44","role":"general","period":"공화정 말기"},"points":[5],"desc":"기원전 100년 태어났으며 당대 로마의 정치인과 군인. 스파르타쿠스 반란 시대를 경험했고 카틸리나 사건에서 민중파를 옹호한 청년 귀족."}
+{"name":"가이우스 마리우스","type":"person","aliases":["마리우스"],"attrs":{"role":"consul","period":"공화정 말기"},"points":[5],"desc":"카이사르의 고모부로 갈리아 군 침입을 격파한 영웅이나, 지방민 반란 진압 과정에서 이탈리아 반도 전역을 살육으로 뒤덮는 공포 정치를 자행했다."}
+{"name":"술라","type":"person","aliases":["Sulla"],"attrs":{"role":"dictator","period":"공화정 말기"},"points":[5],"desc":"마리우스의 부관에서 시작해 로마의 독재자가 된 인물로, 카이사르에게 사형을 선고했으나 친구들의 중재로 추방에 그쳤다."}
+{"name":"코르넬리우스 킨나","type":"person","aliases":["킨나","Cinna"],"attrs":{"role":"consul","period":"공화정 말기"},"points":[5],"desc":"마리우스와 손을 잡아 로마에서 공포 정치를 벌인 집정관으로, 후에 그리스에서 아군 병사에게 살해당했다."}
+{"name":"그나이우스 폼페이우스","type":"person","aliases":["폼페이우스","Pompey"],"attrs":{"role":"general","period":"공화정 말기"},"points":[5],"desc":"술라를 지지하는 귀족군에 가담했으며, 후에 스파르타쿠스 반란을 진압하고 로마의 실력자가 되었다. 나중에 카이사르와 삼두정치를 이루었다."}
+{"name":"크라수스","type":"person","aliases":["Crassus"],"attrs":{"role":"general","period":"공화정 말기"},"points":[5],"desc":"술라의 부관의 아들로 스파르타쿠스 반란 진압에 중심이 되었고, 폼페이우스와 함께 집정관이 된 후 카이사르와 삼두정치를 이루었다."}
+{"name":"스파르타쿠스","type":"person","aliases":["Spartacus"],"attrs":{"role":"slave-leader","origin":"트라키아"},"points":[5],"desc":"트라키아 출신의 검투사로, 카푸아에서 78명의 노예와 함께 반란을 일으켜 7만 명의 반란군을 조직했으나 격렬한 전투 끝에 전사했다."}
+{"name":"키케로","type":"person","aliases":["Cicero"],"attrs":{"role":"orator","period":"공화정 말기"},"points":[5],"desc":"철학자이자 변호사로, 킬리키아 부임 시 청렴결백으로 칭송되었으며, 카틸리나 사건 때 주도적으로 반란군을 진압하고 사형을 요구했다."}
+{"name":"카틸리나","type":"person","aliases":["Catiline"],"attrs":{"role":"aristocrat","period":"공화정 말기"},"points":[5],"desc":"귀족 출신으로 극단적인 민중파 강령을 주장하며 쿠데타를 기도했으나 키케로의 고발로 체포되고 격퇴되었다. 최후는 피스토이아 근교에서 전멸당했다."}
+{"name":"마리우스 안토니우스","type":"person","aliases":["안토니우스"],"attrs":{"role":"consul","period":"공화정 말기","note":"클레오파트라와 함께 로마에 대항하는 안토니우스의 아버지"},"points":[5],"desc":"집정관으로 카틸리나 반란군을 토스카나에서 피스토이아 근교로 추격하여 전멸시켰다."}
+{"name":"클로디우스","type":"person","aliases":["Clodius"],"attrs":{"role":"politician","period":"공화정 말기"},"points":[5],"desc":"로마의 지배자가 된 유명한 인물로, 카토를 키프로스로 추방하고 키케로를 박해하여 그리스로 추방했다."}
+{"name":"킴브리","type":"group","aliases":["Cimbri"],"attrs":{"region":"게르만"},"points":[5],"desc":"기원전 115년 테우토네스와 함께 라인 강을 넘어 남하하여 로마 병사 12만 명을 전멸시킨 부족."}
+{"name":"테우토네스","type":"group","aliases":["테우토니","튜튼","Teutons"],"attrs":{"region":"게르만"},"points":[5],"desc":"킴브리와 함께 라인 강을 넘어 남하하여 로마에 큰 위협이 되었던 부족으로, 피레네 산맥을 넘어 에스파냐를 약탈했다."}
+{"name":"로마","type":"group","aliases":[],"attrs":{"type":"civilization","period":"공화정 말기"},"points":[5],"desc":"제2차 포에니 전쟁의 승리로 에스파냐를 얻었으나 1세기 이상 악정으로 인해 속주와 식민지의 반란을 야기했던 고대 국가."}
+{"name":"로마 원로원","type":"group","aliases":["Senate"],"attrs":{"type":"institution"},"points":[5],"desc":"로마의 의사결정 기구로 마리우스파와 술라파, 민중파와 보수파로 분열되었다."}
+{"name":"민중파","type":"group","aliases":[],"attrs":{"type":"political faction","leader":"마리우스"},"points":[5],"desc":"로마의 정치파벌로 마리우스를 수령으로 하여 폼페이우스와 크라수스, 카이사르의 지지를 얻었다."}
+{"name":"스파르타쿠스의 반란","type":"event","aliases":[],"attrs":{"period":"기원전 71 이전","participants":["스파르타쿠스","노예들","로마군"]},"points":[5],"desc":"카푸아 시의 검투사 노예 양성소에서 78명이 탈주한 데서 시작되어 7만 명의 반란군이 로마에 위협을 주었던 사건."}
+{"name":"카틸리나 사건","type":"event","aliases":[],"attrs":{"period":"기원전 63 경","participants":["카틸리나","키케로","카이사르"]},"points":[5],"desc":"카틸리나가 쿠데타를 기도했던 사건으로 키케로가 주도적으로 진압하고 사형을 요구했으나, 카이사르만이 금고형을 주장했다."}

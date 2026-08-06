@@ -1,0 +1,22 @@
+{"from":"청파","from_type":"group","to":"녹파","to_type":"group","rel":"opposed","point":27}
+{"from":"청파","from_type":"group","to":"유스티니아누스","to_type":"person","rel":"allied_with","point":27}
+{"from":"녹파","from_type":"group","to":"아나스타시우스 황제","to_type":"person","rel":"allied_with","point":27}
+{"from":"청파","from_type":"group","to":"콘스탄티노플","to_type":"place","rel":"occurred_at","point":27}
+{"from":"녹파","from_type":"group","to":"콘스탄티노플","to_type":"place","rel":"occurred_at","point":27}
+{"from":"청파","from_type":"group","to":"니카의 반란","to_type":"event","rel":"participated_in","point":27}
+{"from":"녹파","from_type":"group","to":"니카의 반란","to_type":"event","rel":"participated_in","point":27}
+{"from":"히파티우스","from_type":"person","to":"니카의 반란","to_type":"event","rel":"participated_in","point":27}
+{"from":"칼리굴라","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"칼리굴라","from_type":"person","to":"녹파","to_type":"group","rel":"allied_with","point":27}
+{"from":"네로","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"네로","from_type":"person","to":"녹파","to_type":"group","rel":"allied_with","point":27}
+{"from":"비텔리우스","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"베루스","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"콤모두스","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"카라칼라","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"엘라가발루스","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"테오도리쿠스","from_type":"person","to":"녹파","to_type":"group","rel":"allied_with","point":27}
+{"from":"유스티니아누스 2세","from_type":"person","to":"청파","to_type":"group","rel":"opposed","point":27}
+{"from":"유스티니아누스 2세","from_type":"person","to":"녹파","to_type":"group","rel":"opposed","point":27}
+{"from":"테오도라","from_type":"person","to":"청파","to_type":"group","rel":"allied_with","point":27}
+{"from":"유스티니아누스","from_type":"person","to":"니카의 반란","to_type":"event","rel":"participated_in","point":27}

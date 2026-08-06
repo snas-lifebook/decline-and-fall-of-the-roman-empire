@@ -1,0 +1,29 @@
+{"name":"마호메트","type":"person","aliases":["Muhammad"],"attrs":{"role":"prophet, founder of Islam","born":570,"died":632,"birthplace":"Mecca"},"points":[28],"desc":"하심가 출신의 아랍 인물로 40세에 알라의 계시를 받았고 이슬람교를 창시하여 중동 부족들을 단결시켰다."}
+{"name":"하심","type":"person","aliases":[],"attrs":{"role":"ancestor","relation":"great-grandfather of Muhammad"},"points":[28],"desc":"메카에 기근이 닥쳤을 때 재산을 분배하여 시민들을 구제한 마호메트의 증조부."}
+{"name":"아브드 알 무탈리브","type":"person","aliases":[],"attrs":{"role":"tribal leader","relation":"grandfather of Muhammad"},"points":[28],"desc":"메카가 예멘 왕국의 병사들에게 포위되었을 때 신의 보호를 믿고 신전을 지킨 마호메트의 조부."}
+{"name":"하디자","type":"person","aliases":[],"attrs":{"role":"merchant widow, wife of Muhammad","relation":"spouse"},"points":[28],"desc":"메카의 귀부인으로 마호메트가 25세 때 일하던 곳에서 그를 채용한 후 결혼한 여성."}
+{"name":"아브 탈리브","type":"person","aliases":[],"attrs":{"role":"uncle, protector","relation":"uncle of Muhammad"},"points":[28],"desc":"마호메트를 보살펴주고 키운 친척 중 가장 세력가였던 백부."}
+{"name":"아부 바크르","type":"person","aliases":[],"attrs":{"role":"first caliph","reign":"632-634"},"points":[28],"desc":"마호메트의 친구이자 후계자로 마호메트 사후 2년 뒤 코란을 편찬하여 세상에 알린 초대 칼리프."}
+{"name":"기번","type":"person","aliases":["Edward Gibbon"],"attrs":{"role":"historian","work":"Decline and Fall of the Roman Empire"},"points":[28],"desc":"로마 제국 쇠망사의 저자로 코란과 이슬람교의 가르침에 대해 기술한 역사가."}
+{"name":"메카","type":"place","aliases":["Mecca"],"attrs":{"region":"Arabia","type":"city"},"points":[28],"desc":"마호메트가 태어난 아랍의 도시로 카바 신전이 있는 종교 중심지."}
+{"name":"메디나","type":"place","aliases":["Medina"],"attrs":{"region":"Arabia","type":"city"},"points":[28],"desc":"마호메트가 622년 박해를 피해 도망간 도시로 유대교가 번성했던 곳."}
+{"name":"카바 신전","type":"place","aliases":["Kaaba"],"attrs":{"location":"Mecca","type":"religious site"},"points":[28],"desc":"메카의 모스크 중앙에 위치한 높이 15미터의 석조 입방체 건물로 검은 돌이 박혀 있다."}
+{"name":"바그다드","type":"place","aliases":["Baghdad"],"attrs":{"region":"Middle East","type":"city"},"points":[28],"desc":"아바스 왕조의 수도로 100만 명이 살았고 3만여 채의 모스크와 1만 개 이상의 공중목욕탕이 있었다."}
+{"name":"로마","type":"place","aliases":["Rome"],"attrs":{"region":"Europe","type":"city","history":"영원의 도시"},"points":[28],"desc":"예전에 백만 명 이상이 살던 제국의 중심 도시로 고트족과의 전쟁으로 인해 6세기 전반에 2만 5천 명까지 감소했다."}
+{"name":"시리아","type":"place","aliases":[],"attrs":{"region":"Middle East","type":"region"},"points":[28],"desc":"제국의 곡물 창고라 불리던 풍요로운 나라로 이슬람 세력이 로마 제국의 약체화에 편승하여 손에 넣었다."}
+{"name":"사산조 페르시아","type":"place","aliases":["Sasanian Persia"],"attrs":{"region":"Middle East","type":"empire","location":"현재 이란 남서부"},"points":[28],"desc":"로마 제국과 오랜 기간 전쟁을 치르느라 군대가 피폐해진 상태로 이슬람 세력에 의해 순식간에 침략당하고 멸망했다."}
+{"name":"이집트","type":"place","aliases":[],"attrs":{"region":"Africa","type":"region"},"points":[28],"desc":"경제적 요충지로 북아프리카 여러 제국과 함께 로마 제국에게 빼앗겼다."}
+{"name":"북아프리카","type":"place","aliases":[],"attrs":{"region":"Africa","type":"region"},"points":[28],"desc":"이집트, 시리아를 비롯한 경제적 요충지들이 이슬람 세력에 의해 정복되었다."}
+{"name":"이베리아 반도","type":"place","aliases":["Iberian Peninsula"],"attrs":{"region":"Europe","type":"region"},"points":[28],"desc":"8세기에 이슬람 세력이 지중해를 건너 진입하여 고트 왕국을 쓰러뜨리고 1492년까지 800년 가까이 지배했다."}
+{"name":"아바스 왕조","type":"group","aliases":["Abbasid Caliphate"],"attrs":{"role":"Islamic dynasty","period":"750-1258"},"points":[28],"desc":"바그다드를 수도로 한 이슬람 왕조로 '지혜의 관'이라 불리는 학술기관을 창설했다."}
+{"name":"고트족","type":"group","aliases":[],"attrs":{"type":"ethnic group","role":"invader"},"points":[28],"desc":"서로마 제국이 멸망한 후 로마 제국과 빈번한 전쟁을 벌였다."}
+{"name":"이슬람 세력","type":"group","aliases":[],"attrs":{"type":"religious and political movement"},"points":[28],"desc":"코란의 가르침 아래 중동의 적대적인 부족들을 단결시켜 동서로 확장해 나간 세력."}
+{"name":"중동","type":"place","aliases":[],"attrs":{"region":"Middle East","type":"region"},"points":[28],"desc":"서로 적대시해 온 부족들이 코란의 가르침 아래 단결한 지역."}
+{"name":"지혜의 관","type":"work","aliases":[],"attrs":{"type":"institution","founder":"Abbasid dynasty"},"points":[28],"desc":"아바스 왕조 시대에 창설되어 그리스와 로마의 고전들을 아라비아어로 번역하는 작업을 한 학술기관."}
+{"name":"코란","type":"work","aliases":["Quran"],"attrs":{"chapters":114,"language":"Arabic","author":"Muhammad"},"points":[28],"desc":"마호메트가 23년간 받은 계시를 아부 바크르가 편찬한 이슬람교의 성전으로 정치, 경제, 법률, 인간의 행동을 다룬다."}
+{"name":"히즈라","type":"event","aliases":["Hegira"],"attrs":{"year":622,"location":"메카에서 메디나로","significance":"Islamic calendar origin"},"points":[28],"desc":"마호메트가 박해를 피해 소수의 신자들과 함께 메카를 탈출하여 메디나로 도망간 사건으로 이슬람력의 기원이 되었다."}
+{"name":"르네상스 운동","type":"event","aliases":["Renaissance"],"attrs":{"period":"중세 말기","region":"이탈리아"},"points":[28],"desc":"이탈리아에서 발생한 문화 운동으로 아랍인들의 문명과 문화 보존 및 융화가 바탕이 되었다."}
+{"name":"유스티니아누스","type":"person","aliases":["Justinian I"],"attrs":{"role":"Byzantine emperor","reign":"527-565"},"points":[28],"desc":"잃어버린 제국의 서쪽 반을 탈환하는 데 성공한 로마 황제."}
+{"name":"칼리프","type":"institution","aliases":["Caliph"],"attrs":{"role":"Islamic ruler title"},"points":[28],"desc":"이슬람 공동체의 통치자로 아부 바크르가 초대 칼리프가 되었다."}
+{"name":"고대 로마","type":"period","aliases":[],"attrs":{"type":"historical period"},"points":[28],"desc":"로마 제국의 전성기로 그 지혜와 고전들이 이슬람의 '지혜의 관'을 통해 후세에 전해졌다."}
+{"name":"고대 그리스","type":"period","aliases":[],"attrs":{"type":"historical period"},"points":[28],"desc":"고대 그리스의 고전들이 아바스 왕조에 의해 아라비아어로 번역되어 보존되었다."}

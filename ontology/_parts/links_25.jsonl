@@ -1,0 +1,20 @@
+{"from":"유스티니아누스","from_type":"person","to":"유스티누스","to_type":"person","rel":"child_of","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"테오도라","to_type":"person","rel":"married","point":25}
+{"from":"유스티누스","from_type":"person","to":"레오 1세","to_type":"person","rel":"served_under","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"아만티우스","to_type":"person","rel":"opposed","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"비탈리아누스","to_type":"person","rel":"opposed","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"벨리사리우스","to_type":"person","rel":"ruled","point":25}
+{"from":"벨리사리우스","from_type":"person","to":"나르세스","to_type":"person","rel":"succeeded","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":25}
+{"from":"니카의 반란","from_type":"event","to":"콘스탄티노플","to_type":"place","rel":"occurred_at","point":25}
+{"from":"청파","from_type":"group","to":"니카의 반란","to_type":"event","rel":"participated_in","point":25}
+{"from":"녹파","from_type":"group","to":"니카의 반란","to_type":"event","rel":"participated_in","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"반달 왕국","to_type":"group","rel":"opposed","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"서고트 왕국","to_type":"group","rel":"opposed","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"동고트 왕국","to_type":"group","rel":"opposed","point":25}
+{"from":"벨리사리우스","from_type":"person","to":"반달 왕국","to_type":"group","rel":"opposed","point":25}
+{"from":"벨리사리우스","from_type":"person","to":"아프리카","to_type":"place","rel":"occurred_at","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"로마법 대전","to_type":"work","rel":"created","point":25}
+{"from":"유스티니아누스","from_type":"person","to":"소피아 대성당","to_type":"place","rel":"created","point":25}
+{"from":"프로코피우스","from_type":"person","to":"유스티니아누스","to_type":"person","rel":"served_under","point":25}
+{"from":"테오도라","from_type":"person","to":"니카의 반란","to_type":"event","rel":"participated_in","point":25}

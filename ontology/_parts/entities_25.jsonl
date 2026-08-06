@@ -1,0 +1,23 @@
+{"name":"유스티니아누스","type":"person","aliases":["Justinian I"],"attrs":{"role":"emperor","reign":"527-565"},"points":[25],"desc":"농민 출신 백부 유스티누스의 조카로, 동로마 제국의 황제가 되어 38년 이상 통치했으며 제국의 영토를 회복하고 로마법 대전을 완성한 최후의 로마 황제."}
+{"name":"유스티누스","type":"person","aliases":["Justin I"],"attrs":{"role":"emperor","reign":"518-527"},"points":[25],"desc":"농민 출신으로 직업 군인의 길을 걸어 68세에 황제가 된 유스티니아누스의 백부. 정치에 무능했지만 뛰어난 재무관 덕분에 장기간 통치했다."}
+{"name":"테오도라","type":"person","aliases":["Theodora"],"attrs":{"role":"empress","reign":"527-548"},"points":[25],"desc":"경기장 사육사의 딸에서 황비가 된 여성. 니카의 반란 때 황제를 독려하여 위기를 극복하도록 한 결정적 인물."}
+{"name":"아만티우스","type":"person","aliases":["Amantius"],"attrs":{"role":"eunuch"},"points":[25],"desc":"궁정 내의 지배자였던 환관. 유스티니아누스의 후계 지명에 걸림돌이 되자 음모죄를 뒤집어쓰고 참수당했다."}
+{"name":"비탈리아누스","type":"person","aliases":["Vitalianus"],"attrs":{"role":"military_commander"},"points":[25],"desc":"강력한 야만족 군대의 수령으로 민중의 인기를 얻고 있던 인물. 황제 주관 만찬에서 칼에 찔려 죽었다."}
+{"name":"벨리사리우스","type":"person","aliases":["Belisarius"],"attrs":{"role":"general"},"points":[25],"desc":"유스티니아누스의 동방 전선 군사령관. 니카의 반란 진압과 제국의 영토 회복에 주도적 역할을 한 장군."}
+{"name":"나르세스","type":"person","aliases":["Narses"],"attrs":{"role":"eunuch_general"},"points":[25],"desc":"환관으로 벨리사리우스 이후 동고트 왕국과의 전투에서 제국군의 지휘를 맡아 이탈리아 탈환을 완성했다."}
+{"name":"레오 1세","type":"person","aliases":["Leo I"],"attrs":{"role":"emperor"},"points":[25],"desc":"유스티누스가 근위병으로 발탁된 당시의 황제."}
+{"name":"프로코피우스","type":"person","aliases":["Procopius"],"attrs":{"role":"historian"},"points":[25],"desc":"콘스탄티노플의 민정 총독이자 역사가. 유스티니아누스의 치세를 상세히 기록하여 현대에 전해지고 있다."}
+{"name":"반달 왕국","type":"group","aliases":["Vandal Kingdom"],"attrs":{"region":"Africa"},"points":[25],"desc":"아프리카 구카르타고에 있던 야만족 왕국. 유스티니아누스의 명령으로 벨리사리우스에 의해 멸망당했다."}
+{"name":"서고트 왕국","type":"group","aliases":["Visigothic Kingdom"],"attrs":{"region":"Spain"},"points":[25],"desc":"에스파냐를 지배하던 야만족 왕국. 왕위 계승 쟁탈전 중 제국군이 남부의 영토 일부를 획득했다."}
+{"name":"동고트 왕국","type":"group","aliases":["Ostrogothic Kingdom"],"attrs":{"region":"Italy"},"points":[25],"desc":"시칠리아와 이탈리아를 지배하던 야만족 왕국. 유스티니아누스 제국과 20년에 걸친 격렬한 전투를 벌였다."}
+{"name":"청파","type":"group","aliases":["Blue faction"],"attrs":{"type":"sports_faction"},"points":[25],"desc":"경기장 마차 경기를 응원하는 청색 당파. 니카의 반란 당시 녹파와 함께 폭동을 일으켰다."}
+{"name":"녹파","type":"group","aliases":["Green faction"],"attrs":{"type":"sports_faction"},"points":[25],"desc":"경기장 마차 경기를 응원하는 녹색 당파. 니카의 반란 당시 청파와 함께 폭동을 일으켰다."}
+{"name":"콘스탄티노플","type":"place","aliases":["Constantinople"],"attrs":{"type":"city"},"points":[25],"desc":"동로마 제국의 수도. 니카의 반란으로 초토화되었고 유스티니아누스에 의해 재건되었다."}
+{"name":"아프리카","type":"place","attrs":{"type":"region"},"points":[25],"desc":"반달 왕국이 위치한 지역. 유스티니아누스가 제국의 영토를 회복한 곳."}
+{"name":"에스파냐","type":"place","attrs":{"type":"region"},"points":[25],"desc":"서고트 왕국이 지배하던 지역. 남부 영토가 제국에 병합되었다."}
+{"name":"시칠리아","type":"place","aliases":["Sicily"],"attrs":{"type":"place"},"points":[25],"desc":"동고트 왕국이 지배하던 지역. 유스티니아누스의 영토 회복 전쟁의 주요 무대."}
+{"name":"이탈리아","type":"place","attrs":{"type":"region"},"points":[25],"desc":"동고트 왕국이 지배하던 지역. 20년간의 전투 끝에 유스티니아누스가 탈환했다."}
+{"name":"지중해","type":"place","attrs":{"type":"body_of_water"},"points":[25],"desc":"유스티니아누스가 다시 로마 제국의 내해로 만들려 했던 해역."}
+{"name":"니카의 반란","type":"event","aliases":["Nika Riots"],"attrs":{"year":"532"},"points":[25],"desc":"유스티니아누스 시대에 콘스탄티노플에서 일어난 대규모 폭동. 청파와 녹파의 항쟁이 원인이었으며 약 3만 명이 처형되었다."}
+{"name":"로마법 대전","type":"work","aliases":["Corpus Juris Civilis"],"attrs":{"year":"528"},"points":[25],"desc":"유스티니아누스가 편찬 위원에게 명령하여 완성한 법전. 4부로 구성되어 있으며 유럽 법률학의 토대가 되었다."}
+{"name":"소피아 대성당","type":"place","aliases":["Hagia Sophia"],"attrs":{"type":"building"},"points":[25],"desc":"니카의 반란으로 소실되었다가 유스티니아누스가 재건한 성당. 약 6년에 걸쳐 완성되어 이스탄불에서 그 아름다움을 자랑하고 있다."}

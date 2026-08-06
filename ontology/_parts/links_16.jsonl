@@ -1,0 +1,15 @@
+{"from":"콤모두스","from_type":"person","to":"마르쿠스 아우렐리우스","to_type":"person","rel":"child_of","point":16}
+{"from":"콤모두스","from_type":"person","to":"파우스티나","to_type":"person","rel":"child_of","point":16}
+{"from":"마르쿠스 아우렐리우스","from_type":"person","to":"파우스티나","to_type":"person","rel":"married","point":16}
+{"from":"루킬라","from_type":"person","to":"콤모두스","to_type":"person","rel":"opposed","point":16}
+{"from":"루킬라","from_type":"person","to":"황제 암살 시도","to_type":"event","rel":"participated_in","point":16}
+{"from":"콤모두스","from_type":"person","to":"원로원 대숙청","to_type":"event","rel":"participated_in","point":16}
+{"from":"콤모두스","from_type":"person","to":"검투기 경기","to_type":"event","rel":"participated_in","point":16}
+{"from":"콤모두스","from_type":"person","to":"원로원","to_type":"group","rel":"opposed","point":16}
+{"from":"마르키아","from_type":"person","to":"콤모두스","to_type":"person","rel":"opposed","point":16}
+{"from":"에클렉투스","from_type":"person","to":"콤모두스","to_type":"person","rel":"opposed","point":16}
+{"from":"라이투스","from_type":"person","to":"콤모두스","to_type":"person","rel":"opposed","point":16}
+{"from":"페르티낙스","from_type":"person","to":"콤모두스","to_type":"person","rel":"succeeded","point":16}
+{"from":"셉티미우스 세베루스","from_type":"person","to":"페르티낙스","to_type":"person","rel":"succeeded","point":16}
+{"from":"검투기 경기","from_type":"event","to":"콜로세움","to_type":"place","rel":"occurred_at","point":16}
+{"from":"콤모두스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":16}

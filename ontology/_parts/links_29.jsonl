@@ -1,0 +1,20 @@
+{"from":"유스티니아누스","from_type":"person","to":"로마 제국","to_type":"group","rel":"ruled","point":29}
+{"from":"유스티니아누스","from_type":"person","to":"서쪽 영토","to_type":"place","rel":"recovered","point":29}
+{"from":"유스티니아누스 2세","from_type":"person","to":"유스티니아누스","to_type":"person","rel":"succeeded","point":29}
+{"from":"포카스","from_type":"person","to":"마우리키우스","to_type":"person","rel":"opposed","point":29}
+{"from":"포카스","from_type":"person","to":"로마 제국","to_type":"group","rel":"ruled","point":29}
+{"from":"헤라클리우스","from_type":"person","to":"포카스","to_type":"person","rel":"opposed","point":29}
+{"from":"헤라클리우스","from_type":"person","to":"로마 제국","to_type":"group","rel":"ruled","point":29}
+{"from":"헤라클리우스","from_type":"person","to":"사산조 페르시아","to_type":"group","rel":"opposed","point":29}
+{"from":"헤라클리우스","from_type":"person","to":"동로마 제국","to_type":"group","rel":"founder_of_reformed","point":29}
+{"from":"사산조 페르시아","from_type":"group","to":"로마 제국","to_type":"group","rel":"opposed","point":29}
+{"from":"서고트 왕국","from_type":"group","to":"로마 제국","to_type":"group","rel":"opposed","point":29}
+{"from":"롬바르드 왕국","from_type":"group","to":"로마 제국","to_type":"group","rel":"opposed","point":29}
+{"from":"마누엘 2세","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":29}
+{"from":"마누엘 2세","from_type":"person","to":"헨리 4세","to_type":"person","rel":"appealed_to","point":29}
+{"from":"마누엘 2세","from_type":"person","to":"동방정교","to_type":"group","rel":"member_of","point":29}
+{"from":"동로마 제국","from_type":"group","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":29}
+{"from":"동로마 제국","from_type":"group","to":"비잔틴 제국","to_type":"group","rel":"same_as","point":29}
+{"from":"기독교","from_type":"group","to":"동로마 제국","to_type":"group","rel":"member_of","point":29}
+{"from":"동방정교","from_type":"group","to":"기독교","to_type":"group","rel":"member_of","point":29}
+{"from":"콘스탄티노플","from_type":"place","to":"콘스탄티누스 대제","to_type":"person","rel":"founded_by","point":29}

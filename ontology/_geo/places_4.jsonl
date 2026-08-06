@@ -1,0 +1,20 @@
+{"name":"이집트","lat":26.0000,"lon":30.0000,"ancient":"Aegyptus","modern":"이집트","kind":"region","confidence":"medium","source":"Wikipedia: Egypt (26°N 30°E)"}
+{"name":"그리스","lat":39.0000,"lon":22.0000,"ancient":"Graecia / Achaia","modern":"그리스","kind":"region","confidence":"medium","source":"Wikipedia: Greece (39°N 22°E)"}
+{"name":"루비콘 강","lat":44.1681,"lon":12.4431,"ancient":"Rubico","modern":"피우미치노 강, 사비냐노 술 루비코네 인근, 이탈리아","kind":"river","confidence":"medium","source":"Wikipedia: Rubicon (44.1681, 12.4431 · 1933년 Fiumicino로 공식 비정)"}
+{"name":"캄파니아","lat":40.7500,"lon":14.9500,"ancient":"Campania","modern":"캄파니아 주, 이탈리아","kind":"region","confidence":"medium","source":"Wikipedia: Campania (40°45'N 14°57'E)"}
+{"name":"성 소피아 성당","lat":41.0083,"lon":28.9800,"ancient":"Hagia Sophia / Sancta Sophia","modern":"이스탄불 파티흐구, 튀르키예","kind":"building","confidence":"high","source":"Wikipedia: Hagia Sophia (41.00833, 28.98000)"}
+{"name":"카르타헤나","lat":37.6019,"lon":-0.9842,"ancient":"Carthago Nova (Qart Hadasht)","modern":"카르타헤나, 무르시아, 스페인","kind":"city","confidence":"high","source":"Wikipedia: Cartagena, Spain (37.6019, -0.9842)"}
+{"name":"팔미라","lat":34.5514,"lon":38.2681,"ancient":"Palmyra / Tadmor","modern":"타드무르, 홈스주, 시리아","kind":"city","confidence":"high","source":"Wikipedia: Palmyra (34°33'05\"N 38°16'05\"E)"}
+{"name":"델피","lat":38.4822,"lon":22.5014,"ancient":"Delphi","modern":"델포이, 포키스, 그리스","kind":"city","confidence":"low","source":"Wikipedia: Delphi (38°28'56\"N 22°30'05\"E) — 다만 테오도라 요양지는 비티니아의 온천 Pythia(현 얄로바, 튀르키예)로 책 설명과 불일치. 비정 불확실"}
+{"name":"루카","lat":43.8417,"lon":10.5028,"ancient":"Luca","modern":"루카, 토스카나, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Lucca (43.84167, 10.50278 · 기원전 56년 루카 회담)"}
+{"name":"문다 평원","lat":37.3500,"lon":-5.2167,"ancient":"Munda","modern":"라 란테후엘라 인근 추정, 안달루시아, 스페인","kind":"battlefield","confidence":"low","source":"Wikipedia: Battle of Munda (37.35, -5.2167) — 정확한 위치는 학계 논쟁 중(Ronda·Monda·Montilla 등 경합)"}
+{"name":"비엔나","lat":48.2108,"lon":16.3703,"ancient":"Vindobona","modern":"빈, 오스트리아","kind":"city","confidence":"high","source":"Wikipedia: Vindobona (48.21083, 16.37028)"}
+{"name":"스칸디나비아 반도","lat":63.0000,"lon":14.0000,"ancient":"Scandia / Scandza","modern":"노르웨이·스웨덴·핀란드 북서부","kind":"region","confidence":"medium","source":"Wikipedia: Scandinavian Peninsula (63°00'N 14°00'E)"}
+{"name":"아프라시아브","lat":39.6714,"lon":66.9878,"ancient":"Maracanda (Afrasiab)","modern":"사마르칸트 북부 아프라시아브 유적, 우즈베키스탄","kind":"city","confidence":"high","source":"Wikipedia: Afrasiyab (Samarkand) (39°40'17\"N 66°59'16\"E)"}
+{"name":"오리엔트","lat":36.2047,"lon":36.1817,"ancient":"Oriens","modern":"시리아·소아시아 동부 일대 (대표점: 안타키아, 튀르키예)","kind":"region","confidence":"low","source":"Wikipedia: Antioch (36.20472, 36.18167) — 광역 개념, 동방 총독부 중심지 안티오키아를 대표점으로 사용"}
+{"name":"이오니아해","lat":38.0000,"lon":19.0000,"ancient":"Mare Ionium","modern":"이오니아해 (이탈리아·그리스 사이)","kind":"sea","confidence":"medium","source":"Wikipedia: Ionian Sea (38°N 19°E)"}
+{"name":"카스피해","lat":42.0000,"lon":50.5000,"ancient":"Mare Caspium / Mare Hyrcanum","modern":"카스피해 (러시아·카자흐스탄·투르크메니스탄·이란·아제르바이잔)","kind":"sea","confidence":"medium","source":"Wikipedia: Caspian Sea (42°00'N 50°30'E)"}
+{"name":"키프로스","lat":35.0000,"lon":33.0000,"ancient":"Cyprus","modern":"키프로스","kind":"island","confidence":"medium","source":"Wikipedia: Cyprus (35°N 33°E)"}
+{"name":"토리노","lat":45.0792,"lon":7.6761,"ancient":"Augusta Taurinorum","modern":"토리노, 피에몬테, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Turin (45.07917, 7.67611)"}
+{"name":"포룸 테레브로니","lat":43.5881,"lon":26.3700,"ancient":"Forum Terebronii / Abritus","modern":"라즈그라드, 불가리아","kind":"battlefield","confidence":"medium","source":"Wikipedia: Battle of Abritus (43.58812, 26.369997) — 실제 교전지는 북서 15km 드랴노베츠 인근으로 추정"}
+{"name":"헬레스폰투스","lat":40.2000,"lon":26.4000,"ancient":"Hellespontus","modern":"다르다넬스 해협, 차나칼레, 튀르키예","kind":"sea","confidence":"medium","source":"Wikipedia: Dardanelles (40°12'N 26°24'E)"}

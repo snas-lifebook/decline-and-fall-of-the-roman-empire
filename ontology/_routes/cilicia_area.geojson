@@ -1,0 +1,159 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "킬리키아 — 킬리키아 페디아스 (동부 평야, 타르수스 중심)",
+    "description": "[확실] 기원전 67년 최초 속주화된 핵심부. 타우루스 산맥과 지중해 사이 충적평야",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       33.9,
+       37.0
+      ],
+      [
+       35.0,
+       37.3
+      ],
+      [
+       36.2,
+       36.9
+      ],
+      [
+       36.2,
+       36.5
+      ],
+      [
+       35.0,
+       36.5
+      ],
+      [
+       34.0,
+       36.6
+      ],
+      [
+       33.9,
+       37.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "킬리키아 — 킬리키아 트라케아 (서부 산악지대)",
+    "description": "[대략] 해적 근거지였던 험준한 서부. 서기 72년에야 완전히 속주 행정에 편입되어 병합 시점이 동부보다 늦다",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       32.0,
+       36.2
+      ],
+      [
+       33.9,
+       37.0
+      ],
+      [
+       34.0,
+       36.6
+      ],
+      [
+       33.2,
+       36.0
+      ],
+      [
+       32.2,
+       35.9
+      ],
+      [
+       32.0,
+       36.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타르수스",
+    "description": "[속주 수도] 기원전 67 — 폼페이우스의 해적 소탕 이후 속주 수도, 사도 바울의 출생지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.9,
+     36.91
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이수스",
+    "description": "[국경 요충지] 기원전 333 — 알렉산드로스가 다리우스 3세를 격파한 전장, 시리아 접경",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.2,
+     36.6
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아나자르부스",
+    "description": "[주요도시] 서기 72 — 킬리키아 트라케아 병합 이후 지역 중심지로 성장",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.92,
+     37.27
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "셀레우키아",
+    "description": "[서부 항구도시] 서기 72 — 칼리카드노스강 하구, 산악 트라케아 방면 항구",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.94,
+     36.37
+    ]
+   }
+  }
+ ]
+}

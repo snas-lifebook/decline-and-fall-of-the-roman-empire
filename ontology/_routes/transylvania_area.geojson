@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트란실바니아 — 트란실바니아 분지",
+    "description": "[대략] 다키아(속주 전체)보다 좁아 카르파티아 산맥 안쪽 고원 분지만을 가리킨다. 루마니아(현대 국가 전체)의 북서~중앙 일부에 해당한다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       22.5,
+       47.0
+      ],
+      [
+       24.5,
+       47.5
+      ],
+      [
+       25.5,
+       46.5
+      ],
+      [
+       25.0,
+       45.9
+      ],
+      [
+       23.8,
+       45.6
+      ],
+      [
+       22.9,
+       45.7
+      ],
+      [
+       22.2,
+       46.0
+      ],
+      [
+       22.5,
+       47.0
+      ],
+      [
+       22.5,
+       47.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "나포카",
+    "description": "[주요 도시] 2세기 — 트란실바니아 북부의 로마 도시(현 클루지나포카).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.59,
+     46.77
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아풀룸",
+    "description": "[군단 기지] 2세기 — 제13군단 게미나 주둔지(현 알바 율리아).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.58,
+     46.07
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사르미제게투사",
+    "description": "[다키아 속주 수도] 106 — 트란실바니아 남서쪽 경계 인근의 속주 수도.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.79,
+     45.62
+    ]
+   }
+  }
+ ]
+}

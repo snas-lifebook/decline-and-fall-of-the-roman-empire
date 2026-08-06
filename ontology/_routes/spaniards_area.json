@@ -1,0 +1,22 @@
+{
+  "name": "에스파냐인",
+  "subject": "에스파냐인",
+  "color": "#f9a825",
+  "period": "기원전 3~1세기 (로마 정복 이전~정복기 이베리아)",
+  "summary": "이베리아 반도 원주민(동·남부의 이베리아인, 중부의 켈티베리아인, 서부의 루시타니아인 등)을 아우르는 총칭. 제2차 포에니 전쟁(기원전 218년) 이후 로마가 반세기 넘게 정복 전쟁을 벌인 대상이다.",
+  "territory": [
+    {
+      "part": "이베리아 반도 원주민 분포 (로마 정복기)",
+      "note": "기원전 3~1세기, 로마의 정복이 완료되는 기원전 19년(아우구스투스의 칸타브리아 전쟁) 이전. 이베리아인·켈티베리아인·루시타니아인 등 여러 민족을 반도 전체 분포로 뭉뚱그린 근사치다.",
+      "confidence": "medium",
+      "ring": [
+        [-9.5, 43.5], [-1.8, 43.5], [3.2, 42.4], [0.2, 38.8], [-5.4, 36.1],
+        [-9.5, 38.7], [-9.3, 41.5]
+      ]
+    }
+  ],
+  "sources": [
+    "Wikipedia: Pre-Roman peoples of the Iberian Peninsula, Celtiberians, Lusitanians, Cantabrian Wars",
+    "Gibbon, The History of the Decline and Fall of the Roman Empire"
+  ]
+}

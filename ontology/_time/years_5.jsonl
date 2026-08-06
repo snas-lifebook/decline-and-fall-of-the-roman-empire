@@ -1,0 +1,26 @@
+{"point":5,"from":"킴브리","rel":"적대","to":"로마","from_year":-115,"to_year":-115,"basis":"text"}
+{"point":5,"from":"테우토네스","rel":"적대","to":"로마","from_year":-115,"to_year":-115,"basis":"text"}
+{"point":5,"from":"가이우스 마리우스","rel":"적대","to":"킴브리","from_year":-112,"to_year":-112,"basis":"inferred"}
+{"point":5,"from":"스파르타쿠스","rel":"참전·관여","to":"스파르타쿠스의 반란","from_year":-71,"to_year":-71,"basis":"text"}
+{"point":5,"from":"크라수스","rel":"참전·관여","to":"스파르타쿠스의 반란","from_year":-71,"to_year":-71,"basis":"text"}
+{"point":5,"from":"폼페이우스","rel":"참전·관여","to":"스파르타쿠스의 반란","from_year":-71,"to_year":-71,"basis":"text"}
+{"point":5,"from":"키케로","rel":"참전·관여","to":"카틸리나 사건","from_year":-63,"to_year":-63,"basis":"chronology"}
+{"point":5,"from":"카이사르","rel":"참전·관여","to":"카틸리나 사건","from_year":-63,"to_year":-63,"basis":"chronology"}
+{"point":5,"from":"카틸리나","rel":"참전·관여","to":"카틸리나 사건","from_year":-63,"to_year":-63,"basis":"chronology"}
+{"point":5,"from":"폼페이우스","rel":"통치","to":"로마","from_year":-71,"to_year":-49,"basis":"chronology"}
+{"point":5,"from":"크라수스","rel":"통치","to":"로마","from_year":-71,"to_year":-49,"basis":"chronology"}
+{"point":11,"from":"티베리우스","rel":"통치","to":"로마","from_year":14,"to_year":37,"basis":"text"}
+{"point":11,"from":"칼리굴라","rel":"통치","to":"로마","from_year":37,"to_year":41,"basis":"text"}
+{"point":11,"from":"클라우디우스","rel":"통치","to":"로마","from_year":41,"to_year":54,"basis":"text"}
+{"point":11,"from":"티베리우스","rel":"계승","to":"아우구스투스","from_year":14,"to_year":14,"basis":"chronology"}
+{"point":11,"from":"칼리굴라","rel":"계승","to":"티베리우스","from_year":37,"to_year":37,"basis":"chronology"}
+{"point":11,"from":"클라우디우스","rel":"계승","to":"칼리굴라","from_year":41,"to_year":41,"basis":"chronology"}
+{"point":11,"from":"갈루스","rel":"계승","to":"호스틸리아누스","from_year":251,"to_year":251,"basis":"chronology"}
+{"point":17,"from":"트라야누스","rel":"참전·관여","to":"다키아 정복","from_year":101,"to_year":101,"basis":"text"}
+{"point":17,"from":"갈루스","rel":"통치","to":"로마","from_year":251,"to_year":253,"basis":"text"}
+{"point":23,"from":"훈족","rel":"적대","to":"동고트족","from_year":375,"to_year":375,"basis":"text"}
+{"point":23,"from":"한나라의 고조","rel":"적대","to":"흉노족","from_year":-200,"to_year":-200,"basis":"text"}
+{"point":29,"from":"포카스","rel":"적대","to":"마우리키우스","from_year":602,"to_year":602,"basis":"text"}
+{"point":29,"from":"포카스","rel":"통치","to":"로마 제국","from_year":602,"to_year":610,"basis":"text"}
+{"point":29,"from":"헤라클리우스","rel":"적대","to":"포카스","from_year":610,"to_year":610,"basis":"text"}
+{"point":29,"from":"헤라클리우스","rel":"통치","to":"로마 제국","from_year":610,"to_year":641,"basis":"text"}

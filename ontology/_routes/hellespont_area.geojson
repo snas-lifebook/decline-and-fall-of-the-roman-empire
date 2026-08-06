@@ -1,0 +1,96 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헬레스폰투스 — 헬레스폰투스 전역",
+    "description": "[확실] 세스토스와 아비도스 사이의 좁은 해협. 유럽과 아시아를 가르는 또 다른 관문",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       26.0,
+       40.35
+      ],
+      [
+       26.2,
+       40.3
+      ],
+      [
+       26.4,
+       40.25
+      ],
+      [
+       26.55,
+       40.15
+      ],
+      [
+       26.45,
+       40.05
+      ],
+      [
+       26.25,
+       40.1
+      ],
+      [
+       26.05,
+       40.2
+      ],
+      [
+       25.95,
+       40.3
+      ],
+      [
+       26.0,
+       40.35
+      ],
+      [
+       26.0,
+       40.35
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헬레스폰투스",
+    "description": "[도시]  — 해협 유럽 쪽 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.39,
+     40.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헬레스폰투스",
+    "description": "[도시]  — 해협 아시아 쪽 도시, 세스토스와 마주봄",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.42,
+     40.19
+    ]
+   }
+  }
+ ]
+}

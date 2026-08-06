@@ -1,0 +1,41 @@
+{
+  "name": "게르마니아인",
+  "subject": "게르마니아인",
+  "color": "#8D6E63",
+  "period": "1세기",
+  "summary": "타키투스의 『게르마니아』와 로마군의 원정 기록(기원후 9년 토이토부르크 숲 전투 등)으로 파악되는 라인강~비스툴라강 사이 부족들의 거주지. 로마와 직접 접촉한 서부는 비교적 상세하나 동부는 소략하다.",
+  "territory": [
+    {
+      "part": "서부 게르마니아 (라인강~베저강)",
+      "note": "1세기. 로마군이 직접 원정·교전한 지역. 토이토부르크 숲 전투(9년)가 이 권역 안에서 벌어졌다.",
+      "confidence": "high",
+      "ring": [
+        [6.0, 52.5],
+        [9.5, 53.5],
+        [11.0, 52.0],
+        [9.5, 50.0],
+        [7.0, 49.5],
+        [6.0, 50.5]
+      ]
+    },
+    {
+      "part": "동부 게르마니아 (베저강~비스툴라강)",
+      "note": "1세기. 로마의 직접 관찰이 드물어 타키투스의 전문(傳聞) 기록에 의존. 경계는 근사치.",
+      "confidence": "medium",
+      "ring": [
+        [11.0, 54.0],
+        [15.0, 54.5],
+        [18.5, 54.0],
+        [18.0, 51.0],
+        [14.0, 50.5],
+        [11.0, 51.5]
+      ]
+    }
+  ],
+  "cities": [],
+  "sources": [
+    "Tacitus, Germania",
+    "Wikipedia: Germania (https://en.wikipedia.org/wiki/Germania)",
+    "Wikipedia: Battle of the Teutoburg Forest (https://en.wikipedia.org/wiki/Battle_of_the_Teutoburg_Forest)"
+  ]
+}

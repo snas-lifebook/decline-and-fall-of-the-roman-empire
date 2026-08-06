@@ -1,0 +1,156 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이탈리아 반도 — 이탈리아 반도 (알프스~칼라브리아, 섬 제외)",
+    "description": "[확실] 물리적 지형 경계이므로 시대에 따라 변하지 않음. 행정구역 '이탈리아'와는 별개의 범주",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.2,
+       45.8
+      ],
+      [
+       9.5,
+       46.5
+      ],
+      [
+       12.4,
+       46.6
+      ],
+      [
+       13.8,
+       45.6
+      ],
+      [
+       14.3,
+       42.4
+      ],
+      [
+       16.9,
+       41.1
+      ],
+      [
+       17.2,
+       39.1
+      ],
+      [
+       15.9,
+       38.0
+      ],
+      [
+       15.7,
+       38.3
+      ],
+      [
+       16.6,
+       39.8
+      ],
+      [
+       15.3,
+       40.0
+      ],
+      [
+       14.4,
+       40.6
+      ],
+      [
+       11.2,
+       42.4
+      ],
+      [
+       9.9,
+       43.9
+      ],
+      [
+       8.9,
+       44.2
+      ],
+      [
+       7.5,
+       44.0
+      ],
+      [
+       7.2,
+       45.8
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "description": "[반도 중심 도시] 기원전 753 — 테베레강 하류, 반도 중서부에 위치",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4964,
+     41.9028
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "네아폴리스",
+    "description": "[티레니아해 항구] 기원전 470경 — 반도 남부 대표 항구도시(현 나폴리)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.2681,
+     40.8518
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브린디시",
+    "description": "[동방 관문 항구] 기원전 244 — 그리스·동방행 아피아 가도 종점(현 브린디시)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.937,
+     40.632
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "게누아",
+    "description": "[북서부 항구] 기원전 218 — 리구리아 해안 거점(현 제노바)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.9463,
+     44.4056
+    ]
+   }
+  }
+ ]
+}

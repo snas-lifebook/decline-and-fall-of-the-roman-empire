@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아스완 제1폭포",
+    "period": "기원전 47년경"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      32.89,
+      24.09
+     ],
+     [
+      32.88,
+      24.02
+     ],
+     [
+      32.878,
+      24.078
+     ],
+     [
+      32.85,
+      23.95
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "엘레판티네",
+    "year": null,
+    "description": "[확실] ? — 나일 강 위 섬 요새. 급류 지대 북단에서 로마 이집트 속주가 끝난다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.89,
+     24.09
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "필래 신전",
+    "year": null,
+    "description": "[확실] ? — 이시스 신전이 있는 섬. 로마 시대에도 누비아인들의 순례가 허용된 국경 성소였다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.88,
+     24.02
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아스완 제1폭포",
+    "year": null,
+    "description": "[대략] ? — 나일 강을 가로막는 화강암 급류 지대. 카이사르와 클레오파트라의 나일 강 유람이 이곳에서 더 남쪽으로 나아가지 못하고 끝났다(기원전 47년경)",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.878,
+     24.078
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "누비아 접경",
+    "year": null,
+    "description": "[대략] ? — 이 지점 이남은 로마의 직접 지배가 미치지 않는 누비아·메로에 왕국 권역이었다",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.85,
+     23.95
+    ]
+   }
+  }
+ ]
+}

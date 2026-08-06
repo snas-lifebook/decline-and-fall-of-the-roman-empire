@@ -1,0 +1,187 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아프리카 — 아프리카 프로콘술라리스 (본토)",
+    "description": "[확실] 북튀니지 카르타고 중심. 로마의 가장 부유한 속주로 경계가 사료에 잘 남아 있다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       9.0,
+       37.2
+      ],
+      [
+       10.0,
+       37.5
+      ],
+      [
+       11.0,
+       37.3
+      ],
+      [
+       11.5,
+       36.9
+      ],
+      [
+       11.2,
+       36.2
+      ],
+      [
+       10.5,
+       36.0
+      ],
+      [
+       9.5,
+       36.1
+      ],
+      [
+       9.0,
+       36.3
+      ],
+      [
+       8.5,
+       36.5
+      ],
+      [
+       8.5,
+       37.0
+      ],
+      [
+       9.0,
+       37.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아프리카 — 비자케나",
+    "description": "[확실] 동튀니지 사헬 지역. 하드루메툼(수스)을 포함하는 속주 남부 곡창지대",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       9.5,
+       36.1
+      ],
+      [
+       11.2,
+       36.2
+      ],
+      [
+       11.5,
+       35.5
+      ],
+      [
+       11.0,
+       34.3
+      ],
+      [
+       9.8,
+       34.2
+      ],
+      [
+       9.0,
+       34.5
+      ],
+      [
+       8.8,
+       35.2
+      ],
+      [
+       9.2,
+       35.8
+      ],
+      [
+       9.5,
+       36.1
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고",
+    "description": "[속주 수도] 기원전 146 — 카르타고 멸망 후 로마 속주로 재건, 이후 반달·비잔티움을 거쳐 감",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3233,
+     36.8528
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "우티카",
+    "description": "[주요 항구] 기원전 146~ — 포에니 전쟁기부터 로마와 결탁, 속주 초기 행정 중심 후보지였던 항구",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.0619,
+     37.0569
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "하드루메툼",
+    "description": "[비자케나 중심 도시] 로마기~ — 현 수스, 비자케나 곡창지대의 항구 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.6084,
+     35.8256
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타프수스",
+    "description": "[전장] 기원전 46 — 카이사르가 폼페이우스파를 격파한 탑수스 전투 무대",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.03,
+     35.62
+    ]
+   }
+  }
+ ]
+}

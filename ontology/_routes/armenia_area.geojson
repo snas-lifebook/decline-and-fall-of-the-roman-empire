@@ -1,0 +1,147 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아르메니아 — 아르메니아 고원 핵심부 (반호수·아라라트산)",
+    "description": "[대략] 1~3세기 아르사케스 왕조 아르메니아의 안정적 핵심 영역. 로마·파르티아가 번갈아 종주권을 주장했지만 지리적 범위 자체는 비교적 일정했다",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       42.5,
+       41.0
+      ],
+      [
+       44.5,
+       41.2
+      ],
+      [
+       46.0,
+       40.0
+      ],
+      [
+       45.5,
+       38.5
+      ],
+      [
+       43.5,
+       38.0
+      ],
+      [
+       41.5,
+       38.8
+      ],
+      [
+       41.8,
+       40.2
+      ],
+      [
+       42.5,
+       41.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아르메니아 — 서부 확장부 (소아르메니아, 387년 이후 비잔티움령)",
+    "description": "[불확실] 387년 로마-페르시아 분할조약으로 서부 약 1/5이 비잔티움령(Armenia Minor 포함 확대), 동부 4/5가 페르시아령이 되었다. 이 부분은 그 서부 잔여지",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       39.5,
+       39.8
+      ],
+      [
+       41.8,
+       40.2
+      ],
+      [
+       41.5,
+       38.8
+      ],
+      [
+       40.0,
+       38.3
+      ],
+      [
+       39.0,
+       39.0
+      ],
+      [
+       39.5,
+       39.8
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아르탁사타",
+    "description": "[왕국 수도] 기원전 176 — 아르탁시아스 1세가 건설, 아르사케스 왕조 대대로 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.55,
+     39.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테오도시오폴리스",
+    "description": "[요새도시] 서기 387 — 서부 아르메니아 방어 거점, 후일 에르주룸",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.27,
+     39.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티그라노케르타",
+    "description": "[티그라네스 대왕이 건설한 신도시] 기원전 77 — 정확한 위치는 학계 논쟁 중(실반 인근으로 추정), 신뢰도 낮음",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.02,
+     38.14
+    ]
+   }
+  }
+ ]
+}

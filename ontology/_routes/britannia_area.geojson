@@ -1,0 +1,163 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브리타니아 — 브리타니아 본토 (잉글랜드·웨일스)",
+    "description": "[확실] 하드리아누스 방벽(122년 착공) 이남, 로마가 항구적으로 속주화한 핵심 지역",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -5.3,
+       50.0
+      ],
+      [
+       -2.9,
+       51.6
+      ],
+      [
+       -4.7,
+       53.3
+      ],
+      [
+       -3.0,
+       54.0
+      ],
+      [
+       -1.8,
+       55.0
+      ],
+      [
+       0.5,
+       52.9
+      ],
+      [
+       1.4,
+       51.4
+      ],
+      [
+       -1.0,
+       50.7
+      ],
+      [
+       -5.3,
+       50.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브리타니아 — 칼레도니아 전초 (안토니누스 방벽 일대)",
+    "description": "[불확실] 138~162년경 안토니누스 방벽으로 일시 북상, 이후 하드리아누스 방벽으로 재철수. 지속 지배가 아닌 로마 영향권 최대 범위",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -4.4,
+       55.9
+      ],
+      [
+       -3.2,
+       56.0
+      ],
+      [
+       -2.0,
+       57.5
+      ],
+      [
+       -5.0,
+       57.0
+      ],
+      [
+       -4.4,
+       55.9
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브리타니아",
+    "description": "[속주 사실상 수도] 47 — 템스강변 무역·행정 중심지로 성장(현 런던)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1276,
+     51.5072
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "요크",
+    "description": "[군단 기지] 71 — 제9군단 주둔지, 이후 콘스탄티누스 대제가 이곳에서 황제 선포(현 요크)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.0815,
+     53.9591
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카물로두눔",
+    "description": "[초기 속주 수도] 43 — 클라우디우스 개선 도시, 초기 식민시(현 콜체스터)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.9035,
+     51.8959
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아쿠아이 술리스",
+    "description": "[온천 도시] 60경 — 켈트 여신 술리스와 미네르바 습합 신전(현 바스)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.359,
+     51.3811
+    ]
+   }
+  }
+ ]
+}

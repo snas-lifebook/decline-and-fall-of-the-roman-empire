@@ -1,0 +1,65 @@
+{"from":"예수 그리스도","from_type":"person","to":"세례자 요한","to_type":"person","rel":"child_of","point":13}
+{"from":"예수 그리스도","from_type":"person","to":"베드로","to_type":"person","rel":"member_of","point":13}
+{"from":"예수 그리스도","from_type":"person","to":"12사도","to_type":"group","rel":"member_of","point":13}
+{"from":"세례자 요한","from_type":"person","to":"예수 그리스도","to_type":"person","rel":"member_of","point":13}
+{"from":"세례자 요한","from_type":"person","to":"헤로데 안티파스","to_type":"person","rel":"opposed","point":13}
+{"from":"살로메","from_type":"person","to":"헤로디아","to_type":"person","rel":"child_of","point":13}
+{"from":"살로메","from_type":"person","to":"세례자 요한","to_type":"person","rel":"opposed","point":13}
+{"from":"헤로디아","from_type":"person","to":"헤로데 안티파스","to_type":"person","rel":"allied_with","point":13}
+{"from":"헤로데 안티파스","from_type":"person","to":"세례자 요한","to_type":"person","rel":"opposed","point":13}
+{"from":"헤로데 안티파스","from_type":"person","to":"갈릴리","to_type":"place","rel":"ruled","point":13}
+{"from":"베드로","from_type":"person","to":"기독교","to_type":"institution","rel":"member_of","point":13}
+{"from":"베드로","from_type":"person","to":"로마","to_type":"place","rel":"occurred_at","point":13}
+{"from":"바울로","from_type":"person","to":"기독교","to_type":"institution","rel":"member_of","point":13}
+{"from":"바울로","from_type":"person","to":"로마","to_type":"place","rel":"occurred_at","point":13}
+{"from":"폼페이우스","from_type":"person","to":"예루살렘","to_type":"place","rel":"participated_in","point":13}
+{"from":"폼페이우스","from_type":"person","to":"유다","to_type":"place","rel":"ruled","point":13}
+{"from":"카이사르","from_type":"person","to":"안티파테르","to_type":"person","rel":"allied_with","point":13}
+{"from":"안티파테르","from_type":"person","to":"헤로데 대왕","to_type":"person","rel":"child_of","point":13}
+{"from":"헤로데 대왕","from_type":"person","to":"예루살렘","to_type":"place","rel":"ruled","point":13}
+{"from":"헤로데 대왕","from_type":"person","to":"유다","to_type":"place","rel":"ruled","point":13}
+{"from":"헤로데 대왕","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"allied_with","point":13}
+{"from":"옥타비아누스","from_type":"person","to":"유대인","to_type":"group","rel":"ruled","point":13}
+{"from":"유다","from_type":"person","to":"예수 그리스도","to_type":"person","rel":"opposed","point":13}
+{"from":"유다","from_type":"person","to":"12사도","to_type":"group","rel":"member_of","point":13}
+{"from":"필라테","from_type":"person","to":"예수 그리스도","to_type":"person","rel":"opposed","point":13}
+{"from":"필라테","from_type":"person","to":"유다","to_type":"place","rel":"ruled","point":13}
+{"from":"아우렐리아누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":13}
+{"from":"아우렐리아누스","from_type":"person","to":"태양교","to_type":"institution","rel":"member_of","point":13}
+{"from":"아우렐리아누스","from_type":"person","to":"제노비아","to_type":"person","rel":"opposed","point":13}
+{"from":"제노비아","from_type":"person","to":"팔미라 왕국","to_type":"group","rel":"ruled","point":13}
+{"from":"디오클레티아누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":13}
+{"from":"디오클레티아누스","from_type":"person","to":"기독교인","to_type":"group","rel":"opposed","point":13}
+{"from":"디오클레티아누스","from_type":"person","to":"4분할 통치","to_type":"institution","rel":"member_of","point":13}
+{"from":"갈레리우스","from_type":"person","to":"디오클레티아누스","to_type":"person","rel":"succeeded","point":13}
+{"from":"갈레리우스","from_type":"person","to":"기독교인","to_type":"group","rel":"opposed","point":13}
+{"from":"콘스탄티우스","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"child_of","point":13}
+{"from":"콘스탄티우스","from_type":"person","to":"갈리아","to_type":"place","rel":"ruled","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"콘스탄티우스","to_type":"person","rel":"child_of","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"막센티우스","to_type":"person","rel":"opposed","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"리키니우스","to_type":"person","rel":"allied_with","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"기독교","to_type":"institution","rel":"allied_with","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"밀라노 칙령","to_type":"event","rel":"participated_in","point":13}
+{"from":"콘스탄티누스","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":13}
+{"from":"리키니우스","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"allied_with","point":13}
+{"from":"리키니우스","from_type":"person","to":"밀라노 칙령","to_type":"event","rel":"participated_in","point":13}
+{"from":"막센티우스","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"opposed","point":13}
+{"from":"아리우스","from_type":"person","to":"아리우스파","to_type":"institution","rel":"member_of","point":13}
+{"from":"아리우스","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"allied_with","point":13}
+{"from":"콘스탄티누스 2세","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"child_of","point":13}
+{"from":"콘스탄티누스 2세","from_type":"person","to":"아리우스파","to_type":"institution","rel":"member_of","point":13}
+{"from":"에우세비오스","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"member_of","point":13}
+{"from":"에우세비오스","from_type":"person","to":"아리우스파","to_type":"institution","rel":"member_of","point":13}
+{"from":"트라야누스","from_type":"person","to":"기독교인","to_type":"group","rel":"opposed","point":13}
+{"from":"칼리굴라","from_type":"person","to":"유대인","to_type":"group","rel":"opposed","point":13}
+{"from":"칼리굴라","from_type":"person","to":"예루살렘","to_type":"place","rel":"ruled","point":13}
+{"from":"기독교","to_type":"institution","to":"유대교","from_type":"institution","rel":"member_of","point":13}
+{"from":"기독교","to_type":"institution","to":"로마","from_type":"place","rel":"occurred_at","point":13}
+{"from":"기독교","to_type":"institution","to":"기독교인","from_type":"group","rel":"member_of","point":13}
+{"from":"태양교","to_type":"institution","to":"기독교","from_type":"institution","rel":"opposed","point":13}
+{"from":"아리우스파","to_type":"institution","to":"기독교","from_type":"institution","rel":"member_of","point":13}
+{"from":"가톨릭 교회","to_type":"institution","to":"기독교","from_type":"institution","rel":"member_of","point":13}
+{"from":"4분할 통치","to_type":"institution","to":"로마 제국","from_type":"place","rel":"ruled","point":13}
+{"from":"밀비아누스 다리 전투","to_type":"event","to":"콘스탄티누스","from_type":"person","rel":"participated_in","point":13}
+{"from":"밀라노 칙령","to_type":"event","to":"기독교","from_type":"institution","rel":"member_of","point":13}

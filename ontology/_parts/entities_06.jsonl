@@ -1,0 +1,32 @@
+{"name":"카이사르","type":"person","aliases":["가이우스 율리우스 카이사르","Julius Caesar"],"attrs":{"birth":"-100","death":"-44","role":"general","title":"갈리아 총독"},"points":[6],"desc":"스물일곱 살에 원로원으로부터 추방당했으나 군중의 지지로 복권되었다. 천재지만 두통과 간질을 앓았고, 여성들에게 인기가 많았으며 동성애자이기도 했던 것으로 추측된다."}
+{"name":"폼페이우스","type":"person","aliases":["그나이우스 폼페이우스","Pompey"],"attrs":{"role":"general","period":"공화정 말기","title":"삼두정치 지도자"},"points":[6],"desc":"부와 행운을 가진 카이사르의 정적으로, 카이사르의 딸 율리아와 결혼했으나 나중에 카이사르와 인연을 끊고 보수파의 수장으로 전향했다."}
+{"name":"크라수스","type":"person","aliases":["Crassus"],"attrs":{"role":"general","title":"삼두정치 지도자"},"points":[6],"desc":"부르주아 출신의 삼두정치 지도자로 카이사르에게 빚을 청산해주는 등 원조를 했다. 후에 시리아를 통치하려다 파르티아인에게 격파당해 목이 잘려나갔다."}
+{"name":"안쿠스 마르키우스","type":"person","aliases":[],"attrs":{"role":"king","period":"기원전 7세기","number":"4"},"points":[6],"desc":"로마의 제4대 왕으로 카이사르의 가계가 배출한 명문가의 시조가 되는 인물."}
+{"name":"코르넬리아","type":"person","aliases":[],"attrs":{"role":"wife","parent":"킨나"},"points":[6],"desc":"킨나의 딸로 카이사르의 두 번째 아내가 되었다. 카이사르는 술라의 명령을 거부하고 그녀와의 혼인을 지켜 사형 판결을 받았다."}
+{"name":"클로디우스","type":"person","aliases":["Clodius"],"attrs":{"role":"politician","period":"공화정 말기"},"points":[6],"desc":"카이사르의 세 번째 아내 폼페이아와 간통한 청년 귀족으로, 카이사르는 간통죄 재판에서 무죄를 주장했다."}
+{"name":"칼푸르니아","type":"person","aliases":[],"attrs":{"role":"wife","parent":"피소"},"points":[6],"desc":"피소의 딸로 카이사르의 세 번째 아내가 된 여성."}
+{"name":"율리아","type":"person","aliases":[],"attrs":{"role":"daughter","parent":"카이사르"},"points":[6],"desc":"카이사르의 딸로 폼페이우스와 정략결혼했으나 죽자 폼페이우스가 카이사르와 인연을 끊는 계기가 되었다."}
+{"name":"대 카토","type":"person","aliases":["위대한 카토","Cato the Elder"],"attrs":{"role":"censor","period":"공화정 중기"},"points":[6],"desc":"위대한 감찰관으로 솔직하고 호쾌하며 엄격한 인물로 평가되었다."}
+{"name":"소 카토","type":"person","aliases":["카토","Cato the Younger"],"attrs":{"role":"politician","period":"공화정 말기","father":"대 카토"},"points":[6],"desc":"대 카토의 자손으로 보수파 귀족의 대표. 아버지와 달리 정직하지 않았고 성미가 까다로우며 도덕군자처럼 행동했으나 호민관 이상의 지위에는 오르지 못했다."}
+{"name":"베르킹게토릭스","type":"person","aliases":[],"attrs":{"role":"leader","origin":"갈리아","title":"갈리아의 왕 지망자"},"points":[6],"desc":"산악지대의 갈리아 기사로 '갈리아의 왕'이 되려는 야망을 품었다. 카이사르와 면식이 있었으나 갈리아 전역을 하나로 통일하여 반란을 일으켰다."}
+{"name":"밀로","type":"person","aliases":[],"attrs":{"role":"military leader","period":"공화정 말기"},"points":[6],"desc":"가난한 귀족으로 폼페이우스의 지지를 받아 클로디우스에 대항하는 폭려단체를 조직했다. 클로디우스를 살해했으나 유죄를 언도받아 마살리아로 도망쳤다."}
+{"name":"가비니우스","type":"person","aliases":[],"attrs":{"role":"consul","period":"공화정 말기"},"points":[6],"desc":"카이사르의 부하로 카이사르의 지지로 집정관에 당선된 인물."}
+{"name":"피소","type":"person","aliases":[],"attrs":{"role":"consul","period":"공화정 말기"},"points":[6],"desc":"카이사르의 부하로 집정관에 당선되었으며, 그의 딸 칼푸르니아가 카이사르의 아내가 되었다."}
+{"name":"킨나","type":"person","aliases":[],"attrs":{"role":"consul","period":"공화정 말기"},"points":[6],"desc":"마리우스의 후계자로 그의 딸 코르넬리아가 카이사르의 아내가 되었다."}
+{"name":"로마","type":"group","aliases":[],"attrs":{"type":"civilization","period":"공화정 말기"},"points":[6],"desc":"카이사르의 갈리아 정복으로 새로운 영토를 획득한 고대 국가로, 후에 이곳으로부터 로마의 언어와 문명이 유럽 전역으로 퍼져나갔다."}
+{"name":"켈트족","type":"group","aliases":["Celts"],"attrs":{"region":"갈리아"},"points":[6],"desc":"갈리아에 산재해 있는 부족들로 서로 끊임없이 다투고 있었으며, 귀족, 신관(드루이드), 민중의 세 계급으로 나뉘어져 있었다."}
+{"name":"드루이드","type":"group","aliases":[],"attrs":{"type":"priest class","region":"갈리아"},"points":[6],"desc":"갈리아의 제2계급 신관으로 종교와 교육을 장악했던 계층."}
+{"name":"게르마니아인","type":"group","aliases":["Germanic peoples"],"attrs":{"region":"게르만"},"points":[6],"desc":"갈리아를 침략한 민족으로 15만 명이 라인 강을 따라 플랑드르로 침입했으나 카이사르에게 거의 전멸당했다."}
+{"name":"헬베티족","type":"group","aliases":["Helvetii","스위스"],"attrs":{"region":"스위스"},"points":[6],"desc":"남쪽의 산악지대에서 40만 명이 남프랑스로 눈사태처럼 쏟아져 내렸으나 카이사르에게 격파당했다."}
+{"name":"아이두이족","type":"group","aliases":[],"attrs":{"region":"갈리아","status":"동맹부족"},"points":[6],"desc":"카이사르의 동맹부족으로 갈리아 전쟁에서 카이사르를 포위하여 그에게 뼈아픈 패배를 입혔다."}
+{"name":"갈리아","type":"place","aliases":[],"attrs":{"region":"서유럽","population":5000000,"area":"이탈리아 반도의 두 배"},"points":[6],"desc":"피레네 산맥과 알프스 산맥, 라인 강과 대서양으로 둘러싸인 광활한 영토로 카이사르에게 완전히 정복되었다."}
+{"name":"갈리아 속주","type":"place","aliases":[],"attrs":{"region":"서유럽","status":"roman province"},"points":[6],"desc":"카이사르에 의해 정복된 새로운 로마 영토로 인구 500만, 면적은 이탈리아 반도의 두 배였다."}
+{"name":"루비콘 강","type":"place","aliases":["Rubicon"],"attrs":{"region":"이탈리아","importance":"법적 경계"},"points":[6],"desc":"아펜니노 산맥을 경계로 갈리아 총독은 강의 북안까지만 군대를 집결할 수 있었고, 강 건너 남쪽으로의 진격은 법으로 금지되었다."}
+{"name":"에스파냐","type":"place","aliases":[],"attrs":{"region":"이베리아"},"points":[6],"desc":"카이사르가 총독으로 부임했던 속주로 반란을 진압하고 전리품을 거둬들였다."}
+{"name":"브리타니아","type":"place","aliases":["잉글랜드","Britannia"],"attrs":{"region":"북유럽"},"points":[6],"desc":"도버 해협 건너편의 섬으로 카이사르가 로마인으로서는 최초로 발을 디딘 곳이다."}
+{"name":"알레시아","type":"place","aliases":["알리즈생트렌"],"attrs":{"region":"갈리아"},"points":[6],"desc":"쥐라 산맥 내의 도시로 베르킹게토릭스가 숨어있던 곳이며, 카이사르의 최후의 격렬한 포위전이 벌어진 장소이다."}
+{"name":"루카","type":"place","aliases":["Lucca"],"attrs":{"region":"이탈리아"},"points":[6],"desc":"카이사르가 삼두정치의 강화를 위해 폼페이우스와 크라수스를 소집한 도시."}
+{"name":"알프스","type":"place","aliases":[],"attrs":{"region":"유럽"},"points":[6],"desc":"카이사르가 비밀스럽게 불철주야 행군하여 넘은 산맥으로 갈리아의 반란을 진압하는 과정에서 통과했다."}
+{"name":"제1차 삼두정치","type":"event","aliases":[],"attrs":{"participants":["카이사르","폼페이우스","크라수스"],"period":"기원전 60년"},"points":[6],"desc":"세 우두머리(패트런)가 부하 정치가들을 비호하는 관계가 확립된 정치 체제로, 기원전 60년에 시작되어 이후 이탈리아 정치의 전형이 되었다."}
+{"name":"갈리아 정복","type":"event","aliases":[],"attrs":{"period":"기원전 53-50","participants":["카이사르","갈리아 부족들"]},"points":[6],"desc":"카이사르가 약 3만 명의 병력으로 인구 500만의 광활한 갈리아를 2년간의 전투 끝에 정복한 사건."}
+{"name":"알레시아 포위전","type":"event","aliases":[],"attrs":{"period":"갈리아 정복 말기","participants":["카이사르","베르킹게토릭스","갈리아 연합군"]},"points":[6],"desc":"카이사르가 베르킹게토릭스를 포위했으나 25만 명의 갈리아 연합군이 구하러 오면서 벌어진 격렬한 전투로, 카이사르는 '하루만 늦었어도 전멸할 뻔했다'고 회고했다."}

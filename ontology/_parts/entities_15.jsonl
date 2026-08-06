@@ -1,0 +1,65 @@
+{"name":"갈바","type":"person","attrs":{"role":"황제","reign":"68~69","origin":"에스파냐 속주 총독"},"points":[15],"desc":"네로를 살해한 후 제위에 오른 에스파냐 속주 총독. 친위대에 의해 불과 3개월 만에 살해당했다."}
+{"name":"오토","type":"person","attrs":{"role":"황제","reign":"69"},"points":[15],"desc":"은행가로서 갈바 이후 황제에 추대된 인물. 비텔리우스에 의해 자살로 내몬 인물."}
+{"name":"비텔리우스","type":"person","attrs":{"role":"황제","reign":"69"},"points":[15],"desc":"게르마니아 원정군 사령관. 오토를 자살로 내몬 후 제위에 올랐으나 베스파시아누스에게 패배했다."}
+{"name":"베스파시아누스","type":"person","attrs":{"role":"황제","reign":"69~79"},"points":[15],"desc":"제9대 황제. 이집트에서 귀환하여 비텔리우스를 격파하고 제위에 올랐다. 공중 화장실을 고안한 인물."}
+{"name":"티투스","type":"person","attrs":{"role":"황제","reign":"79~81","relation":"베스파시아누스의 아들"},"points":[15],"desc":"베스파시아누스의 장남. 천성이 유순하고 관대한 명군이었으나 2년 만에 역병으로 사망했다."}
+{"name":"도미티아누스","type":"person","attrs":{"role":"황제","reign":"81~96","relation":"티투스의 동생"},"points":[15],"desc":"티투스의 동생. 아리우스파를 추방했으나 나중에 복위시켰다. 음모를 두려워해 자신을 신으로 숭배하도록 강요했다."}
+{"name":"네르바","type":"person","attrs":{"role":"황제","reign":"96~98"},"points":[15],"desc":"도미티아누스 살해 후 원로원에 의해 지명된 황제. 5현제 시대의 시작자. 트라야누스를 양자로 삼았다."}
+{"name":"트라야누스","type":"person","attrs":{"role":"황제","reign":"98~117"},"points":[15],"desc":"게르마니아의 장군에서 황제가 된 인물. 대규모 공공 토목 공사와 동방 정복으로 로마 제국사 최대의 판도를 이루었다."}
+{"name":"하드리아누스","type":"person","attrs":{"role":"황제","reign":"117~138"},"points":[15],"desc":"고대 로마사상 가장 위대한 황제로 불리는 인물. 동방 정복을 종결하고 법전을 정리했다."}
+{"name":"플로티나","type":"person","attrs":{"role":"황비","relation":"트라야누스의 황비"},"points":[15],"desc":"트라야누스의 황비. 하드리아누스의 애인이자 그가 황제가 되는 데 영향을 미친 인물."}
+{"name":"비비아 사비나","type":"person","attrs":{"role":"황비","relation":"하드리아누스의 황비"},"points":[15],"desc":"트라야누스의 종손녀로서 하드리아누스의 황비. 미인이었으나 성적 매력이 없었다."}
+{"name":"안티노우스","type":"person","attrs":{"role":"청년","relation":"하드리아누스의 동반자"},"points":[15],"desc":"검은 머리칼에 검은 눈동자를 가진 청년. 나일 강에서 익사했을 때 하드리아누스는 대성통곡했다."}
+{"name":"루키우스 케이오니우스 콤모두스","type":"person","attrs":{"role":"양자","relation":"하드리아누스의 양자"},"points":[15],"desc":"하드리아누스가 양자로 삼은 인물. 먼저 세상을 떠나 안토니누스 피우스가 후계자가 되는 계기를 만들었다."}
+{"name":"안토니누스 피우스","type":"person","attrs":{"role":"황제","reign":"138~161"},"points":[15],"desc":"하드리아누스 후기에 후계자로 지명된 황제. 전 재산을 국고에 쏟아 붓고 법전을 정리했다."}
+{"name":"마르쿠스 아우렐리우스","type":"person","attrs":{"role":"황제","reign":"161~180"},"points":[15],"desc":"안토니누스 피우스의 양아들. 『명상록』의 저자로서 스토아 철학을 실천한 철학자 황제."}
+{"name":"루키우스 베루스","type":"person","attrs":{"role":"동방군 대장","relation":"마르쿠스 아우렐리우스의 동료"},"points":[15],"desc":"마르쿠스 아우렐리우스가 동방으로 파견한 장군. 향락가였으나 파르티아족을 격파했다."}
+{"name":"판테아","type":"person","attrs":{"role":"미녀","relation":"루키우스 베루스의 연인"},"points":[15],"desc":"안티오키아에서 루키우스 베루스가 만난 미녀. 클레오파트라의 재림이라 할 정도였다."}
+{"name":"루킬라","type":"person","attrs":{"role":"공녀","relation":"마르쿠스 아우렐리우스의 딸"},"points":[15],"desc":"마르쿠스 아우렐리우스의 딸. 루키우스 베루스와 결혼하도록 제의받았으나 루키우스는 여전히 주색 잡기에만 빠져 있었다."}
+{"name":"카시우스","type":"person","attrs":{"role":"동방군 참모"},"points":[15],"desc":"마르쿠스 아우렐리우스가 보낸 동방군 참모. 루키우스 베루스를 격려해 파르티아족 군대를 격파하도록 했다."}
+{"name":"콤모두스","type":"person","attrs":{"role":"황자","relation":"마르쿠스 아우렐리우스의 아들"},"points":[15],"desc":"마르쿠스 아우렐리우스의 황자. 아버지와 함께 게르마니아 전투에 참전했다."}
+{"name":"파우스티나","type":"person","attrs":{"role":"황비","relation":"안토니누스 피우스의 아내"},"points":[15],"desc":"미인이자 음탕한 여인. 안토니누스 피우스의 아내였으나 돈을 물 쓰듯 써댔다."}
+{"name":"클라우디우스","type":"person","attrs":{"role":"황제"},"points":[15],"desc":"모의 해전을 개최한 황제."}
+{"name":"아그리콜라","type":"person","attrs":{"role":"브리타니아 총독"},"points":[15],"desc":"로마 제국의 영토를 북방 고지까지 확대하려고 시도한 장군. 도미티아누스에 의해 파면당했다."}
+{"name":"사투르니누스","type":"person","attrs":{"role":"게르마니아 총독"},"points":[15],"desc":"도미티아누스 치세 때 반란을 일으킨 게르마니아 총독."}
+{"name":"타키투스","type":"person","attrs":{"role":"원로원의 유지"},"points":[15],"desc":"도미티아누스의 암살을 기도한 원로원의 인물."}
+{"name":"에파프로디투스","type":"person","attrs":{"role":"비서관"},"points":[15],"desc":"도미티아누스의 비서관. 25년 전 네로 황제의 손을 경동맥으로 이끈 비서관이었다."}
+{"name":"테우토니족","type":"group","attrs":{"region":"게르마니아"},"points":[15],"desc":"게르마니아의 민족. 트라야누스와 2년에 걸쳐 분쟁을 벌였다."}
+{"name":"다키아족","type":"group","attrs":{"region":"도나우 강"},"points":[15],"desc":"도나우 강을 건너 로마군을 격파한 게르마니아 민족."}
+{"name":"고트족","type":"group","attrs":{"region":"로마 경계"},"points":[15],"desc":"로마 제국의 경계를 침범한 민족."}
+{"name":"브리타니아 민족","type":"group","attrs":{"region":"브리타니아"},"points":[15],"desc":"속주를 침범한 민족."}
+{"name":"파르티아족","type":"group","attrs":{"region":"동방"},"points":[15],"desc":"루키우스 베루스의 동방군에 의해 격파된 민족."}
+{"name":"페스트균","type":"event","attrs":{"type":"전염병","origin":"동방정토군"},"points":[15],"desc":"루키우스 베루스가 이끄는 동방정토군이 가져온 전염병. 로마 시에만 20만 명의 사망자를 냈다."}
+{"name":"5현제 시대","type":"period","attrs":{"period":"96~180년"},"points":[15],"desc":"네르바, 트라야누스, 하드리아누스, 안토니누스 피우스, 마르쿠스 아우렐리우스로 이어지는 다섯 황제의 시대."}
+{"name":"팍스 로마나","type":"period","attrs":{"period":"1세기~2세기"},"points":[15],"desc":"로마 제국의 평화 시대. 안토니누스 피우스 치세에 '영원한 이상'이 실현되는 듯했다."}
+{"name":"로마 제국","type":"place","attrs":{"type":"국가"},"points":[15],"desc":"5현제 시대에 최대의 판도를 이루고 팍스 로마나가 실현된 제국."}
+{"name":"로마","type":"place","attrs":{"type":"도시"},"points":[15],"desc":"로마 제국의 중심 도시."}
+{"name":"예루살렘","type":"place","attrs":{"region":"유대"},"points":[15],"desc":"티투스가 폭동 진압을 위해 파견된 도시. 대신전이 파괴되었다."}
+{"name":"유대","type":"place","attrs":{"region":"중동"},"points":[15],"desc":"티투스가 폭동 진압을 위해 파견된 지역."}
+{"name":"갈리아","type":"place","attrs":{"region":"유럽"},"points":[15],"desc":"콘스탄티우스가 다스렸던 지역."}
+{"name":"이집트","type":"place","attrs":{"region":"북아프리카"},"points":[15],"desc":"하드리아누스가 여행한 지역. 안티노우스가 나일 강에서 익사한 곳."}
+{"name":"안티오키아","type":"place","aliases":["터키 남부"],"attrs":{"region":"동방"},"points":[15],"desc":"루키우스 베루스가 판테아를 만난 도시."}
+{"name":"브리타니아","type":"place","attrs":{"region":"북방"},"points":[15],"desc":"하드리아누스의 장성을 건설한 지역."}
+{"name":"게르마니아","type":"place","attrs":{"region":"북쪽 경계"},"points":[15],"desc":"트라야누스가 원정을 간 지역. 다키아족의 위협이 있던 지역."}
+{"name":"메소포타미아","type":"place","attrs":{"region":"동방"},"points":[15],"desc":"트라야누스가 정복한 지역."}
+{"name":"페르시아","type":"place","attrs":{"region":"동방"},"points":[15],"desc":"트라야누스가 정복한 지역. 하드리아누스가 철수한 지역."}
+{"name":"시리아","type":"place","attrs":{"region":"동방"},"points":[15],"desc":"트라야누스가 정복한 지역."}
+{"name":"아르메니아","type":"place","attrs":{"region":"동방"},"points":[15],"desc":"트라야누스가 정복한 지역."}
+{"name":"인도양","type":"place","attrs":{"type":"대양"},"points":[15],"desc":"트라야누스가 도달한 지역."}
+{"name":"인도","type":"place","attrs":{"region":"동방"},"points":[15],"desc":"실크로드를 통해 로마와 연결된 지역."}
+{"name":"중국","type":"place","attrs":{"region":"극동"},"points":[15],"desc":"실크로드를 통해 로마와 비단을 교역한 지역."}
+{"name":"장안","type":"place","aliases":["시안"],"attrs":{"region":"중국"},"points":[15],"desc":"실크로드의 종점 도시."}
+{"name":"팔레스티나","type":"place","attrs":{"region":"중동"},"points":[15],"desc":"하드리아누스의 장성을 건설한 지역으로 추정됨."}
+{"name":"티볼리","type":"place","attrs":{"region":"이탈리아"},"points":[15],"desc":"제노비아가 유배된 별장이 있고 하드리아누스의 대별장이 있던 곳."}
+{"name":"테베레 강","type":"place","attrs":{"type":"강","region":"로마"},"points":[15],"desc":"비텔리우스의 시신이 던져진 강."}
+{"name":"비엔나","type":"place","aliases":["빈"],"attrs":{"region":"중유럽"},"points":[15],"desc":"마르쿠스 아우렐리우스가 병으로 쓰러진 도시."}
+{"name":"나일 강","type":"place","attrs":{"type":"강","region":"이집트"},"points":[15],"desc":"하드리아누스가 안티노우스와 함께 여행한 강. 안티노우스가 익사한 곳."}
+{"name":"소아시아","type":"place","attrs":{"region":"동방"},"points":[15],"desc":"트라야누스가 귀국하는 중 사망한 지역."}
+{"name":"셀리누스","type":"place","attrs":{"region":"소아시아"},"points":[15],"desc":"트라야누스가 경련을 일으킨 도시."}
+{"name":"파로스 섬","type":"place","attrs":{"type":"섬","region":"그리스"},"points":[15],"desc":"트라야누스 광장의 신전 앞 대리석이 운반되어온 섬."}
+{"name":"투르키스탄","type":"place","attrs":{"region":"중앙아시아"},"points":[15],"desc":"실크로드를 통해 확인된 지역."}
+{"name":"판테온 신전","type":"work","attrs":{"creator":"하드리아누스"},"points":[15],"desc":"하드리아누스가 만든 걸작 신전."}
+{"name":"산타젤로 성","type":"work","attrs":{"creator":"하드리아누스"},"points":[15],"desc":"테베레 강 대안에 세워진 하드리아누스의 걸작."}
+{"name":"명상록","type":"work","attrs":{"author":"마르쿠스 아우렐리우스"},"points":[15],"desc":"마르쿠스 아우렐리우스가 남긴 스토아 철학의 정수인 저작."}
+{"name":"트라야누스 광장","type":"work","attrs":{"designer":"아폴로도로스","founder":"트라야누스"},"points":[15],"desc":"다마스쿠스 출신의 천재 건축가 아폴로도로스가 설계한 트라야누스 시대의 명작."}
+{"name":"하드리아누스의 장성","type":"work","attrs":{"builder":"하드리아누스"},"points":[15],"desc":"브리타니아 북방에 하드리아누스가 쌓은 수비 장성."}

@@ -1,0 +1,96 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "보스포루스 해협 — 보스포루스 해협 전역",
+    "description": "[확실] 흑해 입구에서 마르마라해까지 이어지는 좁은 수로. 1453년 오스만 함대가 이 해협에서 콘스탄티노플을 봉쇄했다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       28.93,
+       41.25
+      ],
+      [
+       29.1,
+       41.2
+      ],
+      [
+       29.15,
+       41.1
+      ],
+      [
+       29.05,
+       41.0
+      ],
+      [
+       28.98,
+       40.97
+      ],
+      [
+       28.88,
+       41.03
+      ],
+      [
+       28.85,
+       41.12
+      ],
+      [
+       28.9,
+       41.2
+      ],
+      [
+       28.93,
+       41.25
+      ],
+      [
+       28.93,
+       41.25
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄티노플",
+    "description": "[수도] 330 — 해협 서안에 자리해 항구를 해협이 지켜줌",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9784,
+     41.0082
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "보스포루스 해협",
+    "description": "[도시]  — 해협 건너 아시아 쪽 도시, 콘스탄티노플의 맞은편",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.02,
+     41.02
+    ]
+   }
+  }
+ ]
+}

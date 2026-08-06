@@ -1,0 +1,199 @@
+{
+ "nodes": [
+  {
+   "id": "375e7bf4bcc235a7",
+   "type": "group",
+   "x": -630,
+   "y": -120,
+   "width": 950,
+   "height": 1859,
+   "label": "족보 하심 계열",
+   "color": "4"
+  },
+  {
+   "id": "8a3ba2c27aaed193",
+   "type": "text",
+   "x": -195,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-1  **[[하심]]**",
+   "color": "5"
+  },
+  {
+   "id": "996eb02285a48324",
+   "type": "text",
+   "x": -195,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-1  **[[아브드 알 무탈리브]]**",
+   "color": "5"
+  },
+  {
+   "id": "b1a2d139a70b798a",
+   "type": "text",
+   "x": -390,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-1  **[[아브 탈리브]]**",
+   "color": "5"
+  },
+  {
+   "id": "728445d2917b4d62",
+   "type": "text",
+   "x": 0,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-2  압둘라*\n545~570"
+  },
+  {
+   "id": "3ef5beae51a846ac",
+   "type": "text",
+   "x": -390,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-1  **[[마호메트]]**\n570~632",
+   "color": "5"
+  },
+  {
+   "id": "0a039531868bb499",
+   "type": "text",
+   "x": 0,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-2  **[[하디자]]**\n555~619",
+   "color": "6"
+  },
+  {
+   "id": "c07c5589d7fbeee3",
+   "type": "text",
+   "x": -540,
+   "y": 18,
+   "width": 96,
+   "height": 52,
+   "text": "**I**\n1세대"
+  },
+  {
+   "id": "d2d53a7c4ac94614",
+   "type": "text",
+   "x": -540,
+   "y": 442,
+   "width": 96,
+   "height": 52,
+   "text": "**II**\n2세대"
+  },
+  {
+   "id": "e0e24e853b9142eb",
+   "type": "text",
+   "x": -540,
+   "y": 866,
+   "width": 96,
+   "height": 52,
+   "text": "**III**\n3세대"
+  },
+  {
+   "id": "e6c2d4efbe551d42",
+   "type": "text",
+   "x": -540,
+   "y": 1290,
+   "width": 96,
+   "height": 52,
+   "text": "**IV**\n4세대"
+  },
+  {
+   "id": "91f140109b1c197a",
+   "type": "text",
+   "x": -126,
+   "y": 1515,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "e0931cd001ea1ec2",
+   "type": "text",
+   "x": 320,
+   "y": 0,
+   "width": 330,
+   "height": 330,
+   "text": "**범례** — 임상 계보도 표기\n\n`II-3` = 세대-개인 번호. 사람을 지목할 때 쓴다\n청록 = 남 · 보라 = 여 · 무색 = 미상\n칸 안 둘째 줄 = 생몰년. '약'이 붙으면 추정이다\n흐린 선·이름 뒤 별표 = 이 책 본문에 없는 맥락 보강\n남자를 왼쪽, 여자를 오른쪽에 세운다\n\n노랑 칸 = 혼인. 한 사람이 여러 번이면 차수를 적는다\n노랑 상자 = 그 혼인에서 난 형제\n선 위의 말 = 관계. 남편·아내·아들·딸·계자\n계자(양자) = 혈연이 아닌 계승. 한국 족보의 系子\n주황 선 = 제위 계승. 혈연과 다른 축이다"
+  }
+ ],
+ "edges": [
+  {
+   "id": "6ab8cc584119bf32",
+   "fromNode": "3ef5beae51a846ac",
+   "fromSide": "bottom",
+   "toNode": "91f140109b1c197a",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "aeaddc21098c4bdb",
+   "fromNode": "0a039531868bb499",
+   "fromSide": "bottom",
+   "toNode": "91f140109b1c197a",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "81f9764a687fc1c7",
+   "fromNode": "996eb02285a48324",
+   "fromSide": "bottom",
+   "toNode": "3ef5beae51a846ac",
+   "toSide": "top",
+   "label": "계자(증조부)"
+  },
+  {
+   "id": "11803efd150718c1",
+   "fromNode": "728445d2917b4d62",
+   "fromSide": "bottom",
+   "toNode": "3ef5beae51a846ac",
+   "toSide": "top",
+   "label": "계자(증조부)",
+   "color": "#52525b"
+  },
+  {
+   "id": "fef52d9b0137d43c",
+   "fromNode": "8a3ba2c27aaed193",
+   "fromSide": "bottom",
+   "toNode": "3ef5beae51a846ac",
+   "toSide": "top",
+   "label": "계자(증조부)"
+  },
+  {
+   "id": "506ce9fddb5f5d6a",
+   "fromNode": "996eb02285a48324",
+   "fromSide": "bottom",
+   "toNode": "b1a2d139a70b798a",
+   "toSide": "top",
+   "label": "아버지",
+   "color": "#52525b"
+  },
+  {
+   "id": "e00acf7afae68bc6",
+   "fromNode": "8a3ba2c27aaed193",
+   "fromSide": "bottom",
+   "toNode": "996eb02285a48324",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "583d101a95b65da7",
+   "fromNode": "996eb02285a48324",
+   "fromSide": "bottom",
+   "toNode": "728445d2917b4d62",
+   "toSide": "top",
+   "label": "아버지",
+   "color": "#52525b"
+  }
+ ]
+}

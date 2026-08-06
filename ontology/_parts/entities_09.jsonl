@@ -1,0 +1,33 @@
+{"name":"클레오파트라 7세","type":"person","aliases":["Cleopatra"],"attrs":{"role":"Egypt pharaoh"},"points":[9],"desc":"이집트 여왕. 카이사르 죽음 후 알렉산드리아로 도망쳤으나 안토니우스와 결합하여 로마에 맞섰다."}
+{"name":"옥타비아누스","type":"person","aliases":["Augustus","Octavian"],"attrs":{"role":"successor of Caesar","age":18},"points":[9],"desc":"카이사르의 양자이자 후계자. 결국 안토니우스와 클레오파트라를 격멸하고 로마 제국을 창립했다."}
+{"name":"안토니우스","type":"person","aliases":["Mark Antony","Marcus Antonius"],"attrs":{"role":"Roman general","age":38},"points":[9],"desc":"카이사르의 친근한 부관. 클레오파트라와 결합하여 옥타비아누스에 맞섰으나 패배했다."}
+{"name":"레피두스","type":"person","attrs":{"role":"second triumvir"},"points":[9],"desc":"제2차 삼두정치의 일원. 카이사르의 심복으로 옥타비아누스와 안토니우스의 중재자였다."}
+{"name":"일리리아","type":"place","attrs":{"region":"구 유고슬라비아 및 아드리아해 연안"},"points":[9],"desc":"옥타비아누스가 통치하던 지역. 그가 군단을 이끌고 나온 출발지이다."}
+{"name":"카이사르","type":"person","attrs":{"role":"Roman general","title":"dictator"},"points":[9],"desc":"로마의 독재관. 옥타비아누스의 양부이자 안토니우스의 상관이었다."}
+{"name":"율리아","type":"person","attrs":{"role":"Caesar's sister"},"points":[9],"desc":"카이사르의 여동생. 옥타비아누스의 할머니이다."}
+{"name":"카이사리온","type":"person","attrs":{"role":"son of Caesar"},"points":[9],"desc":"카이사르의 아들. 클레오파트라와 사이의 자식으로 이집트 왕위 계승자로 지목되었다."}
+{"name":"스크리보니아","type":"person","attrs":{"role":"Octavianus's wife"},"points":[9],"desc":"옥타비아누스의 두 번째 아내. 딸 율리아를 낳고 후에 리비아에게 밀려났다."}
+{"name":"율리아","type":"person","attrs":{"role":"daughter of Octavianus"},"points":[9],"desc":"옥타비아누스와 스크리보니아의 딸. 훗날 티베리우스의 아내가 되었다."}
+{"name":"리비아 드루실라","type":"person","attrs":{"role":"wife of Octavianus"},"points":[9],"desc":"옥타비아누스의 세 번째 아내. 네로와 리비아 사이의 자녀를 양자로 삼겼다."}
+{"name":"티베리우스 클라우디우스 네로","type":"person","attrs":{"role":"early husband"},"points":[9],"desc":"리비아의 첫 남편. 옥타비아누스에게 이혼하도록 설득당했다."}
+{"name":"티베리우스","type":"person","attrs":{"role":"future emperor"},"points":[9],"desc":"네로와 리비아의 아들. 옥타비아누스의 양자로서 훗날 제2대 황제가 되었다."}
+{"name":"드루수스","type":"person","attrs":{"role":"young child"},"points":[9],"desc":"리비아의 또 다른 아들. 리비아의 태중에서 옥타비아누스의 양자가 되었다."}
+{"name":"테베레 강","type":"place","attrs":{"region":"로마"},"points":[9],"desc":"로마의 강. 클레오파트라의 별장이 있던 곳이다."}
+{"name":"알렉산드리아","type":"place","attrs":{"region":"이집트"},"points":[9],"desc":"이집트의 수도. 클레오파트라와 안토니우스가 함께한 도시이다."}
+{"name":"킬리키아","type":"place","attrs":{"region":"현재의 터키 중남부"},"points":[9],"desc":"중동의 속주. 안토니우스가 본영을 설치했다."}
+{"name":"타르수스","type":"place","attrs":{"region":"킬리키아"},"points":[9],"desc":"킬리키아의 수도. 안토니우스가 클레오파트라를 소환한 장소이다."}
+{"name":"카시우스","type":"person","attrs":{"role":"conspirator"},"points":[9],"desc":"카이사르 암살에 참여한 자. 클레오파트라를 반란죄로 고소했다."}
+{"name":"페니키아","type":"place","attrs":{"region":"현재의 레바논"},"points":[9],"desc":"중동의 영토. 안토니우스가 클레오파트라에게 준 선물 중 하나이다."}
+{"name":"키프로스","type":"place","attrs":{"region":"지중해"},"points":[9],"desc":"지중해의 섬. 안토니우스가 클레오파트라에게 준 영토이다."}
+{"name":"아라비아","type":"place","attrs":{"region":"중동"},"points":[9],"desc":"중동의 광활한 지역. 안토니우스가 클레오파트라에게 진상했다."}
+{"name":"옥타비아","type":"person","attrs":{"role":"sister of Octavianus"},"points":[9],"desc":"옥타비아누스의 누이. 안토니우스와 결혼했으나 그에게 버려졌다."}
+{"name":"아테네","type":"place","attrs":{"region":"그리스"},"points":[9],"desc":"그리스의 도시. 옥타비아가 안토니우스의 교화를 위해 방문했다."}
+{"name":"아르메니아","type":"place","attrs":{"region":"현재의 터키 동부"},"points":[9],"desc":"중동의 영토. 안토니우스가 헤르시아 왕을 토벌했다."}
+{"name":"헤르시아","type":"person","attrs":{"role":"King of Armenia"},"points":[9],"desc":"아르메니아의 왕. 안토니우스에게 토벌당했다."}
+{"name":"소아시아","type":"place","attrs":{"region":"현재의 터키"},"points":[9],"desc":"지역. 클레오파트라가 안토니우스를 추격한 곳이다."}
+{"name":"안티오키아","type":"place","attrs":{"region":"소아시아"},"points":[9],"desc":"소아시아의 도시. 클레오파트라가 안토니우스를 만난 장소이다."}
+{"name":"이오니아해","type":"place","attrs":{"region":"지중해"},"points":[9],"desc":"지중해의 해역. 악티움 해전이 벌어진 곳이다."}
+{"name":"악티움 해전","type":"event","attrs":{"date":"기원전 31년 9월 2일"},"points":[9],"desc":"안토니우스 연합군과 옥타비아누스 군 사이의 결전. 옥타비아누스가 승리했다."}
+{"name":"마르쿠스 아그리파","type":"person","attrs":{"role":"Roman admiral"},"points":[9],"desc":"옥타비아누스의 해전 지휘관. 여러 해에 걸쳐 정예 함대를 양성했다."}
+{"name":"시리아","type":"place","attrs":{"region":"중동"},"points":[9],"desc":"중동의 속주. 옥타비아누스가 공략한 지역이다."}
+{"name":"베누스 신전","type":"place","attrs":{"region":"로마"},"points":[9],"desc":"로마의 신전. 안토니우스의 유언장을 보관한 장소이다."}

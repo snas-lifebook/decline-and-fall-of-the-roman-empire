@@ -1,0 +1,13 @@
+{"from":"테오도라","from_type":"person","to":"유스티니아누스","to_type":"person","rel":"married","point":26}
+{"from":"테오도라","from_type":"person","to":"아카키우스","to_type":"person","rel":"child_of","point":26}
+{"from":"테오도라","from_type":"person","to":"라벤나","to_type":"place","rel":"occurred_at","point":26}
+{"from":"산비탈레 성당","from_type":"place","to":"라벤나","to_type":"place","rel":"occurred_at","point":26}
+{"from":"테오도라","from_type":"person","to":"청파","to_type":"group","rel":"opposed","point":26}
+{"from":"테오도라","from_type":"person","to":"녹파","to_type":"group","rel":"opposed","point":26}
+{"from":"유스티니아누스","from_type":"person","to":"황비 루피키나","to_type":"person","rel":"child_of","point":26}
+{"from":"벨리사리우스","from_type":"person","to":"프로코피우스","to_type":"person","rel":"served_under","point":26}
+{"from":"테오도라","from_type":"person","to":"니카의 반란","to_type":"event","rel":"participated_in","point":26}
+{"from":"유스티니아누스","from_type":"person","to":"니카의 반란","to_type":"event","rel":"participated_in","point":26}
+{"from":"아카키우스","from_type":"person","to":"아나스타시우스 황제","to_type":"person","rel":"served_under","point":26}
+{"from":"테오도라","from_type":"person","to":"클레오파트라","to_type":"person","rel":"opposed","point":26}
+{"from":"테오도라","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":26}

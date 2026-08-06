@@ -1,0 +1,39 @@
+{
+  "name": "알레만니족",
+  "subject": "알레만니족",
+  "color": "#6A1B9A",
+  "period": "3세기~5세기",
+  "summary": "여러 게르만 소부족의 연합체로 3세기 초 로마 사료에 처음 등장, 상부 라인강·마인강·네카르강 유역(현 슈바벤)을 기반으로 이후 알자스와 스위스 북부까지 세력을 넓혔다.",
+  "territory": [
+    {
+      "part": "상부 라인·마인·네카르 (슈바벤)",
+      "note": "3세기 출현 이후 핵심 정착지. 로마 아그리 데쿠마테스(Agri Decumates) 포기(260년경) 이후 이 일대를 장악했다.",
+      "confidence": "high",
+      "ring": [
+        [7.0, 49.5],
+        [10.5, 49.8],
+        [10.8, 47.8],
+        [8.5, 47.3],
+        [7.0, 48.0]
+      ]
+    },
+    {
+      "part": "확장 영역 (알자스·스위스 북부)",
+      "note": "4~5세기. 서쪽 알자스와 남쪽 스위스 북부로 세력을 넓힌 시기. 로마와 잦은 충돌(357년 스트라스부르 전투 등)이 있었던 접경지라 경계가 유동적.",
+      "confidence": "medium",
+      "ring": [
+        [6.8, 48.7],
+        [8.5, 48.5],
+        [9.0, 47.3],
+        [7.0, 47.0],
+        [6.3, 47.8]
+      ]
+    }
+  ],
+  "cities": [],
+  "sources": [
+    "Ammianus Marcellinus, Res Gestae",
+    "Wikipedia: Alemanni (https://en.wikipedia.org/wiki/Alemanni)",
+    "Wikipedia: Battle of Strasbourg (https://en.wikipedia.org/wiki/Battle_of_Strasbourg)"
+  ]
+}

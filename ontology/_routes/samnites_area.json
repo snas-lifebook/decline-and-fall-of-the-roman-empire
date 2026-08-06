@@ -1,0 +1,22 @@
+{
+  "name": "삼니움인",
+  "subject": "삼니움인",
+  "color": "#8d6e63",
+  "period": "기원전 4세기",
+  "summary": "이탈리아 중남부 산악지대(현 아브루초·몰리세 일대)의 부족 연맹. 로마와 세 차례 삼니움 전쟁(기원전 343~290년)을 치른 뒤 병합됐다.",
+  "territory": [
+    {
+      "part": "삼니움 (기원전 4세기, 삼니움 전쟁 이전)",
+      "note": "기원전 4세기, 로마와의 삼니움 전쟁(기원전 343~290년) 발발 이전 삼니움 부족 연맹의 대략적 영역 — 아펜니노 산맥 중남부 내륙.",
+      "confidence": "high",
+      "ring": [
+        [13.5, 42.3], [14.7, 42.0], [14.9, 41.3], [14.5, 40.9], [13.7, 41.2],
+        [13.4, 41.8]
+      ]
+    }
+  ],
+  "sources": [
+    "Wikipedia: Samnites, Samnite Wars",
+    "Gibbon, The History of the Decline and Fall of the Roman Empire"
+  ]
+}

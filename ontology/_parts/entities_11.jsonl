@@ -1,0 +1,40 @@
+{"name":"티베리우스","type":"person","aliases":["Tiberius"],"attrs":{"role":"emperor","reign":"14~37"},"points":[11],"desc":"제2대 황제. 불운을 타고났으나 공정하고 적확한 치세로 로마의 국력을 배가시켰다."}
+{"name":"리비아","type":"person","aliases":["Livia"],"attrs":{"role":"empress"},"points":[11],"desc":"티베리우스의 어머니. 아우구스투스의 아내였으며 황태후로서 '조국의 어머니'로 불렸다."}
+{"name":"드루수스","type":"person","aliases":["Drusus"],"attrs":{"role":"prince"},"points":[11],"desc":"리비아의 아들. 밝고 직선적인 성격으로 아우구스투스에게 총애받았다."}
+{"name":"아우구스투스","type":"person","aliases":["Augustus","Octavianus","옥타비아누스"],"attrs":{"role":"emperor","reign":"-27~14"},"points":[11],"desc":"초대 황제. 티베리우스의 의붓아버지."}
+{"name":"아그리파","type":"person","aliases":["Agrippa"],"attrs":{"role":"general"},"points":[11],"desc":"대장군. 그의 딸들은 티베리우스와 다른 유력자들과 결혼했다."}
+{"name":"빕사니아","type":"person","aliases":["Vipsania"],"attrs":{"role":"noblewoman"},"points":[11],"desc":"아그리파의 딸. 티베리우스의 전처."}
+{"name":"율리아","type":"person","aliases":["Julia"],"attrs":{"role":"princess"},"points":[11],"desc":"아우구스투스의 딸. 문란한 생활로 인해 티베리우스와 이혼당하고 유배가 되었다."}
+{"name":"게르마니쿠스","type":"person","aliases":["Germanicus"],"attrs":{"role":"general"},"points":[11],"desc":"티베리우스의 양자. 시민들의 인기를 받았으나 오리엔트에서 독살되었다고 전해진다."}
+{"name":"안토니아","type":"person","aliases":["Antonia"],"attrs":{"role":"noblewoman"},"points":[11],"desc":"게르마니쿠스의 어머니. 드루수스와 안토니우스의 딸. 티베리우스의 암살 음모를 알려주었다."}
+{"name":"아그리피나","type":"person","aliases":["Agrippina","아그리피나(제1대)"],"attrs":{"role":"noblewoman"},"points":[11],"desc":"게르마니쿠스의 미망인. 아우구스투스의 손녀. 제5대 황제 네로의 할머니. 권력욕이 강했다."}
+{"name":"네로","type":"person","aliases":["Nero"],"attrs":{"role":"prince, emperor"},"points":[11],"desc":"아그리피나의 아들. 아그리피나가 네로를 황제로 만들기 위해 노력했다."}
+{"name":"가이우스","type":"person","aliases":["Gaius","칼리굴라"],"attrs":{"role":"emperor","reign":"37~41"},"points":[11],"desc":"칼리굴라. 게르마니쿠스와 아그리피나의 아들. 정신 장애로 폭군이 되었다."}
+{"name":"포파이우스 사비누스","type":"person","aliases":["Popaeus Sabinus"],"attrs":{"role":"official"},"points":[11],"desc":"세야누스의 음모에 연루되었다고 고발되어 처형되었다."}
+{"name":"세야누스","type":"person","aliases":["Sejanus"],"attrs":{"role":"prefect of the Praetorian Guard"},"points":[11],"desc":"친위대장. 황제의 신뢰를 얻었다가 반역 음모를 기도해 처형되었다."}
+{"name":"리빌라","type":"person","aliases":["Livilla"],"attrs":{"role":"noblewoman"},"points":[11],"desc":"안토니아의 딸. 티베리우스의 며느리. 세야누스의 정부로 고발되어 옥중에서 죽었다."}
+{"name":"카시우스 카이레아","type":"person","aliases":["Cassius Chaerea"],"attrs":{"role":"officer"},"points":[11],"desc":"근위대장. 칼리굴라에게 자주 모욕받아 그를 암살했다."}
+{"name":"카레소니아","type":"person","aliases":["Caesonia"],"attrs":{"role":"empress"},"points":[11],"desc":"칼리굴라의 황비. 칼리굴라 암살 후 친위대에 의해 죽임을 당했다."}
+{"name":"클라우디우스","type":"person","aliases":["Claudius"],"attrs":{"role":"emperor","reign":"41~54"},"points":[11],"desc":"제4대 황제. 칼리굴라의 숙부. 손발이 불편했으나 뛰어난 치세를 펼쳤다."}
+{"name":"세네카","type":"person","aliases":["Seneca"],"attrs":{"role":"philosopher, tutor"},"points":[11],"desc":"스토아 학파의 거장. 철학자들이 칼리굴라의 박해에서 화를 면할 수 있던 이유 중 하나."}
+{"name":"드루실라","type":"person","aliases":["Drusilla"],"attrs":{"role":"princess"},"points":[11],"desc":"칼리굴라의 친여동생. 칼리굴라가 결혼했던 인물."}
+{"name":"가이우스 피소","type":"person","aliases":["Gaius Piso"],"attrs":{},"points":[11],"desc":"칼리굴라가 신부를 빼앗아간 사람."}
+{"name":"메살리나","type":"person","aliases":["Messalina"],"attrs":{"role":"empress"},"points":[11],"desc":"클라우디우스의 네 번째 아내. 파렴치한 여인으로 알려졌다."}
+{"name":"실리우스","type":"person","aliases":["Silius"],"attrs":{"role":"nobleman"},"points":[11],"desc":"메살리나의 정부. 메살리나와 결혼식을 올렸다."}
+{"name":"브리탄니쿠스","type":"person","aliases":["Britannicus"],"attrs":{"role":"prince"},"points":[11],"desc":"클라우디우스의 아들. 아그리피나에 의해 제위 계승권을 박탈당했다."}
+{"name":"부루스","type":"person","aliases":["Burrhus"],"attrs":{"role":"prefect of the Praetorian Guard"},"points":[11],"desc":"아그리피나의 친구. 친위대장으로 임명되었다."}
+{"name":"아그리피나(클라우디우스의 아내)","type":"person","aliases":["Agrippina the Younger","아그리피나(제4대)"],"attrs":{"role":"empress"},"points":[11],"desc":"게르마니쿠스와 아그리피나의 딸. 클라우디우스의 다섯 번째 아내. 아무 두려울 것이 없는 권력욕강한 여인으로 네로를 황제로 만들기를 시도했다."}
+{"name":"안토니우스","type":"person","aliases":["Antonius"],"attrs":{},"points":[11],"desc":"안토니아의 아버지."}
+{"name":"로마","type":"place","aliases":["Rome"],"attrs":{"region":"Italy"},"points":[11],"desc":"제국의 수도. 평화 속에서 부패와 퇴폐가 진행되었다."}
+{"name":"로도스 섬","type":"place","aliases":["Rhodes"],"attrs":{"region":"Greece"},"points":[11],"desc":"그리스 섬. 티베리우스가 아내의 문란함에 염증을 느껴 도피한 곳."}
+{"name":"카프리 섬","type":"place","aliases":["Capri"],"attrs":{"region":"Italy"},"points":[11],"desc":"이탈리아 섬. 티베리우스가 19년경부터 은둔 생활을 했던 곳."}
+{"name":"캄파니아","type":"place","aliases":["Campania"],"attrs":{"region":"Italy"},"points":[11],"desc":"이탈리아 지역. 티베리우스가 카프리를 나와 도착했을 때 심근경색 발작을 일으켰다."}
+{"name":"게르마니아","type":"place","aliases":["Germania"],"attrs":{"region":"Europe"},"points":[11],"desc":"지금의 독일. 게르마니쿠스가 부임한 지역."}
+{"name":"오리엔트","type":"place","aliases":["Orient"],"attrs":{"region":"Middle East"},"points":[11],"desc":"동방 속주. 게르마니쿠스가 총독으로 임명되었던 곳."}
+{"name":"브리타니아","type":"place","aliases":["Britannia"],"attrs":{"region":"Europe"},"points":[11],"desc":"지금의 잉글랜드. 클라우디우스가 정토한 지역."}
+{"name":"푸키누스 호수","type":"place","aliases":["Fucinus"],"attrs":{"region":"Italy"},"points":[11],"desc":"이탈리아의 호수. 클라우디우스가 간척사업을 펼친 곳."}
+{"name":"이집트","type":"place","aliases":["Egypt"],"attrs":{"region":"Africa"},"points":[11],"desc":"칼리굴라가 문화에 심취했던 나라."}
+{"name":"팍스 로마나","type":"period","aliases":["Pax Romana"],"attrs":{},"points":[11],"desc":"로마의 평화. 티베리우스의 치세 아래에서 실현되었으나 내면적으로는 부패와 퇴폐가 진행되었다."}
+{"name":"율리우스 클라우디우스 왕조","type":"period","aliases":["Julio-Claudian Dynasty"],"attrs":{},"points":[11],"desc":"초대 황제부터 제5대 황제까지의 왕조. 살인과 배신의 광란의 소용돌이 속으로 빨려들어갔다."}
+{"name":"친위대","type":"group","aliases":["Praetorian Guard"],"attrs":{},"points":[11],"desc":"황제의 호위부대. 황제 암살 음모에 개입하기도 했다."}
+{"name":"원로원","type":"group","aliases":["Senate"],"attrs":{},"points":[11],"desc":"로마의 의회. 세야누스를 처형했다."}

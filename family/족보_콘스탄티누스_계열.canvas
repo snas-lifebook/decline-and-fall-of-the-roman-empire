@@ -1,0 +1,174 @@
+{
+ "nodes": [
+  {
+   "id": "4d39804a31a686ee",
+   "type": "group",
+   "x": -630,
+   "y": -120,
+   "width": 950,
+   "height": 1210,
+   "label": "족보 콘스탄티누스 계열",
+   "color": "4"
+  },
+  {
+   "id": "035795103a2493ff",
+   "type": "text",
+   "x": -390,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-1  **[[콘스탄티우스 1세]]**\n250~306",
+   "color": "5"
+  },
+  {
+   "id": "265420b8114074e6",
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-2  헬레나*\n246~330"
+  },
+  {
+   "id": "a90be7d78e258a01",
+   "type": "text",
+   "x": -390,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-1  **[[콘스탄티누스]]**\n272~337\n재위 306~337",
+   "color": "5"
+  },
+  {
+   "id": "87e4220aa3529cc7",
+   "type": "text",
+   "x": 0,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-2  **[[콘스탄티아]]**\n293~330",
+   "color": "6"
+  },
+  {
+   "id": "fc4495e4707873da",
+   "type": "text",
+   "x": -390,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-1  **[[콘스탄티누스 2세]]**\n317~340",
+   "color": "5"
+  },
+  {
+   "id": "dd04097ffd2926aa",
+   "type": "text",
+   "x": 0,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-2  **[[크리스푸스]]**\n300~326",
+   "color": "5"
+  },
+  {
+   "id": "d8b4bbd5554ffafc",
+   "type": "text",
+   "x": -540,
+   "y": 18,
+   "width": 96,
+   "height": 52,
+   "text": "**I**\n1세대"
+  },
+  {
+   "id": "ae3313e2fa8a882b",
+   "type": "text",
+   "x": -540,
+   "y": 442,
+   "width": 96,
+   "height": 52,
+   "text": "**II**\n2세대"
+  },
+  {
+   "id": "a7b2795aaaed1a73",
+   "type": "text",
+   "x": -540,
+   "y": 866,
+   "width": 96,
+   "height": 52,
+   "text": "**III**\n3세대"
+  },
+  {
+   "id": "84f4d05360833619",
+   "type": "text",
+   "x": -126,
+   "y": 243,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "66ef34d8b628a2e3",
+   "type": "text",
+   "x": 320,
+   "y": 0,
+   "width": 330,
+   "height": 330,
+   "text": "**범례** — 임상 계보도 표기\n\n`II-3` = 세대-개인 번호. 사람을 지목할 때 쓴다\n청록 = 남 · 보라 = 여 · 무색 = 미상\n칸 안 둘째 줄 = 생몰년. '약'이 붙으면 추정이다\n흐린 선·이름 뒤 별표 = 이 책 본문에 없는 맥락 보강\n남자를 왼쪽, 여자를 오른쪽에 세운다\n\n노랑 칸 = 혼인. 한 사람이 여러 번이면 차수를 적는다\n노랑 상자 = 그 혼인에서 난 형제\n선 위의 말 = 관계. 남편·아내·아들·딸·계자\n계자(양자) = 혈연이 아닌 계승. 한국 족보의 系子\n주황 선 = 제위 계승. 혈연과 다른 축이다"
+  }
+ ],
+ "edges": [
+  {
+   "id": "f1115acb91153eb6",
+   "fromNode": "035795103a2493ff",
+   "fromSide": "bottom",
+   "toNode": "84f4d05360833619",
+   "toSide": "top",
+   "toEnd": "none",
+   "color": "#52525b",
+   "label": "남편"
+  },
+  {
+   "id": "2a490718d4915687",
+   "fromNode": "265420b8114074e6",
+   "fromSide": "bottom",
+   "toNode": "84f4d05360833619",
+   "toSide": "top",
+   "toEnd": "none",
+   "color": "#52525b",
+   "label": "아내"
+  },
+  {
+   "id": "aafcb28e279c7cc1",
+   "fromNode": "84f4d05360833619",
+   "fromSide": "bottom",
+   "toNode": "a90be7d78e258a01",
+   "toSide": "top",
+   "label": "아들",
+   "color": "#52525b"
+  },
+  {
+   "id": "c665e7ca46395a48",
+   "fromNode": "a90be7d78e258a01",
+   "fromSide": "bottom",
+   "toNode": "fc4495e4707873da",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "ce4e1c97754e1d22",
+   "fromNode": "035795103a2493ff",
+   "fromSide": "bottom",
+   "toNode": "87e4220aa3529cc7",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "09a0ce5f8a7c6b95",
+   "fromNode": "a90be7d78e258a01",
+   "fromSide": "bottom",
+   "toNode": "dd04097ffd2926aa",
+   "toSide": "top",
+   "label": "아버지"
+  }
+ ]
+}

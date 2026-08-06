@@ -1,0 +1,167 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메소포타미아 — 북부 메소포타미아 핵심부 (니시비스-싱가라)",
+    "description": "[확실] 세베루스 재편(198) 이후 363년 할양까지 유지된 안정적 속주 범위. 유프라테스-티그리스 상류 사이",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       38.5,
+       37.8
+      ],
+      [
+       40.2,
+       38.0
+      ],
+      [
+       41.9,
+       37.5
+      ],
+      [
+       42.5,
+       36.3
+      ],
+      [
+       41.0,
+       35.6
+      ],
+      [
+       39.3,
+       36.2
+      ],
+      [
+       38.3,
+       37.0
+      ],
+      [
+       38.5,
+       37.8
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메소포타미아 — 트라야누스 일시 정복선 (115~117, 티그리스 하류까지)",
+    "description": "[불확실] 트라야누스가 크테시폰까지 진격했던 최대 판도. 하드리아누스 즉위 직후(117) 즉시 포기되어 실효 지배 기간이 매우 짧다",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       41.0,
+       35.6
+      ],
+      [
+       42.5,
+       36.3
+      ],
+      [
+       44.6,
+       34.8
+      ],
+      [
+       44.6,
+       32.8
+      ],
+      [
+       42.5,
+       33.2
+      ],
+      [
+       41.0,
+       34.5
+      ],
+      [
+       41.0,
+       35.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니시비스",
+    "description": "[속주 수도] 서기 198 — 세베루스 재편 이후 속주 행정·군사 중심지, 363년 페르시아에 할양",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.22,
+     37.08
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "싱가라",
+    "description": "[군단 주둔지] 서기 198 — 제1 파르티카 군단 주둔 요새",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.88,
+     36.32
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아미다",
+    "description": "[북부 요새도시] 서기 230 — 티그리스 상류 방어 거점, 359년 샤푸르 2세에 포위·함락",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.23,
+     37.91
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "다라",
+    "description": "[요새도시] 서기 505 — 5세기 말 아나스타시우스가 신축한 대페르시아 방어 요새",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.98,
+     37.18
+    ]
+   }
+  }
+ ]
+}

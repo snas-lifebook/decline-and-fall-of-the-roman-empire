@@ -1,0 +1,260 @@
+{
+ "nodes": [
+  {
+   "id": "b55e9fd0e7157d0e",
+   "type": "group",
+   "x": -825,
+   "y": -120,
+   "width": 1340,
+   "height": 1859,
+   "label": "족보 콤모두스 계열",
+   "color": "4"
+  },
+  {
+   "id": "97689ccd395eaa7a",
+   "type": "group",
+   "x": -603,
+   "y": 1226,
+   "width": 656,
+   "height": 168,
+   "color": "3",
+   "label": "III-1 마르쿠스 아우렐리우스 × III-2 파우스티나 사이의 형제"
+  },
+  {
+   "id": "436bbfb47d2e2406",
+   "type": "text",
+   "x": -195,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-1  **[[하드리아누스]]**\n76~138\n재위 117~138",
+   "color": "5"
+  },
+  {
+   "id": "80d24dbcef137e86",
+   "type": "text",
+   "x": -195,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-1  **[[안토니누스 피우스]]**\n86~161\n재위 138~161",
+   "color": "5"
+  },
+  {
+   "id": "4f25670f6a415124",
+   "type": "text",
+   "x": -390,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-1  **[[마르쿠스 아우렐리우스]]**\n121~180\n재위 161~180",
+   "color": "5"
+  },
+  {
+   "id": "9c5fdce864dfd281",
+   "type": "text",
+   "x": 0,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-2  **[[파우스티나]]**\n125~175",
+   "color": "6"
+  },
+  {
+   "id": "9c551f4a7e54cd8e",
+   "type": "text",
+   "x": -585,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-1  **[[콤모두스]]**\n161~192\n재위 177~192",
+   "color": "5"
+  },
+  {
+   "id": "52a5f2d404eeebe6",
+   "type": "text",
+   "x": -195,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-2  **[[루킬라]]**\n150~182",
+   "color": "6"
+  },
+  {
+   "id": "9a2b0a8e51db4369",
+   "type": "text",
+   "x": 195,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-3  **[[루키우스 베루스]]**\n130~169",
+   "color": "5"
+  },
+  {
+   "id": "b71dad657e430f82",
+   "type": "text",
+   "x": -735,
+   "y": 18,
+   "width": 96,
+   "height": 52,
+   "text": "**I**\n1세대"
+  },
+  {
+   "id": "430906a71d0ef5b2",
+   "type": "text",
+   "x": -735,
+   "y": 442,
+   "width": 96,
+   "height": 52,
+   "text": "**II**\n2세대"
+  },
+  {
+   "id": "65f2ad84a38a4b5d",
+   "type": "text",
+   "x": -735,
+   "y": 866,
+   "width": 96,
+   "height": 52,
+   "text": "**III**\n3세대"
+  },
+  {
+   "id": "35ba2ccf14f81c33",
+   "type": "text",
+   "x": -735,
+   "y": 1290,
+   "width": 96,
+   "height": 52,
+   "text": "**IV**\n4세대"
+  },
+  {
+   "id": "0eab6efc900adfd1",
+   "type": "text",
+   "x": 69,
+   "y": 1515,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "49347103ebbd8347",
+   "type": "text",
+   "x": -126,
+   "y": 1091,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "96503ebf18b02272",
+   "type": "text",
+   "x": 515,
+   "y": 0,
+   "width": 330,
+   "height": 330,
+   "text": "**범례** — 임상 계보도 표기\n\n`II-3` = 세대-개인 번호. 사람을 지목할 때 쓴다\n청록 = 남 · 보라 = 여 · 무색 = 미상\n칸 안 둘째 줄 = 생몰년. '약'이 붙으면 추정이다\n흐린 선·이름 뒤 별표 = 이 책 본문에 없는 맥락 보강\n남자를 왼쪽, 여자를 오른쪽에 세운다\n\n노랑 칸 = 혼인. 한 사람이 여러 번이면 차수를 적는다\n노랑 상자 = 그 혼인에서 난 형제\n선 위의 말 = 관계. 남편·아내·아들·딸·계자\n계자(양자) = 혈연이 아닌 계승. 한국 족보의 系子\n주황 선 = 제위 계승. 혈연과 다른 축이다"
+  }
+ ],
+ "edges": [
+  {
+   "id": "6e342d753698f138",
+   "fromNode": "9a2b0a8e51db4369",
+   "fromSide": "bottom",
+   "toNode": "0eab6efc900adfd1",
+   "toSide": "top",
+   "toEnd": "none",
+   "color": "#52525b",
+   "label": "남편"
+  },
+  {
+   "id": "71f0942f9cfbf1dc",
+   "fromNode": "52a5f2d404eeebe6",
+   "fromSide": "bottom",
+   "toNode": "0eab6efc900adfd1",
+   "toSide": "top",
+   "toEnd": "none",
+   "color": "#52525b",
+   "label": "아내"
+  },
+  {
+   "id": "16e18df163bb327b",
+   "fromNode": "4f25670f6a415124",
+   "fromSide": "bottom",
+   "toNode": "49347103ebbd8347",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "f47a09ab56c89d8a",
+   "fromNode": "9c5fdce864dfd281",
+   "fromSide": "bottom",
+   "toNode": "49347103ebbd8347",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "92dee34948467c59",
+   "fromNode": "49347103ebbd8347",
+   "fromSide": "bottom",
+   "toNode": "52a5f2d404eeebe6",
+   "toSide": "top",
+   "label": "딸"
+  },
+  {
+   "id": "cc878cf0cdab0e9a",
+   "fromNode": "49347103ebbd8347",
+   "fromSide": "bottom",
+   "toNode": "9c551f4a7e54cd8e",
+   "toSide": "top",
+   "label": "아들"
+  },
+  {
+   "id": "365e6ff6568a5782",
+   "fromNode": "80d24dbcef137e86",
+   "fromSide": "bottom",
+   "toNode": "4f25670f6a415124",
+   "toSide": "top",
+   "label": "아버지",
+   "color": "#52525b"
+  },
+  {
+   "id": "9f776214cddf1fbe",
+   "fromNode": "436bbfb47d2e2406",
+   "fromSide": "bottom",
+   "toNode": "80d24dbcef137e86",
+   "toSide": "top",
+   "label": "아버지",
+   "color": "#52525b"
+  },
+  {
+   "id": "ea605c225efe85e2",
+   "fromNode": "80d24dbcef137e86",
+   "fromSide": "bottom",
+   "toNode": "9c5fdce864dfd281",
+   "toSide": "top",
+   "label": "아버지",
+   "color": "#52525b"
+  },
+  {
+   "id": "825d367dc0b2cce8",
+   "fromNode": "80d24dbcef137e86",
+   "fromSide": "right",
+   "toNode": "4f25670f6a415124",
+   "toSide": "left",
+   "color": "2",
+   "label": "제위 계승"
+  },
+  {
+   "id": "37c8c2ecb744c9f9",
+   "fromNode": "436bbfb47d2e2406",
+   "fromSide": "right",
+   "toNode": "80d24dbcef137e86",
+   "toSide": "left",
+   "color": "2",
+   "label": "제위 계승"
+  }
+ ]
+}

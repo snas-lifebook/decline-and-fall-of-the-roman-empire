@@ -1,0 +1,12 @@
+{"from":"디오클레티아누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":20}
+{"from":"디오클레티아누스","from_type":"person","to":"막시미아누스","to_type":"person","rel":"allied_with","point":20}
+{"from":"디오클레티아누스","from_type":"person","to":"갈레리우스","to_type":"person","rel":"allied_with","point":20}
+{"from":"디오클레티아누스","from_type":"person","to":"콘스탄티우스 1세","to_type":"person","rel":"allied_with","point":20}
+{"from":"디오클레티아누스","from_type":"person","to":"마르쿠스","to_type":"person","rel":"allied_with","point":20}
+{"from":"막시미아누스","from_type":"person","to":"이탈리아","to_type":"place","rel":"ruled","point":20}
+{"from":"막시미아누스","from_type":"person","to":"아프리카","to_type":"place","rel":"ruled","point":20}
+{"from":"갈레리우스","from_type":"person","to":"일리리쿰","to_type":"place","rel":"ruled","point":20}
+{"from":"콘스탄티우스 1세","from_type":"person","to":"갈리아","to_type":"place","rel":"ruled","point":20}
+{"from":"콘스탄티우스 1세","from_type":"person","to":"에스파냐","to_type":"place","rel":"ruled","point":20}
+{"from":"콘스탄티우스 1세","from_type":"person","to":"브리타니아","to_type":"place","rel":"ruled","point":20}
+{"from":"아리스토불루스","from_type":"person","to":"디오클레티아누스","to_type":"person","rel":"allied_with","point":20}

@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사르데냐 섬 — 사르데냐 본섬",
+    "description": "[확실] 남북으로 긴 섬. 카르타고 지배 하에 있다가 제1차 포에니 전쟁 직후 로마가 접수",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.5,
+       41.2
+      ],
+      [
+       9.3,
+       41.0
+      ],
+      [
+       9.7,
+       40.5
+      ],
+      [
+       9.6,
+       39.8
+      ],
+      [
+       9.7,
+       39.2
+      ],
+      [
+       9.4,
+       38.9
+      ],
+      [
+       8.9,
+       39.0
+      ],
+      [
+       8.5,
+       39.5
+      ],
+      [
+       8.2,
+       40.0
+      ],
+      [
+       8.1,
+       40.7
+      ],
+      [
+       8.3,
+       41.1
+      ],
+      [
+       8.5,
+       41.2
+      ],
+      [
+       8.5,
+       41.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "칼라리스",
+    "description": "[주요 도시]  — 섬 남부의 항구, 오늘날의 칼리아리",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.11,
+     39.22
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "올비아",
+    "description": "[항구]  — 섬 동북부의 로마 항구도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.51,
+     40.92
+    ]
+   }
+  }
+ ]
+}

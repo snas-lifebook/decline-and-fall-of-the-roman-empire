@@ -1,0 +1,53 @@
+{
+  "name": "에브로 강",
+  "subject": "에브로 강",
+  "period": "기원전 226~218",
+  "summary": "로마와 카르타고가 기원전 226년 조약으로 그은 세력 경계선. 한니발이 이 선을 넘어 남하한 것이 제2차 포에니 전쟁의 명분이 되었다.",
+  "waypoints": [
+    {
+      "place": "에브로 강 발원지(칸타브리아)",
+      "lat": 43.14,
+      "lon": -4.40,
+      "event": "칸타브리아 산맥에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "사라고사",
+      "lat": 41.65,
+      "lon": -0.88,
+      "event": "훗날 아우구스투스가 카이사르아우구스타(현 사라고사)를 세운 유역 중심 도시",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "에브로 강",
+      "lat": 40.72,
+      "lon": -1.0,
+      "event": "기원전 226년 로마와 카르타고가 맺은 에브로 조약의 경계선. 한니발이 기원전 218년 이 선을 넘어 남하하며 제2차 포에니 전쟁의 명분이 됐다",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "토르토사",
+      "lat": 40.81,
+      "lon": 0.52,
+      "event": "하류의 주요 도시(고대 덜토숨)",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "지중해 하구(델타 델 에브레)",
+      "lat": 40.72,
+      "lon": 0.85,
+      "event": "지중해로 흘러드는 하구",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Ebro",
+    "Wikipedia: Treaty of Ebro",
+    "Polybius: Histories (Book III)"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "발레리아누스의 페르시아 원정과 포로 생활",
+    "period": "253~260"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      2.5,
+      47.0
+     ],
+     [
+      35.0,
+      39.0
+     ],
+     [
+      38.7855,
+      37.163
+     ],
+     [
+      52.8,
+      28.9
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아",
+    "year": 253,
+    "description": "[확실] 253 — 갈루스 황제 치세에 고트족에게 시달리던 갈리아·게르마니아 주둔군을 구원하는 임무를 성공적으로 수행",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.5,
+     47.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "소아시아",
+    "year": 259,
+    "description": "[확실] 259 — 아르메니아를 정복하고 유프라테스 강 유역을 유린한 샤푸르 왕을 직접 격퇴하기 위해 진군",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0,
+     39.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에데사",
+    "year": 260,
+    "description": "[확실] 260 — '에데사의 전투'. 유프라테스 강을 건너 진군하던 중 페르시아 군에게 포위되어 로마 군이 완패하고, 회견을 요구한 샤푸르 왕에게 황제 스스로가 체포당함",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.7855,
+     37.163
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비샤푸르",
+    "year": 260,
+    "description": "[불확실] 260 — 쇠사슬에 묶여 페르시아 민중 앞에 조리돌림당하고 샤푸르 왕이 말에 오를 때 발판 노릇을 하는 등 능욕당하다 옥사. 로마 제국사상 유일하게 포로로 죽은 황제가 됨",
+    "confidence": "low",
+    "marker-color": "#c62828",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     52.8,
+     28.9
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아드리아해 — 아드리아해 전역",
+    "description": "[대략] 베네치아 앞바다에서 오트란토 해협까지. 로마의 초기 해상 진출로이자 라벤나 해군기지가 자리한 수역",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.3,
+       45.4
+      ],
+      [
+       13.5,
+       45.6
+      ],
+      [
+       14.5,
+       45.3
+      ],
+      [
+       16.0,
+       44.8
+      ],
+      [
+       17.5,
+       44.0
+      ],
+      [
+       18.5,
+       43.0
+      ],
+      [
+       19.0,
+       42.0
+      ],
+      [
+       19.3,
+       41.0
+      ],
+      [
+       18.5,
+       40.2
+      ],
+      [
+       17.5,
+       40.0
+      ],
+      [
+       16.5,
+       40.5
+      ],
+      [
+       15.5,
+       40.8
+      ],
+      [
+       14.5,
+       41.5
+      ],
+      [
+       13.5,
+       42.5
+      ],
+      [
+       12.8,
+       43.5
+      ],
+      [
+       12.3,
+       44.5
+      ],
+      [
+       12.3,
+       45.4
+      ],
+      [
+       12.3,
+       45.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라벤나",
+    "description": "[해군기지]  — 아우구스투스가 건설한 아드리아해 로마 함대 기지, 훗날 서로마의 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.2,
+     44.42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브린디시",
+    "description": "[주요 항구]  — 이탈리아에서 그리스로 건너가는 관문 항구",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.94,
+     40.64
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "디르하키움",
+    "description": "[주요 항구]  — 발칸 쪽 아드리아 관문 도시, 카이사르-폼페이우스 내전의 무대",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.45,
+     41.32
+    ]
+   }
+  }
+ ]
+}

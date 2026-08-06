@@ -1,0 +1,30 @@
+{"name":"발레리아누스","type":"person","aliases":["Valerian"],"attrs":{"role":"emperor","reign":"253-260"},"points":[18],"desc":"로마 황제. 고결하고 충성심 강했으나 갈리에누스를 공치제로 삼은 최악의 결단을 내렸다. 에데사 전투에서 페르시아 군에게 체포되어 포로가 되었다."}
+{"name":"갈리에누스","type":"person","attrs":{"role":"emperor","co_ruler":"253-260","sole_ruler":"260-268"},"points":[18],"desc":"발레리아누스의 아들. 너무 젊고 소행이 불량스러웠다. 아버지가 포로가 된 후 단독 황제가 되어 15년간 혼란과 재앙의 시대를 초래했다."}
+{"name":"갈루스","type":"person","attrs":{"role":"emperor","reign":"251-253"},"points":[18],"desc":"로마 황제. 발레리아누스의 감찰관이었으나 수치육림에 빠져 있다가 아이밀리아누스에게 살해되었다."}
+{"name":"아이밀리아누스","type":"person","attrs":{"role":"governor","emperor":"불과 4개월"},"points":[18],"desc":"모이시아 지방의 주지사. 야만족을 격퇴하고 병사들에게 추대되어 황제가 되었으나 곧 살해되었다."}
+{"name":"마크리아누스","type":"person","attrs":{"role":"praetorian_prefect"},"points":[18],"desc":"근위대장. 잘못된 진언과 계획으로 에데사 전투에서 로마 군의 전력을 약화시켰다."}
+{"name":"샤푸르","type":"person","aliases":["Shapur I"],"attrs":{"role":"king","empire":"Sassanid Persia"},"points":[18],"desc":"사산조 페르시아의 왕. 아르메니아를 정복하고 에데사 전투에서 발레리아누스를 체포했다. 로마에 대해서는 잔혹했지만 아르메니아에서는 관대했다."}
+{"name":"아르다시르","type":"person","attrs":{"role":"king","empire":"Sassanid Persia"},"points":[18],"desc":"사산조 페르시아의 건국자. 샤푸르의 아버지로 구왕조를 타도했다."}
+{"name":"코스로에스","type":"person","attrs":{"role":"king","title":"아르메니아의 왕"},"points":[18],"desc":"아르메니아의 왕. 30년간 페르시아와 항쟁했으나 결국 샤푸르의 자객에게 암살당했다."}
+{"name":"키리아데스","type":"person","attrs":{"role":"emperor_puppet","origin":"안티오키아"},"points":[18],"desc":"샤푸르가 추대한 꼭두각시 황제. 신분이 낮은 망명자로서 로마 제국을 배신하고 페르시아의 도구가 되었다."}
+{"name":"데모스테네스","type":"person","attrs":{"role":"commander"},"points":[18],"desc":"아테네 최대의 변론가 중 한 명과 동성 관계를 맺은 자. 카이사레아 방어 지휘관으로서 뛰어났으나 결국 함락되었다."}
+{"name":"암미아누스 마르켈리누스","type":"person","attrs":{"role":"historian"},"points":[18],"desc":"저명한 역사가. 페르시아 군의 진격의 야만성을 기록했다."}
+{"name":"오다이나투스","type":"person","attrs":{"role":"senator","origin":"팔미라","title":"원로원 의원"},"points":[18],"desc":"팔미라의 시리아인 원로원 의원으로 거부였다. 마리아 여러 명을 납치하여 샤푸르 왕을 격퇴했고 로마 제국을 구했다."}
+{"name":"헤라클리우스","type":"person","aliases":["Heraclius"],"attrs":{"role":"emperor","reign":"610-641"},"points":[18],"desc":"로마 황제. 7세기에 페르시아로부터 영토를 탈환했다."}
+{"name":"페르시아 군","type":"group","points":[18],"desc":"사산조 페르시아의 군대. 압도적 우위로 로마 군을 격파하고 여러 도시를 약탈했다."}
+{"name":"로마 군","type":"group","points":[18],"desc":"로마 제국의 군대. 에데사 전투에서 완패했다."}
+{"name":"사산조 페르시아","type":"period","attrs":{"dynasty":"Sassanid"},"points":[18],"desc":"아르다시르가 건국한 페르시아 신왕조."}
+{"name":"아르메니아","type":"place","points":[18],"desc":"로마와 동맹 관계였던 나라. 코스로에스 암살 후 페르시아에 정복당했고 27년간 약탈을 당했다."}
+{"name":"소아시아","type":"place","points":[18],"desc":"발레리아누스가 진군하던 지역."}
+{"name":"유프라테스 강","type":"place","points":[18],"desc":"로마와 페르시아의 경계 지역. 많은 로마 도시들이 파괴되고 약탈당했다."}
+{"name":"에데사","type":"place","attrs":{"modern":"터키 우르파"},"points":[18],"desc":"소아시아의 도시. 260년 발레리아누스가 페르시아 군에게 체포당한 장소."}
+{"name":"터키","type":"place","points":[18],"desc":"현대의 에데사 위치."}
+{"name":"안티오키아","type":"place","points":[18],"desc":"키리아데스의 고향이자 페르시아 군의 진격 목표지였던 도시."}
+{"name":"페르시아","type":"place","points":[18],"desc":"사산조 페르시아의 영토."}
+{"name":"카파도키아","type":"place","points":[18],"desc":"로마의 속주. 40만 인구의 수도 카이사레아를 가진 지역."}
+{"name":"카이사레아","type":"place","attrs":{"modern":"카이세리"},"points":[18],"desc":"카파도키아의 수도. 데모스테네스의 지휘로 방어했으나 한 의사의 배신으로 함락되었다."}
+{"name":"에메사","type":"place","attrs":{"modern":"시리아 힘스"},"points":[18],"desc":"페르시아 군의 침략을 신전 대신관과 투석기로 일시적으로 방어한 도시."}
+{"name":"시리아","type":"place","points":[18],"desc":"페르시아 군이 진격한 지역. 팔미라는 이곳에 위치했다."}
+{"name":"팔미라","type":"place","attrs":{"modern":"시리아"},"points":[18],"desc":"오다이나투스가 거주했던 도시."}
+{"name":"에데사의 전투","type":"event","attrs":{"year":"260"},"points":[18],"desc":"에데사에서 벌어진 로마와 페르시아의 전투. 로마 황제 발레리아누스가 체포당했다."}
+{"name":"아르메니아 정복","type":"event","points":[18],"desc":"샤푸르가 코스로에스를 암살하고 아르메니아를 정복한 사건."}

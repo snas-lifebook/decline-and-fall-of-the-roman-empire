@@ -1,0 +1,175 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "모이시아 — 상 모이시아 (Moesia Superior)",
+    "description": "[대략] 서쪽 절반, 현 세르비아 동남부. 하 모이시아와 달리 다키아·트라키아 서편에 붙어 내륙 산악에 가깝다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       19.6,
+       44.9
+      ],
+      [
+       21.5,
+       44.9
+      ],
+      [
+       22.6,
+       44.3
+      ],
+      [
+       22.3,
+       43.0
+      ],
+      [
+       21.3,
+       42.3
+      ],
+      [
+       20.0,
+       42.6
+      ],
+      [
+       19.6,
+       43.6
+      ],
+      [
+       19.6,
+       44.9
+      ],
+      [
+       19.6,
+       44.9
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "모이시아 — 하 모이시아 (Moesia Inferior)",
+    "description": "[대략] 동쪽 절반, 현 불가리아 북부~도나우 삼각주. 트라키아(남쪽 산맥 너머)와 달리 도나우 방위선에 바로 접해 고트족 침입의 최전선이었다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       22.6,
+       44.3
+      ],
+      [
+       25.9,
+       44.2
+      ],
+      [
+       28.6,
+       45.2
+      ],
+      [
+       27.9,
+       43.2
+      ],
+      [
+       26.0,
+       42.7
+      ],
+      [
+       23.6,
+       42.9
+      ],
+      [
+       22.6,
+       44.3
+      ],
+      [
+       22.6,
+       44.3
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "신기두눔",
+    "description": "[군사 거점] 3세기 — 상 모이시아 서편의 도나우 요새 도시(현 베오그라드).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.46,
+     44.8
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "나이수스",
+    "description": "[주요 도시] 3세기 — 상 모이시아 내륙의 요충지(현 니시).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.9,
+     43.32
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마르키아노폴리스",
+    "description": "[주요 도시] 3세기 — 하 모이시아의 대도시. 고트족 침입의 주요 표적이었다.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.57,
+     43.22
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "토미스",
+    "description": "[항구도시] 3세기 — 하 모이시아 흑해 연안의 항구(현 콘스탄차).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.65,
+     44.18
+    ]
+   }
+  }
+ ]
+}

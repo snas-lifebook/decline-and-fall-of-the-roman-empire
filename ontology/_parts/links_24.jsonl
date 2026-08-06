@@ -1,0 +1,13 @@
+{"from":"테오도시우스","from_type":"person","to":"고트족","to_type":"group","rel":"allied_with","point":24}
+{"from":"알라리크","from_type":"person","to":"고트족","to_type":"group","rel":"ruled","point":24}
+{"from":"알라리크","from_type":"person","to":"로마","to_type":"place","rel":"opposed","point":24}
+{"from":"고트족","from_type":"group","to":"로마","to_type":"place","rel":"opposed","point":24}
+{"from":"스틸리코","from_type":"person","to":"알라리크","to_type":"person","rel":"opposed","point":24}
+{"from":"루피누스","from_type":"person","to":"아르카디우스","to_type":"person","rel":"participated_in","point":24}
+{"from":"에우트로피우스","from_type":"person","to":"아르카디우스","to_type":"person","rel":"participated_in","point":24}
+{"from":"에우독시아","from_type":"person","to":"아르카디우스","to_type":"person","rel":"participated_in","point":24}
+{"from":"안테미우스","from_type":"person","to":"아르카디우스","to_type":"person","rel":"participated_in","point":24}
+{"from":"알라리크","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"opposed","point":24}
+{"from":"알라리크","from_type":"person","to":"그리스","to_type":"place","rel":"opposed","point":24}
+{"from":"알라리크","from_type":"person","to":"에피루스","to_type":"place","rel":"opposed","point":24}
+{"from":"로마 시 함락","from_type":"event","to":"로마","to_type":"place","rel":"occurred_at","point":24}

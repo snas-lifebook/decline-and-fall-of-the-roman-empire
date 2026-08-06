@@ -1,0 +1,191 @@
+{
+ "nodes": [
+  {
+   "id": "12ed6f219a8d991c",
+   "type": "group",
+   "x": -1020,
+   "y": -120,
+   "width": 1730,
+   "height": 1011,
+   "label": "족보 유스티니아누스 계열",
+   "color": "4"
+  },
+  {
+   "id": "c3c5f07b9949318b",
+   "type": "text",
+   "x": -780,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-1  **[[아카키우스]]**",
+   "color": "5"
+  },
+  {
+   "id": "85e1a364467d4013",
+   "type": "text",
+   "x": -390,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-2  **[[유스티누스]]**\n450~527\n재위 518~527",
+   "color": "5"
+  },
+  {
+   "id": "113372c1e1f03c52",
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-3  비길란티아*"
+  },
+  {
+   "id": "368a95b974b51784",
+   "type": "text",
+   "x": 390,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-4  **[[황비 루피키나]]**",
+   "color": "6"
+  },
+  {
+   "id": "5b0e8a14681df975",
+   "type": "text",
+   "x": -390,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-1  **[[테오도라]]**\n500~548\n재위 527~548",
+   "color": "6"
+  },
+  {
+   "id": "567f8a394e392b37",
+   "type": "text",
+   "x": 0,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-2  **[[유스티니아누스]]**\n482~565\n재위 527~565",
+   "color": "5"
+  },
+  {
+   "id": "46ead20bb1b90138",
+   "type": "text",
+   "x": -930,
+   "y": 18,
+   "width": 96,
+   "height": 52,
+   "text": "**I**\n1세대"
+  },
+  {
+   "id": "93f7ec8b72428c62",
+   "type": "text",
+   "x": -930,
+   "y": 442,
+   "width": 96,
+   "height": 52,
+   "text": "**II**\n2세대"
+  },
+  {
+   "id": "7492130b1764b265",
+   "type": "text",
+   "x": 69,
+   "y": 243,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "78c4dfdf80fad1a2",
+   "type": "text",
+   "x": -126,
+   "y": 667,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "1e3646770c2af509",
+   "type": "text",
+   "x": 710,
+   "y": 0,
+   "width": 330,
+   "height": 330,
+   "text": "**범례** — 임상 계보도 표기\n\n`II-3` = 세대-개인 번호. 사람을 지목할 때 쓴다\n청록 = 남 · 보라 = 여 · 무색 = 미상\n칸 안 둘째 줄 = 생몰년. '약'이 붙으면 추정이다\n흐린 선·이름 뒤 별표 = 이 책 본문에 없는 맥락 보강\n남자를 왼쪽, 여자를 오른쪽에 세운다\n\n노랑 칸 = 혼인. 한 사람이 여러 번이면 차수를 적는다\n노랑 상자 = 그 혼인에서 난 형제\n선 위의 말 = 관계. 남편·아내·아들·딸·계자\n계자(양자) = 혈연이 아닌 계승. 한국 족보의 系子\n주황 선 = 제위 계승. 혈연과 다른 축이다"
+  }
+ ],
+ "edges": [
+  {
+   "id": "c7c6336489519a7b",
+   "fromNode": "85e1a364467d4013",
+   "fromSide": "bottom",
+   "toNode": "7492130b1764b265",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "308253e93d7c232c",
+   "fromNode": "368a95b974b51784",
+   "fromSide": "bottom",
+   "toNode": "7492130b1764b265",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "6d889a6520bee562",
+   "fromNode": "567f8a394e392b37",
+   "fromSide": "bottom",
+   "toNode": "78c4dfdf80fad1a2",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "4aefee5a50397181",
+   "fromNode": "5b0e8a14681df975",
+   "fromSide": "bottom",
+   "toNode": "78c4dfdf80fad1a2",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "c41118d207920fa5",
+   "fromNode": "113372c1e1f03c52",
+   "fromSide": "bottom",
+   "toNode": "567f8a394e392b37",
+   "toSide": "top",
+   "label": "계자(외숙모)",
+   "color": "#52525b"
+  },
+  {
+   "id": "217d9009e37abba2",
+   "fromNode": "85e1a364467d4013",
+   "fromSide": "bottom",
+   "toNode": "567f8a394e392b37",
+   "toSide": "top",
+   "label": "계자(외숙모)"
+  },
+  {
+   "id": "b9f28eea53304ae8",
+   "fromNode": "368a95b974b51784",
+   "fromSide": "bottom",
+   "toNode": "567f8a394e392b37",
+   "toSide": "top",
+   "label": "계자(외숙모)"
+  },
+  {
+   "id": "d2bd32e249849fd3",
+   "fromNode": "c3c5f07b9949318b",
+   "fromSide": "bottom",
+   "toNode": "5b0e8a14681df975",
+   "toSide": "top",
+   "label": "아버지"
+  }
+ ]
+}

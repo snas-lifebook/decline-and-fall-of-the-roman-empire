@@ -1,0 +1,48 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헤르니키인 — 헤르니키 영역 (사코 계곡, 기원전 5~4세기)",
+    "description": "[대략] 기원전 5~4세기, 기원전 306년 병합 이전. 아나니아·페렌티눔 등 소도시가 있던 좁은 산간 계곡으로, 소부족이라 경계 자체가 사료상 불확실하다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.0,
+       41.85
+      ],
+      [
+       13.3,
+       41.75
+      ],
+      [
+       13.35,
+       41.6
+      ],
+      [
+       13.05,
+       41.55
+      ],
+      [
+       12.9,
+       41.7
+      ],
+      [
+       13.0,
+       41.85
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "테우토니족",
+  "subject": "테우토니족",
+  "color": "#37474F",
+  "period": "기원전 2세기 (기원전 120~102년)",
+  "summary": "킴브리족과 함께 북방에서 남하해 갈리아와 이탈리아를 위협한 부족. 기원전 102년 아콰이 섹스티아이 전투에서 마리우스에게 궤멸되었다. 원거주지는 사료가 소략해 유틀란트 반도로 보는 설이 유력하나 확정적이지 않다.",
+  "territory": [
+    {
+      "part": "유틀란트 원거주지 (추정)",
+      "note": "기원전 120년 이전. 스트라본 등 후대 지리가들이 킴브리족과 함께 언급한 지역으로 고고학적 확증은 없다.",
+      "confidence": "low",
+      "ring": [
+        [8.5, 57.5],
+        [10.5, 57.3],
+        [10.8, 55.0],
+        [9.0, 54.8],
+        [8.3, 56.0]
+      ]
+    },
+    {
+      "part": "갈리아 이동·약탈로",
+      "note": "기원전 113~102년. 킴브리족과 연합해 갈리아를 거쳐 이탈리아로 남하한 경로. 기원전 102년 아콰이 섹스티아이(현 엑상프로방스)에서 궤멸되며 소멸.",
+      "confidence": "medium",
+      "ring": [
+        [3.0, 47.5],
+        [6.0, 47.0],
+        [6.0, 44.0],
+        [4.5, 43.3],
+        [2.5, 44.5]
+      ]
+    }
+  ],
+  "cities": [],
+  "sources": [
+    "Plutarch, Life of Marius",
+    "Wikipedia: Teutons (https://en.wikipedia.org/wiki/Teutons)",
+    "Wikipedia: Battle of Aquae Sextiae (https://en.wikipedia.org/wiki/Battle_of_Aquae_Sextiae)"
+  ]
+}

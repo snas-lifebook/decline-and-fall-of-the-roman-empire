@@ -1,0 +1,29 @@
+{"name":"디오클레티아누스","type":"person","aliases":["Diocletian"],"attrs":{"role":"emperor","reign":"284-305","origin":"해방노예 출신"},"points":[20],"desc":"로마 제국을 전제군주 체제로 이끈 황제. 제국을 4분할하여 통치하는 시스템을 구축했으며 50년간의 내분을 종식시켰다."}
+{"name":"누메리아누스","type":"person","aliases":[],"attrs":{"role":"emperor","reign":"283-284"},"points":[20],"desc":"디오클레티아누스의 전임 황제로, 그의 죽음 후 디오클레티아누스가 제위에 올랐다."}
+{"name":"카루스","type":"person","aliases":["Carus"],"attrs":{"role":"emperor","reign":"282-283"},"points":[20],"desc":"디오클레티아누스의 정적으로 유능한 사람들을 요직에 배속시켰던 황제."}
+{"name":"카리누스","type":"person","aliases":["Carinus"],"attrs":{"role":"emperor","reign":"283-285"},"points":[20],"desc":"카루스 황제의 아들로, 사람의 재능을 알아보는 데 뛰어난 안목을 지니고 있었던 황제."}
+{"name":"마르쿠스","type":"person","aliases":["Marcus Aurelius"],"attrs":{"role":"emperor"},"points":[20],"desc":"디오클레티아누스가 따르고자 했던 위대한 황제 중 한 명으로, 인도주의적 통치를 실천했다."}
+{"name":"안토니누스","type":"person","aliases":["Antoninus"],"attrs":{"role":"emperor"},"points":[20],"desc":"디오클레티아누스가 따르고자 했던 황제로, 공동 통치자를 내세웠던 인물이었다."}
+{"name":"아우구스투스","type":"person","aliases":["Augustus"],"attrs":{"role":"emperor"},"points":[20],"desc":"카이사르 사후 공화제를 개혁하여 초대 황제가 된 인물. 디오클레티아누스와 같이 새로운 제국의 창건자로 평가된다."}
+{"name":"아리스토불루스","type":"person","aliases":[],"attrs":{"role":"고관","affiliation":"카루스 황제"},"points":[20],"desc":"카루스 황제의 오른팔이던 인물로, 디오클레티아누스에 의해 측근으로 영입되었다."}
+{"name":"막시미아누스","type":"person","aliases":["Maximian"],"attrs":{"role":"요제","reign":"285-305","origin":"농부 출신의 군인"},"points":[20],"desc":"디오클레티아누스의 공동 통치자로 서방을 담당했으며, 글을 읽지 못했으나 국무에 충실했다."}
+{"name":"갈레리우스","type":"person","aliases":["Galerius"],"attrs":{"role":"부제","reign":"305-311","origin":"농부 출신의 군인"},"points":[20],"desc":"디오클레티아누스의 부제로 일리리쿰의 모든 속주를 방위했다. 야만족의 침략을 허용한 적이 없었다."}
+{"name":"콘스탄티우스 1세","type":"person","aliases":["Constantius I"],"attrs":{"role":"부제","personality":"온화하고 자상한"},"points":[20],"desc":"디오클레티아누스의 부제로 갈리아, 에스파냐, 브리타니아를 방위했다. 랑그르 전투에서 위기에 처했으나 새로운 지휘 체계에 의해 구원받았다."}
+{"name":"로마 제국","type":"place","aliases":[],"attrs":{},"points":[20],"desc":"디오클레티아누스 황제가 4분할 통치로 안정을 되찾은 거대한 제국."}
+{"name":"로마","type":"place","aliases":["Rome"],"attrs":{},"points":[20],"desc":"영원의 도시이자 로마 제국의 중심. 디오클레티아누스는 로마에 거처를 마련하지 않았다."}
+{"name":"갈리아","type":"place","aliases":["Gaul"],"attrs":{"region":"서방"},"points":[20],"desc":"로마 제국의 서방 속주. 콘스탄티우스 1세가 방위했으며, 야만족의 침략을 받아 랑그르에서 접전을 벌였다."}
+{"name":"에스파냐","type":"place","aliases":["Spain"],"attrs":{"region":"서방"},"points":[20],"desc":"로마 제국의 서방 속주. 콘스탄티우스 1세가 방위 책임을 맡았다."}
+{"name":"브리타니아","type":"place","aliases":["Britain"],"attrs":{"region":"서방"},"points":[20],"desc":"로마 제국의 서방 속주. 콘스탄티우스 1세가 방위 책임을 맡았다."}
+{"name":"일리리쿰","type":"place","aliases":["Illyricum"],"attrs":{"region":"동방"},"points":[20],"desc":"로마 제국의 동방 속주. 갈레리우스가 방위 책임을 맡았다."}
+{"name":"트라키아","type":"place","aliases":["Thrace"],"attrs":{"region":"동방"},"points":[20],"desc":"로마 제국의 동방 속주. 디오클레티아누스가 통치했다."}
+{"name":"이집트","type":"place","aliases":["Egypt"],"attrs":{"region":"동방"},"points":[20],"desc":"로마 제국의 동방 속주. 디오클레티아누스가 통치했다."}
+{"name":"아시아","type":"place","aliases":[],"attrs":{"region":"동방"},"points":[20],"desc":"로마 제국의 동방 속주. 디오클레티아누스가 통치한 풍요로운 지역."}
+{"name":"이탈리아","type":"place","aliases":["Italy"],"attrs":{"region":"서방"},"points":[20],"desc":"로마 제국의 서방 속주. 막시미아누스가 통치했으며, 주민들이 세금 부과에 불만을 나타냈다."}
+{"name":"아프리카","type":"place","aliases":["Africa"],"attrs":{"region":"서방"},"points":[20],"desc":"로마 제국의 서방 속주. 막시미아누스가 통치했다."}
+{"name":"밀라노","type":"place","aliases":[],"attrs":{"region":"서방"},"points":[20],"desc":"로마를 대신하여 서부의 새로운 정치 중심지가 된 도시."}
+{"name":"토리노","type":"place","aliases":[],"attrs":{"region":"서방"},"points":[20],"desc":"로마를 대신하여 서부의 새로운 정치 중심지가 된 도시."}
+{"name":"테살로니카","type":"place","aliases":[],"attrs":{"region":"동방"},"points":[20],"desc":"로마를 대신하여 동부의 새로운 정치 중심지가 된 도시."}
+{"name":"니코메디아","type":"place","aliases":["Nicomedia"],"attrs":{"region":"동방"},"points":[20],"desc":"지금의 터키 이즈미트. 로마를 대신하여 동부의 새로운 정치 중심지가 된 도시."}
+{"name":"페르시아","type":"place","aliases":["Persia"],"attrs":{"region":"동방"},"points":[20],"desc":"로마 제국의 동방 적국. 4분할 통치로 인해 페르시아 방면이 안정되었다."}
+{"name":"랑그르","type":"place","aliases":[],"attrs":{"region":"프랑스 동부"},"points":[20],"desc":"콘스탄티우스 1세가 야만족과 접전을 벌인 프랑스 동부의 도시."}
+{"name":"4분할 통치","type":"institution","aliases":[],"attrs":{},"points":[20],"desc":"디오클레티아누스가 구축한 시스템으로, 제국을 네 명의 황제(정제)가 연대하여 통치하는 체제."}

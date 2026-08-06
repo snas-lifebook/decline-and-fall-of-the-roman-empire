@@ -1,0 +1,191 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시리아 — 북부 해안·내륙 핵심부 (안티오키아-알레포-에메사)",
+    "description": "[확실] 속주 성립기(기원전 64) 이래 안정적으로 유지된 중심부. 오론테스강 유역과 지중해 연안",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.15,
+       36.75
+      ],
+      [
+       37.0,
+       37.15
+      ],
+      [
+       38.0,
+       36.6
+      ],
+      [
+       37.3,
+       35.7
+      ],
+      [
+       36.7,
+       34.9
+      ],
+      [
+       35.95,
+       34.55
+      ],
+      [
+       35.85,
+       35.3
+      ],
+      [
+       36.0,
+       36.1
+      ],
+      [
+       36.15,
+       36.75
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시리아 — 동부 사막 접경: 팔미라·다마스쿠스 방면",
+    "description": "[대략] 유목민과의 접경지대. 팔미라는 하드리아누스기 자유도시로 반자치 상태였고, 다마스쿠스 남쪽은 나바테아·데카폴리스 세력권과 경계가 유동적이었다",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       37.3,
+       35.7
+      ],
+      [
+       38.5,
+       35.0
+      ],
+      [
+       39.0,
+       34.0
+      ],
+      [
+       38.0,
+       33.2
+      ],
+      [
+       36.7,
+       33.0
+      ],
+      [
+       36.0,
+       33.5
+      ],
+      [
+       36.7,
+       34.9
+      ],
+      [
+       37.3,
+       35.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "안티오키아",
+    "description": "[속주 수도] 기원전 64 — 폼페이우스가 셀레우코스 왕조를 접수하며 속주로 편입",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.16,
+     36.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "다마스쿠스",
+    "description": "[주요도시] 기원전 64 — 시리아 속주에 편입되었으나 나바테아·데카폴리스와 세력권이 겹침",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.28,
+     33.51
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "팔미라",
+    "description": "[사막 오아시스 도시국가] 서기 129 — 하드리아누스가 자유도시로 인정, 3세기 제노비아의 팔미라 제국 반란(270~273)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.27,
+     34.55
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "제우그마",
+    "description": "[유프라테스 도하 요새] 기원전 64 — 파르티아·페르시아 방면 동방 국경 관문",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.88,
+     37.06
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아파메아",
+    "description": "[군단 주둔지] 기원전 64 — 시리아 속주 군사 거점, 오론테스강변",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.4,
+     35.42
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테우토니족 — 유틀란트 원거주지 (추정)",
+    "description": "[불확실] 기원전 120년 이전. 스트라본 등 후대 지리가들이 킴브리족과 함께 언급한 지역으로 고고학적 확증은 없다.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.5,
+       57.5
+      ],
+      [
+       10.5,
+       57.3
+      ],
+      [
+       10.8,
+       55.0
+      ],
+      [
+       9.0,
+       54.8
+      ],
+      [
+       8.3,
+       56.0
+      ],
+      [
+       8.5,
+       57.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테우토니족 — 갈리아 이동·약탈로",
+    "description": "[대략] 기원전 113~102년. 킴브리족과 연합해 갈리아를 거쳐 이탈리아로 남하한 경로. 기원전 102년 아콰이 섹스티아이(현 엑상프로방스)에서 궤멸되며 소멸.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       3.0,
+       47.5
+      ],
+      [
+       6.0,
+       47.0
+      ],
+      [
+       6.0,
+       44.0
+      ],
+      [
+       4.5,
+       43.3
+      ],
+      [
+       2.5,
+       44.5
+      ],
+      [
+       3.0,
+       47.5
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시칠리아 — 시칠리아 본섬",
+    "description": "[확실] 지중해 최대 섬. 삼각형 모양으로 카르타고와 로마 사이의 다리 역할을 했다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.4,
+       38.2
+      ],
+      [
+       13.2,
+       38.25
+      ],
+      [
+       14.3,
+       38.15
+      ],
+      [
+       15.2,
+       38.25
+      ],
+      [
+       15.65,
+       38.05
+      ],
+      [
+       15.55,
+       37.5
+      ],
+      [
+       15.1,
+       36.9
+      ],
+      [
+       14.3,
+       36.7
+      ],
+      [
+       13.4,
+       37.1
+      ],
+      [
+       12.5,
+       37.8
+      ],
+      [
+       12.2,
+       38.0
+      ],
+      [
+       12.4,
+       38.2
+      ],
+      [
+       12.4,
+       38.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시라쿠사",
+    "description": "[주요 도시] 기원전 212 — 마르켈루스가 함락, 아르키메데스 사망",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.29,
+     37.07
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메시나",
+    "description": "[주요 도시]  — 제1차 포에니 전쟁의 발단이 된 도시, 이탈리아 본토와 마주보는 관문",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.55,
+     38.19
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "팔레르모",
+    "description": "[주요 도시]  — 카르타고 세력권이던 섬 서부의 중심 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.36,
+     38.12
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아그리젠토 시",
+    "description": "[도시] 기원전 262 — 제1차 포에니 전쟁 초기 로마-카르타고 공방의 무대",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.59,
+     37.31
+    ]
+   }
+  }
+ ]
+}

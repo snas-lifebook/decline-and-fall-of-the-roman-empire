@@ -1,0 +1,48 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아이두이족 — 아이두이족 영역 (부르고뉴, 기원전 1세기)",
+    "description": "[확실] 기원전 1세기, 손강과 루아르강 상류 사이 부르고뉴 일대. 중심지는 비브락테(현 몽베브레).",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       3.5,
+       47.5
+      ],
+      [
+       4.8,
+       47.3
+      ],
+      [
+       4.9,
+       46.3
+      ],
+      [
+       3.8,
+       46.2
+      ],
+      [
+       3.0,
+       46.8
+      ],
+      [
+       3.5,
+       47.5
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{"from":"클라우디우스 풀케르","from_type":"person","to":"메시나 전투","to_type":"event","rel":"participated_in","point":2}
+{"from":"한노","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":2}
+{"from":"히에론","from_type":"person","to":"시라쿠사","to_type":"place","rel":"ruled","point":2}
+{"from":"히에론","from_type":"person","to":"로마","to_type":"place","rel":"allied_with","point":2}
+{"from":"하밀카르 바르카스","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":2}
+{"from":"하밀카르 바르카스","from_type":"person","to":"로마","to_type":"place","rel":"opposed","point":2}
+{"from":"레굴루스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":2}
+{"from":"크산티포스","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":2}
+{"from":"하스드루발","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":2}
+{"from":"하스드루발","from_type":"person","to":"하밀카르 바르카스","to_type":"person","rel":"succeeded","point":2}
+{"from":"제1차 포에니 전쟁","from_type":"event","to":"로마","to_type":"place","rel":"occurred_at","point":2}
+{"from":"제1차 포에니 전쟁","from_type":"event","to":"카르타고","to_type":"place","rel":"occurred_at","point":2}
+{"from":"메시나 전투","from_type":"event","to":"메시나","to_type":"place","rel":"occurred_at","point":2}
+{"from":"로마","from_type":"place","to":"시칠리아 섬","to_type":"place","rel":"ruled","point":2}
+{"from":"로마","from_type":"place","to":"사르데냐 섬","to_type":"place","rel":"ruled","point":2}
+{"from":"로마","from_type":"place","to":"코르시카 섬","to_type":"place","rel":"ruled","point":2}
+{"from":"로마","from_type":"place","to":"갈리아키살피나","to_type":"place","rel":"ruled","point":2}
+{"from":"카르타고","from_type":"place","to":"마메르티니","to_type":"group","rel":"opposed","point":2}
+{"from":"마메르티니","from_type":"group","to":"메시나","to_type":"place","rel":"ruled","point":2}
+{"from":"마메르티니","from_type":"group","to":"로마","to_type":"place","rel":"allied_with","point":2}
+{"from":"하밀카르 바르카스","from_type":"person","to":"에스파냐","to_type":"place","rel":"ruled","point":2}
+{"from":"하스드루발","from_type":"person","to":"카르타헤나","to_type":"place","rel":"ruled","point":2}

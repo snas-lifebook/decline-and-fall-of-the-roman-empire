@@ -1,0 +1,127 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에브로 강",
+    "period": "기원전 226~218"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -4.4,
+      43.14
+     ],
+     [
+      -0.88,
+      41.65
+     ],
+     [
+      -1.0,
+      40.72
+     ],
+     [
+      0.52,
+      40.81
+     ],
+     [
+      0.85,
+      40.72
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에브로 강 발원지(칸타브리아)",
+    "year": null,
+    "description": "[대략] ? — 칸타브리아 산맥에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.4,
+     43.14
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사라고사",
+    "year": null,
+    "description": "[확실] ? — 훗날 아우구스투스가 카이사르아우구스타(현 사라고사)를 세운 유역 중심 도시",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.88,
+     41.65
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에브로 강",
+    "year": null,
+    "description": "[대략] ? — 기원전 226년 로마와 카르타고가 맺은 에브로 조약의 경계선. 한니발이 기원전 218년 이 선을 넘어 남하하며 제2차 포에니 전쟁의 명분이 됐다",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.0,
+     40.72
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "토르토사",
+    "year": null,
+    "description": "[대략] ? — 하류의 주요 도시(고대 덜토숨)",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.52,
+     40.81
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "지중해 하구(델타 델 에브레)",
+    "year": null,
+    "description": "[대략] ? — 지중해로 흘러드는 하구",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.85,
+     40.72
+    ]
+   }
+  }
+ ]
+}

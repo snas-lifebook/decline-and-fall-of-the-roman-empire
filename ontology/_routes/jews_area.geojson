@@ -1,0 +1,200 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대인 — 유다·갈릴리 본향",
+    "description": "[확실] 영토가 아니라 분포의 중심점. 본향인 유다·갈릴리 일대. 서기 70년 예루살렘 함락, 135년 바르 코크바 반란 진압 이후에도 인구 상당수가 잔류했다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.9,
+       33.3
+      ],
+      [
+       35.6,
+       33.3
+      ],
+      [
+       35.6,
+       31.2
+      ],
+      [
+       34.9,
+       31.2
+      ],
+      [
+       34.9,
+       33.3
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대인 — 이집트(알렉산드리아) 디아스포라",
+    "description": "[불확실] 영토가 아니라 분포. 기원전 3세기부터 형성되어 필론의 시대(서기 1세기)에 절정을 이룬 지중해 최대급 디아스포라 공동체. 정확한 거주 경계가 아니라 도시 중심의 근사 표시다.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       29.7,
+       31.4
+      ],
+      [
+       30.2,
+       31.4
+      ],
+      [
+       30.2,
+       30.9
+      ],
+      [
+       29.7,
+       30.9
+      ],
+      [
+       29.7,
+       31.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대인 — 바빌로니아 디아스포라",
+    "description": "[불확실] 영토가 아니라 분포. 기원전 6세기 바빌론 유수로 형성되어 이후에도 존속, 훗날 바빌로니아 탈무드를 낳은 공동체의 근거지. 메소포타미아 남부 일대의 근사 표시다.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       43.5,
+       33.5
+      ],
+      [
+       45.0,
+       33.5
+      ],
+      [
+       45.0,
+       32.0
+      ],
+      [
+       43.5,
+       32.0
+      ],
+      [
+       43.5,
+       33.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대인 — 로마·이탈리아 디아스포라",
+    "description": "[불확실] 영토가 아니라 분포. 기원전 2세기 말부터 기록되는 로마시 유대인 공동체. 제국 수도라는 상징성 때문에 별도 거점으로 표시했다.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.0,
+       41.5
+      ],
+      [
+       13.0,
+       41.5
+      ],
+      [
+       13.0,
+       40.8
+      ],
+      [
+       12.0,
+       40.8
+      ],
+      [
+       12.0,
+       41.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대인 — 소아시아 디아스포라",
+    "description": "[불확실] 영토가 아니라 분포. 사르디스·에페소스 등 소아시아 서부 도시들에 형성된 공동체. 사도행전·요세푸스 등에 반복 언급되는 거점이다.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       26.5,
+       37.5
+      ],
+      [
+       29.5,
+       37.5
+      ],
+      [
+       29.5,
+       38.5
+      ],
+      [
+       26.5,
+       38.5
+      ],
+      [
+       26.5,
+       37.5
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{"name":"로마","lat":41.8917,"lon":12.4862,"ancient":"Roma","modern":"로마, 이탈리아","kind":"city","confidence":"high","source":"Pleiades 423025"}
+{"name":"시리아","lat":36.2,"lon":36.15,"ancient":"Syria","modern":"시리아","kind":"region","confidence":"medium","source":"Roman Syria province centroid"}
+{"name":"알렉산드리아","lat":31.1982,"lon":29.9079,"ancient":"Alexandria","modern":"알렉산드리아, 이집트","kind":"city","confidence":"high","source":"Pleiades"}
+{"name":"라벤나","lat":44.4157,"lon":12.1966,"ancient":"Ravenna","modern":"라벤나, 이탈리아","kind":"city","confidence":"high","source":"Pleiades 393480"}
+{"name":"메시나","lat":38.1923,"lon":15.5566,"ancient":"Messana","modern":"메시나, 시칠리아 이탈리아","kind":"city","confidence":"high","source":"Trismegistos/Pleiades"}
+{"name":"게르마니아","lat":51,"lon":10,"ancient":"Germania","modern":"독일 지역","kind":"region","confidence":"low","source":"Pleiades 991337"}
+{"name":"인도","lat":20.6367,"lon":79.5333,"ancient":"India","modern":"인도","kind":"region","confidence":"medium","source":"Pleiades 50004"}
+{"name":"파로스 섬","lat":31.213,"lon":29.8856,"ancient":"Pharos","modern":"파로스, 이집트","kind":"island","confidence":"high","source":"Alexandria ancient sources"}
+{"name":"님","lat":43.8384,"lon":4.3604,"ancient":"Nemausus","modern":"님, 프랑스","kind":"city","confidence":"high","source":"Nemausus/Nîmes coordinates"}
+{"name":"에메사","lat":34.724,"lon":36.714,"ancient":"Emesa","modern":"홈스, 시리아","kind":"city","confidence":"high","source":"Wikipedia/Trismegistos"}
+{"name":"본 곶","lat":50.72,"lon":1.57,"ancient":"Bononia","modern":"불로뉴쉬르메르, 프랑스","kind":"cape","confidence":"medium","source":"Gesoriacum/Bononia"}
+{"name":"성 로마누스 교회","lat":41.008,"lon":28.980,"ancient":"","modern":"콘스탄티노플, 현 이스탄불","kind":"building","confidence":"low","source":"미확인"}
+{"name":"아스완 제1폭포","lat":24.078,"lon":32.878,"ancient":"Cataractae","modern":"아스완, 이집트","kind":"river","confidence":"medium","source":"Aswan/Syene coordinates"}
+{"name":"테베","lat":25.684,"lon":32.641,"ancient":"Thebes","modern":"룩소르, 이집트","kind":"city","confidence":"high","source":"Pleiades/topostext"}
+{"name":"크레타 섬","lat":37.5,"lon":22.5,"ancient":"Creta","modern":"크레타, 그리스","kind":"island","confidence":"medium","source":"Pleiades 991373"}
+{"name":"팔레르모","lat":38.118,"lon":13.363,"ancient":"Panormus","modern":"팔레르모, 시칠리아 이탈리아","kind":"city","confidence":"high","source":"Wikipedia/Pleiades"}
+{"name":"필리피","lat":41.0251,"lon":24.3387,"ancient":"Philippoi","modern":"필리피, 그리스","kind":"city","confidence":"high","source":"UNESCO/Britannica"}
+{"name":"유대","lat":31.699,"lon":35.306,"ancient":"Judaea","modern":"유대, 현 이스라엘/팔레스타인","kind":"region","confidence":"medium","source":"Wikipedia"}
+{"name":"중동","lat":33,"lon":36,"ancient":"","modern":"중동 지역","kind":"region","confidence":"low","source":"미확인"}
+{"name":"러시아","lat":48,"lon":35,"ancient":"","modern":"러시아 지역","kind":"region","confidence":"low","source":"미확인"}

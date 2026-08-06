@@ -1,0 +1,171 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "폼페이우스의 정복과 몰락",
+    "period": "기원전 67~48"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      34.01,
+      37.01
+     ],
+     [
+      35.2256,
+      31.7789
+     ],
+     [
+      17.933,
+      40.633
+     ],
+     [
+      20.4,
+      39.4
+     ],
+     [
+      22.3833,
+      39.3
+     ],
+     [
+      22.4167,
+      39.6417
+     ],
+     [
+      29.9079,
+      31.1982
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "킬리키아",
+    "year": -67,
+    "description": "[대략] 기원전 67 — 지중해 해적 소탕 함대의 지휘권(육해 전군 장악)을 요구해 얻어낸 뒤 해적의 본거지였던 킬리키아 일대를 평정",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.01,
+     37.01
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예루살렘",
+    "year": -63,
+    "description": "[확실] 기원전 63 — 오리엔트 원정 중 예루살렘을 총공격해 점령, 유대인의 땅을 로마의 보호령으로 만듦",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2256,
+     31.7789
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브린디시",
+    "year": -49,
+    "description": "[확실] 기원전 49 — 카이사르가 루비콘 강을 건너 진격해 오자 많은 보수파 귀족과 함께 남단 브린디시로 도망침",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.933,
+     40.633
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에페이로스",
+    "year": -49,
+    "description": "[확실] 기원전 49 — 바다를 건너 에페이로스로 이동해 병력을 재정비",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.4,
+     39.4
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "파르살루스",
+    "year": -48,
+    "description": "[확실] 기원전 48 — 보병 5만·기병 7천의 대군으로 카이사르 군을 추격해 따라잡았으나 결전에서 대패, 병력 대부분을 잃음",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.3833,
+     39.3
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라리사",
+    "year": -48,
+    "description": "[확실] 기원전 48 — 무능한 귀족들을 이끌고 라리사를 향해 멀리 달아남",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.4167,
+     39.6417
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알렉산드리아",
+    "year": -48,
+    "description": "[확실] 기원전 48 — 해로로 아프리카에 이르기 위해 알렉산드리아 근교에 배를 대었으나, 카이사르에게 아첨하려는 이집트 재상 포티누스의 부하에게 등 뒤에서 찔려 살해됨",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.9079,
+     31.1982
+    ]
+   }
+  }
+ ]
+}

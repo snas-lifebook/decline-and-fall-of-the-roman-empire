@@ -1,0 +1,215 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이슬람 세력의 확산",
+    "period": "622~732"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      39.8262,
+      21.4225
+     ],
+     [
+      39.6067,
+      24.4744
+     ],
+     [
+      39.8262,
+      21.4225
+     ],
+     [
+      36.15,
+      36.2
+     ],
+     [
+      36.1572,
+      36.2066
+     ],
+     [
+      35.2256,
+      31.7789
+     ],
+     [
+      29.9079,
+      31.1982
+     ],
+     [
+      10.3233,
+      36.8528
+     ],
+     [
+      -4.7764,
+      37.8847
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메카",
+    "year": 610,
+    "description": "[확실] 610 — 마호메트가 이슬람 신앙 창시. 일신교 포교의 시작",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.8262,
+     21.4225
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메디나",
+    "year": 622,
+    "description": "[확실] 622 — 마호메트가 메카의 박해를 피해 메디나로 이주(히즈라·헤지라). 이슬람력 원년",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.6067,
+     24.4744
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메카",
+    "year": 630,
+    "description": "[확실] 630 — 마호메트가 1만 명의 군사를 이끌고 메카를 재점령. 카바 신전을 이슬람의 성지로 확립",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.8262,
+     21.4225
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시리아",
+    "year": 636,
+    "description": "[확실] 636 — 야르무크 전투(8월)에서 동로마 군대를 격파. 시리아 전역 정복 완료. 로마 제국의 주요 곡물 창고 확보",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.15,
+     36.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "안티오키아",
+    "year": 637,
+    "description": "[대략] 637 — 시리아 북부의 주요 도시 안티오키아 점령. 동로마의 오리엔트 거점 상실",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.1572,
+     36.2066
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예루살렘",
+    "year": 638,
+    "description": "[확실] 638 — 예루살렘 항복 및 정복. 기독교 성지를 이슬람 지배 하에 편입",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2256,
+     31.7789
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알렉산드리아",
+    "year": 642,
+    "description": "[확실] 642 — 이집트의 주요 항구도시 알렉산드리아 점령. 지중해 동부 해운권 확보, 동로마 해군력 약화",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.9079,
+     31.1982
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고",
+    "year": 698,
+    "description": "[확실] 698 — 북아프리카의 주요 거점 카르타고 정복. 지중해 남부 지배권 확보",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3233,
+     36.8528
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "코르도바",
+    "year": 713,
+    "description": "[확실] 713 — 이베리아 반도 남부의 주요 도시 코르도바 점령. 우마이야 왕조의 이베리아 지배 확립. 8세기 초 스페인 점령의 정점",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.7764,
+     37.8847
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "고트족의 제2차 이동기",
+  "period": "1세기~3세기 후반",
+  "summary": "고트족이 발트해 연안에서 흑해 북안으로 이동한 약 70년간의 광대한 이동. Wielbark 문화(1~2세기)에서 Chernyakhov 문화(3세기)로 변화하며 로마 제국의 경계를 위협.",
+  "waypoints": [
+    {
+      "place": "스칸디나비아 반도",
+      "lat": 63.0,
+      "lon": 14.0,
+      "year": null,
+      "event": "전승상의 발상지. 스웨덴 남단으로 추정되나 책이 직접 '단순히 전설로 전해지는 이야기에 불과하며 신빙성을 기대하기 어렵다'고 명시",
+      "in_gazetteer": true,
+      "confidence": "low"
+    },
+    {
+      "place": "비수아 강",
+      "lat": 54.3617,
+      "lon": 18.9519,
+      "year": 50,
+      "event": "로마 초기부터 고트족 거주지. 서기 1년경 본격적으로 폴란드 바르샤바 내륙부 유역에 정착. Wielbark 문화 형성 지역 (1세기 초~2세기)",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "독일",
+      "lat": 52.5,
+      "lon": 7.5,
+      "year": 150,
+      "event": "2세기경 고트족의 본거지 이동지. 비수아 강에서 독일 북동부로 확장하면서 로마의 라인 강 국경까지 진출",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "우크라이나",
+      "lat": 49.0,
+      "lon": 32.0,
+      "year": 230,
+      "event": "Chernyakhov 문화권으로 진입 (~230년경부터). 드니에프르 강을 따라 남진. 기번이 언급한 '폴란드와 러시아의 평원을 꾸불꾸불 돌아 흐르는 큰 강'은 드니에프르 강을 가리킴. 풍요로운 땅: 떡갈나무 숲, 벌집, 가축 방목지",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "마르키아노폴리스",
+      "lat": 43.2252,
+      "lon": 27.585,
+      "year": 240,
+      "event": "흑해 북연안(현 데브냐, 불가리아). 고트족이 로마 영토의 경계까지 도달. 유복한 시민들이 거액의 돈을 지불하고 안전을 보장받음. 트라야누스 황제가 여동생 마르키아나의 이름으로 명명한 도시",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "포룸 테레브로니",
+      "lat": 43.5881,
+      "lon": 26.37,
+      "year": 251,
+      "event": "모이시아 속주 교외의 작은 마을. 250년 데키우스 황제와의 최종 전투 장소. 고트족이 늪지대를 이용해 로마 군을 섬멸. 데키우스 황제와 그의 장남이 전사. 로마 황제가 야만족에게 패전한 첫 사례.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "로마제국쇠망사 30포인트 17장 '가공할 만한 적과의 전투'",
+    "Encyclopedia.com: Goths Between the Baltic and Black Seas",
+    "Wikipedia: Wielbark culture",
+    "Cambridge Core: The Goths, the Wielbark Culture and over 100 years of research",
+    "Genomic Atlas: The genetic origin of the Goths"
+  ]
+}

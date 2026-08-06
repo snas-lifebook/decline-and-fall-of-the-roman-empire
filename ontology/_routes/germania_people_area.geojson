@@ -1,0 +1,99 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "게르마니아인 — 서부 게르마니아 (라인강~베저강)",
+    "description": "[확실] 1세기. 로마군이 직접 원정·교전한 지역. 토이토부르크 숲 전투(9년)가 이 권역 안에서 벌어졌다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       6.0,
+       52.5
+      ],
+      [
+       9.5,
+       53.5
+      ],
+      [
+       11.0,
+       52.0
+      ],
+      [
+       9.5,
+       50.0
+      ],
+      [
+       7.0,
+       49.5
+      ],
+      [
+       6.0,
+       50.5
+      ],
+      [
+       6.0,
+       52.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "게르마니아인 — 동부 게르마니아 (베저강~비스툴라강)",
+    "description": "[대략] 1세기. 로마의 직접 관찰이 드물어 타키투스의 전문(傳聞) 기록에 의존. 경계는 근사치.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       11.0,
+       54.0
+      ],
+      [
+       15.0,
+       54.5
+      ],
+      [
+       18.5,
+       54.0
+      ],
+      [
+       18.0,
+       51.0
+      ],
+      [
+       14.0,
+       50.5
+      ],
+      [
+       11.0,
+       51.5
+      ],
+      [
+       11.0,
+       54.0
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

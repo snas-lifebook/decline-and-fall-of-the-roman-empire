@@ -1,0 +1,149 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄티누스의 내전 진군과 콘스탄티노플 천도",
+    "period": "306~330"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -0.0889,
+      51.5133
+     ],
+     [
+      12.4862,
+      41.8917
+     ],
+     [
+      28.9498,
+      41.0198
+     ],
+     [
+      29.0,
+      41.03
+     ],
+     [
+      29.9167,
+      40.7667
+     ],
+     [
+      28.9498,
+      41.0198
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브리타니아",
+    "year": 306,
+    "description": "[확실] 306 — 브리타니아에 주둔해 있던 로마 군으로부터 황제의 자의를 수여받아 제위에 오름",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0889,
+     51.5133
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "year": 312,
+    "description": "[확실] 312 — 밀비아누스 다리 전투에서 막센티우스에게 승리해 서방 황제로서 지휘권을 획득",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4862,
+     41.8917
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비잔티움",
+    "year": 324,
+    "description": "[확실] 324 — 동방의 정제 리키니우스를 타도하기 위해 비잔티움을 공격. 아들 크리스푸스가 해전에서 리키니우스 함대 330척을 격파해 제해권을 빼앗음",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9498,
+     41.0198
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "칼케돈",
+    "year": 324,
+    "description": "[확실] 324 — 제해권을 잃은 리키니우스가 재물을 챙겨 칼케돈으로 철수, 5만 명이 넘는 병사를 재소집",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.0,
+     41.03
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니코메디아",
+    "year": 324,
+    "description": "[확실] 324 — 결전에서 병사 2만 5천 명을 잃은 리키니우스가 니코메디아로 퇴거해 시간을 벌려 했으나 결국 항복, 이후 처형됨",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.9167,
+     40.7667
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄티노플",
+    "year": 330,
+    "description": "[확실] 330 — 옛 비잔티움 자리에 새 수도를 건설. '제2의 로마'라는 명칭을 부여했으나 실제로는 자신의 이름을 딴 콘스탄티노플로 불리게 됨",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9498,
+     41.0198
+    ]
+   }
+  }
+ ]
+}

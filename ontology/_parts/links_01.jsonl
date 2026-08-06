@@ -1,0 +1,21 @@
+{"from":"로물루스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":1}
+{"from":"타르퀴니우스 프리스쿠스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":1}
+{"from":"타르퀴니우스 수페르부스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":1}
+{"from":"삼니움인","from_type":"group","to":"캄파니아","to_type":"place","rel":"ruled","point":1}
+{"from":"로마","from_type":"place","to":"삼니움인","to_type":"group","rel":"opposed","point":1}
+{"from":"로마","from_type":"place","to":"카푸아","to_type":"place","rel":"participated_in","point":1}
+{"from":"카푸아","from_type":"place","to":"라틴인","to_type":"group","rel":"member_of","point":1}
+{"from":"로마","from_type":"place","to":"라틴 동맹 전쟁","to_type":"event","rel":"participated_in","point":1}
+{"from":"라틴 동맹 전쟁","from_type":"event","to":"로마","to_type":"place","rel":"occurred_at","point":1}
+{"from":"로마","from_type":"place","to":"아펜니노 산맥","to_type":"place","rel":"participated_in","point":1}
+{"from":"삼니움 전쟁","from_type":"event","to":"로마","to_type":"place","rel":"occurred_at","point":1}
+{"from":"삼니움 전쟁","from_type":"event","to":"캄파니아","to_type":"place","rel":"occurred_at","point":1}
+{"from":"피로스","from_type":"person","to":"에페이로스","to_type":"place","rel":"ruled","point":1}
+{"from":"피로스","from_type":"person","to":"로마","to_type":"group","rel":"opposed","point":1}
+{"from":"베네벤토 전투","from_type":"event","to":"피로스","to_type":"person","rel":"participated_in","point":1}
+{"from":"알렉산드로스 대왕","from_type":"person","to":"피로스","to_type":"person","rel":"child_of","point":1}
+{"from":"로마","from_type":"place","to":"카르타고","to_type":"place","rel":"allied_with","point":1}
+{"from":"로마","from_type":"place","to":"그리스","to_type":"group","rel":"allied_with","point":1}
+{"from":"타란토","from_type":"place","to":"로마","to_type":"place","rel":"opposed","point":1}
+{"from":"타란토","from_type":"place","to":"그리스","to_type":"group","rel":"member_of","point":1}
+{"from":"아피우스 클라우디우스 가이쿠스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":1}

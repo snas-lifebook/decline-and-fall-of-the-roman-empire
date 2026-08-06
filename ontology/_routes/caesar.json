@@ -1,0 +1,110 @@
+{
+  "name": "카이사르의 정복과 내전",
+  "period": "기원전 58~45",
+  "summary": "갈리아 정복 마무리에서 내전 승리까지, 루비콘 도하부터 문다 회전까지의 카이사르 통일 전쟁의 주요 이동 경로.",
+  "waypoints": [
+    {
+      "place": "알렉시아",
+      "lat": 47.5392,
+      "lon": 4.5006,
+      "year": -52,
+      "event": "갈리아 정복 완성. 베르킹게토릭스 항복. 갈리아 통일 저항의 종말",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "루비콘 강",
+      "lat": 44.1681,
+      "lon": 12.4431,
+      "year": -49,
+      "event": "루비콘 도하 (기원전 49년 1월 10일). 내전 개시의 상징적 경계 통과",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "브린디시",
+      "lat": 40.633,
+      "lon": 17.933,
+      "year": -49,
+      "event": "폼페이우스 항구 도주. 카이사르의 남부 이탈리아 장악",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "일레르다",
+      "lat": 41.3667,
+      "lon": -1.0,
+      "year": -49,
+      "event": "스페인 전투 (기원전 49년 5~7월). 폼페이우스파 스페인 군대 항복",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "디르하키움",
+      "lat": 41.32,
+      "lon": 19.45,
+      "year": -48,
+      "event": "아드리아해 전역 개시. 폼페이우스와의 대결 (기원전 48년 7월)",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "파르살루스",
+      "lat": 39.3,
+      "lon": 22.3833,
+      "year": -48,
+      "event": "그리스 결정전 (기원전 48년 8월 9일). 폼페이우스 궤멸, 이집트로 도주",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "알렉산드리아",
+      "lat": 31.1982,
+      "lon": 29.9079,
+      "year": -47,
+      "event": "알렉산드리아 전투. 클레오파트라와의 동맹, 이집트 통제",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "젤라",
+      "lat": 40.3,
+      "lon": 35.883,
+      "year": -47,
+      "event": "젤라 전투 (기원전 47년). 판나케스 2세 격퇴, '왔노라 보았노라 이겼노라'",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "타프수스",
+      "lat": 35.6208,
+      "lon": 11.0417,
+      "year": -46,
+      "event": "북아프리카 전투 (기원전 46년 2월 6일). 폼페이우스 세력 최후 저항 격퇴",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "문다 평원",
+      "lat": 37.35,
+      "lon": -5.2167,
+      "year": -45,
+      "event": "스페인 최종전 (기원전 45년 3월 17일). 라비에누스 전사, 내전 완전 종료",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Caesar, Bellum Civile (카이사르 내전기)",
+    "Caesar, Commentarii de Bello Gallico (카이사르 갈리아 전기)",
+    "https://en.wikipedia.org/wiki/Caesar's_civil_war",
+    "https://en.wikipedia.org/wiki/Gallic_Wars",
+    "https://www.britannica.com/event/Roman-Civil-War"
+  ],
+  "notes": {
+    "gazetteer_match": "6개 (루비콘 강, 브린디시, 파르살루스, 알렉산드리아, 타프수스, 문다 평원)",
+    "external_coords": "4개 (일레르다, 디르하키움, 젤라: 별도 조사로 좌표 확보)",
+    "confidence_breakdown": "high: 10개 (모든 경유지 시점·위치 명확)",
+    "alternate_theories": "디르하키움 위치는 현대 알바니아 두라스(Durres)가 정설. 일레르다는 현대 스페인 라이다(Lleida). 젤라는 터키 톡삿 주. 모두 사학자 합의."
+  }
+}

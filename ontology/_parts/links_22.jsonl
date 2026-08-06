@@ -1,0 +1,11 @@
+{"from":"발렌티니아누스","from_type":"person","to":"요비아누스","to_type":"person","rel":"succeeded","point":22}
+{"from":"발렌스","from_type":"person","to":"공치제제","to_type":"institution","rel":"member_of","point":22}
+{"from":"발렌티니아누스","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":22}
+{"from":"발렌스","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":22}
+{"from":"발렌티니아누스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":22}
+{"from":"콘스탄티누스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":22}
+{"from":"프로코피우스","from_type":"person","to":"발렌스","to_type":"person","rel":"opposed","point":22}
+{"from":"율리아누스","from_type":"person","to":"페르시아","to_type":"place","rel":"opposed","point":22}
+{"from":"샤푸르","from_type":"person","to":"로마","to_type":"place","rel":"opposed","point":22}
+{"from":"발렌스","from_type":"person","to":"아리우스파","to_type":"group","rel":"allied_with","point":22}
+{"from":"테오도시우스 1세","from_type":"person","to":"아리우스파","to_type":"group","rel":"opposed","point":22}

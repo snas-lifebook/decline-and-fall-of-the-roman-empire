@@ -1,0 +1,95 @@
+{
+  "name": "유스티니아누스의 서방 수복",
+  "period": "533~554",
+  "summary": "벨리사리우스가 이끄는 동로마 제국군의 북아프리카 반달 왕국 정복과 이탈리아 고트 왕국 재정복",
+  "waypoints": [
+    {
+      "place": "콘스탄티노플",
+      "lat": 41.02,
+      "lon": 28.95,
+      "year": 533,
+      "event": "벨리사리우스 함대가 북아프리카 반달 왕국 원정을 위해 출항",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "Caputvada",
+      "lat": 35.24,
+      "lon": 11.12,
+      "year": 533,
+      "event": "동로마 함대가 튀니지 해안에 상륙, 현지 주민 무방비 상태 확인",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "카르타고",
+      "lat": 36.85,
+      "lon": 10.32,
+      "year": 533,
+      "event": "Ad Decimum 전투에서 반달군을 격파하고 카르타고 점령, 반달 왕국 수도 탈환",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "Tricamarum",
+      "lat": 36.85,
+      "lon": 10.32,
+      "year": 533,
+      "event": "Tricamarum 전투에서 반달군 재격파, 젤리메르 왕 항복 결정",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "팔레르모",
+      "lat": 38.12,
+      "lon": 13.36,
+      "year": 535,
+      "event": "고트 전쟁 시작, 시칠리아 공략 개시, 벨리사리우스의 궁노수 고지 전술로 항복 강요",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "시라쿠사",
+      "lat": 37.06,
+      "lon": 15.29,
+      "year": 535,
+      "event": "시칠리아의 주요 도시 점령 완료, 동로마의 이탈리아 진출 기반 확보",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "메시나",
+      "lat": 38.19,
+      "lon": 15.56,
+      "year": 536,
+      "event": "메시나 해협 건넘, 5천 명의 군대로 이탈리아 본토 침공",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "로마",
+      "lat": 41.89,
+      "lon": 12.49,
+      "year": 536,
+      "event": "나폴리 공략 후 로마 점령, 고트 전쟁 최대 성과, 1년간 포위 전",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "라벤나",
+      "lat": 44.42,
+      "lon": 12.20,
+      "year": 540,
+      "event": "고트 왕국의 최후 거점 라벤나 함락, 고트 저항의 중심 붕괴",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Procopius, De Bellis (History of the Wars)",
+    "World History Encyclopedia: Battle of Ad Decimum",
+    "World History Encyclopedia: Battle of Tricamarum",
+    "Wikipedia: Gothic War (535–554)",
+    "Wikipedia: Vandalic War (533–534)"
+  ]
+}

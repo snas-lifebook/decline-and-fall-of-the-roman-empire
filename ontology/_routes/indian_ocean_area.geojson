@@ -1,0 +1,120 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "인도양 — 아라비아해~인도 서안",
+    "description": "[불확실] 페르시아만 입구에서 인도 말라바르 해안까지. 로마 상선이 계절풍을 타고 왕래한 교역 항로",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       43.0,
+       12.0
+      ],
+      [
+       48.0,
+       14.0
+      ],
+      [
+       55.0,
+       15.0
+      ],
+      [
+       60.0,
+       18.0
+      ],
+      [
+       65.0,
+       20.0
+      ],
+      [
+       70.0,
+       20.5
+      ],
+      [
+       74.0,
+       18.0
+      ],
+      [
+       76.5,
+       14.0
+      ],
+      [
+       76.0,
+       10.0
+      ],
+      [
+       72.0,
+       7.0
+      ],
+      [
+       65.0,
+       5.0
+      ],
+      [
+       58.0,
+       4.0
+      ],
+      [
+       50.0,
+       5.0
+      ],
+      [
+       45.0,
+       8.0
+      ],
+      [
+       43.0,
+       12.0
+      ],
+      [
+       43.0,
+       12.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "무지리스",
+    "description": "[인도 무역항]  — 페리플루스에 기록된 로마-인도 교역의 종착 항구",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.15,
+     10.13
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카락스 스파시누",
+    "description": "[관측 지점] 116 — 트라야누스가 페르시아만 하구에서 인도행 배를 보고 알렉산드로스를 그리워한 곳",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.17,
+     30.43
+    ]
+   }
+  }
+ ]
+}

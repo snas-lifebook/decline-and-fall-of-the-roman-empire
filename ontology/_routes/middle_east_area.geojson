@@ -1,0 +1,207 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "중동 — 아라비아 반도",
+    "description": "[불확실] 이슬람 세력의 발상지. 사막 유목 부족의 세력권이라 경계가 뚜렷하지 않아 대략적으로만 표시",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.5,
+       32.5
+      ],
+      [
+       39.0,
+       33.5
+      ],
+      [
+       44.0,
+       33.0
+      ],
+      [
+       48.5,
+       30.0
+      ],
+      [
+       50.0,
+       26.0
+      ],
+      [
+       56.0,
+       26.5
+      ],
+      [
+       59.8,
+       22.5
+      ],
+      [
+       53.0,
+       16.5
+      ],
+      [
+       43.5,
+       12.5
+      ],
+      [
+       43.0,
+       17.0
+      ],
+      [
+       37.0,
+       19.0
+      ],
+      [
+       35.0,
+       27.0
+      ],
+      [
+       34.5,
+       30.0
+      ],
+      [
+       34.5,
+       32.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "중동 — 레반트 (시리아·팔레스타인)",
+    "description": "[대략] 로마 속주 시리아·팔레스티나가 있던 지중해 동안. 아라비아보다 행정 경계가 잘 알려져 있어 중간 신뢰도로 표시",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.0,
+       37.0
+      ],
+      [
+       36.5,
+       36.7
+      ],
+      [
+       38.0,
+       36.2
+      ],
+      [
+       38.5,
+       34.0
+      ],
+      [
+       36.5,
+       32.0
+      ],
+      [
+       34.9,
+       31.5
+      ],
+      [
+       34.2,
+       32.0
+      ],
+      [
+       34.6,
+       33.0
+      ],
+      [
+       35.0,
+       34.5
+      ],
+      [
+       35.5,
+       36.0
+      ],
+      [
+       35.0,
+       37.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메카",
+    "description": "[이슬람 발상지] 610 — 무함마드의 계시가 시작된 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.83,
+     21.42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "다마스쿠스",
+    "description": "[우마이야 수도] 661 — 우마이야 왕조의 수도, 로마·비잔티움 시리아 속주의 중심 도시였다가 이슬람에 편입",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.28,
+     33.51
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예루살렘",
+    "description": "[성지] 637 — 이슬람 세력에 함락, 세 종교의 성지로 자리잡음",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.21,
+     31.77
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페트라",
+    "description": "[대상 교역 도시] 고대~ — 아라비아-레반트를 잇는 나바테아 대상로 요충지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.44,
+     30.33
+    ]
+   }
+  }
+ ]
+}

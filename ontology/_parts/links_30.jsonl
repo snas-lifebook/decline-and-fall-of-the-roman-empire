@@ -1,0 +1,22 @@
+{"from":"콘스탄티누스 11세","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":30}
+{"from":"콘스탄티누스 11세","from_type":"person","to":"동로마 제국","to_type":"group","rel":"ruled","point":30}
+{"from":"메메트 2세","from_type":"person","to":"오스만투르크","to_type":"group","rel":"led","point":30}
+{"from":"메메트 2세","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"conquered","point":30}
+{"from":"마누엘 2세","from_type":"person","to":"헨리 4세","to_type":"person","rel":"appealed_to","point":30}
+{"from":"마누엘 2세","from_type":"person","to":"동로마 제국","to_type":"group","rel":"ruled","point":30}
+{"from":"티무르","from_type":"person","to":"오스만 제국","to_type":"group","rel":"opposed","point":30}
+{"from":"유스티니아니","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"defended","point":30}
+{"from":"오스만투르크","from_type":"group","to":"콘스탄티노플","to_type":"place","rel":"conquered","point":30}
+{"from":"오스만투르크","from_type":"group","to":"동로마 제국","to_type":"group","rel":"opposed","point":30}
+{"from":"오스만투르크","from_type":"group","to":"보스포루스 해협","to_type":"place","rel":"blockaded","point":30}
+{"from":"예니체리","from_type":"group","to":"오스만투르크","to_type":"group","rel":"member_of","point":30}
+{"from":"제노바","from_type":"group","to":"동로마 제국","to_type":"group","rel":"allied_with","point":30}
+{"from":"베네치아","from_type":"group","to":"동로마 제국","to_type":"group","rel":"allied_with","point":30}
+{"from":"성 소피아 성당","from_type":"place","to":"콘스탄티노플","to_type":"place","rel":"located_in","point":30}
+{"from":"성 로마누스 교회","from_type":"place","to":"콘스탄티노플","to_type":"place","rel":"located_in","point":30}
+{"from":"콘스탄티노플","from_type":"place","to":"발칸 반도","to_type":"place","rel":"near","point":30}
+{"from":"콘스탄티노플","from_type":"place","to":"소아시아","to_type":"place","rel":"near","point":30}
+{"from":"콘스탄티노플","from_type":"place","to":"마르마라해","to_type":"place","rel":"faces","point":30}
+{"from":"콘스탄티노플","from_type":"place","to":"콘스탄티누스 대제","to_type":"person","rel":"founded_by","point":30}
+{"from":"기독교도","from_type":"group","to":"콘스탄티노플","to_type":"place","rel":"member_of","point":30}
+{"from":"이슬람교도","from_type":"group","to":"오스만 제국","to_type":"group","rel":"member_of","point":30}

@@ -1,0 +1,838 @@
+{
+ "nodes": [
+  {
+   "id": "55985e54fc938269",
+   "type": "group",
+   "x": -1215,
+   "y": -120,
+   "width": 2120,
+   "height": 2906,
+   "label": "족보 카이사르 계열",
+   "color": "4"
+  },
+  {
+   "id": "99262c026ff90b55",
+   "type": "group",
+   "x": -993,
+   "y": 1650,
+   "width": 1046,
+   "height": 592,
+   "color": "3",
+   "label": "IV-1 드루수스 × IV-4 안토니아 사이의 형제"
+  },
+  {
+   "id": "5264926d67cf5198",
+   "type": "group",
+   "x": -798,
+   "y": 1226,
+   "width": 656,
+   "height": 168,
+   "color": "3",
+   "label": "III-2 티베리우스 클라우디우스 네로 × III-3 리비아 드루실라 사이의 형제"
+  },
+  {
+   "id": "95ba2ea84eb85153",
+   "type": "text",
+   "x": -975,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-1  **[[카이사르]]**\n기원전 100~기원전 44",
+   "color": "5"
+  },
+  {
+   "id": "5f3a978a48d30a00",
+   "type": "text",
+   "x": -585,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-2  율리아 (카이사르의 누이)*\n기원전 101~기원전 51"
+  },
+  {
+   "id": "80cc6855fbb96040",
+   "type": "text",
+   "x": -195,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-3  **[[칼푸르니아]]**\n약 기원전 75~?",
+   "color": "6"
+  },
+  {
+   "id": "6218a677f85d194d",
+   "type": "text",
+   "x": 195,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-4  **[[코르넬리아]]**\n약 기원전 100~기원전 68",
+   "color": "6"
+  },
+  {
+   "id": "eec8854ab42403b6",
+   "type": "text",
+   "x": 585,
+   "y": 0,
+   "width": 230,
+   "height": 104,
+   "text": "I-5  **[[클레오파트라 7세]]**\n기원전 69~기원전 30",
+   "color": "6"
+  },
+  {
+   "id": "46d1b24e3a190157",
+   "type": "text",
+   "x": -780,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-1  **[[카이사리온]]**\n기원전 47~기원전 30",
+   "color": "5"
+  },
+  {
+   "id": "37da8185ac4fb6f7",
+   "type": "text",
+   "x": -390,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-2  **[[율리아 (카이사르 가문)]]**\n기원전 76~기원전 54",
+   "color": "6"
+  },
+  {
+   "id": "c98097934eabc4ff",
+   "type": "text",
+   "x": 0,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-3  아티아*\n기원전 85~기원전 43"
+  },
+  {
+   "id": "57071c6cc0c7eb21",
+   "type": "text",
+   "x": 390,
+   "y": 424,
+   "width": 230,
+   "height": 104,
+   "text": "II-4  **[[폼페이우스]]**\n기원전 106~기원전 48",
+   "color": "5"
+  },
+  {
+   "id": "a5b4d1d67c36aa72",
+   "type": "text",
+   "x": -780,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-1  **[[아우구스투스]]**\n기원전 63~14\n재위 기원전 27~14",
+   "color": "5"
+  },
+  {
+   "id": "bfc7aec43287057f",
+   "type": "text",
+   "x": -390,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-2  **[[티베리우스 클라우디우스 네로]]**\n기원전 85~기원전 33",
+   "color": "5"
+  },
+  {
+   "id": "a540a1afb6ce3576",
+   "type": "text",
+   "x": 0,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-3  **[[리비아 드루실라]]**\n기원전 58~29",
+   "color": "6"
+  },
+  {
+   "id": "e547d8f4402a78a7",
+   "type": "text",
+   "x": 390,
+   "y": 848,
+   "width": 230,
+   "height": 104,
+   "text": "III-4  **[[스크리보니아]]**",
+   "color": "6"
+  },
+  {
+   "id": "076ee1d7f033c5e1",
+   "type": "text",
+   "x": -780,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-1  **[[드루수스]]**\n기원전 38~기원전 9",
+   "color": "5"
+  },
+  {
+   "id": "9bf0b61c1ef387fc",
+   "type": "text",
+   "x": -390,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-2  **[[티베리우스]]**\n기원전 42~37\n재위 14~37",
+   "color": "5"
+  },
+  {
+   "id": "e393e7dfe07a19cb",
+   "type": "text",
+   "x": 0,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-3  **[[율리아 (아우구스투스의 딸)]]**\n기원전 39~14",
+   "color": "6"
+  },
+  {
+   "id": "90ccc6e6b25d13a7",
+   "type": "text",
+   "x": 390,
+   "y": 1272,
+   "width": 230,
+   "height": 104,
+   "text": "IV-4  **[[안토니아]]**\n기원전 36~37",
+   "color": "6"
+  },
+  {
+   "id": "864f83d0c22a8260",
+   "type": "text",
+   "x": -975,
+   "y": 1696,
+   "width": 230,
+   "height": 104,
+   "text": "V-1  **[[게르마니쿠스]]**\n기원전 15~19",
+   "color": "5"
+  },
+  {
+   "id": "517c877682cce2a6",
+   "type": "text",
+   "x": -585,
+   "y": 1696,
+   "width": 230,
+   "height": 104,
+   "text": "V-2  **[[가이우스 카이사르]]**\n기원전 20~4",
+   "color": "5"
+  },
+  {
+   "id": "157cd4146a397873",
+   "type": "text",
+   "x": -195,
+   "y": 1696,
+   "width": 230,
+   "height": 104,
+   "text": "V-3  **[[루키우스]]**\n기원전 17~기원전 2",
+   "color": "5"
+  },
+  {
+   "id": "889199eb39fa0bd9",
+   "type": "text",
+   "x": 195,
+   "y": 1696,
+   "width": 230,
+   "height": 104,
+   "text": "V-4  **[[리빌라]]**\n기원전 13~31",
+   "color": "6"
+  },
+  {
+   "id": "237db8e807f40e6a",
+   "type": "text",
+   "x": 585,
+   "y": 1696,
+   "width": 230,
+   "height": 104,
+   "text": "V-5  **[[아그리피나]]**\n기원전 14~33",
+   "color": "6"
+  },
+  {
+   "id": "5eca47f632569551",
+   "type": "text",
+   "x": -585,
+   "y": 2120,
+   "width": 230,
+   "height": 104,
+   "text": "VI-1  **[[칼리굴라]]**\n12~41\n재위 37~41",
+   "color": "5"
+  },
+  {
+   "id": "8d61d4d224b24a80",
+   "type": "text",
+   "x": -195,
+   "y": 2120,
+   "width": 230,
+   "height": 104,
+   "text": "VI-2  **[[클라우디우스]]**\n기원전 10~54\n재위 41~54",
+   "color": "5"
+  },
+  {
+   "id": "90e07ca7503dd92a",
+   "type": "text",
+   "x": 195,
+   "y": 2120,
+   "width": 230,
+   "height": 104,
+   "text": "VI-3  **[[아그리피나(클라우디우스의 아내)]]**\n15~59",
+   "color": "6"
+  },
+  {
+   "id": "f3086523421ae406",
+   "type": "text",
+   "x": -390,
+   "y": 2544,
+   "width": 230,
+   "height": 104,
+   "text": "VII-1  **[[네로]]**\n37~68\n재위 54~68",
+   "color": "5"
+  },
+  {
+   "id": "8a9881a57077b174",
+   "type": "text",
+   "x": 0,
+   "y": 2544,
+   "width": 230,
+   "height": 104,
+   "text": "VII-2  **[[브리탄니쿠스]]**\n41~55",
+   "color": "5"
+  },
+  {
+   "id": "14d8d5f9da8ecd1b",
+   "type": "text",
+   "x": -1125,
+   "y": 18,
+   "width": 96,
+   "height": 52,
+   "text": "**I**\n1세대"
+  },
+  {
+   "id": "605af5af3533f6ae",
+   "type": "text",
+   "x": -1125,
+   "y": 442,
+   "width": 96,
+   "height": 52,
+   "text": "**II**\n2세대"
+  },
+  {
+   "id": "90e7a5d29c68a7f4",
+   "type": "text",
+   "x": -1125,
+   "y": 866,
+   "width": 96,
+   "height": 52,
+   "text": "**III**\n3세대"
+  },
+  {
+   "id": "3d56f4af982c5c04",
+   "type": "text",
+   "x": -1125,
+   "y": 1290,
+   "width": 96,
+   "height": 52,
+   "text": "**IV**\n4세대"
+  },
+  {
+   "id": "0715b8f7c54dee5b",
+   "type": "text",
+   "x": -1125,
+   "y": 1714,
+   "width": 96,
+   "height": 52,
+   "text": "**V**\n5세대"
+  },
+  {
+   "id": "d756c34c91bd8d57",
+   "type": "text",
+   "x": -1125,
+   "y": 2138,
+   "width": 96,
+   "height": 52,
+   "text": "**VI**\n6세대"
+  },
+  {
+   "id": "b7f674fe65522902",
+   "type": "text",
+   "x": -1125,
+   "y": 2562,
+   "width": 96,
+   "height": 52,
+   "text": "**VII**\n7세대"
+  },
+  {
+   "id": "ad276f6caea0f299",
+   "type": "text",
+   "x": -126,
+   "y": 1939,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "5c6e86ddd9319f8f",
+   "type": "text",
+   "x": -126,
+   "y": 1515,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "4f3c3e430cc5adb2",
+   "type": "text",
+   "x": -321,
+   "y": 1091,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인 리비아 드루실라 ② · 아우구스투스 ③"
+  },
+  {
+   "id": "10619d08899744ea",
+   "type": "text",
+   "x": -126,
+   "y": 1091,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인 리비아 드루실라 ①"
+  },
+  {
+   "id": "9e89411682940704",
+   "type": "text",
+   "x": -126,
+   "y": 1091,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인 아우구스투스 ②"
+  },
+  {
+   "id": "44506bf4f4b1c22b",
+   "type": "text",
+   "x": 69,
+   "y": 2363,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인 클라우디우스 ⑤"
+  },
+  {
+   "id": "3c91126eae737edd",
+   "type": "text",
+   "x": 69,
+   "y": 667,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인"
+  },
+  {
+   "id": "1503d1cf4c9f6144",
+   "type": "text",
+   "x": -516,
+   "y": 243,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인 카이사르 ④"
+  },
+  {
+   "id": "6d64bbb36dd8fb97",
+   "type": "text",
+   "x": -321,
+   "y": 243,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "혼인 카이사르 ②"
+  },
+  {
+   "id": "605fc5e1e8601b2f",
+   "type": "text",
+   "x": -126,
+   "y": 243,
+   "width": 176,
+   "height": 42,
+   "color": "3",
+   "text": "결합"
+  },
+  {
+   "id": "47f62e983deaae4e",
+   "type": "text",
+   "x": 905,
+   "y": 0,
+   "width": 330,
+   "height": 330,
+   "text": "**범례** — 임상 계보도 표기\n\n`II-3` = 세대-개인 번호. 사람을 지목할 때 쓴다\n청록 = 남 · 보라 = 여 · 무색 = 미상\n칸 안 둘째 줄 = 생몰년. '약'이 붙으면 추정이다\n흐린 선·이름 뒤 별표 = 이 책 본문에 없는 맥락 보강\n남자를 왼쪽, 여자를 오른쪽에 세운다\n\n노랑 칸 = 혼인. 한 사람이 여러 번이면 차수를 적는다\n노랑 상자 = 그 혼인에서 난 형제\n선 위의 말 = 관계. 남편·아내·아들·딸·계자\n계자(양자) = 혈연이 아닌 계승. 한국 족보의 系子\n주황 선 = 제위 계승. 혈연과 다른 축이다"
+  }
+ ],
+ "edges": [
+  {
+   "id": "150b114c48f1d0eb",
+   "fromNode": "864f83d0c22a8260",
+   "fromSide": "bottom",
+   "toNode": "ad276f6caea0f299",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "63a65280458c098f",
+   "fromNode": "237db8e807f40e6a",
+   "fromSide": "bottom",
+   "toNode": "ad276f6caea0f299",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "831540591f6f5483",
+   "fromNode": "ad276f6caea0f299",
+   "fromSide": "bottom",
+   "toNode": "5eca47f632569551",
+   "toSide": "top",
+   "label": "아들"
+  },
+  {
+   "id": "fa057bd051463f1e",
+   "fromNode": "076ee1d7f033c5e1",
+   "fromSide": "bottom",
+   "toNode": "5c6e86ddd9319f8f",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "8dfc74b424a58cb5",
+   "fromNode": "90ccc6e6b25d13a7",
+   "fromSide": "bottom",
+   "toNode": "5c6e86ddd9319f8f",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "a4935db8a64b815b",
+   "fromNode": "5c6e86ddd9319f8f",
+   "fromSide": "bottom",
+   "toNode": "864f83d0c22a8260",
+   "toSide": "top",
+   "label": "아들"
+  },
+  {
+   "id": "100dd06851367626",
+   "fromNode": "5c6e86ddd9319f8f",
+   "fromSide": "bottom",
+   "toNode": "8d61d4d224b24a80",
+   "toSide": "top",
+   "label": "아들"
+  },
+  {
+   "id": "548fbc6c1f5312eb",
+   "fromNode": "a540a1afb6ce3576",
+   "fromSide": "bottom",
+   "toNode": "4f3c3e430cc5adb2",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "6a164cbbbcef869c",
+   "fromNode": "a5b4d1d67c36aa72",
+   "fromSide": "bottom",
+   "toNode": "4f3c3e430cc5adb2",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "85782911d03d9876",
+   "fromNode": "a540a1afb6ce3576",
+   "fromSide": "bottom",
+   "toNode": "10619d08899744ea",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "3ca0ad4db4030b09",
+   "fromNode": "bfc7aec43287057f",
+   "fromSide": "bottom",
+   "toNode": "10619d08899744ea",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "9b87e0cb697d328c",
+   "fromNode": "10619d08899744ea",
+   "fromSide": "bottom",
+   "toNode": "076ee1d7f033c5e1",
+   "toSide": "top",
+   "label": "계자(의붓아버지)"
+  },
+  {
+   "id": "72455de0c92f8a56",
+   "fromNode": "10619d08899744ea",
+   "fromSide": "bottom",
+   "toNode": "9bf0b61c1ef387fc",
+   "toSide": "top",
+   "label": "계자(양자)"
+  },
+  {
+   "id": "2a74b6b85cd52381",
+   "fromNode": "e547d8f4402a78a7",
+   "fromSide": "bottom",
+   "toNode": "9e89411682940704",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "282d659e2bede654",
+   "fromNode": "a5b4d1d67c36aa72",
+   "fromSide": "bottom",
+   "toNode": "9e89411682940704",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "8bb07e562751f63d",
+   "fromNode": "90e07ca7503dd92a",
+   "fromSide": "bottom",
+   "toNode": "44506bf4f4b1c22b",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "a0c454bf5ff0bb83",
+   "fromNode": "8d61d4d224b24a80",
+   "fromSide": "bottom",
+   "toNode": "44506bf4f4b1c22b",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "ac29a2cc4cfd98e2",
+   "fromNode": "37da8185ac4fb6f7",
+   "fromSide": "bottom",
+   "toNode": "3c91126eae737edd",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "dbef222144082b7f",
+   "fromNode": "57071c6cc0c7eb21",
+   "fromSide": "bottom",
+   "toNode": "3c91126eae737edd",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "c55246b1f8409e3d",
+   "fromNode": "95ba2ea84eb85153",
+   "fromSide": "bottom",
+   "toNode": "1503d1cf4c9f6144",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "948d04a1693e9d7d",
+   "fromNode": "80cc6855fbb96040",
+   "fromSide": "bottom",
+   "toNode": "1503d1cf4c9f6144",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "1cab42f2fd16f8d3",
+   "fromNode": "95ba2ea84eb85153",
+   "fromSide": "bottom",
+   "toNode": "6d64bbb36dd8fb97",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "919f9dfce46d14fa",
+   "fromNode": "6218a677f85d194d",
+   "fromSide": "bottom",
+   "toNode": "6d64bbb36dd8fb97",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "6657bfa398af0a3c",
+   "fromNode": "95ba2ea84eb85153",
+   "fromSide": "bottom",
+   "toNode": "605fc5e1e8601b2f",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "남편"
+  },
+  {
+   "id": "253d0217f4db4509",
+   "fromNode": "eec8854ab42403b6",
+   "fromSide": "bottom",
+   "toNode": "605fc5e1e8601b2f",
+   "toSide": "top",
+   "toEnd": "none",
+   "label": "아내"
+  },
+  {
+   "id": "8ec9e154348c9d1d",
+   "fromNode": "605fc5e1e8601b2f",
+   "fromSide": "bottom",
+   "toNode": "46d1b24e3a190157",
+   "toSide": "top",
+   "label": "아들"
+  },
+  {
+   "id": "6da782fc17c83d6a",
+   "fromNode": "e393e7dfe07a19cb",
+   "fromSide": "bottom",
+   "toNode": "517c877682cce2a6",
+   "toSide": "top",
+   "label": "어머니"
+  },
+  {
+   "id": "167a69462b52bba3",
+   "fromNode": "90e07ca7503dd92a",
+   "fromSide": "bottom",
+   "toNode": "f3086523421ae406",
+   "toSide": "top",
+   "label": "계자(양자)"
+  },
+  {
+   "id": "b8dc257505d022a2",
+   "fromNode": "8d61d4d224b24a80",
+   "fromSide": "bottom",
+   "toNode": "f3086523421ae406",
+   "toSide": "top",
+   "label": "계자(양자)"
+  },
+  {
+   "id": "56404049c81094a1",
+   "fromNode": "e393e7dfe07a19cb",
+   "fromSide": "bottom",
+   "toNode": "157cd4146a397873",
+   "toSide": "top",
+   "label": "어머니"
+  },
+  {
+   "id": "866eddf3e04d2f58",
+   "fromNode": "90ccc6e6b25d13a7",
+   "fromSide": "bottom",
+   "toNode": "889199eb39fa0bd9",
+   "toSide": "top",
+   "label": "어머니"
+  },
+  {
+   "id": "1ef3cd68fcd5910b",
+   "fromNode": "8d61d4d224b24a80",
+   "fromSide": "bottom",
+   "toNode": "8a9881a57077b174",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "20e74d5e37d68ff3",
+   "fromNode": "864f83d0c22a8260",
+   "fromSide": "bottom",
+   "toNode": "90e07ca7503dd92a",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "4a4a41ebb8883794",
+   "fromNode": "c98097934eabc4ff",
+   "fromSide": "bottom",
+   "toNode": "a5b4d1d67c36aa72",
+   "toSide": "top",
+   "label": "계자(양자)",
+   "color": "#52525b"
+  },
+  {
+   "id": "ca8cd00d4bd7f691",
+   "fromNode": "95ba2ea84eb85153",
+   "fromSide": "bottom",
+   "toNode": "a5b4d1d67c36aa72",
+   "toSide": "top",
+   "label": "계자(양자)"
+  },
+  {
+   "id": "67f92e8e8020fe09",
+   "fromNode": "5f3a978a48d30a00",
+   "fromSide": "bottom",
+   "toNode": "c98097934eabc4ff",
+   "toSide": "top",
+   "label": "어머니",
+   "color": "#52525b"
+  },
+  {
+   "id": "b4d15dfdb15381ba",
+   "fromNode": "a5b4d1d67c36aa72",
+   "fromSide": "bottom",
+   "toNode": "e393e7dfe07a19cb",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "d3997b533c582dbe",
+   "fromNode": "95ba2ea84eb85153",
+   "fromSide": "bottom",
+   "toNode": "37da8185ac4fb6f7",
+   "toSide": "top",
+   "label": "아버지"
+  },
+  {
+   "id": "1d7bcec9c47dd243",
+   "fromNode": "95ba2ea84eb85153",
+   "fromSide": "right",
+   "toNode": "a5b4d1d67c36aa72",
+   "toSide": "left",
+   "color": "2",
+   "label": "제위 계승"
+  },
+  {
+   "id": "f4073dcaa15b4c62",
+   "fromNode": "9bf0b61c1ef387fc",
+   "fromSide": "right",
+   "toNode": "5eca47f632569551",
+   "toSide": "left",
+   "color": "2",
+   "label": "제위 계승"
+  },
+  {
+   "id": "51a2ee5b82364cb5",
+   "fromNode": "5eca47f632569551",
+   "fromSide": "right",
+   "toNode": "8d61d4d224b24a80",
+   "toSide": "left",
+   "color": "2",
+   "label": "제위 계승"
+  },
+  {
+   "id": "d5a028a7f34109f7",
+   "fromNode": "a5b4d1d67c36aa72",
+   "fromSide": "right",
+   "toNode": "9bf0b61c1ef387fc",
+   "toSide": "left",
+   "color": "2",
+   "label": "제위 계승"
+  }
+ ]
+}

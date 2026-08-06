@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "키프로스 — 키프로스 본섬",
+    "description": "[확실] 북동쪽으로 카르파스 반도가 길게 뻗은 삼각형 섬",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       32.3,
+       35.0
+      ],
+      [
+       32.9,
+       35.35
+      ],
+      [
+       33.5,
+       35.5
+      ],
+      [
+       34.0,
+       35.65
+      ],
+      [
+       34.55,
+       35.6
+      ],
+      [
+       34.35,
+       35.4
+      ],
+      [
+       33.9,
+       35.2
+      ],
+      [
+       34.0,
+       34.95
+      ],
+      [
+       33.6,
+       34.55
+      ],
+      [
+       33.05,
+       34.55
+      ],
+      [
+       32.5,
+       34.65
+      ],
+      [
+       32.3,
+       35.0
+      ],
+      [
+       32.3,
+       35.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "살라미스",
+    "description": "[주요 도시]  — 섬 동안의 주요 항구도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.9,
+     35.18
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "파포스",
+    "description": "[주요 도시]  — 로마 속주 키프로스의 총독 소재지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.42,
+     34.76
+    ]
+   }
+  }
+ ]
+}

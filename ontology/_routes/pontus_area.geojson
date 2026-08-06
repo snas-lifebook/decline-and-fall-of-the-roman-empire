@@ -1,0 +1,143 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "폰투스 — 서부: 비티니아-폰투스 속주 핵심부",
+    "description": "[확실] 기원전 63년 폼페이우스 정착 이후 최초로 속주화된 서부 해안. 시노페·아마시아 포함",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       33.5,
+       42.1
+      ],
+      [
+       35.8,
+       42.0
+      ],
+      [
+       37.0,
+       41.0
+      ],
+      [
+       36.0,
+       40.3
+      ],
+      [
+       34.0,
+       40.5
+      ],
+      [
+       33.0,
+       41.3
+      ],
+      [
+       33.5,
+       42.1
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "폰투스 — 동부: 폴레모니아쿠스 폰투스 (트라페주스 방면)",
+    "description": "[대략] 미트리다테스 왕가 후예 폴레몬 왕조의 잔여 영역, 서기 64년 네로기 최종 병합",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       37.0,
+       41.0
+      ],
+      [
+       38.5,
+       41.2
+      ],
+      [
+       39.9,
+       41.0
+      ],
+      [
+       39.5,
+       39.8
+      ],
+      [
+       37.5,
+       40.0
+      ],
+      [
+       37.0,
+       41.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시노페",
+    "description": "[왕국 발상지·항구] 기원전 63 — 미트리다테스 6세 출생지, 폼페이우스 정착 이후 자유도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.15,
+     42.02
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "폰투스",
+    "description": "[주요도시] 기원전 63 — 미트리다테스 왕가 능묘 소재지, 지리학자 스트라본의 고향",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.84,
+     40.65
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트라페주스",
+    "description": "[동부 항구도시] 서기 64 — 폴레모니아쿠스 폰투스 병합 이후 동방 흑해 방어 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.72,
+     41.0
+    ]
+   }
+  }
+ ]
+}

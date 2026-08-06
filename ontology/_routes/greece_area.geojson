@@ -1,0 +1,128 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "그리스 (지명) — 그리스 본토+펠로폰네소스 (섬 제외)",
+    "description": "[대략] 테살리아·에페이로스를 포함한 그리스 전체 본토 범위. 에게해 섬들(크레타 등)은 이 폴리곤에서 제외했다 — 별도 표기가 필요하면 추가할 것.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       19.8,
+       39.7
+      ],
+      [
+       20.7,
+       40.6
+      ],
+      [
+       22.3,
+       41.1
+      ],
+      [
+       24.6,
+       41.0
+      ],
+      [
+       24.0,
+       39.9
+      ],
+      [
+       24.0,
+       38.3
+      ],
+      [
+       23.5,
+       37.6
+      ],
+      [
+       22.9,
+       37.0
+      ],
+      [
+       22.4,
+       36.8
+      ],
+      [
+       21.6,
+       37.4
+      ],
+      [
+       21.3,
+       38.2
+      ],
+      [
+       20.9,
+       39.0
+      ],
+      [
+       19.8,
+       39.7
+      ],
+      [
+       19.8,
+       39.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아테네",
+    "description": "[주요 도시] 고대~후기 — 그리스 문화의 중심지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.73,
+     37.98
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "코린토스",
+    "description": "[주요 도시] 고대 — 네로가 경기 개최를 선포한 곳(코린토스 지협).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.93,
+     37.94
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스파르타",
+    "description": "[주요 도시] 고대 — 펠로폰네소스 남부의 역사적 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.42,
+     37.08
+    ]
+   }
+  }
+ ]
+}

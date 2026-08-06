@@ -1,0 +1,144 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "북아프리카 — 지중해 남안 (알제리~튀니지~리비아)",
+    "description": "[불확실] 지리적 광역 개념이라 행정 경계가 존재하지 않는다. 북쪽은 지중해 연안, 남쪽은 아틀라스 산맥·사하라 경계선으로 느슨하게 그렸다. 엔티티 노트 자체가 '위치 추정' 경고를 달고 있다",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -2.0,
+       35.7
+      ],
+      [
+       3.0,
+       37.0
+      ],
+      [
+       8.0,
+       37.3
+      ],
+      [
+       10.5,
+       37.0
+      ],
+      [
+       11.5,
+       33.0
+      ],
+      [
+       15.0,
+       32.8
+      ],
+      [
+       20.0,
+       32.5
+      ],
+      [
+       25.0,
+       31.6
+      ],
+      [
+       25.0,
+       28.0
+      ],
+      [
+       18.0,
+       29.0
+      ],
+      [
+       10.0,
+       30.5
+      ],
+      [
+       3.0,
+       31.5
+      ],
+      [
+       -2.0,
+       32.0
+      ],
+      [
+       -2.0,
+       35.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타고",
+    "description": "[지역 중심 항구] 기원전 146 함락 — 포에니 전쟁의 종착지이자 이후 로마 속주 아프리카의 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3233,
+     36.8528
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "누미디아",
+    "description": "[누미디아 왕도] 기원전 3세기~ — 마시니사 이래 누미디아 왕국의 수도, 현 알제리 콘스탄티나",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.6119,
+     36.3675
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "렙티스 마그나",
+    "description": "[트리폴리타니아 항구] 로마기~ — 리비아 해안의 대표적 로마 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.2906,
+     32.6392
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트리폴리",
+    "description": "[항구] 로마기~ — 트리폴리타니아(세 도시) 명칭의 유래가 된 항구 도시군 중 하나",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.187,
+     32.887
+    ]
+   }
+  }
+ ]
+}

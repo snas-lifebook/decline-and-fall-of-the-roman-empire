@@ -1,0 +1,23 @@
+{"from":"하심","from_type":"person","to":"마호메트","to_type":"person","rel":"ancestor","point":28}
+{"from":"아브드 알 무탈리브","from_type":"person","to":"마호메트","to_type":"person","rel":"ancestor","point":28}
+{"from":"아브 탈리브","from_type":"person","to":"마호메트","to_type":"person","rel":"child_of","point":28}
+{"from":"하디자","from_type":"person","to":"마호메트","to_type":"person","rel":"married","point":28}
+{"from":"마호메트","from_type":"person","to":"메카","to_type":"place","rel":"born","point":28}
+{"from":"마호메트","from_type":"person","to":"메디나","to_type":"place","rel":"fled_to","point":28}
+{"from":"마호메트","from_type":"person","to":"카바 신전","to_type":"place","rel":"conquered","point":28}
+{"from":"마호메트","from_type":"person","to":"코란","to_type":"work","rel":"authored","point":28}
+{"from":"아부 바크르","from_type":"person","to":"코란","to_type":"work","rel":"compiled","point":28}
+{"from":"아부 바크르","from_type":"person","to":"마호메트","to_type":"person","rel":"successor","point":28}
+{"from":"히즈라","from_type":"event","to":"메카","to_type":"place","rel":"occurred_at","point":28}
+{"from":"히즈라","from_type":"event","to":"마호메트","to_type":"person","rel":"participated_in","point":28}
+{"from":"마호메트","from_type":"person","to":"이슬람 세력","to_type":"group","rel":"founder","point":28}
+{"from":"이슬람 세력","from_type":"group","to":"시리아","to_type":"place","rel":"conquered","point":28}
+{"from":"이슬람 세력","from_type":"group","to":"사산조 페르시아","to_type":"place","rel":"conquered","point":28}
+{"from":"이슬람 세력","from_type":"group","to":"이집트","to_type":"place","rel":"conquered","point":28}
+{"from":"이슬람 세력","from_type":"group","to":"이베리아 반도","to_type":"place","rel":"conquered","point":28}
+{"from":"이슬람 세력","from_type":"group","to":"고트 왕국","to_type":"group","rel":"opposed","point":28}
+{"from":"아바스 왕조","from_type":"group","to":"바그다드","to_type":"place","rel":"ruled","point":28}
+{"from":"아바스 왕조","from_type":"group","to":"지혜의 관","to_type":"work","rel":"founded","point":28}
+{"from":"코란","from_type":"work","to":"중동 부족","to_type":"group","rel":"united","point":28}
+{"from":"유스티니아누스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":28}
+{"from":"고트족","from_type":"group","to":"로마 제국","to_type":"group","rel":"opposed","point":28}

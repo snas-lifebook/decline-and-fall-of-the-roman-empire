@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이오니아해 — 이오니아해 전역",
+    "description": "[대략] 오트란토 해협 이남에서 크레타 북쪽까지. 옥타비아누스와 안토니우스 함대가 격돌한 해역",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       16.5,
+       40.0
+      ],
+      [
+       17.5,
+       40.0
+      ],
+      [
+       19.0,
+       39.0
+      ],
+      [
+       20.5,
+       38.5
+      ],
+      [
+       21.5,
+       37.5
+      ],
+      [
+       21.0,
+       36.5
+      ],
+      [
+       19.5,
+       36.0
+      ],
+      [
+       18.0,
+       36.5
+      ],
+      [
+       16.5,
+       37.5
+      ],
+      [
+       15.5,
+       38.5
+      ],
+      [
+       16.0,
+       39.2
+      ],
+      [
+       16.5,
+       40.0
+      ],
+      [
+       16.5,
+       40.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "악티움",
+    "description": "[해전지] 기원전 31 — 옥타비아누스가 안토니우스·클레오파트라 연합함대를 격파한 결전지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.75,
+     38.95
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "코르키라",
+    "description": "[주요 도시]  — 이오니아해 북단의 섬, 이탈리아-그리스 항로의 중간 기착지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.92,
+     39.62
+    ]
+   }
+  }
+ ]
+}

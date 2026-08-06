@@ -1,0 +1,34 @@
+{"name":"네로","type":"person","aliases":["Nero"],"attrs":{"role":"emperor","reign":"54~68"},"points":[12],"desc":"제5대 황제. 초기에는 세네카의 섭정 아래 선정을 베풀었으나 점차 폭군이 되어 마침내 자살로 생을 마감했다."}
+{"name":"세네카","type":"person","aliases":["Seneca"],"attrs":{"role":"philosopher, regent"},"points":[12],"desc":"스토아 철학의 거장. 네로의 스승이자 초기 섭정자. 국고 횡령과 네로의 비행을 목격했으나 나중에 추방되고 사형되었다."}
+{"name":"아그리피나","type":"person","aliases":["Agrippina the Younger"],"attrs":{"role":"empress dowager"},"points":[12],"desc":"네로의 어머니. 처음에는 섭정자로 권력을 휘둘렀으나 네로에 의해 살해되었다."}
+{"name":"부루스","type":"person","aliases":["Burrhus"],"attrs":{"role":"prefect of the Praetorian Guard"},"points":[12],"desc":"친위대장. 초기에 세네카와 함께 섭정했다가 죽었다."}
+{"name":"브리탄니쿠스","type":"person","aliases":["Britannicus"],"attrs":{"role":"prince"},"points":[12],"desc":"클라우디우스의 아들. 네로에 의해 살해당했다."}
+{"name":"가이우스 페트로니우스","type":"person","aliases":["Petronius","Gaius Petronius"],"attrs":{"role":"author, socialite"},"points":[12],"desc":"소설 『사티리콘』의 저자. 로마 사교계의 총아로 네로에게 영향을 끼쳤다."}
+{"name":"옥타비아","type":"person","aliases":["Octavia"],"attrs":{"role":"empress"},"points":[12],"desc":"클라우디우스의 딸이자 네로의 첫 번째 황후. 정숙한 여인이었으나 포파이아의 질시로 살해당했다."}
+{"name":"악테","type":"person","aliases":["Acte"],"attrs":{"role":"concubine"},"points":[12],"desc":"네로의 측실. 어린 시절부터 네로의 유모로 지냈으며 충직한 여인이었다."}
+{"name":"포파이아","type":"person","aliases":["Poppaea"],"attrs":{"role":"empress"},"points":[12],"desc":"야심과 욕망이 많은 여인. 네로의 두 번째 황후. 유산으로 사망했다."}
+{"name":"오토","type":"person","aliases":["Otho"],"attrs":{"role":"nobleman"},"points":[12],"desc":"포파이아의 첫 번째 남편. 네로의 부호 친구."}
+{"name":"루카누스","type":"person","aliases":["Lucan"],"attrs":{"role":"poet"},"points":[12],"desc":"세네카의 조카이자 시인. 네로 암살 음모에 연루되어 사형당했다."}
+{"name":"스포루스","type":"person","aliases":["Sporus"],"attrs":{"role":"boy"},"points":[12],"desc":"포파이아를 쏙 빼닮은 미소년. 네로가 거세시킨 후 아내로 삼았다."}
+{"name":"갈바","type":"person","aliases":["Galba"],"attrs":{"role":"general, emperor"},"points":[12],"desc":"에스파냐 속주 총독. 원로원에 의해 새 황제로 주대되었다."}
+{"name":"빈덱스","type":"person","aliases":["Vindex"],"attrs":{"role":"governor"},"points":[12],"desc":"갈리아의 총독. 반란을 일으켰다."}
+{"name":"예수 그리스도","type":"person","aliases":["Jesus Christ"],"attrs":{},"points":[12],"desc":"기독교의 창시자. 티베리우스 시대에 팔레스티나에서 사형을 언도받았다."}
+{"name":"클라우디우스","type":"person","aliases":["Claudius"],"attrs":{"role":"emperor"},"points":[12],"desc":"네로의 양아버지이자 전 황제."}
+{"name":"티베리우스","type":"person","aliases":["Tiberius"],"attrs":{"role":"emperor"},"points":[12],"desc":"제2대 황제. 예수가 사형을 언도받은 시대의 황제."}
+{"name":"기번","type":"person","aliases":["Edward Gibbon"],"attrs":{"role":"historian"},"points":[12],"desc":"로마 제국 쇠망사의 저자. 네로 이후 재건된 로마에 대해 기술했다."}
+{"name":"티겔리누스","type":"person","aliases":["Tigellinus"],"attrs":{"role":"prefect of the Praetorian Guard"},"points":[12],"desc":"부루스의 후임 친위대장. 네로의 폭정을 거리낄 수 없었다."}
+{"name":"로마","type":"place","aliases":["Rome"],"attrs":{"region":"Italy"},"points":[12],"desc":"제국의 수도. 대화재로 초토화되었다가 네로에 의해 재건되었다."}
+{"name":"코르도바","type":"place","aliases":["Cordoba"],"attrs":{"region":"Spain"},"points":[12],"desc":"스페인의 도시. 세네카가 태어난 곳."}
+{"name":"코르시카","type":"place","aliases":["Corsica"],"attrs":{"region":"Mediterranean"},"points":[12],"desc":"지중해의 섬. 세네카가 유배되었던 곳."}
+{"name":"캄파니아","type":"place","aliases":["Campania"],"attrs":{"region":"Italy"},"points":[12],"desc":"이탈리아 지역. 세네카가 은거했던 곳."}
+{"name":"팔레스티나","type":"place","aliases":["Palestina","Palestine"],"attrs":{"region":"Middle East"},"points":[12],"desc":"중동 지역. 예수가 사형을 언도받은 곳."}
+{"name":"안티움","type":"place","aliases":["Antium"],"attrs":{"region":"Italy"},"points":[12],"desc":"이탈리아의 도시(현재의 안치오). 네로의 별장이 있었던 곳."}
+{"name":"갈리아","type":"place","aliases":["Gallia"],"attrs":{"region":"Europe"},"points":[12],"desc":"현재의 프랑스. 빈덱스가 반란을 일으킨 곳."}
+{"name":"이탈리아","type":"place","aliases":["Italia"],"attrs":{"region":"Europe"},"points":[12],"desc":"유럽의 반도. 갈바의 진군 목표."}
+{"name":"그리스","type":"place","aliases":["Greece"],"attrs":{"region":"Europe"},"points":[12],"desc":"유럽의 지역. 네로가 경기와 공연에 참가했던 곳."}
+{"name":"테베레 강","type":"place","aliases":["Tiber River"],"attrs":{"region":"Italy"},"points":[12],"desc":"로마를 흐르는 강. 네로가 투신하려고 시도했던 곳."}
+{"name":"기독교","type":"group","aliases":["Christianity"],"attrs":{"role":"religion"},"points":[12],"desc":"유대인들이 믿던 신흥 종교. 네로에 의해 대량 학살당했다."}
+{"name":"친위대","type":"group","aliases":["Praetorian Guard"],"attrs":{},"points":[12],"desc":"황제의 호위부대. 부루스를 거쳐 티겔리누스가 지휘했다."}
+{"name":"원로원","type":"group","aliases":["Senate"],"attrs":{},"points":[12],"desc":"로마의 의회. 갈바를 새 황제로 주대했다."}
+{"name":"사티리콘","type":"work","aliases":["Satyricon"],"attrs":{},"points":[12],"desc":"페트로니우스의 저작. 소설 형태의 문학작품."}
+{"name":"율리우스 클라우디우스 왕조","type":"period","aliases":["Julio-Claudian Dynasty"],"attrs":{},"points":[12],"desc":"네로의 사망으로 종말을 고한 왕조."}

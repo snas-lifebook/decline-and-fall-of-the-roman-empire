@@ -1,0 +1,238 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페르시아 — 이란 고원 (핵심지역)",
+    "description": "[확실] 아케메네스 이래 페르시아의 본토. 사산조까지 일관되게 왕조의 심장부였다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       44.0,
+       39.5
+      ],
+      [
+       48.0,
+       38.5
+      ],
+      [
+       53.0,
+       37.5
+      ],
+      [
+       60.0,
+       36.5
+      ],
+      [
+       63.0,
+       30.0
+      ],
+      [
+       61.0,
+       25.5
+      ],
+      [
+       56.0,
+       26.5
+      ],
+      [
+       50.0,
+       27.0
+      ],
+      [
+       48.0,
+       30.0
+      ],
+      [
+       45.0,
+       33.0
+      ],
+      [
+       44.0,
+       36.0
+      ],
+      [
+       44.0,
+       39.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페르시아 — 메소포타미아 (티그리스-유프라테스)",
+    "description": "[확실] 로마-페르시아 전쟁의 주무대. 지배권이 여러 차례 뒤바뀌었지만 지리적 경계 자체는 잘 알려져 있다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       38.0,
+       37.5
+      ],
+      [
+       42.0,
+       37.3
+      ],
+      [
+       45.5,
+       36.0
+      ],
+      [
+       47.5,
+       33.0
+      ],
+      [
+       48.5,
+       30.0
+      ],
+      [
+       47.0,
+       29.5
+      ],
+      [
+       44.5,
+       31.0
+      ],
+      [
+       41.5,
+       33.5
+      ],
+      [
+       39.0,
+       35.5
+      ],
+      [
+       38.0,
+       37.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페르시아 — 카프카스 방면 완충지대",
+    "description": "[불확실] 아르메니아·이베리아 등 로마-페르시아 사이 완충국. 통제권이 수시로 바뀐 지역이라 대략적으로만 표시",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       42.0,
+       41.5
+      ],
+      [
+       45.5,
+       41.5
+      ],
+      [
+       46.5,
+       39.5
+      ],
+      [
+       44.0,
+       38.5
+      ],
+      [
+       42.5,
+       39.5
+      ],
+      [
+       42.0,
+       41.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "크테시폰",
+    "description": "[겨울 수도] 기원전후~651 — 아르다시르 1세가 정비한 사산조의 겨울 수도, 여러 차례 로마군에 함락",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.58,
+     33.28
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에데사",
+    "description": "[전장] 260 — 발레리아누스가 샤푸르 1세에게 생포된 전투 무대",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.79,
+     37.15
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니시비스",
+    "description": "[국경 요새] 363 — 율리아누스 원정 이후 로마가 페르시아에 할양한 접경 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.22,
+     37.07
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페르세폴리스",
+    "description": "[옛 의례 수도] 아케메네스기 — 아케메네스 왕조의 상징적 수도, 사산조기에도 정통성의 근원으로 남음",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     52.89,
+     29.94
+    ]
+   }
+  }
+ ]
+}

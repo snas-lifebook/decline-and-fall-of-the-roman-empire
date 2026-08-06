@@ -1,0 +1,120 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "일리리쿰 — 일리리쿰 (달마티아+판노니아)",
+    "description": "[대략] 일리리아(종족 지역명)보다 내륙(판노니아)까지 포함해 더 넓지만, 동 일리리쿰(4세기 말 이후 그리스·다키아까지 아우르는 관구)보다는 좁다. 로마의 정식 속주 경계를 기준으로 삼았다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.9,
+       45.6
+      ],
+      [
+       16.0,
+       46.3
+      ],
+      [
+       19.0,
+       46.0
+      ],
+      [
+       20.5,
+       44.8
+      ],
+      [
+       21.0,
+       43.5
+      ],
+      [
+       20.0,
+       42.3
+      ],
+      [
+       19.3,
+       41.3
+      ],
+      [
+       18.5,
+       42.4
+      ],
+      [
+       16.4,
+       43.5
+      ],
+      [
+       14.5,
+       45.0
+      ],
+      [
+       13.9,
+       45.6
+      ],
+      [
+       13.9,
+       45.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "달마티아",
+    "description": "[속주 수도] 1세기 — 일리리쿰 속주의 행정 중심지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.48,
+     43.54
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "신기두눔",
+    "description": "[군사 거점] 3세기 — 판노니아 쪽 도나우 방위선의 요충지(현 베오그라드).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.46,
+     44.8
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에모나",
+    "description": "[북방 도시] 1세기 — 일리리쿰 북서쪽 관문(현 류블랴나).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.51,
+     46.06
+    ]
+   }
+  }
+ ]
+}

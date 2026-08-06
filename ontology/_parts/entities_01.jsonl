@@ -1,0 +1,30 @@
+{"name":"로물루스","type":"person","aliases":["Romulus"],"attrs":{"role":"founder","reign":"-753"},"points":[1],"desc":"로마의 건국자. 기원전 753년에 로마를 건국했다고 알려져 있다."}
+{"name":"타르퀴니우스 프리스쿠스","type":"person","aliases":["Tarquinius Priscus"],"attrs":{"role":"king","reign":"-615~-579"},"points":[1],"desc":"로마의 제5대 왕. 주변 부족과 대전투를 벌였다."}
+{"name":"타르퀴니우스 수페르부스","type":"person","aliases":["Tarquinius Superbus"],"attrs":{"role":"king","reign":"-534~-509"},"points":[1],"desc":"로마의 제7대 왕. 이탈리아 반도의 중앙부를 지배했다."}
+{"name":"로마","type":"place","aliases":[],"attrs":{"region":"이탈리아 반도"},"points":[1],"desc":"두 개의 언덕에서 출발하여 이탈리아 반도 전역을 장악한 도시국가."}
+{"name":"이탈리아 반도","type":"place","aliases":[],"attrs":{},"points":[1],"desc":"로마가 50년에 걸쳐 정복한 광대한 지역."}
+{"name":"캄파니아","type":"place","aliases":[],"attrs":{"region":"이탈리아 남부"},"points":[1],"desc":"풍요로운 지역으로 삼니움인의 주요 영토였으며 로마의 남부 전초지대가 됨."}
+{"name":"카푸아","type":"place","aliases":[],"attrs":{"region":"캄파니아"},"points":[1],"desc":"캄파니아의 도시. 처음에는 로마에 보호를 요청했으나 나중에 반기를 들었다."}
+{"name":"삼니움인","type":"group","aliases":[],"attrs":{},"points":[1],"desc":"이탈리아 중부 산악 지방의 부족들. 50년에 걸쳐 로마에 정복되었다."}
+{"name":"에트루리아인","type":"group","aliases":[],"attrs":{},"points":[1],"desc":"로마의 북쪽에서 기습을 가한 민족."}
+{"name":"헤르니키인","type":"group","aliases":[],"attrs":{},"points":[1],"desc":"로마의 남동쪽에서 기습을 가한 민족."}
+{"name":"라틴인","type":"group","aliases":[],"attrs":{},"points":[1],"desc":"로마의 동맹국들. 로마에 대항하여 연합을 이루었다."}
+{"name":"삼니움 전쟁","type":"event","aliases":[],"attrs":{"duration":"50년","period":"기원전 4세기"},"points":[1],"desc":"로마가 캄파니아에서 벌인 전쟁으로 50년에 걸쳐 이루어짐."}
+{"name":"라틴 동맹 전쟁","type":"event","aliases":[],"attrs":{},"points":[1],"desc":"로마에 불만을 품은 카푸아와 여러 라틴 시들이 벌인 전쟁."}
+{"name":"아펜니노 산맥","type":"place","aliases":[],"attrs":{},"points":[1],"desc":"로마가 처음으로 넘은 산맥. 그 너머로 아드리아해로 진출했다."}
+{"name":"아드리아해","type":"place","aliases":[],"attrs":{},"points":[1],"desc":"로마가 처음으로 진출한 해."}
+{"name":"타란토","type":"place","aliases":["타렌툼"],"attrs":{"region":"이탈리아 남부"},"points":[1],"desc":"그리스의 식민 도시. 로마의 협정 위반으로 분쟁의 발생지가 됨."}
+{"name":"에페이로스","type":"place","aliases":["에피루스"],"attrs":{"region":"그리스 북서부"},"points":[1],"desc":"피로스 왕의 본국."}
+{"name":"피로스","type":"person","aliases":[],"attrs":{"role":"king","origin":"에페이로스"},"points":[1],"desc":"알렉산드로스 대왕의 피를 이어받은 에페이로스 왕. 코끼리 부대로 로마 군에 승리했으나 결국 격파됨."}
+{"name":"알렉산드로스 대왕","type":"person","aliases":[],"attrs":{},"points":[1],"desc":"피로스의 조상. 인도 원정에서 코끼리 부대를 도입함."}
+{"name":"베네벤토 전투","type":"event","aliases":["베네벤툼 전투"],"attrs":{"year":"-275"},"points":[1],"desc":"기원전 275년 로마 군이 피로스를 격파한 전투. 피로스는 귀환했다."}
+{"name":"카르타고","type":"place","aliases":[],"attrs":{"region":"북아프리카"},"points":[1],"desc":"뛰어난 항해술을 가진 고대 페니키아인이 건설한 항만 도시 국가."}
+{"name":"그리스","type":"group","aliases":[],"attrs":{},"points":[1],"desc":"지중해 동쪽에서 해상권을 장악한 세력."}
+{"name":"시칠리아 섬","type":"place","aliases":[],"attrs":{},"points":[1],"desc":"로마와 카르타고가 교환한 섬."}
+{"name":"북아프리카","type":"place","aliases":[],"attrs":{},"points":[1],"desc":"카르타고가 지배하는 지역."}
+{"name":"지중해","type":"place","aliases":[],"attrs":{},"points":[1],"desc":"카르타고와 그리스가 절반씩 지배하던 해역."}
+{"name":"아피우스 클라우디우스 가이쿠스","type":"person","aliases":[],"attrs":{"role":"감찰관"},"points":[1],"desc":"로마와 카푸아 사이에 아피아 가도를 만든 감찰관."}
+{"name":"아피아 가도","type":"work","aliases":[],"attrs":{},"points":[1],"desc":"아피우스 클라우디우스 가이쿠스가 건설한 도로로 로마와 카푸아를 연결하고 브린디시와 타란토까지 연장됨."}
+{"name":"백인대회","type":"institution","aliases":[],"attrs":{},"points":[1],"desc":"상공업자를 중심으로 이루어진 초애국주의자 집단으로 마메르티니 용병대 지원을 결정함."}
+{"name":"원로원","type":"institution","aliases":[],"attrs":{},"points":[1],"desc":"로마의 정치 중심 기구."}
+{"name":"분할하여 통치","type":"institution","aliases":[],"attrs":{},"points":[1],"desc":"로마가 연합도시들을 제압한 후 취한 정책으로 각 도시마다 차별화된 조약을 맺어 상호 동맹을 방지함."}

@@ -1,0 +1,167 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대 — 유대·사마리아 핵심부",
+    "description": "[확실] 속주 성립 이래 안정적으로 유지된 중심 관할지. 카이사레아 마리티마가 총독 소재지",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.75,
+       32.55
+      ],
+      [
+       35.25,
+       32.55
+      ],
+      [
+       35.55,
+       32.2
+      ],
+      [
+       35.55,
+       31.85
+      ],
+      [
+       35.3,
+       31.45
+      ],
+      [
+       34.9,
+       31.35
+      ],
+      [
+       34.7,
+       31.75
+      ],
+      [
+       34.65,
+       32.2
+      ],
+      [
+       34.75,
+       32.55
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유대 — 이두매 남부",
+    "description": "[대략] 헤로데 가문 출신지 이두매. 남쪽 사막 경계는 유목 접경으로 불확실",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.3,
+       31.45
+      ],
+      [
+       35.55,
+       31.3
+      ],
+      [
+       35.3,
+       30.9
+      ],
+      [
+       34.9,
+       31.0
+      ],
+      [
+       34.9,
+       31.35
+      ],
+      [
+       35.3,
+       31.45
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카이사레아",
+    "description": "[속주 총독 소재지] 서기 6 — 속주 성립과 동시에 로마 총독의 실질적 행정 수도로 지정",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.89,
+     32.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예루살렘",
+    "description": "[종교적 중심지] 서기 6 — 유대교 성전이 있던 도시, 66~73년 유대 전쟁으로 70년 파괴",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2256,
+     31.7789
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마사다",
+    "description": "[요새] 서기 73 — 유대 전쟁 최후 항전지, 로마 공성전 이후 함락",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.3536,
+     31.3156
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예리코",
+    "description": "[주요도시] 서기 6 — 요르단강 계곡의 오아시스 도시, 헤로데 겨울궁전 소재지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.4444,
+     31.8667
+    ]
+   }
+  }
+ ]
+}

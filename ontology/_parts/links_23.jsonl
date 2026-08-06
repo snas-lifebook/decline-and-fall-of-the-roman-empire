@@ -1,0 +1,13 @@
+{"from":"훈족","from_type":"group","to":"동고트족","to_type":"group","rel":"opposed","point":23}
+{"from":"훈족","from_type":"group","to":"서고트족","to_type":"group","rel":"opposed","point":23}
+{"from":"서고트족","from_type":"group","to":"발렌스","to_type":"person","rel":"opposed","point":23}
+{"from":"동고트족","from_type":"group","to":"발렌스","to_type":"person","rel":"opposed","point":23}
+{"from":"서고트족","from_type":"group","to":"동고트족","to_type":"group","rel":"allied_with","point":23}
+{"from":"세바스티아누스","from_type":"person","to":"고트족","to_type":"group","rel":"opposed","point":23}
+{"from":"발렌스","from_type":"person","to":"고트족","to_type":"group","rel":"opposed","point":23}
+{"from":"한나라의 고조","from_type":"person","to":"흉노족","to_type":"group","rel":"opposed","point":23}
+{"from":"고후해","from_type":"person","to":"흉노족","to_type":"group","rel":"allied_with","point":23}
+{"from":"서고트족","from_type":"group","to":"도나우 강","to_type":"place","rel":"occurred_at","point":23}
+{"from":"발렌스","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":23}
+{"from":"게르만 민족의 대이동","from_type":"event","to":"도나우 강","to_type":"place","rel":"occurred_at","point":23}
+{"from":"하드리아노폴리스 전투","from_type":"event","to":"하드리아노폴리스","to_type":"place","rel":"occurred_at","point":23}

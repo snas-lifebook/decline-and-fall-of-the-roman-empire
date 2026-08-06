@@ -1,0 +1,92 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에페이로스 — 에페이로스",
+    "description": "[확실] 그리스(지명, 나라 전체)의 서북단 한 지역. 테살리아(동쪽, 핀두스 산맥 너머)와는 산맥으로 갈린다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       19.4,
+       40.6
+      ],
+      [
+       20.5,
+       40.6
+      ],
+      [
+       21.0,
+       39.8
+      ],
+      [
+       20.9,
+       39.0
+      ],
+      [
+       20.7,
+       38.9
+      ],
+      [
+       20.0,
+       39.3
+      ],
+      [
+       19.4,
+       39.9
+      ],
+      [
+       19.4,
+       40.6
+      ],
+      [
+       19.4,
+       40.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니코폴리스",
+    "description": "[주요 도시] 395~400 — 알라리크가 점령한 에페이로스의 거점 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.73,
+     39.02
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "디르하키움",
+    "description": "[항구도시] 1세기 — 폼페이우스가 카이사르에게 쫓겨 향한 아드리아해 항구(현 두러스).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.45,
+     41.32
+    ]
+   }
+  }
+ ]
+}

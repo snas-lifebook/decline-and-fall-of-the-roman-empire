@@ -1,0 +1,44 @@
+{
+  "name": "트레비아 강",
+  "subject": "트레비아 강",
+  "period": "기원전 218",
+  "summary": "북이탈리아 포 강의 지류. 얼어붙은 강물을 건너 진격한 로마 군이 한니발의 매복에 대패한 전장이다.",
+  "waypoints": [
+    {
+      "place": "트레비아 강 발원지(리구리아 사면)",
+      "lat": 44.58,
+      "lon": 9.35,
+      "event": "아펜니노 산맥 리구리아 쪽 사면에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "산속 계곡 구간",
+      "lat": 44.75,
+      "lon": 9.45,
+      "event": "산지에서 평야로 내려오는 상류 계곡 구간",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "트레비아 강",
+      "lat": 44.9885,
+      "lon": 9.5674,
+      "event": "기원전 218년 12월, 집정관 셈프로니우스가 얼어붙은 이 강을 건너 진격했다가 한니발의 매복에 걸려 로마 군 약 2만 명 중 1만 명만 생존한 대패의 현장",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "포 강 합류부(피아첸차)",
+      "lat": 45.05,
+      "lon": 9.68,
+      "event": "포 강 본류와 합류하며 물줄기를 마친다",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    }
+  ],
+  "sources": [
+    "Polybius: Histories (Book III)",
+    "Wikipedia: Battle of the Trebia"
+  ]
+}

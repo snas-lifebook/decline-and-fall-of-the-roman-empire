@@ -1,0 +1,72 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카프리 섬 — 카프리 본섬",
+    "description": "[확실] 나폴리만 입구의 소도. 티베리우스가 만년을 보낸 은둔지",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       14.19,
+       40.57
+      ],
+      [
+       14.25,
+       40.56
+      ],
+      [
+       14.28,
+       40.55
+      ],
+      [
+       14.25,
+       40.53
+      ],
+      [
+       14.2,
+       40.54
+      ],
+      [
+       14.18,
+       40.56
+      ],
+      [
+       14.19,
+       40.57
+      ],
+      [
+       14.19,
+       40.57
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카프리 섬",
+    "description": "[황제 별장] 19 — 티베리우스가 은둔 생활을 한 별장 터",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.24,
+     40.56
+    ]
+   }
+  }
+ ]
+}

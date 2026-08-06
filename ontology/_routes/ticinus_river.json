@@ -1,0 +1,44 @@
+{
+  "name": "티키누스 강",
+  "subject": "티키누스 강",
+  "period": "기원전 218",
+  "summary": "북이탈리아를 흐르는 포 강의 지류. 제2차 포에니 전쟁에서 로마와 카르타고가 처음으로 맞붙은 전장이다.",
+  "waypoints": [
+    {
+      "place": "티치노 강 발원지(고트하르트)",
+      "lat": 46.53,
+      "lon": 8.57,
+      "event": "스위스 알프스 고트하르트 남쪽 사면에서 발원(현대 티치노 강)",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "마조레 호",
+      "lat": 45.95,
+      "lon": 8.65,
+      "event": "마조레 호를 거쳐 남류한다",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "티키누스 강",
+      "lat": 45.2,
+      "lon": 8.9,
+      "event": "기원전 218년 한니발과 로마 집정관 스키피오가 처음 맞붙은 전장. 한니발의 누미디아 기병대가 로마 기병대를 격파하고 스키피오가 부상당했다",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "파비아",
+      "lat": 45.1833,
+      "lon": 9.15,
+      "event": "포 강 본류와 합류하는 지점(옛 티키눔)",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Polybius: Histories (Book III)",
+    "Livy: History of Rome (Book XXI)"
+  ]
+}

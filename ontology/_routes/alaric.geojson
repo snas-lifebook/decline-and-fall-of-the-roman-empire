@@ -1,0 +1,259 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알라리크의 로마 약탈",
+    "period": "395~410"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      25.0,
+      43.7
+     ],
+     [
+      23.7275,
+      37.9838
+     ],
+     [
+      22.5014,
+      38.4822
+     ],
+     [
+      20.4,
+      39.4
+     ],
+     [
+      16.4831,
+      43.5394
+     ],
+     [
+      9.1895,
+      45.4643
+     ],
+     [
+      8.2,
+      44.7
+     ],
+     [
+      12.5754,
+      44.0603
+     ],
+     [
+      12.4862,
+      41.8917
+     ],
+     [
+      14.95,
+      40.75
+     ],
+     [
+      16.2,
+      39.3
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니코폴리스",
+    "year": 395,
+    "description": "[확실] 395 — 테오도시우스 사후 서고트족 반란, 동로마와의 관계 단절",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.0,
+     43.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아테네",
+    "year": 396,
+    "description": "[확실] 396 — 그리스 남진, 아테네는 랜섬 지불로 파괴 면함",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.7275,
+     37.9838
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "델피",
+    "year": 396,
+    "description": "[대략] 396 — 그리스 중부 침략",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.5014,
+     38.4822
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에페이로스",
+    "year": 397,
+    "description": "[대략] 397 — 스티리코의 추격으로 산악지역에 포위, 협상으로 철수",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.4,
+     39.4
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "일리리쿰",
+    "year": 397,
+    "description": "[대략] 397 — 동로마 제국과 협상 후 포에데라투스 신분으로 주둔",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.4831,
+     43.5394
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "밀라노",
+    "year": 401,
+    "description": "[확실] 401 — 이탈리아 재침략, 메디올라눔 포위",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1895,
+     45.4643
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "폴렌티아",
+    "year": 402,
+    "description": "[대략] 402 — 스티리코에게 전투에서 패배, 아내·자녀 상실",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.2,
+     44.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "리미니",
+    "year": 408,
+    "description": "[확실] 408 — 알프스 넘어 이탈리아 재진입, 약탈",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.5754,
+     44.0603
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "year": 410,
+    "description": "[확실] 410 — 8월 24일 살라리안 문으로 진입, 3일간 약탈. 408-410년 세 차례 포위 포함",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4862,
+     41.8917
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "캄파니아",
+    "year": 410,
+    "description": "[확실] 410 — 로마 약탈 후 남진, 남부 이탈리아 약탈",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.95,
+     40.75
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘센티아",
+    "year": 410,
+    "description": "[불확실] 410 — 말라리아로 사망, 부센토 강에 묻혔다는 전승",
+    "confidence": "low",
+    "marker-color": "#c62828",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.2,
+     39.3
+    ]
+   }
+  }
+ ]
+}

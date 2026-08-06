@@ -1,0 +1,15 @@
+{"from":"고트족","from_type":"group","to":"로마 군","to_type":"group","rel":"opposed","point":17}
+{"from":"고트족","from_type":"group","to":"다키아","to_type":"place","rel":"participated_in","point":17}
+{"from":"고트족","from_type":"group","to":"우크라이나","to_type":"place","rel":"occurred_at","point":17}
+{"from":"고트족","from_type":"group","to":"필리포폴리스","to_type":"place","rel":"participated_in","point":17}
+{"from":"데키우스","from_type":"person","to":"늪지대 전투","to_type":"event","rel":"participated_in","point":17}
+{"from":"갈루스","from_type":"person","to":"호스틸리아누스","to_type":"person","rel":"succeeded","point":17}
+{"from":"호스틸리아누스","from_type":"person","to":"갈루스","to_type":"person","rel":"succeeded","point":17}
+{"from":"아이밀리아누스","from_type":"person","to":"갈루스","to_type":"person","rel":"succeeded","point":17}
+{"from":"갈루스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":17}
+{"from":"트라야누스","from_type":"person","to":"다키아 정복","to_type":"event","rel":"participated_in","point":17}
+{"from":"필리포폴리스","from_type":"place","to":"필리포폴리스 함락","to_type":"event","rel":"occurred_at","point":17}
+{"from":"늪지대 전투","from_type":"event","to":"포룸 테레브로니","to_type":"place","rel":"occurred_at","point":17}
+{"from":"제2차 이동기","from_type":"event","to":"고트족","to_type":"group","rel":"participated_in","point":17}
+{"from":"고트족","from_type":"group","to":"반달족","to_type":"group","rel":"allied_with","point":17}
+{"from":"필리포폴리스 함락","from_type":"event","to":"필리포폴리스","to_type":"place","rel":"occurred_at","point":17}

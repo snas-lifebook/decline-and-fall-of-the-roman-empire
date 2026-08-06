@@ -1,0 +1,179 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아키살피나 — 키스파다나 (Gallia Cispadana, 포강 이남)",
+    "description": "[확실] 포강과 아펜니노 산맥 사이, 에밀리아 지역. 기원전 190년대 정복 완료",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       9.2,
+       44.4
+      ],
+      [
+       9.7,
+       45.1
+      ],
+      [
+       11.3,
+       44.9
+      ],
+      [
+       12.3,
+       44.5
+      ],
+      [
+       11.6,
+       44.1
+      ],
+      [
+       10.0,
+       44.0
+      ],
+      [
+       9.2,
+       44.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈리아키살피나 — 트란스파다나 (Gallia Transpadana, 포강 이북)",
+    "description": "[확실] 포강~알프스 산기슭, 밀라노·토리노·베로나 포함. 기원전 49년 카이사르가 완전한 로마 시민권 부여",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.5,
+       45.0
+      ],
+      [
+       7.0,
+       45.9
+      ],
+      [
+       8.9,
+       46.5
+      ],
+      [
+       10.5,
+       46.5
+      ],
+      [
+       12.3,
+       46.6
+      ],
+      [
+       13.0,
+       46.0
+      ],
+      [
+       12.3,
+       44.9
+      ],
+      [
+       9.7,
+       45.1
+      ],
+      [
+       9.2,
+       44.4
+      ],
+      [
+       8.0,
+       44.4
+      ],
+      [
+       7.5,
+       45.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "밀라노",
+    "description": "[트란스파다나 중심지] 기원전 222 — 로마의 인수브레스족 정복, 이후 밀라노로 성장",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.19,
+     45.4642
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "베로나",
+    "description": "[주요 도시] 기원전 89 — 라틴 시민권 부여",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.9916,
+     45.4384
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "보노니아",
+    "description": "[키스파다나 중심지] 기원전 189 — 로마 식민시 건설(볼로냐)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.3426,
+     44.4949
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "플라켄티아",
+    "description": "[요새 식민시] 기원전 218 — 제2차 포에니 전쟁 대비 건설된 라틴 식민시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.6929,
+     45.0526
+    ]
+   }
+  }
+ ]
+}

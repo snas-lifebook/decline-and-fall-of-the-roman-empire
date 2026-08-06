@@ -1,0 +1,20 @@
+{"name":"에스파냐","lat":40.4636,"lon":-3.7490,"ancient":"Hispania","modern":"스페인","kind":"region","confidence":"high","source":"Pleiades"}
+{"name":"이탈리아","lat":42.8333,"lon":12.8333,"ancient":"Italia","modern":"이탈리아","kind":"region","confidence":"high","source":"Wikipedia: Italia"}
+{"name":"로도스 섬","lat":36.1667,"lon":28.0000,"ancient":"Rhodos","modern":"로도스, 그리스","kind":"island","confidence":"high","source":"GPS coordinates"}
+{"name":"에페이로스","lat":39.4000,"lon":20.4000,"ancient":"Epiros","modern":"에페이로스, 그리스","kind":"region","confidence":"high","source":"ToposText"}
+{"name":"메소포타미아","lat":33.7000,"lon":43.5000,"ancient":"Mesopotamia","modern":"이라크·시리아","kind":"region","confidence":"high","source":"GPS coordinates"}
+{"name":"지중해","lat":35.0000,"lon":18.0000,"ancient":"Mare Mediterraneum","modern":"지중해","kind":"sea","confidence":"high","source":"GPS coordinates"}
+{"name":"팔레스티나","lat":31.9521,"lon":35.2332,"ancient":"Palestina","modern":"팔레스타인","kind":"region","confidence":"high","source":"Pleiades: Gaza"}
+{"name":"달마티아","lat":43.5396,"lon":16.4834,"ancient":"Dalmatia","modern":"달마티아, 크로아티아","kind":"region","confidence":"high","source":"Pleiades 981522"}
+{"name":"루마니아","lat":44.5000,"lon":25.0000,"ancient":"Dacia","modern":"루마니아","kind":"region","confidence":"high","source":"ToposText"}
+{"name":"모이시아","lat":43.5000,"lon":23.5000,"ancient":"Moesia","modern":"불가리아·세르비아","kind":"region","confidence":"medium","source":"Wikipedia: Moesia"}
+{"name":"비수아 강","lat":54.3617,"lon":18.9519,"ancient":"Vistula","modern":"비수와 강, 폴란드","kind":"river","confidence":"high","source":"Wikipedia: Vistula mouth"}
+{"name":"셀리누스","lat":37.5860,"lon":12.8286,"ancient":"Selinus","modern":"셀리눈테, 시칠리아","kind":"city","confidence":"high","source":"Pleiades 462489"}
+{"name":"아풀리아","lat":41.0052,"lon":16.5077,"ancient":"Apulia","modern":"아풀리아, 이탈리아","kind":"region","confidence":"high","source":"GPS coordinates"}
+{"name":"오데르 강","lat":53.6720,"lon":14.5236,"ancient":"Viadrus","modern":"오데르 강, 폴란드","kind":"river","confidence":"high","source":"Wikipedia: Oder mouth"}
+{"name":"유프라테스 강","lat":31.0050,"lon":47.4419,"ancient":"Euphrates","modern":"유프라테스 강, 이라크","kind":"river","confidence":"high","source":"Wikipedia: Euphrates"}
+{"name":"카바 신전","lat":21.4225,"lon":39.8223,"ancient":"","modern":"메카, 사우디아라비아","kind":"building","confidence":"high","source":"GPS coordinates"}
+{"name":"키르키스 고원","lat":42.0000,"lon":80.0000,"ancient":"","modern":"톈산, 키르기스스탄","kind":"mountain","confidence":"medium","source":"Wikipedia: Tian Shan"}
+{"name":"테살리아","lat":39.4000,"lon":22.3000,"ancient":"Thessalia","modern":"테살리아, 그리스","kind":"region","confidence":"high","source":"ToposText"}
+{"name":"포 강","lat":44.9687,"lon":12.5415,"ancient":"Padus","modern":"포 강, 이탈리아","kind":"river","confidence":"high","source":"GPS coordinates"}
+{"name":"하이모이시아 속주","lat":41.6670,"lon":26.5670,"ancient":"Haemimontus","modern":"에디르네, 튀르키예","kind":"region","confidence":"high","source":"Wikipedia: Adrianopolis"}

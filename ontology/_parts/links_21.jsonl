@@ -1,0 +1,12 @@
+{"from":"콘스탄티누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":21}
+{"from":"콘스탄티누스","from_type":"person","to":"막센티우스","to_type":"person","rel":"opposed","point":21}
+{"from":"콘스탄티누스","from_type":"person","to":"리키니우스","to_type":"person","rel":"opposed","point":21}
+{"from":"콘스탄티누스","from_type":"person","to":"비잔티움","to_type":"place","rel":"occurred_at","point":21}
+{"from":"콘스탄티누스","from_type":"person","to":"콘스탄티노플","to_type":"place","rel":"ruled","point":21}
+{"from":"크리스푸스","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"child_of","point":21}
+{"from":"크리스푸스","from_type":"person","to":"리키니우스","from_type":"person","rel":"opposed","point":21}
+{"from":"콘스탄티아","from_type":"person","to":"콘스탄티누스","to_type":"person","rel":"child_of","point":21}
+{"from":"콘스탄티아","from_type":"person","to":"리키니우스","to_type":"person","rel":"allied_with","point":21}
+{"from":"리키니우스","from_type":"person","to":"비잔티움","to_type":"place","rel":"occurred_at","point":21}
+{"from":"마르티니아누스","from_type":"person","to":"리키니우스","to_type":"person","rel":"allied_with","point":21}
+{"from":"마르티니아누스","from_type":"person","to":"비잔티움","to_type":"place","rel":"occurred_at","point":21}

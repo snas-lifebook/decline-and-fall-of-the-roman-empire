@@ -1,0 +1,116 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아풀리아 — 아풀리아 (가르가노~살렌토 반도)",
+    "description": "[확실] 아드리아해와 이오니아해 사이의 좁고 긴 지역. 오늘날 풀리아 주와 대체로 겹침",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       15.0,
+       41.7
+      ],
+      [
+       16.2,
+       41.9
+      ],
+      [
+       18.0,
+       40.5
+      ],
+      [
+       17.9,
+       40.0
+      ],
+      [
+       16.6,
+       40.4
+      ],
+      [
+       15.4,
+       41.0
+      ],
+      [
+       15.0,
+       41.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브린디시",
+    "description": "[주요 항구] 기원전 244 — 라틴 식민시 건설, 아피아 가도의 동쪽 종점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.937,
+     40.632
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오판토 강",
+    "description": "[지역 도시] 기원전 216 — 칸나이 패전 후 로마군 잔병의 집결지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.0662,
+     41.2199
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "칸나이 평원",
+    "description": "[전장] 기원전 216 — 한니발이 로마 8개 군단을 포위 섬멸한 전투 현장",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.133,
+     41.306
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "바리움",
+    "description": "[항구도시] 기원전 3세기 — 아드리아해 무역 거점(현 바리)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.8719,
+     41.1171
+    ]
+   }
+  }
+ ]
+}

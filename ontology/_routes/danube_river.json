@@ -1,0 +1,69 @@
+{
+  "name": "도나우 강",
+  "subject": "도나우 강",
+  "period": "기원전 1세기~서기 5세기",
+  "summary": "로마 제국의 북부 국경선. 다키아와 모이시아를 나누고, 콘스탄티누스의 수도 입지 선정 기준이 되었으며, 376년 서고트족이 건너며 게르만 민족대이동의 관문이 되었다.",
+  "waypoints": [
+    {
+      "place": "도나우 강 발원지(흑림)",
+      "lat": 47.68,
+      "lon": 8.15,
+      "event": "독일 흑림(슈바르츠발트)에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "빈(빈도보나)",
+      "lat": 48.21,
+      "lon": 16.37,
+      "event": "로마 판노니아 속주의 군단기지 빈도보나",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "도나우 강",
+      "lat": 48.0,
+      "lon": 17.0,
+      "event": "고대 다누비우스/이스트루스 강의 대표점으로 잡은 좌표. 실제 로마사에서 중요했던 구간(다키아·모이시아 국경)은 이보다 하류이므로 이 좌표를 문자 그대로 믿지는 말 것",
+      "in_gazetteer": true,
+      "confidence": "low"
+    },
+    {
+      "place": "부다페스트(아퀸쿰)",
+      "lat": 47.5,
+      "lon": 19.05,
+      "event": "판노니아 속주 수도 아퀸쿰",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "벨그라드(싱기두눔)",
+      "lat": 44.82,
+      "lon": 20.46,
+      "event": "모이시아 속주 군단기지. 다키아와 모이시아를 가르는 강의 요충",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "콘스탄차 인근 하류",
+      "lat": 44.18,
+      "lon": 28.65,
+      "event": "콘스탄티누스가 새 수도 입지를 정할 때 강 건너 야만족을 견제할 기준으로 삼은 하류 구간",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "흑해 하구(도나우 삼각주)",
+      "lat": 45.24,
+      "lon": 29.75,
+      "event": "로마 제국의 최북단 국경선이 여기서 끝난다. 서기 376년 서고트족이 이 강을 건너 로마 영내로 대거 유입되며 게르만 민족대이동이 본격화됐다",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Danube",
+    "Livius: Danubius",
+    "Ammianus Marcellinus (376년 서고트족 도하)"
+  ]
+}

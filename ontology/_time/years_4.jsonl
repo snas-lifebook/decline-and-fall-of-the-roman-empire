@@ -1,0 +1,39 @@
+{"point":4,"from":"스키피오 아이밀리아누스","rel":"참전·관여","to":"제3차 포에니 전쟁","from_year":-149,"to_year":-146,"basis":"chronology"}
+{"point":4,"from":"마시니사","rel":"적대","to":"카르타고","from_year":-150,"to_year":-148,"basis":"chronology"}
+{"point":4,"from":"로마","rel":"적대","to":"카르타고","from_year":-149,"to_year":-146,"basis":"chronology"}
+{"point":4,"from":"스키피오 아이밀리아누스","rel":"통치","to":"카르타고","from_year":-149,"to_year":-146,"basis":"chronology"}
+{"point":4,"from":"하스드루발","rel":"통치","to":"카르타고","from_year":-149,"to_year":-146,"basis":"chronology"}
+{"point":4,"from":"로마","rel":"통치","to":"아프리카","from_year":-146,"to_year":null,"basis":"chronology"}
+{"point":10,"from":"아우구스투스","rel":"통치","to":"로마","from_year":-27,"to_year":14,"basis":"text"}
+{"point":16,"from":"루킬라","rel":"적대","to":"콤모두스","from_year":183,"to_year":183,"basis":"text"}
+{"point":16,"from":"루킬라","rel":"참전·관여","to":"황제 암살 시도","from_year":183,"to_year":183,"basis":"text"}
+{"point":16,"from":"콤모두스","rel":"참전·관여","to":"원로원 대숙청","from_year":183,"to_year":192,"basis":"inferred"}
+{"point":16,"from":"콤모두스","rel":"참전·관여","to":"검투기 경기","from_year":177,"to_year":192,"basis":"chronology"}
+{"point":16,"from":"콤모두스","rel":"적대","to":"원로원","from_year":183,"to_year":192,"basis":"inferred"}
+{"point":16,"from":"마르키아","rel":"적대","to":"콤모두스","from_year":192,"to_year":192,"basis":"inferred"}
+{"point":16,"from":"에클렉투스","rel":"적대","to":"콤모두스","from_year":192,"to_year":192,"basis":"inferred"}
+{"point":16,"from":"라이투스","rel":"적대","to":"콤모두스","from_year":192,"to_year":192,"basis":"inferred"}
+{"point":16,"from":"페르티낙스","rel":"계승","to":"콤모두스","from_year":192,"to_year":192,"basis":"text"}
+{"point":16,"from":"셉티미우스 세베루스","rel":"계승","to":"페르티낙스","from_year":192,"to_year":192,"basis":"text"}
+{"point":16,"from":"콤모두스","rel":"통치","to":"로마","from_year":177,"to_year":192,"basis":"text"}
+{"point":22,"from":"발렌티니아누스","rel":"계승","to":"요비아누스","from_year":364,"to_year":364,"basis":"text"}
+{"point":22,"from":"발렌스","rel":"소속","to":"공치제제","from_year":364,"to_year":378,"basis":"text"}
+{"point":22,"from":"발렌스","rel":"통치","to":"콘스탄티노플","from_year":364,"to_year":378,"basis":"text"}
+{"point":22,"from":"발렌티니아누스","rel":"통치","to":"로마","from_year":364,"to_year":375,"basis":"text"}
+{"point":22,"from":"콘스탄티누스","rel":"통치","to":"로마","from_year":306,"to_year":337,"basis":"chronology"}
+{"point":22,"from":"프로코피우스","rel":"적대","to":"발렌스","from_year":365,"to_year":366,"basis":"inferred"}
+{"point":22,"from":"율리아누스","rel":"적대","to":"페르시아","from_year":363,"to_year":363,"basis":"text"}
+{"point":22,"from":"발렌스","rel":"동맹","to":"아리우스파","from_year":364,"to_year":378,"basis":"inferred"}
+{"point":22,"from":"테오도시우스 1세","rel":"적대","to":"아리우스파","from_year":379,"to_year":395,"basis":"chronology"}
+{"point":28,"from":"마호메트","rel":"정복","to":"카바 신전","from_year":630,"to_year":630,"basis":"text"}
+{"point":28,"from":"아부 바크르","rel":"세움·지음","to":"코란","from_year":632,"to_year":634,"basis":"chronology"}
+{"point":28,"from":"아부 바크르","rel":"계승","to":"마호메트","from_year":632,"to_year":632,"basis":"chronology"}
+{"point":28,"from":"히즈라","rel":"참전·관여","to":"마호메트","from_year":622,"to_year":622,"basis":"text"}
+{"point":28,"from":"마호메트","rel":"세움·지음","to":"이슬람 세력","from_year":622,"to_year":632,"basis":"chronology"}
+{"point":28,"from":"이슬람 세력","rel":"정복","to":"시리아","from_year":634,"to_year":638,"basis":"chronology"}
+{"point":28,"from":"이슬람 세력","rel":"정복","to":"사산조 페르시아","from_year":633,"to_year":650,"basis":"chronology"}
+{"point":28,"from":"이슬람 세력","rel":"정복","to":"이집트","from_year":641,"to_year":642,"basis":"chronology"}
+{"point":28,"from":"이슬람 세력","rel":"정복","to":"에스파냐","from_year":711,"to_year":718,"basis":"chronology"}
+{"point":28,"from":"아바스 왕조","rel":"통치","to":"바그다드","from_year":750,"to_year":null,"basis":"chronology"}
+{"point":28,"from":"유스티니아누스","rel":"통치","to":"로마","from_year":527,"to_year":565,"basis":"chronology"}
+{"point":28,"from":"고트족","rel":"적대","to":"로마 제국","from_year":535,"to_year":554,"basis":"chronology"}

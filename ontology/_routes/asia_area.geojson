@@ -1,0 +1,128 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아시아 — 아시아 속주 (소아시아 서부)",
+    "description": "[대략] 중요: 대륙 '아시아'가 아니라 로마 속주 이름이다. 현대 국가 터키(아나톨리아 전역)보다 훨씬 좁아 서쪽 해안 지대에 한정된다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       26.6,
+       39.6
+      ],
+      [
+       28.0,
+       40.4
+      ],
+      [
+       29.5,
+       39.5
+      ],
+      [
+       30.5,
+       38.5
+      ],
+      [
+       29.9,
+       37.2
+      ],
+      [
+       28.5,
+       36.7
+      ],
+      [
+       27.0,
+       37.0
+      ],
+      [
+       26.7,
+       38.4
+      ],
+      [
+       26.6,
+       39.6
+      ],
+      [
+       26.6,
+       39.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아시아",
+    "description": "[속주 대표 도시] 1~4세기 — 아시아 속주의 상업·종교 중심지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.34,
+     37.94
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스미르나",
+    "description": "[주요 도시] 1~4세기 — 이오니아 해안의 주요 항구도시(현 이즈미르).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.14,
+     38.42
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페르가몬",
+    "description": "[주요 도시] 1~4세기 — 옛 페르가몬 왕국의 수도, 속주의 문화 중심지.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.18,
+     39.12
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사르디스",
+    "description": "[주요 도시] 1~4세기 — 리디아 내륙의 대도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.04,
+     38.49
+    ]
+   }
+  }
+ ]
+}

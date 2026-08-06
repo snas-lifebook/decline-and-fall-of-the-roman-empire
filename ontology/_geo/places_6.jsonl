@@ -1,0 +1,19 @@
+{"name":"브리타니아","lat":51.5133,"lon":-0.0889,"ancient":"Britannia","modern":"영국","kind":"region","confidence":"high","source":"Pleiades 981513"}
+{"name":"로마 제국","lat":41.9028,"lon":12.4964,"ancient":"Imperium Romanum","modern":"유럽·북아프리카·중동","kind":"region","confidence":"low","source":"Wikipedia"}
+{"name":"북아프리카","lat":35.0,"lon":5.0,"ancient":"Africa Romana","modern":"알제리·튀니지·리비아","kind":"region","confidence":"low","source":"미확인"}
+{"name":"흑해","lat":43.0,"lon":36.0,"ancient":"Pontos Euxeinos","modern":"튀르키예·러시아·조지아 등","kind":"sea","confidence":"medium","source":"Wikipedia"}
+{"name":"아드리아해","lat":43.5,"lon":16.0,"ancient":"Mare Adriaticum","modern":"이탈리아·알바니아·크로아티아","kind":"sea","confidence":"medium","source":"Wikipedia"}
+{"name":"코르도바","lat":37.8847,"lon":-4.7764,"ancient":"Corduba","modern":"코르도바, 스페인","kind":"city","confidence":"high","source":"ToposText"}
+{"name":"갈리아 속주","lat":46.2,"lon":2.2,"ancient":"Gallia Transalpina","modern":"프랑스","kind":"region","confidence":"low","source":"Wikipedia"}
+{"name":"동 일리리쿰","lat":44.5,"lon":18.0,"ancient":"Illyricum Orientale","modern":"보스니아·세르비아","kind":"region","confidence":"low","source":"미확인"}
+{"name":"마르마라해","lat":40.8,"lon":28.0,"ancient":"Propontis","modern":"튀르키예","kind":"sea","confidence":"medium","source":"Wikipedia"}
+{"name":"발칸","lat":42.5,"lon":21.0,"ancient":"Haemus Mons","modern":"발칸 반도, 동유럽","kind":"mountain","confidence":"medium","source":"Wikipedia"}
+{"name":"사군툼","lat":39.68,"lon":-0.2783,"ancient":"Saguntum","modern":"사곤토, 스페인","kind":"city","confidence":"high","source":"ToposText"}
+{"name":"스폴레토","lat":42.7352,"lon":12.7403,"ancient":"Spoletium","modern":"스폴레토, 이탈리아","kind":"city","confidence":"high","source":"ToposText"}
+{"name":"알레시아","lat":47.5392,"lon":4.5006,"ancient":"Alesia","modern":"알리세-생트-렌, 프랑스","kind":"city","confidence":"high","source":"Wikipedia"}
+{"name":"요르단 강","lat":33.1875,"lon":35.6194,"ancient":"Iordanes Flumen","modern":"이스라엘·팔레스타인·요르단","kind":"river","confidence":"high","source":"Wikipedia"}
+{"name":"일리리아","lat":43.8044,"lon":17.3294,"ancient":"Illyricum","modern":"알바니아·크로아티아·보스니아","kind":"region","confidence":"medium","source":"Wikipedia"}
+{"name":"카파도키아","lat":38.7225,"lon":35.4875,"ancient":"Cappadocia","modern":"카이세리, 튀르키예","kind":"region","confidence":"high","source":"Wikipedia"}
+{"name":"타르수스","lat":36.9122,"lon":34.8958,"ancient":"Tarsus","modern":"타르수스, 튀르키예","kind":"city","confidence":"high","source":"ToposText"}
+{"name":"트란실바니아","lat":46.3,"lon":24.5,"ancient":"Transylvania","modern":"클루즈나포카, 루마니아","kind":"region","confidence":"medium","source":"Wikipedia"}
+{"name":"폴란드","lat":51.9,"lon":19.1,"ancient":"","modern":"폴란드","kind":"region","confidence":"low","source":"미확인"}

@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테베레 강",
+    "period": "기원전 1세기~서기 1세기"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      11.98,
+      43.78
+     ],
+     [
+      12.11,
+      42.72
+     ],
+     [
+      12.4755,
+      41.8835
+     ],
+     [
+      12.29,
+      41.73
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테베레 강 발원지(몬테 포르마)",
+    "year": null,
+    "description": "[대략] ? — 아펜니노 산맥 몬테 포르마 인근에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.98,
+     43.78
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오르비에토 인근",
+    "year": null,
+    "description": "[대략] ? — 에트루리아 지역을 관통하는 상류 구간",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.11,
+     42.72
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테베레 강",
+    "year": null,
+    "description": "[확실] ? — 로마 시를 관통하는 강. 클레오파트라가 카이사르 방문 당시 강변 별장에 머물렀고, 네로가 반란 소식에 투신을 고려했으며, 69년 비텔리우스의 시신이 이 강에 던져졌다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4755,
+     41.8835
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오스티아",
+    "year": null,
+    "description": "[확실] ? — 로마의 관문 항구. 지중해 전역에서 온 곡물선이 이 하구를 거쳐 로마로 물자를 실어 날랐다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.29,
+     41.73
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "푸키누스 호수 — 푸키누스 호수 전역(간척 이전 범위)",
+    "description": "[확실] 클라우디우스가 41~52년 노예 3만 명을 동원해 11년간 배수공사를 벌인 호수. 배수로 완공 기념으로 이 호수에서 모의 해전(나우마키아)이 열렸다. 19세기 말 최종 간척되어 현재는 완전히 사라진 호수다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.48,
+       41.97
+      ],
+      [
+       13.5,
+       42.03
+      ],
+      [
+       13.55,
+       42.06
+      ],
+      [
+       13.61,
+       42.03
+      ],
+      [
+       13.63,
+       41.99
+      ],
+      [
+       13.6,
+       41.95
+      ],
+      [
+       13.54,
+       41.93
+      ],
+      [
+       13.49,
+       41.95
+      ],
+      [
+       13.48,
+       41.97
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아베자노",
+    "description": "[호숫가 도시]  — 간척된 호수 분지에 자리한 현대 도시. 클라우디우스 간척공사 현장 인근",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.42,
+     41.98
+    ]
+   }
+  }
+ ]
+}

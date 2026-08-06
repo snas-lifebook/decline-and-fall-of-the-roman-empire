@@ -1,0 +1,56 @@
+{"from":"베스파시아누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"티투스","from_type":"person","to":"베스파시아누스","to_type":"person","rel":"child_of","point":15}
+{"from":"티투스","from_type":"person","to":"유대","to_type":"place","rel":"participated_in","point":15}
+{"from":"도미티아누스","from_type":"person","to":"티투스","to_type":"person","rel":"child_of","point":15}
+{"from":"도미티아누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"네르바","from_type":"person","to":"트라야누스","to_type":"person","rel":"member_of","point":15}
+{"from":"네르바","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"트라야누스","from_type":"person","to":"네르바","to_type":"person","rel":"succeeded","point":15}
+{"from":"트라야누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"트라야누스","from_type":"person","to":"메소포타미아","to_type":"place","rel":"participated_in","point":15}
+{"from":"트라야누스","from_type":"person","to":"페르시아","to_type":"place","rel":"participated_in","point":15}
+{"from":"트라야누스","from_type":"person","to":"시리아","to_type":"place","rel":"participated_in","point":15}
+{"from":"트라야누스","from_type":"person","to":"아르메니아","to_type":"place","rel":"participated_in","point":15}
+{"from":"하드리아누스","from_type":"person","to":"트라야누스","to_type":"person","rel":"succeeded","point":15}
+{"from":"하드리아누스","from_type":"person","to":"플로티나","to_type":"person","rel":"allied_with","point":15}
+{"from":"하드리아누스","from_type":"person","to":"비비아 사비나","to_type":"person","rel":"allied_with","point":15}
+{"from":"하드리아누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"하드리아누스","from_type":"person","to":"안티노우스","to_type":"person","rel":"member_of","point":15}
+{"from":"하드리아누스","from_type":"person","to":"이집트","to_type":"place","rel":"participated_in","point":15}
+{"from":"하드리아누스","from_type":"person","to":"게르마니아","to_type":"place","rel":"participated_in","point":15}
+{"from":"하드리아누스","from_type":"person","to":"브리타니아","to_type":"place","rel":"participated_in","point":15}
+{"from":"플로티나","from_type":"person","to":"하드리아누스","to_type":"person","rel":"allied_with","point":15}
+{"from":"비비아 사비나","from_type":"person","to":"하드리아누스","to_type":"person","rel":"allied_with","point":15}
+{"from":"안티노우스","from_type":"person","to":"하드리아누스","to_type":"person","rel":"member_of","point":15}
+{"from":"루키우스 케이오니우스 콤모두스","from_type":"person","to":"하드리아누스","to_type":"person","rel":"member_of","point":15}
+{"from":"안토니누스 피우스","from_type":"person","to":"하드리아누스","to_type":"person","rel":"succeeded","point":15}
+{"from":"안토니누스 피우스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"안토니누스 피우스","from_type":"person","to":"마르쿠스 아우렐리우스","to_type":"person","rel":"member_of","point":15}
+{"from":"마르쿠스 아우렐리우스","from_type":"person","to":"안토니누스 피우스","to_type":"person","rel":"succeeded","point":15}
+{"from":"마르쿠스 아우렐리우스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":15}
+{"from":"마르쿠스 아우렐리우스","from_type":"person","to":"루키우스 베루스","to_type":"person","rel":"allied_with","point":15}
+{"from":"마르쿠스 아우렐리우스","from_type":"person","to":"콤모두스","to_type":"person","rel":"child_of","point":15}
+{"from":"루키우스 베루스","from_type":"person","to":"마르쿠스 아우렐리우스","to_type":"person","rel":"allied_with","point":15}
+{"from":"루키우스 베루스","from_type":"person","to":"파르티아족","to_type":"group","rel":"opposed","point":15}
+{"from":"루키우스 베루스","from_type":"person","to":"안티오키아","to_type":"place","rel":"participated_in","point":15}
+{"from":"루키우스 베루스","from_type":"person","to":"판테아","to_type":"person","rel":"allied_with","point":15}
+{"from":"판테아","from_type":"person","to":"루키우스 베루스","to_type":"person","rel":"allied_with","point":15}
+{"from":"루킬라","from_type":"person","to":"마르쿠스 아우렐리우스","to_type":"person","rel":"child_of","point":15}
+{"from":"루킬라","from_type":"person","to":"루키우스 베루스","to_type":"person","rel":"allied_with","point":15}
+{"from":"카시우스","from_type":"person","to":"루키우스 베루스","to_type":"person","rel":"member_of","point":15}
+{"from":"카시우스","from_type":"person","to":"파르티아족","to_type":"group","rel":"opposed","point":15}
+{"from":"콤모두스","from_type":"person","to":"마르쿠스 아우렐리우스","to_type":"person","rel":"child_of","point":15}
+{"from":"콤모두스","from_type":"person","to":"게르마니아","to_type":"place","rel":"participated_in","point":15}
+{"from":"파우스티나","from_type":"person","to":"안토니누스 피우스","to_type":"person","rel":"allied_with","point":15}
+{"from":"아그리콜라","from_type":"person","to":"브리타니아","to_type":"place","rel":"ruled","point":15}
+{"from":"아그리콜라","from_type":"person","to":"도미티아누스","to_type":"person","rel":"opposed","point":15}
+{"from":"사투르니누스","from_type":"person","to":"도미티아누스","to_type":"person","rel":"opposed","point":15}
+{"from":"테우토니족","from_type":"group","to":"트라야누스","to_type":"person","rel":"opposed","point":15}
+{"from":"다키아족","from_type":"group","to":"로마 군","to_type":"group","rel":"opposed","point":15}
+{"from":"고트족","from_type":"group","to":"로마 경계","to_type":"place","rel":"occurred_at","point":15}
+{"from":"브리타니아 민족","from_type":"group","to":"로마 제국","to_type":"place","rel":"opposed","point":15}
+{"from":"파르티아족","from_type":"group","to":"루키우스 베루스","to_type":"person","rel":"opposed","point":15}
+{"from":"페스트균","from_type":"event","to":"루키우스 베루스","to_type":"person","rel":"participated_in","point":15}
+{"from":"페스트균","from_type":"event","to":"로마","to_type":"place","rel":"occurred_at","point":15}
+{"from":"5현제 시대","from_type":"period","to":"팍스 로마나","to_type":"period","rel":"member_of","point":15}
+{"from":"팍스 로마나","from_type":"period","to":"로마 제국","to_type":"place","rel":"occurred_at","point":15}

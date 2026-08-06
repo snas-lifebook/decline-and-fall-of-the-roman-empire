@@ -1,0 +1,17 @@
+{"name":"테오도라","type":"person","aliases":["Theodora"],"attrs":{"role":"empress","reign":"527-548"},"points":[26],"desc":"경기장 동물 사육사의 차녀로 태어나 창녀에서 황비가 된 여성. 유스티니아누스의 신뢰를 받아 국정에 깊은 영향을 미쳤으며 자선사업을 통해 여성들을 돕고자 했다."}
+{"name":"유스티니아누스","type":"person","aliases":["Justinian I"],"attrs":{"role":"emperor","reign":"527-565"},"points":[26],"desc":"테오도라의 남편이자 동로마 제국의 황제. 테오도라를 정실로 맞아들이기 위해 법률을 개정했다."}
+{"name":"클레오파트라","type":"person","aliases":["Cleopatra"],"attrs":{"role":"historical_figure"},"points":[26],"desc":"카이사르를 유혹한 로마사의 유명한 여성. 테오도라와 비교되었지만 처음부터 여왕의 운명을 타고났다는 점에서 다르다."}
+{"name":"아카키우스","type":"person","aliases":["Acacius"],"attrs":{"role":"beast_keeper","origin":"Cyprus"},"points":[26],"desc":"콘스탄티노플 대경기장의 동물 사육사. 테오도라의 아버지로 주변 사람들로부터 '곰의 남편'이라 불릴 만큼 친근감이 있었던 인물."}
+{"name":"황비 루피키나","type":"person","aliases":["Lupicina"],"attrs":{"role":"empress_dowager"},"points":[26],"desc":"유스티니아누스의 백모이자 당시 황비. 테오도라와의 결혼을 노골적으로 반대했다."}
+{"name":"프로코피우스","type":"person","aliases":["Procopius"],"attrs":{"role":"historian"},"points":[26],"desc":"콘스탄티노플의 민정 총독이자 역사가. 유스티니아누스 시대의 사건을 상세히 기록했다."}
+{"name":"벨리사리우스","type":"person","aliases":["Belisarius"],"attrs":{"role":"general"},"points":[26],"desc":"유스티니아누스의 장군. 프로코피우스의 비서관으로 많은 전투를 목격했다."}
+{"name":"라벤나","type":"place","aliases":["Ravenna"],"attrs":{"type":"city","region":"Italy"},"points":[26],"desc":"이탈리아 중북부의 도시. 410년에 서로마 제국의 수도가 된 곳이며 테오도라 황비상이 있는 산비탈레 성당이 위치한다."}
+{"name":"루비콘 강","type":"place","aliases":["Rubicon"],"attrs":{"type":"river"},"points":[26],"desc":"라벤나 근처를 흐르는 강. 기원전 49년 카이사르가 건넌 장소로 유명하다."}
+{"name":"산비탈레 성당","type":"place","aliases":["San Vitale"],"attrs":{"type":"church"},"points":[26],"desc":"6세기에 라벤나에 세워진 성당. 비잔틴 미술의 집대성으로 불리는 테오도라 황비상 모자이크화가 있다."}
+{"name":"청파","type":"group","aliases":["Blue faction"],"attrs":{"type":"sports_faction"},"points":[26],"desc":"경기장 마차 경기를 응원하는 청색 당파. 테오도라가 어린 시절 무대에 올랐을 때 동정심을 보인 당파."}
+{"name":"녹파","type":"group","aliases":["Green faction"],"attrs":{"type":"sports_faction"},"points":[26],"desc":"경기장 마차 경기를 응원하는 녹색 당파. 테오도라가 어린 시절 무대에 올랐을 때 경멸의 눈초리를 보낸 당파."}
+{"name":"콘스탄티노플","type":"place","aliases":["Constantinople"],"attrs":{"type":"city"},"points":[26],"desc":"동로마 제국의 수도. 테오도라가 영향력을 행사했던 곳."}
+{"name":"보스포루스 해협","type":"place","aliases":["Bosporus"],"attrs":{"type":"strait"},"points":[26],"desc":"유럽과 아시아를 나누는 해협. 테오도라가 해안가의 이궁을 갖고 있던 곳."}
+{"name":"델피","type":"place","aliases":["Delphi"],"attrs":{"type":"city","region":"Greece"},"points":[26],"desc":"그리스의 온천 지역. 병약해진 테오도라가 요양하도록 권해진 곳."}
+{"name":"아나스타시우스 황제","type":"person","aliases":["Anastasius I"],"attrs":{"role":"emperor"},"points":[26],"desc":"테오도라의 아버지 아카키우스가 사육사 일을 맡던 당시의 황제."}
+{"name":"니카의 반란","type":"event","aliases":["Nika Riots"],"attrs":{"year":"532"},"points":[26],"desc":"유스티니아누스 시대에 일어난 폭동. 테오도라가 황제를 독려하여 위기를 극복하도록 한 사건."}

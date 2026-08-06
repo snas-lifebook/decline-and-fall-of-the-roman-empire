@@ -1,0 +1,167 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "팔레스티나 — 팔레스티나 프리마 핵심부 (해안평야·유대·사마리아)",
+    "description": "[확실] 카이사레아 마리티마를 수도로 한 주 속주. 4~5세기 3분 이후에도 가장 인구가 많고 안정적인 핵심부",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.3,
+       33.05
+      ],
+      [
+       35.0,
+       33.0
+      ],
+      [
+       35.55,
+       32.5
+      ],
+      [
+       35.55,
+       31.3
+      ],
+      [
+       35.0,
+       31.0
+      ],
+      [
+       34.3,
+       31.4
+      ],
+      [
+       34.2,
+       32.3
+      ],
+      [
+       34.3,
+       33.05
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "팔레스티나 — 팔레스티나 테르티아 (네게브·시나이 방면, 4세기 이후)",
+    "description": "[불확실] 디오클레티아누스~비잔티움기에 남부 사막·시나이·아라비아 일부를 흡수해 신설된 3번째 구역. 유목민 접경으로 경계 불확실",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.8,
+       31.2
+      ],
+      [
+       35.55,
+       31.1
+      ],
+      [
+       35.2,
+       30.2
+      ],
+      [
+       34.7,
+       29.6
+      ],
+      [
+       33.9,
+       29.6
+      ],
+      [
+       33.9,
+       30.6
+      ],
+      [
+       34.8,
+       31.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카이사레아",
+    "description": "[속주 수도] 서기 135 — 유대 총독 관저가 있던 도시, 개칭 이후에도 속주 행정 중심지로 존속",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.89,
+     32.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예루살렘",
+    "description": "[주요도시(아일리아 카피톨리나)] 서기 135 — 하드리아누스가 로마 식민시 아일리아 카피톨리나로 재건, 유대인 출입 금지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2256,
+     31.7789
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "가자",
+    "description": "[해안 항구도시] 서기 135 — 지중해-아라비아 대상로 접점, 번영한 교역항",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.47,
+     31.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "네아폴리스",
+    "description": "[사마리아 주요도시] 서기 72 — 베스파시아누스가 세운 신도시, 현 나블루스",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.25,
+     32.22
+    ]
+   }
+  }
+ ]
+}

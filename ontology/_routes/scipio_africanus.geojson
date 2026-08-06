@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스키피오 아프리카누스의 히스파니아-아프리카 원정",
+    "period": "기원전 209~202"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -0.9842,
+      37.6019
+     ],
+     [
+      12.4862,
+      41.8917
+     ],
+     [
+      10.0619,
+      37.0569
+     ],
+     [
+      9.4492,
+      36.2989
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타헤나",
+    "year": -209,
+    "description": "[확실] 기원전 209 — 아버지와 백부가 전사한 에스파냐 전선에 부임한 스물네 살의 스키피오가 호수의 간만을 이용해 카르타헤나를 함락시킴",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9842,
+     37.6019
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "year": -205,
+    "description": "[대략] 기원전 205 — 에스파냐 영토 대부분을 장악하고 개선, 집정관에 선출되어 아프리카 원정을 준비",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4862,
+     41.8917
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "우티카",
+    "year": -204,
+    "description": "[대략] 기원전 204 — 강력한 신군단을 이끌고 아프리카로 건너감",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.0619,
+     37.0569
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "자마",
+    "year": -202,
+    "description": "[확실] 기원전 202 — 누미디아의 마시니사 왕이 기병대를 이끌고 합류한 끝에 한니발을 꺾어 제2차 포에니 전쟁을 끝냄",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4492,
+     36.2989
+    ]
+   }
+  }
+ ]
+}

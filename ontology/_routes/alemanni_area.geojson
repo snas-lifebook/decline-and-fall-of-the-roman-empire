@@ -1,0 +1,91 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알레만니족 — 상부 라인·마인·네카르 (슈바벤)",
+    "description": "[확실] 3세기 출현 이후 핵심 정착지. 로마 아그리 데쿠마테스(Agri Decumates) 포기(260년경) 이후 이 일대를 장악했다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.0,
+       49.5
+      ],
+      [
+       10.5,
+       49.8
+      ],
+      [
+       10.8,
+       47.8
+      ],
+      [
+       8.5,
+       47.3
+      ],
+      [
+       7.0,
+       48.0
+      ],
+      [
+       7.0,
+       49.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알레만니족 — 확장 영역 (알자스·스위스 북부)",
+    "description": "[대략] 4~5세기. 서쪽 알자스와 남쪽 스위스 북부로 세력을 넓힌 시기. 로마와 잦은 충돌(357년 스트라스부르 전투 등)이 있었던 접경지라 경계가 유동적.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       6.8,
+       48.7
+      ],
+      [
+       8.5,
+       48.5
+      ],
+      [
+       9.0,
+       47.3
+      ],
+      [
+       7.0,
+       47.0
+      ],
+      [
+       6.3,
+       47.8
+      ],
+      [
+       6.8,
+       48.7
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

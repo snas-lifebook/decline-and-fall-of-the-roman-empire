@@ -1,0 +1,22 @@
+{"from":"가이우스 그라쿠스","from_type":"person","to":"소맥법","to_type":"institution","rel":"member_of","point":14}
+{"from":"술라","from_type":"person","to":"소맥법","to_type":"institution","rel":"opposed","point":14}
+{"from":"아우렐리우스 코타","from_type":"person","to":"소맥법","to_type":"institution","rel":"allied_with","point":14}
+{"from":"카이사르","from_type":"person","to":"로마 시민","to_type":"group","rel":"ruled","point":14}
+{"from":"아우구스투스","from_type":"person","to":"로마 시민","to_type":"group","rel":"ruled","point":14}
+{"from":"타르퀴니우스 프리스쿠스","from_type":"person","to":"원형 대경기장","to_type":"place","rel":"member_of","point":14}
+{"from":"칼리굴라","from_type":"person","to":"키르쿠스 경기장","to_type":"place","rel":"member_of","point":14}
+{"from":"클라우디우스","from_type":"person","to":"모의 해전","to_type":"event","rel":"participated_in","point":14}
+{"from":"아그리피나","from_type":"person","to":"모의 해전","to_type":"event","rel":"participated_in","point":14}
+{"from":"네로","from_type":"person","to":"투우 경기","to_type":"event","rel":"participated_in","point":14}
+{"from":"베스파시아누스","from_type":"person","to":"콜로세움","to_type":"place","rel":"member_of","point":14}
+{"from":"티투스","from_type":"person","to":"콜로세움","to_type":"place","rel":"member_of","point":14}
+{"from":"검투사","from_type":"group","to":"검투 시합","to_type":"event","rel":"participated_in","point":14}
+{"from":"검투사","from_type":"group","to":"콜로세움","to_type":"place","rel":"occurred_at","point":14}
+{"from":"연극배우","from_type":"group","to":"연극","to_type":"event","rel":"participated_in","point":14}
+{"from":"로마 시민","from_type":"group","to":"전차 경주","to_type":"event","rel":"participated_in","point":14}
+{"from":"로마 시민","from_type":"group","to":"검투 시합","to_type":"event","rel":"participated_in","point":14}
+{"from":"로마 시민","from_type":"group","to":"연극","to_type":"event","rel":"participated_in","point":14}
+{"from":"로마 시민","from_type":"group","to":"모의 해전","to_type":"event","rel":"participated_in","point":14}
+{"from":"전차 경주","from_type":"event","to":"원형 대경기장","to_type":"place","rel":"occurred_at","point":14}
+{"from":"검투 시합","from_type":"event","to":"콜로세움","to_type":"place","rel":"occurred_at","point":14}
+{"from":"모의 해전","from_type":"event","to":"푸키누스 호수","to_type":"place","rel":"occurred_at","point":14}

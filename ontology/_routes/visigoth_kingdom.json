@@ -1,0 +1,154 @@
+{
+  "name": "서고트 왕국",
+  "period": "418-711",
+  "summary": "게르만 왕국으로 418년 아키텐느에서 출발, 507년 부이예 전투로 갈리아 대부분을 잃고 이베리아로 중심 이동. 585년 수에비족 왕국을 병합하여 이베리아 대부분과 셉티마니아를 지배하다가 711년 이슬람 세력의 침입으로 멸망.",
+  "territory": [
+    {
+      "part": "이베리아 반도 본토",
+      "note": "507년 이후 왕국의 중심. 북서부 갈라이키아·아스투리아스와 일부 바스크 지역은 제외. 585년 수에비족 왕국 병합으로 이베리아 대부분 지배. 산악 지대와 북부 산맥 기슭은 아스투리아스와 바스크 민족 저항으로 완전 점령 불가.",
+      "confidence": "high",
+      "ring": [
+        [-6.0, 43.0],
+        [-3.0, 43.0],
+        [0.5, 43.0],
+        [3.0, 42.8],
+        [3.5, 42.0],
+        [3.5, 40.0],
+        [3.5, 38.0],
+        [3.2, 36.5],
+        [-6.3, 36.5],
+        [-9.0, 37.0],
+        [-9.0, 40.0],
+        [-8.5, 42.0],
+        [-7.0, 42.5]
+      ]
+    },
+    {
+      "part": "셉티마니아 (남부 갈리아)",
+      "note": "507년 부이예 전투 후 갈리아의 유일한 보유 영토. 나르본느를 중심으로 Rhône(동쪽), Garonne(북서쪽), Pyrénées(남쪽) 경계. 719년까지 유지했으나 급속히 이슬람 세력에 점령됨.",
+      "confidence": "high",
+      "ring": [
+        [0.5, 44.0],
+        [0.2, 45.0],
+        [3.0, 45.2],
+        [4.6, 45.0],
+        [4.6, 43.5],
+        [4.0, 42.5],
+        [2.0, 42.7],
+        [1.0, 42.8],
+        [0.5, 43.0]
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "place": "톨레도",
+      "lat": 39.8581,
+      "lon": -4.0226,
+      "year": 507,
+      "role": "수도",
+      "event": "부이예 전투 후 왕국의 중심이 됨. 542년부터 정식 수도로 711년까지 서고트 왕국의 행정·종교 중심지",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "세비야",
+      "lat": 37.3828,
+      "lon": -5.9732,
+      "year": 507,
+      "role": "주요도시",
+      "event": "로마 시대 히스팔리스(Hispalis). 서고트 왕국 시대 안달루시아 지역의 주요 무역 도시. 712년 이슬람군 점령",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "메리다",
+      "lat": 38.9161,
+      "lon": -6.3437,
+      "year": 507,
+      "role": "주요도시",
+      "event": "로마 시대 에메리타 아우구스타(Emerita Augusta). 에스트레마두라의 중요 도시. 서고트 왕국의 행정 및 방위 거점",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "코르도바",
+      "lat": 37.8847,
+      "lon": -4.7764,
+      "year": 507,
+      "role": "주요도시",
+      "event": "로마 시대 핵심 도시. 서고트 시대 안달루시아 지역의 경제 중심지. 711년 이슬람군 공략",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "바르셀로나",
+      "lat": 41.3887,
+      "lon": 2.1589,
+      "year": 507,
+      "role": "수도",
+      "event": "부이예 전투 후 507-542년간 임시 수도. 로마 시대 바르키노(Barcino). 이후 톨레도로 천도",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "톨루즈",
+      "lat": 43.6043,
+      "lon": 1.4437,
+      "year": 418,
+      "role": "수도",
+      "event": "418년부터 507년까지 서고트 왕국의 첫 번째 수도. 부이예 전투로 프랑크군에 함락되면서 왕국의 갈리아 영토 상실",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "나르본느",
+      "lat": 43.1833,
+      "lon": 3.0000,
+      "year": 509,
+      "role": "수도",
+      "event": "셉티마니아의 중심 도시. 부이예 전투 후 오스트로고트 왕 테오도릭의 영향 아래 셉티마니아 수도로 기능. 719년 이슬람군에 점령",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "님",
+      "lat": 43.8333,
+      "lon": 4.35,
+      "year": 507,
+      "role": "주요도시",
+      "event": "로마 시대 중요 도시. 셉티마니아 동부 지역의 행정 중심지. 서고트의 셉티마니아 통제 기간 내내 유지",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "아그드",
+      "lat": 43.3108,
+      "lon": 3.4758,
+      "year": 507,
+      "role": "주요도시",
+      "event": "셉티마니아 해안 도시. 지중해 무역의 거점. 서고트 통제 기간 동안 경제 활동 유지",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "베지에",
+      "lat": 43.3412,
+      "lon": 3.2140,
+      "year": 507,
+      "role": "주요도시",
+      "event": "셉티마니아 중부의 주요 도시. 로마 시대부터 중요한 교역 중심지. 서고트 통제 아래 계속 번영",
+      "in_gazetteer": false,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Visigothic Kingdom (https://en.wikipedia.org/wiki/Visigothic_Kingdom)",
+    "Wikipedia: Battle of Vouillé (https://en.wikipedia.org/wiki/Battle_of_Vouill%C3%A9)",
+    "Wikipedia: Septimania (https://en.wikipedia.org/wiki/Septimania)",
+    "Britannica: Visigothic Kingdom (https://www.britannica.com/place/Spain/The-Visigothic-kingdom)",
+    "Illinois Department of History: The Battle of Vouillé, 507 CE (https://history.illinois.edu/spotlight/publication/battle-vouille-507-ce-where-france-began)",
+    "Wikipedia: Toledo, Spain (https://en.wikipedia.org/wiki/Toledo,_Spain)",
+    "Wikipedia: Seville (https://en.wikipedia.org/wiki/Seville)"
+  ]
+}

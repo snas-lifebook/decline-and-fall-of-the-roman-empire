@@ -1,0 +1,24 @@
+{"name":"테오도시우스","type":"person","attrs":{"role":"emperor","reign":"379-395"},"points":[24],"desc":"동로마 황제. 유능한 병사로 고트족과 협정을 맺었으나, 사망 후 그의 무능한 아들들로 인해 제국이 혼란에 빠졌다."}
+{"name":"아르카디우스","type":"person","attrs":{"role":"emperor","title":"동로마 황제","reign":"395년 이후"},"points":[24],"desc":"테오도시우스의 아들이자 동로마 황제. 실권을 갖지 못하고 네 명의 관리자에 의해 조종당했다."}
+{"name":"호노리우스","type":"person","attrs":{"role":"emperor","title":"서로마 황제"},"points":[24],"desc":"테오도시우스의 아들이자 서로마 황제. 로마 제국사상 보기 드문 무능력자였다."}
+{"name":"알라리크","type":"person","attrs":{"role":"king","title":"고트족의 왕"},"points":[24],"desc":"고트족의 뛰어난 지도자. 냉철한 두뇌의 소유자로 로마와의 협상을 통해 로마 시를 점령했다."}
+{"name":"루피누스","type":"person","attrs":{"role":"prefect","title":"친위대장"},"points":[24],"desc":"아르카디우스 황제의 친위대장. 동로마 제국을 조종한 네 명 중 한 명."}
+{"name":"에우트로피우스","type":"person","attrs":{"role":"eunuch"},"points":[24],"desc":"환관. 동로마 제국을 조종한 네 명 중 한 명."}
+{"name":"에우독시아","type":"person","attrs":{"role":"empress","title":"황비"},"points":[24],"desc":"황비. 동로마 제국을 조종한 네 명 중 한 명."}
+{"name":"안테미우스","type":"person","attrs":{"role":"prefect","title":"친위대장"},"points":[24],"desc":"친위대장. 동로마 제국을 조종한 네 명 중 한 명."}
+{"name":"스틸리코","type":"person","attrs":{"role":"general","origin":"게르만"},"points":[24],"desc":"서로마의 장군이자 아르카디우스 황제의 보좌관. 야만족과의 융합과 대로마 제국의 재건을 목표했으나, 민중의 오판으로 인해 408년에 처형되었다."}
+{"name":"세레나","type":"person","attrs":{"role":"wife","title":"스틸리코의 아내"},"points":[24],"desc":"스틸리코의 아내. 황제의 양모. 시민들의 오판으로 인해 고트족과의 내통 혐의로 교수형에 처해졌다."}
+{"name":"아우구스티누스","type":"person","attrs":{"role":"bishop","title":"교부"},"points":[24],"desc":"로마 교부. 로마의 함락을 지켜본 후 『신의 나라』를 저술했다."}
+{"name":"고트족","type":"group","points":[24],"desc":"로마 제국 영내에서 봉기하여 로마 시를 함락시킨 민족."}
+{"name":"로마","type":"place","attrs":{"region":"도시"},"points":[24],"desc":"로마 제국의 중심 도시. 410년에 알라리크의 고트족에 의해 함락당했다."}
+{"name":"라벤나","type":"place","attrs":{"region":"도시"},"points":[24],"desc":"서로마 제국의 수도. 아드리아해에 면한 거리."}
+{"name":"콘스탄티노플","type":"place","attrs":{"region":"도시"},"points":[24],"desc":"동로마의 수도. 고트족에게 포위당했으나 성벽으로 인해 함락되지 않았다."}
+{"name":"달마티아","type":"place","attrs":{"region":"지역","note":"구 유고슬라비아 연안"},"points":[24],"desc":"고트족이 제압한 지역."}
+{"name":"그리스","type":"place","attrs":{"region":"지역"},"points":[24],"desc":"알라리크가 약탈한 지역."}
+{"name":"에피루스","type":"place","aliases":["에페이로스"],"attrs":{"region":"속주"},"points":[24],"desc":"알라리크가 완전히 점령한 중요한 거점."}
+{"name":"동 일리리쿰","type":"place","attrs":{"region":"지역"},"points":[24],"desc":"알라리크가 총사령관으로 임명받은 지역."}
+{"name":"아드리아해","type":"place","attrs":{"region":"바다"},"points":[24],"desc":"알라리크가 약탈한 연안 지역."}
+{"name":"알프스","type":"place","attrs":{"region":"산맥"},"points":[24],"desc":"알라리크가 넘은 산맥."}
+{"name":"테베레 강","type":"place","attrs":{"region":"강"},"points":[24],"desc":"로마 시를 흐르는 강."}
+{"name":"로마 시 함락","type":"event","attrs":{"year":"410"},"points":[24],"desc":"알라리크의 고트족에 의한 로마 시의 함락. 로마 제국이 더 이상 무적이 아님을 보여주었다."}
+{"name":"원로원","type":"institution","attrs":{"role":"governing body"},"points":[24],"desc":"로마 제국의 최고 의결 기구."}

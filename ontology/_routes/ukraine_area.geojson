@@ -1,0 +1,144 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "우크라이나 — 우크라이나 (현대 국경 기준)",
+    "description": "[대략] 현대 국경은 명확하지만, 고트족이 실제 점유했다는 고대 '오이움'의 정확한 위치는 사료상 대략적 추정에 그친다",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       22.5,
+       49.0
+      ],
+      [
+       24.0,
+       50.0
+      ],
+      [
+       28.0,
+       51.5
+      ],
+      [
+       31.5,
+       52.3
+      ],
+      [
+       35.0,
+       51.9
+      ],
+      [
+       38.2,
+       49.6
+      ],
+      [
+       39.7,
+       48.2
+      ],
+      [
+       38.0,
+       47.0
+      ],
+      [
+       35.5,
+       45.4
+      ],
+      [
+       33.5,
+       45.3
+      ],
+      [
+       31.0,
+       46.3
+      ],
+      [
+       30.0,
+       45.5
+      ],
+      [
+       29.6,
+       45.5
+      ],
+      [
+       28.2,
+       45.5
+      ],
+      [
+       26.6,
+       48.2
+      ],
+      [
+       24.0,
+       47.8
+      ],
+      [
+       22.9,
+       48.0
+      ],
+      [
+       22.5,
+       49.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "올비아",
+    "description": "[그리스-고트 교역 도시] 고트족 정착기 — 부그 강 하구, 고트족 남하 이후에도 존속한 교역 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.93,
+     46.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "판티카파이온",
+    "description": "[크림 반도 도시] 고트족 정착기 — 케르치 해협, 고트족의 흑해 방면 진출 경로상의 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.47,
+     45.35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "키이우",
+    "description": "[현대 참조점] 현대 — 고대 사료와 무관한 현대 지리 참조점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.5234,
+     50.4501
+    ]
+   }
+  }
+ ]
+}

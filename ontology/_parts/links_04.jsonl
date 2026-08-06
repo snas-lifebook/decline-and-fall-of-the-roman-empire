@@ -1,0 +1,11 @@
+{"from":"스키피오 아이밀리아누스","from_type":"person","to":"스키피오 아프리카누스","to_type":"person","rel":"child_of","point":4}
+{"from":"한니발","from_type":"person","to":"제3차 포에니 전쟁","to_type":"event","rel":"participated_in","point":4}
+{"from":"스키피오 아이밀리아누스","from_type":"person","to":"제3차 포에니 전쟁","to_type":"event","rel":"participated_in","point":4}
+{"from":"마시니사","from_type":"person","to":"카르타고","to_type":"place","rel":"opposed","point":4}
+{"from":"로마","from_type":"group","to":"카르타고","to_type":"place","rel":"opposed","point":4}
+{"from":"스키피오 아이밀리아누스","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":4}
+{"from":"하스드루발","from_type":"person","to":"카르타고","to_type":"place","rel":"ruled","point":4}
+{"from":"마시니사","from_type":"person","to":"누미디아","to_type":"place","rel":"ruled","point":4}
+{"from":"제3차 포에니 전쟁","from_type":"event","to":"자마","to_type":"place","rel":"occurred_at","point":4}
+{"from":"카토","from_type":"person","to":"제3차 포에니 전쟁","to_type":"event","rel":"participated_in","point":4}
+{"from":"로마","from_type":"group","to":"아프리카","to_type":"place","rel":"ruled","point":4}

@@ -1,0 +1,95 @@
+{
+  "name": "고트족의 남하",
+  "period": "2세기~378년",
+  "summary": "스칸디나비아에서 출발한 고트족이 비수아 강 유역을 거쳐 흑해 북안과 도나우 지역으로 확대되다가 378년 하드리아노폴리스 전투에서 로마를 격파하기까지의 이동 경로.",
+  "waypoints": [
+    {
+      "place": "스칸디나비아 반도",
+      "lat": 63.0,
+      "lon": 14.0,
+      "year": 100,
+      "event": "요르다네스의 전승에서 고트족의 기원지로 지칭. 스칸디나비아에서 세 척의 배에 실려 이주했다는 전설.",
+      "in_gazetteer": true,
+      "confidence": "low"
+    },
+    {
+      "place": "비수아 강",
+      "lat": 54.3617,
+      "lon": 18.9519,
+      "year": 150,
+      "event": "Gothiscandza 지역. 고트족이 1세기 초부터 정착한 첫 영토. Wielbark 문화의 중심지.",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "게르마니아",
+      "lat": 51,
+      "lon": 10,
+      "year": 150,
+      "event": "비수아 강 남서쪽 인접 지역. 고트족의 영향권 확대 과정에서 부분적으로 장악한 지역.",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "흑해",
+      "lat": 43.0,
+      "lon": 36.0,
+      "year": 200,
+      "event": "2세기 중반부터 고트족이 남하하기 시작한 목표 지역. Wielbark 문화의 남동 확대.",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "탄아이스",
+      "lat": 47.1,
+      "lon": 39.2,
+      "year": 250,
+      "event": "돈 강 삼각주. Filimer 왕 시대 고트족이 정착한 Oium 지역의 동쪽 경계. 3세기 중반 고트족에 의해 파괴된 그리스 도시.",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "도나우 강",
+      "lat": 48.0,
+      "lon": 17.0,
+      "year": 300,
+      "event": "Chernyakhov 문화의 형성과 함께 고트족의 영토 확대. 흑해에서 도나우까지 광대한 영역 지배.",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "마르키아노폴리스",
+      "lat": 43.2252,
+      "lon": 27.585,
+      "year": 376,
+      "event": "376년 고트족의 도나우 도하 직후. Moesia Secunda의 수도. 로마의 보급품 약속 실패로 인한 고트족 반란의 촉발점.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "모이시아",
+      "lat": 43.5,
+      "lon": 23.5,
+      "event": "376년 고트족의 도나우 도하 후 로마령 속주로 진입. Lupicinus 백작의 부패로 인한 기근 야기.",
+      "year": 376,
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "하드리아노폴리스",
+      "lat": 41.6769,
+      "lon": 26.5556,
+      "year": 378,
+      "event": "378년 8월 9일, Fritigern 왕이 이끈 고트족이 로마 황제 발렌스를 격파한 결정적 전투. 로마 군력의 참패.",
+      "in_gazetteer": true,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Jordanes, Getica (6th century CE)",
+    "Heather, Peter. Goths and Romans 332-489 (Oxford University Press)",
+    "Wolfram, Herwig. History of the Goths",
+    "Chernyakhov culture archaeological evidence",
+    "Wielbark culture archaeological evidence"
+  ]
+}

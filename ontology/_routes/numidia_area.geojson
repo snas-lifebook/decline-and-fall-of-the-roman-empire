@@ -1,0 +1,159 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "누미디아 — 누미디아 핵심지역 (키르타 일대)",
+    "description": "[확실] 현 알제리 북동부. 마시니사 이래 왕도 키르타를 중심으로 한 핵심 통치 지역으로 사료가 비교적 분명하다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       5.0,
+       36.9
+      ],
+      [
+       6.5,
+       37.1
+      ],
+      [
+       8.0,
+       36.8
+      ],
+      [
+       8.3,
+       36.0
+      ],
+      [
+       7.5,
+       35.0
+      ],
+      [
+       6.0,
+       34.5
+      ],
+      [
+       4.5,
+       35.0
+      ],
+      [
+       4.0,
+       36.0
+      ],
+      [
+       4.3,
+       36.6
+      ],
+      [
+       5.0,
+       36.9
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "누미디아 — 서부 변경 (현 알제리 중부)",
+    "description": "[대략] 마우레타니아와 맞닿은 서쪽 경계. 시기별로 왕국 세력이 늘고 준 지역이라 대략적으로만 표시",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.0,
+       36.0
+      ],
+      [
+       4.0,
+       36.0
+      ],
+      [
+       4.0,
+       34.5
+      ],
+      [
+       2.5,
+       34.0
+      ],
+      [
+       1.0,
+       34.5
+      ],
+      [
+       1.0,
+       35.5
+      ],
+      [
+       2.0,
+       36.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "누미디아",
+    "description": "[왕도] 기원전 3세기~기원전 46 — 마시니사 이래 누미디아의 수도, 현 알제리 콘스탄티나",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.6119,
+     36.3675
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "히포 레기우스",
+    "description": "[주요 도시] 고대~ — 누미디아 동부의 대표 항구 도시, 현 알제리 아나바",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.7667,
+     36.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "자마",
+    "description": "[전장 인근] 기원전 202 — 제2차 포에니 전쟁 최후 결전지 인근, 마시니사가 스키피오 편에서 참전",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35,
+     35.88
+    ]
+   }
+  }
+ ]
+}

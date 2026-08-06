@@ -1,0 +1,12 @@
+{"from":"네로","from_type":"person","to":"아그리피나","to_type":"person","rel":"child_of","point":12}
+{"from":"루카누스","from_type":"person","to":"세네카","to_type":"person","rel":"child_of","point":12}
+{"from":"네로","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":12}
+{"from":"갈바","from_type":"person","to":"네로","to_type":"person","rel":"succeeded","point":12}
+{"from":"아그리피나","from_type":"person","to":"포파이아","to_type":"person","rel":"opposed","point":12}
+{"from":"세네카","from_type":"person","to":"네로","to_type":"person","rel":"opposed","point":12}
+{"from":"루카누스","from_type":"person","to":"네로","to_type":"person","rel":"opposed","point":12}
+{"from":"갈바","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":12}
+{"from":"네로","from_type":"person","to":"기독교","to_type":"group","rel":"opposed","point":12}
+{"from":"친위대","from_type":"group","to":"로마","to_type":"place","rel":"member_of","point":12}
+{"from":"원로원","from_type":"group","to":"로마","to_type":"place","rel":"member_of","point":12}
+{"from":"빈덱스","from_type":"person","to":"갈바","to_type":"person","rel":"allied_with","point":12}

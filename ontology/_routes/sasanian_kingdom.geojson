@@ -1,0 +1,466 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사산조 페르시아 — 이란 고원·메소포타미아 핵심부",
+    "description": "[확실] 왕조 존속 내내 유지된 중심 영역. 페르시아만, 티그리스·유프라테스 강 유역, 코르단 산맥, 카스피해 동안",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       44.0,
+       37.0
+      ],
+      [
+       46.0,
+       38.5
+      ],
+      [
+       48.0,
+       37.5
+      ],
+      [
+       50.0,
+       36.5
+      ],
+      [
+       52.0,
+       35.0
+      ],
+      [
+       54.0,
+       34.0
+      ],
+      [
+       56.0,
+       33.5
+      ],
+      [
+       58.0,
+       34.0
+      ],
+      [
+       60.0,
+       35.5
+      ],
+      [
+       61.0,
+       37.0
+      ],
+      [
+       60.0,
+       38.5
+      ],
+      [
+       58.0,
+       39.0
+      ],
+      [
+       56.0,
+       39.5
+      ],
+      [
+       54.0,
+       40.0
+      ],
+      [
+       52.0,
+       40.5
+      ],
+      [
+       50.0,
+       40.2
+      ],
+      [
+       48.0,
+       39.8
+      ],
+      [
+       46.0,
+       39.5
+      ],
+      [
+       44.5,
+       38.5
+      ],
+      [
+       44.0,
+       37.5
+      ],
+      [
+       44.0,
+       37.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사산조 페르시아 — 동부 확장: 소그드·박트리아·호라산",
+    "description": "[대략] 3~7세기 변동적. 샤푸르 1세가 소그드를 기원후 260년경 정복(타슈켄트산맥까지), 타슈켄트·사마르칸드·부하라 포함 영역은 유목민 침입으로 인해 경계 불안정",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       61.0,
+       40.8
+      ],
+      [
+       63.0,
+       40.5
+      ],
+      [
+       65.0,
+       40.0
+      ],
+      [
+       67.0,
+       39.5
+      ],
+      [
+       69.0,
+       38.5
+      ],
+      [
+       71.0,
+       37.0
+      ],
+      [
+       71.0,
+       35.0
+      ],
+      [
+       70.0,
+       34.5
+      ],
+      [
+       68.0,
+       35.0
+      ],
+      [
+       66.0,
+       36.0
+      ],
+      [
+       63.0,
+       37.5
+      ],
+      [
+       60.0,
+       38.5
+      ],
+      [
+       58.0,
+       40.0
+      ],
+      [
+       56.0,
+       39.5
+      ],
+      [
+       56.0,
+       39.5
+      ],
+      [
+       61.0,
+       40.8
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사산조 페르시아 — 서부 일시 점령 (614~628, 호스로 2세)",
+    "description": "[불확실] 호스로 2세가 비잔티움 전쟁 (602~628) 중 시리아·팔레스타인·이집트·소아시아 동부를 점령. 628년 헤라클리우스의 반격으로 반환됨. 신뢰도 낮음",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       44.0,
+       37.0
+      ],
+      [
+       42.0,
+       37.5
+      ],
+      [
+       40.0,
+       37.0
+      ],
+      [
+       37.0,
+       36.5
+      ],
+      [
+       36.0,
+       35.0
+      ],
+      [
+       34.0,
+       32.0
+      ],
+      [
+       33.0,
+       30.0
+      ],
+      [
+       32.0,
+       31.0
+      ],
+      [
+       32.5,
+       33.0
+      ],
+      [
+       34.0,
+       35.0
+      ],
+      [
+       36.0,
+       36.5
+      ],
+      [
+       38.0,
+       37.5
+      ],
+      [
+       40.0,
+       38.0
+      ],
+      [
+       42.0,
+       37.5
+      ],
+      [
+       44.0,
+       37.0
+      ],
+      [
+       44.0,
+       37.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "크테시폰",
+    "description": "[수도] 224 — 아르다시르 1세가 건설·정복. 이라크 바그다드 남동 35km. 제국의 겨울 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.58,
+     33.28
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에크바타나",
+    "description": "[주요도시] 226 — 아르다시르 1세가 226년경 정복. 이란 하마단. 여름 수도 역할",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.52,
+     34.81
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "바빌론",
+    "description": "[주요도시] 224 — 메소포타미아 고도. 페르시아 통치 시대 계속 거주",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.42,
+     32.54
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "수사",
+    "description": "[주요도시] 224 — 쿠제스탄 지역 주요 도시. 고대 엘람·아케메네스 왕조 유산",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.26,
+     32.19
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "곤디샤푸르",
+    "description": "[주요도시] 260 — 샤푸르 1세가 로마 포로들을 정착시켜 건설. 쿠제스탄 지역. 의료·학문 중심지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.51,
+     32.28
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비샤푸르",
+    "description": "[주요도시] 226 — 샤푸르 1세가 226년 건설. 그리스식 도시 계획으로 설계",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     52.8,
+     28.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "니샤푸르",
+    "description": "[주요도시] 224 — 호라산 지역 중심 도시. 비단길 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.76,
+     36.21
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마르브",
+    "description": "[주요도시] 224 — 호라산 북부 도시. 현 투르크메니스탄. 비단길 중요 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.87,
+     37.65
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헤라트",
+    "description": "[주요도시] 224 — 호라산 중부 도시. 현 아프가니스탄. 동서 무역로 교점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     62.2,
+     34.35
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "발흐",
+    "description": "[주요도시] 260 — 박트리아 중심 도시. 현 아프가니스탄. 샤푸르 1세가 정복한 쿠샨 영토",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.87,
+     36.77
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "안티오키아",
+    "description": "[주요도시] 260 — 샤푸르 1세가 에데사 전투(260년) 후 점령. 기원후 264년경 로마 반격으로 상실",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.16,
+     36.21
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에데사",
+    "description": "[요새] 260 — 샤푸르 1세가 발레리아누스 황제를 포로로 잡은 에데사 전투(260년) 지점. 메소포타미아 동부",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.79,
+     37.16
+    ]
+   }
+  }
+ ]
+}

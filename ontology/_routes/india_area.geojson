@@ -1,0 +1,192 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "인도 — 인도 아대륙 (현대 국경 기준)",
+    "description": "[대략] 고대 로마인의 인식은 대체로 서남 해안 무역항에 한정됐지만, 지도상 위치 확인을 위해 현대 인도 국경을 성기게 그렸다",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       70.0,
+       23.5
+      ],
+      [
+       68.5,
+       24.5
+      ],
+      [
+       69.5,
+       27.0
+      ],
+      [
+       74.0,
+       32.5
+      ],
+      [
+       77.0,
+       34.5
+      ],
+      [
+       79.0,
+       32.0
+      ],
+      [
+       81.0,
+       30.0
+      ],
+      [
+       88.0,
+       27.5
+      ],
+      [
+       92.0,
+       27.0
+      ],
+      [
+       95.0,
+       26.5
+      ],
+      [
+       94.0,
+       24.0
+      ],
+      [
+       92.5,
+       22.0
+      ],
+      [
+       90.5,
+       22.0
+      ],
+      [
+       86.5,
+       21.5
+      ],
+      [
+       83.0,
+       19.0
+      ],
+      [
+       80.3,
+       15.8
+      ],
+      [
+       80.2,
+       13.0
+      ],
+      [
+       79.8,
+       10.3
+      ],
+      [
+       77.5,
+       8.1
+      ],
+      [
+       76.0,
+       10.0
+      ],
+      [
+       75.0,
+       11.5
+      ],
+      [
+       74.0,
+       13.0
+      ],
+      [
+       73.0,
+       15.5
+      ],
+      [
+       72.8,
+       19.0
+      ],
+      [
+       70.0,
+       21.0
+      ],
+      [
+       70.0,
+       23.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "무지리스",
+    "description": "[로마-인도 무역항] 기원전후~서기 3세기 — 페리플루스에 기록된 대표적 계절풍 무역항, 후추 교역 중심지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.22,
+     10.05
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "바리가자",
+    "description": "[서해안 무역항] 기원전후~ — 현 바루치, 로마-인도 무역로의 주요 기항지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.97,
+     21.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아리카메두",
+    "description": "[동해안 무역 거점] 서기 1~2세기 — 로마 도기·유리 유물이 대량 출토된 인도-로마 교역 유적지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.83,
+     11.9
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "탁실라",
+    "description": "[실크로드 결절점] 고대~ — 인더스 유역과 중앙아시아 실크로드를 잇는 교역·학문 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.83,
+     33.75
+    ]
+   }
+  }
+ ]
+}

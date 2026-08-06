@@ -1,0 +1,10 @@
+{"from":"티베리우스","from_type":"person","to":"아우구스투스","to_type":"person","rel":"child_of","point":10}
+{"from":"드루수스","from_type":"person","to":"아우구스투스","to_type":"person","rel":"child_of","point":10}
+{"from":"율리아","from_type":"person","to":"아우구스투스","to_type":"person","rel":"child_of","point":10}
+{"from":"가이우스","from_type":"person","to":"율리아","to_type":"person","rel":"child_of","point":10}
+{"from":"루키우스","from_type":"person","to":"율리아","to_type":"person","rel":"child_of","point":10}
+{"from":"마르켈루스","from_type":"person","to":"옥타비아","to_type":"person","rel":"child_of","point":10}
+{"from":"빕사니아","from_type":"person","to":"아그리파","to_type":"person","rel":"child_of","point":10}
+{"from":"아우구스투스","from_type":"person","to":"로마","to_type":"place","rel":"ruled","point":10}
+{"from":"아그리파","from_type":"person","to":"아우구스투스","to_type":"person","rel":"allied_with","point":10}
+{"from":"마이케나스","from_type":"person","to":"아우구스투스","to_type":"person","rel":"allied_with","point":10}

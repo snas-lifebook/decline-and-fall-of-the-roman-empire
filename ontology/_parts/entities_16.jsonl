@@ -1,0 +1,22 @@
+{"name":"콤모두스","type":"person","aliases":["Commodus"],"attrs":{"role":"emperor","reign":"177-192"},"points":[16],"desc":"마르쿠스 아우렐리우스의 아들. 심약한 청년으로 시작했으나 암살 시도 후 폭군이 되어 무고한 원로원 의원들을 살해하고 검투사로서 활약했으며 결국 부하에게 목졸려 죽었다."}
+{"name":"마르쿠스 아우렐리우스","type":"person","aliases":["Marcus Aurelius"],"attrs":{"role":"emperor","reign":"161-180"},"points":[16],"desc":"5현제 시대의 마지막 황제. 자비심이 많았지만 친인척에게 과한 관용을 베풀었고, 심약한 콤모두스를 후계자로 지목한 것을 후회했다."}
+{"name":"파우스티나","type":"person","attrs":{"role":"empress","title":"황비"},"points":[16],"desc":"마르쿠스 아우렐리우스의 아내. 천박한 바람기로 많은 애인을 두었지만, 황제는 이를 모르고 그녀를 정숙한 여신으로 신격화했다."}
+{"name":"루킬라","type":"person","attrs":{"role":"princess"},"points":[16],"desc":"콤모두스의 누나. 자신의 지위에 불만을 품고 183년 황제 암살을 주모했으나 실패했다."}
+{"name":"네로","type":"person","aliases":["Nero"],"attrs":{"role":"emperor"},"points":[16],"desc":"로마의 폭군. 콤모두스와 달리 음악과 시 등의 예술에는 능통했으나 음란함과 잔혹함으로 악명 높았다."}
+{"name":"페르티낙스","type":"person","attrs":{"role":"emperor","reign":"193"},"points":[16],"desc":"콤모두스 암살 후 원로원 의원 중 추대된 새 황제. 콤모두스의 영예를 모두 삭제했고 3개월 후 세베루스에게 제위를 넘겼다."}
+{"name":"셉티미우스 세베루스","type":"person","aliases":["Septimius Severus"],"attrs":{"role":"emperor","reign":"193-211"},"points":[16],"desc":"페르티낙스 이후 황제가 된 자. 콤모두스를 다시 복권하여 오히려 신격화했다."}
+{"name":"마르키아","type":"person","attrs":{"role":"concubine"},"points":[16],"desc":"콤모두스의 애첩. 황제의 횡포를 견디다 못하고 에클렉투스와 라이투스와 함께 독살 계획을 주도했다."}
+{"name":"에클렉투스","type":"person","attrs":{"role":"chamberlain"},"points":[16],"desc":"황제의 시종장. 마르키아, 라이투스와 함께 콤모두스 암살을 주도했다."}
+{"name":"라이투스","type":"person","attrs":{"role":"praetorian_prefect"},"points":[16],"desc":"근위대장. 마르키아, 에클렉투스와 함께 콤모두스 암살을 주도했다."}
+{"name":"세쿠토르","type":"group","attrs":{"role":"gladiator_type"},"points":[16],"desc":"로마의 검투사 유형. 간소한 가면, 보호대, 사벨과 방패로 무장했다. 콤모두스는 이 역을 735회나 했다고 기록되었다."}
+{"name":"레티아리우스","type":"group","attrs":{"role":"gladiator_type"},"points":[16],"desc":"로마의 검투사 유형. 벌거벗은 몸에 그물과 삼지창만을 갖고 세쿠토르와 싸웠다. 콤모두스를 상대한 여러 레티아리우스는 자살했다고 한다."}
+{"name":"파울루스","type":"person","attrs":{"role":"gladiator"},"points":[16],"desc":"당시 가장 유명한 무적의 세쿠토르. 콤모두스가 이 이름을 자신에게 부여받기를 원했다."}
+{"name":"원로원","type":"group","attrs":{"role":"senate"},"points":[16],"desc":"로마 제국의 최고 의결기관. 콤모두스에게 의심받아 많은 의원들이 무고하게 살해되었다."}
+{"name":"콜로세움","type":"place","attrs":{"location":"로마"},"points":[16],"desc":"로마의 원형경기장. 콤모두스가 검투사로 출전했던 장소."}
+{"name":"로마","type":"place","attrs":{"type":"city"},"points":[16],"desc":"로마 제국의 수도. 콤모두스 시대에 혼란과 재앙이 휩싸였다."}
+{"name":"황제 암살 시도","type":"event","attrs":{"year":"183"},"points":[16],"desc":"콤모두스를 암살하려던 루킬라의 음모. 실패했지만 이 사건 이후 황제는 원로원을 극도로 의심하게 되었다."}
+{"name":"원로원 대숙청","type":"event","points":[16],"desc":"183년 이후 콤모두스가 원로원 의원들을 근거 없는 혐의로 차례로 체포하고 살해한 사건들."}
+{"name":"검투기 경기","type":"event","points":[16],"desc":"콤모두스가 원형경기장에서 세쿠토르 역을 하여 야수를 사냥하고 죄수를 학살한 공개 경기."}
+{"name":"명상록","type":"work","attrs":{"author":"마르쿠스 아우렐리우스"},"points":[16],"desc":"마르쿠스 아우렐리우스가 저술한 스토아 철학의 정수. 고대 로마 최고의 도덕 독본으로 평가받는다."}
+{"name":"5현제 시대","type":"period","attrs":{"years":"96-180"},"points":[16],"desc":"로마 제국의 안정과 번영의 시대. 5명의 현명한 황제들이 통치했다."}
+{"name":"헤라클레스","type":"person","attrs":{"role":"mythological_figure"},"points":[16],"desc":"그리스 신화의 영웅. 콤모두스가 자신을 이에 비유하여 사자의 모피를 걸치고 동상을 세웠다."}

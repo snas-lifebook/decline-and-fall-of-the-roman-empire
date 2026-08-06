@@ -1,0 +1,138 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "고트족 — 비스툴라강 하류 원거주지",
+    "description": "[대략] 1~2세기. 빌바르크 문화의 중심지. 기번을 비롯해 요르다네스가 전하는 스칸디나비아 기원설은 논쟁적이므로 별도로 다루지 않고 확립된 정착지만 표시.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       17.5,
+       53.8
+      ],
+      [
+       19.5,
+       54.3
+      ],
+      [
+       19.8,
+       53.3
+      ],
+      [
+       18.0,
+       52.8
+      ],
+      [
+       17.0,
+       53.2
+      ],
+      [
+       17.5,
+       53.8
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "고트족 — 흑해 북안 초원 (체르냐호프 문화)",
+    "description": "[확실] 3~4세기. 남하한 고트족이 형성한 체르냐호프 문화권. 훈족 침입(375년) 이전까지 안정적으로 유지됨.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       24.0,
+       49.0
+      ],
+      [
+       34.0,
+       50.0
+      ],
+      [
+       38.0,
+       47.5
+      ],
+      [
+       33.0,
+       45.0
+      ],
+      [
+       27.0,
+       45.5
+      ],
+      [
+       24.0,
+       47.0
+      ],
+      [
+       24.0,
+       49.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "고트족 — 도나우강 북안 변경 (376년 도하 이전)",
+    "description": "[대략] 4세기 후반. 훈족에 밀려 도나우강 북안까지 후퇴한 상태. 376년 발렌스 황제의 허가로 로마 영내 진입하기 직전 시점.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       22.0,
+       46.5
+      ],
+      [
+       27.0,
+       47.0
+      ],
+      [
+       29.0,
+       45.5
+      ],
+      [
+       25.0,
+       44.0
+      ],
+      [
+       22.5,
+       45.0
+      ],
+      [
+       22.0,
+       46.5
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

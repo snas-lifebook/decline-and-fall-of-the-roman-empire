@@ -1,0 +1,20 @@
+{"from":"카이사르","from_type":"person","to":"폼페이우스","to_type":"person","rel":"allied_with","point":6}
+{"from":"카이사르","from_type":"person","to":"크라수스","to_type":"person","rel":"allied_with","point":6}
+{"from":"카이사르","from_type":"person","to":"율리아","to_type":"person","rel":"child_of","point":6}
+{"from":"폼페이우스","from_type":"person","to":"율리아","to_type":"person","rel":"succeeded","point":6}
+{"from":"카이사르","from_type":"person","to":"코르넬리아","to_type":"person","rel":"succeeded","point":6}
+{"from":"클로디우스","from_type":"person","to":"칼푸르니아","to_type":"person","rel":"opposed","point":6}
+{"from":"카이사르","from_type":"person","to":"갈리아 정복","to_type":"event","rel":"participated_in","point":6}
+{"from":"베르킹게토릭스","from_type":"person","to":"갈리아 정복","to_type":"event","rel":"participated_in","point":6}
+{"from":"카이사르","from_type":"person","to":"갈리아","to_type":"place","rel":"ruled","point":6}
+{"from":"카이사르","from_type":"person","to":"제1차 삼두정치","to_type":"event","rel":"participated_in","point":6}
+{"from":"폼페이우스","from_type":"person","to":"제1차 삼두정치","to_type":"event","rel":"participated_in","point":6}
+{"from":"크라수스","from_type":"person","to":"제1차 삼두정치","to_type":"event","rel":"participated_in","point":6}
+{"from":"게르마니아인","from_type":"group","to":"갈리아","to_type":"place","rel":"opposed","point":6}
+{"from":"헬베티족","from_type":"group","to":"갈리아","to_type":"place","rel":"opposed","point":6}
+{"from":"켈트족","from_type":"group","to":"로마","to_type":"group","rel":"opposed","point":6}
+{"from":"베르킹게토릭스","from_type":"person","to":"알레시아 포위전","to_type":"event","rel":"participated_in","point":6}
+{"from":"카이사르","from_type":"person","to":"알레시아 포위전","to_type":"event","rel":"participated_in","point":6}
+{"from":"밀로","from_type":"person","to":"클로디우스","to_type":"person","rel":"opposed","point":6}
+{"from":"소 카토","from_type":"person","to":"카이사르","to_type":"person","rel":"opposed","point":6}
+{"from":"안쿠스 마르키우스","from_type":"person","to":"카이사르","to_type":"person","rel":"child_of","point":6}

@@ -1,0 +1,19 @@
+{"name":"소아시아","lat":39.0000,"lon":35.0000,"ancient":"Asia Minor","modern":"아나톨리아, 터키","kind":"region","confidence":"medium","source":"Wikipedia: Anatolia"}
+{"name":"밀라노","lat":45.4643,"lon":9.1895,"ancient":"Mediolanum","modern":"밀라노, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Milan"}
+{"name":"아르메니아","lat":40.0691,"lon":45.0382,"ancient":"Armenia","modern":"아르메니아","kind":"region","confidence":"medium","source":"Wikipedia: Armenia"}
+{"name":"갈리아키살피나","lat":45.0000,"lon":11.0000,"ancient":"Gallia Cisalpina","modern":"이탈리아 북부","kind":"region","confidence":"medium","source":"Wikipedia: Cisalpine Gaul"}
+{"name":"아테네","lat":37.9838,"lon":23.7275,"ancient":"Athenae","modern":"아테네, 그리스","kind":"city","confidence":"high","source":"Wikipedia: Athens"}
+{"name":"코르시카","lat":42.0406,"lon":9.0136,"ancient":"Corsica","modern":"코르시카, 프랑스","kind":"island","confidence":"high","source":"Wikipedia: Corsica"}
+{"name":"갈릴리","lat":32.7600,"lon":35.5300,"ancient":"Galilaea","modern":"갈릴리, 이스라엘/레바논","kind":"region","confidence":"high","source":"Wikipedia: Galilee"}
+{"name":"라리사","lat":39.6417,"lon":22.4167,"ancient":"Larissa","modern":"라리사, 그리스","kind":"city","confidence":"high","source":"Wikipedia: Larissa"}
+{"name":"마르살라 만","lat":37.7981,"lon":12.4342,"ancient":"Lilybaeum","modern":"마르살라, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Marsala, Sicily"}
+{"name":"발칸 반도","lat":42.5000,"lon":21.0000,"ancient":"Balkan Peninsula","modern":"발칸, 남동유럽","kind":"region","confidence":"low","source":"Wikipedia: Balkan Peninsula"}
+{"name":"사르데냐 섬","lat":40.0000,"lon":9.0000,"ancient":"Sardinia","modern":"사르데냐, 이탈리아","kind":"island","confidence":"high","source":"Wikipedia: Sardinia"}
+{"name":"아그리젠토 시","lat":37.3125,"lon":13.5750,"ancient":"Akragas","modern":"아그리젠토, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Agrigento"}
+{"name":"알리칸테","lat":38.3453,"lon":-0.4831,"ancient":"Lucentum","modern":"알리칸테, 스페인","kind":"city","confidence":"high","source":"Wikipedia: Alicante"}
+{"name":"우크라이나","lat":49.0000,"lon":32.0000,"ancient":"","modern":"우크라이나","kind":"region","confidence":"low","source":"미확인"}
+{"name":"자마","lat":36.2989,"lon":9.4492,"ancient":"Zama","modern":"튀니지","kind":"battlefield","confidence":"high","source":"Wikipedia: Battle of Zama"}
+{"name":"카프리 섬","lat":40.5500,"lon":14.2333,"ancient":"Capreae","modern":"카프리, 이탈리아","kind":"island","confidence":"high","source":"Wikipedia: Capri"}
+{"name":"타프수스","lat":35.6208,"lon":11.0417,"ancient":"Thapsus","modern":"튀니지","kind":"city","confidence":"high","source":"Wikipedia: Thapsus"}
+{"name":"트레비아 강","lat":44.9885,"lon":9.5674,"ancient":"Trebia","modern":"이탈리아 북부","kind":"river","confidence":"high","source":"Wikipedia: Battle of the Trebia"}
+{"name":"폼페이","lat":40.7500,"lon":14.4861,"ancient":"Pompeii","modern":"폼페이, 이탈리아","kind":"city","confidence":"high","source":"Wikipedia: Pompeii"}

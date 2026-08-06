@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "요르단 강",
+    "period": "서기 1세기 초"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      35.69,
+      33.24
+     ],
+     [
+      35.59,
+      32.83
+     ],
+     [
+      35.6194,
+      33.1875
+     ],
+     [
+      35.55,
+      31.76
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "요르단 강 발원지(헤르몬 산)",
+    "year": null,
+    "description": "[대략] ? — 헤르몬 산기슭에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.69,
+     33.24
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "갈릴리 호수",
+    "year": null,
+    "description": "[확실] ? — 갈릴리 호수를 거쳐 남류한다. 예수 사역의 주요 무대",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.59,
+     32.83
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "요르단 강",
+    "year": null,
+    "description": "[확실] ? — 세례자 요한이 설교하고 예수가 세례를 받았다고 전해지는 구간(서기 1세기 초)",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.6194,
+     33.1875
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사해 하구",
+    "year": null,
+    "description": "[확실] ? — 사해로 흘러드는 하구. 유다 속주와 나바테아 왕국을 가르는 자연 경계이기도 했다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.55,
+     31.76
+    ]
+   }
+  }
+ ]
+}

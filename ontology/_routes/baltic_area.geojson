@@ -1,0 +1,104 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "발트해 — 발트해 전역",
+    "description": "[불확실] 고트족 이동 신화 속 발원지 부근의 바다로 지목되는 수역. 로마와의 직접 접촉은 드물었다",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       9.5,
+       54.5
+      ],
+      [
+       10.5,
+       55.5
+      ],
+      [
+       12.0,
+       55.5
+      ],
+      [
+       12.0,
+       56.0
+      ],
+      [
+       14.0,
+       57.0
+      ],
+      [
+       16.0,
+       58.0
+      ],
+      [
+       18.0,
+       59.5
+      ],
+      [
+       19.5,
+       61.0
+      ],
+      [
+       21.0,
+       60.5
+      ],
+      [
+       20.0,
+       59.0
+      ],
+      [
+       18.5,
+       57.5
+      ],
+      [
+       16.0,
+       56.5
+      ],
+      [
+       14.0,
+       56.0
+      ],
+      [
+       10.0,
+       54.0
+      ],
+      [
+       10.0,
+       54.0
+      ],
+      [
+       9.5,
+       54.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "호박해안",
+    "description": "[교역로 종착점]  — 로마까지 이어진 호박길(Amber Road)의 북쪽 종착 해안",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.65,
+     54.35
+    ]
+   }
+  }
+ ]
+}

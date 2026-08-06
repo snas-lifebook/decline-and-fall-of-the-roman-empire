@@ -1,0 +1,33 @@
+{"name":"가이우스 그라쿠스","type":"person","attrs":{"role":"호민관","year":"기원전 123년"},"points":[14],"desc":"공화제 시대의 호민관. 무료로 밀을 배부하는 '소맥법'을 만든 인물."}
+{"name":"술라","type":"person","attrs":{"role":"독재관"},"points":[14],"desc":"원로원파의 정치가. 그라쿠스가 만든 '소맥법'을 철폐한 인물."}
+{"name":"아우렐리우스 코타","type":"person","attrs":{"role":"집정관","relation":"민중파"},"points":[14],"desc":"민중파의 집정관으로서 기원전 75년 수혜자 4만 명으로 제한하는 조건으로 '소맥법'을 부활시킨 인물."}
+{"name":"카이사르","type":"person","attrs":{"role":"정치가","year":"기원전 1세기"},"points":[14],"desc":"로마 정치가. 무료 배부 대상을 15만 명으로 정한 인물."}
+{"name":"아우구스투스","type":"person","attrs":{"role":"초대 황제","reign":"기원전 27~기원후 14"},"points":[14],"desc":"초대 황제. 무료 배부 대상을 20만 명으로 늘린 인물."}
+{"name":"타르퀴니우스 프리스쿠스","type":"person","attrs":{"role":"왕","order":"제5대 왕","year":"기원전 6세기"},"points":[14],"desc":"기원전 6세기의 로마 왕. 전승기념으로 고대 로마의 원형 대경기장(키르쿠스 막시무스)의 원형을 만든 인물."}
+{"name":"칼리굴라","type":"person","attrs":{"role":"황제"},"points":[14],"desc":"제정 초기 황제. 키르쿠스 경기장을 건설한 인물."}
+{"name":"클라우디우스","type":"person","attrs":{"role":"황제"},"points":[14],"desc":"뛰어난 역사가이기도 한 황제. 푸키누스 호수에서 대규모 모의 해전을 개최한 인물."}
+{"name":"아그리피나","type":"person","attrs":{"role":"황후","relation":"클라우디우스의 황후"},"points":[14],"desc":"클라우디우스의 황후로서 금실로 짠 그리스풍 외투를 걸치고 모의 해전을 지휘한 인물."}
+{"name":"네로","type":"person","attrs":{"role":"황제"},"points":[14],"desc":"로마 황제. 크레타 섬에서 투우 경기를 관람하고 로마에 도입한 인물."}
+{"name":"베스파시아누스","type":"person","attrs":{"role":"황제","reign":"69~79"},"points":[14],"desc":"제9대 황제. 네로의 황금 궁전 인공 연못 자리에 콜로세움 건설을 시작한 인물."}
+{"name":"티투스","type":"person","attrs":{"role":"황제","reign":"79~81","relation":"베스파시아누스의 아들"},"points":[14],"desc":"베스파시아누스의 아들로서 80년에 콜로세움을 완성한 황제."}
+{"name":"카이사르","type":"person","attrs":{"role":"정치가"},"points":[14],"desc":"전차 경주의 인기를 부추기기 위해 관보에 시합 예상과 전평을 실은 인물."}
+{"name":"스파르타쿠스","type":"person","attrs":{"role":"반란자"},"points":[14],"desc":"검투사 양성소의 반란을 주도한 인물로서 '스파르타쿠스의 반란'으로 알려져 있다."}
+{"name":"로마 시민","type":"group","attrs":{"region":"로마"},"points":[14],"desc":"로마의 시민으로서 밀 배급, 경기, 연극, 경마 등의 공공 오락에 참여한 집단."}
+{"name":"검투사","type":"group","attrs":{"role":"투기 선수"},"points":[14],"desc":"노예나 사형수, 외국인 포로로 구성된 투기 경기의 선수들."}
+{"name":"연극배우","type":"group","attrs":{"role":"공연자"},"points":[14],"desc":"극장에서 공연하는 배우들. 세련된 글이나 그림으로 팬들을 열광의 도가니에 몰아넣은 인물들."}
+{"name":"소맥법","type":"institution","attrs":{"role":"법률","founder":"가이우스 그라쿠스"},"points":[14],"desc":"무료로 밀을 배부하는 사회복지 정책 법률."}
+{"name":"전차 경주","type":"event","attrs":{"type":"스포츠 경기"},"points":[14],"desc":"원형 대경기장에서 열리는 전차 경기. 말이나 전차를 모는 기술 경합."}
+{"name":"검투 시합","type":"event","attrs":{"type":"유혈 오락"},"points":[14],"desc":"검투사들의 결투 경기. 인간 살육의 향락으로서 로마 제국의 국가 행사."}
+{"name":"모의 해전","type":"event","attrs":{"type":"군사 공연"},"points":[14],"desc":"신화나 역사상의 유명한 해전을 재현한 살육전."}
+{"name":"투우 경기","type":"event","attrs":{"type":"동물 경기"},"points":[14],"desc":"투우사와 맹우 사이의 경기. 로마에서 인기를 끈 오락."}
+{"name":"연극","type":"event","attrs":{"type":"공연 예술"},"points":[14],"desc":"로마에서 유행한 무대 공연. 판토마임 등의 형태로 발전했다."}
+{"name":"원형 대경기장","type":"place","aliases":["키르쿠스 막시무스"],"attrs":{"type":"경기장","dimensions":"세로 600미터, 가로 150미터"},"points":[14],"desc":"고대 로마의 전차 경주 경기장."}
+{"name":"콜로세움","type":"place","aliases":["원형경기장"],"attrs":{"type":"경기장","completed":"80년"},"points":[14],"desc":"72년 네로의 황금 궁전 인공 연못 자리에 건설된 검투사 경기장. 수용 인원 5만 명."}
+{"name":"키르쿠스 플라미니우스","type":"place","attrs":{"type":"경기장","year":"기원전 221년"},"points":[14],"desc":"전차 경주 경기장. 세로 400미터, 가로 260미터 규모."}
+{"name":"폼페이","type":"place","attrs":{"region":"이탈리아"},"points":[14],"desc":"콜로세움이 건설된 도시들 중 하나."}
+{"name":"카푸아","type":"place","attrs":{"region":"이탈리아"},"points":[14],"desc":"콜로세움이 건설된 도시들 중 하나."}
+{"name":"님","type":"place","attrs":{"region":"프랑스 남부","description":"지금의 프랑스 남부 도시"},"points":[14],"desc":"콜로세움이 건설된 도시들 중 하나."}
+{"name":"아를","type":"place","attrs":{"region":"프랑스"},"points":[14],"desc":"콜로세움이 건설된 도시들 중 하나."}
+{"name":"로마","type":"place","attrs":{"type":"도시"},"points":[14],"desc":"약 100만에서 160만 명의 인구를 가진 고대 로마의 중심 도시."}
+{"name":"푸키누스 호수","type":"place","attrs":{"type":"호수"},"points":[14],"desc":"클라우디우스 황제가 모의 해전을 개최한 장소."}
+{"name":"로마 제국","type":"place","attrs":{"type":"국가"},"points":[14],"desc":"빵과 서커스 정책이 시행된 제국."}

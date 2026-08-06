@@ -1,0 +1,20 @@
+{"name":"콘스탄티노플","lat":41.0198,"lon":28.9498,"ancient":"Constantinopolis","modern":"이스탄불, 터키","kind":"city","confidence":"high","source":"Pleiades 520998"}
+{"name":"아프리카","lat":36.8518,"lon":10.3205,"ancient":"Africa Proconsularis","modern":"튀니지","kind":"region","confidence":"high","source":"Carthage coordinates"}
+{"name":"누미디아","lat":36.3675,"lon":6.6119,"ancient":"Numidia","modern":"알제리","kind":"region","confidence":"high","source":"Cirta (Constantine)"}
+{"name":"알프스","lat":45.6806,"lon":6.8839,"ancient":"Alpes","modern":"프랑스·스위스·이탈리아","kind":"mountain","confidence":"medium","source":"Graian Alps"}
+{"name":"마르키아노폴리스","lat":43.2252,"lon":27.5850,"ancient":"Marcianopolis","modern":"데브냐, 불가리아","kind":"city","confidence":"high","source":"Devnya"}
+{"name":"일리리쿰","lat":43.5394,"lon":16.4831,"ancient":"Illyricum","modern":"크로아티아","kind":"region","confidence":"medium","source":"Salona"}
+{"name":"파르살루스","lat":39.3000,"lon":22.3833,"ancient":"Pharsalus","modern":"파르살라, 그리스","kind":"battlefield","confidence":"high","source":"Farsala"}
+{"name":"다키아","lat":47.5000,"lon":22.5000,"ancient":"Dacia","modern":"루마니아","kind":"region","confidence":"medium","source":"Pleiades 981518"}
+{"name":"론 강","lat":44.5000,"lon":5.0000,"ancient":"Rhodanus","modern":"프랑스","kind":"river","confidence":"medium","source":"대표점"}
+{"name":"메카","lat":21.4225,"lon":39.8262,"ancient":"","modern":"메카, 사우디아라비아","kind":"city","confidence":"high","source":"Kaaba 좌표"}
+{"name":"브린디시","lat":40.6330,"lon":17.9330,"ancient":"Brundisium","modern":"브린디시, 이탈리아","kind":"city","confidence":"high","source":"이탈리아 좌표"}
+{"name":"성 로마누스 문","lat":41.0200,"lon":28.9700,"ancient":"Porta Romana","modern":"콘스탄티노플 성벽, 터키","kind":"building","confidence":"medium","source":"콘스탄티노플 성벽"}
+{"name":"아펜니노 산맥","lat":43.2757,"lon":12.5758,"ancient":"Apennini","modern":"이탈리아","kind":"mountain","confidence":"medium","source":"중심 좌표"}
+{"name":"에브로 강","lat":40.7200,"lon":-1.0000,"ancient":"Iberus","modern":"스페인","kind":"river","confidence":"medium","source":"대표점"}
+{"name":"유럽","lat":50.0000,"lon":10.0000,"ancient":"Europa","modern":"유럽","kind":"region","confidence":"low","source":"광역 지역 대표점"}
+{"name":"카디스","lat":36.5298,"lon":-6.2947,"ancient":"Gades","modern":"카디스, 스페인","kind":"city","confidence":"high","source":"항구 도시 좌표"}
+{"name":"키르쿠스 플라미니우스","lat":41.8930,"lon":12.4770,"ancient":"Circus Flaminius","modern":"로마, 이탈리아","kind":"building","confidence":"high","source":"Pleiades 158081395"}
+{"name":"테살로니카","lat":40.6283,"lon":22.9529,"ancient":"Thessalonica","modern":"테살로니키, 그리스","kind":"city","confidence":"high","source":"Pleiades 491741"}
+{"name":"페니키아","lat":33.5000,"lon":35.5000,"ancient":"Phoenicia","modern":"시리아·레바논","kind":"region","confidence":"medium","source":"지역 중심"}
+{"name":"하드리아노폴리스","lat":41.6769,"lon":26.5556,"ancient":"Hadrianopolis","modern":"에디르네, 터키","kind":"city","confidence":"high","source":"Edirne"}

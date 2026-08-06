@@ -1,0 +1,187 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "흑해 — 서흑해 (보스포루스~크림반도 서안)",
+    "description": "[대략] 콘스탄티노플의 관문 바다. 고트족이 3세기 이 수역을 건너 소아시아를 습격했다",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       28.0,
+       41.0
+      ],
+      [
+       29.5,
+       42.0
+      ],
+      [
+       31.0,
+       43.5
+      ],
+      [
+       32.0,
+       44.5
+      ],
+      [
+       33.5,
+       45.3
+      ],
+      [
+       35.0,
+       45.5
+      ],
+      [
+       34.5,
+       44.0
+      ],
+      [
+       33.0,
+       42.5
+      ],
+      [
+       31.5,
+       41.5
+      ],
+      [
+       29.5,
+       41.0
+      ],
+      [
+       28.0,
+       41.0
+      ],
+      [
+       28.0,
+       41.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "흑해 — 동흑해 (크림~캅카스 연안)",
+    "description": "[대략] 동고트족의 근거지였던 북안. 목재를 콘스탄티노플 건설에 공급한 삼림지대와 맞닿은 수역",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.0,
+       45.5
+      ],
+      [
+       36.5,
+       45.3
+      ],
+      [
+       38.0,
+       44.5
+      ],
+      [
+       39.5,
+       43.5
+      ],
+      [
+       41.0,
+       42.0
+      ],
+      [
+       41.5,
+       41.0
+      ],
+      [
+       40.0,
+       41.2
+      ],
+      [
+       38.0,
+       41.5
+      ],
+      [
+       36.5,
+       42.5
+      ],
+      [
+       35.0,
+       44.0
+      ],
+      [
+       35.0,
+       45.5
+      ],
+      [
+       35.0,
+       45.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트레비존드",
+    "description": "[주요 항구]  — 흑해 남안의 주요 로마 항구도시, 아나톨리아 동부 방어의 요지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.72,
+     41.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "케르소네소스",
+    "description": "[항구]  — 크림반도 남안의 그리스계 도시, 흑해 북안 교역의 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.49,
+     44.61
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "시노페",
+    "description": "[항구]  — 흑해 남안 소아시아 폰토스 왕국의 옛 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.15,
+     42.03
+    ]
+   }
+  }
+ ]
+}

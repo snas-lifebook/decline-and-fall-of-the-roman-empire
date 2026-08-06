@@ -1,0 +1,22 @@
+{
+  "name": "리비아인",
+  "subject": "리비아인",
+  "color": "#bf360c",
+  "period": "기원전 1천년기 (고전고대 리비아)",
+  "summary": "이집트 서쪽, 키레나이카 일대에 거주하던 베르베르계 원주민. 그리스·로마 사료에서 '리비아인'으로 통칭되며 이집트·키레네 그리스 식민도시와 오랜 접경 관계를 이뤘다.",
+  "territory": [
+    {
+      "part": "키레나이카·마르마리카 분포 (고전고대)",
+      "note": "고전고대 전반에 걸친 대략적 분포 — 키레나이카(현 리비아 동부)와 이집트 서쪽 마르마리카. 유목·반유목 생활 방식이라 고정된 국경이 아니라 성긴 분포로 표시했다.",
+      "confidence": "low",
+      "ring": [
+        [19.5, 32.5], [24.0, 32.0], [25.5, 31.0], [23.0, 30.0], [20.0, 30.5],
+        [18.5, 31.5]
+      ]
+    }
+  ],
+  "sources": [
+    "Wikipedia: Libyans (ancient people), Cyrenaica, Marmarica",
+    "Gibbon, The History of the Decline and Fall of the Roman Empire"
+  ]
+}

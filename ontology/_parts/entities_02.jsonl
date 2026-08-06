@@ -1,0 +1,30 @@
+{"name":"클라우디우스 풀케르","type":"person","aliases":[],"attrs":{"role":"호민관"},"points":[2],"desc":"메시나 해협을 건너 마메르티니 용병대와 함께 메시나를 급습한 로마 호민관."}
+{"name":"한노","type":"person","aliases":[],"attrs":{"role":"카르타고 대장"},"points":[2],"desc":"카르타고 대장. 메시나 전투에서 로마에 포로로 잡혔으나 철수를 표명했고 카르타고 정부에 의해 책형에 처해졌다."}
+{"name":"히에론","type":"person","aliases":[],"attrs":{"role":"king","origin":"시라쿠사"},"points":[2],"desc":"시라쿠사의 왕. 마메르티니 용병대를 토벌하려 메시나를 포위했으며 후에 로마와 부전동맹을 맺음."}
+{"name":"하밀카르 바르카스","type":"person","aliases":[],"attrs":{"role":"general","origin":"카르타고"},"points":[2],"desc":"한니발의 아버지. 로마의 보급기지를 공격하여 전과를 올렸으며 나중에 카르타고 군 총사령관이 됨."}
+{"name":"레굴루스","type":"person","aliases":[],"attrs":{"role":"지휘관"},"points":[2],"desc":"로마의 지휘관. 카르타고의 강화 제의를 일축했으나 본 곶 전투에서 패해 포로가 되었고 고문 끝에 살해됨."}
+{"name":"크산티포스","type":"person","aliases":[],"attrs":{"role":"장군","origin":"스파르타"},"points":[2],"desc":"스파르타 출신의 그리스인 장군. 카르타고를 구하기 위해 기병대와 코끼리 부대를 이용한 새로운 전술을 고안함."}
+{"name":"하스드루발","type":"person","aliases":[],"attrs":{"role":"general","origin":"카르타고"},"points":[2],"desc":"카르타고의 새 사령관. 시칠리아 팔레르모 탈환을 시도했으나 대패함."}
+{"name":"시칠리아 섬","type":"place","aliases":[],"attrs":{},"points":[2],"desc":"로마가 카르타고로부터 얻은 최초의 속주."}
+{"name":"메시나","type":"place","aliases":[],"attrs":{"region":"시칠리아 섬"},"points":[2],"desc":"그리스계 도시. 마메르티니 용병대가 약탈하여 지배한 곳."}
+{"name":"시라쿠사","type":"place","aliases":[],"attrs":{"region":"시칠리아 섬"},"points":[2],"desc":"그리스의 식민시. 아르키메데스의 본거지."}
+{"name":"카르타고","type":"place","aliases":[],"attrs":{"region":"북아프리카"},"points":[2],"desc":"제1차 포에니 전쟁에서 로마에 항복한 국가."}
+{"name":"본 곶","type":"place","aliases":[],"attrs":{"region":"북아프리카"},"points":[2],"desc":"로마 군이 상륙을 감행한 곳."}
+{"name":"팔레르모","type":"place","aliases":[],"attrs":{"region":"시칠리아 섬"},"points":[2],"desc":"카르타고 주둔군의 거점."}
+{"name":"아그리젠토 시","type":"place","aliases":[],"attrs":{"region":"시칠리아 섬"},"points":[2],"desc":"로마 군이 7개월간 포위한 도시."}
+{"name":"마르살라 만","type":"place","aliases":[],"attrs":{"region":"시칠리아 섬 서단"},"points":[2],"desc":"로마 함대와 카르타고 해군이 격돌한 곳."}
+{"name":"탈라모네","type":"place","aliases":[],"attrs":{"region":"이탈리아"},"points":[2],"desc":"로마 군이 갈리아인을 격파한 곳."}
+{"name":"에스파냐","type":"place","aliases":["이베리아 반도"],"attrs":{},"points":[2],"desc":"하밀카르 장군이 평정한 지역."}
+{"name":"카디스","type":"place","aliases":[],"attrs":{"region":"에스파냐"},"points":[2],"desc":"하밀카르가 지브롤터 해협을 건너 도착한 항구도시."}
+{"name":"알리칸테","type":"place","aliases":[],"attrs":{"region":"에스파냐"},"points":[2],"desc":"하밀카르가 도착한 에스파냐의 도시."}
+{"name":"카르타헤나","type":"place","aliases":["카르타고노바"],"attrs":{"region":"에스파냐"},"points":[2],"desc":"하스드루발이 건설한 신짜카르타고. 철 정련과 무기 제조의 기지."}
+{"name":"사르데냐 섬","type":"place","aliases":[],"attrs":{},"points":[2],"desc":"로마가 점거하여 나중에 속주로 만든 섬."}
+{"name":"코르시카 섬","type":"place","aliases":[],"attrs":{},"points":[2],"desc":"카르타고가 로마에 헌상한 섬."}
+{"name":"갈리아키살피나","type":"place","aliases":[],"attrs":{},"points":[2],"desc":"로마가 갈리아인을 격파한 후 만든 제3의 속주."}
+{"name":"밀라노","type":"place","aliases":[],"attrs":{"region":"갈리아키살피나"},"points":[2],"desc":"갈리아키살피나의 수도."}
+{"name":"제1차 포에니 전쟁","type":"event","aliases":[],"attrs":{"duration":"기원전 264~241년"},"points":[2],"desc":"로마와 카르타고 사이의 전쟁."}
+{"name":"메시나 전투","type":"event","aliases":[],"attrs":{"year":"-264"},"points":[2],"desc":"기원전 264년 로마가 마메르티니 용병대와 함께 카르타고를 격파한 전투."}
+{"name":"까마귀 전함","type":"work","aliases":[],"attrs":{},"points":[2],"desc":"로마가 제해권을 확보하기 위해 고안한 전함으로 육상전 방식을 해상전에 응용함."}
+{"name":"마메르티니","type":"group","aliases":[],"attrs":{},"points":[2],"desc":"해산된 용병단이 메시나를 점령한 후 만든 용병대."}
+{"name":"갈리아인","type":"group","aliases":[],"attrs":{},"points":[2],"desc":"로마의 영토 확대 과정에서 만난 민족. 인신공양으로 격파됨."}
+{"name":"로마","type":"place","aliases":[],"attrs":{},"points":[2],"desc":"카르타고와의 제1차 포에니 전쟁을 통해 지중해 전역에 영향력을 확대한 국가."}

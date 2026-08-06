@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오데르 강",
+    "period": "서기 1세기경"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      17.63,
+      49.65
+     ],
+     [
+      17.04,
+      51.11
+     ],
+     [
+      14.55,
+      53.43
+     ],
+     [
+      14.5236,
+      53.672
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오데르 강 발원지(오드르호리)",
+    "year": null,
+    "description": "[대략] ? — 체코 오드르호리 산지에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.63,
+     49.65
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브로츠와프 인근",
+    "year": null,
+    "description": "[대략] ? — 중류 구간",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.04,
+     51.11
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "슈체친 인근",
+    "year": null,
+    "description": "[대략] ? — 고트족이 비수아 강 유역에서 이주해 로마 시대 초기 이 유역 일대에 머물렀다고 여겨지는 구간",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.55,
+     53.43
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오데르 강",
+    "year": null,
+    "description": "[확실] ? — 발트해로 흘러드는 하구",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.5236,
+     53.672
+    ]
+   }
+  }
+ ]
+}

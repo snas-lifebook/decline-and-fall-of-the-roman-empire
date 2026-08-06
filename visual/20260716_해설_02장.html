@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>제2장 해설 — 1억 2천만 명을 하나로 묶은 방법, 그리고 거기 스며든 독</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gothic+A1:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1613; --ink2:#4a423a; --ink3:#7d7267;
+    --paper:#faf7f0; --card:#fffdf8; --line:#e2d9c6;
+    --gold:#9a7b3f; --gold2:#c9ae70;
+    --wine:#7d2b3a; --wine2:#a94456;
+    --sea:#dfe7e9; --ok:#3f6b4a; --blue:#4a5878;
+    --w:44rem;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Gothic A1',sans-serif;font-size:1.0625rem;line-height:1.85;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--w);margin:0 auto;padding:0 1.25rem}
+
+  header{text-align:center;padding:5rem 1.25rem 3rem;border-bottom:1px solid var(--line)}
+  header .kicker{font-size:.7rem;letter-spacing:.32em;color:var(--gold);font-weight:700;margin-bottom:1.5rem}
+  header h1{font-family:'Nanum Myeongjo',serif;font-weight:800;
+    font-size:clamp(1.5rem,4.6vw,2.15rem);line-height:1.5;margin:0 0 1.25rem;letter-spacing:-.01em}
+  header .lede{color:var(--ink2);font-size:.98rem;line-height:1.9;max-width:32rem;margin:0 auto}
+  header .meta{margin-top:2rem;font-size:.75rem;color:var(--ink3);line-height:1.9}
+
+  section{padding:3.5rem 0 1rem}
+  section + section{border-top:1px solid var(--line)}
+  h2{font-family:'Nanum Myeongjo',serif;font-weight:800;font-size:1.4rem;margin:0 0 .4rem;line-height:1.5}
+  h2 .no{display:inline-block;font-family:'Gothic A1',sans-serif;font-size:.68rem;font-weight:700;
+    letter-spacing:.1em;color:var(--gold);vertical-align:middle;margin-right:.6rem;
+    border:1px solid var(--gold2);border-radius:2px;padding:.15rem .45rem}
+  .tldr{background:var(--card);border-left:3px solid var(--gold);padding:.9rem 1.1rem;
+    margin:1.25rem 0 1.75rem;font-size:.95rem;color:var(--ink2);line-height:1.8}
+  .tldr b{color:var(--ink);font-weight:700}
+  p{margin:0 0 1.15rem}
+
+  .src{display:inline-block;font-size:.66rem;font-weight:700;color:var(--gold);
+    border:1px solid var(--gold2);border-radius:999px;padding:0 .38rem;margin-left:.2rem;
+    text-decoration:none;vertical-align:super;line-height:1.5;transition:all .15s}
+  .src:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+
+  figure{margin:1.75rem 0;background:var(--card);border:1px solid var(--line);
+    border-radius:4px;padding:1.5rem 1.25rem 1.1rem}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--line);
+    font-size:.82rem;color:var(--ink3);line-height:1.75}
+  figcaption b{color:var(--ink2)}
+
+  .calc{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1.25rem;margin:1.5rem 0}
+  .calc .row{display:flex;justify-content:space-between;align-items:baseline;
+    padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.93rem;gap:1rem}
+  .calc .row:last-of-type{border-bottom:0}
+  .calc .row .lbl{color:var(--ink2)}
+  .calc .row .val{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .calc .total{margin-top:.7rem;padding-top:.85rem;border-top:2px solid var(--ink);
+    display:flex;justify-content:space-between;align-items:baseline;font-size:1.05rem}
+  .calc .total .val{font-weight:800;color:var(--wine)}
+
+  .punch{font-family:'Nanum Myeongjo',serif;font-size:1.15rem;line-height:1.75;color:var(--wine);
+    font-weight:700;text-align:center;padding:1.5rem 1rem;margin:1.75rem 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  .quote{background:var(--card);border-left:3px solid var(--wine2);padding:1.1rem 1.25rem;
+    margin:1.5rem 0;font-family:'Nanum Myeongjo',serif;font-size:1.02rem;line-height:1.85}
+  .quote .who{display:block;margin-top:.6rem;font-family:'Gothic A1',sans-serif;
+    font-size:.75rem;color:var(--ink3);font-weight:700}
+
+  .tag{display:inline-block;font-size:.68rem;font-weight:700;padding:.1rem .45rem;
+    border-radius:2px;margin-right:.35rem}
+  .tag.fact{background:#eef1ec;color:var(--ok)}
+  .tag.gibbon{background:#f6ece8;color:var(--wine)}
+  .tag.later{background:#eceef3;color:var(--blue)}
+
+  .note{background:#f4f1e8;border:1px dashed var(--line);border-radius:4px;
+    padding:1rem 1.1rem;margin:1.5rem 0;font-size:.88rem;color:var(--ink2);line-height:1.8}
+  .note .hd{font-weight:700;color:var(--ink);margin-bottom:.35rem;font-size:.92rem}
+
+  footer{border-top:1px solid var(--line);margin-top:3rem;padding:2.5rem 1.25rem 5rem;
+    font-size:.8rem;color:var(--ink3);line-height:1.9}
+  footer b{color:var(--ink2)}
+  @media(max-width:640px){
+    body{font-size:1rem}
+    header{padding:3.5rem 1.25rem 2.5rem}
+    .calc .row{font-size:.88rem}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">로마제국 쇠망사 · 제2장 해설</div>
+  <h1>1억 2천만 명을 하나로 묶은 방법,<br>그리고 거기 스며든 독</h1>
+  <p class="lede">
+    2장의 제목은 <b>"번영"</b>입니다. 그런데 마지막 문단에서 기번은 갑자기
+    <b>"느리고도 은밀한 독"</b>이라고 씁니다. 이 반전이 2장의 전부입니다.
+  </p>
+  <div class="meta">
+    모든 숫자에 <b><span style="color:var(--gold)">p○</span></b> 표시가 붙어 있습니다.<br>
+    번역본의 몇 번째 문단에서 나온 값인지 뜻합니다. 근거 없는 숫자는 싣지 않았습니다.
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- 1. 반전 -->
+<section>
+  <h2><span class="no">1</span>이 장은 함정이다</h2>
+
+  <div class="tldr">
+    2장은 로마가 얼마나 잘 굴러갔는지를 스무 문단 넘게 자랑합니다.
+    <b>그러다 끝에서 뒤통수를 칩니다.</b> 그 번영이 곧 병이었다고.
+  </div>
+
+  <p>
+    1장이 <b>"제국이 얼마나 컸나"</b>였다면, 2장은 <b>"그 큰 걸 무슨 수로 하나로 묶었나"</b>입니다.
+    답은 세 가지입니다 — <b>종교를 건드리지 않았고, 시민권을 나눠줬고, 길을 깔았습니다.</b>
+  </p>
+
+  <p>
+    그런데 기번은 이 자랑을 실컷 늘어놓은 다음, 마지막 두 문단에서 칼을 꺼냅니다.
+    <b>바로 그 평화가 사람들을 무기력하게 만들었다</b>는 겁니다.
+    2장을 읽을 때는 <b>끝까지 가야 뜻이 완성됩니다.</b>
+  </p>
+</section>
+
+<!-- 2. 규모 -->
+<section>
+  <h2><span class="no">2</span>1억 2천만 명</h2>
+
+  <div class="tldr">
+    기번이 셈한 제국 인구입니다. <b>당시 유럽 전체보다 많다</b>고 그는 덧붙입니다.<a class="src" href="#p94">p94</a>
+  </div>
+
+  <div class="calc">
+    <div class="row">
+      <span class="lbl">로마 시민 <span style="color:var(--ink3);font-size:.85em">(클라우디우스 인구조사, 성인 남성)</span></span>
+      <span class="val">6,945,000명</span>
+    </div>
+    <div class="row">
+      <span class="lbl">↳ 여자·아이 포함하면</span>
+      <span class="val">약 2,000만</span>
+    </div>
+    <div class="row">
+      <span class="lbl">속주민 <span style="color:var(--ink3);font-size:.85em">(시민의 약 2배)</span></span>
+      <span class="val">약 4,000만</span>
+    </div>
+    <div class="row">
+      <span class="lbl">노예 <span style="color:var(--ink3);font-size:.85em">(자유민과 같은 수)</span></span>
+      <span class="val">약 6,000만</span>
+    </div>
+    <div class="total">
+      <span>제국 총인구 <a class="src" href="#p94">p94</a></span>
+      <span class="val">약 1억 2,000만</span>
+    </div>
+  </div>
+
+  <div class="punch">
+    셋 중 하나가 노예였다.
+  </div>
+
+  <p>
+    이 표에서 눈여겨볼 건 마지막 줄입니다.
+    <b>기번의 셈이 맞다면 제국 인구의 절반이 노예입니다.</b>
+    "인류가 가장 행복했던 시대"라는 그의 평가를 지금 그대로 받아들이기 어려운 이유가 여기 있습니다.
+  </p>
+
+  <div class="note">
+    <div class="hd">이 숫자는 지금 의심받습니다</div>
+    <span class="tag later">후대 수정</span>
+    노예가 자유민과 같은 수였다는 건 <b>기번의 추정일 뿐</b>이고, 지금은 과하다고 봅니다.
+    19세기 학자 춤프트는 이걸 <b>"기번의 중대한 오류"</b>라고 못박았습니다.
+    "갈리아나 시리아의 농사꾼은 노예를 한 명도 안 뒀다"는 겁니다.<a class="src" href="#p95">p95</a><br><br>
+    기번 본인도 <b>"내 추산은 막연하고 억측에 불과하다"</b>고 인정합니다.<a class="src" href="#p98">p98</a>
+    <b>이 표의 숫자는 사실이 아니라 18세기의 어림짐작으로 읽으십시오.</b>
+  </div>
+</section>
+
+<!-- 3. 문을 열었다 -->
+<section>
+  <h2><span class="no">3</span>로마가 커진 진짜 이유 — 문을 열었다</h2>
+
+  <div class="tldr">
+    기번은 <b>아테네와 로마를 나란히 놓고 비교</b>합니다.
+    이 대조가 2장에서 가장 날카로운 대목입니다.
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 330" role="img" aria-label="아테네와 로마의 시민 수 변화 비교 (같은 척도)"
+         font-family="Gothic A1, sans-serif">
+      <rect x="0" y="0" width="720" height="330" fill="#faf7f0"/>
+
+      <!-- 눈금 (46.3만 = 200px 기준, 같은 척도) -->
+      <line x1="95" y1="255" x2="690" y2="255" stroke="#4a423a" stroke-width="1.5"/>
+      <g stroke="#e2d9c6" stroke-width="1">
+        <line x1="95" y1="255" x2="690" y2="255"/>
+        <line x1="95" y1="212" x2="690" y2="212"/>
+        <line x1="95" y1="169" x2="690" y2="169"/>
+        <line x1="95" y1="126" x2="690" y2="126"/>
+        <line x1="95" y1="83"  x2="690" y2="83"/>
+        <line x1="95" y1="55"  x2="690" y2="55"/>
+      </g>
+      <g font-size="9.5" fill="#a09a90" text-anchor="end">
+        <text x="88" y="259">0</text>
+        <text x="88" y="216">10만</text>
+        <text x="88" y="173">20만</text>
+        <text x="88" y="130">30만</text>
+        <text x="88" y="87">40만</text>
+        <text x="88" y="59">46.3만</text>
+      </g>
+
+      <!-- 아테네 (3만=12.9px, 2.1만=9.1px) -->
+      <rect x="135" y="242" width="62" height="13" fill="#8fa0be" rx="1.5"/>
+      <text x="166" y="234" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4a5878">3만</text>
+      <text x="166" y="275" text-anchor="middle" font-size="10" fill="#7d7267">전성기</text>
+
+      <rect x="222" y="246" width="62" height="9" fill="#b6c1d3" rx="1.5"/>
+      <text x="253" y="238" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4a5878">2.1만</text>
+      <text x="253" y="275" text-anchor="middle" font-size="10" fill="#7d7267">그 뒤</text>
+
+      <text x="209" y="299" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5878">아테네 — 문을 닫았다</text>
+      <text x="209" y="317" text-anchor="middle" font-size="10" fill="#7d7267">줄어들었다 (−30%)</text>
+
+      <!-- 구분선 -->
+      <line x1="390" y1="45" x2="390" y2="285" stroke="#e2d9c6" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- 로마 (8.3만=35.8px, 46.3만=200px) -->
+      <rect x="455" y="219" width="62" height="36" fill="#d3aab1" rx="1.5"/>
+      <text x="486" y="211" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7d2b3a">8.3만</text>
+      <text x="486" y="275" text-anchor="middle" font-size="10" fill="#7d7267">첫 인구조사</text>
+
+      <rect x="560" y="55" width="62" height="200" fill="#a94456" rx="1.5"/>
+      <text x="591" y="47" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7d2b3a">46.3만</text>
+      <text x="591" y="275" text-anchor="middle" font-size="10" fill="#7d7267">동맹시 전쟁 직전</text>
+
+      <text x="538" y="299" text-anchor="middle" font-size="13" font-weight="700" fill="#7d2b3a">로마 — 문을 열었다</text>
+      <text x="538" y="317" text-anchor="middle" font-size="10" fill="#7d7267">5.6배로 늘었다</text>
+    </svg>
+    <figcaption>
+      아테네 3만 → 2.1만 · 로마 8만 3천 → 46만 3천 <a class="src" href="#p31">p31</a><br>
+      <b>네 막대 모두 같은 눈금 위에 있습니다.</b> 아테네 막대가 바닥에 붙어 보이는 게 정확합니다 —
+      로마가 그만큼 커졌다는 뜻입니다.
+    </figcaption>
+  </figure>
+
+  <p>
+    아테네와 스파르타는 <b>"순수한 혈통"</b>을 지키려고 시민을 늘리지 않았습니다.
+    기번은 이걸 <b>"편협한 정략"</b>이라 부르며, 그것이 두 나라의 <b>몰락을 재촉했다</b>고 씁니다.<a class="src" href="#p31">p31</a>
+  </p>
+
+  <p>
+    로마는 반대로 했습니다. <b>덕과 재능이 있으면 노예든 이방인이든 적이든 야만족이든 받아들였습니다.</b><a class="src" href="#p31">p31</a>
+    카이사르를 포위했던 갈리아인들의 손자가 <b>로마 원로원 의원이 됩니다.</b><a class="src" href="#p47">p47</a>
+    이게 로마의 진짜 무기였다는 게 기번의 판단입니다.
+  </p>
+</section>
+
+<!-- 4. 종교 -->
+<section>
+  <h2><span class="no">4</span>종교를 건드리지 않았다</h2>
+
+  <div class="tldr">
+    기번의 가장 유명한 문장이 여기 나옵니다.
+    <b>한 문장에 세 계층을 나란히 놓고 전부 비웃습니다.</b>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 240" role="img" aria-label="종교를 보는 세 시선"
+         font-family="Gothic A1, sans-serif">
+      <rect x="0" y="0" width="720" height="240" fill="#faf7f0"/>
+
+      <text x="360" y="32" text-anchor="middle" font-size="12.5" fill="#7d7267">같은 종교를 놓고, 세 사람이 각각 이렇게 봤다</text>
+
+      <!-- 백성 -->
+      <rect x="40" y="55" width="190" height="115" rx="4" fill="#f6ece8" stroke="#dfc0c0"/>
+      <text x="135" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="#7d2b3a">백성</text>
+      <text x="135" y="120" text-anchor="middle" font-size="18" font-weight="800" fill="#1a1613"
+            font-family="Nanum Myeongjo, serif">모두 참되다</text>
+      <text x="135" y="148" text-anchor="middle" font-size="10.5" fill="#7d7267">믿는다</text>
+
+      <!-- 철학자 -->
+      <rect x="265" y="55" width="190" height="115" rx="4" fill="#eceef3" stroke="#c4cad8"/>
+      <text x="360" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5878">철학자</text>
+      <text x="360" y="120" text-anchor="middle" font-size="18" font-weight="800" fill="#1a1613"
+            font-family="Nanum Myeongjo, serif">모두 거짓이다</text>
+      <text x="360" y="148" text-anchor="middle" font-size="10.5" fill="#7d7267">속으로 비웃는다</text>
+
+      <!-- 행정관 -->
+      <rect x="490" y="55" width="190" height="115" rx="4" fill="#eef1ec" stroke="#c3d0c5"/>
+      <text x="585" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="#3f6b4a">행정관</text>
+      <text x="585" y="120" text-anchor="middle" font-size="18" font-weight="800" fill="#1a1613"
+            font-family="Nanum Myeongjo, serif">모두 쓸모있다</text>
+      <text x="585" y="148" text-anchor="middle" font-size="10.5" fill="#7d7267">이용한다</text>
+
+      <text x="360" y="205" text-anchor="middle" font-size="13" font-weight="700" fill="#7d2b3a">
+        그래서 아무도 싸우지 않았다 — 이것이 로마의 &quot;관용&quot;
+      </text>
+      <text x="360" y="226" text-anchor="middle" font-size="10.5" fill="#7d7267">
+        믿어서가 아니라, 다들 각자의 이유로 내버려 뒀기 때문에
+      </text>
+    </svg>
+    <figcaption>2장 첫 대목 <a class="src" href="#p6">p6</a></figcaption>
+  </figure>
+
+  <p>
+    이 문장을 잘 보십시오. <b>기번은 관용을 칭찬하는 척하면서 실은 셋 다 조롱하고 있습니다.</b>
+    백성은 어리석고, 철학자는 위선적이고, 행정관은 계산적입니다.
+  </p>
+
+  <p>
+    그가 뒤에 덧붙이는 말이 결정적입니다 — 철학자들은
+    <b>"사제의 법의 아래 무신론자의 심정을 감췄다"</b>고 씁니다.<a class="src" href="#p14">p14</a>
+    안 믿으면서 제사는 꼬박꼬박 지냈다는 거죠.
+  </p>
+
+  <div class="note">
+    <div class="hd">왜 이게 중요한가</div>
+    기번이 여기서 <b>"로마의 평화는 아무도 종교를 진지하게 안 믿어서 가능했다"</b>는 그림을 그려두는 겁니다.<br><br>
+    그러면 자연히 다음 질문이 따라옵니다 — <b>진지하게 믿는 집단이 나타나면 어떻게 될까?</b>
+    <b>이게 기독교를 다루는 15·16장으로 가는 포석입니다.</b>
+    2장의 관용 이야기는 그냥 배경 설명이 아니라 <b>미리 깔아둔 덫</b>입니다.
+  </div>
+</section>
+
+<!-- 5. 길 -->
+<section>
+  <h2><span class="no">5</span>길과 도시 — 제국을 묶은 하드웨어</h2>
+
+  <div class="tldr">
+    종교와 시민권이 <b>마음</b>을 묶었다면, 도로는 <b>몸</b>을 묶었습니다.
+  </div>
+
+  <div class="calc">
+    <div class="row">
+      <span class="lbl">제국 대각선 <span style="color:var(--ink3);font-size:.85em">(스코틀랜드 성벽 → 로마 → 예루살렘)</span></span>
+      <span class="val">4,080 로마마일</span>
+    </div>
+    <div class="row">
+      <span class="lbl">역참 간격</span>
+      <span class="val">5~6마일마다</span>
+    </div>
+    <div class="row">
+      <span class="lbl">역참마다 상비 말</span>
+      <span class="val">40필</span>
+    </div>
+    <div class="total">
+      <span>하루 이동 거리 <a class="src" href="#p135">p135</a></span>
+      <span class="val">100마일</span>
+    </div>
+  </div>
+
+  <p>
+    바다는 더 빨랐습니다. 로마의 관문 오스티아에서 순풍을 타면
+    <b>이레 만에 지브롤터, 아흐레~열흘이면 알렉산드리아</b>였습니다.<a class="src" href="#p135">p135</a>
+  </p>
+
+  <p>
+    도시는 이렇게 깔렸습니다 — <b>이탈리아 1,197개, 갈리아 1,200개, 아시아 500개,
+    에스파냐 360개, 아프리카 300개.</b><a class="src" href="#p121">p121</a>
+  </p>
+
+  <div class="note">
+    <div class="hd">기번이 슬쩍 끼워넣은 한 마디</div>
+    도로의 <b>진짜 목적</b>에 대해 그는 이렇게 씁니다 —
+    <b>"본래 목적은 군단의 행군을 원활하게 하는 데 있었다."</b><a class="src" href="#p135">p135</a><br><br>
+    상인과 여행자가 편해진 건 <b>부수 효과</b>였다는 겁니다.
+    로마의 위대한 도로망은 애초에 <b>군대를 빨리 보내려고</b> 깐 것입니다.
+  </div>
+</section>
+
+<!-- 6. 언어 -->
+<section>
+  <h2><span class="no">6</span>제국은 이미 둘로 갈라져 있었다</h2>
+
+  <div class="tldr">
+    <b>2장에서 가장 중요한 복선입니다.</b> 그런데 기번은 이걸 딱 한 문단에 묻어놨습니다.
+    그냥 읽으면 놓칩니다.
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 250" role="img" aria-label="라틴어 서방과 그리스어 동방의 분열"
+         font-family="Gothic A1, sans-serif">
+      <rect x="0" y="0" width="720" height="250" fill="#faf7f0"/>
+
+      <!-- 서방 -->
+      <rect x="40" y="45" width="300" height="130" rx="4" fill="#f6ece8" stroke="#dfc0c0"/>
+      <text x="190" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#7d2b3a">서방 — 라틴어</text>
+      <text x="190" y="103" text-anchor="middle" font-size="11.5" fill="#4a423a">아프리카 · 에스파냐 · 갈리아</text>
+      <text x="190" y="122" text-anchor="middle" font-size="11.5" fill="#4a423a">브리타니아 · 판노니아</text>
+      <text x="190" y="152" text-anchor="middle" font-size="11" fill="#7d7267">정복자의 말을 받아들였다</text>
+
+      <!-- 동방 -->
+      <rect x="380" y="45" width="300" height="130" rx="4" fill="#eceef3" stroke="#c4cad8"/>
+      <text x="530" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#4a5878">동방 — 그리스어</text>
+      <text x="530" y="103" text-anchor="middle" font-size="11.5" fill="#4a423a">그리스 · 소아시아</text>
+      <text x="530" y="122" text-anchor="middle" font-size="11.5" fill="#4a423a">시리아 · 이집트</text>
+      <text x="530" y="152" text-anchor="middle" font-size="11" fill="#7d7267">자기 말을 내려놓지 않았다</text>
+
+      <!-- 갈라진 금 -->
+      <path d="M360,40 L352,80 L368,120 L356,160 L364,182" stroke="#7d2b3a" stroke-width="3"
+            fill="none" stroke-linecap="round" stroke-dasharray="1 0"/>
+
+      <text x="360" y="212" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7d2b3a">
+        번영할 때는 안 보이던 금
+      </text>
+      <text x="360" y="234" text-anchor="middle" font-size="11" fill="#4a423a">
+        훗날 제국이 동·서로 쪼개지는 바로 그 선이다
+      </text>
+    </svg>
+    <figcaption>언어의 분열 <a class="src" href="#p56">p56</a></figcaption>
+  </figure>
+
+  <p>
+    서방의 야만족들은 <b>정복당하자마자 라틴어를 받아들였습니다.</b>
+    그런데 그리스인들은 달랐습니다.
+    기번의 표현으로는 <b>"자기 언어를 내려놓기엔 취향이 너무 고상했고, 외래 제도를 받아들이기엔 허영이 너무 컸다."</b><a class="src" href="#p56">p56</a>
+  </p>
+
+  <p>
+    그리고 여기서 기번이 <b>미래를 미리 흘립니다.</b> 이 차이가
+    <b>"번영이 한낮의 광휘를 뿜던 동안에는 가려져 있었으나,
+    밤의 그늘이 로마 세계 위로 내려앉으면서 점차 더 또렷이 드러나게 되었다"</b>고 씁니다.<a class="src" href="#p56">p56</a>
+  </p>
+
+  <div class="punch">
+    제국은 쪼개지기 수백 년 전에<br>이미 말이 갈라져 있었다.
+  </div>
+</section>
+
+<!-- 7. 반전 -->
+<section>
+  <h2><span class="no">7</span>그리고 독 — 2장의 진짜 결론</h2>
+
+  <div class="tldr">
+    여기까지가 자랑이었습니다. <b>마지막 두 문단에서 기번이 표정을 바꿉니다.</b>
+  </div>
+
+  <div class="quote">
+    이 기나긴 평화와 로마인의 획일적인 통치는
+    제국의 급소에 <b>느리고도 은밀한 독</b>을 흘려 넣었다.
+    사람들의 정신은 차츰 같은 높이로 내려앉았고, 기질의 불꽃은 꺼졌으며,
+    무인의 기상마저 증발해 버렸다.
+    <span class="who">— 기번, 2장 <a class="src" href="#p166">p166</a></span>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 270" role="img" aria-label="번영이 어떻게 무기력으로 바뀌었나"
+         font-family="Gothic A1, sans-serif">
+      <rect x="0" y="0" width="720" height="270" fill="#faf7f0"/>
+
+      <!-- 좋은 것 -->
+      <rect x="45" y="40" width="180" height="60" rx="4" fill="#eef1ec" stroke="#c3d0c5"/>
+      <text x="135" y="66" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3f6b4a">평화가 왔다</text>
+      <text x="135" y="86" text-anchor="middle" font-size="10.5" fill="#7d7267">싸울 일이 없어졌다</text>
+
+      <!-- 화살표 -->
+      <path d="M232,70 L280,70" stroke="#c9ae70" stroke-width="2" marker-end="url(#a2)"/>
+
+      <!-- 중간 -->
+      <rect x="290" y="40" width="180" height="60" rx="4" fill="#f4f1e8" stroke="#e2d9c6"/>
+      <text x="380" y="66" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9a7b3f">방위를 남에게 맡겼다</text>
+      <text x="380" y="86" text-anchor="middle" font-size="10.5" fill="#7d7267">용병 군대가 지켜준다</text>
+
+      <path d="M477,70 L525,70" stroke="#c9ae70" stroke-width="2" marker-end="url(#a2)"/>
+
+      <!-- 나쁜 것 -->
+      <rect x="535" y="40" width="145" height="60" rx="4" fill="#f6ece8" stroke="#dfc0c0"/>
+      <text x="607" y="66" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7d2b3a">기개가 죽었다</text>
+      <text x="607" y="86" text-anchor="middle" font-size="10.5" fill="#7d7267">지킬 마음이 사라짐</text>
+
+      <!-- 아래: 기번의 구분 -->
+      <line x1="45" y1="135" x2="680" y2="135" stroke="#e2d9c6"/>
+
+      <text x="135" y="168" text-anchor="middle" font-size="12" font-weight="700" fill="#3f6b4a">개인의 용기</text>
+      <text x="135" y="190" text-anchor="middle" font-size="22" font-weight="800" fill="#3f6b4a">남았다</text>
+      <text x="135" y="215" text-anchor="middle" font-size="10.5" fill="#7d7267">여전히 싸움은 잘한다</text>
+
+      <text x="360" y="192" text-anchor="middle" font-size="20" font-weight="700" fill="#c9ae70">그러나</text>
+
+      <text x="590" y="168" text-anchor="middle" font-size="12" font-weight="700" fill="#7d2b3a">공적인 용기</text>
+      <text x="590" y="190" text-anchor="middle" font-size="22" font-weight="800" fill="#7d2b3a">사라졌다</text>
+      <text x="590" y="215" text-anchor="middle" font-size="10.5" fill="#7d7267">지킬 내 나라가 없다</text>
+
+      <text x="360" y="250" text-anchor="middle" font-size="11.5" fill="#4a423a">
+        기번은 이 둘을 엄격히 구분한다 — 로마가 잃은 건 뒤엣것이다
+      </text>
+
+      <defs>
+        <marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 z" fill="#c9ae70"/>
+        </marker>
+      </defs>
+    </svg>
+    <figcaption>기개의 소멸 <a class="src" href="#p166">p166</a></figcaption>
+  </figure>
+
+  <p>
+    기번의 논리는 이렇습니다. 히스파니아·갈리아·브리타니아 사람들은
+    <b>여전히 용감하고 튼튼했습니다.</b> 개인의 무용은 그대로였습니다.
+  </p>
+
+  <p>
+    그런데 <b>"독립에 대한 사랑"과 "민족의 명예에 대한 자각"</b>은 사라졌습니다.
+    왜냐하면 <b>지킬 내 나라가 없었으니까요.</b> 법도 총독도 황제가 보내줍니다.
+    방위는 용병이 합니다. <b>그러니 시민으로서 용감할 이유가 없어진 겁니다.</b><a class="src" href="#p166">p166</a>
+  </p>
+
+  <p>
+    기번은 여기서 한 발 더 나갑니다. 이 시대에
+    <b>독창적인 작가가 단 한 명도 안 나왔다</b>고 씁니다.<a class="src" href="#p167">p167</a>
+    평화롭고 풍요롭고 교양 있었는데, <b>아무도 새로운 걸 만들지 못했습니다.</b>
+    비평가와 주석가만 구름떼처럼 불어났습니다.
+  </p>
+
+  <div class="quote">
+    로마 세계는 참으로 <b>난쟁이 종족</b>으로 채워져 있었다.
+    그때 북방의 사나운 거인들이 밀고 들어와 그 볼품없는 혈통을 고쳐 놓았다.
+    <span class="who">— 기번, 2장 마지막 문단 <a class="src" href="#p170">p170</a></span>
+  </div>
+
+  <p>
+    <b>이 마지막 문장이 이 책 전체의 방향을 정합니다.</b>
+    야만족의 침입은 기번에게 그냥 재앙이 아닙니다.
+    <b>죽어가던 세계에 대한 거친 치료</b>이기도 합니다.
+  </p>
+</section>
+
+<!-- 8. 기번이 비판받는 지점 -->
+<section>
+  <h2><span class="no">8</span>여기서 기번은 공격받는다</h2>
+
+  <div class="tldr">
+    번역본에 <b>기번을 대놓고 비난하는 문단들</b>이 섞여 있습니다.
+    기번이 쓴 게 아니라 <b>19세기 편집자들이 끼워넣은 주석</b>입니다. 헷갈리지 마십시오.
+  </div>
+
+  <p>
+    <span class="tag later">편집자 주</span>
+    쟁점은 <b>노예제</b>입니다. 기번은 황제들이 노예 처지를 개선했다고 쓰면서,
+    그 공을 <b>"황제들의 덕 혹은 정략"</b>에 돌립니다.<a class="src" href="#p67">p67</a>
+  </p>
+
+  <p>
+    프랑스 편집자 <b>기조</b>가 여기에 격분합니다.
+    기번이 <b>"부정직함에 가까울 만큼"</b> 노예제의 참상을 완화하려 들며,
+    노예 해방의 진짜 원인인 <b>기독교를 일부러 침묵으로 지나쳤다</b>고 공격합니다.<a class="src" href="#p72">p72</a>
+  </p>
+
+  <p>
+    영국 편집자 <b>밀먼</b>은 기번을 편듭니다.
+    노예 처지 개선은 기독교 이전에도 있었고, <b>기번은 노예무역 반대자였다</b>고 반박합니다.<a class="src" href="#p75">p75</a><a class="src" href="#p76">p76</a>
+  </p>
+
+  <div class="note">
+    <div class="hd">읽을 때 주의</div>
+    번역본에서 <b>"기번은 ~했다", "기번의 이 대목은 ~"</b> 이런 식으로
+    <b>기번을 3인칭으로 부르는 문단</b>은 전부 편집자 주입니다.
+    끝에 <b>—G.</b>(기조) 또는 <b>—M.</b>(밀먼) 서명이 붙어 있습니다.<br><br>
+    <b>이걸 기번의 말로 읽으면 뜻이 정반대가 됩니다.</b>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap" style="padding:0">
+    <b>이 해설에 대하여</b><br>
+    기번의 원문이 아니라 <b>원문을 이해하기 위한 보조 자료</b>입니다.
+    기번의 말은 번역본에 있습니다.<br><br>
+
+    모든 수치에 붙은 <b><span style="color:var(--gold)">p○</span></b>는 번역본 문단 번호입니다.
+    <b>원문에 근거가 없는 내용은 도식으로 만들지 않았습니다.</b><br><br>
+
+    <b>주의</b> — 이 장의 인구 수치(1억 2천만, 노예 6천만)는 <b>기번 본인이
+    "막연하고 억측"이라 인정한 어림짐작</b>입니다. 후대 학자들이 특히 노예 비율을 강하게 반박했습니다.
+    사실로 받아들이지 마십시오.
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "요르단 강",
+  "subject": "요르단 강",
+  "period": "서기 1세기 초",
+  "summary": "유다 지역을 흐르는 강. 세례자 요한이 설교하고 예수가 세례를 받은 곳으로, 로마 제국 정신적 통일의 무대이자 유다-나바테아의 경계였다.",
+  "waypoints": [
+    {
+      "place": "요르단 강 발원지(헤르몬 산)",
+      "lat": 33.24,
+      "lon": 35.69,
+      "event": "헤르몬 산기슭에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "갈릴리 호수",
+      "lat": 32.83,
+      "lon": 35.59,
+      "event": "갈릴리 호수를 거쳐 남류한다. 예수 사역의 주요 무대",
+      "in_gazetteer": false,
+      "confidence": "high"
+    },
+    {
+      "place": "요르단 강",
+      "lat": 33.1875,
+      "lon": 35.6194,
+      "event": "세례자 요한이 설교하고 예수가 세례를 받았다고 전해지는 구간(서기 1세기 초)",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "사해 하구",
+      "lat": 31.76,
+      "lon": 35.55,
+      "event": "사해로 흘러드는 하구. 유다 속주와 나바테아 왕국을 가르는 자연 경계이기도 했다",
+      "in_gazetteer": false,
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Jordan River",
+    "복음서(마태·마가·누가·요한) 세례 전승"
+  ]
+}

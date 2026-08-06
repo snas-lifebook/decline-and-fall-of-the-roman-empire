@@ -1,0 +1,100 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "크레타 섬 — 크레타 본섬",
+    "description": "[확실] 동서로 긴 섬. 에게해 남단을 가로막아 지중해 동부 항로의 요충지 역할을 함",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       23.5,
+       35.65
+      ],
+      [
+       24.2,
+       35.5
+      ],
+      [
+       24.9,
+       35.35
+      ],
+      [
+       25.7,
+       35.25
+      ],
+      [
+       26.0,
+       35.15
+      ],
+      [
+       25.7,
+       34.95
+      ],
+      [
+       24.8,
+       35.0
+      ],
+      [
+       23.9,
+       35.2
+      ],
+      [
+       23.5,
+       35.4
+      ],
+      [
+       23.5,
+       35.65
+      ],
+      [
+       23.5,
+       35.65
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "크노소스",
+    "description": "[도시]  — 청동기 문명의 옛 중심지, 로마 시대에도 주요 도시로 존속",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.16,
+     35.3
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "고르티나",
+    "description": "[주요 도시]  — 로마 속주 크레타의 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     24.94,
+     35.07
+    ]
+   }
+  }
+ ]
+}

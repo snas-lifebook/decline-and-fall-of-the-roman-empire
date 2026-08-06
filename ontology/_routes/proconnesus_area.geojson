@@ -1,0 +1,72 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "프로코네소스 — 프로코네소스 본섬",
+    "description": "[확실] 마르마라해 남부의 작은 섬. 지금의 마르마라 섬",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       27.55,
+       40.68
+      ],
+      [
+       27.65,
+       40.66
+      ],
+      [
+       27.72,
+       40.6
+      ],
+      [
+       27.68,
+       40.55
+      ],
+      [
+       27.58,
+       40.55
+      ],
+      [
+       27.5,
+       40.6
+      ],
+      [
+       27.55,
+       40.68
+      ],
+      [
+       27.55,
+       40.68
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "프로코네소스",
+    "description": "[대리석 채석장] 330 — 신수도 콘스탄티노플의 건설 자재를 공급한 채석장",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.63,
+     40.62
+    ]
+   }
+  }
+ ]
+}

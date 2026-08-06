@@ -1,0 +1,149 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유프라테스 강",
+    "period": "서기 2~3세기"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      40.51,
+      39.71
+     ],
+     [
+      38.57,
+      37.52
+     ],
+     [
+      37.87,
+      37.06
+     ],
+     [
+      40.73,
+      34.75
+     ],
+     [
+      44.3661,
+      33.3153
+     ],
+     [
+      47.4419,
+      31.005
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유프라테스 강 발원지(아나톨리아 동부)",
+    "year": null,
+    "description": "[대략] ? — 아나톨리아 동부 산지에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.51,
+     39.71
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "사모사타 인근",
+    "year": null,
+    "description": "[확실] ? — 카파도키아·시리아 속주 방면 로마 군단기지가 늘어선 국경 구간",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.57,
+     37.52
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "제우그마 도하 지점",
+    "year": null,
+    "description": "[확실] ? — 로마와 파르티아·사산조 페르시아가 서로 도하하며 충돌한 주요 나루터. 여러 차례 로마 도시가 강 건너편에서 침공을 받아 파괴·약탈당했다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.87,
+     37.06
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "두라 에우로포스",
+    "year": null,
+    "description": "[확실] ? — 유프라테스 강변의 로마 국경 도시. 3세기 사산조의 공세로 함락됐다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.73,
+     34.75
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "바그다드",
+    "year": null,
+    "description": "[대략] ? — 메소포타미아 중류 구간",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.3661,
+     33.3153
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유프라테스 강",
+    "year": null,
+    "description": "[확실] ? — 페르시아만으로 흘러드는 하류. 서기 116년 트라야누스가 한때 도달했으나 이듬해 하드리아누스가 곧바로 포기한 로마 최동단 경계선",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     47.4419,
+     31.005
+    ]
+   }
+  }
+ ]
+}

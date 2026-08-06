@@ -1,0 +1,52 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라틴인 — 라티움 (라틴 동맹, 기원전 6~4세기)",
+    "description": "[확실] 기원전 6~4세기, 기원전 338년 로마에 의한 라틴 동맹 해체 이전의 대략적 범위 — 테베레강 남쪽부터 현 라티나 인근까지 이어지는 라티움 평원.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.2,
+       42.1
+      ],
+      [
+       12.9,
+       41.9
+      ],
+      [
+       13.3,
+       41.4
+      ],
+      [
+       12.9,
+       41.2
+      ],
+      [
+       12.3,
+       41.5
+      ],
+      [
+       12.0,
+       41.8
+      ],
+      [
+       12.2,
+       42.1
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

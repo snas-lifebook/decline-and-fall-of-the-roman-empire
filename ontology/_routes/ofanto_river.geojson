@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오판토 강",
+    "period": "기원전 216"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      15.1,
+      40.97
+     ],
+     [
+      15.9,
+      41.22
+     ],
+     [
+      16.02,
+      41.2303
+     ],
+     [
+      16.2,
+      41.32
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오판토 강 발원지(아펜니노 남부)",
+    "year": null,
+    "description": "[대략] ? — 아펜니노 산맥 남부에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.1,
+     40.97
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카노사 인근",
+    "year": null,
+    "description": "[대략] ? — 칸나이로 진군하는 로마 군이 지나친 구간",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.9,
+     41.22
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "오판토 강",
+    "year": null,
+    "description": "[확실] ? — 기원전 216년 한니발이 로마 군 약 4만 명을 궤멸시킨 칸나이 전투의 현장. 강을 등지고 진을 친 로마 군이 한니발의 초승달 진형에 포위됐다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.02,
+     41.2303
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아드리아해 하구(바를레타 인근)",
+    "year": null,
+    "description": "[대략] ? — 아드리아해로 흘러드는 하구",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.2,
+     41.32
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "테살리아 — 테살리아 분지",
+    "description": "[확실] 그리스(지명, 나라 전체) 안의 한 지역. 에페이로스(서쪽, 핀두스 산맥 너머)와는 산맥으로 갈린다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       21.7,
+       39.9
+      ],
+      [
+       22.4,
+       40.1
+      ],
+      [
+       23.0,
+       39.6
+      ],
+      [
+       23.1,
+       39.2
+      ],
+      [
+       22.6,
+       38.9
+      ],
+      [
+       21.9,
+       39.2
+      ],
+      [
+       21.6,
+       39.6
+      ],
+      [
+       21.7,
+       39.9
+      ],
+      [
+       21.7,
+       39.9
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라리사",
+    "description": "[주요 도시] 고대 — 테살리아 평원의 중심 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.42,
+     39.64
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "데메트리아스",
+    "description": "[항구도시] 고대 — 파가사이만 연안의 항구(현 볼로스).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.94,
+     39.36
+    ]
+   }
+  }
+ ]
+}

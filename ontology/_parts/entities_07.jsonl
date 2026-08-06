@@ -1,0 +1,31 @@
+{"name":"카이사르","type":"person","aliases":["Julius Caesar","Gaius Julius Caesar"],"attrs":{"role":"Roman general","title":"dictator","period":"기원전 100~44"},"points":[7],"desc":"갈리아를 정복하고 루비콘 강을 건넌 로마의 위대한 장군. 클레오파트라와 연애하여 이집트 정복을 이루었다."}
+{"name":"클레오파트라 7세","type":"person","aliases":["Cleopatra VII"],"attrs":{"role":"Egypt pharaoh","age":20},"points":[7],"desc":"이집트 프톨레마이오스 왕조의 여왕. 카이사르와 융단에 숨어 만나 그의 마음을 사로잡았으며 아들 카이사리온을 낳았다."}
+{"name":"폼페이우스","type":"person","aliases":["Pompey","Pompeius Magnus"],"attrs":{"role":"Roman general"},"points":[7],"desc":"카이사르의 정치적 적으로 갈리아 총독 임기 연장을 반대하고 내전을 벌였으나 패배하여 이집트에서 살해되었다."}
+{"name":"루비콘 강","type":"place","aliases":["Rubicon"],"attrs":{"region":"이탈리아 북부"},"points":[7],"desc":"갈리아 총독과 이탈리아 사이의 경계선. 카이사르가 군대를 이끌고 건넘으로써 내전의 신호가 되었다."}
+{"name":"알렉산드리아","type":"place","aliases":["Alexandria"],"attrs":{"region":"이집트"},"points":[7],"desc":"이집트의 수도로 인구 50만 명. 헬레니즘 문화의 중심지이며 세계 최대의 도서관을 보유했다."}
+{"name":"갈리아","type":"place","aliases":["Gaul"],"attrs":{"region":"현재의 프랑스"},"points":[7],"desc":"카이사르가 총독으로 통치하며 정복한 지역. 그 주민들에게 로마 시민권을 부여했다."}
+{"name":"파르살루스","type":"place","aliases":["Pharsalus"],"attrs":{"region":"그리스 테살리아"},"points":[7],"desc":"카이사르와 폼페이우스 사이의 결전이 벌어진 들판. 카이사르가 적병 1만 5천을 죽이고 압도적 승리를 거두었다."}
+{"name":"브루투스","type":"person","aliases":["Marcus Junius Brutus","Brutus"],"attrs":{"role":"Roman senator"},"points":[7],"desc":"카이사르의 옛 애인 세르빌리아의 아들. 카이사르의 총애를 받았으나 훗날 암살에 가담했다."}
+{"name":"세르빌리아","type":"person","attrs":{"role":"Roman noblewoman"},"points":[7],"desc":"카이사르의 옛 애인이자 브루투스의 어머니. 후에 카시우스의 아내 테르티아를 낳기도 했다."}
+{"name":"카시우스","type":"person","aliases":["Gaius Cassius Longinus"],"attrs":{"role":"Roman senator"},"points":[7],"desc":"카이사르 암살 음모의 주도자 중 한 명. 브루투스와 의형제를 맺고 함께 행동했다."}
+{"name":"프톨레마이오스 13세","type":"person","attrs":{"role":"Egypt pharaoh","age":13},"points":[7],"desc":"클레오파트라 7세의 남동생이자 명목상의 공동 통치자. 재상 포티누스의 조종을 받고 있었다."}
+{"name":"포티누스","type":"person","attrs":{"role":"Egyptian regent"},"points":[7],"desc":"프톨레마이오스 13세의 재상. 클레오파트라를 추방하고 카이사르의 도래로 처형되었다."}
+{"name":"프톨레마이오스 14세","type":"person","attrs":{"role":"Egypt pharaoh","age":10},"points":[7],"desc":"클레오파트라 7세의 남동생. 카이사르의 결정에 따라 형식상 그녀와 결혼하여 공동 통치했다."}
+{"name":"카이사리온","type":"person","aliases":["Ptolemy Caesar"],"attrs":{"role":"prince of Egypt"},"points":[7],"desc":"카이사르와 클레오파트라 사이에서 태어난 아들. 9개월간의 결혼 생활로부터 태어났다."}
+{"name":"아킬라스","type":"person","attrs":{"role":"Egyptian general"},"points":[7],"desc":"프톨레마이오스 13세의 장군으로 포티누스와 함께 카이사르에게 대항했다."}
+{"name":"나일 강","type":"place","aliases":["Nile River"],"attrs":{"region":"이집트"},"points":[7],"desc":"이집트를 흐르는 주요 강. 카이사르와 클레오파트라가 밀월 여행을 한 장소이다."}
+{"name":"테베","type":"place","aliases":["Thebes"],"attrs":{"region":"이집트 상류"},"points":[7],"desc":"고대 이집트의 도시. 나일 강 대여행에서 3주 후에 도착한 목적지이다."}
+{"name":"아스완 제1폭포","type":"place","attrs":{"region":"이집트 남부"},"points":[7],"desc":"나일 강의 장애물. 카이사르와 클레오파트라의 나일 강 여행이 여기서 끝났다."}
+{"name":"에페이로스","type":"place","aliases":["Epirus"],"attrs":{"region":"현재의 알바니아"},"points":[7],"desc":"폼페이우스가 패주하여 도망친 지역. 카이사르의 추격을 피해 향한 목적지였다."}
+{"name":"브린디시","type":"place","attrs":{"region":"이탈리아 남부"},"points":[7],"desc":"이탈리아의 항구 도시. 폼페이우스파 잔당의 토벌 작전 기지였다."}
+{"name":"파로스 섬","type":"place","attrs":{"region":"이집트 북부 지중해"},"points":[7],"desc":"이집트 군의 추격에서 카이사르가 도망친 섬."}
+{"name":"리미니","type":"place","attrs":{"region":"이탈리아 북부"},"points":[7],"desc":"루비콘 강 근처의 도시. 카이사르의 루비콘 강 도하 지점이다."}
+{"name":"카토","type":"person","attrs":{"role":"Roman senator","political_faction":"conservative"},"points":[7],"desc":"로마의 보수파 원로원 의원. 카이사르의 추방을 주장했다."}
+{"name":"키케로","type":"person","attrs":{"role":"Roman orator"},"points":[7],"desc":"유명한 로마 연설가. 폼페이우스와의 전쟁에서 카이사르에 맞섰다가 나중에 사면받았다."}
+{"name":"마르쿠스 안토니우스","type":"person","aliases":["Mark Antony"],"attrs":{"role":"Roman general"},"points":[7],"desc":"카이사르의 부관. 에페이로스에서 카이사르를 구하려 시도했다."}
+{"name":"라비에누스","type":"person","attrs":{"role":"Roman officer"},"points":[7],"desc":"카이사르의 유능한 부관. 급여 문제로 폼페이우스의 군으로 탈주했던 유일한 자였다."}
+{"name":"쿠리오","type":"person","attrs":{"role":"Roman officer"},"points":[7],"desc":"카이사르의 부관. 루비콘 강 도하 때 카이사르의 최후 결정에 일임받았다."}
+{"name":"렌툴루스","type":"person","attrs":{"role":"Roman consul"},"points":[7],"desc":"로마 집정관. 카이사르의 제안 대신 폼페이우스에게 국가보안 전권을 위임했다."}
+{"name":"마르켈루스","type":"person","attrs":{"role":"Roman senator"},"points":[7],"desc":"로마 원로원 의원. 렌툴루스와 함께 카토의 반대 제안을 지지했다."}
+{"name":"알렉산드로스 대왕","type":"person","attrs":{"role":"Macedonian king","period":"기원전 356~323"},"points":[7],"desc":"마케도니아의 위대한 왕. 클레오파트라가 카이사르에게 역사를 과시할 때 비교 대상이 되었다."}
+{"name":"프톨레마이오스","type":"person","attrs":{"role":"Macedonian general","founded_dynasty":"기원전 310"},"points":[7],"desc":"알렉산드로스의 부장. 이집트에 프톨레마이오스 왕조를 건설했다."}

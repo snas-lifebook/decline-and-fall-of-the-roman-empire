@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스키타이 — 폰투스 스텝 (북흑해 연안)",
+    "description": "[대략] 고대 그리스 지리학자들이 스키타이로 부른 핵심지역. 유목 세력 특성상 경계가 시기마다 흔들려 중간 신뢰도로 표시",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       28.0,
+       49.5
+      ],
+      [
+       32.0,
+       50.5
+      ],
+      [
+       37.0,
+       50.0
+      ],
+      [
+       40.0,
+       48.0
+      ],
+      [
+       39.5,
+       45.0
+      ],
+      [
+       35.0,
+       44.5
+      ],
+      [
+       30.0,
+       45.5
+      ],
+      [
+       27.5,
+       47.0
+      ],
+      [
+       28.0,
+       49.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "탄아이스",
+    "description": "[그리스 교역 도시] 고대 — 돈 강 하구의 그리스 식민 도시, 스키타이와의 교역 창구",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.2,
+     47.1
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "올비아",
+    "description": "[그리스 교역 도시] 고대 — 부그 강 하구의 그리스 식민지, 스키타이 곡물 교역 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.93,
+     46.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "판티카파이온",
+    "description": "[보스포로스 왕국 수도] 고대 — 케르치 해협의 그리스계 도시, 흑해 북안 교역망의 요충지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.47,
+     45.35
+    ]
+   }
+  }
+ ]
+}

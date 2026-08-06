@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티키누스 강",
+    "period": "기원전 218"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      8.57,
+      46.53
+     ],
+     [
+      8.65,
+      45.95
+     ],
+     [
+      8.9,
+      45.2
+     ],
+     [
+      9.15,
+      45.1833
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티치노 강 발원지(고트하르트)",
+    "year": null,
+    "description": "[대략] ? — 스위스 알프스 고트하르트 남쪽 사면에서 발원(현대 티치노 강)",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.57,
+     46.53
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마조레 호",
+    "year": null,
+    "description": "[대략] ? — 마조레 호를 거쳐 남류한다",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.65,
+     45.95
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티키누스 강",
+    "year": null,
+    "description": "[확실] ? — 기원전 218년 한니발과 로마 집정관 스키피오가 처음 맞붙은 전장. 한니발의 누미디아 기병대가 로마 기병대를 격파하고 스키피오가 부상당했다",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.9,
+     45.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "파비아",
+    "year": null,
+    "description": "[확실] ? — 포 강 본류와 합류하는 지점(옛 티키눔)",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.15,
+     45.1833
+    ]
+   }
+  }
+ ]
+}

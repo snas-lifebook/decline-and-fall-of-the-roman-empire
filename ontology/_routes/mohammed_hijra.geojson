@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "마호메트의 히즈라와 메카 정복",
+    "period": "570~630"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      39.8262,
+      21.4225
+     ],
+     [
+      39.8262,
+      21.4225
+     ],
+     [
+      39.6067,
+      24.4744
+     ],
+     [
+      39.8262,
+      21.4225
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메카",
+    "year": 570,
+    "description": "[확실] 570 — 아랍 명문 하심가 출신으로 메카에서 태어남. 태어나기 직전 아버지를, 어린 시절 어머니를 잃음",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.8262,
+     21.4225
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메카",
+    "year": 610,
+    "description": "[확실] 610 — 마흔 살에 히라 산 동굴에서 명상하던 중 '일어나 경고하라'는 알라의 계시를 받고 예언자로 자각, 유일신 신앙을 설파하기 시작",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.8262,
+     21.4225
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메디나",
+    "year": 622,
+    "description": "[확실] 622 — 메카 대부호들의 박해를 피해 소수의 신자와 함께 탈출(히즈라). 이슬람력의 기원 원년이 됨. 이곳에서 내분을 해결하며 정교일치 교단을 수립",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.6067,
+     24.4744
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "메카",
+    "year": 630,
+    "description": "[확실] 630 — 1만 명의 군사를 이끌고 메카를 포위, 피 한 방울 흘리지 않고 점령. 카바 신전의 우상들을 파괴하고 이슬람교의 성당으로 삼음",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.8262,
+     21.4225
+    ]
+   }
+  }
+ ]
+}

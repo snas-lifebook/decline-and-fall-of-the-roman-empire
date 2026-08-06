@@ -1,0 +1,136 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "일리리아 — 일리리아 (아드리아해 동안 전역)",
+    "description": "[대략] 로마 정복 이전부터 쓰인 지역명. 일리리쿰(속주)이 나중에 이 지역 일부에 붙인 행정 명칭이라면, 일리리아는 그보다 먼저 있던 종족·지리적 통칭이다. 옥타비아누스가 이 지역에서 군단을 이끌고 나왔다.",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       15.8,
+       45.6
+      ],
+      [
+       17.0,
+       45.0
+      ],
+      [
+       18.4,
+       44.5
+      ],
+      [
+       19.6,
+       43.5
+      ],
+      [
+       20.9,
+       42.0
+      ],
+      [
+       20.5,
+       40.9
+      ],
+      [
+       19.5,
+       40.5
+      ],
+      [
+       19.1,
+       42.0
+      ],
+      [
+       18.5,
+       42.4
+      ],
+      [
+       17.7,
+       42.9
+      ],
+      [
+       16.4,
+       43.5
+      ],
+      [
+       15.3,
+       44.8
+      ],
+      [
+       14.5,
+       45.2
+      ],
+      [
+       13.9,
+       45.5
+      ],
+      [
+       13.9,
+       45.5
+      ],
+      [
+       15.8,
+       45.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "스코드라",
+    "description": "[일리리아인 왕국 수도] 168 BC 이전 — 로마 정복 이전 일리리아 왕국의 수도.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.51,
+     42.07
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "달마티아",
+    "description": "[주요 도시] 1세기 — 훗날 일리리쿰 속주의 행정 중심이 되는 항구도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.48,
+     43.54
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에피다우로스",
+    "description": "[항구도시] 1세기 — 아드리아해 남부 연안의 로마 식민시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.22,
+     42.58
+    ]
+   }
+  }
+ ]
+}

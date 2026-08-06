@@ -1,0 +1,167 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아라비아 — 북부 핵심부: 하우란·보스트라 (트라코니티스)",
+    "description": "[확실] 나바테아 왕국 병합 직후 신설된 속주 행정 중심지대, 화산암 고원 하우란 일대 · 폴리곤은 속주 아라비아 페트라이아 범위이며, 아라비아 반도 전체가 아니다(반도 전역은 [[중동]] 쪽).",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.6,
+       33.2
+      ],
+      [
+       36.8,
+       33.0
+      ],
+      [
+       37.2,
+       32.0
+      ],
+      [
+       36.3,
+       31.2
+      ],
+      [
+       35.4,
+       31.5
+      ],
+      [
+       35.3,
+       32.3
+      ],
+      [
+       35.6,
+       33.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아라비아 — 남부: 시나이·페트라·헤자즈 북부 접경",
+    "description": "[불확실] 페트라 이남 홍해 연안과 헤자즈 방면은 유목 나바테아·사라센 부족 세력권과 겹쳐 경계가 매우 유동적이었다 · 폴리곤은 속주 아라비아 페트라이아 범위이며, 아라비아 반도 전체가 아니다(반도 전역은 [[중동]] 쪽).",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.9,
+       30.5
+      ],
+      [
+       36.0,
+       30.0
+      ],
+      [
+       37.5,
+       28.0
+      ],
+      [
+       38.0,
+       26.5
+      ],
+      [
+       36.0,
+       25.0
+      ],
+      [
+       34.5,
+       26.5
+      ],
+      [
+       34.6,
+       28.5
+      ],
+      [
+       34.9,
+       30.5
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "보스트라",
+    "description": "[속주 수도] 서기 106 — 제3 키레나이카 군단 주둔지 겸 속주 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.48,
+     32.52
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "페트라",
+    "description": "[옛 나바테아 왕도] 서기 106 — 나바테아 왕국 수도였다가 병합 후에도 상업 중심지로 존속",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.44,
+     30.33
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아일라",
+    "description": "[홍해 항구] 서기 106 — 홍해-인도양 교역로 관문",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0,
+     29.53
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "필라델피아",
+    "description": "[데카폴리스 도시] 서기 106 — 옛 암몬 랍바, 데카폴리스 일원으로 아라비아 속주에 편입",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.91,
+     31.95
+    ]
+   }
+  }
+ ]
+}

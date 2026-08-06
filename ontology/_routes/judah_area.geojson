@@ -1,0 +1,120 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "유다 (지명) — 유다 산지 핵심부 (예루살렘-헤브론)",
+    "description": "[대략] 유다 왕국 멸망(기원전 587) 시점의 핵심 산지 판도. 이후 페르시아 예후드 속주·하스몬 왕조·로마 유대 속주로 이어지는 동일 지리적 기반",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.3,
+       31.85
+      ],
+      [
+       35.1,
+       31.75
+      ],
+      [
+       34.95,
+       31.55
+      ],
+      [
+       34.9,
+       31.3
+      ],
+      [
+       35.1,
+       31.2
+      ],
+      [
+       35.3,
+       31.35
+      ],
+      [
+       35.4,
+       31.65
+      ],
+      [
+       35.3,
+       31.85
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "예루살렘",
+    "description": "[왕국 수도] 기원전 587 — 느부갓네살 2세에 의해 유다 왕국 멸망과 함께 함락·파괴",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2256,
+     31.7789
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "헤브론",
+    "description": "[주요도시] 기원전 587 — 유다 산지 남부 중심 도시, 족장들의 매장지 전승",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0998,
+     31.5326
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "베들레헴",
+    "description": "[주요도시] 기원전 587 — 예루살렘 인근 소도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2034,
+     31.7054
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "브엘세바",
+    "description": "[남부 경계 도시] 기원전 587 — 유다 왕국 남단, 네게브 사막 접경 관용구 '단에서 브엘세바까지'의 남쪽 끝",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.7915,
+     31.2589
+    ]
+   }
+  }
+ ]
+}

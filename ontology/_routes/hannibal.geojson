@@ -1,0 +1,303 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "한니발의 이탈리아 원정",
+    "period": "기원전 218~203"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -0.9842,
+      37.6019
+     ],
+     [
+      -1.0,
+      40.72
+     ],
+     [
+      5.0,
+      44.5
+     ],
+     [
+      7.0664,
+      44.7105
+     ],
+     [
+      12.5415,
+      44.9687
+     ],
+     [
+      8.9,
+      45.2
+     ],
+     [
+      9.5674,
+      44.9885
+     ],
+     [
+      12.1,
+      43.14
+     ],
+     [
+      16.1325,
+      41.3064
+     ],
+     [
+      16.5077,
+      41.0052
+     ],
+     [
+      17.2431,
+      40.4711
+     ],
+     [
+      17.12,
+      39.08
+     ],
+     [
+      9.4492,
+      36.2989
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카르타헤나",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 출병 준비. 에스파냐에서의 군 재정비 완료 후 약 5만 보병, 9천 기병, 37마리 코끼리로 출발",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9842,
+     37.6019
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "에브로 강",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 로마와 카르타고의 군사 경계선 통과(4월-5월). 에스파냐를 제압하고 피레네 산맥 남단 론 강 하구로 진격",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.0,
+     40.72
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "론 강",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 갈리아에서의 주요 거점. 로마가 해안 진로로 방어진을 치고 있을 것으로 예상했으나 한니발은 북쪽으로 우회",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.0,
+     44.5
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알프스",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 알프스 횡단(Col de la Traversette 통과). 7월 초순 또는 9월경 정상 도착. 추위·피로·게릴라 습격으로 수천 명 손실. 정상 도착 시 2일 휴식",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.0664,
+     44.7105
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "포 강",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 이탈리아 도착(가을). 알프스 통과 후 평야로 진입. 보병 2만, 기병 6천, 코끼리 37마리로 감원",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.5415,
+     44.9687
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티키누스 강",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 첫 전투(11월 말). 로마의 집정관 푸블리우스 스키피오와 만남. 한니발의 누미디아 기병대가 로마 기병대를 격파, 스키피오 부상",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.9,
+     45.2
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트레비아 강",
+    "year": -218,
+    "description": "[확실] 기원전 218 — 대전투(12월). 집정관 셈프로니우스가 2만 명으로 진격했으나 한니발의 작전에 함정. 로마 군 약 1만만 생존, 대패",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.5674,
+     44.9885
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "트라시메노 호수",
+    "year": -217,
+    "description": "[확실] 기원전 217 — 전투(6월). 플라미니우스 집정관이 휴회 없이 적을 추격했으나 호수 부근에서 매복 공격. 로마 군 약 1만5천 전사, 플라미니우스 전사",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.1,
+     43.14
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "칸나이 평원",
+    "year": -216,
+    "description": "[확실] 기원전 216 — 고대사상 최대의 전투(8월). 한니발의 초승달 진형이 로마 군 중앙을 포위. 로마 군 약 4만명 전사/포로, 집정관 파울루스 전사. 카르타고의 위대한 승리",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.1325,
+     41.3064
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "아풀리아",
+    "year": -216,
+    "description": "[확실] 기원전 216 — 남부 이탈리아로 진격. 이탈리아 반도의 여러 종족이 한니발을 지지하며 로마에 반기. 타란토 등 주요 도시 점령",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.5077,
+     41.0052
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "타란토",
+    "year": -212,
+    "description": "[대략] 기원전 212 — 전략적 거점. 칸나이 후 로마에 반기를 든 도시 중 하나. 아드리아해 해상 보급 거점으로 중요",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.2431,
+     40.4711
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "크로톤",
+    "year": -204,
+    "description": "[확실] 기원전 204 — 최후의 거점. 스키피오의 아프리카 침공 소식에 한니발이 카르타고로 불려옴. 204년경 최종 철수지점. 1만5천~2만 명의 정예군과 함께 아프리카로 출항",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.12,
+     39.08
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "자마",
+    "year": -202,
+    "description": "[확실] 기원전 202 — 최종 전투(202년 또는 203년 10월). 한니발 vs 스키피오 아프리카누스. 누미디아의 마시니사가 로마에 합류. 한니발의 패배로 제2차 포에니 전쟁 종료",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4492,
+     36.2989
+    ]
+   }
+  }
+ ]
+}

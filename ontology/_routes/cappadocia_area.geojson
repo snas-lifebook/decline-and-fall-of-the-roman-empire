@@ -1,0 +1,143 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카파도키아 — 카파도키아 고원 핵심부",
+    "description": "[확실] 속주 병합 이래 큰 변동 없이 유지된 핵심 고원지대. 카이사레아·티아나 등 주요 도시 포함",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       34.5,
+       39.0
+      ],
+      [
+       36.5,
+       39.3
+      ],
+      [
+       38.0,
+       38.6
+      ],
+      [
+       38.5,
+       37.5
+      ],
+      [
+       36.8,
+       37.2
+      ],
+      [
+       35.0,
+       37.6
+      ],
+      [
+       34.2,
+       38.3
+      ],
+      [
+       34.5,
+       39.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카파도키아 — 동부 확장: 멜리테네 방면 (유프라테스 접경)",
+    "description": "[대략] 베스파시아누스기(72) 소아르메니아 병합과 맞물려 확장된 동부 군사지대, 페르시아·아르메니아와 접경",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       38.0,
+       38.6
+      ],
+      [
+       39.3,
+       38.7
+      ],
+      [
+       39.5,
+       37.8
+      ],
+      [
+       38.5,
+       37.5
+      ],
+      [
+       38.0,
+       38.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카이사레아",
+    "description": "[속주 수도] 서기 17 — 왕국명 카이사레아 마자카, 병합 이후 속주 수도로 존속",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.48,
+     38.73
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티아나",
+    "description": "[주요도시] 서기 17 — 킬리키아 방면 실리키아 관문 인근 교역 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.62,
+     37.83
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "멜리테네",
+    "description": "[군단 주둔지] 서기 72 — 제12 벼락 군단이 주둔한 유프라테스 방어 요충지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.31,
+     38.36
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{"name":"청파","type":"group","aliases":["Blue faction"],"attrs":{"type":"sports_faction"},"points":[27],"desc":"경기장 마차 경기를 응원하는 청색 당파. 유스티니아누스 시대에 압도적 세력을 형성하여 범죄를 저질렀으나 공식 비호를 받았다."}
+{"name":"녹파","type":"group","aliases":["Green faction"],"attrs":{"type":"sports_faction"},"points":[27],"desc":"경기장 마차 경기를 응원하는 녹색 당파. 청파의 횡포로 피해를 입었고 니카의 반란 때 청파와 협력하여 폭동을 일으켰다."}
+{"name":"유스티니아누스","type":"person","aliases":["Justinian I"],"attrs":{"role":"emperor","reign":"527-565"},"points":[27],"desc":"청파를 공식적으로 비호했으나 후에 그들의 범죄를 처벌하려 결단했던 동로마 제국의 황제."}
+{"name":"테오도라","type":"person","aliases":["Theodora"],"attrs":{"role":"empress","reign":"527-548"},"points":[27],"desc":"청년 시절 무대에 올랐을 때 청파의 동정을 받아 황비가 되어서도 청파를 비호했던 여성."}
+{"name":"아나스타시우스 황제","type":"person","aliases":["Anastasius I"],"attrs":{"role":"emperor"},"points":[27],"desc":"녹파가 지지했던 황제."}
+{"name":"히파티우스","type":"person","aliases":["Hypatius"],"attrs":{"role":"nobleman"},"points":[27],"desc":"아나스타시우스 황제의 조카. 니카의 반란 때 청파와 녹파에 의해 황제로 추대되었으나 유스티니아누스에 의해 처형당했다."}
+{"name":"칼리굴라","type":"person","aliases":["Caligula"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"네로","type":"person","aliases":["Nero"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"비텔리우스","type":"person","aliases":["Vitellius"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"베루스","type":"person","aliases":["Verus"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"콤모두스","type":"person","aliases":["Commodus"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"카라칼라","type":"person","aliases":["Caracalla"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"엘라가발루스","type":"person","aliases":["Elagabalus"],"attrs":{"role":"emperor"},"points":[27],"desc":"역대 황제 중 청파와 녹파의 경쟁을 이용하여 시민들의 인기를 얻으려 했던 황제."}
+{"name":"테오도리쿠스","type":"person","aliases":["Theodoric"],"attrs":{"role":"king"},"points":[27],"desc":"지지하는 당은 없었으나 녹파를 지원했던 야만족 왕."}
+{"name":"콘스탄티노플","type":"place","aliases":["Constantinople"],"attrs":{"type":"city"},"points":[27],"desc":"동로마 제국의 수도. 청파와 녹파의 폭동으로 초토화되었던 곳."}
+{"name":"니카의 반란","type":"event","aliases":["Nika Riots"],"attrs":{"year":"532"},"points":[27],"desc":"콘스탄티노플에서 일어난 청파와 녹파의 공동 폭동. 약 3만 명이 경기장에서 처형되었다."}
+{"name":"유스티니아누스 2세","type":"person","aliases":["Justinian II"],"attrs":{"role":"emperor"},"points":[27],"desc":"유스티니아누스의 후대 황제. 즉위 후 청파와 녹파에 대해 엄격한 태도를 취했다."}

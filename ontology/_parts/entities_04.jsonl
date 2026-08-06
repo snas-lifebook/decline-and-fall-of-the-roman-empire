@@ -1,0 +1,16 @@
+{"name":"스키피오 아이밀리아누스","type":"person","aliases":["소 스키피오","Scipio Aemilianus"],"attrs":{"role":"general","period":"제3차 포에니 전쟁 시대"},"points":[4],"desc":"스키피오 아프리카누스의 양손자로, 제3차 포에니 전쟁에서 카르타고를 멸망시킨 로마 장군. 누미디아 왕자들 간의 분쟁을 조정하고 하스드루발의 세력을 약화시킨 후, 규정 연령보다 일찍 집정관에 선출되어 카르타고 시를 완전히 파괴했다."}
+{"name":"한니발","type":"person","aliases":["Hannibal"],"attrs":{"role":"general","period":"제2차 포에니 전쟁","origin":"카르타고"},"points":[4],"desc":"제2차 포에니 전쟁에서 로마에 패배한 카르타고의 위대한 장군으로, 자마 전투에서 2만 명의 병사를 잃고 항복했으나 카르타고 원로원의 배신으로 도망쳐 크레타에서 독약을 마셔 자살했다."}
+{"name":"마시니사","type":"person","aliases":["Massinissa"],"attrs":{"role":"king","region":"누미디아","age":88},"points":[4],"desc":"누미디아의 왕으로 자마 전투의 영웅이자 '고대 최대의 괴물'이라 불린 인물. 여든여덟 살에도 기마군단을 지휘했으나, 왕자들의 반목으로 카르타고 공격을 초래하게 되었다."}
+{"name":"하스드루발","type":"person","aliases":["Hasdrubal"],"attrs":{"role":"general","period":"제3차 포에니 전쟁","origin":"카르타고"},"points":[4],"desc":"제3차 포에니 전쟁에서 카르타고를 지휘한 장군으로, 로마인 포로를 고문하여 처형하였으나 로마 군의 사기를 높였고, 결국 항복하여 목숨을 건졌다."}
+{"name":"카토","type":"person","aliases":["감찰관 카토"],"attrs":{"role":"censor"},"points":[4],"desc":"로마의 감찰관으로 제3차 포에니 전쟁 시작을 주도한 호전론자. 모든 연설을 '카르타고를 쳐부수어야 한다'는 말로 끝맺곤 했다."}
+{"name":"스키피오 아프리카누스","type":"person","aliases":["대 스키피오","Scipio Africanus"],"attrs":{"role":"general","period":"제2차 포에니 전쟁"},"points":[4],"desc":"제2차 포에니 전쟁에서 한니발을 격파한 로마 최고의 영웅으로, 스키피오 아이밀리아누스의 조부. 마시니사가 경외해마지 않았던 인물이다."}
+{"name":"필리포스 5세","type":"person","aliases":["Philip V"],"attrs":{"role":"king","region":"마케도니아"},"points":[4],"desc":"마케도니아의 왕으로 로마에 격파당해 그리스 지역이 로마의 제1속주가 되는 결과를 초래했다."}
+{"name":"안티오코스 3세","type":"person","aliases":["Antiochus III"],"attrs":{"role":"king","region":"안티오키아"},"points":[4],"desc":"셀레우코스 왕국의 왕으로 안티오키아를 수도로 삼고 있었으나 로마에 격파당했다."}
+{"name":"로마","type":"group","aliases":[],"attrs":{"type":"civilization","period":"공화정 말기"},"points":[4],"desc":"제3차 포에니 전쟁에서 카르타고를 완전히 멸망시키고 지중해 패권을 확립한 고대 국가."}
+{"name":"카르타고","type":"place","aliases":["Carthago"],"attrs":{"region":"북아프리카","population":200000},"points":[4],"desc":"700년의 역사를 자랑하던 고대 해양 제국으로, 제3차 포에니 전쟁에서 완전히 멸망되어 5만 명의 생존자는 노예로 팔려갔다."}
+{"name":"아프리카","type":"place","aliases":[],"attrs":{"region":"북아프리카"},"points":[4],"desc":"카르타고 멸망 후 로마의 새로운 속주가 된 지역으로 불리게 된 영토."}
+{"name":"누미디아","type":"place","aliases":[],"attrs":{"region":"북아프리카"},"points":[4],"desc":"마시니사가 왕으로 다스리던 지역으로, 로마의 맹우가 되어 카르타고 공격에 기병대를 제공했다."}
+{"name":"자마","type":"place","aliases":["Zama"],"attrs":{"region":"아프리카","description":"튀니스 남쪽"},"points":[4],"desc":"카르타고 시의 동남부에 위치한 지역으로 스키피오 제방이 연결하는 전략적 요지였으며, 카르타고의 마지막 방어선이 되었다."}
+{"name":"제3차 포에니 전쟁","type":"event","aliases":[],"attrs":{"period":"기원전 149-146","participants":["로마","카르타고","누미디아"]},"points":[4],"desc":"제2차 포에니 전쟁의 연장선상에서 벌어진 전쟁으로, 로마의 카토가 주도한 호전론으로 시작되어 카르타고의 완전한 멸망으로 끝났다."}
+{"name":"자마 전투","type":"event","aliases":[],"attrs":{"period":"제2차 포에니 전쟁","participants":["한니발","스키피오 아프리카누스"]},"points":[4],"desc":"제2차 포에니 전쟁에서 한니발의 20만 병력이 패배한 결정적 전투로, 이후 한니발은 도망쳐 자살했다."}
+{"name":"제1속주","type":"institution","aliases":[],"attrs":{"type":"territory","status":"roman province"},"points":[4],"desc":"마케도니아와 그리스를 합친 지역이 제3차 포에니 전쟁 이후 로마가 획득한 첫 번째 공식 속주가 되었다."}

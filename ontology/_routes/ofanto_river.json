@@ -1,0 +1,45 @@
+{
+  "name": "오판토 강",
+  "subject": "오판토 강",
+  "period": "기원전 216",
+  "summary": "이탈리아 남부를 흐르는 강. 고대사상 최대 규모의 전투로 꼽히는 칸나이 전투가 이 강가 평원에서 벌어졌다.",
+  "waypoints": [
+    {
+      "place": "오판토 강 발원지(아펜니노 남부)",
+      "lat": 40.97,
+      "lon": 15.10,
+      "event": "아펜니노 산맥 남부에서 발원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "카노사 인근",
+      "lat": 41.22,
+      "lon": 15.90,
+      "event": "칸나이로 진군하는 로마 군이 지나친 구간",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "오판토 강",
+      "lat": 41.2303,
+      "lon": 16.02,
+      "event": "기원전 216년 한니발이 로마 군 약 4만 명을 궤멸시킨 칸나이 전투의 현장. 강을 등지고 진을 친 로마 군이 한니발의 초승달 진형에 포위됐다",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "아드리아해 하구(바를레타 인근)",
+      "lat": 41.32,
+      "lon": 16.20,
+      "event": "아드리아해로 흘러드는 하구",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    }
+  ],
+  "sources": [
+    "Polybius: Histories (Book III)",
+    "Livy: History of Rome (Book XXII)",
+    "Topostext: Aufidus River"
+  ]
+}

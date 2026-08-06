@@ -1,0 +1,68 @@
+{
+  "name": "라인 강",
+  "subject": "라인 강",
+  "period": "기원전 1세기~서기 5세기",
+  "summary": "로마 영토와 자유 게르마니아를 가르는 제국의 영구적 북방 국경선. 강 서안에는 군단기지와 리메스가, 동안에는 로마가 끝내 병합하지 못한 게르만 부족들이 있었다.",
+  "waypoints": [
+    {
+      "place": "라인 강 발원지(토마 호)",
+      "lat": 46.77,
+      "lon": 8.67,
+      "event": "스위스 알프스에서 발원. 로마인에게는 세계의 북쪽 끝자락으로 여겨진 산악 수원",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "바젤",
+      "lat": 47.56,
+      "lon": 7.59,
+      "event": "로마 게르마니아 프리마 속주와 강 북안 게르만족 사이의 경계 도시",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "스트라스부르",
+      "lat": 48.58,
+      "lon": 7.75,
+      "event": "로마 군단 기지 아르겐토라툼. 357년 율리아누스가 알레만니족을 대파한 전장 인근",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "라인 강",
+      "lat": 49.9994,
+      "lon": 8.2736,
+      "event": "모군티아쿰(마인츠). 로마 게르마니아 수페리오르 속주의 중심 군단기지이자 강 건너 게르만족과 대치하는 리메스의 요충",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "쾰른",
+      "lat": 50.9375,
+      "lon": 6.9603,
+      "event": "콜로니아 아그리피넨시스. 게르마니아 인페리오르 속주의 수도",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "리메스 북단 구간(니메겐 인근)",
+      "lat": 51.85,
+      "lon": 5.87,
+      "event": "라인 강이 사실상 로마 제국의 영구적 북방 국경선으로 고착된 구간. 강 건너는 로마 지배가 미치지 않는 자유 게르마니아",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "북해 하구",
+      "lat": 51.93,
+      "lon": 4.48,
+      "event": "북해로 흘러드는 하구",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Rhine",
+    "Wikipedia: Limes Germanicus"
+  ]
+}

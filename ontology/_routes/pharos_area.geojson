@@ -1,0 +1,68 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "파로스 섬 — 파로스 본섬",
+    "description": "[확실] 알렉산드리아 항구를 둘러싸는 방파제 섬. 지금은 육지와 연결된 반도가 되었다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       29.87,
+       31.22
+      ],
+      [
+       29.89,
+       31.215
+      ],
+      [
+       29.895,
+       31.208
+      ],
+      [
+       29.88,
+       31.205
+      ],
+      [
+       29.865,
+       31.21
+      ],
+      [
+       29.87,
+       31.22
+      ],
+      [
+       29.87,
+       31.22
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "알렉산드리아",
+    "description": "[등대]  — 고대 세계 7대 불가사의로 꼽힌 파로스 등대",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.885,
+     31.214
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+  "name": "알라리크의 로마 약탈",
+  "period": "395~410",
+  "summary": "서고트족 지도자 알라리크는 테오도시우스 사후 발칸에서 반란하여 그리스·이탈리아를 거쳐 410년 로마를 약탈했다.",
+  "waypoints": [
+    {
+      "place": "니코폴리스",
+      "lat": 43.7,
+      "lon": 25.0,
+      "year": 395,
+      "event": "테오도시우스 사후 서고트족 반란, 동로마와의 관계 단절",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "아테네",
+      "lat": 37.9838,
+      "lon": 23.7275,
+      "year": 396,
+      "event": "그리스 남진, 아테네는 랜섬 지불로 파괴 면함",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "델피",
+      "lat": 38.4822,
+      "lon": 22.5014,
+      "year": 396,
+      "event": "그리스 중부 침략",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "에페이로스",
+      "lat": 39.4,
+      "lon": 20.4,
+      "year": 397,
+      "event": "스티리코의 추격으로 산악지역에 포위, 협상으로 철수",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "일리리쿰",
+      "lat": 43.5394,
+      "lon": 16.4831,
+      "year": 397,
+      "event": "동로마 제국과 협상 후 포에데라투스 신분으로 주둔",
+      "in_gazetteer": true,
+      "confidence": "medium"
+    },
+    {
+      "place": "밀라노",
+      "lat": 45.4643,
+      "lon": 9.1895,
+      "year": 401,
+      "event": "이탈리아 재침략, 메디올라눔 포위",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "폴렌티아",
+      "lat": 44.7,
+      "lon": 8.2,
+      "year": 402,
+      "event": "스티리코에게 전투에서 패배, 아내·자녀 상실",
+      "in_gazetteer": false,
+      "confidence": "medium"
+    },
+    {
+      "place": "아리미누스",
+      "lat": 44.0603,
+      "lon": 12.5754,
+      "year": 408,
+      "event": "알프스 넘어 이탈리아 재진입, 약탈",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "로마",
+      "lat": 41.8917,
+      "lon": 12.4862,
+      "year": 410,
+      "event": "8월 24일 살라리안 문으로 진입, 3일간 약탈. 408-410년 세 차례 포위 포함",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "캄파니아",
+      "lat": 40.75,
+      "lon": 14.95,
+      "year": 410,
+      "event": "로마 약탈 후 남진, 남부 이탈리아 약탈",
+      "in_gazetteer": true,
+      "confidence": "high"
+    },
+    {
+      "place": "콘센티아",
+      "lat": 39.3,
+      "lon": 16.2,
+      "year": 410,
+      "event": "말라리아로 사망, 부센토 강에 묻혔다는 전승",
+      "in_gazetteer": false,
+      "confidence": "low"
+    }
+  ],
+  "sources": [
+    "Wikipedia: Sack of Rome (410)",
+    "Britannica: Alaric",
+    "World History Encyclopedia: Alaric",
+    "World History Encyclopedia: Sack of Rome 410 CE"
+  ]
+}

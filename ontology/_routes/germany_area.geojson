@@ -1,0 +1,152 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "독일 — 독일 (현대 국경)",
+    "description": "[확실] 현대 국경 기준. 고대 게르마니아와 지리적으로 겹치나 정치적 실체는 별개",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.5,
+       55.0
+      ],
+      [
+       11.0,
+       54.5
+      ],
+      [
+       14.3,
+       54.0
+      ],
+      [
+       14.7,
+       51.3
+      ],
+      [
+       12.1,
+       50.3
+      ],
+      [
+       12.5,
+       48.8
+      ],
+      [
+       13.0,
+       47.5
+      ],
+      [
+       10.2,
+       47.3
+      ],
+      [
+       7.6,
+       47.6
+      ],
+      [
+       7.5,
+       49.0
+      ],
+      [
+       6.0,
+       49.5
+      ],
+      [
+       6.0,
+       50.8
+      ],
+      [
+       6.1,
+       51.8
+      ],
+      [
+       7.2,
+       53.3
+      ],
+      [
+       8.1,
+       53.9
+      ],
+      [
+       8.5,
+       55.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "베를린",
+    "description": "[수도] 1990 — 재통일 독일의 수도",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.405,
+     52.52
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "쾰른",
+    "description": "[옛 로마 국경도시] 50 — 고대 콜로니아 아그리피넨시스, 라인강 국경의 로마 거점",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9603,
+     50.9375
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "뮌헨",
+    "description": "[남부 중심도시] 1158 — 바이에른의 중심 도시",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.582,
+     48.1351
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "프랑크푸르트",
+    "description": "[경제 중심지] 현대 — 현대 독일 금융·교통 중심지",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6821,
+     50.1109
+    ]
+   }
+  }
+ ]
+}

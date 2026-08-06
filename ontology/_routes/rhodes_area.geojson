@@ -1,0 +1,76 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로도스 섬 — 로도스 본섬",
+    "description": "[확실] 소아시아 남서 해안에 인접한 섬. 헬레니즘 시대부터 학문과 해양력의 중심지였다",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       27.7,
+       36.45
+      ],
+      [
+       28.0,
+       36.35
+      ],
+      [
+       28.25,
+       36.2
+      ],
+      [
+       28.2,
+       36.0
+      ],
+      [
+       27.95,
+       35.9
+      ],
+      [
+       27.7,
+       36.0
+      ],
+      [
+       27.65,
+       36.2
+      ],
+      [
+       27.7,
+       36.45
+      ],
+      [
+       27.7,
+       36.45
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로도스",
+    "description": "[주요 도시]  — 섬의 중심 도시, 카이사르가 수사학을 익힌 곳",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.23,
+     36.44
+    ]
+   }
+  }
+ ]
+}

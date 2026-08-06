@@ -1,0 +1,19 @@
+{"name":"페르시아","lat":32.0000,"lon":54.0000,"ancient":"Persia","modern":"이란","kind":"region","confidence":"medium","source":"표준 지리 대표점"}
+{"name":"테베레 강","lat":41.8835,"lon":12.4755,"ancient":"Tiberis","modern":"로마, 이탈리아","kind":"river","confidence":"high","source":"Tiber river Pleiades"}
+{"name":"안티오키아","lat":36.2066,"lon":36.1572,"ancient":"Antiochia","modern":"안타키아, 튀르키예","kind":"city","confidence":"high","source":"Antioch Topostext"}
+{"name":"니코메디아","lat":40.7667,"lon":29.9167,"ancient":"Nicomedia","modern":"이즈미트, 튀르키예","kind":"city","confidence":"high","source":"Nicomedia Wikipedia"}
+{"name":"이탈리아 반도","lat":42.5000,"lon":12.0000,"ancient":"Italia","modern":"이탈리아","kind":"region","confidence":"medium","source":"표준 지리 대표점"}
+{"name":"타란토","lat":40.4711,"lon":17.2431,"ancient":"Tarentum","modern":"타란토, 이탈리아","kind":"city","confidence":"high","source":"Taranto coordinates confirmed"}
+{"name":"니코폴리스","lat":43.7000,"lon":25.0000,"ancient":"Nicopolis","modern":"터누, 루마니아","kind":"city","confidence":"medium","source":"Trajan Danubian city approximate"}
+{"name":"랑그르","lat":47.8610,"lon":5.3460,"ancient":"Langres","modern":"랑그르, 프랑스","kind":"city","confidence":"high","source":"표준 지리 데이터"}
+{"name":"메디나","lat":24.4744,"lon":39.6067,"ancient":"Medina","modern":"메디나, 사우디아라비아","kind":"city","confidence":"high","source":"표준 지리 데이터"}
+{"name":"베누스 신전","lat":41.8952,"lon":12.4844,"ancient":"Templum Veneris","modern":"로마, 이탈리아","kind":"building","confidence":"high","source":"Roman Forum location"}
+{"name":"산비탈레 성당","lat":44.4136,"lon":12.2010,"ancient":"Basilica Sancti Vitalis","modern":"라벤나, 이탈리아","kind":"building","confidence":"high","source":"Ravenna Byzantine church"}
+{"name":"아를","lat":43.6770,"lon":4.6256,"ancient":"Arelate","modern":"아를, 프랑스","kind":"city","confidence":"high","source":"표준 지리 데이터"}
+{"name":"에데사","lat":37.1630,"lon":38.7855,"ancient":"Edessa","modern":"우르파(샨르우르파), 튀르키예","kind":"city","confidence":"high","source":"Urfa coordinates confirmed"}
+{"name":"유다","lat":31.9000,"lon":35.2000,"ancient":"Iudaea","modern":"이스라엘/팔레스타인","kind":"region","confidence":"medium","source":"표준 지리 대표점"}
+{"name":"중국","lat":35.0000,"lon":105.0000,"ancient":"Seres","modern":"중국","kind":"region","confidence":"medium","source":"표준 지리 대표점"}
+{"name":"칼케돈","lat":41.0300,"lon":29.0000,"ancient":"Chalcedon","modern":"카디쾨이, 튀르키예","kind":"city","confidence":"medium","source":"Bosporus Byzantine city"}
+{"name":"터키","lat":37.1630,"lon":38.7855,"ancient":"","modern":"튀르키예","kind":"region","confidence":"low","source":"입력상 현대 위치 지표, 에데사로 해석"}
+{"name":"티키누스 강","lat":45.2000,"lon":8.9000,"ancient":"Ticinus","modern":"이탈리아 북부","kind":"river","confidence":"medium","source":"Po tributary approximate"}
+{"name":"필리포폴리스","lat":42.1500,"lon":24.7500,"ancient":"Philippopolis","modern":"플로브디프, 불가리아","kind":"city","confidence":"high","source":"표준 지리 데이터"}

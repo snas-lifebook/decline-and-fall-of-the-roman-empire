@@ -1,0 +1,136 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "루마니아 — 루마니아 (현대 국경)",
+    "description": "[확실] 다키아(로마 속주, 몰다비아 제외)·트란실바니아(다키아 북부 고원)와 달리 현재의 정치적 국경 전체를 가리킨다. 몰다비아·도브루자까지 포함해 고대 속주보다 동쪽으로 더 넓다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       20.3,
+       46.1
+      ],
+      [
+       22.9,
+       47.9
+      ],
+      [
+       26.6,
+       48.2
+      ],
+      [
+       27.6,
+       47.5
+      ],
+      [
+       28.2,
+       45.5
+      ],
+      [
+       28.8,
+       45.2
+      ],
+      [
+       27.9,
+       44.0
+      ],
+      [
+       23.7,
+       43.7
+      ],
+      [
+       22.7,
+       44.0
+      ],
+      [
+       21.5,
+       45.2
+      ],
+      [
+       20.3,
+       46.1
+      ],
+      [
+       20.3,
+       46.1
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "부쿠레슈티",
+    "description": "[수도] 현대 — 현대 루마니아의 수도.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.1,
+     44.43
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "클루지나포카",
+    "description": "[주요 도시] 현대 — 트란실바니아 지역 중심 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.59,
+     46.77
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "티미쇼아라",
+    "description": "[주요 도시] 현대 — 옛 바나트 지역 중심 도시.",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.23,
+     45.75
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "콘스탄차",
+    "description": "[항구도시] 현대 — 흑해 연안 최대 항구(고대 토미스).",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.65,
+     44.18
+    ]
+   }
+  }
+ ]
+}

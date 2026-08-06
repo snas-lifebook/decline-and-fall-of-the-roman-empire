@@ -1,0 +1,26 @@
+{"from":"클레오파트라 7세","from_type":"person","to":"안토니우스","to_type":"person","rel":"allied_with","point":9}
+{"from":"클레오파트라 7세","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"opposed","point":9}
+{"from":"클레오파트라 7세","from_type":"person","to":"알렉산드리아","to_type":"place","rel":"ruled","point":9}
+{"from":"옥타비아누스","from_type":"person","to":"클레오파트라 7세","to_type":"person","rel":"opposed","point":9}
+{"from":"옥타비아누스","from_type":"person","to":"안토니우스","to_type":"person","rel":"opposed","point":9}
+{"from":"옥타비아누스","from_type":"person","to":"레피두스","to_type":"person","rel":"allied_with","point":9}
+{"from":"옥타비아누스","from_type":"person","to":"율리아","to_type":"person","rel":"child_of","point":9}
+{"from":"안토니우스","from_type":"person","to":"클레오파트라 7세","to_type":"person","rel":"allied_with","point":9}
+{"from":"안토니우스","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"opposed","point":9}
+{"from":"안토니우스","from_type":"person","to":"레피두스","to_type":"person","rel":"allied_with","point":9}
+{"from":"레피두스","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"allied_with","point":9}
+{"from":"레피두스","from_type":"person","to":"안토니우스","to_type":"person","rel":"allied_with","point":9}
+{"from":"카이사리온","from_type":"person","to":"클레오파트라 7세","to_type":"person","rel":"child_of","point":9}
+{"from":"카이사리온","from_type":"person","to":"알렉산드리아","to_type":"place","rel":"ruled","point":9}
+{"from":"옥타비아","from_type":"person","to":"안토니우스","to_type":"person","rel":"allied_with","point":9}
+{"from":"옥타비아","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"child_of","point":9}
+{"from":"아테네","from_type":"place","to":"옥타비아","to_type":"person","rel":"occurred_at","point":9}
+{"from":"타르수스","from_type":"place","to":"안토니우스","to_type":"person","rel":"occurred_at","point":9}
+{"from":"타르수스","from_type":"place","to":"클레오파트라 7세","to_type":"person","rel":"occurred_at","point":9}
+{"from":"악티움 해전","from_type":"event","to":"옥타비아누스","to_type":"person","rel":"participated_in","point":9}
+{"from":"악티움 해전","from_type":"event","to":"안토니우스","to_type":"person","rel":"participated_in","point":9}
+{"from":"마르쿠스 아그리파","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"member_of","point":9}
+{"from":"헤르시아","from_type":"person","to":"아르메니아","to_type":"place","rel":"ruled","point":9}
+{"from":"티베리우스","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"succeeded","point":9}
+{"from":"스크리보니아","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"allied_with","point":9}
+{"from":"리비아 드루실라","from_type":"person","to":"옥타비아누스","to_type":"person","rel":"allied_with","point":9}

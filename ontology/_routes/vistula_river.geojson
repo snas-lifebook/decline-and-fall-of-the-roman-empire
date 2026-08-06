@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비수아 강",
+    "period": "서기 1세기경"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      18.86,
+      49.62
+     ],
+     [
+      19.94,
+      50.06
+     ],
+     [
+      21.01,
+      52.23
+     ],
+     [
+      18.9519,
+      54.3617
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비수아 강 발원지(실레지아)",
+    "year": null,
+    "description": "[대략] ? — 폴란드 남부 산지에서 발원",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.86,
+     49.62
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "크라쿠프 인근",
+    "year": null,
+    "description": "[대략] ? — 상류를 지나는 구간",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.94,
+     50.06
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "바르샤바 인근",
+    "year": null,
+    "description": "[대략] ? — 중류 구간. 고트족이 발트해 연안에서 남하해 서기 1세기경 이 유역 일대에 정착했다고 전해진다",
+    "confidence": "medium",
+    "marker-color": "#f9a825",
+    "marker-size": "small"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.01,
+     52.23
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "비수아 강",
+    "year": null,
+    "description": "[확실] ? — 발트해로 흘러드는 하구. 로마 상인들의 호박길(암베르 로드) 북쪽 종점이자 고트족의 최초 정착 전승지",
+    "confidence": "high",
+    "marker-color": "#2e7d32",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.9519,
+     54.3617
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{"from":"갈리에누스","from_type":"person","to":"발레리아누스","to_type":"person","rel":"child_of","point":19}
+{"from":"갈리에누스","from_type":"person","to":"로마 제국","to_type":"place","rel":"ruled","point":19}
+{"from":"갈리에누스","from_type":"person","to":"페르시아","to_type":"place","rel":"opposed","point":19}
+{"from":"발레리아누스","from_type":"person","to":"페르시아","to_type":"place","rel":"opposed","point":19}
+{"from":"오다이나투스","from_type":"person","to":"페르시아","to_type":"place","rel":"opposed","point":19}
+{"from":"오다이나투스","from_type":"person","to":"시리아","to_type":"place","rel":"occurred_at","point":19}
+{"from":"제노비아","from_type":"person","to":"오다이나투스","to_type":"person","rel":"child_of","point":19}
+{"from":"제노비아","from_type":"person","to":"팔미라","to_type":"place","rel":"ruled","point":19}
+{"from":"제노비아","from_type":"person","to":"아우렐리아누스","to_type":"person","rel":"opposed","point":19}
+{"from":"아우렐리아누스","from_type":"person","to":"팔미라","to_type":"place","rel":"occurred_at","point":19}
+{"from":"마리우스","from_type":"person","to":"로마 제국","to_type":"place","rel":"opposed","point":19}
+{"from":"인게누스","from_type":"person","to":"일리리쿰","to_type":"place","rel":"occurred_at","point":19}
+{"from":"칼푸르니우스 피소","from_type":"person","to":"원로원","to_type":"group","rel":"member_of","point":19}

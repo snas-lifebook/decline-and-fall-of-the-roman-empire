@@ -1,0 +1,301 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이탈리아 — 북부 이탈리아 (옛 갈리아키살피나)",
+    "description": "[확실] 기원전 42년 정식 이탈리아 편입. 포강 유역~알프스",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.0,
+       45.9
+      ],
+      [
+       9.0,
+       46.6
+      ],
+      [
+       11.0,
+       46.6
+      ],
+      [
+       13.0,
+       46.5
+      ],
+      [
+       13.7,
+       45.6
+      ],
+      [
+       12.3,
+       44.5
+      ],
+      [
+       9.7,
+       45.1
+      ],
+      [
+       8.0,
+       44.3
+      ],
+      [
+       7.0,
+       44.2
+      ],
+      [
+       6.9,
+       45.2
+      ],
+      [
+       7.0,
+       45.9
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이탈리아 — 중부 이탈리아 (라티움·에트루리아·움브리아)",
+    "description": "[확실] 로마시를 포함한 핵심 지역",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       10.0,
+       44.0
+      ],
+      [
+       12.3,
+       44.5
+      ],
+      [
+       13.7,
+       42.7
+      ],
+      [
+       14.0,
+       41.9
+      ],
+      [
+       13.0,
+       41.0
+      ],
+      [
+       11.0,
+       41.2
+      ],
+      [
+       9.9,
+       42.0
+      ],
+      [
+       10.0,
+       43.0
+      ],
+      [
+       10.0,
+       44.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이탈리아 — 남부 이탈리아 (캄파니아~칼라브리아·마그나 그라이키아)",
+    "description": "[확실] 그리스 식민 유산이 짙은 지역, 한니발 전쟁의 주 전장",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.0,
+       41.0
+      ],
+      [
+       14.0,
+       41.9
+      ],
+      [
+       15.9,
+       41.5
+      ],
+      [
+       17.2,
+       40.5
+      ],
+      [
+       18.4,
+       40.1
+      ],
+      [
+       16.6,
+       38.2
+      ],
+      [
+       15.6,
+       38.1
+      ],
+      [
+       13.0,
+       39.5
+      ],
+      [
+       12.4,
+       40.5
+      ],
+      [
+       13.0,
+       41.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "이탈리아 — 시칠리아 (Sicilia)",
+    "description": "[대략] 기원전 241년 로마 최초의 속주로 편입, 디오클레티아누스 개혁(3세기 말) 이전에는 이탈리아와 별개 행정구역",
+    "confidence": "medium",
+    "fill": "#ab47bc",
+    "fill-opacity": 0.26,
+    "stroke": "#7b1fa2",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.4,
+       38.2
+      ],
+      [
+       15.5,
+       38.2
+      ],
+      [
+       15.7,
+       36.8
+      ],
+      [
+       12.6,
+       36.7
+      ],
+      [
+       12.4,
+       38.2
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "로마",
+    "description": "[제국 수도] 기원전 753 — 전승상 건국, 제국의 정치·종교 중심",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4964,
+     41.9028
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "밀라노",
+    "description": "[서방 황제 행재소] 286 — 디오클레티아누스 4분통치기 서방 정제 거처, 사실상 행정 수도화",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.19,
+     45.4642
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "네아폴리스",
+    "description": "[그리스계 도시] 기원전 326 — 로마와 동맹 체결(현 나폴리)",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.2681,
+     40.8518
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "라벤나",
+    "description": "[서로마 최후 수도] 402 — 호노리우스가 습지 요새 방어력을 이유로 천도, 476년까지 서로마 정치 중심",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.2035,
+     44.4184
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "카푸아",
+    "description": "[캄파니아 주요 도시] 기원전 216 — 칸나이 승리 후 한니발이 겨울을 보낸 곳",
+    "marker-color": "#4a148c",
+    "marker-size": "medium"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.2131,
+     41.1046
+    ]
+   }
+  }
+ ]
+}

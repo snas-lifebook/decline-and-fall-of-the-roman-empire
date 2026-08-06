@@ -1,0 +1,138 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "훈족 — 폰투스-카스피해 초원 진입",
+    "description": "[확실] 370년대. 고트족을 격파하고 등장한 최초 활동 무대. 정착 국가가 아니라 유목 이동권.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       35.0,
+       50.0
+      ],
+      [
+       48.0,
+       50.0
+      ],
+      [
+       52.0,
+       46.0
+      ],
+      [
+       42.0,
+       44.0
+      ],
+      [
+       34.0,
+       46.0
+      ],
+      [
+       35.0,
+       50.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "훈족 — 카르파티아 분지 (판노니아, 아틸라 제국 중심지)",
+    "description": "[확실] 5세기. 아틸라와 그 선대의 실질적 지배 중심지. 여기서 발칸·이탈리아·갈리아로 원정을 벌였다.",
+    "confidence": "high",
+    "fill": "#7b1fa2",
+    "fill-opacity": 0.45,
+    "stroke": "#4a148c",
+    "stroke-width": 2
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       17.0,
+       48.0
+      ],
+      [
+       22.0,
+       48.0
+      ],
+      [
+       22.5,
+       45.5
+      ],
+      [
+       18.0,
+       45.0
+      ],
+      [
+       16.5,
+       46.5
+      ],
+      [
+       17.0,
+       48.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "훈족 — 아틸라 제국 최대 조공권 (440~453년)",
+    "description": "[불확실] 440년대~453년. 라인강에서 카스피해까지 여러 게르만·사르마티아 부족을 복속시킨 느슨한 패권 범위. 실효 지배가 아닌 조공 관계라 경계 표시가 매우 불확실.",
+    "confidence": "low",
+    "fill": "#ce93d8",
+    "fill-opacity": 0.12,
+    "stroke": "#ba68c8",
+    "stroke-width": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       6.0,
+       52.0
+      ],
+      [
+       45.0,
+       52.0
+      ],
+      [
+       52.0,
+       44.0
+      ],
+      [
+       30.0,
+       40.0
+      ],
+      [
+       15.0,
+       42.0
+      ],
+      [
+       6.0,
+       47.0
+      ],
+      [
+       6.0,
+       52.0
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

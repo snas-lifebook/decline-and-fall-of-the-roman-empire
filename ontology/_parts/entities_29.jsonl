@@ -1,0 +1,27 @@
+{"name":"유스티니아누스","type":"person","aliases":["Justinian I"],"attrs":{"role":"Byzantine emperor","reign":"527-565","achievement":"recovery of Western territories"},"points":[29],"desc":"잃어버린 제국의 서쪽 반을 탈환하는 데 성공한 로마 황제."}
+{"name":"유스티니아누스 2세","type":"person","aliases":[],"attrs":{"role":"Byzantine emperor","relation":"successor to Justinian I"},"points":[29],"desc":"이탈리아 본토를 잃은 소식을 듣는 순간 미쳐버렸다고 전해지는 황제."}
+{"name":"헤라클리우스","type":"person","aliases":["Heraclius I"],"attrs":{"role":"Byzantine emperor","reign":"610-641","origin":"아프리카 총독"},"points":[29],"desc":"위기에 처한 제국을 구해낸 황제로 개혁을 통해 동로마 제국을 900년 가까이 더 존속시켰다."}
+{"name":"포카스","type":"person","aliases":[],"attrs":{"role":"usurper emperor","reign":"602-610","death":"execution"},"points":[29],"desc":"마우리키우스 황제를 암살하고 제위에 오른 백인대장으로 헤라클리우스에 의해 처형되었다."}
+{"name":"마우리키우스","type":"person","aliases":[],"attrs":{"role":"Byzantine emperor","relation":"predecessor of Phocas"},"points":[29],"desc":"포카스에 의해 암살당한 황제."}
+{"name":"마누엘 2세","type":"person","aliases":[],"attrs":{"role":"Byzantine emperor","reign":"1391-1425"},"points":[29],"desc":"콘스탄티노플을 포위한 오스만투르크의 위협에 대해 유럽 국가들의 지원을 요청했던 황제."}
+{"name":"헨리 4세","type":"person","aliases":[],"attrs":{"role":"king of England","reign":"1399-1413"},"points":[29],"desc":"마누엘 2세 황제가 방문하여 지원을 요청한 영국 국왕."}
+{"name":"콘스탄티누스 대제","type":"person","aliases":["Constantine I"],"attrs":{"role":"Roman emperor","reign":"306-337","achievement":"founded Constantinople"},"points":[29],"desc":"콘스탄티노플을 건설한 로마 황제."}
+{"name":"기번","type":"person","aliases":["Edward Gibbon"],"attrs":{"role":"historian"},"points":[29],"desc":"로마 제국의 상태와 헤라클리우스의 개혁을 기술한 역사가."}
+{"name":"콘스탄티노플","type":"place","aliases":["Constantinople"],"attrs":{"region":"Asia Minor","type":"city","founded":330,"status":"Byzantine capital"},"points":[29],"desc":"4세기에 건설되어 동로마 제국의 수도가 된 도시."}
+{"name":"로마","type":"place","aliases":["Rome"],"attrs":{"region":"Europe","type":"city","status":"lost by Byzantine Empire"},"points":[29],"desc":"영원의 도시로 동고트족의 수중으로 넘어가 동로마 제국의 통제를 벗어났다."}
+{"name":"그리스","type":"place","aliases":[],"attrs":{"region":"Europe","type":"region"},"points":[29],"desc":"로마 제국에 남겨진 영토 중 하나로 문화적 중심지가 되었다."}
+{"name":"이탈리아","type":"place","aliases":[],"attrs":{"region":"Europe","type":"region"},"points":[29],"desc":"로마 제국에 남겨진 영토 중 하나로 본토를 잃은 것이 제국 신민에게 큰 중격이 되었다."}
+{"name":"아프리카","type":"place","aliases":[],"attrs":{"region":"Africa","type":"region"},"points":[29],"desc":"로마 제국에 남겨진 영토 중 일부 지역이 있었던 곳."}
+{"name":"이집트","type":"place","aliases":[],"attrs":{"region":"Africa","type":"region","status":"제국의 곡물 창고"},"points":[29],"desc":"제국의 곡물 창고로 중요한 경제 기반이었으나 빼앗겨 헤라클리우스가 무료 밀 배급을 폐지하였다."}
+{"name":"에스파냐","type":"place","aliases":[],"attrs":{"region":"Europe","type":"region"},"points":[29],"desc":"남서부 지역이 제국주변국의 침공으로 빼앗긴 곳."}
+{"name":"아시아","type":"place","aliases":[],"attrs":{"region":"Middle East","type":"region"},"points":[29],"desc":"제국의 중심이 유럽에서 동방 아시아로 옮겨간 지역."}
+{"name":"사산조 페르시아","type":"group","aliases":[],"attrs":{"type":"empire","region":"Middle East"},"points":[29],"desc":"제국 주변을 둘러싸고 침공한 세력으로 헤라클리우스가 대원정을 통해 격퇴했다."}
+{"name":"서고트 왕국","type":"group","aliases":[],"attrs":{"type":"barbarian kingdom"},"points":[29],"desc":"제국을 침공한 세력."}
+{"name":"롬바르드 왕국","type":"group","aliases":[],"attrs":{"type":"barbarian kingdom","region":"Italy"},"points":[29],"desc":"이탈리아를 침략한 왕국."}
+{"name":"동고트족","type":"group","aliases":[],"attrs":{"type":"ethnic group"},"points":[29],"desc":"로마를 지배하던 야만족."}
+{"name":"동로마 제국","type":"group","aliases":["Byzantine Empire"],"attrs":{"type":"empire","lifespan":"330-1453"},"points":[29],"desc":"헤라클리우스의 개혁 후 900년 가까이 존속한 로마 제국의 동쪽 부분."}
+{"name":"비잔틴 제국","type":"group","aliases":[],"attrs":{"type":"empire name","period":"4세기-1453년"},"points":[29],"desc":"콘스탄티노플 건설부터 1453년 멸망까지의 동로마 제국을 가리키는 이름."}
+{"name":"기독교","type":"group","aliases":[],"attrs":{"type":"religion","status":"state religion"},"points":[29],"desc":"동로마 제국의 국교로 지위가 더욱 확고해지고 법률에 영향을 미쳤다."}
+{"name":"동방정교","type":"group","aliases":["Eastern Orthodox","Greek Orthodox"],"attrs":{"type":"religious sect","schism":1054},"points":[29],"desc":"로마 가톨릭과 대분열을 겪은 정교로 신비주의 성격을 띠었다."}
+{"name":"라틴어","type":"work","aliases":[],"attrs":{"type":"language","status":"imperial language until 7th century"},"points":[29],"desc":"제국의 공용어로 사용되다가 7세기 이후 궁정에서 사용되지 않게 되었다."}
+{"name":"그리스어","type":"work","aliases":[],"attrs":{"type":"language","status":"imperial language from 7th century"},"points":[29],"desc":"7세기 이후 제국의 공용어로 사용된 언어."}
