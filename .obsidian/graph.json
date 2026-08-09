@@ -1,0 +1,79 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#entity/person",
+      "color": {
+        "a": 1,
+        "rgb": 14701373
+      }
+    },
+    {
+      "query": "tag:#entity/place",
+      "color": {
+        "a": 1,
+        "rgb": 5025616
+      }
+    },
+    {
+      "query": "tag:#entity/event",
+      "color": {
+        "a": 1,
+        "rgb": 16750592
+      }
+    },
+    {
+      "query": "tag:#entity/period",
+      "color": {
+        "a": 1,
+        "rgb": 10233776
+      }
+    },
+    {
+      "query": "tag:#entity/group",
+      "color": {
+        "a": 1,
+        "rgb": 48340
+      }
+    },
+    {
+      "query": "tag:#entity/institution",
+      "color": {
+        "a": 1,
+        "rgb": 10395294
+      }
+    },
+    {
+      "query": "tag:#entity/work",
+      "color": {
+        "a": 1,
+        "rgb": 16771899
+      }
+    },
+    {
+      "query": "path:\"points/\"",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": -2.4,
+  "nodeSizeMultiplier": 1.6,
+  "lineSizeMultiplier": 0.575355218030377,
+  "collapse-forces": true,
+  "centerStrength": 0.382410583047526,
+  "repelStrength": 10.0979911807937,
+  "linkStrength": 0.644781969622734,
+  "linkDistance": 249,
+  "scale": 0.16085693204289317,
+  "close": false
+}
