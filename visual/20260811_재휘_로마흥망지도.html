@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마 제국 흥망 지도 — 건국부터 쇠망까지</title>
+<style>
+  :root{
+    --parchment:#f3ead4;
+    --parchment-dark:#e6d9b8;
+    --ink:#3a2f22;
+    --ink-soft:#6b5c46;
+    --accent:#8c2f2f;
+    --gold:#b8860b;
+    --sea:#a9cfdc;
+    --land:#e9dfc2;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Serif KR", Georgia, "Nanum Myeongjo", serif;
+    background:linear-gradient(180deg,#efe3c4,#e3d5ac);
+    color:var(--ink);
+    padding:18px;
+  }
+  h1{
+    text-align:center;
+    font-size:1.6em;
+    margin:4px 0 2px;
+    letter-spacing:1px;
+  }
+  .subtitle{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.85em;
+    margin-bottom:14px;
+  }
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+  }
+  .layout{
+    display:flex;
+    gap:16px;
+    align-items:stretch;
+    flex-wrap:wrap;
+  }
+  .map-panel{
+    flex:1 1 640px;
+    background:var(--parchment);
+    border:1px solid #c9b98a;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0 4px 14px rgba(60,45,20,0.18);
+    position:relative;
+    min-width:320px;
+  }
+  .side-panel{
+    flex:0 0 320px;
+    background:var(--parchment);
+    border:1px solid #c9b98a;
+    border-radius:10px;
+    padding:16px;
+    box-shadow:0 4px 14px rgba(60,45,20,0.18);
+    max-height:640px;
+    overflow-y:auto;
+  }
+  svg#map{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:6px;
+    background:var(--sea);
+  }
+  .region{
+    stroke:#8a7a5c;
+    stroke-width:1;
+    transition:fill 0.5s ease, stroke 0.5s ease, opacity 0.5s ease;
+    stroke-dasharray:2,2;
+    fill:transparent;
+  }
+  .region.controlled{
+    stroke-width:1.6;
+    stroke-dasharray:none;
+    opacity:0.86;
+  }
+  .region-label{
+    font-size:9px;
+    fill:#2c2416;
+    pointer-events:none;
+    font-family:Georgia, serif;
+    paint-order:stroke;
+    stroke:#f3ead4;
+    stroke-width:2px;
+  }
+  .island,.landbase{
+    fill:var(--land);
+    stroke:#b7a878;
+    stroke-width:0.8;
+  }
+  .sea-detail{
+    fill:var(--sea);
+  }
+  .event-marker circle{
+    stroke:#f3ead4;
+    stroke-width:1.2;
+  }
+  .event-marker .symbol{
+    font-size:8px;
+    fill:#f3ead4;
+    text-anchor:middle;
+    pointer-events:none;
+    font-family:Georgia, serif;
+    font-weight:700;
+  }
+  .event-marker{ cursor:pointer; }
+  .event-marker:hover circle{ stroke:#2c2416; stroke-width:2; }
+
+  .marker-legend{
+    display:flex;
+    gap:10px;
+    font-size:0.76em;
+    margin-top:6px;
+    flex-wrap:wrap;
+  }
+  .marker-legend .mitem{
+    display:flex;
+    align-items:center;
+    gap:4px;
+  }
+  .marker-legend .dot{
+    display:inline-block;
+    width:12px;height:12px;
+    border-radius:50%;
+    text-align:center;
+    font-size:8px;
+    line-height:12px;
+    color:#f3ead4;
+  }
+  .ev-icon{
+    display:inline-block;
+    width:14px;
+    text-align:center;
+  }
+
+  .era-title{
+    font-size:1.15em;
+    font-weight:700;
+    margin:0 0 4px;
+    color:var(--accent);
+  }
+  .era-year{
+    font-size:0.85em;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .era-desc{
+    font-size:0.92em;
+    line-height:1.6;
+    margin-bottom:14px;
+  }
+  .section-title{
+    font-size:0.85em;
+    font-weight:700;
+    color:var(--ink-soft);
+    border-bottom:1px solid #c9b98a;
+    padding-bottom:4px;
+    margin:14px 0 8px;
+    letter-spacing:1px;
+  }
+  ul.events{
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:0.88em;
+  }
+  ul.events li{
+    padding:6px 0;
+    border-bottom:1px dashed #d8c99b;
+  }
+  ul.events li b{ color:var(--accent); }
+
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    font-size:0.78em;
+  }
+  .legend span.swatch{
+    display:inline-block;
+    width:11px;height:11px;
+    border-radius:2px;
+    margin-right:4px;
+    vertical-align:-1px;
+    border:1px solid rgba(0,0,0,0.35);
+  }
+  .legend-item{
+    display:flex;
+    align-items:center;
+    background:var(--parchment-dark);
+    border-radius:4px;
+    padding:2px 6px;
+  }
+
+  .controls{
+    max-width:1280px;
+    margin:16px auto 0;
+    background:var(--parchment);
+    border:1px solid #c9b98a;
+    border-radius:10px;
+    padding:14px 18px 10px;
+    box-shadow:0 4px 14px rgba(60,45,20,0.18);
+  }
+  .slider-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  #playBtn{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:50%;
+    width:38px;height:38px;
+    font-size:1em;
+    cursor:pointer;
+    flex:0 0 auto;
+  }
+  #playBtn:hover{ background:#6f2323; }
+  input[type=range]{
+    flex:1;
+    accent-color:var(--accent);
+    height:6px;
+  }
+  .ticks{
+    display:flex;
+    justify-content:space-between;
+    margin-top:8px;
+    padding:0 2px;
+  }
+  .tick{
+    background:none;
+    border:none;
+    font-size:0.68em;
+    color:var(--ink-soft);
+    cursor:pointer;
+    font-family:inherit;
+    white-space:nowrap;
+    padding:2px 3px;
+    border-radius:3px;
+  }
+  .tick:hover, .tick.active{
+    color:var(--accent);
+    font-weight:700;
+    background:var(--parchment-dark);
+  }
+  .note{
+    text-align:center;
+    font-size:0.72em;
+    color:var(--ink-soft);
+    margin-top:14px;
+    max-width:1280px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  @media (max-width:760px){
+    .side-panel{ flex:1 1 100%; max-height:none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>로마, 흥망의 지도</h1>
+  <div class="subtitle">기원전 753년 건국부터 서기 1453년 콘스탄티노플 함락까지 — 슬라이더로 시대를 넘겨보세요</div>
+
+  <div class="layout">
+    <div class="map-panel">
+      <svg id="map" viewBox="0 0 950 620" xmlns="http://www.w3.org/2000/svg">
+        <!-- 바다 배경 -->
+        <rect x="0" y="0" width="950" height="620" fill="var(--sea)"></rect>
+
+        <!-- 육지 기본 실루엣 (대륙) -->
+        <path class="landbase" d="M120,130 L150,110 L210,95 L280,85 L450,80 L600,80 L800,110 L900,140 L940,220 L940,420 L900,480 L850,470 L800,420 L760,390 L710,470 L700,560 L550,600 L350,600 L200,560 L130,480 L110,400 L110,335 L90,300 L70,260 L85,220 L110,190 L110,150 Z"></path>
+
+        <!-- 브리타니아 섬 -->
+        <path class="island" d="M155,80 L180,50 L200,35 L215,50 L210,80 L220,110 L210,140 L190,145 L170,130 L160,105 Z"></path>
+
+        <!-- 지중해 (반도 굴곡 포함) -->
+        <path class="sea-detail" d="M110,335 L170,345 L260,365 L345,375 L430,380 L480,395 L560,390 L650,395 L740,385 L775,360 L740,330 L690,320 L650,300 L630,270 L640,240 L610,225 L560,235 L555,270 L540,300 L545,335 L515,330 L500,290 L490,255 L475,235 L460,220 L450,190 L445,165 L430,175 L420,210 L415,260 L420,300 L430,325 L425,345 L400,340 L385,310 L390,275 L380,245 L365,225 L330,235 L280,260 L230,290 L190,310 L160,325 Z"></path>
+
+        <!-- 흑해 -->
+        <path class="sea-detail" d="M630,150 L700,130 L800,150 L830,200 L800,250 L720,260 L670,255 L650,240 Z"></path>
+
+        <!-- 홍해 -->
+        <path class="sea-detail" d="M700,470 L715,460 L730,490 L740,540 L725,560 L710,530 L700,500 Z"></path>
+
+        <!-- 페르시아만 -->
+        <path class="sea-detail" d="M870,440 L900,430 L925,450 L920,480 L890,485 L870,465 Z"></path>
+
+        <!-- 지중해의 섬들 -->
+        <path class="island" d="M410,335 L430,330 L445,340 L440,355 L420,360 L405,350 Z"></path> <!-- 시칠리아 -->
+        <path class="island" d="M350,270 L365,265 L370,290 L360,310 L345,305 L340,285 Z"></path> <!-- 사르데냐 -->
+        <path class="island" d="M345,240 L355,238 L358,258 L348,262 Z"></path> <!-- 코르시카 -->
+        <path class="island" d="M555,345 L590,342 L600,352 L585,358 L555,355 Z"></path> <!-- 크레타 -->
+        <path class="island" d="M730,355 L755,352 L760,362 L740,365 Z"></path> <!-- 키프로스 -->
+
+        <!-- ===== 정치적 영역 (시대별로 색이 바뀜) ===== -->
+        <g id="regions">
+          <path class="region" data-region="britannia" d="M155,80 L180,50 L200,35 L215,50 L210,80 L220,110 L210,140 L190,145 L170,130 L160,105 Z"></path>
+          <path class="region" data-region="gallia" d="M150,140 L250,110 L330,120 L345,180 L330,230 L280,255 L230,260 L180,230 L145,190 Z"></path>
+          <path class="region" data-region="hispania" d="M95,215 L150,195 L190,235 L200,300 L160,335 L120,335 L90,300 L70,260 L75,225 Z"></path>
+          <path class="region" data-region="italia" d="M375,175 L400,170 L410,230 L420,270 L415,300 L430,330 L415,345 L400,335 L390,300 L380,260 L370,220 L370,190 Z"></path>
+          <path class="region" data-region="sicilia" d="M405,332 L432,327 L448,340 L442,357 L418,362 L402,350 Z"></path>
+          <path class="region" data-region="sardinia_corsica" d="M340,235 L360,235 L370,270 L365,305 L345,305 L335,270 Z"></path>
+          <path class="region" data-region="germania" d="M330,95 L450,90 L470,150 L440,205 L360,215 L330,170 Z"></path>
+          <path class="region" data-region="illyricum_balkans" d="M420,145 L480,135 L540,160 L560,210 L520,250 L470,235 L430,205 Z"></path>
+          <path class="region" data-region="graecia" d="M490,235 L545,225 L560,270 L555,320 L520,335 L495,300 L485,265 Z"></path>
+          <path class="region" data-region="dacia" d="M470,105 L560,95 L590,140 L560,180 L500,175 L470,150 Z"></path>
+          <path class="region" data-region="asia_minor" d="M560,220 L660,200 L740,230 L720,300 L650,320 L590,300 L560,260 Z"></path>
+          <path class="region" data-region="pontus_armenia" d="M720,180 L800,158 L850,200 L820,240 L750,250 L715,220 Z"></path>
+          <path class="region" data-region="syria_levant" d="M700,320 L770,308 L790,368 L760,400 L720,390 L700,350 Z"></path>
+          <path class="region" data-region="mesopotamia" d="M790,318 L880,308 L910,378 L870,420 L810,398 L780,358 Z"></path>
+          <path class="region" data-region="africa_proconsularis" d="M300,340 L360,333 L392,375 L360,400 L310,395 L285,365 Z"></path>
+          <path class="region" data-region="numidia_mauretania" d="M100,370 L280,353 L300,395 L260,430 L150,440 L100,410 Z"></path>
+          <path class="region" data-region="cyrenaica" d="M400,383 L500,378 L520,420 L480,445 L420,435 L395,405 Z"></path>
+          <path class="region" data-region="aegyptus" d="M560,388 L660,383 L692,450 L670,520 L600,540 L558,468 Z"></path>
+        </g>
+
+        <!-- 지명 라벨 -->
+        <g id="labels" font-family="Georgia, serif" fill="#2c2416" style="pointer-events:none;">
+          <text class="region-label" x="378" y="252">ROMA</text>
+          <text class="region-label" x="200" y="185">GALLIA</text>
+          <text class="region-label" x="120" y="270">HISPANIA</text>
+          <text class="region-label" x="185" y="95">BRITANNIA</text>
+          <text class="region-label" x="330" y="360">CARTHAGO</text>
+          <text class="region-label" x="500" y="280">GRAECIA</text>
+          <text class="region-label" x="625" y="255">ASIA MINOR</text>
+          <text class="region-label" x="720" y="345">SYRIA</text>
+          <text class="region-label" x="815" y="365">MESOPOTAMIA</text>
+          <text class="region-label" x="595" y="440">AEGYPTUS</text>
+          <text class="region-label" x="470" y="190">ILLYRICUM</text>
+          <text class="region-label" x="505" y="135">DACIA</text>
+          <text class="region-label" x="390" y="140">GERMANIA</text>
+          <text class="region-label" x="655" y="200">BYZANTIUM</text>
+        </g>
+
+        <!-- 이벤트 마커 그룹 (JS로 채움) -->
+        <g id="eventMarkers"></g>
+      </svg>
+    </div>
+
+    <div class="side-panel">
+      <div class="era-title" id="eraTitle">-</div>
+      <div class="era-year" id="eraYear">-</div>
+      <div class="era-desc" id="eraDesc">-</div>
+
+      <div class="section-title">이 시기의 사건 · 전투 · 인물</div>
+      <div class="marker-legend">
+        <span class="mitem"><span class="dot" style="background:#8c2f2f;">⚔</span>전투</span>
+        <span class="mitem"><span class="dot" style="background:#1f3f6e;">♛</span>인물</span>
+        <span class="mitem"><span class="dot" style="background:#b8860b;">●</span>사건/정치</span>
+      </div>
+      <ul class="events" id="eventList"></ul>
+
+      <div class="section-title">영역 범례 (지도 색)</div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="slider-row">
+      <button id="playBtn" title="자동 재생">▶</button>
+      <input type="range" id="slider" min="0" max="14" step="1" value="0">
+    </div>
+    <div class="ticks" id="ticks"></div>
+  </div>
+
+  <div class="note">지도는 역사 자료를 바탕으로 단순화·양식화한 근사도입니다. 고대·중세의 국경은 현대적 의미의 확정선이 아니었으며, 특히 사막·초원·유목 세력의 경계는 유동적이었습니다.</div>
+</div>
+
+<script>
+const ACTORS = {
+  rome:            {label:"로마 (통일 제국)", color:"#b5302f"},
+  rome_west:       {label:"서로마 제국", color:"#b5302f"},
+  rome_east:       {label:"동로마 제국 (비잔티움)", color:"#7a3f9c"},
+  carthage:        {label:"카르타고", color:"#2f7d7d"},
+  visigoth:        {label:"서고트 왕국", color:"#7c9c3f"},
+  vandal:          {label:"반달 왕국", color:"#4a7c3f"},
+  ostrogoth:       {label:"동고트 왕국", color:"#9c7c3f"},
+  lombard:         {label:"롬바르드 왕국", color:"#6f4a2f"},
+  sassanid:        {label:"사산조 페르시아", color:"#d4941e"},
+  other_germanic:  {label:"게르만 제 왕국 (프랑크 등)", color:"#8c6f4a"},
+  ottoman:         {label:"오스만 세력", color:"#5c5c5c"}
+};
+const UNCONTROLLED_COLOR = "transparent";
+
+const ALL_REGIONS = ["britannia","gallia","hispania","italia","sicilia","sardinia_corsica","germania",
+  "illyricum_balkans","graecia","dacia","asia_minor","pontus_armenia","syria_levant","mesopotamia",
+  "africa_proconsularis","numidia_mauretania","cyrenaica","aegyptus"];
+
+const eras = [
+{
+  year:-753, label:"기원전 753년 · 로마 건국",
+  desc:"전설에 따르면 로물루스가 팔라티노 언덕에 작은 도시국가 로마를 세웠다. 아직 테베레강변의 마을 하나에 불과했고, 주변은 에트루리아·라티움의 여러 부족이 나누어 차지하고 있었다.",
+  control:{},
+  events:[
+    {x:390,y:255,title:"로마 건국",desc:"로물루스가 팔라티노 언덕에 도시를 세웠다는 건국 설화의 해.",type:"event"},
+    {x:398,y:262,title:"로물루스",desc:"전설상 로마의 초대 왕. 쌍둥이 동생 레무스를 죽이고 도시를 세웠다고 전해진다.",type:"person"}
+  ]
+},
+{
+  year:-509, label:"기원전 509년 · 왕정 폐지, 공화정 수립",
+  desc:"마지막 왕 타르퀴니우스 수페르부스가 축출되고 공화정이 시작되었다. 이후 200여 년간 로마는 주변 라티움 부족, 삼니움족, 에트루리아인과 싸우며 이탈리아 반도 내에서 서서히 세력을 넓혀간다.",
+  control:{},
+  events:[
+    {x:390,y:250,title:"공화정 수립",desc:"왕정이 무너지고 두 명의 집정관이 다스리는 공화정이 시작되었다.",type:"event"},
+    {x:398,y:245,title:"루키우스 브루투스",desc:"왕정을 폐지하고 초대 집정관이 된 인물.",type:"person"}
+  ]
+},
+{
+  year:-264, label:"기원전 264년 · 이탈리아 반도 통일",
+  desc:"삼니움 전쟁과 피로스 전쟁을 거쳐 로마는 마침내 이탈리아 반도 전체의 패권을 쥔다. 그러나 지중해 서부에는 이미 강력한 해상 제국 카르타고가 시칠리아·사르데냐·북아프리카·이베리아 해안을 지배하고 있었다 — 로마의 첫 번째 진짜 적수다.",
+  control:{italia:"rome", sicilia:"carthage", sardinia_corsica:"carthage", africa_proconsularis:"carthage"},
+  events:[
+    {x:392,y:270,title:"이탈리아 반도 통일",desc:"삼니움족·에트루리아·마그나 그라이키아를 모두 굴복시켰다.",type:"event"},
+    {x:335,y:365,title:"카르타고, 서지중해의 패자",desc:"페니키아계 해상 강국 카르타고가 시칠리아·사르데냐·북아프리카를 지배.",type:"event"},
+    {x:420,y:345,title:"밀라이 해전",desc:"기원전 260년, 로마가 처음으로 해군을 편성해 카르타고 함대를 격파한 전투.",type:"battle"},
+    {x:400,y:210,title:"피로스",desc:"에페이로스의 왕. 피로스 전쟁(기원전 280~275)에서 로마에 '승자 없는 승리'를 거두었으나 결국 이탈리아에서 물러났다.",type:"person"}
+  ]
+},
+{
+  year:-218, label:"기원전 218년 · 제2차 포에니 전쟁, 한니발의 침공",
+  desc:"제1차 포에니 전쟁(264~241)에서 승리해 시칠리아·사르데냐를 얻은 로마에, 카르타고의 명장 한니발이 코끼리를 이끌고 알프스를 넘어 이탈리아 본토로 쳐들어온다. 칸나이에서 로마군은 사상 최악의 패배를 당하지만, 스키피오가 끝내 아프리카에서 전세를 뒤집는다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"carthage", africa_proconsularis:"carthage"},
+  events:[
+    {x:365,y:185,title:"한니발, 알프스를 넘다",desc:"카르타고 장군 한니발이 코끼리 부대와 함께 알프스산맥을 넘어 이탈리아를 침공(BC218).",type:"battle"},
+    {x:378,y:210,title:"트레비아 전투",desc:"기원전 218년, 한니발이 이탈리아 진입 직후 로마군에 거둔 첫 승리.",type:"battle"},
+    {x:415,y:305,title:"칸나이 전투, 로마 참패",desc:"기원전 216년, 로마군 약 5만이 전멸에 가까운 패배를 당한다.",type:"battle"},
+    {x:345,y:385,title:"자마 전투",desc:"기원전 202년, 스키피오가 북아프리카에서 한니발을 격파하며 전쟁을 끝낸다.",type:"battle"},
+    {x:150,y:230,title:"한니발 바르카",desc:"카르타고 최고의 명장. 이탈리아에서 16년을 버텼지만 끝내 자마에서 패했다.",type:"person"},
+    {x:352,y:398,title:"스키피오 아프리카누스",desc:"자마에서 한니발을 꺾고 로마를 구한 장군.",type:"person"}
+  ]
+},
+{
+  year:-146, label:"기원전 146년 · 카르타고 멸망, 그리스 병합",
+  desc:"제3차 포에니 전쟁 끝에 카르타고가 완전히 파괴되어 지도에서 사라지고, 그 땅은 로마의 아프리카 속주가 된다. 같은 해 코린토스가 파괴되며 그리스도 사실상 로마의 지배 아래 들어간다. 로마는 이제 지중해 서부의 유일한 패권국이다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"rome", africa_proconsularis:"rome", graecia:"rome"},
+  events:[
+    {x:335,y:375,title:"카르타고 파괴",desc:"로마의 첫 맞수였던 카르타고가 세 차례 포에니 전쟁 끝에 완전히 소멸한다.",type:"event"},
+    {x:520,y:300,title:"코린토스 파괴",desc:"그리스 도시들이 로마의 세력권에 편입된다.",type:"event"},
+    {x:320,y:388,title:"소(小) 스키피오",desc:"제3차 포에니 전쟁을 지휘해 카르타고를 완전히 파괴한 장군.",type:"person"}
+  ]
+},
+{
+  year:-44, label:"기원전 44년 · 카이사르 암살, 공화정의 종언",
+  desc:"율리우스 카이사르가 갈리아 전쟁(기원전 58~51)으로 오늘날의 프랑스 전역을 정복하고, 내전에서 승리해 종신 독재관에 오르지만 원로원파에게 암살당한다. 로마는 이미 지중해 동부(그리스·소아시아·시리아)까지 세력을 뻗쳤으나, 공화정 체제는 한계에 다다랐다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"rome", africa_proconsularis:"rome",
+    graecia:"rome", gallia:"rome", illyricum_balkans:"rome", asia_minor:"rome", syria_levant:"rome", cyrenaica:"rome"},
+  events:[
+    {x:230,y:180,title:"카이사르, 갈리아 정복",desc:"기원전 58~51년, 오늘날의 프랑스·벨기에 지역을 로마 영토로 편입.",type:"event"},
+    {x:255,y:160,title:"알레시아 공방전",desc:"기원전 52년, 카이사르가 갈리아 지도자 베르킨게토릭스를 포위해 항복시킨 결정적 전투.",type:"battle"},
+    {x:500,y:262,title:"파르살루스 전투",desc:"기원전 48년, 카이사르가 폼페이우스를 그리스에서 격파하며 내전의 승기를 잡는다.",type:"battle"},
+    {x:390,y:255,title:"카이사르 암살",desc:"기원전 44년 3월 15일, 원로원에서 브루투스 등에게 암살당한다.",type:"event"},
+    {x:400,y:255,title:"율리우스 카이사르",desc:"갈리아를 정복하고 내전에서 승리했으나 종신 독재관이 된 직후 암살당했다.",type:"person"},
+    {x:245,y:172,title:"베르킨게토릭스",desc:"갈리아 부족들을 규합해 카이사르에 맞선 지도자. 알레시아에서 항복했다.",type:"person"}
+  ]
+},
+{
+  year:-27, label:"기원전 27년 ~ 서기 14년 · 아우구스투스, 제정의 시작",
+  desc:"내전을 끝낸 옥타비아누스가 원로원으로부터 '아우구스투스' 칭호를 받으며 사실상 초대 황제가 된다. 이집트를 병합해 클레오파트라 왕조를 끝냈지만, 게르마니아 원정은 서기 9년 토이토부르크 숲 전투의 참패로 좌절되어 라인강이 북쪽 국경으로 굳어진다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"rome", africa_proconsularis:"rome",
+    graecia:"rome", gallia:"rome", illyricum_balkans:"rome", asia_minor:"rome", syria_levant:"rome", cyrenaica:"rome",
+    aegyptus:"rome", numidia_mauretania:"rome"},
+  events:[
+    {x:390,y:250,title:"아우구스투스, 원수정 시작",desc:"기원전 27년, 옥타비아누스가 아우구스투스 칭호를 받는다.",type:"event"},
+    {x:490,y:250,title:"악티움 해전",desc:"기원전 31년, 옥타비아누스가 안토니우스·클레오파트라 연합함대를 격파한 결정적 해전.",type:"battle"},
+    {x:600,y:460,title:"이집트 병합",desc:"기원전 30년, 클레오파트라와 안토니우스가 패하며 프톨레마이오스 왕조가 끝난다.",type:"event"},
+    {x:400,y:120,title:"토이토부르크 숲 전투 참패",desc:"서기 9년, 게르만족에게 3개 군단이 전멸하며 라인강이 국경으로 고착된다.",type:"battle"},
+    {x:402,y:248,title:"아우구스투스(옥타비아누스)",desc:"로마 최초의 황제. 원로원과 권력을 공유하는 형식의 '원수정'을 창설했다.",type:"person"},
+    {x:610,y:470,title:"클레오파트라 7세",desc:"이집트 프톨레마이오스 왕조의 마지막 파라오. 악티움 패배 후 스스로 목숨을 끊었다.",type:"person"},
+    {x:415,y:110,title:"아르미니우스",desc:"토이토부르크 숲에서 로마군을 전멸시킨 게르만족 지도자.",type:"person"}
+  ]
+},
+{
+  year:117, label:"서기 117년 · 트라야누스, 로마 최대 판도",
+  desc:"트라야누스 황제 치세에 다키아(오늘날 루마니아)와 메소포타미아까지 정복하며 로마 제국은 역사상 가장 넓은 영토에 도달한다. 지중해는 말 그대로 '우리의 바다(Mare Nostrum)'가 되었다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"rome", africa_proconsularis:"rome",
+    graecia:"rome", gallia:"rome", illyricum_balkans:"rome", asia_minor:"rome", syria_levant:"rome", cyrenaica:"rome",
+    aegyptus:"rome", numidia_mauretania:"rome", britannia:"rome", dacia:"rome", mesopotamia:"rome", pontus_armenia:"rome"},
+  events:[
+    {x:220,y:95,title:"브리타니아 정복",desc:"서기 43년 클라우디우스 황제가 브리튼섬 남부를 정복.",type:"event"},
+    {x:520,y:135,title:"다키아 정복",desc:"서기 106년, 트라야누스가 오늘날의 루마니아 지역을 병합.",type:"battle"},
+    {x:830,y:360,title:"메소포타미아까지 진출",desc:"서기 114~117년, 로마 최대 판도를 달성하나 곧 반환된다.",type:"event"},
+    {x:400,y:248,title:"트라야누스",desc:"로마 영토를 역사상 최대로 넓힌 황제. '최고의 원수(Optimus Princeps)'로 불렸다.",type:"person"}
+  ]
+},
+{
+  year:180, label:"서기 180년 · 오현제 시대의 종언",
+  desc:"철학자 황제 마르쿠스 아우렐리우스의 죽음으로 '오현제' 시대가 끝난다. 이후 로마는 전성기를 지나 점차 내부 혼란과 국경 압박이 누적되는 시기로 접어든다. 동쪽 국경 너머에는 파르티아를 이어 곧 사산조 페르시아가 항구적인 맞수로 자리 잡는다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"rome", africa_proconsularis:"rome",
+    graecia:"rome", gallia:"rome", illyricum_balkans:"rome", asia_minor:"rome", syria_levant:"rome", cyrenaica:"rome",
+    aegyptus:"rome", numidia_mauretania:"rome", britannia:"rome", dacia:"rome"},
+  events:[
+    {x:390,y:255,title:"마르쿠스 아우렐리우스 사망",desc:"오현제 시대가 끝나고 아들 콤모두스가 뒤를 이으며 정치가 흔들리기 시작한다.",type:"event"},
+    {x:398,y:248,title:"마르쿠스 아우렐리우스",desc:"'철인 황제'. 《명상록》을 남겼으며 재위 내내 게르만족과의 전쟁에 시달렸다.",type:"person"}
+  ]
+},
+{
+  year:284, label:"서기 284년 · 3세기의 위기, 디오클레티아누스의 개혁",
+  desc:"3세기 로마는 잦은 내전과 화폐 가치 폭락, 이민족의 침입으로 극심한 혼란을 겪는다. 서기 260~274년에는 갈리아 속주들이 '갈리아 제국'으로 아예 떨어져 나갔고, 260년에는 발레리아누스 황제가 사산조 페르시아에 생포되는 초유의 굴욕을 당했다. 디오클레티아누스는 제국을 넷으로 나누어 다스리는 사분통치제로 위기를 봉합한다.",
+  control:{italia:"rome", sicilia:"rome", sardinia_corsica:"rome", hispania:"rome", africa_proconsularis:"rome",
+    graecia:"rome", gallia:"rome", illyricum_balkans:"rome", asia_minor:"rome", syria_levant:"rome", cyrenaica:"rome",
+    aegyptus:"rome", numidia_mauretania:"rome", britannia:"rome"},
+  events:[
+    {x:230,y:180,title:"갈리아 제국 (260~274)",desc:"3세기의 위기 속에 갈리아·브리타니아·히스파니아가 별도 정권으로 떨어져 나갔다가 재통합되었다.",type:"event"},
+    {x:770,y:335,title:"에데사 전투",desc:"서기 260년, 발레리아누스 황제가 사산조 페르시아의 샤푸르 1세에게 패해 포로로 잡힌다 — 황제가 생포된 유일한 사례.",type:"battle"},
+    {x:390,y:250,title:"사분통치제 시행",desc:"디오클레티아누스가 제국을 4명의 통치자가 나눠 다스리게 한다.",type:"event"},
+    {x:850,y:330,title:"사산조 페르시아, 항구적 동방의 적",desc:"서기 224년 건국된 사산조 페르시아는 이후 651년까지 로마·비잔티움의 최대 숙적이 된다.",type:"event"},
+    {x:398,y:245,title:"디오클레티아누스",desc:"제국을 넷으로 나눠 다스리는 사분통치제를 도입해 3세기 위기를 수습했다.",type:"person"}
+  ]
+},
+{
+  year:395, label:"서기 395년 · 제국, 동서로 갈라지다",
+  desc:"테오도시우스 1세가 죽으며 제국은 두 아들에게 나뉘어 다시는 하나로 합쳐지지 않는다. 서로마는 갈리아·히스파니아·이탈리아·아프리카를, 동로마는 발칸·그리스·소아시아·시리아·이집트를 다스린다. 서방은 이미 게르만족의 압박에 시달리고 있었다.",
+  control:{italia:"rome_west", sicilia:"rome_west", sardinia_corsica:"rome_west", hispania:"rome_west", africa_proconsularis:"rome_west",
+    numidia_mauretania:"rome_west", gallia:"rome_west", britannia:"rome_west",
+    graecia:"rome_east", illyricum_balkans:"rome_east", asia_minor:"rome_east", syria_levant:"rome_east",
+    cyrenaica:"rome_east", aegyptus:"rome_east", pontus_armenia:"rome_east"},
+  events:[
+    {x:460,y:225,title:"아드리아노플 전투",desc:"서기 378년, 발렌스 황제가 고트족에 전사하며 로마 정규군이 궤멸한 재앙적 패배.",type:"battle"},
+    {x:390,y:250,title:"테오도시우스 사후 제국 분할",desc:"서기 395년, 제국이 서로마(호노리우스)와 동로마(아르카디우스)로 나뉜다.",type:"event"},
+    {x:400,y:245,title:"테오도시우스 1세",desc:"동서를 모두 다스린 마지막 황제. 그의 사후 제국은 다시 합쳐지지 않았다.",type:"person"}
+  ]
+},
+{
+  year:410, label:"서기 410년 · 알라리크, 로마를 약탈하다",
+  desc:"서고트족의 왕 알라리크가 '영원한 도시' 로마를 함락하고 사흘간 약탈한다. 800년 만에 처음으로 이민족에게 유린당한 로마는 지중해 세계에 충격을 안겼다. 브리타니아에서는 이미 로마 군대가 철수한 상태였다.",
+  control:{italia:"rome_west", sicilia:"rome_west", sardinia_corsica:"rome_west", hispania:"rome_west", africa_proconsularis:"rome_west",
+    numidia_mauretania:"rome_west", gallia:"rome_west",
+    graecia:"rome_east", illyricum_balkans:"rome_east", asia_minor:"rome_east", syria_levant:"rome_east",
+    cyrenaica:"rome_east", aegyptus:"rome_east", pontus_armenia:"rome_east"},
+  events:[
+    {x:390,y:255,title:"로마 약탈",desc:"서고트족 왕 알라리크가 로마를 함락, 사흘간 약탈한다. '영원한 도시'가 무너졌다는 충격이 지중해 세계를 뒤흔든다.",type:"battle"},
+    {x:185,y:100,title:"브리타니아 철수",desc:"서기 410년경 로마 군단이 브리튼섬에서 완전히 철수한다.",type:"event"},
+    {x:378,y:262,title:"알라리크",desc:"서고트족의 왕. 서기 410년 로마를 함락시킨 최초의 이민족 지도자가 되었다.",type:"person"}
+  ]
+},
+{
+  year:476, label:"서기 476년 · 서로마 제국 멸망",
+  desc:"게르만 용병대장 오도아케르가 마지막 서로마 황제 로물루스 아우구스툴루스를 폐위시키며 서로마는 공식적으로 종말을 맞는다. 옛 서로마 영토는 서고트 왕국(히스파니아)·반달 왕국(북아프리카)·프랑크 등 게르만 왕국들로 쪼개진다. 동로마 제국만이 살아남아 이후 '비잔티움'으로 천 년을 더 이어간다.",
+  control:{italia:"other_germanic", gallia:"other_germanic", hispania:"visigoth", africa_proconsularis:"vandal",
+    sardinia_corsica:"vandal", numidia_mauretania:"vandal", sicilia:"other_germanic",
+    graecia:"rome_east", illyricum_balkans:"rome_east", asia_minor:"rome_east", syria_levant:"rome_east",
+    cyrenaica:"rome_east", aegyptus:"rome_east", pontus_armenia:"rome_east", mesopotamia:"sassanid"},
+  events:[
+    {x:330,y:230,title:"카탈라우눔 전투",desc:"서기 451년, 로마·서고트 연합군이 아틸라의 훈족을 저지한 서유럽 최후의 대회전.",type:"battle"},
+    {x:390,y:255,title:"서로마 제국 멸망",desc:"오도아케르가 로물루스 아우구스툴루스를 폐위시킨다. 서로마의 마지막 순간.",type:"event"},
+    {x:120,y:270,title:"서고트 왕국 (418~711)",desc:"이베리아 반도에 자리 잡은 서고트 왕국. 훗날 이슬람 세력에게 무너진다.",type:"event"},
+    {x:330,y:365,title:"반달 왕국 (435~534)",desc:"북아프리카를 차지하고 로마의 곡창지대를 끊어버렸다.",type:"event"},
+    {x:340,y:245,title:"아틸라",desc:"'신의 채찍'이라 불린 훈족의 왕. 카탈라우눔에서 저지당했으나 유럽 전역을 공포에 떨게 했다.",type:"person"},
+    {x:410,y:265,title:"오도아케르",desc:"서로마의 마지막 황제를 폐위시킨 게르만 용병대장. 이탈리아의 첫 이민족 왕이 되었다.",type:"person"}
+  ]
+},
+{
+  year:565, label:"서기 565년 · 유스티니아누스, 옛 로마를 되찾다",
+  desc:"동로마 황제 유스티니아누스 1세가 명장 벨리사리우스를 보내 반달 왕국(534년)과 동고트 왕국(553년)을 무너뜨리고 북아프리카·이탈리아·이베리아 남부 해안까지 되찾는다. 지중해가 잠시나마 다시 '로마의 바다'가 되지만, 동쪽에서는 사산조 페르시아가 여전히 버티고 있고 3년 뒤(568년) 롬바르드족이 이탈리아를 다시 침공한다 — 이 회복은 오래가지 못한다.",
+  control:{italia:"rome_east", sicilia:"rome_east", sardinia_corsica:"rome_east", africa_proconsularis:"rome_east",
+    numidia_mauretania:"rome_east", cyrenaica:"rome_east", hispania:"visigoth", gallia:"other_germanic",
+    graecia:"rome_east", illyricum_balkans:"rome_east", asia_minor:"rome_east", syria_levant:"rome_east",
+    aegyptus:"rome_east", pontus_armenia:"rome_east", mesopotamia:"sassanid"},
+  events:[
+    {x:330,y:365,title:"반달 왕국 정복",desc:"서기 533~534년, 벨리사리우스가 북아프리카의 반달 왕국을 멸망시킨다.",type:"battle"},
+    {x:390,y:255,title:"동고트 왕국 정복, 이탈리아 수복",desc:"서기 553년, 20년에 걸친 고트 전쟁 끝에 이탈리아가 다시 로마(동로마) 영토가 된다.",type:"battle"},
+    {x:655,y:210,title:"유스티니아누스의 최대 수복판도",desc:"콘스탄티노플을 중심으로 옛 로마 영토의 상당 부분을 되찾은 정점의 해.",type:"event"},
+    {x:665,y:200,title:"유스티니아누스 1세",desc:"옛 로마 영토의 상당 부분을 되찾고 《로마법대전》을 편찬한 동로마 황제.",type:"person"},
+    {x:345,y:388,title:"벨리사리우스",desc:"반달 왕국과 동고트 왕국을 잇달아 무너뜨린 유스티니아누스의 명장.",type:"person"}
+  ]
+},
+{
+  year:1453, label:"서기 1453년 · 콘스탄티노플 함락 — 로마의 최종 종말",
+  desc:"수복은 오래가지 못했다. 568년 롬바르드족이 이탈리아를 다시 앗아갔고, 7세기 이슬람의 확산으로 시리아·이집트·북아프리카가 차례로 떨어져 나갔으며, 이후 수백 년간 영토는 계속 줄어들었다. 마침내 1453년, 오스만 술탄 메흐메트 2세가 콘스탄티노플의 성벽을 뚫으면서 로물루스가 세운 지 2200여 년 만에 로마의 마지막 계승 국가가 역사에서 사라진다.",
+  control:{},
+  events:[
+    {x:655,y:210,title:"콘스탄티노플 함락",desc:"1453년 5월 29일, 오스만 제국의 메흐메트 2세가 콘스탄티노플을 함락시키며 동로마(비잔티움) 제국이 완전히 멸망한다.",type:"battle"},
+    {x:390,y:150,title:"롬바르드 왕국 (568~774)",desc:"유스티니아누스가 되찾은 이탈리아를 곧바로 다시 앗아간 게르만 왕국.",type:"event"},
+    {x:670,y:220,title:"메흐메트 2세",desc:"오스만 술탄. 대포로 콘스탄티노플의 테오도시우스 성벽을 뚫고 도시를 함락시켰다.",type:"person"},
+    {x:640,y:200,title:"콘스탄티누스 11세",desc:"동로마 제국의 마지막 황제. 성벽이 뚫리자 직접 성문에서 싸우다 전사했다고 전해진다.",type:"person"}
+  ]
+}
+];
+
+const svgNS = "http://www.w3.org/2000/svg";
+const regionEls = {};
+ALL_REGIONS.forEach(id=>{
+  regionEls[id] = document.querySelector('.region[data-region="'+id+'"]');
+});
+
+function applyEra(idx){
+  idx = parseInt(idx);
+  const era = eras[idx];
+  document.getElementById('eraTitle').textContent = era.label.split(' · ')[1] || era.label;
+  document.getElementById('eraYear').textContent = era.label.split(' · ')[0];
+  document.getElementById('eraDesc').textContent = era.desc;
+  document.getElementById('slider').value = idx;
+
+  // 지역 색칠
+  const usedActors = new Set();
+  ALL_REGIONS.forEach(id=>{
+    const el = regionEls[id];
+    if(!el) return;
+    const ctrl = era.control[id];
+    if(ctrl && ACTORS[ctrl]){
+      el.style.fill = ACTORS[ctrl].color;
+      el.style.stroke = ACTORS[ctrl].color;
+      el.classList.add('controlled');
+      usedActors.add(ctrl);
+    } else {
+      el.style.fill = 'transparent';
+      el.style.stroke = '#8a7a5c';
+      el.classList.remove('controlled');
+    }
+  });
+
+  // 범례
+  const legend = document.getElementById('legend');
+  legend.innerHTML = '';
+  usedActors.forEach(key=>{
+    const a = ACTORS[key];
+    const div = document.createElement('div');
+    div.className = 'legend-item';
+    div.innerHTML = '<span class="swatch" style="background:'+a.color+'"></span>'+a.label;
+    legend.appendChild(div);
+  });
+  if(usedActors.size===0){
+    legend.innerHTML = '<div class="legend-item">아직 뚜렷한 국경이 없는 시기입니다</div>';
+  }
+
+  // 마커 타입별 색·기호
+  const MARKER_STYLE = {
+    battle: {color:"#8c2f2f", symbol:"⚔", icon:"⚔"},
+    person: {color:"#1f3f6e", symbol:"♛", icon:"♛"},
+    event:  {color:"#b8860b", symbol:"●", icon:"●"}
+  };
+
+  // 이벤트 마커
+  const g = document.getElementById('eventMarkers');
+  g.innerHTML = '';
+  era.events.forEach(ev=>{
+    const st = MARKER_STYLE[ev.type] || MARKER_STYLE.event;
+    const marker = document.createElementNS(svgNS,'g');
+    marker.setAttribute('class','event-marker');
+    const c = document.createElementNS(svgNS,'circle');
+    c.setAttribute('cx', ev.x);
+    c.setAttribute('cy', ev.y);
+    c.setAttribute('r', 7);
+    c.setAttribute('fill', st.color);
+    marker.appendChild(c);
+    const sym = document.createElementNS(svgNS,'text');
+    sym.setAttribute('class','symbol');
+    sym.setAttribute('x', ev.x);
+    sym.setAttribute('y', parseFloat(ev.y)+2.8);
+    sym.textContent = st.symbol;
+    marker.appendChild(sym);
+    const t = document.createElementNS(svgNS,'title');
+    t.textContent = ev.title + ' — ' + ev.desc;
+    marker.appendChild(t);
+    g.appendChild(marker);
+  });
+
+  // 사건 목록
+  const ul = document.getElementById('eventList');
+  ul.innerHTML = '';
+  if(era.events.length===0){
+    ul.innerHTML = '<li>기록된 주요 사건 없음</li>';
+  } else {
+    era.events.forEach(ev=>{
+      const st = MARKER_STYLE[ev.type] || MARKER_STYLE.event;
+      const li = document.createElement('li');
+      li.innerHTML = '<span class="ev-icon" style="color:'+st.color+'">'+st.icon+'</span><b>'+ev.title+'</b><br>'+ev.desc;
+      ul.appendChild(li);
+    });
+  }
+
+  // 눈금 활성 표시
+  document.querySelectorAll('.tick').forEach((t,i)=>{
+    t.classList.toggle('active', i===idx);
+  });
+}
+
+// 눈금 생성
+const ticksDiv = document.getElementById('ticks');
+eras.forEach((era,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'tick';
+  const y = era.year;
+  btn.textContent = y<0 ? ('BC'+Math.abs(y)) : ('AD'+y);
+  btn.onclick = ()=>applyEra(i);
+  ticksDiv.appendChild(btn);
+});
+
+document.getElementById('slider').addEventListener('input', (e)=>applyEra(e.target.value));
+
+// 자동 재생
+let playing = false;
+let timer = null;
+document.getElementById('playBtn').addEventListener('click', ()=>{
+  playing = !playing;
+  document.getElementById('playBtn').textContent = playing ? '⏸' : '▶';
+  if(playing){
+    timer = setInterval(()=>{
+      let v = parseInt(document.getElementById('slider').value);
+      v = (v+1) % eras.length;
+      applyEra(v);
+      if(v === eras.length-1){
+        playing = false;
+        document.getElementById('playBtn').textContent = '▶';
+        clearInterval(timer);
+      }
+    }, 2200);
+  } else {
+    clearInterval(timer);
+  }
+});
+
+applyEra(0);
+</script>
+</body>
+</html>
