@@ -39,7 +39,7 @@ def main(write):
     n = 0
     for i, ps in targets.items():
         e = ents[i]
-        f = NOTES / f"{e['note']}.md"
+        f = NOTES / e["type"] / f"{e['note']}.md"
         if not f.exists(): continue
         t = f.read_text(encoding="utf-8")
         head, body = t.split("\n---\n", 1)

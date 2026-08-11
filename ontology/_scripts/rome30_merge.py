@@ -373,12 +373,13 @@ def main(write):
                      + [f"- [[{merged[l['from']]['note']}]] ← {REL_KO[l['rel']]}{tag(l)}" for l in in_links[e["id"]]])
         if rel_lines:
             body += ["", "### 관계", ""] + sorted(set(rel_lines))
-        (NOTES / f"{e['note']}.md").write_text("\n".join(fm + body) + "\n", encoding="utf-8")
+        (NOTES / e["type"]).mkdir(parents=True, exist_ok=True)
+        (NOTES / e["type"] / f"{e['note']}.md").write_text("\n".join(fm + body) + "\n", encoding="utf-8")
 
     # 디렉터리를 통째로 지우고 다시 쓰면 iCloud가 삭제·생성 경합을 충돌로 보고
     # '이름 2.md' 사본을 무더기로 만든다. 제자리 덮어쓴 뒤 남은 옛 파일만 지운다.
-    keep = {ud.normalize("NFC", f"{e['note']}.md") for e in promoted}
-    stale = [f for f in NOTES.glob("*.md") if ud.normalize("NFC", f.name) not in keep]
+    keep = {ud.normalize("NFC", f"{e['type']}/{e['note']}.md") for e in promoted}
+    stale = [f for f in NOTES.rglob("*.md") if ud.normalize("NFC", f.relative_to(NOTES).as_posix()) not in keep]
     for f in stale:
         f.unlink()
 

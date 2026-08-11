@@ -127,6 +127,8 @@ def section(stem, d, is_terr):
 
 def main(write):
     gaz = gazetteer()
+    ent_types = {e["note"]: e["type"] for e in
+                 (json.loads(l) for l in (BASE / "ontology/entities.jsonl").open(encoding="utf-8"))}
     n = 0
     # 영토 파일은 JSON 안의 subject가 대상 노트를 가리킨다. 경로 파일만 SUBJECT 표를 쓴다.
     targets = dict(SUBJECT)
@@ -138,7 +140,7 @@ def main(write):
     for stem, subj in targets.items():
         jf = R / f"{stem}.json"
         gf = R / f"{stem}.geojson"
-        note = NOTES / f"{subj}.md"
+        note = NOTES / ent_types.get(subj, "") / f"{subj}.md"
         if not (jf.exists() and gf.exists()):
             print(f"  건너뜀 {stem}: 리서치 파일 없음")
             continue

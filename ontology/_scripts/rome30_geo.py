@@ -150,7 +150,7 @@ def main(write):
         e = ents.get(name)
         if not e:
             continue
-        f = NOTES / f"{e['note']}.md"
+        f = NOTES / e["type"] / f"{e['note']}.md"
         if not f.exists():
             continue
         t = f.read_text(encoding="utf-8")
