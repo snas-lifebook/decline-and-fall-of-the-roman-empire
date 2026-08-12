@@ -17,14 +17,12 @@
 {"from": "place:로마", "to": "group:그리스", "rel": "allied_with", "point": 1}
 {"from": "place:타란토", "to": "place:로마", "rel": "opposed", "point": 1}
 {"from": "place:타란토", "to": "group:그리스", "rel": "member_of", "point": 1}
-{"from": "person:아피우스클라우디우스가이쿠스", "to": "place:로마", "rel": "ruled", "point": 1}
 {"from": "person:클라우디우스풀케르", "to": "event:메시나전투", "rel": "participated_in", "point": 2, "from_year": -264, "to_year": -264, "year_basis": "text"}
 {"from": "person:한노", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:히에론", "to": "place:시라쿠사", "rel": "ruled", "point": 2}
 {"from": "person:히에론", "to": "place:로마", "rel": "allied_with", "point": 2}
 {"from": "person:하밀카르바르카스", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:하밀카르바르카스", "to": "place:로마", "rel": "opposed", "point": 2}
-{"from": "person:레굴루스", "to": "place:로마", "rel": "ruled", "point": 2}
 {"from": "person:크산티포스", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:하스드루발", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:하스드루발", "to": "person:하밀카르바르카스", "rel": "succeeded", "point": 2}
@@ -76,7 +74,7 @@
 {"from": "person:스키피오아이밀리아누스", "to": "event:제3차포에니전쟁", "rel": "participated_in", "point": 4, "from_year": -149, "to_year": -146, "year_basis": "chronology"}
 {"from": "person:마시니사", "to": "place:카르타고", "rel": "opposed", "point": 4, "from_year": -150, "to_year": -148, "year_basis": "chronology"}
 {"from": "place:로마", "to": "place:카르타고", "rel": "opposed", "point": 4, "from_year": -149, "to_year": -146, "year_basis": "chronology"}
-{"from": "person:스키피오아이밀리아누스", "to": "place:카르타고", "rel": "ruled", "point": 4, "from_year": -149, "to_year": -146, "year_basis": "chronology"}
+{"from": "person:스키피오아이밀리아누스", "to": "place:카르타고", "rel": "conquered", "point": 4, "from_year": -149, "to_year": -146, "year_basis": "chronology"}
 {"from": "person:하스드루발", "to": "place:카르타고", "rel": "ruled", "point": 4, "from_year": -149, "to_year": -146, "year_basis": "chronology"}
 {"from": "person:마시니사", "to": "place:누미디아", "rel": "ruled", "point": 4}
 {"from": "event:제3차포에니전쟁", "to": "place:자마", "rel": "occurred_at", "point": 4}
@@ -657,3 +655,16 @@
 {"from": "person:기번", "to": "person:애덤스미스", "rel": "allied_with", "point": 0, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "group:에트루리아인", "to": "place:로마", "rel": "opposed", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "group:헤르니키인", "to": "place:로마", "rel": "opposed", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:레굴루스", "to": "institution:집정관", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:아피우스클라우디우스가이쿠스", "to": "institution:감찰관", "rel": "member_of", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:스키피오아이밀리아누스", "to": "institution:집정관", "rel": "member_of", "point": 4, "from_year": -147, "to_year": -146, "year_basis": "chronology"}
+{"from": "person:폼페이우스", "to": "institution:집정관", "rel": "member_of", "point": 5, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:크라수스", "to": "institution:집정관", "rel": "member_of", "point": 5, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:파비우스막시무스", "to": "institution:독재관", "rel": "member_of", "point": 3, "from_year": -217, "to_year": -216, "year_basis": "chronology"}
+{"from": "person:카이사르", "to": "institution:독재관", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "chronology"}
+{"from": "person:하스드루발", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:한니발", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:하밀카르바르카스", "to": "group:젊은사자들", "rel": "created", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:마고", "to": "place:카르타고", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:마고", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:크산티포스", "to": "place:스파르타", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
