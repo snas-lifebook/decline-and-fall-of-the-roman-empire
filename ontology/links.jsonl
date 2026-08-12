@@ -26,8 +26,8 @@
 {"from": "person:크산티포스", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:하스드루발", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:하스드루발", "to": "person:하밀카르바르카스", "rel": "succeeded", "point": 2}
-{"from": "event:제1차포에니전쟁", "to": "place:로마", "rel": "occurred_at", "point": 2, "from_year": -241, "to_year": -264, "year_basis": "text"}
-{"from": "event:제1차포에니전쟁", "to": "place:카르타고", "rel": "occurred_at", "point": 2, "from_year": -241, "to_year": -264, "year_basis": "text"}
+{"from": "event:제1차포에니전쟁", "to": "place:로마", "rel": "occurred_at", "point": 2, "from_year": -264, "to_year": -241, "year_basis": "text"}
+{"from": "event:제1차포에니전쟁", "to": "place:카르타고", "rel": "occurred_at", "point": 2, "from_year": -264, "to_year": -241, "year_basis": "text"}
 {"from": "event:메시나전투", "to": "place:메시나", "rel": "occurred_at", "point": 2, "from_year": -264, "to_year": -264, "year_basis": "text"}
 {"from": "place:로마", "to": "place:시칠리아", "rel": "ruled", "point": 2, "from_year": -241, "to_year": null, "year_basis": "text"}
 {"from": "place:로마", "to": "place:사르데냐섬", "rel": "ruled", "point": 2, "from_year": -241, "to_year": null, "year_basis": "text"}
