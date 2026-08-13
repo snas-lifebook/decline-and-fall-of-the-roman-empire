@@ -3,7 +3,7 @@
 {"from": "person:타르퀴니우스수페르부스", "to": "place:로마", "rel": "ruled", "point": 1, "from_year": -534, "to_year": -509, "year_basis": "chronology"}
 {"from": "group:삼니움인", "to": "place:캄파니아", "rel": "ruled", "point": 1}
 {"from": "place:로마", "to": "group:삼니움인", "rel": "opposed", "point": 1}
-{"from": "place:로마", "to": "place:카푸아", "rel": "participated_in", "point": 1}
+{"from": "place:로마", "to": "place:카푸아", "rel": "protected", "point": 1}
 {"from": "place:카푸아", "to": "group:라틴인", "rel": "member_of", "point": 1}
 {"from": "place:로마", "to": "event:라틴동맹전쟁", "rel": "participated_in", "point": 1}
 {"from": "event:라틴동맹전쟁", "to": "place:로마", "rel": "occurred_at", "point": 1}
@@ -17,7 +17,7 @@
 {"from": "place:로마", "to": "group:그리스", "rel": "allied_with", "point": 1}
 {"from": "place:타란토", "to": "place:로마", "rel": "opposed", "point": 1}
 {"from": "place:타란토", "to": "group:그리스", "rel": "member_of", "point": 1}
-{"from": "person:클라우디우스풀케르", "to": "event:메시나전투", "rel": "participated_in", "point": 2, "from_year": -264, "to_year": -264, "year_basis": "text"}
+{"from": "person:압피우스클라우디우스카우덱스", "to": "event:메시나전투", "rel": "participated_in", "point": 2, "from_year": -264, "to_year": -264, "year_basis": "text"}
 {"from": "person:한노", "to": "place:카르타고", "rel": "ruled", "point": 2}
 {"from": "person:히에론", "to": "place:시라쿠사", "rel": "ruled", "point": 2}
 {"from": "person:히에론", "to": "place:로마", "rel": "allied_with", "point": 2}
@@ -35,7 +35,7 @@
 {"from": "place:로마", "to": "place:갈리아키살피나", "rel": "ruled", "point": 2}
 {"from": "place:카르타고", "to": "group:마메르티니", "rel": "opposed", "point": 2}
 {"from": "group:마메르티니", "to": "place:메시나", "rel": "ruled", "point": 2}
-{"from": "group:마메르티니", "to": "place:로마", "rel": "allied_with", "point": 2, "from_year": -264, "to_year": -264, "year_basis": "text"}
+{"from": "place:로마", "to": "group:마메르티니", "rel": "protected", "point": 2, "from_year": -264, "to_year": -264, "year_basis": "text"}
 {"from": "person:하밀카르바르카스", "to": "place:에스파냐", "rel": "ruled", "point": 2}
 {"from": "person:하스드루발", "to": "place:카르타헤나", "rel": "ruled", "point": 2}
 {"from": "person:한니발", "to": "place:카르타고", "rel": "ruled", "point": 3, "from_year": -221, "to_year": -201, "year_basis": "chronology"}
@@ -43,9 +43,9 @@
 {"from": "person:한니발", "to": "event:제2차포에니전쟁", "rel": "participated_in", "point": 3, "from_year": -218, "to_year": -201, "year_basis": "chronology"}
 {"from": "person:한니발", "to": "event:칸나이전투", "rel": "participated_in", "point": 3, "from_year": -216, "to_year": -216, "year_basis": "text"}
 {"from": "person:한니발", "to": "person:하스드루발", "rel": "child_of", "point": 3}
-{"from": "person:푸블리우스스키피오", "to": "place:에스파냐", "rel": "participated_in", "point": 3, "from_year": -218, "to_year": -211, "year_basis": "chronology"}
+{"from": "person:푸블리우스스키피오", "to": "place:에스파냐", "rel": "located_in", "point": 3, "from_year": -218, "to_year": -211, "year_basis": "chronology"}
 {"from": "person:그나이우스스키피오", "to": "place:에스파냐", "rel": "ruled", "point": 3, "from_year": -212, "to_year": -211, "year_basis": "chronology"}
-{"from": "person:셈프로니우스", "to": "place:트레비아강", "rel": "participated_in", "point": 3, "from_year": -218, "to_year": -218, "year_basis": "chronology"}
+{"from": "person:셈프로니우스", "to": "place:트레비아강", "rel": "located_in", "point": 3, "from_year": -218, "to_year": -218, "year_basis": "chronology"}
 {"from": "person:플라미니우스", "to": "person:한니발", "rel": "opposed", "point": 3, "from_year": -217, "to_year": -217, "year_basis": "chronology"}
 {"from": "person:파비우스막시무스", "to": "place:로마", "rel": "ruled", "point": 3, "from_year": -217, "to_year": -209, "year_basis": "chronology"}
 {"from": "person:루키우스아밀리우스파울루스", "to": "event:칸나이전투", "rel": "participated_in", "point": 3, "from_year": -216, "to_year": -216, "year_basis": "text"}
@@ -62,7 +62,7 @@
 {"from": "event:제2차포에니전쟁", "to": "place:로마", "rel": "occurred_at", "point": 3, "from_year": -218, "to_year": -201, "year_basis": "chronology"}
 {"from": "event:제2차포에니전쟁", "to": "place:카르타고", "rel": "occurred_at", "point": 3, "from_year": -218, "to_year": -201, "year_basis": "chronology"}
 {"from": "event:칸나이전투", "to": "place:칸나이평원", "rel": "occurred_at", "point": 3, "from_year": -216, "to_year": -216, "year_basis": "text"}
-{"from": "person:한니발", "to": "place:알프스", "rel": "participated_in", "point": 3, "from_year": -218, "to_year": -218, "year_basis": "text"}
+{"from": "person:한니발", "to": "place:알프스", "rel": "located_in", "point": 3, "from_year": -218, "to_year": -218, "year_basis": "text"}
 {"from": "place:로마", "to": "place:카르타고", "rel": "opposed", "point": 3, "from_year": -218, "to_year": -201, "year_basis": "chronology"}
 {"from": "group:코끼리부대", "to": "person:한니발", "rel": "member_of", "point": 3}
 {"from": "group:누미디아인", "to": "person:한니발", "rel": "member_of", "point": 3}
@@ -78,9 +78,8 @@
 {"from": "person:하스드루발", "to": "place:카르타고", "rel": "ruled", "point": 4, "from_year": -149, "to_year": -146, "year_basis": "chronology"}
 {"from": "person:마시니사", "to": "place:누미디아", "rel": "ruled", "point": 4}
 {"from": "event:제3차포에니전쟁", "to": "place:자마", "rel": "occurred_at", "point": 4}
-{"from": "person:카토", "to": "event:제3차포에니전쟁", "rel": "participated_in", "point": 4}
+{"from": "person:대카토", "to": "event:제3차포에니전쟁", "rel": "participated_in", "point": 4}
 {"from": "place:로마", "to": "place:아프리카", "rel": "ruled", "point": 4, "from_year": -146, "to_year": null, "year_basis": "chronology"}
-{"from": "person:가이우스마리우스", "to": "person:카이사르", "rel": "child_of", "point": 5}
 {"from": "person:카이사르", "to": "group:민중파", "rel": "member_of", "point": 5}
 {"from": "person:폼페이우스", "to": "place:로마", "rel": "ruled", "point": 5, "from_year": -71, "to_year": -49, "year_basis": "chronology"}
 {"from": "person:크라수스", "to": "place:로마", "rel": "ruled", "point": 5, "from_year": -71, "to_year": -49, "year_basis": "chronology"}
@@ -116,17 +115,17 @@
 {"from": "person:안쿠스마르키우스", "to": "person:카이사르", "rel": "child_of", "point": 6}
 {"from": "person:카이사르", "to": "person:폼페이우스", "rel": "opposed", "point": 7, "from_year": -49, "to_year": -48, "year_basis": "text"}
 {"from": "person:카이사르", "to": "person:클레오파트라7세", "rel": "allied_with", "point": 7, "from_year": -48, "to_year": -47, "year_basis": "chronology"}
-{"from": "person:카이사르", "to": "place:루비콘강", "rel": "occurred_at", "point": 7, "from_year": -49, "to_year": -49, "year_basis": "text"}
+{"from": "person:카이사르", "to": "place:루비콘강", "rel": "located_in", "point": 7, "from_year": -49, "to_year": -49, "year_basis": "text"}
 {"from": "person:카이사르", "to": "place:갈리아", "rel": "ruled", "point": 7}
 {"from": "person:클레오파트라7세", "to": "person:프톨레마이오스13세", "rel": "child_of", "point": 7}
 {"from": "person:클레오파트라7세", "to": "place:알렉산드리아", "rel": "ruled", "point": 7}
-{"from": "person:폼페이우스", "to": "place:알렉산드리아", "rel": "occurred_at", "point": 7, "from_year": -48, "to_year": -48, "year_basis": "text"}
+{"from": "person:폼페이우스", "to": "place:알렉산드리아", "rel": "located_in", "point": 7, "from_year": -48, "to_year": -48, "year_basis": "text"}
 {"from": "person:브루투스", "to": "person:세르빌리아", "rel": "child_of", "point": 7}
 {"from": "person:브루투스", "to": "person:카이사르", "rel": "opposed", "point": 7}
 {"from": "person:세르빌리아", "to": "person:카이사르", "rel": "allied_with", "point": 7}
 {"from": "person:카시우스", "to": "person:브루투스", "rel": "allied_with", "point": 7}
-{"from": "place:파르살루스", "to": "person:카이사르", "rel": "occurred_at", "point": 7}
-{"from": "place:파르살루스", "to": "person:폼페이우스", "rel": "occurred_at", "point": 7}
+{"from": "person:카이사르", "to": "place:파르살루스", "rel": "located_in", "point": 7}
+{"from": "person:폼페이우스", "to": "place:파르살루스", "rel": "located_in", "point": 7}
 {"from": "person:프톨레마이오스13세", "to": "person:클레오파트라7세", "rel": "allied_with", "point": 7}
 {"from": "person:포티누스", "to": "person:프톨레마이오스13세", "rel": "member_of", "point": 7}
 {"from": "person:프톨레마이오스14세", "to": "person:클레오파트라7세", "rel": "allied_with", "point": 7}
@@ -139,15 +138,15 @@
 {"from": "person:칼비누스", "to": "person:카이사르", "rel": "member_of", "point": 8}
 {"from": "person:파르나케스", "to": "person:폼페이우스", "rel": "allied_with", "point": 8}
 {"from": "person:마르쿠스안토니우스", "to": "person:카이사르", "rel": "member_of", "point": 8}
-{"from": "person:마르쿠스안토니우스", "to": "place:테살리아", "rel": "occurred_at", "point": 8}
-{"from": "place:파르살루스", "to": "person:카이사르", "rel": "occurred_at", "point": 8}
-{"from": "place:라리사", "to": "person:브루투스", "rel": "occurred_at", "point": 8}
+{"from": "person:마르쿠스안토니우스", "to": "place:테살리아", "rel": "located_in", "point": 8}
+{"from": "person:카이사르", "to": "place:파르살루스", "rel": "located_in", "point": 8}
+{"from": "person:브루투스", "to": "place:라리사", "rel": "located_in", "point": 8}
 {"from": "person:브루투스", "to": "person:카이사르", "rel": "opposed", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text"}
 {"from": "person:카시우스", "to": "person:브루투스", "rel": "allied_with", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text"}
 {"from": "person:카시우스", "to": "person:카이사르", "rel": "opposed", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text"}
-{"from": "person:폼페이우스", "to": "place:에스파냐", "rel": "participated_in", "point": 8}
+{"from": "person:폼페이우스", "to": "place:에스파냐", "rel": "located_in", "point": 8}
 {"from": "person:폼페이우스", "to": "person:카이사르", "rel": "opposed", "point": 8, "from_year": -49, "to_year": -45, "year_basis": "chronology"}
-{"from": "place:문다평원", "to": "person:카이사르", "rel": "occurred_at", "point": 8, "from_year": -45, "to_year": -45, "year_basis": "text"}
+{"from": "person:카이사르", "to": "place:문다평원", "rel": "located_in", "point": 8, "from_year": -45, "to_year": -45, "year_basis": "text"}
 {"from": "person:칼푸르니아", "to": "person:카이사르", "rel": "allied_with", "point": 8}
 {"from": "person:클레오파트라7세", "to": "person:카이사르", "rel": "allied_with", "point": 8}
 {"from": "person:아우구스투스", "to": "person:카이사르", "rel": "succeeded", "point": 8}
@@ -171,9 +170,9 @@
 {"from": "person:카이사리온", "to": "place:알렉산드리아", "rel": "ruled", "point": 9, "from_year": -44, "to_year": -30, "year_basis": "chronology"}
 {"from": "person:옥타비아", "to": "person:마르쿠스안토니우스", "rel": "allied_with", "point": 9}
 {"from": "person:옥타비아", "to": "person:아우구스투스", "rel": "child_of", "point": 9}
-{"from": "place:아테네", "to": "person:옥타비아", "rel": "occurred_at", "point": 9}
-{"from": "place:타르수스", "to": "person:마르쿠스안토니우스", "rel": "occurred_at", "point": 9}
-{"from": "place:타르수스", "to": "person:클레오파트라7세", "rel": "occurred_at", "point": 9}
+{"from": "person:옥타비아", "to": "place:아테네", "rel": "located_in", "point": 9}
+{"from": "person:마르쿠스안토니우스", "to": "place:타르수스", "rel": "located_in", "point": 9}
+{"from": "person:클레오파트라7세", "to": "place:타르수스", "rel": "located_in", "point": 9}
 {"from": "person:아우구스투스", "to": "event:악티움해전", "rel": "participated_in", "point": 9, "from_year": -31, "to_year": -31, "year_basis": "text"}
 {"from": "person:마르쿠스안토니우스", "to": "event:악티움해전", "rel": "participated_in", "point": 9}
 {"from": "person:마르쿠스아그리파", "to": "person:아우구스투스", "rel": "member_of", "point": 9}
@@ -209,8 +208,8 @@
 {"from": "person:티베리우스", "to": "person:아우구스투스", "rel": "succeeded", "point": 11, "from_year": 14, "to_year": 14, "year_basis": "chronology"}
 {"from": "person:칼리굴라", "to": "person:티베리우스", "rel": "succeeded", "point": 11, "from_year": 37, "to_year": 37, "year_basis": "chronology"}
 {"from": "person:클라우디우스", "to": "person:칼리굴라", "rel": "succeeded", "point": 11, "from_year": 41, "to_year": 41, "year_basis": "chronology"}
-{"from": "group:원로원", "to": "place:로마", "rel": "member_of", "point": 11}
-{"from": "group:친위대", "to": "place:로마", "rel": "member_of", "point": 11}
+{"from": "group:원로원", "to": "place:로마", "rel": "located_in", "point": 11}
+{"from": "group:친위대", "to": "place:로마", "rel": "located_in", "point": 11}
 {"from": "person:네로", "to": "person:아그리피나", "rel": "child_of", "point": 12}
 {"from": "person:루카누스", "to": "person:세네카", "rel": "child_of", "point": 12}
 {"from": "person:네로", "to": "place:로마", "rel": "ruled", "point": 12, "from_year": 54, "to_year": 68, "year_basis": "chronology"}
@@ -220,8 +219,8 @@
 {"from": "person:루카누스", "to": "person:네로", "rel": "opposed", "point": 12}
 {"from": "person:갈바", "to": "place:로마", "rel": "ruled", "point": 12, "from_year": 68, "to_year": 69, "year_basis": "chronology"}
 {"from": "person:네로", "to": "group:기독교", "rel": "opposed", "point": 12, "from_year": 64, "to_year": 64, "year_basis": "text"}
-{"from": "group:친위대", "to": "place:로마", "rel": "member_of", "point": 12}
-{"from": "group:원로원", "to": "place:로마", "rel": "member_of", "point": 12}
+{"from": "group:친위대", "to": "place:로마", "rel": "located_in", "point": 12}
+{"from": "group:원로원", "to": "place:로마", "rel": "located_in", "point": 12}
 {"from": "person:빈덱스", "to": "person:갈바", "rel": "allied_with", "point": 12, "from_year": 68, "to_year": 68, "year_basis": "chronology"}
 {"from": "person:예수그리스도", "to": "person:세례자요한", "rel": "child_of", "point": 13}
 {"from": "person:예수그리스도", "to": "person:베드로", "rel": "member_of", "point": 13}
@@ -234,10 +233,10 @@
 {"from": "person:헤로데안티파스", "to": "person:세례자요한", "rel": "opposed", "point": 13}
 {"from": "person:헤로데안티파스", "to": "place:갈릴리", "rel": "ruled", "point": 13, "from_year": 4, "to_year": 39, "year_basis": "chronology"}
 {"from": "person:베드로", "to": "institution:기독교", "rel": "member_of", "point": 13}
-{"from": "person:베드로", "to": "place:로마", "rel": "occurred_at", "point": 13}
+{"from": "person:베드로", "to": "place:로마", "rel": "located_in", "point": 13}
 {"from": "person:바울로", "to": "institution:기독교", "rel": "member_of", "point": 13}
-{"from": "person:바울로", "to": "place:로마", "rel": "occurred_at", "point": 13}
-{"from": "person:폼페이우스", "to": "place:예루살렘", "rel": "participated_in", "point": 13, "from_year": -63, "to_year": -63, "year_basis": "chronology"}
+{"from": "person:바울로", "to": "place:로마", "rel": "located_in", "point": 13}
+{"from": "person:폼페이우스", "to": "place:예루살렘", "rel": "conquered", "point": 13, "from_year": -63, "to_year": -63, "year_basis": "chronology"}
 {"from": "person:폼페이우스", "to": "place:유다", "rel": "ruled", "point": 13, "from_year": -63, "to_year": -63, "year_basis": "chronology"}
 {"from": "person:카이사르", "to": "person:안티파테르", "rel": "allied_with", "point": 13}
 {"from": "person:안티파테르", "to": "person:헤로데대왕", "rel": "child_of", "point": 13}
@@ -250,7 +249,6 @@
 {"from": "person:필라테", "to": "person:예수그리스도", "rel": "opposed", "point": 13}
 {"from": "person:필라테", "to": "place:유다", "rel": "ruled", "point": 13, "from_year": 26, "to_year": 36, "year_basis": "chronology"}
 {"from": "person:아우렐리아누스", "to": "place:로마제국", "rel": "ruled", "point": 13, "from_year": 270, "to_year": 275, "year_basis": "chronology"}
-{"from": "person:아우렐리아누스", "to": "institution:태양교", "rel": "member_of", "point": 13}
 {"from": "person:아우렐리아누스", "to": "person:제노비아", "rel": "opposed", "point": 13, "from_year": 272, "to_year": 272, "year_basis": "chronology"}
 {"from": "person:디오클레티아누스", "to": "place:로마제국", "rel": "ruled", "point": 13, "from_year": 284, "to_year": 305, "year_basis": "chronology"}
 {"from": "person:디오클레티아누스", "to": "group:기독교인", "rel": "opposed", "point": 13}
@@ -264,12 +262,12 @@
 {"from": "person:콘스탄티누스", "to": "person:리키니우스", "rel": "allied_with", "point": 13}
 {"from": "person:콘스탄티누스", "to": "place:로마제국", "rel": "ruled", "point": 13, "from_year": 306, "to_year": 337, "year_basis": "chronology"}
 {"from": "person:콘스탄티누스", "to": "institution:기독교", "rel": "allied_with", "point": 13, "from_year": 312, "to_year": 337, "year_basis": "chronology"}
-{"from": "person:콘스탄티누스", "to": "event:밀라노칙령", "rel": "participated_in", "point": 13}
+{"from": "person:콘스탄티누스", "to": "event:밀라노칙령", "rel": "decided", "point": 13}
 {"from": "person:콘스탄티누스", "to": "place:콘스탄티노플", "rel": "ruled", "point": 13, "from_year": 330, "to_year": 337, "year_basis": "chronology"}
 {"from": "person:리키니우스", "to": "person:콘스탄티누스", "rel": "allied_with", "point": 13}
-{"from": "person:리키니우스", "to": "event:밀라노칙령", "rel": "participated_in", "point": 13}
+{"from": "person:리키니우스", "to": "event:밀라노칙령", "rel": "decided", "point": 13}
 {"from": "person:막센티우스", "to": "person:콘스탄티누스", "rel": "opposed", "point": 13}
-{"from": "person:아리우스", "to": "institution:아리우스파", "rel": "member_of", "point": 13}
+{"from": "person:아리우스", "to": "institution:아리우스파", "rel": "created", "point": 13}
 {"from": "person:아리우스", "to": "person:콘스탄티누스", "rel": "allied_with", "point": 13}
 {"from": "person:콘스탄티누스2세", "to": "person:콘스탄티누스", "rel": "child_of", "point": 13}
 {"from": "person:콘스탄티누스2세", "to": "institution:아리우스파", "rel": "member_of", "point": 13}
@@ -279,7 +277,7 @@
 {"from": "person:칼리굴라", "to": "group:유대인", "rel": "opposed", "point": 13}
 {"from": "person:칼리굴라", "to": "place:예루살렘", "rel": "ruled", "point": 13}
 {"from": "institution:기독교", "to": "institution:유대교", "rel": "member_of", "point": 13}
-{"from": "group:기독교", "to": "place:로마", "rel": "occurred_at", "point": 13}
+{"from": "group:기독교", "to": "place:로마", "rel": "located_in", "point": 13}
 {"from": "group:기독교", "to": "group:기독교인", "rel": "member_of", "point": 13}
 {"from": "institution:태양교", "to": "institution:기독교", "rel": "opposed", "point": 13}
 {"from": "institution:아리우스파", "to": "institution:기독교", "rel": "member_of", "point": 13}
@@ -287,7 +285,7 @@
 {"from": "institution:4분할통치", "to": "place:로마제국", "rel": "ruled", "point": 13}
 {"from": "person:콘스탄티누스", "to": "event:밀비아누스다리전투", "rel": "participated_in", "point": 13}
 {"from": "event:밀라노칙령", "to": "group:기독교", "rel": "member_of", "point": 13, "from_year": 313, "to_year": 313, "year_basis": "chronology"}
-{"from": "person:가이우스그라쿠스", "to": "institution:소맥법", "rel": "member_of", "point": 14, "from_year": -123, "to_year": -123, "year_basis": "text"}
+{"from": "person:가이우스그라쿠스", "to": "institution:소맥법", "rel": "created", "point": 14, "from_year": -123, "to_year": -123, "year_basis": "text"}
 {"from": "person:술라", "to": "institution:소맥법", "rel": "opposed", "point": 14}
 {"from": "person:아우렐리우스코타", "to": "institution:소맥법", "rel": "allied_with", "point": 14, "from_year": -75, "to_year": -75, "year_basis": "text"}
 {"from": "person:카이사르", "to": "group:로마시민", "rel": "ruled", "point": 14}
@@ -296,10 +294,10 @@
 {"from": "person:클라우디우스", "to": "event:모의해전", "rel": "participated_in", "point": 14}
 {"from": "person:아그리피나", "to": "event:모의해전", "rel": "participated_in", "point": 14}
 {"from": "person:네로", "to": "event:투우경기", "rel": "participated_in", "point": 14}
-{"from": "person:베스파시아누스", "to": "place:콜로세움", "rel": "member_of", "point": 14, "from_year": 72, "to_year": 80, "year_basis": "chronology"}
+{"from": "person:베스파시아누스", "to": "place:콜로세움", "rel": "created", "point": 14, "from_year": 72, "to_year": 80, "year_basis": "chronology"}
 {"from": "person:티투스", "to": "place:콜로세움", "rel": "member_of", "point": 14, "from_year": 72, "to_year": 80, "year_basis": "chronology"}
 {"from": "group:검투사", "to": "event:검투시합", "rel": "participated_in", "point": 14}
-{"from": "group:검투사", "to": "place:콜로세움", "rel": "occurred_at", "point": 14, "from_year": 80, "to_year": null, "year_basis": "chronology"}
+{"from": "group:검투사", "to": "place:콜로세움", "rel": "located_in", "point": 14, "from_year": 80, "to_year": null, "year_basis": "chronology"}
 {"from": "group:연극배우", "to": "event:연극", "rel": "participated_in", "point": 14}
 {"from": "group:로마시민", "to": "event:전차경주", "rel": "participated_in", "point": 14}
 {"from": "group:로마시민", "to": "event:검투시합", "rel": "participated_in", "point": 14}
@@ -310,25 +308,25 @@
 {"from": "event:모의해전", "to": "place:푸키누스호수", "rel": "occurred_at", "point": 14}
 {"from": "person:베스파시아누스", "to": "place:로마제국", "rel": "ruled", "point": 15, "from_year": 69, "to_year": 79, "year_basis": "chronology"}
 {"from": "person:티투스", "to": "person:베스파시아누스", "rel": "child_of", "point": 15}
-{"from": "person:티투스", "to": "place:유대", "rel": "participated_in", "point": 15, "from_year": 66, "to_year": 70, "year_basis": "chronology"}
+{"from": "person:티투스", "to": "place:유대", "rel": "conquered", "point": 15, "from_year": 66, "to_year": 70, "year_basis": "chronology"}
 {"from": "person:도미티아누스", "to": "person:티투스", "rel": "child_of", "point": 15}
 {"from": "person:도미티아누스", "to": "place:로마제국", "rel": "ruled", "point": 15, "from_year": 81, "to_year": 96, "year_basis": "chronology"}
 {"from": "person:네르바", "to": "person:트라야누스", "rel": "member_of", "point": 15}
 {"from": "person:네르바", "to": "place:로마제국", "rel": "ruled", "point": 15, "from_year": 96, "to_year": 98, "year_basis": "chronology"}
 {"from": "person:트라야누스", "to": "person:네르바", "rel": "succeeded", "point": 15, "from_year": 98, "to_year": 98, "year_basis": "chronology"}
 {"from": "person:트라야누스", "to": "place:로마제국", "rel": "ruled", "point": 15, "from_year": 98, "to_year": 117, "year_basis": "chronology"}
-{"from": "person:트라야누스", "to": "place:메소포타미아", "rel": "participated_in", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
-{"from": "person:트라야누스", "to": "place:페르시아", "rel": "participated_in", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
-{"from": "person:트라야누스", "to": "place:시리아", "rel": "participated_in", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
-{"from": "person:트라야누스", "to": "place:아르메니아", "rel": "participated_in", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
+{"from": "person:트라야누스", "to": "place:메소포타미아", "rel": "conquered", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
+{"from": "person:트라야누스", "to": "place:페르시아", "rel": "conquered", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
+{"from": "person:트라야누스", "to": "place:시리아", "rel": "conquered", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
+{"from": "person:트라야누스", "to": "place:아르메니아", "rel": "conquered", "point": 15, "from_year": 114, "to_year": 117, "year_basis": "chronology"}
 {"from": "person:하드리아누스", "to": "person:트라야누스", "rel": "succeeded", "point": 15, "from_year": 117, "to_year": 117, "year_basis": "chronology"}
 {"from": "person:하드리아누스", "to": "person:플로티나", "rel": "allied_with", "point": 15, "from_year": 117, "to_year": 138, "year_basis": "chronology"}
 {"from": "person:하드리아누스", "to": "person:비비아사비나", "rel": "allied_with", "point": 15}
 {"from": "person:하드리아누스", "to": "place:로마제국", "rel": "ruled", "point": 15, "from_year": 117, "to_year": 138, "year_basis": "chronology"}
 {"from": "person:하드리아누스", "to": "person:안티노우스", "rel": "member_of", "point": 15}
-{"from": "person:하드리아누스", "to": "place:이집트", "rel": "participated_in", "point": 15, "from_year": 130, "to_year": 131, "year_basis": "text"}
-{"from": "person:하드리아누스", "to": "place:게르마니아", "rel": "participated_in", "point": 15, "from_year": 120, "to_year": 137, "year_basis": "chronology"}
-{"from": "person:하드리아누스", "to": "place:브리타니아", "rel": "participated_in", "point": 15, "from_year": 122, "to_year": 122, "year_basis": "text"}
+{"from": "person:하드리아누스", "to": "place:이집트", "rel": "located_in", "point": 15, "from_year": 130, "to_year": 131, "year_basis": "text"}
+{"from": "person:하드리아누스", "to": "place:게르마니아", "rel": "located_in", "point": 15, "from_year": 120, "to_year": 137, "year_basis": "chronology"}
+{"from": "person:하드리아누스", "to": "place:브리타니아", "rel": "located_in", "point": 15, "from_year": 122, "to_year": 122, "year_basis": "text"}
 {"from": "person:플로티나", "to": "person:하드리아누스", "rel": "allied_with", "point": 15, "from_year": 117, "to_year": 138, "year_basis": "chronology"}
 {"from": "person:비비아사비나", "to": "person:하드리아누스", "rel": "allied_with", "point": 15}
 {"from": "person:안티노우스", "to": "person:하드리아누스", "rel": "member_of", "point": 15}
@@ -342,7 +340,7 @@
 {"from": "person:마르쿠스아우렐리우스", "to": "person:콤모두스", "rel": "child_of", "point": 15}
 {"from": "person:루키우스베루스", "to": "person:마르쿠스아우렐리우스", "rel": "allied_with", "point": 15, "from_year": 161, "to_year": 169, "year_basis": "chronology"}
 {"from": "person:루키우스베루스", "to": "group:파르티아족", "rel": "opposed", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
-{"from": "person:루키우스베루스", "to": "place:안티오키아", "rel": "participated_in", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
+{"from": "person:루키우스베루스", "to": "place:안티오키아", "rel": "located_in", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
 {"from": "person:루키우스베루스", "to": "person:판테아", "rel": "allied_with", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
 {"from": "person:판테아", "to": "person:루키우스베루스", "rel": "allied_with", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
 {"from": "person:루킬라", "to": "person:마르쿠스아우렐리우스", "rel": "child_of", "point": 15}
@@ -350,7 +348,7 @@
 {"from": "person:카시우스", "to": "person:루키우스베루스", "rel": "member_of", "point": 15}
 {"from": "person:카시우스", "to": "group:파르티아족", "rel": "opposed", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
 {"from": "person:콤모두스", "to": "person:마르쿠스아우렐리우스", "rel": "child_of", "point": 15}
-{"from": "person:콤모두스", "to": "place:게르마니아", "rel": "participated_in", "point": 15, "from_year": 169, "to_year": 180, "year_basis": "chronology"}
+{"from": "person:콤모두스", "to": "place:게르마니아", "rel": "located_in", "point": 15, "from_year": 169, "to_year": 180, "year_basis": "chronology"}
 {"from": "person:파우스티나", "to": "person:안토니누스피우스", "rel": "allied_with", "point": 15, "from_year": 138, "to_year": 161, "year_basis": "chronology"}
 {"from": "person:아그리콜라", "to": "place:브리타니아", "rel": "ruled", "point": 15, "from_year": 78, "to_year": 84, "year_basis": "chronology"}
 {"from": "person:아그리콜라", "to": "person:도미티아누스", "rel": "opposed", "point": 15, "from_year": 81, "to_year": 84, "year_basis": "chronology"}
@@ -359,7 +357,7 @@
 {"from": "group:다키아족", "to": "group:로마군", "rel": "opposed", "point": 15, "from_year": 85, "to_year": 89, "year_basis": "chronology"}
 {"from": "group:브리타니아민족", "to": "place:로마제국", "rel": "opposed", "point": 15}
 {"from": "group:파르티아족", "to": "person:루키우스베루스", "rel": "opposed", "point": 15, "from_year": 162, "to_year": 166, "year_basis": "chronology"}
-{"from": "event:페스트균", "to": "person:루키우스베루스", "rel": "participated_in", "point": 15, "from_year": 165, "to_year": 166, "year_basis": "chronology"}
+{"from": "person:루키우스베루스", "to": "event:페스트균", "rel": "participated_in", "point": 15, "from_year": 165, "to_year": 166, "year_basis": "chronology"}
 {"from": "event:페스트균", "to": "place:로마", "rel": "occurred_at", "point": 15, "from_year": 165, "to_year": 180, "year_basis": "chronology"}
 {"from": "period:5현제시대", "to": "period:팍스로마나", "rel": "member_of", "point": 15, "from_year": 96, "to_year": 180, "year_basis": "chronology"}
 {"from": "period:팍스로마나", "to": "place:로마제국", "rel": "occurred_at", "point": 15, "from_year": 96, "to_year": 180, "year_basis": "chronology"}
@@ -379,16 +377,15 @@
 {"from": "event:검투기경기", "to": "place:콜로세움", "rel": "occurred_at", "point": 16}
 {"from": "person:콤모두스", "to": "place:로마", "rel": "ruled", "point": 16, "from_year": 177, "to_year": 192, "year_basis": "text"}
 {"from": "group:고트족", "to": "group:로마군", "rel": "opposed", "point": 17}
-{"from": "group:고트족", "to": "place:다키아", "rel": "participated_in", "point": 17}
-{"from": "group:고트족", "to": "place:우크라이나", "rel": "occurred_at", "point": 17}
-{"from": "group:고트족", "to": "place:필리포폴리스", "rel": "participated_in", "point": 17}
+{"from": "group:고트족", "to": "place:다키아", "rel": "located_in", "point": 17}
+{"from": "group:고트족", "to": "place:우크라이나", "rel": "located_in", "point": 17}
+{"from": "group:고트족", "to": "event:필리포폴리스함락", "rel": "participated_in", "point": 17}
 {"from": "person:데키우스", "to": "event:늪지대전투", "rel": "participated_in", "point": 17}
 {"from": "person:갈루스", "to": "person:호스틸리아누스", "rel": "succeeded", "point": 17}
 {"from": "person:호스틸리아누스", "to": "person:갈루스", "rel": "succeeded", "point": 17}
 {"from": "person:아이밀리아누스", "to": "person:갈루스", "rel": "succeeded", "point": 17}
 {"from": "person:갈루스", "to": "place:로마", "rel": "ruled", "point": 17, "from_year": 251, "to_year": 253, "year_basis": "text"}
 {"from": "person:트라야누스", "to": "event:다키아정복", "rel": "participated_in", "point": 17, "from_year": 101, "to_year": 101, "year_basis": "text"}
-{"from": "place:필리포폴리스", "to": "event:필리포폴리스함락", "rel": "occurred_at", "point": 17}
 {"from": "event:늪지대전투", "to": "place:포룸테레브로니", "rel": "occurred_at", "point": 17}
 {"from": "group:고트족", "to": "event:제2차이동기", "rel": "participated_in", "point": 17}
 {"from": "group:고트족", "to": "group:반달족", "rel": "allied_with", "point": 17}
@@ -402,8 +399,8 @@
 {"from": "person:샤푸르", "to": "event:에데사의전투", "rel": "participated_in", "point": 18, "from_year": 260, "to_year": 260, "year_basis": "chronology"}
 {"from": "person:코스로에스", "to": "place:아르메니아", "rel": "ruled", "point": 18}
 {"from": "person:키리아데스", "to": "person:갈리에누스", "rel": "succeeded", "point": 18}
-{"from": "person:데모스테네스", "to": "place:카이사레아", "rel": "participated_in", "point": 18, "from_year": 260, "to_year": 260, "year_basis": "chronology"}
-{"from": "person:오다이나투스", "to": "place:팔미라", "rel": "member_of", "point": 18}
+{"from": "person:데모스테네스", "to": "place:카이사레아", "rel": "located_in", "point": 18, "from_year": 260, "to_year": 260, "year_basis": "chronology"}
+{"from": "person:오다이나투스", "to": "place:팔미라", "rel": "located_in", "point": 18}
 {"from": "person:오다이나투스", "to": "person:샤푸르", "rel": "opposed", "point": 18, "from_year": 260, "to_year": 260, "year_basis": "chronology"}
 {"from": "event:에데사의전투", "to": "place:에데사", "rel": "occurred_at", "point": 18}
 {"from": "group:로마군", "to": "event:에데사의전투", "rel": "participated_in", "point": 18, "from_year": 260, "to_year": 260, "year_basis": "chronology"}
@@ -420,9 +417,9 @@
 {"from": "person:제노비아", "to": "person:오다이나투스", "rel": "child_of", "point": 19, "from_year": 240, "to_year": null, "year_basis": "chronology"}
 {"from": "person:제노비아", "to": "place:팔미라", "rel": "ruled", "point": 19, "from_year": 267, "to_year": 272, "year_basis": "chronology"}
 {"from": "person:제노비아", "to": "person:아우렐리아누스", "rel": "opposed", "point": 19, "from_year": 272, "to_year": 272, "year_basis": "chronology"}
-{"from": "person:아우렐리아누스", "to": "place:팔미라", "rel": "occurred_at", "point": 19}
+{"from": "person:아우렐리아누스", "to": "place:팔미라", "rel": "conquered", "point": 19}
 {"from": "person:마리우스", "to": "place:로마제국", "rel": "opposed", "point": 19}
-{"from": "person:인게누스", "to": "place:일리리쿰", "rel": "occurred_at", "point": 19}
+{"from": "person:인게누스", "to": "place:일리리쿰", "rel": "located_in", "point": 19}
 {"from": "person:칼푸르니우스피소", "to": "group:원로원", "rel": "member_of", "point": 19}
 {"from": "person:디오클레티아누스", "to": "place:로마제국", "rel": "ruled", "point": 20, "from_year": 284, "to_year": 305, "year_basis": "text"}
 {"from": "person:디오클레티아누스", "to": "person:막시미아누스", "rel": "allied_with", "point": 20, "from_year": 285, "to_year": 305, "year_basis": "chronology"}
@@ -439,17 +436,17 @@
 {"from": "person:콘스탄티누스", "to": "place:로마제국", "rel": "ruled", "point": 21, "from_year": 306, "to_year": 337, "year_basis": "chronology"}
 {"from": "person:콘스탄티누스", "to": "person:막센티우스", "rel": "opposed", "point": 21, "from_year": 312, "to_year": 312, "year_basis": "text"}
 {"from": "person:콘스탄티누스", "to": "person:리키니우스", "rel": "opposed", "point": 21, "from_year": 314, "to_year": 323, "year_basis": "chronology"}
-{"from": "person:콘스탄티누스", "to": "place:비잔티움", "rel": "occurred_at", "point": 21}
+{"from": "person:콘스탄티누스", "to": "place:비잔티움", "rel": "located_in", "point": 21}
 {"from": "person:콘스탄티누스", "to": "place:콘스탄티노플", "rel": "ruled", "point": 21, "from_year": 330, "to_year": 337, "year_basis": "chronology"}
 {"from": "person:크리스푸스", "to": "person:콘스탄티누스", "rel": "child_of", "point": 21}
 {"from": "person:크리스푸스", "to": "person:리키니우스", "rel": "opposed", "point": 21, "from_year": 323, "to_year": 323, "year_basis": "text"}
 {"from": "person:콘스탄티아", "to": "person:콘스탄티누스", "rel": "child_of", "point": 21}
 {"from": "person:콘스탄티아", "to": "person:리키니우스", "rel": "allied_with", "point": 21, "from_year": 323, "to_year": 323, "year_basis": "text"}
-{"from": "person:리키니우스", "to": "place:비잔티움", "rel": "occurred_at", "point": 21, "from_year": 313, "to_year": 323, "year_basis": "chronology"}
+{"from": "person:리키니우스", "to": "place:비잔티움", "rel": "located_in", "point": 21, "from_year": 313, "to_year": 323, "year_basis": "chronology"}
 {"from": "person:마르티니아누스", "to": "person:리키니우스", "rel": "allied_with", "point": 21, "from_year": 323, "to_year": 323, "year_basis": "text"}
-{"from": "person:마르티니아누스", "to": "place:비잔티움", "rel": "occurred_at", "point": 21, "from_year": 323, "to_year": 323, "year_basis": "text"}
+{"from": "person:마르티니아누스", "to": "place:비잔티움", "rel": "located_in", "point": 21, "from_year": 323, "to_year": 323, "year_basis": "text"}
 {"from": "person:발렌티니아누스", "to": "person:요비아누스", "rel": "succeeded", "point": 22, "from_year": 364, "to_year": 364, "year_basis": "text"}
-{"from": "person:발렌스", "to": "institution:공치제제", "rel": "member_of", "point": 22, "from_year": 364, "to_year": 378, "year_basis": "text"}
+{"from": "person:발렌스", "to": "institution:공치제제", "rel": "held_office", "point": 22, "from_year": 364, "to_year": 378, "year_basis": "text"}
 {"from": "person:발렌티니아누스", "to": "place:콘스탄티노플", "rel": "ruled", "point": 22}
 {"from": "person:발렌스", "to": "place:콘스탄티노플", "rel": "ruled", "point": 22, "from_year": 364, "to_year": 378, "year_basis": "text"}
 {"from": "person:발렌티니아누스", "to": "place:로마", "rel": "ruled", "point": 22, "from_year": 364, "to_year": 375, "year_basis": "text"}
@@ -468,7 +465,7 @@
 {"from": "person:발렌스", "to": "group:고트족", "rel": "opposed", "point": 23}
 {"from": "person:한나라의고조", "to": "group:흉노족", "rel": "opposed", "point": 23, "from_year": -200, "to_year": -200, "year_basis": "text"}
 {"from": "person:고후해", "to": "group:흉노족", "rel": "allied_with", "point": 23}
-{"from": "group:서고트족", "to": "place:도나우강", "rel": "occurred_at", "point": 23}
+{"from": "group:서고트족", "to": "place:도나우강", "rel": "located_in", "point": 23}
 {"from": "person:발렌스", "to": "place:콘스탄티노플", "rel": "ruled", "point": 23}
 {"from": "event:게르만민족의대이동", "to": "place:도나우강", "rel": "occurred_at", "point": 23}
 {"from": "event:하드리아노폴리스전투", "to": "place:하드리아노폴리스", "rel": "occurred_at", "point": 23}
@@ -500,7 +497,7 @@
 {"from": "person:유스티니아누스", "to": "group:서고트왕국", "rel": "opposed", "point": 25}
 {"from": "person:유스티니아누스", "to": "group:동고트왕국", "rel": "opposed", "point": 25}
 {"from": "person:벨리사리우스", "to": "group:반달왕국", "rel": "opposed", "point": 25, "from_year": 533, "to_year": 534, "year_basis": "chronology"}
-{"from": "person:벨리사리우스", "to": "place:아프리카", "rel": "occurred_at", "point": 25}
+{"from": "person:벨리사리우스", "to": "place:아프리카", "rel": "conquered", "point": 25}
 {"from": "person:유스티니아누스", "to": "work:로마법대전", "rel": "created", "point": 25, "from_year": 528, "to_year": 534, "year_basis": "chronology"}
 {"from": "person:유스티니아누스", "to": "place:성소피아성당", "rel": "created", "point": 25, "from_year": 532, "to_year": 537, "year_basis": "chronology"}
 {"from": "person:프로코피우스", "to": "person:유스티니아누스", "rel": "member_of", "point": 25}
@@ -508,7 +505,7 @@
 {"from": "person:테오도라", "to": "person:유스티니아누스", "rel": "married", "point": 26}
 {"from": "person:테오도라", "to": "person:아카키우스", "rel": "child_of", "point": 26}
 {"from": "person:테오도라", "to": "place:라벤나", "rel": "occurred_at", "point": 26}
-{"from": "place:산비탈레성당", "to": "place:라벤나", "rel": "occurred_at", "point": 26}
+{"from": "place:산비탈레성당", "to": "place:라벤나", "rel": "located_in", "point": 26}
 {"from": "person:테오도라", "to": "group:청파", "rel": "opposed", "point": 26}
 {"from": "person:테오도라", "to": "group:녹파", "rel": "opposed", "point": 26}
 {"from": "person:유스티니아누스", "to": "person:황비루피키나", "rel": "child_of", "point": 26}
@@ -521,8 +518,8 @@
 {"from": "group:청파", "to": "group:녹파", "rel": "opposed", "point": 27}
 {"from": "group:청파", "to": "person:유스티니아누스", "rel": "allied_with", "point": 27, "from_year": 527, "to_year": 532, "year_basis": "chronology"}
 {"from": "group:녹파", "to": "person:아나스타시우스황제", "rel": "allied_with", "point": 27, "from_year": 491, "to_year": 518, "year_basis": "chronology"}
-{"from": "group:청파", "to": "place:콘스탄티노플", "rel": "occurred_at", "point": 27}
-{"from": "group:녹파", "to": "place:콘스탄티노플", "rel": "occurred_at", "point": 27}
+{"from": "group:청파", "to": "place:콘스탄티노플", "rel": "located_in", "point": 27}
+{"from": "group:녹파", "to": "place:콘스탄티노플", "rel": "located_in", "point": 27}
 {"from": "group:청파", "to": "event:니카의반란", "rel": "participated_in", "point": 27, "from_year": 532, "to_year": 532, "year_basis": "text"}
 {"from": "group:녹파", "to": "event:니카의반란", "rel": "participated_in", "point": 27, "from_year": 532, "to_year": 532, "year_basis": "text"}
 {"from": "person:히파티우스", "to": "event:니카의반란", "rel": "participated_in", "point": 27, "from_year": 532, "to_year": 532, "year_basis": "text"}
@@ -544,8 +541,8 @@
 {"from": "person:마호메트", "to": "person:아브드알무탈리브", "rel": "child_of", "point": 28}
 {"from": "person:아브탈리브", "to": "person:마호메트", "rel": "child_of", "point": 28}
 {"from": "person:하디자", "to": "person:마호메트", "rel": "married", "point": 28}
-{"from": "person:마호메트", "to": "place:메카", "rel": "occurred_at", "point": 28}
-{"from": "person:마호메트", "to": "place:메디나", "rel": "occurred_at", "point": 28}
+{"from": "person:마호메트", "to": "place:메카", "rel": "located_in", "point": 28}
+{"from": "person:마호메트", "to": "place:메디나", "rel": "located_in", "point": 28}
 {"from": "person:마호메트", "to": "place:카바신전", "rel": "conquered", "point": 28, "from_year": 630, "to_year": 630, "year_basis": "text"}
 {"from": "person:마호메트", "to": "work:코란", "rel": "created", "point": 28}
 {"from": "person:아부바크르", "to": "work:코란", "rel": "created", "point": 28, "from_year": 632, "to_year": 634, "year_basis": "chronology"}
@@ -584,19 +581,19 @@
 {"from": "person:메메트2세", "to": "place:콘스탄티노플", "rel": "conquered", "point": 30, "from_year": 1453, "to_year": 1453, "year_basis": "chronology"}
 {"from": "person:마누엘2세", "to": "group:동로마제국", "rel": "ruled", "point": 30, "from_year": 1391, "to_year": 1425, "year_basis": "chronology"}
 {"from": "person:티무르", "to": "group:오스만제국", "rel": "opposed", "point": 30, "from_year": 1402, "to_year": 1402, "year_basis": "text"}
-{"from": "person:유스티니아니", "to": "place:콘스탄티노플", "rel": "participated_in", "point": 30, "from_year": 1453, "to_year": 1453, "year_basis": "chronology"}
+{"from": "person:유스티니아니", "to": "place:콘스탄티노플", "rel": "located_in", "point": 30, "from_year": 1453, "to_year": 1453, "year_basis": "chronology"}
 {"from": "group:오스만투르크", "to": "place:콘스탄티노플", "rel": "conquered", "point": 30, "from_year": 1453, "to_year": 1453, "year_basis": "chronology"}
 {"from": "group:오스만투르크", "to": "group:동로마제국", "rel": "opposed", "point": 30, "from_year": 1402, "to_year": 1453, "year_basis": "chronology"}
 {"from": "group:오스만투르크", "to": "place:보스포루스해협", "rel": "opposed", "point": 30}
 {"from": "group:예니체리", "to": "group:오스만투르크", "rel": "member_of", "point": 30}
 {"from": "group:제노바", "to": "group:동로마제국", "rel": "allied_with", "point": 30}
 {"from": "group:베네치아", "to": "group:동로마제국", "rel": "allied_with", "point": 30}
-{"from": "place:성소피아성당", "to": "place:콘스탄티노플", "rel": "occurred_at", "point": 30}
-{"from": "place:성로마누스교회", "to": "place:콘스탄티노플", "rel": "occurred_at", "point": 30}
+{"from": "place:성소피아성당", "to": "place:콘스탄티노플", "rel": "located_in", "point": 30}
+{"from": "place:성로마누스교회", "to": "place:콘스탄티노플", "rel": "located_in", "point": 30}
 {"from": "place:콘스탄티노플", "to": "place:발칸반도", "rel": "occurred_at", "point": 30}
 {"from": "place:콘스탄티노플", "to": "place:소아시아", "rel": "occurred_at", "point": 30}
 {"from": "person:콘스탄티누스", "to": "place:콘스탄티노플", "rel": "created", "point": 30}
-{"from": "group:기독교인", "to": "place:콘스탄티노플", "rel": "member_of", "point": 30}
+{"from": "group:기독교인", "to": "place:콘스탄티노플", "rel": "located_in", "point": 30}
 {"from": "group:이슬람교도", "to": "group:오스만제국", "rel": "member_of", "point": 30}
 {"from": "person:아피우스클라우디우스가이쿠스", "to": "work:아피아가도", "rel": "created", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:마르쿠스아우렐리우스", "to": "work:명상록", "rel": "created", "point": 15, "from_year": null, "to_year": null, "year_basis": null}
@@ -607,9 +604,8 @@
 {"from": "person:가이우스페트로니우스", "to": "work:사티리콘", "rel": "created", "point": 12, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:아우렐리아누스", "to": "institution:태양교", "rel": "created", "point": 13, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "event:아그리젠토포위", "to": "place:아그리젠토시", "rel": "occurred_at", "point": 2, "from_year": -262, "to_year": null, "year_basis": "inferred"}
-{"from": "event:마르살라만해전", "to": "place:마르살라만", "rel": "occurred_at", "point": 2, "from_year": -256, "to_year": null, "year_basis": "text"}
-{"from": "person:하밀카르바르카스", "to": "event:마르살라만해전", "rel": "participated_in", "point": 2, "from_year": -256, "to_year": null, "year_basis": "text"}
-{"from": "group:로마군", "to": "event:마르살라만해전", "rel": "participated_in", "point": 2, "from_year": -256, "to_year": null, "year_basis": "text"}
+{"from": "event:에크노무스해전", "to": "place:에크노무스곶", "rel": "occurred_at", "point": 2, "from_year": -256, "to_year": null, "year_basis": "text"}
+{"from": "group:로마군", "to": "event:에크노무스해전", "rel": "participated_in", "point": 2, "from_year": -256, "to_year": null, "year_basis": "text"}
 {"from": "event:본곶전투", "to": "place:본곶", "rel": "occurred_at", "point": 2, "from_year": -255, "to_year": null, "year_basis": "text"}
 {"from": "person:레굴루스", "to": "event:본곶전투", "rel": "participated_in", "point": 2, "from_year": -255, "to_year": null, "year_basis": "text"}
 {"from": "person:크산티포스", "to": "event:본곶전투", "rel": "participated_in", "point": 2, "from_year": -255, "to_year": null, "year_basis": "text"}
@@ -645,7 +641,7 @@
 {"from": "person:디오클레티아누스", "to": "place:니코메디아", "rel": "created", "point": 21, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:트라야누스", "to": "place:마르키아노폴리스", "rel": "created", "point": 17, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "place:로마", "to": "place:이탈리아반도", "rel": "ruled", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "person:한니발", "to": "place:이탈리아반도", "rel": "participated_in", "point": 3, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:한니발", "to": "place:이탈리아반도", "rel": "located_in", "point": 3, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "place:카르타고", "to": "place:지중해", "rel": "ruled", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "place:그리스", "to": "place:지중해", "rel": "ruled", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:유스티니아누스", "to": "place:지중해", "rel": "ruled", "point": 25, "from_year": null, "to_year": null, "year_basis": null}
@@ -653,18 +649,19 @@
 {"from": "person:기번", "to": "person:볼테르", "rel": "allied_with", "point": 0, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:기번", "to": "person:흄", "rel": "allied_with", "point": 0, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:기번", "to": "person:애덤스미스", "rel": "allied_with", "point": 0, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "group:에트루리아인", "to": "place:로마", "rel": "opposed", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "group:헤르니키인", "to": "place:로마", "rel": "opposed", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "person:레굴루스", "to": "institution:집정관", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "person:아피우스클라우디우스가이쿠스", "to": "institution:감찰관", "rel": "member_of", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "person:스키피오아이밀리아누스", "to": "institution:집정관", "rel": "member_of", "point": 4, "from_year": -147, "to_year": -146, "year_basis": "chronology"}
-{"from": "person:폼페이우스", "to": "institution:집정관", "rel": "member_of", "point": 5, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "person:크라수스", "to": "institution:집정관", "rel": "member_of", "point": 5, "from_year": null, "to_year": null, "year_basis": null}
-{"from": "person:파비우스막시무스", "to": "institution:독재관", "rel": "member_of", "point": 3, "from_year": -217, "to_year": -216, "year_basis": "chronology"}
-{"from": "person:카이사르", "to": "institution:독재관", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "chronology"}
+{"from": "group:에트루리아인", "to": "place:로마", "rel": "opposed", "point": 1, "from_year": -312, "to_year": -308, "year_basis": "text"}
+{"from": "group:헤르니키인", "to": "place:로마", "rel": "opposed", "point": 1, "from_year": -306, "to_year": -306, "year_basis": "text"}
+{"from": "person:레굴루스", "to": "institution:집정관", "rel": "held_office", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:아피우스클라우디우스가이쿠스", "to": "institution:감찰관", "rel": "held_office", "point": 1, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:스키피오아이밀리아누스", "to": "institution:집정관", "rel": "held_office", "point": 4, "from_year": -147, "to_year": -146, "year_basis": "chronology"}
+{"from": "person:폼페이우스", "to": "institution:집정관", "rel": "held_office", "point": 5, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:크라수스", "to": "institution:집정관", "rel": "held_office", "point": 5, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:파비우스막시무스", "to": "institution:독재관", "rel": "held_office", "point": 3, "from_year": -217, "to_year": -216, "year_basis": "chronology"}
+{"from": "person:카이사르", "to": "institution:독재관", "rel": "held_office", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "chronology"}
 {"from": "person:하스드루발", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:한니발", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:하밀카르바르카스", "to": "group:젊은사자들", "rel": "created", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:마고", "to": "place:카르타고", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:마고", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
 {"from": "person:크산티포스", "to": "place:스파르타", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null}
+{"from": "person:한니발기스코", "to": "event:밀라이해전", "rel": "participated_in", "point": 2, "from_year": -260, "to_year": -260, "year_basis": "text"}
