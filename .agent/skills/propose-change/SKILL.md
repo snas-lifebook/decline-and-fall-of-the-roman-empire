@@ -20,7 +20,21 @@ version: 1
 
 **타입 7종**: person · place · event · group · institution · work · period
 
-**rel 11종만 허용**: `child_of` `succeeded` `allied_with` `opposed` `participated_in` `occurred_at` `ruled` `member_of` `married` `conquered` `created`
+**rel 16종만 허용**
+
+기존 11종: `child_of` `succeeded` `allied_with` `opposed` `participated_in` `occurred_at` `ruled` `member_of` `married` `conquered` `created`
+
+2026-08-13 신설 5종. 기존 rel로 표현이 안 돼 데이터가 왜곡되던 자리를 메운다.
+
+| rel | 방향 | 쓰는 자리 |
+|---|---|---|
+| `located_in` | 인물·집단·장소 → 장소 | "어디에 있었다". 기존 오용(`occurred_at` 주어가 인물, 인물→지명 `participated_in`)이 이리로 온다 |
+| `protected` | 보호자 → 피보호자 | 비대칭 보호. `allied_with`(대등한 조약)와 `ruled`(정복 후) 사이 |
+| `held_office` | 인물 → 제도 | 관직 재임. 임기는 `from_year`/`to_year`에. `member_of`로 우회하지 마라 |
+| `decided` | 인물·제도 → 사건 | 표결·결정. 참전이 아니므로 `participated_in`이 아니다 |
+| `applied_to` | 제도·정책 → 장소·집단 | 정책이 어디에 적용됐나 |
+
+신설분은 아직 데이터에 거의 없다. 마이그레이션 진행 중이므로, 조회 결과가 0이면 옛 오용분을 같이 봐야 한다.
 
 **실제 스키마** — 지어내지 말고 이 모양을 그대로 따른다. 파일에서 한 줄 읽어 확인하는 것이 가장 확실하다.
 
@@ -50,7 +64,7 @@ version: 1
 3. **대상이 이미 있는지 확인한다.** `entities.jsonl`을 이름·별칭으로 검색한다(`grep -n "이름" entities.jsonl` 또는 `aliases` 필드까지 훑는 스크립트 사용). 동명이인일 수 있으므로 아래 「하지 말 것」의 동명이인 항목을 먼저 읽는다.
 4. **불변식 여섯을 하나씩 대조한다.**
    1. 객체 하나에 노트 하나 — 새 객체를 제안하면 `entities/<type>/<이름>.md` 노트도 같이 제안한다. 이름·타입이 겹칠 때만 파일명에 `(지명)`·`(집단)` 같은 접미사를 붙이고, jsonl의 `name`은 접미사 없이 그대로 쓴다.
-   2. rel은 11종 중 하나인가. 아니면 데이터를 만들지 말고 rel 신설을 먼저 논의한다.
+   2. rel은 16종 중 하나인가. 아니면 데이터를 만들지 말고 rel 신설을 먼저 논의한다.
    3. 연도 부호 — 기원전은 음수, 서기는 양수. `year_basis`도 함께 채운다.
    4. `occurred_at`의 주어(`from`)는 반드시 event인가.
    5. `participated_in`은 인물·집단 → 사건 방향인가.
@@ -65,7 +79,9 @@ version: 1
 - **표현할 rel이 없다고 비슷한 걸 갖다 쓰지 마라.** 그렇게 `occurred_at` 오용 37건, 인물→지명 `participated_in` 오용 20건이 쌓였다. 자리가 없으면 "이 관계는 표현할 rel이 없다"고 보고하고 rel 신설 논의로 넘긴다. 데이터에 억지로 끼워 넣지 않는다.
 - **동명이인을 설명 유사도로 판정하지 마라.** 카이사르처럼 한 인물의 포인트별 서술은 국면이 달라 유사도가 낮게 나올 수 있다. alias 신호도 못 믿는다 — 실제 검증한 12쌍 중 4쌍이 서로 다른 인물이었다. 포인트별 서술을 사람 눈으로 대조해 판정한다. 확신이 안 서면 판정하지 말고 사람에게 넘긴다.
 - **연도·인과를 추정으로 채우지 마라.** AI가 가장 자주 틀리는 자리다. 과거 제안 68건 중 19건이 반려됐는데 연도 혼동이 큰 몫이었다 — 마르살라 만 해전을 -241로 적었으나 본문 순서상 -256이 맞았고, 탈라모네를 -240으로 적었으나 실제는 -225였다. 모르면 `confidence: low`로 표시하거나 아예 제안하지 않는다.
-- **`entities/*.md`를 손으로 대량 수정하지 마라.** 이 파일들은 `ontology/_scripts/rome30_*.py`가 재생성한다. 그 파이프라인은 `merge → geo → maps → backlink` 순서를 지켜야 하며, `merge`만 단독 실행하면 하류가 붙인 좌표·지도 섹션이 지워진다. 노트 변경도 제안으로만 남긴다.
+- **`entities/*.md`를 손으로 대량 수정하지 마라.** 이 파일들은 `ontology/_scripts/rome30_*.py`가 `entities.jsonl`에서 재생성한다. 노트 변경도 제안으로만 남긴다.
+
+- **`rome30_merge.py`를 돌리자고 제안하지 마라.** 최초 1회용이고 이미 끝났다. 이 스크립트는 현재 jsonl을 읽지 않고 `_parts/*.jsonl`(2026-07-28에 멈춤, 연도 필드도 없음)만 읽어 통째로 덮어쓴다. 지금 돌리면 이 스킬로 병합한 모든 제안이 사라진다. 하류 재생성(`geo → maps → routes → territory → backlink`)만 안전하다.
 
 ## 출력 형태
 
@@ -94,7 +110,7 @@ version: 1
 
 ### 불변식 대조
 1. 노트 매핑 — `entities/person/두일리우스.md` 신규 제안 포함 (통과)
-2. rel 유효성 — `participated_in`, 11종 내 (통과)
+2. rel 유효성 — `participated_in`, 16종 내 (통과)
 3. 연도 부호 — 음수 (통과)
 4. `occurred_at` 주어 — 해당 없음
 5. `participated_in` 방향 — person → event (통과)
