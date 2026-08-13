@@ -1,3 +1,9 @@
 .DS_Store
 __pycache__/
 *.pyc
+node_modules/
+.next/
+out/
+.vercel/
+test-results/
+playwright-report/
