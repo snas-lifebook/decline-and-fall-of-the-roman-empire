@@ -32,6 +32,3 @@ export function pointList(root = REPO_ROOT): PointMeta[] {
     title: titles.get(n) ?? '',
   }))
 }
-
-/** 화면에 뜨는 이름. 초보자는 번호가 아니라 제목으로 자기 포인트를 찾는다 */
-export const pointLabel = ({ n, title }: PointMeta) => (title ? `${two(n)} ${title}` : two(n))
