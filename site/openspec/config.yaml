@@ -30,9 +30,13 @@ context: |
   Next.js 16.3.0 (학습 데이터의 15와 다르다 — node_modules/next/dist/docs/ 를
   읽고 쓸 것) · React 19.2.8 · TypeScript 5.9.3 · Zod 4.4.3 ·
   Vitest 4.1.10 · Playwright 1.62.1 · jsdom 29.1.1
-  예정: @astryxdesign/core 0.3.0(사전컴파일 CSS) · pagefind 1.5.2 ·
+  예정: @astryxdesign/core 0.4.0(사전컴파일 CSS. 캐럿 금지, 정확히 고정) ·
+  @dagrejs/dagre 3.1.1(빌드타임 전용) · es-hangul(초성 검색) ·
   gray-matter · next-mdx-remote(MPL-2.0) · remark-wiki-link
   문서 프레임워크(Starlight·Nextra·Fumadocs)는 쓰지 않는다.
+  pagefind는 뺐다 — 한국어 스테머가 없고 인덱스가 441KB 단일 청크로 내려온다.
+  그래프 라이브러리를 클라이언트에 싣지 않는다. 빌드타임에 좌표를 계산하고
+  순수 SVG로 굽는다. 인물 이름이 HTML 텍스트로 남아야 하기 때문이다.
 
   ## 폴더 경계 — 로직은 전부 lib/ 에 산다
   lib/ontology.ts   데이터 계약(스키마·로더·불변식). 스키마는 여기 하나뿐이다
