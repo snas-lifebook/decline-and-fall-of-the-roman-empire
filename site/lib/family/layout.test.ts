@@ -13,12 +13,12 @@ const people: FamilyPerson[] = [
   { id: 'person:마고_바르카', label: '마고 바르카' },
 ]
 
-// `X --child_of--> Y` 는 "X의 자녀가 Y"다. 이름과 반대로 읽는다 (AGENTS.md 함정).
+// `X --child_of--> Y` 는 "X는 Y의 자식"이다 (2026-08-14 확정).
 const family: FamilyLink[] = [
-  { from: 'person:하밀카르_바르카', rel: 'child_of', to: 'person:한니발' },
-  { from: 'person:하밀카르_바르카', rel: 'child_of', to: 'person:하스드루발_바르카' },
-  { from: 'person:하밀카르_바르카', rel: 'child_of', to: 'person:마고_바르카' },
-  { from: 'person:하밀카르_바르카', rel: 'child_of', to: 'person:하밀카르의딸' },
+  { from: 'person:한니발', rel: 'child_of', to: 'person:하밀카르_바르카' },
+  { from: 'person:하스드루발_바르카', rel: 'child_of', to: 'person:하밀카르_바르카' },
+  { from: 'person:마고_바르카', rel: 'child_of', to: 'person:하밀카르_바르카' },
+  { from: 'person:하밀카르의딸', rel: 'child_of', to: 'person:하밀카르_바르카' },
   { from: 'person:하밀카르의딸', rel: 'married', to: 'person:하스드루발_미남' },
 ]
 
@@ -83,13 +83,29 @@ describe('혼인', () => {
     expect(r.nodes.filter((n) => n.kind === 'union')).toHaveLength(1)
   })
 
-  it('두 배우자가 그 노드로 이어진다', () => {
+  it('두 배우자를 잇는 선이 있다', () => {
+    const r = layoutFamily(people, family)
+    const between = r.edges.find(
+      (e) =>
+        (e.from === 'person:하밀카르의딸' && e.to === 'person:하스드루발_미남') ||
+        (e.from === 'person:하스드루발_미남' && e.to === 'person:하밀카르의딸'),
+    )
+    expect(between).toBeDefined()
+  })
+
+  it('혼인점이 두 배우자 사이에 찍힌다', () => {
     const r = layoutFamily(people, family)
     const union = r.nodes.find((n) => n.kind === 'union')!
-    const touching = r.edges.filter((e) => e.from === union.id || e.to === union.id)
-    const partners = touching.map((e) => (e.from === union.id ? e.to : e.from))
-    expect(partners).toContain('person:하밀카르의딸')
-    expect(partners).toContain('person:하스드루발_미남')
+    const xs = [byId(r, 'person:하밀카르의딸').x, byId(r, 'person:하스드루발_미남').x]
+    expect(union.x).toBeGreaterThan(Math.min(...xs))
+    expect(union.x).toBeLessThan(Math.max(...xs))
+  })
+
+  it('배우자는 같은 행에 선다', () => {
+    // 혼인 노드가 rank를 한 칸 잡아먹으면 부부가 한 세대 벌어진다.
+    // 2026-08-14 유스티니아누스·테오도라에서 실제로 벌어졌다.
+    const r = layoutFamily(people, family)
+    expect(byId(r, 'person:하밀카르의딸').y).toBe(byId(r, 'person:하스드루발_미남').y)
   })
 
   it('사람 노드보다 작다 — 점으로 찍힌다', () => {
@@ -153,8 +169,20 @@ describe('데이터가 덜 찬 경우', () => {
   it('사람 목록에 없는 id를 가리키는 링크는 버린다', () => {
     const r = layoutFamily(people, [
       ...family,
-      { from: 'person:한니발', rel: 'child_of', to: 'person:없는사람' },
+      { from: 'person:없는사람', rel: 'child_of', to: 'person:한니발' },
     ])
     expect(r.nodes.some((n) => n.id === 'person:없는사람')).toBe(false)
+  })
+
+  it('부모 방향을 헷갈리지 않는다 — 자식이 아래로 간다', () => {
+    // `X --child_of--> Y` = "X는 Y의 자식". 뒤집으면 이 테스트가 깨진다.
+    const r = layoutFamily(
+      [
+        { id: 'p:부모', label: '부모' },
+        { id: 'p:자식', label: '자식' },
+      ],
+      [{ from: 'p:자식', rel: 'child_of', to: 'p:부모' }],
+    )
+    expect(byId(r, 'p:부모').y).toBeLessThan(byId(r, 'p:자식').y)
   })
 })
