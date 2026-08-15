@@ -1,6 +1,7 @@
-import { Stack, Heading, Text, Card, ClickableCard, Divider } from '@astryxdesign/core'
-import { FeedbackBox } from '../components/FeedbackBox'
-import { dataDate } from '../lib/datadate'
+import Link from 'next/link'
+import { Stack, Grid, Heading, Text, ClickableCard, Divider } from '@astryxdesign/core'
+import { Shell } from '../components/Shell'
+import { LinkCards } from '../components/LinkCards'
 
 /**
  * 목적 허브. `/`는 콘텐츠 페이지가 아니라 **갈림길**이다.
@@ -8,18 +9,35 @@ import { dataDate } from '../lib/datadate'
  * 카드를 독자층이 아니라 **동사**로 가른 이유: 사람은 자기가 몇 층 독자인지보다
  * 지금 뭘 하려는지를 훨씬 잘 안다 (SPEC 「진입 구조」).
  *
- * 초보자 규율 셋이 이 화면에 걸린다.
- *   1. 처음 온 사람에게 **길 하나만** 준다. 다섯 갈래는 그다음이다
- *   2. **되는 것을 먼저**, 준비 중인 것을 나중에. 절반이 죽은 첫인상을 주지 않는다
- *   3. 설명은 기능이 아니라 **상황**으로 쓴다 — "언제 여기 오나"
+ * 초보자 규율 둘이 이 화면에 걸린다.
+ *   1. **되는 것을 먼저**, 준비 중인 것을 그 자리에 회색으로. 404보다 정직하다
+ *   2. 설명은 기능이 아니라 **상황**으로 쓴다 — "언제 여기 오나"
+ *
+ * 사이드바를 달지 않는다. 갈림길에 갈림길을 또 놓으면 그게 헷갈림이다. 대신
+ * 가운데로 모아 첫 화면이 왼쪽 1/3에 몰리지 않게 한다.
  */
 
-// 첫 카드가 이미 `/download`로 보낸다. 여기 또 두면 초보자는 둘이 다른 곳인 줄 안다
-const READY = [
+// 다섯을 한 격자에 나란히 둔다. 2026-08-16에 「찾아보기」가 붙어 다섯이 다 살았다
+const CARDS = [
+  {
+    href: '/read',
+    title: '읽기',
+    desc: '맡은 대목을 지금 바로 읽고 싶으실 때',
+  },
+  {
+    href: '/objects',
+    title: '찾아보기',
+    desc: '이 사람이 누구 편이었는지 헷갈리실 때',
+  },
+  {
+    href: '/download',
+    title: '가져가기',
+    desc: '발표 표를 시트에 붙여넣어 만드셔야 할 때',
+  },
   {
     href: '/use',
     title: '활용하기',
-    desc: 'AI 없이 되는 것부터, 쓰던 AI에 물리는 법까지',
+    desc: '쓰시던 AI에 이 자료를 물려보고 싶으실 때',
   },
   {
     href: '/start',
@@ -28,42 +46,23 @@ const READY = [
   },
 ] as const
 
-const COMING = [
-  { title: '읽기', desc: '편역본 30포인트 · 기번 원전 · 한영 대조' },
-  { title: '찾아보기', desc: '인물·장소·사건 644개와 그 관계. 가계도도 여기' },
-] as const
-
 export default function Home() {
   return (
-    <Stack direction="vertical" gap={6} padding={6} maxWidth={960}>
-      <Stack direction="vertical" gap={1}>
-        <Heading level={1}>산스 인생책 로마쇠망사 자료실</Heading>
-        <Text color="secondary">
-          발표와 토론에 쓰는 자료를 모아둔 곳입니다. 설치도 로그인도 필요 없습니다.
-        </Text>
-      </Stack>
-
-      {/* 처음 온 사람에게는 길을 하나만 준다. 선택지가 셋이면 초보자는 멈춘다 */}
-      <ClickableCard href="/download" label="발표 준비 시작하기" width="100%" padding={4}>
-        <Stack direction="vertical" gap={0.5}>
-          <Text size="sm" color="secondary">
-            처음이시면 여기부터
-          </Text>
-          <Heading level={2}>맡은 포인트에 누가 나오는지 봅니다</Heading>
-          <Text size="sm" color="secondary">
-            포인트를 고르면 인물·지명 목록이 나옵니다. 그대로 복사해서 시트에 붙여넣으면 발표 대본
-            표가 됩니다.
+    <Shell path="/" where="첫 화면" sidebar={false} maxWidth={960}>
+      <Stack direction="vertical" gap={8}>
+        {/* 첫 화면이 상단에 딱 붙으면 급해 보인다. 위를 비워 숨을 준다 */}
+        <Stack direction="vertical" gap={1.5} hAlign="center" paddingBlock={10}>
+          <Heading level={1} type="display-1" justify="center">
+            산스 인생책 로마쇠망사 자료실
+          </Heading>
+          <Text size="lg" color="secondary" justify="center">
+            발표와 토론에 쓰는 자료를 모아둔 곳입니다. 설치도 로그인도 필요 없습니다.
           </Text>
         </Stack>
-      </ClickableCard>
 
-      <Stack direction="vertical" gap={3}>
-        <Text size="sm" color="secondary">
-          찾는 것이 따로 있으시면
-        </Text>
-        <Stack direction="horizontal" gap={3} wrap="wrap">
-          {READY.map((c) => (
-            <ClickableCard key={c.href} href={c.href} label={c.title} width={296} padding={4}>
+        <Grid columns={{ minWidth: 280 }} gap={3}>
+          {CARDS.map((c) => (
+            <ClickableCard key={c.title} href={c.href} label={c.title} padding={4}>
               <Stack direction="vertical" gap={0.5}>
                 <Heading level={2}>{c.title}</Heading>
                 <Text size="sm" color="secondary">
@@ -72,40 +71,24 @@ export default function Home() {
               </Stack>
             </ClickableCard>
           ))}
+        </Grid>
+
+        {/*
+         * 모아둔 링크를 맥락에서 다시 만나게 한다. 「작업 공간」 페이지에 있는 것과
+         * **같은 레지스트리에서 같은 id로** 나오므로, 사람이 "아 이게 거기 있던 그
+         * 시트구나"를 안다 (2026-08-16 River 요구).
+         */}
+        <Stack direction="vertical" gap={3}>
+          <Divider />
+          <Text size="sm" color="secondary">
+            바로 가는 곳
+          </Text>
+          <LinkCards ids={['drive-01', 'sheet', 'repo']} />
+          <Text size="sm" color="secondary">
+            나머지는 <Link href="/start/links">작업 공간</Link>에 다 모여 있습니다.
+          </Text>
         </Stack>
       </Stack>
-
-      <Divider />
-
-      {/* 아직 없는 곳으로 보내지 않는다. 404보다 「준비 중」이 정직하고, 아래에 둔다 */}
-      <Stack direction="vertical" gap={3}>
-        <Text size="sm" color="secondary">
-          아직 만드는 중입니다
-        </Text>
-        <Stack direction="horizontal" gap={3} wrap="wrap">
-          {COMING.map((c) => (
-            <Card key={c.title} width={296} padding={4} variant="muted">
-              <Stack direction="vertical" gap={0.5}>
-                <Text weight="semibold" color="disabled">
-                  {c.title}
-                </Text>
-                <Text size="sm" color="disabled">
-                  {c.desc}
-                </Text>
-              </Stack>
-            </Card>
-          ))}
-        </Stack>
-      </Stack>
-
-      <Divider />
-
-      <Stack direction="horizontal" gap={3} vAlign="center" wrap="wrap">
-        <Text size="sm" color="secondary">
-          데이터 기준일 {dataDate()}
-        </Text>
-        <FeedbackBox where="첫 화면" />
-      </Stack>
-    </Stack>
+    </Shell>
   )
 }

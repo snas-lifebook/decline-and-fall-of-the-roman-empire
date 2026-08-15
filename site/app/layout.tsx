@@ -14,6 +14,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="ko" data-theme="light">
+      <head>
+        {/*
+         * Pretendard를 실제로 싣는다. `globals.css`가 이름만 적어두고 있었는데,
+         * 그러면 이 폰트가 깔린 사람에게만 보이고 윈도우 팀원은 맑은 고딕을 본다.
+         * dynamic-subset이라 화면에 뜬 글자의 조각만 내려온다.
+         */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
       <body>{children}</body>
     </html>
   )

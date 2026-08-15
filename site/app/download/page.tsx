@@ -1,5 +1,5 @@
 import { Stack, Heading, Text, ClickableCard, Button } from '@astryxdesign/core'
-import { Page } from '../../components/SiteChrome'
+import { Shell } from '../../components/Shell'
 import { loadEntities } from '../../lib/ontology'
 import { ZIP_URL } from '../../lib/links'
 import { pointList } from '../../lib/points'
@@ -19,7 +19,7 @@ export default function DownloadIndex() {
   }))
 
   return (
-    <Page where="가져가기" path="/download">
+    <Shell where="가져가기" path="/download">
       <Stack direction="vertical" gap={1}>
         <Heading level={1}>가져가기</Heading>
         <Text color="secondary">
@@ -56,6 +56,6 @@ export default function DownloadIndex() {
         </Text>
         <Button label="전체 자료 받기" variant="secondary" href={ZIP_URL} />
       </Stack>
-    </Page>
+    </Shell>
   )
 }

@@ -20,7 +20,7 @@ import {
   TableRow,
   TableCell,
 } from '@astryxdesign/core'
-import { Page } from '../../components/SiteChrome'
+import { Shell } from '../../components/Shell'
 import { REPO } from '../../lib/links'
 import { REPO_ROOT } from '../../lib/ontology'
 
@@ -242,7 +242,7 @@ const WATERFALL = [
 
 export default function UsePage() {
   return (
-    <Page where="활용하기" path="/use">
+    <Shell where="활용하기" path="/use">
       <Stack direction="vertical" gap={6}>
         <Stack direction="vertical" gap={2}>
           <Heading level={1}>이 자료를 어떻게 쓰나</Heading>
@@ -359,6 +359,6 @@ export default function UsePage() {
           </Collapsible>
         </Stack>
       </Stack>
-    </Page>
+    </Shell>
   )
 }

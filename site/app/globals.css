@@ -33,3 +33,25 @@ h6 {
   font-family: var(--font-family-heading);
   letter-spacing: normal;
 }
+
+/*
+ * 가이드 그림.
+ *
+ * 스크린샷 배경이 흰색이라 페이지에 그대로 녹아 경계가 사라진다. 1px 링과
+ * 라운딩만 준다 — 그림자(P3)가 아니라 윤곽선이고, `border:` 선언을 쓰지
+ * 않으므로 P2도 지킨다.
+ */
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.12));
+}
+
+/* 관계 그래프 — 끌 수 있다는 것을 커서로 말한다 */
+.ego-graph {
+  cursor: grab;
+}
+.ego-graph:active {
+  cursor: grabbing;
+}

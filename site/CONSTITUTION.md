@@ -66,13 +66,14 @@ ontology/*.jsonl · entities/**.md · points/*.md   (레포 루트, 정본)
 
 ## 3. 라이브러리
 
-### 지금 설치돼 있는 것 (실측, 2026-08-13)
+### 지금 설치돼 있는 것 (실측, 2026-08-13 · `d3-force`는 2026-08-16 추가)
 
 | 용도 | 패키지 | 버전 | 라이선스 |
 |---|---|---|---|
 | 프레임워크 | `next` | **16.3.0** | MIT |
 | UI 런타임 | `react` · `react-dom` | 19.2.8 | MIT |
 | 데이터 스키마 | `zod` | 4.4.3 | MIT |
+| **ego 관계 그래프 (T3.x)** | **`d3-force`** | **3.0.0** | **ISC** |
 | 유닛 테스트 | `vitest` | 4.1.10 | MIT |
 | 컴포넌트 테스트 | `@testing-library/react` · `@testing-library/dom` | 16.3.2 · 10.4.1 | MIT |
 | DOM 환경 | `jsdom` | 29.1.1 | MIT |
@@ -92,13 +93,31 @@ ontology/*.jsonl · entities/**.md · points/*.md   (레포 루트, 정본)
 | 가계도 레이아웃 | `@dagrejs/dagre` | 3.1.1 | MIT | T3.3. **빌드타임 전용, 클라 0KB** |
 | 검색 | `es-hangul` | 최신 | MIT | T3.4. 초성 검색 |
 | 프론트매터 파싱 | `gray-matter` | 4.0.3 | MIT | 엔티티 노트를 읽을 때 |
-| 마크다운 렌더 | `next-mdx-remote` | 6.0.0 | **MPL-2.0** | 본문 화면 |
-| 위키링크 변환 | `remark-wiki-link` | 2.0.1 | MIT | 본문 화면 |
 | 접근성 검사 | `@axe-core/playwright` | 4.13.0 | **MPL-2.0** | 화면이 생긴 뒤 |
+
+**마크다운 렌더러를 안 넣는다 (2026-08-14, 실측 근거).** `next-mdx-remote`(MPL-2.0)와 `remark-wiki-link`를 넣기로 했다가 뺐다 — **astryx가 `Markdown`을 이미 준다.** 필수 prop은 `children: string` 하나고, GFM 표·코드블록·이미지·체크리스트를 지원하며, 자체 파서라 외부 의존성이 0이다(`package.json` dependencies는 `intl-messageformat` 하나뿐). 위키링크 `[[X]]`만 마크다운이 아니라서 `lib/doc.ts`의 정규식 한 줄이 평문으로 편다.
+
+단 **`parseOutlineFromMarkdown`은 안 쓴다.** 슬러그를 `[^a-z0-9]+`로 만들어서 한글 제목이 전부 빈 문자열이 되고 id가 통째로 겹친다. 목차는 `lib/doc.ts`의 `docSections()`가 H2로 잘라 만든다.
+
+### astryx에 있는 것을 손으로 다시 만들지 않는다
+
+**쓰기 전에 `node_modules/@astryxdesign/core/dist/`에 그 컴포넌트가 있는지 본다.** 97개가 들어 있고, 문서 사이트 골격(`AppShell`·`TopNav`·`SideNav`·`Breadcrumbs`·`Section`·`Outline`·`Markdown`·`CodeBlock`·`Banner`·`Badge`·`Collapsible`·`MetadataList`·`Grid`·`List`)은 **필수 함수 prop이 없어 서버 컴포넌트에서 그대로 돈다.**
+
+이 조항이 생긴 이유: 2026-08-14에 셸을 통째로 다시 만들었다. `DESIGN.md`가 「3단(좌 사이드바 + 중앙 본문 + 우 목차)」을 이미 적어뒀는데도 구현이 `Stack`과 텍스트 링크로 직접 조립해 8개 컴포넌트만 쓰고 있었고, River가 화면을 보고 반려했다. **기획을 안 읽어서가 아니라 라이브러리를 안 읽어서 생긴 사고다.**
+
+클라이언트 래퍼가 필요한 것은 넷뿐이다 — `CommandPalette`·`TabList`/`SegmentedControl`·`Pagination`·`Lightbox`. 전부 필수 prop에 `onChange` 계열 함수가 있다.
 
 **`pagefind`는 뺐다 (2026-08-14, 실측 근거).** 한국어 스테머가 없어 중간 일치가 안 되고(`이사르`로 `카이사르`를 못 찾는다), 알파벳 버킷팅 탓에 한글 인덱스가 **441KB 단일 청크**로 통째로 내려온다(첫 검색 554KB). 객체 644개는 `es-hangul` 인메모리 필터가 더 낫고 **초성 검색이 덤으로 붙는다.** 되살릴 조건은 본문 200개 초과인데 30포인트가 전부라 그럴 일이 없다.
 
-**그래프 라이브러리를 클라이언트에 싣지 않는다.** 빌드타임에 좌표를 계산하고 순수 SVG로 굽는다 — 인물 이름이 HTML 텍스트로 남아 Ctrl+F로 잡히고, 외부 CSS가 없어 astryx와 부딪힐 면이 0이다. React Flow(MIT, 87KB)는 폴백이고 승격 조건은 노드 드래그·자유 pan/zoom이다.
+**그래프 라이브러리는 클라이언트에 안 싣는다 — 예외 하나가 조건부로 열려 있다 (2026-08-16 개정).** 원래 조항은 예외 없이 "싣지 않는다"였다. 빌드타임에 좌표를 계산하고 순수 SVG로 굽는다는 것이고, 지키려던 것은 둘이었다 — **인물 이름이 HTML 텍스트로 남아 Ctrl+F에 잡힐 것**, **외부 CSS가 없어 astryx와 부딪힐 면이 0일 것**.
+
+**2026-08-16에 `d3-force@3.0.0`(ISC, min 8.3KB)을 ego 관계 그래프 한정으로 넣었다.** 뒤집은 게 아니라 지키려던 둘을 다른 방법으로 살리고 예외를 명문화한 것이다.
+
+- *Ctrl+F* → **살렸다.** 관계 목록이 그림 옆에 **정적 HTML 텍스트로 따로** 있다(`components/EntityAside.tsx`). 그림은 보조 시각화지 유일한 표현이 아니다. **이게 예외의 조건이다** — 목록이 사라지면 예외도 같이 사라진다. 리뷰에서 이 조건을 본다
+- *CSS 충돌* → 렌더는 우리 SVG다. `d3-force`는 힘 계산만 하고 DOM도 CSS도 만들지 않는다. 외부 CSS 0
+- **가계도(`lib/family/`)는 그대로 빌드타임 SVG다.** 세대를 행으로 고정하는 문법이라 힘 시뮬레이션이 오히려 해롭다. 예외는 ego 관계 그래프 한 화면에만 적용된다
+
+React Flow(MIT, 87KB)는 여전히 폴백이고 승격 조건은 노드 드래그·자유 pan/zoom이다.
 
 astryx는 **사전컴파일 CSS와 컴파일이 끝난 JS를 배포**한다. 그래서 StyleX 빌드 도구(babel-plugin·PostCSS)를 붙이지 않는다. `@stylexjs/stylex` peer는 컴파일러가 아니라 **런타임 클래스명 조립기**다. 다만 **우리 코드가 `stylex.create`를 직접 호출하면** Vitest 트랜스폼에 StyleX 컴파일이 실제로 돌아야 한다 — 그 선을 넘기 전에 헌장을 고친다.
 
@@ -234,6 +253,7 @@ YAGNI는 테스트에도 적용된다. 다음은 테스트 없이 간다.
 ### 리뷰 체크리스트
 
 **① 중복·공통 로직**
+- [ ] **astryx에 이미 있는 컴포넌트를 손으로 다시 만들었는가** — `dist/`를 먼저 본다 (3절)
 - [ ] 이번에 쓴 코드와 **같은 일을 하는 것이 `lib/`에 이미 있는가** — 먼저 찾고 나서 쓴다
 - [ ] 같은 변환이 두 군데 이상 있는가. **세 번째가 나타나면 반드시 `lib/`로 올린다** (두 번은 아직 우연일 수 있다)
 - [ ] 같은 상수·문자열이 흩어져 있는가

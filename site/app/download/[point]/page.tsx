@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Stack, Heading, Text, Table } from '@astryxdesign/core'
 import type { TableColumn } from '@astryxdesign/core'
-import { Page } from '../../../components/SiteChrome'
+import { Shell } from '../../../components/Shell'
 import { TableActions } from '../../../components/TableActions'
 import { loadEntities, loadLinks } from '../../../lib/ontology'
 import { EXPORT_HEADER, pointTable } from '../../../lib/export/table'
@@ -22,23 +22,31 @@ export function generateStaticParams() {
 type Row = Record<string, string>
 
 /**
- * **화면에는 읽을 것만, 시트에는 전부.**
+ * **여섯 열을 다 그린다.**
  *
- * 여섯 열을 다 그리면 설명 칸이 좁아져 글자가 세로로 늘어진다(실측: 5,200px).
- * 별칭과 등장 포인트는 시트에 붙여놓고 쓰는 값이지 화면에서 읽는 값이 아니다.
- * 복사·CSV는 그대로 여섯 열을 다 내보낸다.
+ * 예전에는 셋만 그렸다 — 여섯을 그리면 설명 칸이 좁아져 글자가 세로로 늘어졌기
+ * 때문이다(실측 5,200px). 원인은 열 수가 아니라 **너비를 안 준 것**이었다.
  *
- * 열 너비를 손으로 주지 않는 이유: astryx의 `proportional()`은 `dist/index.js`가
- * 통째로 `'use client'`라 서버에서 못 부르고, 그 함수가 만드는 객체 모양을
- * 베끼면 문서화 안 된 내부 구조에 매인다 — astryx는 7주에 0.1에서 0.4로 갔다.
+ * `TableColumn.width`는 `{type:'proportional'}` 리터럴을 그대로 받는다
+ * (`Table/types.d.ts`). `proportional()` 팩토리를 부를 필요가 없고, 그래서
+ * `'use client'` 경계에 걸리지 않는다. 앞서 "서버에서는 못 준다"고 적어둔 것은
+ * 틀렸다.
+ *
+ * 비율은 글자 길이를 따른다 — 설명이 제일 길고, 종류는 두 글자다.
  */
-// 이름 · 이 포인트에서 · 관계. 「종류」는 뺐다 — 두 글자인데 열 하나를 통째로
-// 먹고, 「메시나 전투」가 사건인 것은 이름만 봐도 안다. 시트에는 그대로 간다.
-const SCREEN_COLUMNS = [0, 2, 4]
-
-const COLUMNS: TableColumn<Row>[] = SCREEN_COLUMNS.map((i) => ({
+const COLUMNS: TableColumn<Row>[] = (
+  [
+    [0, 2], // 이름
+    [1, 1], // 종류
+    [2, 4], // 이 포인트에서
+    [3, 2], // 별칭
+    [4, 3], // 관계
+    [5, 2], // 등장 포인트
+  ] as const
+).map(([i, w]) => ({
   key: String(i),
   header: EXPORT_HEADER[i],
+  width: { type: 'proportional' as const, value: w, minWidth: 72 },
 }))
 
 export default async function PointPage({ params }: { params: Promise<{ point: string }> }) {
@@ -49,7 +57,7 @@ export default async function PointPage({ params }: { params: Promise<{ point: s
   const data: Row[] = rows.map((r) => Object.fromEntries(r.map((v, i) => [String(i), v])))
 
   return (
-    <Page where="가져가기" path="/download">
+    <Shell where="가져가기" path="/download" maxWidth={1180}>
       <Stack direction="vertical" gap={1}>
         <Link href="/download" style={{ textDecoration: 'none' }}>
           <Text size="sm" color="secondary">
@@ -68,10 +76,6 @@ export default async function PointPage({ params }: { params: Promise<{ point: s
 
       <TableActions point={n} header={[...EXPORT_HEADER]} rows={rows} />
 
-      <Text size="sm" color="secondary">
-        화면에는 세 칸만 보입니다. 복사하거나 내려받으면 종류·별칭·등장 포인트까지 여섯 칸이 다
-        들어갑니다.
-      </Text>
 
       <Table
         data={data}
@@ -82,6 +86,6 @@ export default async function PointPage({ params }: { params: Promise<{ point: s
         // 빈 표는 고장으로 보인다. 지금 데이터엔 없지만 말은 해둔다
         emptyState={<Text color="secondary">이 포인트에는 아직 등록된 객체가 없습니다.</Text>}
       />
-    </Page>
+    </Shell>
   )
 }

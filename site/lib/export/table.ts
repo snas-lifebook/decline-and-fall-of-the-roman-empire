@@ -16,7 +16,7 @@ export const EXPORT_HEADER = [
   '등장 포인트',
 ] as const
 
-const TYPE_KO: Record<string, string> = {
+export const TYPE_KO: Record<string, string> = {
   person: '인물',
   place: '지명',
   group: '집단',
@@ -33,7 +33,7 @@ const TYPE_KO: Record<string, string> = {
  * `child_of`만 방향에 따라 갈린다. `X --child_of--> Y`는 "X는 Y의 자식"이므로
  * X 쪽에서 보면 Y가 부모고, Y 쪽에서 보면 X가 자녀다.
  */
-const REL_KO: Record<string, { out: string; in: string }> = {
+export const REL_KO: Record<string, { out: string; in: string }> = {
   child_of: { out: '부모', in: '자녀' },
   married: { out: '혼인', in: '혼인' },
   succeeded: { out: '계승', in: '피계승' },

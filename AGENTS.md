@@ -13,7 +13,7 @@
 | `ontology/entities.jsonl` | 644줄. `{id, name, type, aliases, attrs, points, descs, note}` |
 | `ontology/links.jsonl` | 667줄. `{from, to, rel, point, from_year, to_year, year_basis}` |
 | `ontology/chronology.csv` | 82행 |
-| `entities/<type>/<이름>.md` | 644개. person 262 · place 224 · group 66 · event 46 · institution 23 · work 15 · period 6 |
+| `entities/<type>/<이름>.md` | 644개. person 262 · place 225 · group 66 · event 47 · institution 23 · work 15 · period 6 |
 | `ontology/_scripts/rome30_*.py` | 온톨로지 재생성 스크립트 |
 | `family/` | 족보 5계열 |
 | `visual/` | 해설 자료 |
@@ -31,7 +31,7 @@
 ## 불변식 여섯 (깨지면 되돌린다)
 
 1. 객체 하나에 노트 하나. `entities.jsonl`의 모든 객체는 `entities/<type>/<이름>.md`를 갖는다. 동명이 타입이 겹칠 때만 파일명에 접미사(`그리스 (지명).md` · `그리스 (집단).md`)를 붙이고, jsonl 쪽 이름에는 접미사를 붙이지 않는다
-2. rel은 16종만 쓴다: `child_of` `succeeded` `allied_with` `opposed` `participated_in` `occurred_at` `ruled` `member_of` `married` `conquered` `created` — 그리고 2026-08-13 신설분 `located_in`(인물·집단·장소 → 장소, 체류·소재·포함) `protected`(보호자 → 피보호자, 비대칭) `held_office`(인물 → 제도, 임기는 연도 필드에) `decided`(인물·제도 → 사건, 표결이지 참전이 아니다) `applied_to`(제도·정책 → 장소·집단)
+2. rel은 16종만 쓴다: `child_of` `succeeded` `allied_with` `opposed` `participated_in` `occurred_at` `ruled` `member_of` `married` `conquered` `created` — 그리고 2026-08-13 신설분 `located_in`(인물·집단·장소 → 장소, 체류·소재·포함) `protected`(보호자 → 피보호자, 비대칭) `held_office`(인물 → 제도, 임기는 연도 필드에) `decided`(인물·제도 → 사건, 표결이지 참전이 아니다) `applied_to`(제도·정책 → 장소·집단). **정의는 16종이지만 `links.jsonl` 667줄에서 실제로 쓰이는 것은 15종이다 — `applied_to`는 0건**이고 유일 후보가 타입 불일치로 보류 중이다. 조회 코드를 쓸 때 16종을 다 기대하지 마라
 3. 기원전은 음수, 서기는 양수
 4. `occurred_at`의 주어는 항상 event다
 5. `participated_in`의 방향은 인물·집단 → 사건이다
