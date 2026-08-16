@@ -21,10 +21,21 @@ export function Faq({
   return (
     <Stack direction="vertical" gap={2} as="section">
       {title ? <Heading level={2}>{title}</Heading> : null}
-      <Stack direction="vertical" gap={1}>
+      {/*
+        `faq` 클래스가 간격을 받는다 — 스타일은 `app/globals.css`에 있다.
+        앞 판은 항목이 4px 간격에 구분선도 패딩도 없어서 **접히는 줄인지 그냥
+        문장인지 안 보였다**("대충 만든 것 같다").
+
+        Mintlify(=docs.claude.com이 쓰는 엔진)의 아코디언 그룹을 실측해 옮겼다 —
+        **항목을 붙이고(gap 0) 구분선을 공유**하며, 질문은 굵게 하지 않는다(500).
+        낱개 카드로 띄우는 건 항목이 하나일 때 쓰는 형태다.
+      */}
+      <Stack className="faq" direction="vertical" gap={1}>
         {items.map((f) => (
           <Collapsible key={f.id} defaultIsOpen={false} trigger={f.q}>
-            <Text color="secondary">{f.a}</Text>
+            <div className="faq-answer">
+              <Text color="secondary">{f.a}</Text>
+            </div>
           </Collapsible>
         ))}
       </Stack>

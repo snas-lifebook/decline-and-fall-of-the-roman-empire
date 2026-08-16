@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Stack, Grid, Heading, Text, ClickableCard, Divider } from '@astryxdesign/core'
 import { Shell } from '../components/Shell'
 import { LinkCards } from '../components/LinkCards'
+import { BookIcon, SearchIcon, DownloadIcon, SparkIcon, FlagIcon } from '../components/icons'
 
 /**
  * 목적 허브. `/`는 콘텐츠 페이지가 아니라 **갈림길**이다.
@@ -18,31 +19,39 @@ import { LinkCards } from '../components/LinkCards'
  */
 
 // 다섯을 한 격자에 나란히 둔다. 2026-08-16에 「찾아보기」가 붙어 다섯이 다 살았다
+//
+// 아이콘은 제목을 대신하지 않고 **거든다**. 다섯 장이 한눈에 구별되면 두 번째 방문부터
+// 글을 안 읽고도 손이 간다 (2026-08-16 River 요구)
 const CARDS = [
   {
     href: '/read',
     title: '읽기',
     desc: '맡은 대목을 지금 바로 읽고 싶으실 때',
+    Icon: BookIcon,
   },
   {
     href: '/objects',
     title: '찾아보기',
     desc: '이 사람이 누구 편이었는지 헷갈리실 때',
+    Icon: SearchIcon,
   },
   {
     href: '/download',
     title: '가져가기',
     desc: '발표 표를 시트에 붙여넣어 만드셔야 할 때',
+    Icon: DownloadIcon,
   },
   {
     href: '/use',
     title: '활용하기',
     desc: '쓰시던 AI에 이 자료를 물려보고 싶으실 때',
+    Icon: SparkIcon,
   },
   {
     href: '/start',
     title: '시작하기',
     desc: '자료를 처음 받으시거나, 갱신을 못 따라가고 계실 때',
+    Icon: FlagIcon,
   },
 ] as const
 
@@ -64,7 +73,10 @@ export default function Home() {
           {CARDS.map((c) => (
             <ClickableCard key={c.title} href={c.href} label={c.title} padding={4}>
               <Stack direction="vertical" gap={0.5}>
-                <Heading level={2}>{c.title}</Heading>
+                <Stack direction="horizontal" gap={1.5} vAlign="center">
+                  <c.Icon />
+                  <Heading level={2}>{c.title}</Heading>
+                </Stack>
                 <Text size="sm" color="secondary">
                   {c.desc}
                 </Text>

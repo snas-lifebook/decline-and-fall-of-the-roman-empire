@@ -79,7 +79,12 @@ export function Shell({
       sideNav={sidebar ? <SideNav>{itemsOf(navTree(), path)}</SideNav> : undefined}
     >
       <Stack direction="horizontal" gap={6} padding={6} justify="center" wrap="wrap">
-        <Stack direction="vertical" gap={4} maxWidth={maxWidth} width="100%">
+        {/*
+          `.doc`는 **본문 칸에만** 붙는 타이포 스코프다. 제목 크기와 여백을
+          `app/globals.css`가 이 클래스 아래로만 건다 — 안 가두면 사이드바·상단바·
+          카드 글자까지 같이 끌려간다. 날개는 이 Stack의 형제라 자동으로 빠진다.
+        */}
+        <Stack className="doc" direction="vertical" gap={4} maxWidth={maxWidth} width="100%">
           {children}
           <Divider />
           <Stack direction="horizontal" gap={3} vAlign="center" wrap="wrap">

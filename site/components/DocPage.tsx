@@ -73,13 +73,20 @@ export function DocPage({ href }: { href: string }) {
 
       {intro ? <Markdown>{intro}</Markdown> : null}
 
-      {sections.map((s) => (
-        // 우측 목차가 여기로 뛴다. `Markdown`은 제목에 id를 안 달아서 우리가 단다
-        <Stack key={s.id} direction="vertical" gap={2} id={s.id} as="section">
-          <Heading level={2}>{s.title}</Heading>
-          <Markdown>{s.md}</Markdown>
-        </Stack>
-      ))}
+      {/*
+        **간격을 여기서 안 놓는다.** 절 사이도 제목 밑도 전부 `globals.css`의
+        H2 마진(48/16)이 정한다 — Stack gap과 CSS 마진이 둘 다 간격을 놓으면
+        서로를 모르는 체계가 둘이 되고, 그래서 H2가 H3보다 좁아지는 사고가 났다.
+      */}
+      <Stack direction="vertical" gap={0}>
+        {sections.map((s) => (
+          // 우측 목차가 여기로 뛴다. `Markdown`은 제목에 id를 안 달아서 우리가 단다
+          <Stack key={s.id} direction="vertical" gap={0} id={s.id} as="section">
+            <Heading level={2}>{s.title}</Heading>
+            <Markdown>{s.md}</Markdown>
+          </Stack>
+        ))}
+      </Stack>
 
       {/* 본문 다음, 이동 링크 앞. 읽고 나서 남는 물음이 여기서 풀린다 */}
       <Faq items={faqFor(href)} />

@@ -34,6 +34,168 @@ h6 {
   letter-spacing: normal;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+ * 본문 수직 리듬 (2026-08-16)
+ *
+ * River: "md를 보기로 한 것인데 제목과 제목 사이의 간격이 좁거나 가독성이
+ * 안 좋다. 클로드나 오픈AI의 독스 사이트를 잘 연구해보시오."
+ *
+ * **실측 진단**: H2의 위여백이 16px인데 H3의 위여백이 24px이었다 —
+ * 상위 제목이 하위 제목보다 덜 떨어져 있어서 눈이 구조를 못 읽었다.
+ * 원인은 간격 체계가 둘로 갈려 있던 것이다. H2는 React의 `Stack gap`이,
+ * H3는 마크다운 CSS margin이 놓았고 **둘이 서로를 몰랐다.**
+ *
+ * docs.claude.com · developers.openai.com · vercel.com/docs를 헤드리스로
+ * 재서 얻은 규칙 셋(네 사이트 예외 없음):
+ *   1. **제목 위 여백 ≥ 아래 여백 × 3.** OpenAI 28:8 · Anthropic 48:16 · Vercel 36:12
+ *   2. **h2 위여백 ≥ 본문 줄높이 × 1.6.** 본문 lh 28.8이면 48px
+ *   3. **위계는 크기가 아니라 여백·굵기로.** OpenAI h2는 본문의 1.25배뿐이고
+ *      Vercel h3는 본문과 크기가 같다. 그래서 **제목을 키우는 대신 위를 벌린다**
+ *
+ * 그리고 넷 다 h2 사이에 `<hr>`도 배경 음영도 안 쓴다. 구분은 전부 여백이다.
+ *
+ * 한국어라서 다르게 가는 것 둘 — 줄높이를 라틴 1.6이 아니라 **1.8**로(한글은
+ * 정방형 글자틀이라 같은 줄높이에서 더 답답하다), 자간은 **0**으로(OpenAI의
+ * -0.16px를 따라하면 자소가 뭉친다). `word-break: keep-all`은 필수다 —
+ * 브라우저 기본값이 한국어를 어절 중간에서 끊는다.
+ *
+ * **전부 `.doc` 아래로만 건다.** `.doc`는 본문 칸에만 붙는다(`Shell.tsx`).
+ * 안 가두면 사이드바·상단바·카드 글자까지 끌려간다.
+ * ══════════════════════════════════════════════════════════════════ */
+
+.doc {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 본문 — 14px는 한국어 문서 본문으로 작다 */
+.doc .astryx-markdown-paragraph,
+.doc .astryx-markdown-list li {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.doc .astryx-markdown-paragraph {
+  margin-block: 0 20px;
+}
+
+.doc .astryx-markdown-list {
+  margin-block: 0 24px;
+}
+
+.doc .astryx-markdown-list li + li {
+  margin-top: 8px;
+}
+
+/*
+ * 제목. 위:아래를 3:1로 둔다 — 제목은 앞 절이 아니라 **뒤따르는 내용에 속한다.**
+ * 크기는 거의 안 건드린다(규칙 3). 자간은 한글이라 -0.01em까지만.
+ */
+.doc h1,
+.doc h2,
+.doc h3 {
+  letter-spacing: -0.01em;
+}
+
+/*
+ * 아래를 8px만 주는 이유: astryx `Stack`이 `gap={0}`을 안 받고 기본 8px을 남긴다
+ * (실측). 그 8px과 합쳐 **화면에서 16px**이 된다. CSS로 gap을 0으로 눌러버리면
+ * 같은 `as="section"`을 쓰는 다른 화면들이 같이 무너져서, 마진 쪽을 맞춘다.
+ */
+.doc h2 {
+  margin-block: 48px 8px;
+}
+
+.doc h3,
+.doc .astryx-markdown-heading {
+  margin-block: 36px 12px;
+  line-height: 1.5;
+}
+
+/*
+ * 마크다운 덩어리의 첫 요소는 위를 안 띄운다. H2가 이미 16px을 놓았는데
+ * 첫 문단이 또 띄우면 제목과 본문이 갈라져 보인다.
+ *
+ * **절의 첫 H2는 여기서 안 건드린다.** 그 48px이 곧 절과 절 사이의 간격이다 —
+ * 그걸 0으로 만들면 이 작업이 고치려던 것을 그대로 되돌린다.
+ */
+.doc .astryx-markdown > :first-child {
+  margin-top: 0;
+}
+
+/*
+ * 표 — 네 사이트가 놀랍도록 같았다. **가로줄만, 헤더 배경 없음, 세로 괘선 없음,
+ * 셀 왼쪽 패딩 0**(첫 열이 본문 왼쪽선에 정렬된다). 흔히 보는 「풀 그리드 +
+ * 회색 헤더 배경」 표는 그 등급 사이트에 하나도 없었다.
+ */
+.doc .astryx-markdown-table {
+  margin-block: 28px;
+}
+
+.doc .astryx-markdown-table th,
+.doc .astryx-markdown-table td {
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 10px 12px 10px 0;
+}
+
+.doc .astryx-markdown-table th {
+  padding-top: 0;
+}
+
+/*
+ * 자주 묻는 것.
+ *
+ * 앞 판은 항목 사이가 4px에 구분선도 패딩도 없어서 **접히는 줄인지 그냥 문장인지
+ * 안 보였다.** docs.claude.com이 쓰는 Mintlify 아코디언 그룹을 실측해 옮긴다 —
+ * **항목을 붙이고(gap 0) 구분선을 공유**한다. 낱개 카드로 띄우는 형태는 항목이
+ * 하나일 때 쓰는 것이고, 여럿이 이어지면 붙이는 쪽이다.
+ *
+ * **질문을 굵게 하지 않는다(500).** 실측한 곳은 400이었다. 여기서 700을 주면
+ * 물음 스무 개가 전부 소제목처럼 보여서 오히려 안 읽힌다. 눌러도 된다는 신호는
+ * 굵기가 아니라 **구분선과 넉넉한 높이**가 준다.
+ *
+ * 좌우 패딩은 0이다 — 표의 첫 열과 같은 이유로, 질문이 본문 왼쪽선에 맞아야 한다.
+ */
+.doc .faq {
+  gap: 0;
+}
+
+.doc .faq .astryx-collapsible {
+  border-bottom: 1px solid light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.12));
+}
+
+.doc .faq .astryx-collapsible:first-child {
+  border-top: 1px solid light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.12));
+}
+
+.doc .faq .astryx-collapsible-trigger {
+  width: 100%;
+  padding-block: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.doc .faq .astryx-collapsible-trigger:hover {
+  color: var(--color-text-accent);
+}
+
+.doc .faq-answer {
+  padding-block: 0 18px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/*
+ * 제목으로 뛰었을 때 상단 바에 가리지 않게 한다. 이게 없으면 앵커를 눌렀을 때
+ * 제목이 바 뒤로 들어가고, 그 순간 「덜 만든 사이트」로 보인다.
+ */
+.doc [id] {
+  scroll-margin-top: 88px;
+}
+
 /*
  * 가이드 그림.
  *

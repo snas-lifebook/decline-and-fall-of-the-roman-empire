@@ -9,6 +9,15 @@ import { loadDoc } from '../../lib/doc'
  * 여섯 장의 순서가 곧 초보자가 밟는 순서다. 부제는 각 장의 프론트매터에서
  * 가져온다 — 두 군데에 적으면 어긋난다.
  */
+/**
+ * 마크다운이 없는 장의 한 줄. **「작업 공간」은 카드 화면이 되면서
+ * `content/start/links.md`를 지웠다** — 프론트매터 한 줄을 읽으려고 산문을 남겨두면
+ * 카드와 두 벌로 갈라진다(헌장 17 후단). 활용하기 랜딩이 쓰는 것과 같은 방식이다.
+ */
+const ABOUT: Record<string, string> = {
+  '/start/links': '편데 운영에 쓰는 바깥 자리들입니다. 흩어진 곳으로 여기서 들어가시면 됩니다.',
+}
+
 export default function Start() {
   const pages = navFind('/start')?.children ?? []
 
@@ -34,7 +43,7 @@ export default function Start() {
           <ListItem
             key={p.href}
             label={p.title}
-            description={loadDoc(p.href).summary}
+            description={ABOUT[p.href] ?? loadDoc(p.href).summary}
             href={p.href}
           />
         ))}

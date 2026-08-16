@@ -23,6 +23,17 @@ export type SiteLink = {
   category: LinkCategory
   /** 회차에 딸린 것. 회차가 늘면 이 표시가 붙은 것만 늘어난다 */
   perSession?: boolean
+  /**
+   * 카드에 붙는 서비스 아이콘. `public/` 기준 경로다 (예: `/icons/github.png`).
+   *
+   * **파일을 레포에 받아 둔다.** 런타임에 파비콘 서비스를 부르면 방문 한 번마다
+   * 바깥으로 요청이 새고, 그쪽이 죽으면 우리 화면이 같이 빈다.
+   *
+   * 도메인이 같으면 파일 하나를 나눠 쓴다 — id가 아니라 서비스 이름으로 지은 이유다.
+   * 파비콘이 없는 곳(자체 배포 pages.dev)은 **그냥 비운다.** 대신 그릴 것을
+   * 지어내면 그게 더 헷갈린다.
+   */
+  icon?: string
 }
 
 export const REPO = 'https://github.com/snas-lifebook/decline-and-fall-of-the-roman-empire'
@@ -36,6 +47,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '01회차 자료함',
     desc: '구글드라이브입니다. 그 회차에 쓴 자료가 모입니다',
     category: '작업공간',
+    icon: '/icons/googledrive.png',
     perSession: true,
   },
   {
@@ -44,6 +56,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '운영 스프레드시트',
     desc: '일정과 담당이 적히는 편데 운영 시트입니다',
     category: '작업공간',
+    icon: '/icons/googlesheets.png',
   },
 
   // 원본데이터
@@ -53,6 +66,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '깃허브',
     desc: '책 본문과 인물·지명 자료가 모여 있는 원본입니다',
     category: '원본데이터',
+    icon: '/icons/github.png',
   },
   {
     id: 'zip',
@@ -60,6 +74,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '전체 자료 ZIP',
     desc: '깃을 몰라도 됩니다. 눌러서 받고 압축을 풀면 끝입니다',
     category: '원본데이터',
+    icon: '/icons/github.png',
   },
   {
     id: 'repo-ontology',
@@ -67,6 +82,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '인물·관계 데이터',
     desc: '객체 644개와 관계 667개가 들어 있는 폴더입니다',
     category: '원본데이터',
+    icon: '/icons/github.png',
   },
   {
     id: 'repo-skills',
@@ -74,6 +90,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: 'AI 스킬 정의',
     desc: 'AI에게 시킬 일의 절차서 여덟 벌이 여기 있습니다',
     category: '원본데이터',
+    icon: '/icons/github.png',
   },
 
   // 발표
@@ -91,6 +108,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '산스 인생책 유튜브',
     desc: '지난 회차 발표 영상이 올라가는 채널입니다',
     category: '발표',
+    icon: '/icons/youtube.png',
   },
 
   // 디자인
@@ -102,6 +120,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '피그마 — 옵시디언 설치 가이드',
     desc: '이 사이트의 설치 그림이 원래 있던 곳입니다',
     category: '디자인',
+    icon: '/icons/figma.png',
   },
 
   // 도구
@@ -111,6 +130,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: '옵시디언',
     desc: '자료를 폴더째 열어 읽는 프로그램입니다. 무료이고 계정이 없어도 됩니다',
     category: '도구',
+    icon: '/icons/obsidian.png',
   },
 
   // 참고자료
@@ -120,6 +140,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: 'Kings and Generals',
     desc: '전투 전개를 지도로 풀어주는 채널입니다',
     category: '참고자료',
+    icon: '/icons/youtube.png',
   },
   {
     id: 'yt-historymarche',
@@ -127,6 +148,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: 'HistoryMarche',
     desc: '포에니 전쟁 편이 특히 좋습니다',
     category: '참고자료',
+    icon: '/icons/youtube.png',
   },
   {
     id: 'yt-epichistory',
@@ -134,6 +156,7 @@ export const SITE_LINKS: SiteLink[] = [
     title: 'Epic History TV',
     desc: '영토 판도 변화를 한눈에 보여줍니다',
     category: '참고자료',
+    icon: '/icons/youtube.png',
   },
 ]
 

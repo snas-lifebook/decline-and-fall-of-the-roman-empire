@@ -98,13 +98,16 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
 
       {intro ? <Markdown>{intro}</Markdown> : null}
 
-      {sections.map((s) => (
-        // 우측 목차가 여기로 뛴다. `Markdown`은 제목에 id를 안 달아서 우리가 단다
-        <Stack key={s.id} direction="vertical" gap={2} id={s.id} as="section">
-          <Heading level={2}>{s.title}</Heading>
-          <Markdown>{s.md}</Markdown>
-        </Stack>
-      ))}
+      {/* 간격은 `globals.css`의 H2 마진이 정한다 — `DocPage`와 같은 규칙이다 */}
+      <Stack direction="vertical" gap={0}>
+        {sections.map((s) => (
+          // 우측 목차가 여기로 뛴다. `Markdown`은 제목에 id를 안 달아서 우리가 단다
+          <Stack key={s.id} direction="vertical" gap={0} id={s.id} as="section">
+            <Heading level={2}>{s.title}</Heading>
+            <Markdown>{s.md}</Markdown>
+          </Stack>
+        ))}
+      </Stack>
 
       <Faq items={faqFor(href)} />
 
