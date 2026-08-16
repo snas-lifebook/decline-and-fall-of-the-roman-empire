@@ -85,10 +85,12 @@ describe('활용하기 — 네 장', () => {
 })
 
 describe('찾아보기 — 타입 일곱', () => {
-  it('개수순으로 걸린다. 인물이 제일 많다', () => {
+  it('가계도가 맨 앞이고 그다음이 개수순이다', () => {
     const kids = navFind('/objects')?.children ?? []
-    expect(kids).toHaveLength(7)
-    expect(kids[0].href).toBe('/objects/person')
+    // 헌장 0-1이 「특히 가계도다」라고 지목한 화면이라 타입 목록보다 앞이다
+    expect(kids).toHaveLength(8)
+    expect(kids[0].href).toBe('/objects/family')
+    expect(kids[1].href).toBe('/objects/person')
   })
 
   it('라벨에 개수를 적는다 — "눌러도 되나"를 없앤다', () => {

@@ -1,6 +1,7 @@
 import { pointList } from './points'
 import { ENTITY_TYPES, loadEntities, type Entity } from './ontology'
 import { TYPE_KO } from './export/table'
+import { families } from './family/build'
 
 /**
  * 사이트 내비게이션 트리 — **한 곳에서만 관리한다.**
@@ -44,6 +45,8 @@ const START: [string, string][] = [
   ['/start/links', '작업 공간'],
 ]
 
+const familyCount = () => families().length
+
 /** 타입별 객체 수. 사이드바 라벨에 그대로 실린다 */
 function typeCounts(): { type: Entity['type']; count: number }[] {
   const all = loadEntities()
@@ -66,7 +69,10 @@ function build(): NavNode[] {
       href: '/objects',
       title: '찾아보기',
       ready: true,
-      children: typeCounts()
+      children: [
+        // 타입 목록보다 앞이다. 헌장 0-1이 이 도구의 존재 이유로 지목한 화면이라
+        { href: '/objects/family', title: `가계도 ${familyCount()}가문`, ready: true },
+        ...typeCounts()
         // 개수순. 인물 262가 먼저고 시대 6이 나중이다
         .sort((a, b) => b.count - a.count)
         .map(({ type, count }) => ({
@@ -75,6 +81,7 @@ function build(): NavNode[] {
           title: `${TYPE_KO[type]} ${count}`,
           ready: true,
         })),
+      ],
     },
     { href: '/download', title: '가져가기', ready: true },
     {

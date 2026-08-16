@@ -16,6 +16,7 @@ import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
 import { entityIndex, entitySlug, neighbors, coOccurring } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
 import { navCrumbs } from '../../../../lib/nav'
+import { familyOf } from '../../../../lib/family/build'
 
 /**
  * 객체 한 장 × 644.
@@ -182,6 +183,7 @@ export default async function ObjectPage({
   // 자기 타입 목록까지가 빵부스러기다. 마지막 한 칸은 자기 이름
   const crumbs = navCrumbs(`/objects/${type}`)
   const attrs = Object.entries(e.attrs).filter(([k]) => ATTR_KO[k])
+  const family = familyOf(e.id)
 
   return (
     <Shell path={href} where={`객체 ${e.name}`} aside={<EntityAside nbrs={nbrs} co={co} />}>
@@ -238,6 +240,18 @@ export default async function ObjectPage({
               </Text>
             ))}
           </Stack>
+        </Stack>
+      ) : null}
+
+      {/* 가문에 속한 사람이면 여기서 가계도로 넘어간다. 동명이인이 갈리는 자리다 */}
+      {family ? (
+        <Stack direction="vertical" gap={1.5} as="section">
+          <Heading level={2}>가계도</Heading>
+          <Text color="secondary">
+            <a href={`/objects/family/${family.slug}`}>
+              {family.title} ({family.people.length}명) 보기
+            </a>
+          </Text>
         </Stack>
       ) : null}
 
