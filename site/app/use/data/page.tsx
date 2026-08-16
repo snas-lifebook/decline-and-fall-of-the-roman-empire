@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { Stack, Heading, Text, Divider, Banner, List, ListItem } from '@astryxdesign/core'
+import { Stack, Heading, Text, Divider, Banner } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
 import { MaterialCards } from '../../../components/MaterialCards'
+import { DataShape } from '../../../components/DataShape'
 import { Faq } from '../../../components/Faq'
 import { faqFor } from '../../../lib/faq'
-import { linkById } from '../../../lib/links'
 
 /**
  * 무엇을 AI에 주나 — 활용하기의 1번이고, 나머지 셋이 전부 여기에 기댄다.
@@ -16,18 +16,6 @@ import { linkById } from '../../../lib/links'
  * 재료 카드는 `components/MaterialCards`가 그린다 — 「우수 사례」와 같은 것을
  * 쓰므로 한쪽만 고쳐 어긋나는 일이 없다.
  */
-const SHAPE = [
-  ['본문', '편역본 30포인트. 사람이 읽는 글입니다.'],
-  [
-    '인물·지명 자료',
-    '644개가 파일 하나씩. 각각 설명, 어느 포인트에 나오는지, 별칭이 적혀 있습니다.',
-  ],
-  [
-    '관계',
-    '667건. 「누가 누구와 대립」 「누가 어디를 통치」 같은 것이 포인트 번호와 함께 적혀 있습니다.',
-  ],
-] as const
-
 export default function Data() {
   return (
     <Shell path="/use/data" where="무엇을 AI에 주나">
@@ -62,25 +50,16 @@ export default function Data() {
 
       <Divider />
 
-      <Stack direction="vertical" gap={1.5} as="section">
-        <Heading level={2}>자료가 어떻게 생겼나</Heading>
-        <Text color="secondary">
-          깃허브에 있는{' '}
-          <a href={linkById('repo').href} target="_blank" rel="noreferrer">
-            원본
-          </a>
-          은 크게 셋으로 나뉩니다. 무엇을 AI에게 줄지 고를 때 알아두시면 좋습니다.
-        </Text>
-        <List density="spacious" hasDividers>
-          {SHAPE.map(([label, description]) => (
-            <ListItem key={label} label={label} description={description} />
-          ))}
-        </List>
-        <Text>
-          관계에 포인트 번호가 붙어 있는 것이 중요합니다. 토론 중에 &ldquo;그거 어디 나온
-          얘기야&rdquo;라는 물음이 나오면 답할 수 있습니다.
-        </Text>
-      </Stack>
+      {/*
+        「자료가 어떻게 생겼나」를 손으로 적은 목록에서 **파일을 세어 만드는 것**으로
+        바꿨다. 같은 설명이 가져가기 화면에도 있었고 숫자가 두 벌이었다 —
+        이제 두 화면이 `components/DataShape`를 같이 쓴다.
+
+        도식을 그리는 대신 개수가 붙은 파일트리와 **진짜 레코드 한 줄**을 놓는다.
+        문서 사이트 여섯 곳을 조사했더니 Stripe와 OpenAI는 도식이 아예 0개인데도
+        자기 데이터가 무엇인지 완전히 전달했다.
+      */}
+      <DataShape />
 
       <Banner
         status="info"

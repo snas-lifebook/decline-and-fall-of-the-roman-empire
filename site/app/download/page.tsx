@@ -1,6 +1,7 @@
 import { Stack, Heading, Text, Divider, Markdown, List, ListItem } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
 import { CopyPageButton } from '../../components/CopyPageButton'
+import { DataShape } from '../../components/DataShape'
 import { loadDoc, docSections } from '../../lib/doc'
 import { loadEntities } from '../../lib/ontology'
 import { pointList } from '../../lib/points'
@@ -53,12 +54,21 @@ export default function DownloadIndex() {
 
       {intro ? <Markdown>{intro}</Markdown> : null}
 
-      {sections.map((s) => (
-        <Stack key={s.id} direction="vertical" gap={2} id={s.id} as="section">
-          <Heading level={2}>{s.title}</Heading>
-          <Markdown>{s.md}</Markdown>
-        </Stack>
-      ))}
+      {/*
+        「자료가 어떻게 생겼나」는 마크다운에서 뺐다. 손으로 적은 표 셋이었는데
+        숫자(644·667)가 두 화면에 두 벌로 있었고, 데이터가 바뀌면 조용히 거짓말이
+        됐다. 이제 `lib/datashape.ts`가 **파일을 세고 첫 줄을 읽어서** 만든다.
+      */}
+      <DataShape />
+
+      <Stack direction="vertical" gap={0}>
+        {sections.map((s) => (
+          <Stack key={s.id} direction="vertical" gap={0} id={s.id} as="section">
+            <Heading level={2}>{s.title}</Heading>
+            <Markdown>{s.md}</Markdown>
+          </Stack>
+        ))}
+      </Stack>
 
       <Stack direction="vertical" gap={2}>
         <Heading level={2}>포인트별 표</Heading>
