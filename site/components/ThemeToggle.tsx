@@ -21,8 +21,21 @@ import { Button } from '@astryxdesign/core'
 
 type Mode = 'system' | 'light' | 'dark'
 
-const NEXT: Record<Mode, Mode> = { system: 'light', light: 'dark', dark: 'system' }
 const LABEL: Record<Mode, string> = { system: '시스템', light: '밝게', dark: '어둡게' }
+
+/**
+ * 다음 상태. **고정 순서(system→light→dark)로 두면 헛클릭이 생긴다** —
+ * 밝은 기기를 쓰는 사람은 첫 번째 누름에서 화면이 그대로라 버튼이 고장 난 줄
+ * 안다(검수 실측: 라이트 OS에서 클릭 전후 배경 `rgb(241,244,247)` 동일).
+ * 사무실 윈도우는 대개 밝은 설정이라 팀원 대부분이 그 자리를 밟는다.
+ *
+ * 그래서 **시스템에서는 지금 보이는 것의 반대로 간다.** 첫 누름이 늘 화면을
+ * 바꾸고, 두 번째가 나머지 하나, 세 번째가 시스템으로 돌아온다.
+ */
+function nextOf(mode: Mode, systemIsDark: boolean): Mode {
+  if (mode === 'system') return systemIsDark ? 'light' : 'dark'
+  return mode === (systemIsDark ? 'light' : 'dark') ? (systemIsDark ? 'dark' : 'light') : 'system'
+}
 
 const KEY = 'theme'
 const watchers = new Set<() => void>()
@@ -66,7 +79,7 @@ export function ThemeToggle() {
   const mode = useSyncExternalStore(subscribe, read, readOnServer)
 
   const click = () => {
-    const next = NEXT[mode]
+    const next = nextOf(mode, window.matchMedia('(prefers-color-scheme: dark)').matches)
     try {
       localStorage.setItem(KEY, next)
     } catch {
@@ -82,7 +95,8 @@ export function ThemeToggle() {
       size="sm"
       label={LABEL[mode]}
       onClick={click}
-      aria-label={`화면 밝기 — 지금 ${LABEL[mode]}. 눌러서 바꿉니다`}
+      // 「시스템」만으로는 지금 밝은지 어두운지를 안 알려준다(검수 지적)
+      aria-label={`화면 밝기 — 지금 ${LABEL[mode]}${mode === 'system' ? ' (기기 설정을 따릅니다)' : ''}. 눌러서 바꿉니다`}
     />
   )
 }

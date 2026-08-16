@@ -18,6 +18,12 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang="ko" suppressHydrationWarning>
       <head>
         {/*
+         * 문서가 그려지기 전 브라우저 캔버스 색. 이게 없으면 정적 사이트라
+         * 첫 페인트 전까지 흰 바탕이 잠깐 깔린다 — 어둡게 쓰는 사람에게는
+         * 그 순간이 번쩍임으로 보인다.
+         */}
+        <meta name="color-scheme" content="light dark" />
+        {/*
          * **첫 페인트 전에** 테마를 칠한다. 이게 없으면 어둡게 쓰는 사람이
          * 페이지마다 흰 화면을 한 번 보고 나서 어두워진다(FOUC).
          *
@@ -25,13 +31,18 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
          * 읽는 것이 유일한 방법이다 — `<body>`가 그려지기 전에 끝나야 한다.
          * 고른 값이 없으면 기기 설정을 따른다.
          */}
+        {/*
+         * **`localStorage`만 따로 감싼다.** 앞 판은 통째로 감싸고 `catch`에서
+         * `light`로 떨어뜨렸는데, 사생활 모드처럼 저장이 막힌 브라우저에서는
+         * **어두운 기기를 쓰는 사람이 밝은 화면을 받았다**(검수 실측). 저장을
+         * 못 읽는 것과 기기 설정을 못 읽는 것은 다른 일이다.
+         */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){try{var m=localStorage.getItem('theme');" +
+              "(function(){var m=null;try{m=localStorage.getItem('theme')}catch(e){}" +
               "var d=m==='dark'||((!m||m==='system')&&matchMedia('(prefers-color-scheme:dark)').matches);" +
-              "document.documentElement.dataset.theme=d?'dark':'light'}" +
-              "catch(e){document.documentElement.dataset.theme='light'}})()",
+              "document.documentElement.dataset.theme=d?'dark':'light'})()",
           }}
         />
         {/*
