@@ -165,10 +165,33 @@ h6 {
  * 상자도 한국어 문장이라 접히는 편이 낫다.
  *
  * `.doc`의 `keep-all`은 산문용이라 여기서 되돌린다 — JSON은 어절이 없다.
+ *
+ * **`pre`를 걸었다가 한 건도 안 걸렸다**(2026-08-17 검수). astryx `CodeBlock`은
+ * `<pre>`를 안 내고 `<code>`를 낸다. 규칙을 써놓고 빌드만 통과시켰지 화면을
+ * 다시 안 봐서 못 잡았다 — 1440px에서도 jsonl 한 줄이 758칸에 1172로 잘리고
+ * 있었다. **CSS를 새로 쓰면 그 규칙이 실제로 걸리는지 브라우저에서 센다.**
  */
-.doc pre {
+.doc code {
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+/*
+ * 가계도가 좁은 화면에서 뭉갠다.
+ *
+ * SVG를 `width:100%`로 두니 390px 폰에서 축척이 0.30이 되어 **이름이 4px**가
+ * 됐다(검수 실측). 폰에서는 옆으로 미는 것이 자연스러우므로 **최소 폭을 주고
+ * 넘치면 밀게 한다** — 데스크톱(자연폭 1128)에서는 이 값이 안 걸린다.
+ *
+ * 그림이 안 읽혀도 정보는 잃지 않는다. 바로 아래 「이 가문의 사람들」에 같은
+ * 이름이 글자 링크로 다 있다.
+ */
+.family-tree {
+  overflow-x: auto;
+}
+
+.family-tree svg {
+  min-width: 760px;
 }
 
 /*
@@ -231,7 +254,14 @@ h6 {
  * 라운딩만 준다 — 그림자(P3)가 아니라 윤곽선이고, `border:` 선언을 쓰지
  * 않으므로 P2도 지킨다.
  */
-main img {
+/*
+ * **`main img`로 걸었다가 한 건도 안 걸렸다**(2026-08-17 검수). `AppShell`은
+ * `<main>`이 아니라 `div#astryx-app-shell-main[role="main"]`을 낸다. 그래서
+ * 이 테두리도, 아래 다크모드 감광도 **여태 아무 일도 안 하고 있었다.**
+ * `.doc img`로 넓게 걸면 이번엔 링크 카드의 20px 파비콘까지 잡아 테두리가
+ * 생긴다. 안내 그림은 전부 마크다운이 낸 것이므로 거기로 좁힌다.
+ */
+.doc .astryx-markdown img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
@@ -246,12 +276,12 @@ main img {
  * 「그림대로 따라 하기」가 깨지므로 **뒤집지 않고 밝기만 낮춘다.**
  * 마우스를 올리면 원래 밝기로 돌아온다 — 자세히 볼 때는 제 색이어야 한다.
  */
-html[data-theme='dark'] main img {
+html[data-theme='dark'] .doc .astryx-markdown img {
   filter: brightness(0.82);
   transition: filter 0.15s ease;
 }
 
-html[data-theme='dark'] main img:hover {
+html[data-theme='dark'] .doc .astryx-markdown img:hover {
   filter: none;
 }
 

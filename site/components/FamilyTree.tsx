@@ -21,6 +21,8 @@ export function FamilyTree({ family, focus }: { family: Family; focus?: string }
   const layout = layoutFamily(family.people, family.links)
   const svg = renderFamilySvg(layout, {
     focus,
+    // 낭독기에는 그림 하나로 들린다. 이름 목록은 바로 아래 글자 링크로 따로 있다
+    label: `${family.title} 가계도 — ${family.people.length}명. 같은 이름 목록이 그림 아래에 있습니다`,
     sexOf: (id) => {
       const e = BY_ID.get(id)
       return e ? sexOf(e) : undefined
@@ -38,7 +40,7 @@ export function FamilyTree({ family, focus }: { family: Family; focus?: string }
         SVG가 `width="100%"`라 칸에 맞춰 줄어든다 — 앞 판은 폭이 픽셀로 박혀 있어
         아우구스투스 가문(1201px)이 본문 칸(1100px) 밖으로 잘려 나갔다
       */}
-      <div dangerouslySetInnerHTML={{ __html: svg }} />
+      <div className="family-tree" dangerouslySetInnerHTML={{ __html: svg }} />
       <Text size="sm" color="secondary">
         청록 테두리 남 · 보라 테두리 여 · 무색 미상. 가는 선 혈연·혼인 · 굵은 점선 제위 계승.
         이름을 누르면 그 사람 화면으로 갑니다.

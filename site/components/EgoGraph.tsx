@@ -178,7 +178,14 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
       aria-label="이 객체와 이어진 것들의 관계 그림"
       // 끄는 중 커서는 CSS `:active`가 바꾼다. 여기서 ref를 읽으면 렌더 중 접근이 된다
       className="ego-graph"
-      style={{ aspectRatio: `${ratio}`, touchAction: 'none' }}
+      /*
+        `touchAction: 'none'`이었다가 `pan-y`로 바꿨다(2026-08-17 검수).
+        폰에서 이 그림이 화면 폭의 77%를 덮는데, 손가락이 여기 닿으면 **페이지가
+        아예 안 굴러갔다**(실측: 그래프 위 스와이프 scrollTop 1688→1688, 본문
+        위에서는 300→621). 세로로 미는 것은 브라우저에 돌려주고 그림 끌기는
+        가로만 받는다 — 폰에서는 읽고 내려가는 것이 노드를 끄는 것보다 급하다.
+      */
+      style={{ aspectRatio: `${ratio}`, touchAction: 'pan-y' }}
       onWheel={(e) => setZoom((z) => Math.min(4, Math.max(0.4, z * (e.deltaY < 0 ? 1.12 : 0.89))))}
       onPointerDown={(e) => onPointerDown(e)}
       onPointerMove={onPointerMove}

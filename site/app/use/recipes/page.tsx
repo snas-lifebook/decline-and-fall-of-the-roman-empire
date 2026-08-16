@@ -35,6 +35,12 @@ export default function Recipes() {
         description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 재료는 셋 중 하나입니다."
       />
 
+      {/*
+        제목을 하나 세운다. `MaterialCards`가 h3부터 시작해서 이 화면이
+        h1 → h3로 한 단계를 건너뛰고 있었다(2026-08-17 검수). 「무엇을 AI에 주나」
+        쪽에는 이미 같은 제목이 있어서 그쪽과도 말이 맞는다.
+      */}
+      <Heading level={2}>재료 셋</Heading>
       <MaterialCards />
 
       {RECIPE_CATEGORIES.map((c) => {
