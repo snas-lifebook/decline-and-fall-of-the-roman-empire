@@ -1,8 +1,11 @@
 import Link from 'next/link'
-import { Stack, Heading, Text, Divider, Banner, Grid, ClickableCard } from '@astryxdesign/core'
+import { Stack, Heading, Text, Divider, Banner } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
 import { RecipeCard } from '../../../components/RecipeCard'
+import { MaterialCards } from '../../../components/MaterialCards'
+import { Faq } from '../../../components/Faq'
 import { RECIPES, RECIPE_CATEGORIES } from '../../../lib/recipes'
+import { faqFor } from '../../../lib/faq'
 
 /**
  * 우수 사례 — 이 섹션에서 **유일하게 마크다운이 아닌 화면**이다.
@@ -11,27 +14,9 @@ import { RECIPES, RECIPE_CATEGORIES } from '../../../lib/recipes'
  * 같은 뼈대가 여덟 번 반복되는데, 그건 산문이 아니라 표의 성질이다. 마크다운으로
  * 쓰면 라벨이 본문에 섞여 흐르고 사례 경계가 사라진다(앞 판이 그래서 반려됐다).
  *
- * 재료 안내는 화면이 직접 그린다 — 세 갈래 카드라 목록보다 카드가 맞다.
+ * 재료 안내는 「무엇을 AI에 주나」와 **같은 카드 한 벌을 쓴다**(`MaterialCards`).
+ * 앞 판은 여기서 셋을 따로 적었는데, 한쪽만 고치면 두 화면이 어긋난다.
  */
-
-const MATERIALS = [
-  {
-    href: '/read',
-    title: '이 페이지 복사',
-    desc: '읽기의 포인트 화면과 찾아보기의 객체 화면 위쪽 버튼입니다. 한 덩어리가 약 1만 자라 어느 AI 창에도 그냥 들어갑니다',
-  },
-  {
-    href: '/download',
-    title: '시트에 붙여넣기용 복사',
-    desc: '가져가기에서 포인트를 고르면 나오는 표입니다. 구글시트나 엑셀에 붙이면 그대로 표가 됩니다',
-  },
-  {
-    href: '/start/ai',
-    title: '자료를 통째로 연결',
-    desc: '자료를 컴퓨터에 받아 AI에 물려두는 방법입니다. 아래 「자료 연결 필요」 사례가 여기서 열립니다',
-  },
-] as const
-
 export default function Recipes() {
   return (
     <Shell path="/use/recipes" where="우수 사례">
@@ -50,18 +35,7 @@ export default function Recipes() {
         description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 재료는 셋 중 하나입니다."
       />
 
-      <Grid columns={{ minWidth: 240 }} gap={3}>
-        {MATERIALS.map((m) => (
-          <ClickableCard key={m.href} href={m.href} label={m.title} padding={4}>
-            <Stack direction="vertical" gap={0.5}>
-              <Text weight="semibold">{m.title}</Text>
-              <Text size="sm" color="secondary">
-                {m.desc}
-              </Text>
-            </Stack>
-          </ClickableCard>
-        ))}
-      </Grid>
+      <MaterialCards />
 
       {RECIPE_CATEGORIES.map((c) => {
         const items = RECIPES.filter((r) => r.category === c)
@@ -94,6 +68,8 @@ export default function Recipes() {
           알 수 있습니다.
         </Text>
       </Stack>
+
+      <Faq items={faqFor('/use/recipes')} />
     </Shell>
   )
 }

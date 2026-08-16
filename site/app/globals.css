@@ -48,6 +48,34 @@ main img {
   box-shadow: 0 0 0 1px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.12));
 }
 
+/*
+ * 본문 링크 (P1).
+ *
+ * astryx `Markdown`은 **자기가 만든 링크에만** 색을 준다(StyleX 원자 클래스라
+ * 재사용할 이름이 없다). 그래서 마크다운 본문의 위키링크는 파랗게 뜨는데, 손으로
+ * 쓴 `<a>`·`<Link>`는 본문 글자와 똑같아 **링크인 줄을 모른다.** 활용하기 네 장이
+ * 카드로 바뀌면서 그쪽 링크가 전부 그렇게 됐다.
+ *
+ * `Text` 안(`.astryx-text`)과 메타 값(`dd`) 안에 든 링크만 건다 — 그 둘이 곧
+ * 본문 링크다. `ClickableCard`·`ListItem`·`SideNavItem`은 `<a>`가 글자를
+ * **감싸는** 쪽이라 이 선택자에 안 걸린다(카드 전체가 파래지는 사고를 막는 것이
+ * 이 조건이다. 실제로 `p a`로 먼저 걸었다가 한 건도 안 잡혔다 — astryx `Text`는
+ * `<p>`가 아니라 `<span>`을 낸다).
+ *
+ * 색은 `Markdown`이 쓰는 것과 같은 토큰이다. 두 종류의 파랑이 생기면 안 된다.
+ */
+.astryx-text a,
+dd a {
+  color: var(--color-text-accent);
+  text-decoration: underline;
+}
+
+/* 상단 바의 「이 자료실은」은 본문이 아니다. 머리글에서 파란 글자가 시선을 끌면 안 된다 */
+.astryx-app-shell-header .astryx-text a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* 관계 그래프 — 끌 수 있다는 것을 커서로 말한다 */
 .ego-graph {
   cursor: grab;

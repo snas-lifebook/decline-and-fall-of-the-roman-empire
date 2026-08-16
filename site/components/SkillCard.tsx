@@ -38,6 +38,10 @@ export function SkillCard({ s }: { s: Skill }) {
         <MetadataList columns="single" label={{ position: 'start', width: 96 }}>
           <MetadataListItem label="무엇을 주나">{s.input}</MetadataListItem>
           <MetadataListItem label="무엇이 나오나">{s.output}</MetadataListItem>
+          {/* 원문 여덟 벌의 「하지 말 것」이 이 절차서들의 존재 이유다. 앞 판에서 잘렸다 */}
+          {s.caution ? (
+            <MetadataListItem label="조심할 것">{s.caution}</MetadataListItem>
+          ) : null}
         </MetadataList>
 
         <CodeBlock code={s.say} title="이렇게 말하면 됩니다" hasCopyButton />

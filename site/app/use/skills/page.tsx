@@ -2,7 +2,9 @@ import Link from 'next/link'
 import { Stack, Heading, Text, Divider, Banner } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
 import { SkillCard } from '../../../components/SkillCard'
+import { Faq } from '../../../components/Faq'
 import { SKILLS, SKILL_TIERS } from '../../../lib/skills'
+import { faqFor } from '../../../lib/faq'
 import { linkById } from '../../../lib/links'
 
 /**
@@ -70,6 +72,8 @@ export default function Skills() {
           이 깃허브에 있습니다. 「하지 말 것」이 이 절차서들의 존재 이유입니다.
         </Text>
       </Stack>
+
+      <Faq items={faqFor('/use/skills')} />
     </Shell>
   )
 }

@@ -1,4 +1,4 @@
-import { Stack, Heading, Text, Banner } from '@astryxdesign/core'
+import { Stack, Text, Banner } from '@astryxdesign/core'
 import { layoutFamily } from '../lib/family/layout'
 import { renderFamilySvg } from '../lib/family/svg'
 import type { Family } from '../lib/family/build'

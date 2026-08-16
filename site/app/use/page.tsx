@@ -1,7 +1,6 @@
 import { Stack, Heading, Text, Divider, List, ListItem, Banner } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
 import { navFind } from '../../lib/nav'
-import { loadDoc } from '../../lib/doc'
 
 /**
  * 활용하기 랜딩 — 목록이지 설명 페이지가 아니다(PLAN 「섹션 랜딩」).
@@ -13,25 +12,27 @@ import { loadDoc } from '../../lib/doc'
  * 약속해놓고 재료를 안 줬다.
  *
  * 그래서 순서를 논리로 바꿨다 — **재료 → 사례 → 스킬 → 함정.** 재료가 1번인
- * 이유가 이 화면의 전부다. 본문은 `content/use/*.md`가 정본이다.
+ * 이유가 이 화면의 전부다.
+ *
+ * 네 장이 모두 `app/use/<이름>/`에서 카드로 그려진다. `content/use/*.md`는 없앴다 —
+ * 프론트매터 한 줄을 읽으려고 남겨둔 마크다운 361줄은 카드와 어긋나기만 한다.
  */
 /**
  * 부제만으로는 "그 안에 뭐가 있나"를 모른다. 몇 개짜리인지까지 적으면
  * 눌러도 되는지가 목록에서 끝난다 (RESEARCH R-E 「펼치기에 개수를 적는다」).
  */
-const INSIDE: Record<string, string> = {
-  '/use/data': '재료 세 가지와 각각의 크기.',
-  '/use/recipes': '상황 넷에 사례 여덟. 프롬프트는 복사해서 씁니다.',
-  '/use/skills': '절차서 여덟. 지금 바로 되는 것과 자료가 필요한 것을 갈라 뒀습니다.',
-  '/use/pitfalls': '실제로 틀렸던 자리 여덟. 숫자까지 적었습니다.',
+const ABOUT: Record<string, string> = {
+  '/use/data':
+    '재료를 먼저 줘야 합니다. 안 주면 AI는 아는 척하고 지어냅니다. 재료 세 가지와 각각의 크기.',
+  '/use/recipes':
+    '실제로 해서 결과가 나온 것만 모았습니다. 상황 넷에 사례 여덟, 프롬프트는 복사해서 씁니다.',
+  '/use/skills':
+    'AI에게 시킬 일이 절차서로 적혀 있습니다. 여덟 벌을 지금 바로 되는 것과 자료가 필요한 것으로 갈라 뒀습니다.',
+  '/use/pitfalls':
+    '이 자료에서 AI가 실제로 틀린 자리 여덟 군데입니다. 몇 건이었는지 숫자까지 적었습니다.',
 }
 
 export default function Use() {
-  const pages = navFind('/use')?.children ?? []
-  const SUMMARY: Record<string, string> = Object.fromEntries(
-    pages.map((p) => [p.href, loadDoc(p.href).summary]),
-  )
-
   return (
     <Shell path="/use" where="활용하기">
       <Stack direction="vertical" gap={1.5}>
@@ -50,11 +51,11 @@ export default function Use() {
       />
 
       <List listStyle="decimal" density="spacious" hasDividers>
-        {pages.map((p) => (
+        {(navFind('/use')?.children ?? []).map((p) => (
           <ListItem
             key={p.href}
             label={p.title}
-            description={`${SUMMARY[p.href] ?? ''} ${INSIDE[p.href] ?? ''}`.trim()}
+            description={ABOUT[p.href] ?? ''}
             href={p.href}
           />
         ))}
