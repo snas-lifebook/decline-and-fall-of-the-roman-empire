@@ -82,6 +82,24 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
       .force('y', forceY(0).strength(0.08))
       .stop()
 
+    /*
+     * **움직임을 줄여달라고 한 사람에게는 안 움직인다.**
+     * 그 설정을 켠 사람에게 220프레임짜리 물리 시뮬레이션은 어지럼증을 유발한다.
+     * 결과를 뺏지는 않는다 — 계산을 한 번에 끝내고 **가라앉은 상태로 바로 그린다.**
+     * 끌기와 확대는 그대로 된다.
+     */
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (still) {
+      s.tick(220)
+      // 한 프레임 뒤에 칠한다. effect 안에서 곧바로 setState하면 렌더가 연쇄되고
+      // eslint가 막는다. 이미 가라앉은 좌표라 한 프레임 차이는 안 보인다
+      const once = requestAnimationFrame(() => setSim([...data]))
+      return () => {
+        cancelAnimationFrame(once)
+        s.stop()
+      }
+    }
+
     // 눈에 보이게 가라앉힌다 — 옵시디언 그래프뷰의 그 느낌이 여기서 나온다
     let frames = 0
     let raf = 0
