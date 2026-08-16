@@ -88,7 +88,7 @@ function graphData(e: Entity, nbrs: Neighbor[], co: CoOccur[]) {
   }
 }
 
-export function EntityAside({ e, nbrs, co }: { e: Entity; nbrs: Neighbor[]; co: CoOccur[] }) {
+export function EntityAside({ nbrs, co }: { nbrs: Neighbor[]; co: CoOccur[] }) {
   return (
     <Stack direction="vertical" gap={4}>
       {nbrs.length ? (

@@ -45,6 +45,9 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
         ? { ...n, x: 0, y: 0, fx: 0, fy: 0 }
         : { ...n, x: Math.cos(a) * 140, y: Math.sin(a) * 140 }
     })
+    // 힘을 노드 수에 맞춘다. 고정값으로 두면 40개짜리 포인트 관계망이 가운데 뭉쳐
+    // 라벨이 서로 덮는다. 라벨이 점 오른쪽으로 뻗으므로 충돌 반경도 넉넉히 준다
+    const n = data.length
     const s = forceSimulation(data)
       .force(
         'link',
@@ -52,11 +55,11 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
           edges.map((e) => ({ ...e })),
         )
           .id((d) => d.id)
-          .distance(90)
-          .strength(0.35),
+          .distance(70 + n * 3)
+          .strength(0.3),
       )
-      .force('charge', forceManyBody().strength(-220))
-      .force('collide', forceCollide(22))
+      .force('charge', forceManyBody().strength(-(200 + n * 28)))
+      .force('collide', forceCollide(24 + n * 0.7))
       .stop()
 
     // 눈에 보이게 가라앉힌다 — 옵시디언 그래프뷰의 그 느낌이 여기서 나온다
@@ -65,7 +68,7 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
     const step = () => {
       s.tick()
       setSim([...data])
-      if (++frames < 140) raf = requestAnimationFrame(step)
+      if (++frames < 200) raf = requestAnimationFrame(step)
     }
     raf = requestAnimationFrame(step)
     return () => {
@@ -80,10 +83,12 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
   // 라벨이 점 오른쪽으로 뻗으므로 그쪽에 여유를 더 준다
   const xs = sim.map((n) => n.x ?? 0)
   const ys = sim.map((n) => n.y ?? 0)
-  const minX = Math.min(...xs, 0) - 40
-  const maxX = Math.max(...xs, 0) + 110
-  const minY = Math.min(...ys, 0) - 30
-  const maxY = Math.max(...ys, 0) + 30
+  // 원점을 경계에 끼우면 안 된다. 객체 화면은 가운데가 (0,0)에 박혀 있어 무해했지만
+  // 포인트 관계망은 가운데가 없어서, 무리가 한쪽으로 몰리면 상자만 헛되이 늘어난다
+  const minX = Math.min(...xs) - 40
+  const maxX = Math.max(...xs) + 110
+  const minY = Math.min(...ys) - 30
+  const maxY = Math.max(...ys) + 30
   // 박스 비율과 viewBox 비율이 어긋나면 SVG가 레터박스를 만들어 위아래가 통째로 뜬다.
   // 비율을 먼저 정하고(너무 납작하거나 길쭉하지 않게 죈다) viewBox를 거기 맞춘다
   const raw = Math.max(200, maxX - minX) / Math.max(160, maxY - minY)
@@ -92,6 +97,9 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
   const w = h * ratio
   const cx = (minX + maxX) / 2 + pan.x
   const cy = (minY + maxY) / 2 + pan.y
+  // 글자와 점은 viewBox 단위다. 노드가 넓게 퍼지면 상대적으로 작아져 안 읽힌다.
+  // 상자 크기에 비례해 키운다 — 화면에서 보이는 크기가 늘 같아진다
+  const k = w / 560
 
   const onPointerDown = (e: React.PointerEvent, id?: string) => {
     ;(e.target as Element).setPointerCapture?.(e.pointerId)
@@ -148,6 +156,7 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
               x2={b.x}
               y2={b.y}
               stroke="currentColor"
+              strokeWidth={k}
               strokeOpacity={e.kind === 'rel' ? 0.35 : 0.15}
               // 동석은 관계가 아니다. 선 종류로 갈라 놓고 범례에 적는다 (DESIGN P7)
               strokeDasharray={e.kind === 'co' ? '3 3' : undefined}
@@ -165,15 +174,15 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
             style={{ cursor: n.href ? 'pointer' : 'default' }}
           >
             <circle
-              r={R[n.kind]}
+              r={R[n.kind] * k}
               fill="currentColor"
               fillOpacity={n.kind === 'center' ? 1 : n.kind === 'rel' ? 0.55 : 0.25}
             />
             {/* 이름은 그림에도 글자로 남는다. 픽셀로 굽지 않는 이유다 */}
             <text
-              x={R[n.kind] + 4}
-              y={4}
-              fontSize={n.kind === 'center' ? 13 : 11}
+              x={(R[n.kind] + 4) * k}
+              y={4 * k}
+              fontSize={(n.kind === 'center' ? 13 : 11) * k}
               fill="currentColor"
               fillOpacity={n.kind === 'co' ? 0.55 : 0.85}
               onClick={() => n.href && (window.location.href = n.href)}

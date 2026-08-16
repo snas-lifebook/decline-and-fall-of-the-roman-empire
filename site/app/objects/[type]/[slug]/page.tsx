@@ -184,7 +184,7 @@ export default async function ObjectPage({
   const attrs = Object.entries(e.attrs).filter(([k]) => ATTR_KO[k])
 
   return (
-    <Shell path={href} where={`객체 ${e.name}`} aside={<EntityAside e={e} nbrs={nbrs} co={co} />}>
+    <Shell path={href} where={`객체 ${e.name}`} aside={<EntityAside nbrs={nbrs} co={co} />}>
       <Breadcrumbs variant="supporting">
         <BreadcrumbItem href="/">자료실</BreadcrumbItem>
         {crumbs.map((c) => (

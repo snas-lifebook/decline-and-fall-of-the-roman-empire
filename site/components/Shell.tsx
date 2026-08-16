@@ -63,7 +63,7 @@ export function Shell({
           heading={<TopNavHeading heading="로마쇠망사 자료실" headingHref="/" />}
           endContent={
             <Text size="sm" color="secondary">
-              편데 운영팀
+              <a href="/about">이 자료실은</a>
             </Text>
           }
         />

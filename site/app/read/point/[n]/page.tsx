@@ -15,6 +15,10 @@ import { docSections } from '../../../../lib/doc'
 import { navCrumbs, navSteps } from '../../../../lib/nav'
 import { POINT_COUNT } from '../../../../lib/points'
 import { pointDoc } from '../../../../lib/text/point'
+import { PointGraph } from '../../../../components/PointGraph'
+import { Faq } from '../../../../components/Faq'
+import { faqFor } from '../../../../lib/faq'
+import { loadEntities, loadLinks } from '../../../../lib/ontology'
 
 /**
  * 포인트 한 장의 본문.
@@ -24,6 +28,9 @@ import { pointDoc } from '../../../../lib/text/point'
  * 빵부스러기 → 제목 → 한 줄 소개 → 페이지 복사 → 본문 → 이전·다음 + 우측 목차.
  * 화면마다 이 순서가 같은 것이 「퀄리티」의 정체다.
  */
+
+const ENTITIES = loadEntities()
+const LINKS = loadLinks()
 
 export function generateStaticParams() {
   return Array.from({ length: POINT_COUNT }, (_, i) => ({ n: String(i + 1) }))
@@ -88,6 +95,10 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
           <Markdown>{s.md}</Markdown>
         </Stack>
       ))}
+
+      <PointGraph point={n} entities={ENTITIES} links={LINKS} />
+
+      <Faq items={faqFor(href)} />
 
       <Stack direction="horizontal" gap={3} justify="between" wrap="wrap">
         <Text size="sm" color="secondary">

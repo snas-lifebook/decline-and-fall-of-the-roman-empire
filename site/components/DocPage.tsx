@@ -13,6 +13,8 @@ import { Shell } from './Shell'
 import { CopyPageButton } from './CopyPageButton'
 import { loadDoc, docSections } from '../lib/doc'
 import { navCrumbs, navSteps } from '../lib/nav'
+import { Faq } from './Faq'
+import { faqFor } from '../lib/faq'
 
 /**
  * 문서 한 장의 뼈대. **모든 문서 화면이 이걸 쓴다.**
@@ -78,6 +80,9 @@ export function DocPage({ href }: { href: string }) {
           <Markdown>{s.md}</Markdown>
         </Stack>
       ))}
+
+      {/* 본문 다음, 이동 링크 앞. 읽고 나서 남는 물음이 여기서 풀린다 */}
+      <Faq items={faqFor(href)} />
 
       {next ? (
         <>
