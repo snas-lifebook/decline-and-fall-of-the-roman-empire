@@ -4,10 +4,11 @@ import { navFind } from '../../../lib/nav'
 /**
  * 활용하기 본문. `content/use/<slug>.md`가 정본이다.
  *
- * **`recipes`만 뺀다.** 우수 사례는 산문이 아니라 카드 여덟 장이라 `app/use/recipes/`가
- * 따로 그린다. 여기서 같은 주소를 또 만들면 빌드가 충돌한다.
+ * **`recipes`와 `skills`를 뺀다.** 둘은 산문이 아니라 카드가 반복되는 화면이라
+ * `app/use/recipes/`·`app/use/skills/`가 따로 그린다. 여기서 같은 주소를 또 만들면
+ * 빌드가 충돌한다.
  */
-const OWN = new Set(['recipes'])
+const OWN = new Set(['recipes', 'skills'])
 
 export function generateStaticParams() {
   return (navFind('/use')?.children ?? [])

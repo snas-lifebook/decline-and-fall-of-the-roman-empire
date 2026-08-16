@@ -2,6 +2,11 @@ import { Stack, Heading, Text, Banner } from '@astryxdesign/core'
 import { layoutFamily } from '../lib/family/layout'
 import { renderFamilySvg } from '../lib/family/svg'
 import type { Family } from '../lib/family/build'
+import { sexOf } from '../lib/family/sex'
+import { entityHref } from '../lib/entity'
+import { loadEntities } from '../lib/ontology'
+
+const BY_ID = new Map(loadEntities().map((e) => [e.id, e]))
 
 /**
  * 가계도 — **빌드 때 구워서 SVG로 내보낸다.** 클라이언트 JS 0줄이다.
@@ -14,7 +19,17 @@ import type { Family } from '../lib/family/build'
  */
 export function FamilyTree({ family, focus }: { family: Family; focus?: string }) {
   const layout = layoutFamily(family.people, family.links)
-  const svg = renderFamilySvg(layout, { focus })
+  const svg = renderFamilySvg(layout, {
+    focus,
+    sexOf: (id) => {
+      const e = BY_ID.get(id)
+      return e ? sexOf(e) : undefined
+    },
+    hrefOf: (id) => {
+      const e = BY_ID.get(id)
+      return e ? entityHref({ id: e.id, type: e.type, name: e.name }) : undefined
+    },
+  })
 
   return (
     <Stack direction="vertical" gap={2}>
@@ -24,7 +39,8 @@ export function FamilyTree({ family, focus }: { family: Family; focus?: string }
         dangerouslySetInnerHTML={{ __html: svg }}
       />
       <Text size="sm" color="secondary">
-        가는 선 혈연·혼인 · 굵은 점선 제위 계승. 계승은 혈연과 다른 축이라 따로 그립니다.
+        청록 테두리 남 · 보라 테두리 여 · 무색 미상. 가는 선 혈연·혼인 · 굵은 점선 제위 계승.
+        이름을 누르면 그 사람 화면으로 갑니다.
       </Text>
     </Stack>
   )
