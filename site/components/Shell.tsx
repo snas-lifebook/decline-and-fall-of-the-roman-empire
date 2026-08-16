@@ -1,7 +1,6 @@
-import { AppShell, TopNav, TopNavHeading, SideNav, SideNavItem, Stack, Text, Divider } from '@astryxdesign/core'
+import { AppShell, TopNav, TopNavHeading, SideNav, SideNavItem, Stack, Divider } from '@astryxdesign/core'
 import { navTree, type NavNode } from '../lib/nav'
-import { dataDate } from '../lib/datadate'
-import { FeedbackBox } from './FeedbackBox'
+import { SiteFooter } from './SiteFooter'
 import { Search } from './Search'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -69,11 +68,13 @@ export function Shell({
           endContent={
             <Stack direction="horizontal" gap={2} vAlign="center">
               {/* 객체가 644장이다. 사이드바 목록만으로는 「하스드루발 어디 나오더라」에 답이 안 된다 */}
+              {/*
+                「이 자료실은」을 상단에서 뺐다 — 이제 푸터가 전 화면에 그것과
+                「바뀐 것」·자료 기준일까지 같이 놓는다. 위아래에 같은 링크가
+                두 번 있으면 상단 바만 붐빈다. 위에는 **행동**(찾기·밝기)만 둔다.
+              */}
               <Search />
               <ThemeToggle />
-              <Text size="sm" color="secondary">
-                <a href="/about">이 자료실은</a>
-              </Text>
             </Stack>
           }
         />
@@ -89,12 +90,7 @@ export function Shell({
         <Stack className="doc" direction="vertical" gap={4} maxWidth={maxWidth} width="100%">
           {children}
           <Divider />
-          <Stack direction="horizontal" gap={3} vAlign="center" wrap="wrap">
-            <Text size="sm" color="secondary">
-              데이터 기준일 {dataDate()}
-            </Text>
-            <FeedbackBox where={where} />
-          </Stack>
+          <SiteFooter where={where} />
         </Stack>
         {aside ? (
           /*

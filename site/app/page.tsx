@@ -73,7 +73,8 @@ export default function Home() {
           {CARDS.map((c) => (
             <ClickableCard key={c.title} href={c.href} label={c.title} padding={4}>
               <Stack direction="vertical" gap={0.5}>
-                <Stack direction="horizontal" gap={1.5} vAlign="center">
+                {/* 아이콘 → 글자 간격은 링크 카드와 같은 8px이다. 화면마다 다르면 아이콘이 붙었다 떨어졌다 한다 */}
+                <Stack direction="horizontal" gap={2} vAlign="center">
                   <c.Icon />
                   <Heading level={2}>{c.title}</Heading>
                 </Stack>

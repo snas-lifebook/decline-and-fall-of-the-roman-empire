@@ -18,7 +18,7 @@ export function LinkCards({ ids, category }: { ids?: string[]; category?: LinkCa
         // 바깥으로 나가는 링크다. 읽던 자리를 뺏지 않게 새 탭으로 연다
         <ClickableCard key={l.id} href={l.href} target="_blank" label={l.title} padding={4}>
           <Stack direction="vertical" gap={0.5} hAlign="start">
-            <Stack direction="horizontal" gap={1} vAlign="center" wrap="wrap">
+            <Stack direction="horizontal" gap={2} vAlign="center" wrap="wrap">
               {/*
                * 아이콘은 있을 때만 그린다. 없는 자리를 빈 칸으로 맞춰 두면 그 칸이
                * "뭔가 안 뜬 것"처럼 보인다 — 아예 없는 편이 조용하다.
