@@ -225,6 +225,36 @@ main img {
 }
 
 /*
+ * 다크모드에서 안내 그림.
+ *
+ * 설치 가이드 31장이 전부 **흰 배경 스크린샷**이다. 어두운 화면에서는 밝은
+ * 사각형이 그대로 눈을 찌른다. 색을 뒤집으면 옵시디언 UI가 실제와 달라져서
+ * 「그림대로 따라 하기」가 깨지므로 **뒤집지 않고 밝기만 낮춘다.**
+ * 마우스를 올리면 원래 밝기로 돌아온다 — 자세히 볼 때는 제 색이어야 한다.
+ */
+html[data-theme='dark'] main img {
+  filter: brightness(0.82);
+  transition: filter 0.15s ease;
+}
+
+html[data-theme='dark'] main img:hover {
+  filter: none;
+}
+
+/*
+ * 깃허브 마크만 검은 단색이라 어두운 배경에서 사라진다. 나머지 다섯(구글드라이브·
+ * 시트·유튜브·피그마·옵시디언)은 색이 있거나 배경이 붙어 있어 그대로 보인다.
+ */
+html[data-theme='dark'] img[src$='github.png'] {
+  filter: invert(1);
+}
+
+/* 고른 테마가 화면 전체에 걸린다 — 스크롤바·기본 폼 컨트롤까지 따라온다 */
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+/*
  * 본문 링크 (P1).
  *
  * astryx `Markdown`은 **자기가 만든 링크에만** 색을 준다(StyleX 원자 클래스라

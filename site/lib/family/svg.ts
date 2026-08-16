@@ -65,19 +65,25 @@ export function renderFamilySvg(layout: FamilyLayout, opts: SvgOptions = {}): st
    */
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${round(layout.width)} ${round(layout.height)}" width="100%" style="max-width:${round(layout.width)}px;height:auto" role="img">
 <style>
-  .person rect { fill: #fff; stroke: #b8b8b8; stroke-width: 1; }
+  /*
+   * 색을 light-dark()로 짝지어 둔다. 다크모드를 붙이면서 하드코딩 열한 개가
+   * 전부 문제가 됐다 — 흰 상자와 검은 글씨는 어두운 배경에서 그대로 눈을 찌른다.
+   * **남녀 색(청록·보라)은 어두운 쪽에서 채도를 올린다** — 같은 색을 어두운
+   * 배경에 그대로 쓰면 탁해져서 두 채널이 안 갈린다.
+   */
+  .person rect { fill: light-dark(#fff, #16191c); stroke: light-dark(#b8b8b8, #3a4046); stroke-width: 1; }
   /* 채널 배정은 family/족보_표기_설계.md를 그대로 승계한다. 새로 정하지 않는다 */
-  .person.sex-m rect { stroke: #2a8a8a; }
-  .person.sex-f rect { stroke: #7a5aa8; }
-  .person.focus rect { stroke: #111; stroke-width: 2; }
+  .person.sex-m rect { stroke: light-dark(#2a8a8a, #4fc4c4); }
+  .person.sex-f rect { stroke: light-dark(#7a5aa8, #b294dd); }
+  .person.focus rect { stroke: light-dark(#111, #e6e9ec); stroke-width: 2; }
   a { cursor: pointer; }
-  a:hover .person rect { fill: #f4f4f4; }
-  .person text { font: ${fontSize}px Pretendard, "Apple SD Gothic Neo", system-ui, sans-serif; fill: #111; }
-  .person .note { font-size: ${round(fontSize * 0.72)}px; fill: #8a8a8a; }
-  .union { fill: #b8b8b8; }
+  a:hover .person rect { fill: light-dark(#f4f4f4, #22272b); }
+  .person text { font: ${fontSize}px Pretendard, "Apple SD Gothic Neo", system-ui, sans-serif; fill: light-dark(#111, #e6e9ec); }
+  .person .note { font-size: ${round(fontSize * 0.72)}px; fill: light-dark(#8a8a8a, #9aa2aa); }
+  .union { fill: light-dark(#b8b8b8, #5a6169); }
   path { fill: none; }
-  path.family { stroke: #c9c9c9; stroke-width: 1; }
-  path.succession { stroke: #6b6b6b; stroke-width: 2; stroke-dasharray: 6 4; }
+  path.family { stroke: light-dark(#c9c9c9, #454b52); stroke-width: 1; }
+  path.succession { stroke: light-dark(#6b6b6b, #98a0a8); stroke-width: 2; stroke-dasharray: 6 4; }
 </style>
 ${edges}
 ${nodes}

@@ -3,6 +3,7 @@ import { navTree, type NavNode } from '../lib/nav'
 import { dataDate } from '../lib/datadate'
 import { FeedbackBox } from './FeedbackBox'
 import { Search } from './Search'
+import { ThemeToggle } from './ThemeToggle'
 
 /**
  * 사이트 껍데기 — 상단 바 + 좌측 사이드바 + 본문 + 하단.
@@ -69,6 +70,7 @@ export function Shell({
             <Stack direction="horizontal" gap={2} vAlign="center">
               {/* 객체가 644장이다. 사이드바 목록만으로는 「하스드루발 어디 나오더라」에 답이 안 된다 */}
               <Search />
+              <ThemeToggle />
               <Text size="sm" color="secondary">
                 <a href="/about">이 자료실은</a>
               </Text>
