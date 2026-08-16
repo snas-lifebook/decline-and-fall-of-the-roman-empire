@@ -42,6 +42,7 @@ export function Shell({
   aside,
   sidebar = true,
   maxWidth = 760,
+  asideWidth = 220,
   children,
 }: {
   /** 지금 화면의 주소. 사이드바 선택 표시에 쓴다 */
@@ -54,6 +55,8 @@ export function Shell({
   sidebar?: boolean
   /** 본문 폭. 글은 760, 카드가 깔리는 허브는 960 */
   maxWidth?: number
+  /** 날개 폭. 그림이 들어가면 넓힌다 */
+  asideWidth?: number
   children: React.ReactNode
 }) {
   return (
@@ -86,7 +89,29 @@ export function Shell({
             <FeedbackBox where={where} />
           </Stack>
         </Stack>
-        {aside ? <Stack direction="vertical" width={220}>{aside}</Stack> : null}
+        {aside ? (
+          /*
+            날개가 본문을 따라 흐르지 않고 **화면에 붙어 있다.** 포인트 본문이
+            길어서, 안 붙이면 관계망이 두 번째 문단쯤에서 위로 사라진다.
+            `top`은 상단 바 높이만큼.
+          */
+          <Stack
+            direction="vertical"
+            gap={4}
+            width={asideWidth}
+            style={{
+              position: 'sticky',
+              top: 24,
+              alignSelf: 'flex-start',
+              // 날개가 화면보다 길면(카이사르는 관계가 41건이다) 붙여둔 채로는
+              // 아래쪽에 손이 안 닿는다. 넘치는 만큼만 안에서 굴린다
+              maxHeight: 'calc(100vh - 48px)',
+              overflowY: 'auto',
+            }}
+          >
+            {aside}
+          </Stack>
+        ) : null}
       </Stack>
     </AppShell>
   )

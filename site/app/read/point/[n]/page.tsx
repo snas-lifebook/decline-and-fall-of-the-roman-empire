@@ -49,13 +49,23 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
     <Shell
       path={href}
       where={`읽기 ${title}`}
+      asideWidth={300}
       aside={
-        sections.length > 1 ? (
-          <Outline
-            label="이 페이지"
-            items={sections.map((s) => ({ id: s.id, label: s.title, level: 2 }))}
-          />
-        ) : undefined
+        <>
+          {sections.length > 1 ? (
+            <Outline
+              label="이 페이지"
+              items={sections.map((s) => ({ id: s.id, label: s.title, level: 2 }))}
+            />
+          ) : null}
+          {/*
+            관계망이 여기 있다 (River 요청, 2026-08-16). 본문 아래에 두면 다 읽고
+            나서야 보이는데, 이 그림은 **읽는 동안 옆에 있어야** 「지금 이 사람이
+            누구 편이지」에 답이 된다. 옵시디언 오른쪽 사이드의 그래프뷰 자리다.
+            날개가 화면에 붙어 있어 본문을 내려도 안 사라진다.
+          */}
+          <PointGraph point={n} entities={ENTITIES} links={LINKS} />
+        </>
       }
     >
       <Breadcrumbs variant="supporting">
@@ -95,8 +105,6 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
           <Markdown>{s.md}</Markdown>
         </Stack>
       ))}
-
-      <PointGraph point={n} entities={ENTITIES} links={LINKS} />
 
       <Faq items={faqFor(href)} />
 

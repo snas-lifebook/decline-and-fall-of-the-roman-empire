@@ -1,4 +1,4 @@
-import { Stack, Text, Heading, Collapsible } from '@astryxdesign/core'
+import { Stack, Text, Collapsible } from '@astryxdesign/core'
 import { EgoGraph, type GraphNode, type GraphEdge } from './EgoGraph'
 import { pickNodes } from '../lib/graph/size'
 import { entityHref, type Neighbor, type CoOccur } from '../lib/entity'
@@ -7,10 +7,9 @@ import type { Entity } from '../lib/ontology'
 /**
  * 객체 한 장의 우측 날개 — 「이건 무엇과 이어져 있나」.
  *
- * 두 칸이 이 순서로 온다. 관계 목록 → 같은 포인트에 함께 나온 것.
- * **목록이 먼저다.** 그림은 보조지 유일한 표현이 아니고, 이름이 Ctrl+F에
- * 잡혀야 한다. 그림 자체는 `EntityGraph`가 본문 칸에 그린다 — 날개(220px)에서는
- * 노드 55개가 뭉쳐 라벨이 안 읽혔다.
+ * 세 칸이 이 순서로 온다. 관계망 그림 → 관계 목록 → 같은 포인트에 함께 나온 것.
+ * **그림 밑에 늘 목록이 있다.** 그림은 보조지 유일한 표현이 아니고, 이름이
+ * Ctrl+F에 잡혀야 한다 — 헌장 3절 예외의 조건이 그것이다.
  *
  * **관계가 0이면 「연결」과 그림을 아예 안 그린다.** 실측상 객체 217개(33.7%)가
  * 관계 0이다. 그 3분의 1에게 빈 상자를 보여주면 사이트가 고장 난 것처럼 보인다.
@@ -22,9 +21,12 @@ import type { Entity } from '../lib/ontology'
 
 /**
  * 그림이 이보다 커지면 글자가 겹쳐서 아무것도 안 읽힌다. 로마는 관계만 64건이다.
- * 40으로 뒀다가 18로 내렸다 — 폭 760px에서 40개는 어떤 배치를 써도 글자가 17px이 된다.
+ *
+ * 40 → 18 → 10으로 내려왔다. 마지막은 그림을 **날개(300px)로 옮기면서**다.
+ * 보이는 글씨 크기는 `글씨크기 ÷ viewBox폭 × 칸너비`라, 칸이 760에서 300으로
+ * 줄면 개수를 같이 줄이지 않고는 못 읽는다.
  */
-const MAX_NODES = 18
+const MAX_NODES = 10
 /** 목록이 이보다 길면 날개가 본문보다 길어진다. 나머지는 접는다 */
 const SHOWN = 8
 
@@ -43,25 +45,30 @@ function NeighborRow({ n }: { n: Neighbor }) {
 }
 
 /**
- * 관계망 그림. **우측 날개가 아니라 본문 칸에 그린다.**
+ * 관계망 그림. **우측 날개 맨 위** (River 요청, 2026-08-16).
  *
- * 처음에는 날개(220px)에 뒀는데 노드가 55개면 라벨이 뭉쳐 읽히지 않았다(카이사르
- * 실측). 날개에는 같은 내용이 **글로** 남아 있으므로(연결 목록) 그림은 읽히는 자리로
- * 옮긴다 — 헌장 3절 예외의 조건은 「관계 목록이 정적 HTML로 남을 것」이지
- * 「그림이 날개에 있을 것」이 아니다.
+ * 한 번 왕복했다. 처음엔 날개(220px)에 뒀는데 노드 55개가 뭉쳐 안 읽혀 본문
+ * 칸으로 뺐고, 이번에 다시 날개로 왔다. **이번엔 되는 이유가 있다** — 그때는
+ * 개수도 배치도 그대로 두고 자리만 옮겼고, 지금은 라벨 폭 기준 충돌(`lib/graph/size`)로
+ * 겹침을 없앤 뒤 개수를 10으로 맞췄다. 자리를 옮길 때 **같이 줄여야 하는 것**이
+ * 개수라는 걸 그때는 몰랐다.
+ *
+ * 읽기 화면의 `PointGraph`와 같은 자리·같은 규칙이다.
  */
 export function EntityGraph({ e, nbrs, co }: { e: Entity; nbrs: Neighbor[]; co: CoOccur[] }) {
   const { nodes, edges, dropped } = graphData(e, nbrs, co)
   if (!nbrs.length) return null
   return (
-    <Stack direction="vertical" gap={1.5}>
-      <Heading level={2}>관계망</Heading>
+    <Stack direction="vertical" gap={1}>
+      <Text size="sm" weight="semibold">
+        관계망
+      </Text>
       <EgoGraph nodes={nodes} edges={edges} />
       {/* 범례는 그림 바로 아래 항상 있다 (DESIGN P7) */}
       <Text size="sm" color="secondary">
         실선 관계 · 점선 같은 포인트에 함께 나옴. 점을 끌어 옮기고 휠로 확대할 수 있습니다.
         {/* 잘라놓고 말 안 하면 다 그린 것처럼 읽힌다 */}
-        {dropped ? ` 연결이 많은 것부터 ${nodes.length}개만 그렸고 ${dropped}개는 옆 목록에 있습니다.` : ''}
+        {dropped ? ` 연결이 많은 것부터 ${nodes.length}개만 그렸고 ${dropped}개는 아래 목록에 있습니다.` : ''}
       </Text>
     </Stack>
   )

@@ -163,7 +163,19 @@ export default async function ObjectPage({
   const family = familyOf(e.id)
 
   return (
-    <Shell path={href} where={`객체 ${e.name}`} aside={<EntityAside nbrs={nbrs} co={co} />}>
+    <Shell
+      path={href}
+      where={`객체 ${e.name}`}
+      asideWidth={300}
+      // 관계망도 날개다 (River 요청, 2026-08-16). 읽기 화면과 같은 자리에 둔다 —
+      // 화면마다 같은 것이 같은 자리에 있는 것이 「퀄리티」의 정체다
+      aside={
+        <>
+          <EntityGraph e={e} nbrs={nbrs} co={co} />
+          <EntityAside nbrs={nbrs} co={co} />
+        </>
+      }
+    >
       <Breadcrumbs variant="supporting">
         <BreadcrumbItem href="/">자료실</BreadcrumbItem>
         {crumbs.map((c) => (
@@ -231,8 +243,6 @@ export default async function ObjectPage({
           </Text>
         </Stack>
       ) : null}
-
-      <EntityGraph e={e} nbrs={nbrs} co={co} />
 
       {attrs.length ? (
         <Stack direction="vertical" gap={2} as="section">
