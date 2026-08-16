@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import { Stack, Grid, Heading, Text, ClickableCard, Divider } from '@astryxdesign/core'
+import { Stack, Grid, Heading, Text, ClickableCard } from '@astryxdesign/core'
 import { Shell } from '../components/Shell'
-import { LinkCards } from '../components/LinkCards'
 import { BookIcon, SearchIcon, DownloadIcon, SparkIcon, FlagIcon } from '../components/icons'
 
 /**
@@ -87,20 +85,15 @@ export default function Home() {
         </Grid>
 
         {/*
-         * 모아둔 링크를 맥락에서 다시 만나게 한다. 「작업 공간」 페이지에 있는 것과
-         * **같은 레지스트리에서 같은 id로** 나오므로, 사람이 "아 이게 거기 있던 그
-         * 시트구나"를 안다 (2026-08-16 River 요구).
-         */}
-        <Stack direction="vertical" gap={3}>
-          <Divider />
-          <Text size="sm" color="secondary">
-            바로 가는 곳
-          </Text>
-          <LinkCards ids={['drive-01', 'sheet', 'repo']} />
-          <Text size="sm" color="secondary">
-            나머지는 <Link href="/start/links">작업 공간</Link>에 다 모여 있습니다.
-          </Text>
-        </Stack>
+          「바로 가는 곳」 카드 줄을 여기서 뺐다 (2026-08-17).
+
+          푸터가 이제 **전 화면에** 「바깥 자리」 칸으로 같은 링크를 아이콘까지
+          달아 놓는다. 허브에만 따로 두면 같은 링크가 한 화면에 두 번 나오고,
+          카드 줄과 푸터가 구분선 하나를 사이에 두고 붙어 있어서 **아래쪽이
+          통째로 「뭔가 잔뜩 있는 곳」으로 뭉개졌다** — River가 지적한 자리다.
+
+          한 종류는 한 자리에 둔다. 허브는 갈림길 다섯만 남는다.
+        */}
       </Stack>
     </Shell>
   )
