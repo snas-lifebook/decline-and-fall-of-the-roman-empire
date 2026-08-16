@@ -1,7 +1,11 @@
 import { Stack, Heading, Text } from '@astryxdesign/core'
 import { EgoGraph, type GraphNode, type GraphEdge } from './EgoGraph'
+import { pickNodes } from '../lib/graph/size'
 import { entityHref } from '../lib/entity'
 import type { Entity, Link } from '../lib/ontology'
+
+/** 이보다 많이 그리면 글자가 17px이 된다. 어떤 배치를 써도 그렇다 */
+const MAX = 18
 
 /**
  * 이 포인트 안의 관계망.
@@ -29,25 +33,30 @@ export function PointGraph({
   const byId = new Map(entities.map((e) => [e.id, e]))
   const ids = new Set(here.flatMap((l) => [l.from, l.to]))
 
-  const nodes: GraphNode[] = [...ids].flatMap((id) => {
+  const allNodes: GraphNode[] = [...ids].flatMap((id) => {
     const e = byId.get(id)
     return e
       ? [{ id, label: e.name, href: entityHref({ id, type: e.type, name: e.name }), kind: 'rel' as const }]
       : []
   })
-  const edges: GraphEdge[] = here
+  const allEdges: GraphEdge[] = here
     .filter((l) => byId.has(l.from) && byId.has(l.to))
     .map((l) => ({ source: l.from, target: l.to, kind: 'rel' as const }))
+
+  // 포인트 13은 관계가 64건이다. 다 그리면 글자가 겹쳐 아무것도 안 읽힌다
+  const { nodes, edges, dropped } = pickNodes(allNodes, allEdges, MAX)
 
   return (
     <Stack direction="vertical" gap={1.5} as="section">
       <Heading level={2}>이 포인트의 관계망</Heading>
       <Text color="secondary">
-        이 대목에 나온 관계 {edges.length}건입니다. 점을 끌어 옮기고 휠로 확대할 수 있습니다.
+        이 대목에 나온 관계 {allEdges.length}건입니다. 점을 끌어 옮기고 휠로 확대할 수 있습니다.
       </Text>
       <EgoGraph nodes={nodes} edges={edges} />
       <Text size="sm" color="secondary">
         관계가 달린 것만 그립니다. 이름만 나온 인물·지명은 아래 목록에 있습니다.
+        {/* 잘라놓고 말 안 하면 다 그린 것처럼 읽힌다 */}
+        {dropped ? ` 얽힌 갈래가 많은 ${nodes.length}개만 그렸고 ${dropped}개는 아래 목록에만 있습니다.` : ''}
       </Text>
     </Stack>
   )

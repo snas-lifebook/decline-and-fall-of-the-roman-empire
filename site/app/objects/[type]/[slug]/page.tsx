@@ -15,6 +15,7 @@ import { EntityAside, EntityGraph } from '../../../../components/EntityAside'
 import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
 import { entityIndex, entitySlug, neighbors, coOccurring } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
+import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
 import { familyOf } from '../../../../lib/family/build'
 
@@ -105,30 +106,6 @@ const ATTR_KO: Record<string, string> = {
 
 const pad = (n: number) => String(n).padStart(2, '0')
 
-/**
- * 자주 나오는 역할·칭호의 한국어. **사전을 통째로 지어내지 않는다** — `role`은
- * 149종이고 데이터 자체에 한영이 섞여 있다(`emperor` 33건 · `황제` 14건). 그건
- * 화면이 아니라 데이터에서 풀 문제라 흔한 것만 덮고 나머지는 원문을 그대로 낸다.
- */
-const VALUE_KO: Record<string, string> = {
-  emperor: '황제',
-  empress: '황후',
-  general: '장군',
-  king: '왕',
-  queen: '왕비',
-  consul: '집정관',
-  prince: '왕자',
-  princess: '공주',
-  senator: '원로원 의원',
-  philosopher: '철학자',
-  historian: '역사가',
-  bishop: '주교',
-  noblewoman: '귀족 여성',
-  nobleman: '귀족',
-  soldier: '군인',
-  politician: '정치인',
-  'roman province': '로마 속주',
-}
 
 /** 기원전은 음수로 들어 있다 (AGENTS 불변식 3). 화면에는 사람이 읽는 꼴로 낸다 */
 const yearText = (n: number) => (n < 0 ? `기원전 ${-n}년` : `${n}년`)
@@ -139,7 +116,7 @@ const attrText = (k: string, v: string | number | string[]): string => {
   if (Array.isArray(v)) return v.map((x) => attrText(k, x)).join(', ')
   // 연도가 숫자로도 문자열로도 들어 있다(`-100`과 `"-100"`이 섞여 있다)
   if (YEAR_KEYS.has(k) && /^-?\d+$/.test(String(v))) return yearText(Number(v))
-  return typeof v === 'number' ? String(v) : (VALUE_KO[v.toLowerCase()] ?? v)
+  return typeof v === 'number' ? String(v) : roleKo(v)
 }
 
 export function generateStaticParams() {

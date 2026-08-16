@@ -33,11 +33,12 @@ export function FamilyTree({ family, focus }: { family: Family; focus?: string }
 
   return (
     <Stack direction="vertical" gap={2}>
-      {/* 범례는 그림 안에 항상 보인다 (DESIGN P7). 색·선으로 뜻을 나르는 화면이다 */}
-      <div
-        style={{ overflowX: 'auto', maxWidth: '100%' }}
-        dangerouslySetInnerHTML={{ __html: svg }}
-      />
+      {/*
+        범례는 그림 아래 항상 보인다 (DESIGN P7). 색·선으로 뜻을 나르는 화면이다.
+        SVG가 `width="100%"`라 칸에 맞춰 줄어든다 — 앞 판은 폭이 픽셀로 박혀 있어
+        아우구스투스 가문(1201px)이 본문 칸(1100px) 밖으로 잘려 나갔다
+      */}
+      <div dangerouslySetInnerHTML={{ __html: svg }} />
       <Text size="sm" color="secondary">
         청록 테두리 남 · 보라 테두리 여 · 무색 미상. 가는 선 혈연·혼인 · 굵은 점선 제위 계승.
         이름을 누르면 그 사람 화면으로 갑니다.

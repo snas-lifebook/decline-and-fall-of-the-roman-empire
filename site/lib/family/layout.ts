@@ -1,4 +1,5 @@
 import dagre from '@dagrejs/dagre'
+import { textWidth, HANGUL_ADVANCE } from '../text/width'
 
 /**
  * 가계도 좌표를 빌드 시점에 계산한다. React도 DOM도 모른다.
@@ -61,7 +62,7 @@ export type LayoutOptions = {
 
 const DEFAULTS = {
   fontSize: 15,
-  hangulAdvance: 0.865,
+  hangulAdvance: HANGUL_ADVANCE,
   padX: 14,
   nodeHeight: 44,
   noteHeight: 14,
@@ -71,18 +72,8 @@ const DEFAULTS = {
   margin: 16,
 } as const
 
-const isHangul = (c: string) => c >= '가' && c <= '힣'
-
-/**
- * 한글 라벨 폭. 한글 음절은 advance가 균일해서(실측) 빌드 시점에 정확히 나온다.
- * 라틴 가변폭보다 오히려 쉽다.
- */
-export function textWidth(s: string, fontSize: number, hangulAdvance: number = DEFAULTS.hangulAdvance): number {
-  return [...s].reduce((w, c) => {
-    const adv = isHangul(c) ? hangulAdvance : /[0-9]/.test(c) ? 0.5 : /[A-Za-z]/.test(c) ? 0.55 : 0.35
-    return w + fontSize * adv
-  }, 0)
-}
+/** 자는 `lib/text/width.ts`가 갖는다 — 관계망도 같은 것을 쓴다 */
+export { textWidth }
 
 const unionId = (a: string, b: string) => `union:${[a, b].sort().join('+')}`
 

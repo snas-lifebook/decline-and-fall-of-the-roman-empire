@@ -1,5 +1,6 @@
 import { Stack, Text, Heading, Collapsible } from '@astryxdesign/core'
 import { EgoGraph, type GraphNode, type GraphEdge } from './EgoGraph'
+import { pickNodes } from '../lib/graph/size'
 import { entityHref, type Neighbor, type CoOccur } from '../lib/entity'
 import type { Entity } from '../lib/ontology'
 
@@ -19,8 +20,11 @@ import type { Entity } from '../lib/ontology'
  * 한 줄로 못 박는다 (DESIGN P7).
  */
 
-/** 그림이 이보다 커지면 글자가 겹쳐서 아무것도 안 읽힌다. 로마는 관계만 64건이다 */
-const MAX_NODES = 40
+/**
+ * 그림이 이보다 커지면 글자가 겹쳐서 아무것도 안 읽힌다. 로마는 관계만 64건이다.
+ * 40으로 뒀다가 18로 내렸다 — 폭 760px에서 40개는 어떤 배치를 써도 글자가 17px이 된다.
+ */
+const MAX_NODES = 18
 /** 목록이 이보다 길면 날개가 본문보다 길어진다. 나머지는 접는다 */
 const SHOWN = 8
 
@@ -47,7 +51,7 @@ function NeighborRow({ n }: { n: Neighbor }) {
  * 「그림이 날개에 있을 것」이 아니다.
  */
 export function EntityGraph({ e, nbrs, co }: { e: Entity; nbrs: Neighbor[]; co: CoOccur[] }) {
-  const { nodes, edges } = graphData(e, nbrs, co)
+  const { nodes, edges, dropped } = graphData(e, nbrs, co)
   if (!nbrs.length) return null
   return (
     <Stack direction="vertical" gap={1.5}>
@@ -56,6 +60,8 @@ export function EntityGraph({ e, nbrs, co }: { e: Entity; nbrs: Neighbor[]; co: 
       {/* 범례는 그림 바로 아래 항상 있다 (DESIGN P7) */}
       <Text size="sm" color="secondary">
         실선 관계 · 점선 같은 포인트에 함께 나옴. 점을 끌어 옮기고 휠로 확대할 수 있습니다.
+        {/* 잘라놓고 말 안 하면 다 그린 것처럼 읽힌다 */}
+        {dropped ? ` 연결이 많은 것부터 ${nodes.length}개만 그렸고 ${dropped}개는 옆 목록에 있습니다.` : ''}
       </Text>
     </Stack>
   )
@@ -79,13 +85,15 @@ function graphData(e: Entity, nbrs: Neighbor[], co: CoOccur[]) {
         .map((c) => ({ id: c.ref.id, label: c.ref.name, href: entityHref(c.ref), kind: 'co' }))
     : []
 
-  return {
-    nodes: [{ id: e.id, label: e.name, kind: 'center' } as GraphNode, ...relNodes, ...coNodes],
-    edges: [
+  // 관계가 40건 넘는 객체(로마 64건)는 여기서 잘린다. 자른 개수는 화면이 밝힌다
+  return pickNodes(
+    [{ id: e.id, label: e.name, kind: 'center' } as GraphNode, ...relNodes, ...coNodes],
+    [
       ...relNodes.map((n): GraphEdge => ({ source: e.id, target: n.id, kind: 'rel' })),
       ...coNodes.map((n): GraphEdge => ({ source: e.id, target: n.id, kind: 'co' })),
     ],
-  }
+    MAX_NODES,
+  )
 }
 
 export function EntityAside({ nbrs, co }: { nbrs: Neighbor[]; co: CoOccur[] }) {

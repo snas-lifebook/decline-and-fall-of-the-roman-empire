@@ -1,5 +1,6 @@
 import { loadEntities, loadLinks, type Link } from '../ontology'
 import { entitySlug } from '../entity'
+import { roleKo } from '../vocab'
 import type { FamilyPerson, FamilyLink, FamilyRel } from './layout'
 
 /**
@@ -65,7 +66,8 @@ function build(): Family[] {
     const set = new Set(ids)
     const people: FamilyPerson[] = ids.flatMap((id) => {
       const e = byId.get(id)
-      return e ? [{ id, label: e.name, note: e.attrs?.role ? String(e.attrs.role) : undefined }] : []
+      // 상자 밑에 붙는 칭호. 한국어로 낸다 — 화면이 한국어인데 여기만 `general`이었다
+      return e ? [{ id, label: e.name, note: e.attrs?.role ? roleKo(String(e.attrs.role)) : undefined }] : []
     })
     // 그릴 선은 계승까지. 가문을 **잇는** 것과 가문 안에서 **그리는** 것이 다르다
     const fam: FamilyLink[] = links

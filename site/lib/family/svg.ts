@@ -52,7 +52,18 @@ export function renderFamilySvg(layout: FamilyLayout, opts: SvgOptions = {}): st
     })
     .join('\n')
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${round(layout.width)} ${round(layout.height)}" width="${round(layout.width)}" height="${round(layout.height)}" role="img">
+  /*
+   * 폭을 픽셀로 박지 않는다. 아우구스투스 가문이 1201px인데 본문 칸이 1100px이라
+   * **오른쪽이 잘려 나갔다.** 스크롤 상자 안에 있긴 했지만 맥은 스크롤바를 숨기므로
+   * 읽는 사람에게는 그냥 고장으로 보인다.
+   *
+   * `width="100%"` + `max-width: 자연폭`이면 칸이 좁으면 줄고 넓어도 원래보다는
+   * 안 커진다. viewBox가 비율을 지키므로 height는 `auto`로 따라온다.
+   *
+   * ponytail: 자연폭이 칸의 두 배를 넘으면 글자가 작아진다. 지금 여섯 가문 중
+   * 그런 것은 없다(최대 1201 대 1100). 생기면 그때 세대별로 접는다.
+   */
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${round(layout.width)} ${round(layout.height)}" width="100%" style="max-width:${round(layout.width)}px;height:auto" role="img">
 <style>
   .person rect { fill: #fff; stroke: #b8b8b8; stroke-width: 1; }
   /* 채널 배정은 family/족보_표기_설계.md를 그대로 승계한다. 새로 정하지 않는다 */
