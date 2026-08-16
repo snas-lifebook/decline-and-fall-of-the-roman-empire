@@ -42,7 +42,7 @@ describe('빵부스러기', () => {
   })
 
   it('섹션 자신은 한 칸이다', () => {
-    expect(navCrumbs('/use').map((n) => n.href)).toEqual(['/use'])
+    expect(navCrumbs('/download').map((n) => n.href)).toEqual(['/download'])
   })
 
   it('없는 주소는 빈 배열이다 — 던지지 않는다', () => {
@@ -69,6 +69,18 @@ describe('이전·다음', () => {
   it('섹션 끝에서 다음 섹션으로 넘어간다', () => {
     expect(navSteps('/start/links').next).toBeUndefined()
     expect(navSteps(`/read/point/${POINT_COUNT}`).next?.href).toBe('/objects')
+  })
+})
+
+describe('활용하기 — 네 장', () => {
+  it('재료가 먼저다. 안 주면 AI가 지어낸다', () => {
+    const kids = navFind('/use')?.children ?? []
+    expect(kids.map((c) => c.href)).toEqual([
+      '/use/data',
+      '/use/recipes',
+      '/use/skills',
+      '/use/pitfalls',
+    ])
   })
 })
 

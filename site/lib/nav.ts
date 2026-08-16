@@ -20,6 +20,20 @@ export type NavNode = {
   children?: NavNode[]
 }
 
+/**
+ * 활용하기 네 장.
+ *
+ * 순서가 곧 논리다 — **재료를 먼저 주고**(안 주면 AI가 지어낸다) 사례를 보고,
+ * 스킬을 알고, 함정을 안다. 앞 판은 표 두 개에 프롬프트 여덟 개를 늘어놓았는데
+ * 그 여덟이 전부 로컬 파일을 요구해 웹에서는 작동하지 않았다.
+ */
+const USE: [string, string][] = [
+  ['/use/data', '무엇을 AI에 주나'],
+  ['/use/recipes', '우수 사례'],
+  ['/use/skills', '스킬 여덟'],
+  ['/use/pitfalls', '그냥 시키면 틀리는 것'],
+]
+
 /** 시작하기 여섯 장. 순서가 곧 초보자가 밟는 순서다 */
 const START: [string, string][] = [
   ['/start/install', '옵시디언 설치하고 자료 받기'],
@@ -63,7 +77,12 @@ function build(): NavNode[] {
         })),
     },
     { href: '/download', title: '가져가기', ready: true },
-    { href: '/use', title: '활용하기', ready: true },
+    {
+      href: '/use',
+      title: '활용하기',
+      ready: true,
+      children: USE.map(([href, title]) => ({ href, title, ready: true })),
+    },
     {
       href: '/start',
       title: '시작하기',
