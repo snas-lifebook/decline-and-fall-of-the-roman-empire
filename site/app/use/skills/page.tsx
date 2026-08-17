@@ -35,7 +35,7 @@ export default function Skills() {
       <Banner
         status="warning"
         title="여덟 중 일곱은 자료를 받아두어야 돌아갑니다"
-        description="인물·관계 파일을 AI가 직접 열어 읽어야 하는 절차라, 파일 없이 문장만 붙여넣으면 AI가 읽을 것이 없는 채로 그럴듯한 답을 지어냅니다."
+        description="인물·관계 파일을 AI가 직접 열어 읽어야 하는 절차입니다. 파일 없이 문장만 붙여넣으면 읽을 것이 없으니 또 지어냅니다."
       />
 
       {SKILL_TIERS.map((t) => {
@@ -72,7 +72,7 @@ export default function Skills() {
           <a href={linkById('repo-skills').href} target="_blank" rel="noreferrer">
             스킬 원문 여덟 벌
           </a>
-          이 깃허브에 있습니다. 「하지 말 것」이 이 절차서들의 존재 이유입니다.
+          이 깃허브에 있습니다. 「하지 말 것」 때문에 만든 절차서들입니다.
         </Text>
       </Stack>
 

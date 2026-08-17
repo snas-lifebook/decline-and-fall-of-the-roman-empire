@@ -1,37 +1,68 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest'
-import { feedbackDraft, telegramShareUrl } from './feedback'
+import { MAX_BODY, RATE_MAX, feedbackSchema, isFlooding } from './feedback'
 
-describe('한 줄 남기기 — 초안 문장', () => {
-  it('어느 화면인지가 이미 적혀 있다', () => {
-    // 사람은 하고 싶은 말만 쓰면 된다. 맥락은 폼 필드가 아니라 문장이 나른다.
-    expect(feedbackDraft({ where: '포인트 03 인물 목록' })).toContain('포인트 03 인물 목록')
+/**
+ * 이 파일이 지키는 것은 하나다 — **어느 화면에서 남겼는지 모르는 의견은 안 받는다.**
+ * 그게 이 기능의 존재 이유이므로 주소가 없으면 통과시키지 않는다.
+ */
+
+const ok = {
+  path: '/objects/person/한니발',
+  where: '객체 한니발',
+  body: '형제 이름이 둘 다 하스드루발로 나옵니다',
+}
+
+describe('한 줄 남기기 — 받을 것과 안 받을 것', () => {
+  it('화면을 아는 의견은 받는다', () => {
+    const r = feedbackSchema.safeParse(ok)
+    expect(r.success).toBe(true)
+    expect(r.success && r.data.path).toBe('/objects/person/한니발')
   })
 
-  it('객체를 집어서 남기면 그것도 실린다', () => {
-    const d = feedbackDraft({ where: '찾아보기', subject: '하스드루발 (한니발의 동생)' })
-    expect(d).toContain('하스드루발 (한니발의 동생)')
+  it('주소가 없으면 안 받는다 — 어느 화면인지 모르면 고칠 수가 없다', () => {
+    expect(feedbackSchema.safeParse({ ...ok, path: '' }).success).toBe(false)
+    expect(feedbackSchema.safeParse({ where: ok.where, body: ok.body }).success).toBe(false)
   })
 
-  it('사람이 쓸 자리를 비워둔다', () => {
-    expect(feedbackDraft({ where: '허브' }).trimEnd().endsWith('—')).toBe(false)
+  it('화면 이름도 같이 받는다 — 주소만 있으면 표를 훑을 때 안 읽힌다', () => {
+    expect(feedbackSchema.safeParse({ ...ok, where: '' }).success).toBe(false)
+  })
+
+  it('빈 말은 안 받는다 — 공백만 친 것도 빈 말이다', () => {
+    expect(feedbackSchema.safeParse({ ...ok, body: '' }).success).toBe(false)
+    expect(feedbackSchema.safeParse({ ...ok, body: '   \n  ' }).success).toBe(false)
+  })
+
+  it('앞뒤 공백은 털어서 담는다', () => {
+    const r = feedbackSchema.safeParse({ ...ok, body: '  띄어쓰기가 틀렸습니다  ' })
+    expect(r.success && r.data.body).toBe('띄어쓰기가 틀렸습니다')
+  })
+
+  it('길이에 천장이 있다', () => {
+    expect(feedbackSchema.safeParse({ ...ok, body: 'ㄱ'.repeat(MAX_BODY) }).success).toBe(true)
+    expect(feedbackSchema.safeParse({ ...ok, body: 'ㄱ'.repeat(MAX_BODY + 1) }).success).toBe(false)
+  })
+
+  it('벌통이 채워져 있으면 사람이 아니다', () => {
+    expect(feedbackSchema.safeParse({ ...ok, trap: '' }).success).toBe(true)
+    expect(feedbackSchema.safeParse({ ...ok, trap: 'spam@example.com' }).success).toBe(false)
+  })
+
+  it('무엇에 대한 것인지는 없어도 된다', () => {
+    expect(feedbackSchema.safeParse({ ...ok, subject: undefined }).success).toBe(true)
+    expect(feedbackSchema.safeParse({ ...ok, subject: '하스드루발' }).success).toBe(true)
   })
 })
 
-describe('텔레그램 보내기', () => {
-  it('공유 주소로 만든다 — 봇도 사용자명도 필요 없다', () => {
-    expect(telegramShareUrl('안녕').startsWith('https://t.me/share/url?')).toBe(true)
+describe('도배 판정', () => {
+  it('창 안에서 정해진 수를 채우면 그때부터 막는다', () => {
+    expect(isFlooding(RATE_MAX - 1)).toBe(false)
+    expect(isFlooding(RATE_MAX)).toBe(true)
   })
 
-  it('한글을 인코딩한다', () => {
-    const url = telegramShareUrl('가나다')
-    expect(url).toContain(encodeURIComponent('가나다'))
-    expect(url).not.toContain('가나다')
-  })
-
-  it('줄바꿈과 특수문자가 깨지지 않는다', () => {
-    const text = '포인트 03에서\n"하스드루발"이 둘 & 헷갈립니다'
-    const url = telegramShareUrl(text)
-    expect(decodeURIComponent(new URL(url).searchParams.get('text')!)).toBe(text)
+  it('두세 줄 이어 남기는 것은 안 막는다 — 그건 도배가 아니라 정상이다', () => {
+    expect(RATE_MAX).toBeGreaterThan(3)
+    expect(isFlooding(3)).toBe(false)
   })
 })

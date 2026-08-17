@@ -26,7 +26,7 @@ export default function Recipes() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>우수 사례</Heading>
         <Text size="lg" color="secondary">
-          실제로 해서 결과가 나온 것만 모았습니다. 지금 상황을 고르고 그대로 따라 하시면 됩니다.
+          실제로 해서 결과가 나온 것만 모았습니다. 지금 상황에 맞는 것을 골라 그대로 따라 하세요.
         </Text>
       </Stack>
 
@@ -35,7 +35,7 @@ export default function Recipes() {
       <Banner
         status="info"
         title="재료를 안 주면 AI가 지어냅니다"
-        description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 재료는 셋 중 하나입니다."
+        description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 붙여넣을 것은 아래 셋 중 하나입니다."
       />
 
       {/*
@@ -73,8 +73,8 @@ export default function Recipes() {
           인물이 나오면 객체 페이지로 갈라 보고 → 의심되는 서술은 사료와 대조합니다.
         </Text>
         <Text size="sm" color="secondary">
-          <Link href="/use/pitfalls">그냥 시키면 틀리는 것</Link>을 먼저 훑어두시면 각 단계에서 무엇을 의심할지
-          알 수 있습니다.
+          <Link href="/use/pitfalls">그냥 시키면 틀리는 것</Link>을 먼저 훑어 두시면 어느 대목에서 무엇을
+          의심해야 하는지 보입니다.
         </Text>
       </Stack>
 

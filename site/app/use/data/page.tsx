@@ -5,7 +5,11 @@ import { MaterialCards } from '../../../components/MaterialCards'
 import { DataShape } from '../../../components/DataShape'
 import { Faq } from '../../../components/Faq'
 import { faqFor } from '../../../lib/faq'
+import { RECIPES } from '../../../lib/recipes'
 import { pageMeta } from '../../../lib/meta'
+
+/** 손으로 「대부분」이라고 적지 않는다. 사례가 늘면 이 숫자도 같이 는다 */
+const WEB_ONLY = RECIPES.filter((r) => r.needs === 'web').length
 
 /**
  * 무엇을 AI에 주나 — 활용하기의 1번이고, 나머지 셋이 전부 여기에 기댄다.
@@ -34,7 +38,7 @@ export default function Data() {
       <Banner
         status="warning"
         title="「포인트 3 정리해줘」라고만 하면 우리 책 내용이 안 나옵니다"
-        description="그럴듯한 글은 나오지만 AI가 원래 알던 것으로 채운 것입니다. 재료를 먼저 주고, 그다음에 시킵니다."
+        description="그럴듯한 글은 나옵니다. 다만 AI가 원래 알던 것으로 채운 글입니다. 재료를 먼저 주고 그다음에 시키세요."
       />
 
       <Stack direction="vertical" gap={3} as="section">
@@ -46,7 +50,7 @@ export default function Data() {
         </Stack>
         <MaterialCards />
         <Text color="secondary">
-          포인트 한 장이 약 5천 토큰입니다. 어느 AI 창에도 그냥 들어갑니다. 잘라 붙이실 필요가
+          포인트 한 장이 5천 토큰쯤 됩니다. 어느 AI 창에나 한 번에 들어가니 잘라 붙이실 일은
           없습니다.
         </Text>
       </Stack>
@@ -67,7 +71,7 @@ export default function Data() {
       <Banner
         status="info"
         title="관계가 하나도 없는 객체가 217개, 전체의 3분의 1입니다"
-        description="대부분 지명입니다. 자료가 부실해서가 아니라 책이 그 지명에 대해 관계를 말하지 않았기 때문입니다. 그런 화면에는 대신 「같은 포인트에 함께 나온」 목록이 뜨는데, 그건 관계가 아니라 같은 대목에 함께 등장했다는 사실입니다. AI에게 줄 때도 그 차이를 지켜주세요."
+        description="대부분 지명입니다. 자료가 부실해서가 아니라 책이 그 지명에 대해 관계를 말하지 않았기 때문입니다. 그런 화면에는 대신 「같은 포인트에 함께 나온」 목록이 뜨는데, 그건 관계가 아니라 같은 대목에 함께 등장했다는 사실입니다. AI에게 줄 때도 둘을 섞지 마세요."
       />
 
       <Divider />
@@ -80,8 +84,8 @@ export default function Data() {
           <Link href="/use/skills">스킬 여덟</Link> 중 웹에서 안 되던 것들이 열립니다.
         </Text>
         <Text size="sm" color="secondary">
-          급하지 않으시면 안 하셔도 됩니다. 위 재료 셋만으로도{' '}
-          <Link href="/use/recipes">우수 사례</Link>의 대부분이 됩니다.
+          급하지 않으시면 안 하셔도 됩니다. 위 재료 셋만으로 <Link href="/use/recipes">우수 사례</Link>{' '}
+          {RECIPES.length}건 중 {WEB_ONLY}건이 됩니다.
         </Text>
       </Stack>
 

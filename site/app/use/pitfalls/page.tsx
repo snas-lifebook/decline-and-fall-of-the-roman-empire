@@ -31,7 +31,7 @@ export default function Pitfalls() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>그냥 시키면 틀리는 것</Heading>
         <Text size="lg" color="secondary">
-          이 자료에서 AI가 실제로 틀린 자리를 숫자로 적었습니다. 여덟 군데입니다.
+          AI가 이 자료에서 실제로 틀린 자리 여덟 군데입니다.
         </Text>
       </Stack>
 
@@ -40,7 +40,7 @@ export default function Pitfalls() {
       <Banner
         status="info"
         title="일반론이 아닙니다"
-        description="아래는 전부 이 자료를 다루다 실제로 밟은 것이고, 몇 건이었는지까지 세어 두었습니다. 어디가 미끄러운지 알고 시키시는 것과 모르고 시키시는 것은 결과가 다릅니다."
+        description="아래는 전부 이 자료를 다루다 실제로 밟은 것입니다. 몇 건이었는지까지 세어 뒀습니다. 어디가 미끄러운지 알고 시키면 덜 틀립니다."
       />
 
       {pitfallsByCategory().map(({ category, items }) => (

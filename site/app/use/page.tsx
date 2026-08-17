@@ -24,13 +24,13 @@ import { pageMeta } from '../../lib/meta'
  */
 const ABOUT: Record<string, string> = {
   '/use/data':
-    '재료를 먼저 줘야 합니다. 안 주면 AI는 아는 척하고 지어냅니다. 재료 세 가지와 각각의 크기.',
+    '안 주면 AI가 아는 척하고 지어냅니다. 줄 수 있는 재료 세 가지와 각각의 크기를 적어 뒀습니다.',
   '/use/recipes':
     '실제로 해서 결과가 나온 것만 모았습니다. 상황 넷에 사례 여덟, 프롬프트는 복사해서 씁니다.',
   '/use/skills':
     'AI에게 시킬 일이 절차서로 적혀 있습니다. 여덟 벌을 지금 바로 되는 것과 자료가 필요한 것으로 갈라 뒀습니다.',
   '/use/pitfalls':
-    '이 자료에서 AI가 실제로 틀린 자리 여덟 군데입니다. 몇 건이었는지 숫자까지 적었습니다.',
+    '이 자료에서 AI가 실제로 틀린 자리 여덟 군데입니다. 각각 몇 건이었는지까지 세어 뒀습니다.',
 }
 
 export const metadata = pageMeta('활용하기')
@@ -41,7 +41,7 @@ export default function Use() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>활용하기</Heading>
         <Text size="lg" color="secondary">
-          이 자료를 AI에게 제대로 물리는 법입니다. 쓰시던 ChatGPT나 Claude 그대로 쓰시면 됩니다.
+          쓰시던 ChatGPT나 Claude에 이 자료를 물리는 법입니다. 새로 깔거나 가입할 것은 없습니다.
         </Text>
       </Stack>
 
@@ -50,7 +50,7 @@ export default function Use() {
       <Banner
         status="warning"
         title="그냥 물어보면 AI가 지어냅니다"
-        description="「로마제국쇠망사 포인트 3 정리해줘」라고만 하면 그럴듯한 글이 나오지만 우리 책 내용이 아닙니다. 재료를 먼저 주는 것이 이 페이지의 요지입니다."
+        description="「로마제국쇠망사 포인트 3 정리해줘」라고만 하면 그럴듯한 글이 나옵니다. 우리 책 내용은 아닙니다. 그래서 재료부터 줍니다."
       />
 
       <List listStyle="decimal" density="spacious" hasDividers>

@@ -10,7 +10,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "validate": "vitest run lib/ontology.test.ts"
+    "validate": "vitest run lib/ontology.test.ts",
+    "feedback": "npx wrangler@4 d1 execute roma-feedback --remote --command \"select id, created_at, screen, path, body from feedback order by id desc limit 50\"",
+    "deploy": "npm run build && npx wrangler@4 pages deploy"
   },
   "dependencies": {
     "@astryxdesign/core": "0.4.0",

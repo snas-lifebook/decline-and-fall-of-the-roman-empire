@@ -1,0 +1,18 @@
+{
+  // 정적 사이트는 그대로 두고, `functions/`의 한 갈래만 서버로 돈다.
+  //
+  // 이 파일이 생기면서 배포 명령이 짧아졌다 — 출력 폴더와 프로젝트 이름이
+  // 여기 적혀 있으므로 `npx wrangler@4 pages deploy` 한 줄이면 된다.
+  // 예전처럼 `deploy out --project-name=...`을 같이 주면 wrangler가 충돌로 본다.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "roma-library",
+  "compatibility_date": "2026-08-17",
+  "pages_build_output_dir": "out",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "roma-feedback",
+      "database_id": "1ce3cd50-5035-41e5-9d0d-8d4b4165a4f3"
+    }
+  ]
+}
