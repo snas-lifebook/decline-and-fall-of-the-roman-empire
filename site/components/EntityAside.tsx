@@ -103,7 +103,19 @@ function graphData(e: Entity, nbrs: Neighbor[], co: CoOccur[]) {
   )
 }
 
-export function EntityAside({ nbrs, co }: { nbrs: Neighbor[]; co: CoOccur[] }) {
+/** 동석은 12개까지만 그린다. 로마는 460개다 — 다 뿌리면 날개가 본문을 삼킨다 */
+export const CO_SHOWN = 12
+
+export function EntityAside({
+  nbrs,
+  co,
+  coTotal,
+}: {
+  nbrs: Neighbor[]
+  co: CoOccur[]
+  /** 자르기 **전** 개수. 자른 사실을 화면이 말해야 한다 (헌장 0-4) */
+  coTotal: number
+}) {
   return (
     <Stack direction="vertical" gap={4}>
       {nbrs.length ? (
@@ -135,8 +147,17 @@ export function EntityAside({ nbrs, co }: { nbrs: Neighbor[]; co: CoOccur[] }) {
             관계 0인 객체가 217개(33.7%)다. 그 페이지들은 이 칸 하나만 보이므로
             못 박는 한 줄이 그래프 밑이 아니라 **여기** 있어야 한다
           */}
+          {/*
+            **자른 사실을 말한다.** 관계망(10개)·연표(24행)·관계 목록(8개)은 전부
+            「N건 중 M개」를 밝히는데 이 칸만 빠져 있었다(감사 2026-08-17). 644개 중
+            633개가 잘리고 그중 213개는 관계가 0이라 **이 칸이 화면의 유일한 내용**이다.
+            그 사람들이 12개를 전부로 읽고 있었다.
+          */}
           <Text size="sm" color="secondary">
             같은 대목에 함께 나왔다는 뜻이지 둘 사이에 관계가 있다는 뜻은 아닙니다.
+            {coTotal > co.length
+              ? ` 함께 나온 것이 ${coTotal}개인데 자주 겹치는 것부터 ${co.length}개만 뒀습니다.`
+              : ''}
           </Text>
           {co.map((c) => (
             <Text key={c.ref.id} size="sm">

@@ -6,6 +6,7 @@ import { MaterialCards } from '../../../components/MaterialCards'
 import { Faq } from '../../../components/Faq'
 import { RECIPES, RECIPE_CATEGORIES } from '../../../lib/recipes'
 import { faqFor } from '../../../lib/faq'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 우수 사례 — 이 섹션에서 **유일하게 마크다운이 아닌 화면**이다.
@@ -17,6 +18,8 @@ import { faqFor } from '../../../lib/faq'
  * 재료 안내는 「무엇을 AI에 주나」와 **같은 카드 한 벌을 쓴다**(`MaterialCards`).
  * 앞 판은 여기서 셋을 따로 적었는데, 한쪽만 고치면 두 화면이 어긋난다.
  */
+export const metadata = pageMeta('우수 사례')
+
 export default function Recipes() {
   return (
     <Shell path="/use/recipes" where="우수 사례">

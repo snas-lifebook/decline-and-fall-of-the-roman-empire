@@ -1,6 +1,7 @@
 import { Stack, Heading, Text, Divider, List, ListItem, Banner } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
 import { navFind } from '../../lib/nav'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 활용하기 랜딩 — 목록이지 설명 페이지가 아니다(PLAN 「섹션 랜딩」).
@@ -31,6 +32,8 @@ const ABOUT: Record<string, string> = {
   '/use/pitfalls':
     '이 자료에서 AI가 실제로 틀린 자리 여덟 군데입니다. 몇 건이었는지 숫자까지 적었습니다.',
 }
+
+export const metadata = pageMeta('활용하기')
 
 export default function Use() {
   return (

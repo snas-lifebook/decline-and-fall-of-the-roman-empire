@@ -5,12 +5,18 @@ import { CopyPageButton } from '../../../../components/CopyPageButton'
 import { families, familyBySlug } from '../../../../lib/family/build'
 import { entityHref } from '../../../../lib/entity'
 import { loadEntities } from '../../../../lib/ontology'
+import { pageMeta } from '../../../../lib/meta'
 
 const ENTITIES = loadEntities()
 const BY_ID = new Map(ENTITIES.map((e) => [e.id, e]))
 
 export function generateStaticParams() {
   return families().map((f) => ({ slug: f.slug }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const f = familyBySlug((await params).slug)
+  return pageMeta(f ? `${f.title} 가계도` : '가계도')
 }
 
 export default async function FamilyPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -2,11 +2,14 @@ import { Stack, Heading, Text, Divider } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
 import { Faq } from '../../components/Faq'
 import { faqByCategory, FAQ } from '../../lib/faq'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 전부 모아 분류로 본다. 각 화면 하단에는 그 화면 것만 뜨므로 여기가 유일하게
  * 전체를 보는 자리다.
  */
+export const metadata = pageMeta('자주 묻는 것')
+
 export default function FaqPage() {
   return (
     <Shell path="/faq" where="자주 묻는 것">

@@ -1,5 +1,7 @@
 import { DocPage } from '../../../components/DocPage'
 import { navFind } from '../../../lib/nav'
+import { pageMeta } from '../../../lib/meta'
+import { loadDoc } from '../../../lib/doc'
 
 /**
  * 시작하기 여섯 장. 본문은 `content/start/<slug>.md`가 정본이다.
@@ -13,6 +15,11 @@ export function generateStaticParams() {
   return (navFind('/start')?.children ?? [])
     .map((c) => ({ slug: c.href.split('/').pop()! }))
     .filter(({ slug }) => !OWN.has(slug))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  return pageMeta(loadDoc(`/start/${slug}`).title || '시작하기')
 }
 
 export default async function StartDoc({ params }: { params: Promise<{ slug: string }> }) {

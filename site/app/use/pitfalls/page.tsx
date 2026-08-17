@@ -5,6 +5,7 @@ import { PitfallCard } from '../../../components/PitfallCard'
 import { Faq } from '../../../components/Faq'
 import { pitfallsByCategory } from '../../../lib/pitfalls'
 import { faqFor } from '../../../lib/faq'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 그냥 시키면 틀리는 것 — 마크다운이 아니라 카드다.
@@ -21,6 +22,8 @@ const CLOSING = [
   ['답을 받으면 근거가 몇 번 포인트인지 물으세요', '못 대면 지어낸 것입니다.'],
   ['자료에 없으면 없는 것으로 두세요', '「아마 이랬을 것」으로 채운 답은 받아 적지 않습니다.'],
 ] as const
+
+export const metadata = pageMeta('그냥 시키면 틀리는 것')
 
 export default function Pitfalls() {
   return (

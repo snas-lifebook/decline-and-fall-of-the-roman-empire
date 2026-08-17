@@ -2,6 +2,7 @@ import { Stack, Grid, Heading, Text, Divider, ClickableCard } from '@astryxdesig
 import { Shell } from '../../components/Shell'
 import { ENTITY_TYPES, loadEntities, type Entity } from '../../lib/ontology'
 import { TYPE_KO } from '../../lib/export/table'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 찾아보기 랜딩 — 목록이지 설명 페이지가 아니다(`/start`와 같은 규율).
@@ -28,6 +29,8 @@ const COUNTS = (() => {
     count: all.filter((e) => e.type === type).length,
   })).sort((a, b) => b.count - a.count)
 })()
+
+export const metadata = pageMeta('찾아보기')
 
 export default function Objects() {
   return (

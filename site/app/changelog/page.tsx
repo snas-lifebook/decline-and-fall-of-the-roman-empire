@@ -2,6 +2,7 @@ import { Stack, Heading, Text, Divider, Badge, Banner } from '@astryxdesign/core
 import { Shell } from '../../components/Shell'
 import { changesByDate, changelog } from '../../lib/changelog'
 import { linkById } from '../../lib/links'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 바뀐 것 — 이 사이트가 언제 무엇이 달라졌나.
@@ -12,6 +13,8 @@ import { linkById } from '../../lib/links'
  * 읽는 사람은 개발자가 아니라 편데 팀원이다. 그래서 커밋 앞머리(`feat:`)를
  * 한국어로 바꾸고, 해시는 눌러서 실제 변경을 볼 수 있는 자리로만 남긴다.
  */
+export const metadata = pageMeta('바뀐 것')
+
 export default function Changelog() {
   const groups = changesByDate()
   const repo = linkById('repo')

@@ -14,6 +14,7 @@ import { Faq } from '../../../components/Faq'
 import { faqFor } from '../../../lib/faq'
 import { linkById } from '../../../lib/links'
 import { navCrumbs, navSteps } from '../../../lib/nav'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 작업 공간 — 마크다운이 아니라 카드다.
@@ -76,6 +77,8 @@ const SECTIONS: { title: string; note?: string; ids: string[] }[] = [
     ids: ['youtube-sans', 'yt-kingsandgenerals', 'yt-historymarche', 'yt-epichistory'],
   },
 ]
+
+export const metadata = pageMeta('작업 공간')
 
 export default function Links() {
   const crumbs = navCrumbs('/start/links')

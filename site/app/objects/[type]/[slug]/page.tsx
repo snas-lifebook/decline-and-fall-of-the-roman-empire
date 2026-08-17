@@ -11,12 +11,13 @@ import {
 } from '@astryxdesign/core'
 import { Shell } from '../../../../components/Shell'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
-import { EntityAside, EntityGraph } from '../../../../components/EntityAside'
+import { EntityAside, EntityGraph, CO_SHOWN } from '../../../../components/EntityAside'
 import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
 import { entityIndex, entitySlug, neighbors, coOccurring } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
 import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
+import { pageMeta } from '../../../../lib/meta'
 import { familyOf } from '../../../../lib/family/build'
 import { timelineOf } from '../../../../lib/timeline/build'
 import { RelationTimeline } from '../../../../components/RelationTimeline'
@@ -129,6 +130,18 @@ export function generateStaticParams() {
   return ENTITIES.map((e) => ({ type: e.type, slug: entitySlug(e.name) }))
 }
 
+/** 644장이 같은 탭 제목을 달고 있었다. 이름과 종류를 밖으로 낸다 */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ type: string; slug: string }>
+}) {
+  const { type, slug } = await params
+  const e = BY_SLUG.get(`${type}/${decodeURIComponent(slug)}`)
+  if (!e) return pageMeta('객체')
+  return pageMeta(`${e.name} (${TYPE_KO[e.type] ?? e.type})`, e.desc || undefined)
+}
+
 /**
  * 붙여넣는 사람에게 1KB짜리 설명만 주면 쓸모가 없다. 관계까지 한 덩어리로 묶는다.
  *
@@ -172,7 +185,9 @@ export default async function ObjectPage({
   const href = `/objects/${type}/${slug}`
   const ko = TYPE_KO[e.type] ?? e.type
   const nbrs = neighbors(e.id, LINKS, INDEX)
-  const co = coOccurring(e, ENTITIES, 12)
+  // 자르기 전 전체를 받아 개수를 세고 나서 자른다 — 화면이 자른 사실을 말해야 한다
+  const coAll = coOccurring(e, ENTITIES)
+  const co = coAll.slice(0, CO_SHOWN)
   // 자기 타입 목록까지가 빵부스러기다. 마지막 한 칸은 자기 이름
   const crumbs = navCrumbs(`/objects/${type}`)
   const attrs = Object.entries(e.attrs).filter(([k]) => ATTR_KO[k])
@@ -200,7 +215,7 @@ export default async function ObjectPage({
       aside={
         <>
           <EntityGraph e={e} nbrs={nbrs} co={co} />
-          <EntityAside nbrs={nbrs} co={co} />
+          <EntityAside nbrs={nbrs} co={co} coTotal={coAll.length} />
         </>
       }
     >
@@ -246,6 +261,12 @@ export default async function ObjectPage({
         </Stack>
       ) : null}
 
+      {/*
+        **포인트 0은 링크하지 않는다.** 읽기는 01~30만 굽는데 데이터에는 `point: 0`이
+        있다 — 기번 본인·흄·볼테르·애덤 스미스와 로마 관직 7종이 책 앞부분(일러두기·
+        해제)에서 나온 것이다. 잘못된 값이 아니라 **화면이 없는 진짜 값**이라,
+        지우지 않고 링크만 뗀다. 앞 판은 11장이 `/read/point/0` 404로 보냈다.
+      */}
       {e.points.length ? (
         <Stack direction="vertical" gap={2} as="section">
           <Heading level={2}>등장 포인트</Heading>
@@ -253,7 +274,11 @@ export default async function ObjectPage({
           <Stack direction="horizontal" gap={2} wrap="wrap">
             {e.points.map((p) => (
               <Text key={p} size="sm">
-                <a href={`/read/point/${p}`}>포인트 {pad(p)}</a>
+                {p === 0 ? (
+                  '책 앞부분'
+                ) : (
+                  <a href={`/read/point/${p}`}>포인트 {pad(p)}</a>
+                )}
               </Text>
             ))}
           </Stack>

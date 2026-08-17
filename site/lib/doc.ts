@@ -2,6 +2,8 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { entityHref, type EntityRef } from './entity'
 import { linkById } from './links'
+import { dataCounts } from './datashape'
+import { dataDate } from './datadate'
 
 /**
  * `content/**\/*.md` 로더.
@@ -90,6 +92,27 @@ export function resolveLinkRefs(md: string): string {
   return md.replace(/\]\(link:([^)\s]+)\)/g, (_, id: string) => `](${linkById(id).href})`)
 }
 
+/**
+ * `{{자료기준일}}` 같은 자리를 실제 값으로 바꾼다.
+ *
+ * **손으로 적은 숫자는 조용히 거짓말이 된다.** `about.md`가 「이 사이트 페이지
+ * 730장」·「2026년 8월 16일 기준」이라고 적어뒀는데 실제로는 739장이고 데이터
+ * 기준일은 08-13이었다(감사 2026-08-17). 같은 레포의 `DataShape`는 파일을 세서
+ * 34·72·644·667을 만들고 전부 맞았다 — 그 규율 밖에 있던 둘만 틀렸다.
+ *
+ * 그래서 셀 수 있는 것은 세고, 셀 수 없는 것은 **자리를 안 만든다.**
+ */
+export function resolveFacts(md: string): string {
+  const facts: Record<string, () => string> = {
+    객체수: () => String(dataCounts().entities),
+    관계수: () => String(dataCounts().links),
+    자료기준일: () => dataDate(),
+  }
+  // **`\w`는 한글을 안 잡는다.** 첫 판이 `\{\{(\w+)\}\}`라 `{{자료기준일}}`이 글자
+  // 그대로 화면에 나갔다. 한국어만 쓰는 사이트에서 `\w`를 쓰면 늘 이렇게 된다
+  return md.replace(/\{\{([^}\s]+)\}\}/g, (whole, key: string) => facts[key]?.() ?? whole)
+}
+
 export type DocSection = { id: string; title: string; md: string }
 
 /**
@@ -131,5 +154,5 @@ export function docSections(body: string): { intro: string; sections: DocSection
 export function loadDoc(href: string): Doc {
   const raw = readFileSync(join(CONTENT, `${href.replace(/^\//, '')}.md`), 'utf8')
   const { meta, body } = splitFrontmatter(raw)
-  return { title: meta.title ?? '', summary: meta.summary ?? '', body: resolveLinkRefs(unwikilink(body)) }
+  return { title: meta.title ?? '', summary: meta.summary ?? '', body: resolveFacts(resolveLinkRefs(unwikilink(body))) }
 }

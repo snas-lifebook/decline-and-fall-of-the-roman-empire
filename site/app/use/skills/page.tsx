@@ -6,6 +6,7 @@ import { Faq } from '../../../components/Faq'
 import { SKILLS, SKILL_TIERS } from '../../../lib/skills'
 import { faqFor } from '../../../lib/faq'
 import { linkById } from '../../../lib/links'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 스킬 여덟 — 마크다운이 아니라 카드다.
@@ -17,6 +18,8 @@ import { linkById } from '../../../lib/links'
  * 갈래를 먼저 가르는 것이 이 화면의 전부다 — **여덟 중 일곱은 자료를 받아두어야
  * 돌아간다.** 그걸 모르고 웹 창에 문장만 붙이면 AI가 지어낸다.
  */
+export const metadata = pageMeta('스킬')
+
 export default function Skills() {
   return (
     <Shell path="/use/skills" where="스킬 여덟">

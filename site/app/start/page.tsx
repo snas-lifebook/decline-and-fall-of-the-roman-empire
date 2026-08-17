@@ -2,6 +2,7 @@ import { Stack, Heading, Text, Divider, List, ListItem, Banner } from '@astryxde
 import { Shell } from '../../components/Shell'
 import { navFind } from '../../lib/nav'
 import { loadDoc } from '../../lib/doc'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 시작하기 랜딩 — 목록이지 설명 페이지가 아니다(PLAN 「섹션 랜딩」).
@@ -17,6 +18,8 @@ import { loadDoc } from '../../lib/doc'
 const ABOUT: Record<string, string> = {
   '/start/links': '편데 운영에 쓰는 바깥 자리들입니다. 흩어진 곳으로 여기서 들어가시면 됩니다.',
 }
+
+export const metadata = pageMeta('시작하기')
 
 export default function Start() {
   const pages = navFind('/start')?.children ?? []

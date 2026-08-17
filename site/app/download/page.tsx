@@ -5,6 +5,7 @@ import { DataShape } from '../../components/DataShape'
 import { loadDoc, docSections } from '../../lib/doc'
 import { loadEntities } from '../../lib/ontology'
 import { pointList } from '../../lib/points'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 가져가기 — 「자료가 어떻게 생겼나」를 먼저 읽히고, 그다음 포인트를 고르게 한다.
@@ -31,6 +32,8 @@ const points = pointList().map((p) => ({
 }))
 
 const two = (n: number) => String(n).padStart(2, '0')
+
+export const metadata = pageMeta('가져가기')
 
 export default function DownloadIndex() {
   // 붙여넣는 사람은 이게 무슨 문서인지부터 알아야 한다. 제목과 부제를 같이 싣는다

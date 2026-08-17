@@ -2,6 +2,7 @@ import { Stack, Heading, Text, Divider, Badge, List, ListItem } from '@astryxdes
 import { Shell } from '../../components/Shell'
 import { pointList } from '../../lib/points'
 import { pointLead } from '../../lib/text/point'
+import { pageMeta } from '../../lib/meta'
 
 /**
  * 읽기 랜딩 — 30포인트를 고르는 목록이다(PLAN 「섹션 랜딩」).
@@ -11,6 +12,8 @@ import { pointLead } from '../../lib/text/point'
  */
 
 const two = (n: number) => String(n).padStart(2, '0')
+
+export const metadata = pageMeta('읽기')
 
 export default function Read() {
   return (

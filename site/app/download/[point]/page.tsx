@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { Stack, Heading, Text, Table } from '@astryxdesign/core'
+import { Stack, Heading, Text, Table, Breadcrumbs, BreadcrumbItem } from '@astryxdesign/core'
 import type { TableColumn } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
 import { TableActions } from '../../../components/TableActions'
 import { loadEntities, loadLinks } from '../../../lib/ontology'
 import { EXPORT_HEADER, pointTable } from '../../../lib/export/table'
 import { pointTitles, POINT_COUNT } from '../../../lib/points'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 포인트 하나의 표.
@@ -16,6 +17,12 @@ import { pointTitles, POINT_COUNT } from '../../../lib/points'
 
 export function generateStaticParams() {
   return Array.from({ length: POINT_COUNT }, (_, i) => ({ point: String(i + 1) }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ point: string }> }) {
+  const n = Number((await params).point)
+  const title = pointTitles().get(n) ?? ''
+  return pageMeta(`포인트 ${String(n).padStart(2, '0')} ${title} 표`)
 }
 
 /** astryx Table은 객체 배열을 받는다. 열 순서가 곧 키다 */
@@ -58,12 +65,17 @@ export default async function PointPage({ params }: { params: Promise<{ point: s
 
   return (
     <Shell where="가져가기" path="/download" maxWidth={1180}>
+      {/*
+        빵부스러기가 없어서 30장이 전부 막다른 골목이었다(감사 2026-08-17).
+        객체 649장·읽기 30장에는 있는데 여기만 빠져 있었다 — 규칙이 아니라 누락이다.
+      */}
+      <Breadcrumbs variant="supporting">
+        <BreadcrumbItem href="/">자료실</BreadcrumbItem>
+        <BreadcrumbItem href="/download">가져가기</BreadcrumbItem>
+        <BreadcrumbItem isCurrent>포인트 {String(n).padStart(2, '0')}</BreadcrumbItem>
+      </Breadcrumbs>
+
       <Stack direction="vertical" gap={1}>
-        <Link href="/download" style={{ textDecoration: 'none' }}>
-          <Text size="sm" color="secondary">
-            포인트 목록으로
-          </Text>
-        </Link>
         <Text size="sm" color="secondary">
           포인트 {n}
         </Text>
@@ -71,6 +83,10 @@ export default async function PointPage({ params }: { params: Promise<{ point: s
         <Text color="secondary">
           이 포인트에 나오는 인물·지명 {rows.length}개입니다. 복사해서 구글시트나 엑셀에
           붙여넣으면 그대로 표가 됩니다.
+        </Text>
+        {/* 표만 보고 온 사람이 「이게 무슨 대목이지」에서 막힌다. 본문으로 돌아가는 길 */}
+        <Text size="sm" color="secondary">
+          <Link href={`/read/point/${n}`}>이 대목 본문 읽기</Link>
         </Text>
       </Stack>
 

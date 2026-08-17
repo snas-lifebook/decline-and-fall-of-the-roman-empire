@@ -87,6 +87,15 @@ export function SiteFooter({ where }: { where: string }) {
         </Column>
 
         <Column title="이 사이트">
+          {/*
+            **`/faq`는 어디서도 안 걸려 있었다** — 739장 통틀어 수신 링크 0건에
+            사이드바에도 검색 색인에도 없었다(감사 2026-08-17). 24문답이 팀원 질문
+            대부분을 이미 답하는데 아무도 못 찾으니, 같은 질문이 단톡방에 다시 올라온다.
+            푸터가 가장 싼 자리다 — 전 화면에 붙는다.
+          */}
+          <Text size="sm" color="secondary">
+            <a href="/faq">자주 묻는 것</a>
+          </Text>
           <Text size="sm" color="secondary">
             <a href="/about">이 자료실은</a>
           </Text>

@@ -5,6 +5,7 @@ import { MaterialCards } from '../../../components/MaterialCards'
 import { DataShape } from '../../../components/DataShape'
 import { Faq } from '../../../components/Faq'
 import { faqFor } from '../../../lib/faq'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 무엇을 AI에 주나 — 활용하기의 1번이고, 나머지 셋이 전부 여기에 기댄다.
@@ -16,6 +17,8 @@ import { faqFor } from '../../../lib/faq'
  * 재료 카드는 `components/MaterialCards`가 그린다 — 「우수 사례」와 같은 것을
  * 쓰므로 한쪽만 고쳐 어긋나는 일이 없다.
  */
+export const metadata = pageMeta('무엇을 AI에 주나')
+
 export default function Data() {
   return (
     <Shell path="/use/data" where="무엇을 AI에 주나">

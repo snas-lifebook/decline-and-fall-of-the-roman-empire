@@ -2,8 +2,11 @@ import { Stack, Heading, Text, Divider, List, ListItem } from '@astryxdesign/cor
 import { Shell } from '../../../components/Shell'
 import { FamilyGap } from '../../../components/FamilyTree'
 import { families } from '../../../lib/family/build'
+import { pageMeta } from '../../../lib/meta'
 
 /** 가문 목록. 개수를 라벨에 적는다 — "눌러도 되나"를 없앤다 (RESEARCH R-E) */
+export const metadata = pageMeta('가문')
+
 export default function FamilyIndex() {
   const all = families()
   return (

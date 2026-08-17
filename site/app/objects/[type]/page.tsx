@@ -14,6 +14,7 @@ import { ENTITY_TYPES, loadEntities, type Entity } from '../../../lib/ontology'
 import { entityHref } from '../../../lib/entity'
 import { TYPE_KO } from '../../../lib/export/table'
 import { navCrumbs } from '../../../lib/nav'
+import { pageMeta } from '../../../lib/meta'
 
 /**
  * 타입 하나의 객체 전부.
@@ -28,6 +29,11 @@ const ALL = loadEntities()
 
 export function generateStaticParams() {
   return ENTITY_TYPES.map((type) => ({ type }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ type: string }> }) {
+  const { type } = await params
+  return pageMeta(TYPE_KO[type] ?? type)
 }
 
 export default async function ObjectType({ params }: { params: Promise<{ type: string }> }) {

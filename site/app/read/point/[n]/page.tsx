@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   Stack,
   Heading,
@@ -15,6 +16,7 @@ import { docSections } from '../../../../lib/doc'
 import { navCrumbs, navSteps } from '../../../../lib/nav'
 import { POINT_COUNT } from '../../../../lib/points'
 import { pointDoc } from '../../../../lib/text/point'
+import { pageMeta } from '../../../../lib/meta'
 import { PointGraph } from '../../../../components/PointGraph'
 import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
@@ -34,6 +36,12 @@ const LINKS = loadLinks()
 
 export function generateStaticParams() {
   return Array.from({ length: POINT_COUNT }, (_, i) => ({ n: String(i + 1) }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ n: string }> }) {
+  const n = Number((await params).n)
+  const { title, lead } = pointDoc(n)
+  return pageMeta(`포인트 ${String(n).padStart(2, '0')} ${title}`, lead || undefined)
 }
 
 export default async function Point({ params }: { params: Promise<{ n: string }> }) {
@@ -107,6 +115,20 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
             <Markdown>{s.md}</Markdown>
           </Stack>
         ))}
+      </Stack>
+
+      {/*
+        **본문에서 표로 가는 길.** 감사(2026-08-17)가 잡은 동선 결함이다 — 30장
+        어디에도 `/download/N` 단서가 없어서, 본문을 읽고 발표 표가 필요해진
+        사람이 사이드바 「가져가기」로 나가 포인트를 다시 골라야 했다(+2클릭).
+        읽던 자리에서 바로 넘어간다.
+      */}
+      <Stack direction="vertical" gap={1} as="section">
+        <Heading level={2}>이 대목을 표로 받기</Heading>
+        <Text color="secondary">
+          여기 나온 인물·지명을 <Link href={`/download/${n}`}>표 한 장</Link>으로 받아 시트에
+          붙여넣을 수 있습니다.
+        </Text>
       </Stack>
 
       <Faq items={faqFor(href)} />
