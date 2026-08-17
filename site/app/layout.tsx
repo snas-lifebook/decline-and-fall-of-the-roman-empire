@@ -3,6 +3,7 @@ import '@astryxdesign/core/reset.css'
 import '@astryxdesign/core/astryx.css'
 import '@astryxdesign/theme-neutral'
 import './globals.css'
+import { Korean } from '../components/Korean'
 
 export const metadata: Metadata = {
   title: '산스 인생책 로마쇠망사 자료실',
@@ -55,7 +56,13 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {/*
+          astryx 문구를 한국어로. `children`을 prop으로 넘기므로 페이지들은
+          서버 컴포넌트 그대로다 — 이 provider만 클라이언트로 간다.
+        */}
+        <Korean>{children}</Korean>
+      </body>
     </html>
   )
 }

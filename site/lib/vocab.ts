@@ -131,6 +131,92 @@ export const ROLE_KO: Record<string, string> = {
   gladiator_type: '검투사 유형',
   beast_keeper: '맹수 사육사',
   'roman province': '로마 속주',
+
+  /*
+   * 아래는 2026-08-17 감사에서 나온 것들이다. **라벨은 한국어인데 값이 영어로**
+   * 나가고 있었다 — `종류: place`, `지역: Middle East`. 89장 118건이고 그중 셋은
+   * 타입 키 자체(`place`·`institution`)라 「화면에 원시 키 금지」 직접 위반이었다.
+   *
+   * 종류·지역처럼 **분류를 뜻하는 값**과 흔한 지명만 담는다. 사람 이름·고유 지명
+   * (`Colonae Promontorium`·`Thurii`)은 **원문 그대로 둔다** — 라틴어 표기가 그
+   * 자체로 정보고, 억지로 옮기면 책과 어긋난다.
+   */
+  // 분류를 뜻하는 값
+  place: '지명',
+  city: '도시',
+  region: '지역',
+  territory: '영역',
+  sea: '바다',
+  river: '강',
+  strait: '해협',
+  gate: '성문',
+  building: '건물',
+  institution: '제도',
+  empire: '제국',
+  'empire name': '제국 이름',
+  civilization: '문명',
+  language: '언어',
+  church: '교회',
+  'religious site': '종교 시설',
+  'religious group': '종교 집단',
+  'state religion': '국교',
+  'priest class': '사제 계급',
+  'ethnic group': '민족',
+  'political faction': '정치 파벌',
+  'religious and political movement': '종교·정치 운동',
+  'historical period': '시대',
+  'barbarian kingdom': '이민족 왕국',
+  'maritime republic': '해양 공화국',
+  'military unit': '군 부대',
+  'military force': '군대',
+  'elite force': '정예 부대',
+  'strategic location': '요충지',
+  'islamic empire': '이슬람 제국',
+  'islamic calendar origin': '이슬람력 기원',
+  spouse: '배우자',
+  // 관직 라틴어 — 본문이 그대로 쓰는 말이라 한글 옆에 원문을 남긴다
+  tribunus: '호민관(tribunus)',
+  praetor: '법무관(praetor)',
+  aediles: '조영관(aediles)',
+  quaestor: '재무관(quaestor)',
+  // 흔한 지명. 책이 한글로 부르는 것만 옮긴다
+  italy: '이탈리아',
+  europe: '유럽',
+  africa: '아프리카',
+  greece: '그리스',
+  spain: '에스파냐',
+  cyprus: '키프로스',
+  arabia: '아라비아',
+  mecca: '메카',
+  mediterranean: '지중해',
+  constantinople: '콘스탄티노플',
+  'middle east': '중동',
+  'central asia': '중앙아시아',
+  'sassanid persia': '사산조 페르시아',
+  sparta: '스파르타',
+  arabic: '아랍어',
+  battle: '전투',
+  execution: '처형',
+  // 관계를 적은 값. 위쪽 「옥타비아누스의 아내」와 같은 계열이다
+  'uncle of muhammad': '무함마드의 숙부',
+  'grandfather of muhammad': '무함마드의 조부',
+  'great-grandfather of muhammad': '무함마드의 증조부',
+  'predecessor of phocas': '포카스의 전임자',
+  'successor to justinian i': '유스티니아누스 1세의 후계자',
+  'founded constantinople': '콘스탄티노플을 세움',
+  'recovery of western territories': '서방 영토 수복',
+  'lost by byzantine empire': '비잔틴 제국이 잃음',
+  sassanid: '사산조',
+  muhammad: '무함마드',
+  'byzantine capital': '비잔틴 수도',
+  'abbasid dynasty': '아바스 왕조',
+  'timurid empire': '티무르 제국',
+  'decline and fall of the roman empire': '로마제국쇠망사',
+  /*
+   * **여기서 멈춘다.** `Colonae Promontorium`·`Fretum Herculeum`·`Thurii`는 라틴어
+   * 고유명이고 본문이 그 표기를 그대로 쓴다. 옮기면 책과 어긋나고, 옮길 한국어
+   * 정본도 없다. 모르는 값은 원문 그대로 낸다 — 지어낸 번역을 채우지 않는다.
+   */
 }
 
 export function roleKo(v: string): string {

@@ -15,6 +15,7 @@ import { entityHref } from '../../../lib/entity'
 import { TYPE_KO } from '../../../lib/export/table'
 import { navCrumbs } from '../../../lib/nav'
 import { pageMeta } from '../../../lib/meta'
+import { byChoseong, bucketId } from '../../../lib/choseong'
 
 /**
  * 타입 하나의 객체 전부.
@@ -43,6 +44,7 @@ export default async function ObjectType({ params }: { params: Promise<{ type: s
 
   const list = ALL.filter((e) => e.type === type).sort((a, b) => a.name.localeCompare(b.name, 'ko'))
   const crumbs = navCrumbs(href)
+  const buckets = byChoseong(list, (e) => e.name)
 
   // 22개 객체는 대표 설명 없이 포인트별 서술만 갖는다. 빈 줄 대신 첫 서술을 쓴다
   const lead = (e: Entity) => e.desc ?? e.descs[0]?.desc ?? ''
@@ -70,16 +72,46 @@ export default async function ObjectType({ params }: { params: Promise<{ type: s
 
       <Divider />
 
-      <List density="balanced" hasDividers>
-        {list.map((e) => (
-          <ListItem
-            key={e.id}
-            label={e.name}
-            description={lead(e)}
-            href={entityHref({ id: e.id, type: e.type, name: e.name })}
-          />
-        ))}
-      </List>
+      {/*
+        **가나다 색인.** 인물 262명이 폰에서 20화면(16,707px)이었고 걸러낼 방법이
+        화면 안에 없었다(감사 2026-08-17). 상단 「찾기」가 있긴 하지만 목록에
+        들어온 사람은 **훑어보려고** 들어온 것이라 검색으로 되돌리면 동선이 어긋난다.
+
+        칸이 적은 목록(가문 6·시대 6)에는 안 붙인다 — 색인이 목록보다 길어진다.
+      */}
+      {buckets.length > 4 ? (
+        <Stack direction="horizontal" gap={2} wrap="wrap" as="nav">
+          {buckets.map((b, i) => (
+            <Text key={b.key} size="sm">
+              <a href={`#${bucketId(i)}`}>{b.key}</a>
+              <Text size="sm" color="secondary" as="span">
+                {' '}
+                {b.items.length}
+              </Text>
+            </Text>
+          ))}
+        </Stack>
+      ) : null}
+
+      {buckets.map((b, i) => (
+        <Stack key={b.key} direction="vertical" gap={1} id={bucketId(i)} as="section">
+          {buckets.length > 4 ? (
+            <Text size="sm" weight="semibold" color="secondary">
+              {b.key}
+            </Text>
+          ) : null}
+          <List density="balanced" hasDividers>
+            {b.items.map((e) => (
+              <ListItem
+                key={e.id}
+                label={e.name}
+                description={lead(e)}
+                href={entityHref({ id: e.id, type: e.type, name: e.name })}
+              />
+            ))}
+          </List>
+        </Stack>
+      ))}
     </Shell>
   )
 }

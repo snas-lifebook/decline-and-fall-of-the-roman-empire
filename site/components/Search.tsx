@@ -6,7 +6,7 @@ import {
   CommandPalette,
   CommandPaletteFooter,
   CommandPaletteInput,
-  Kbd,
+
   Stack,
   Text,
 } from '@astryxdesign/core'
@@ -114,18 +114,18 @@ export function Search() {
         onValueChange={go}
         label="이름으로 찾기"
         input={<CommandPaletteInput placeholder="인물·지명·포인트 이름 (초성도 됩니다)" />}
-        // 기본 꼬리말이 「Navigate / Select / Close」 영문이다. 화면 전체가 한국어다
+        /*
+          기본 꼬리말이 「Navigate / Select / Close」 영문이라 우리가 쓴다.
+          **`Kbd`를 안 쓴다** — 그 컴포넌트는 낭독기용 이름을 `Up arrow`·`Enter`처럼
+          영어로 하드코딩하고 있고, 그 문자열은 로케일 카탈로그에 없어서 한국어
+          오버라이드로 못 덮는다(2026-08-17 실측). 화면 전체가 한국어인데 키 이름
+          넷만 영어로 남았다. 글자로 쓰면 그 문제가 통째로 사라진다.
+        */
         footer={
           <CommandPaletteFooter>
             <Stack direction="horizontal" gap={2} vAlign="center" wrap="wrap">
               <Text size="sm" color="secondary">
-                <Kbd keys="up" /> <Kbd keys="down" /> 이동
-              </Text>
-              <Text size="sm" color="secondary">
-                <Kbd keys="enter" /> 열기
-              </Text>
-              <Text size="sm" color="secondary">
-                <Kbd keys="escape" /> 닫기
+                위아래 화살표로 이동 · Enter로 열기 · Esc로 닫기
               </Text>
             </Stack>
           </CommandPaletteFooter>
