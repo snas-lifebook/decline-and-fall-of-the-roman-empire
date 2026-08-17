@@ -129,13 +129,23 @@ export function generateStaticParams() {
   return ENTITIES.map((e) => ({ type: e.type, slug: entitySlug(e.name) }))
 }
 
-/** 붙여넣는 사람에게 1KB짜리 설명만 주면 쓸모가 없다. 관계까지 한 덩어리로 묶는다 */
-function toMarkdown(e: Entity, nbrs: ReturnType<typeof neighbors>): string {
+/**
+ * 붙여넣는 사람에게 1KB짜리 설명만 주면 쓸모가 없다. 관계까지 한 덩어리로 묶는다.
+ *
+ * `descs`는 **화면과 같은 것**을 받는다 — 한 줄 소개와 글자까지 같은 서술은 이미
+ * 걸러진 상태다. 화면에서만 걸러내면 복사한 덩어리에는 같은 문장이 두 번 들어가고,
+ * AI에 물리는 사람이 그 중복을 그대로 먹는다.
+ */
+function toMarkdown(
+  e: Entity,
+  nbrs: ReturnType<typeof neighbors>,
+  descs: Entity['descs'],
+): string {
   const parts = [`# ${e.name} (${TYPE_KO[e.type] ?? e.type})`]
   if (e.desc) parts.push(e.desc)
-  if (e.descs.length)
+  if (descs.length)
     parts.push(
-      ['## 포인트별 서술', ...e.descs.map((d) => `- 포인트 ${d.point}: ${d.desc}`)].join('\n'),
+      ['## 포인트별 서술', ...descs.map((d) => `- 포인트 ${d.point}: ${d.desc}`)].join('\n'),
     )
   if (nbrs.length)
     parts.push(
@@ -167,6 +177,16 @@ export default async function ObjectPage({
   const crumbs = navCrumbs(`/objects/${type}`)
   const attrs = Object.entries(e.attrs).filter(([k]) => ATTR_KO[k])
   const family = familyOf(e.id)
+  /*
+   * **한 줄 소개와 글자까지 같은 포인트 서술은 안 낸다.** 실측(2026-08-17):
+   * 객체 644개 중 618개(96%)에서 `desc`가 `descs` 중 하나와 완전히 같고,
+   * **458개는 서술이 그것 하나뿐이라 한 화면에 같은 문장이 두 번 찍혔다.**
+   * 폰에서는 두 문단이 한눈에 같이 들어와서 더 눈에 띈다.
+   *
+   * 지워도 잃는 것이 없다 — 어느 포인트에 나오는지는 바로 아래 「등장 포인트」가
+   * 이미 말한다.
+   */
+  const descs = e.descs.filter((d) => d.desc.trim() !== (e.desc ?? '').trim())
   // 날짜 붙은 관계가 2건 미만이면 `null`이다 — 빈 상자를 내보내지 않는다
   const tl = timelineOf(e.id, LINKS, INDEX)
 
@@ -205,16 +225,16 @@ export default async function ObjectPage({
           </Text>
         ) : null}
         <Stack direction="horizontal" gap={1}>
-          <CopyPageButton markdown={toMarkdown(e, nbrs)} />
+          <CopyPageButton markdown={toMarkdown(e, nbrs, descs)} />
         </Stack>
       </Stack>
 
       <Divider />
 
-      {e.descs.length ? (
+      {descs.length ? (
         <Stack direction="vertical" gap={2} as="section">
           <Heading level={2}>포인트별 서술</Heading>
-          {e.descs.map((d) => (
+          {descs.map((d) => (
             <Stack key={d.point} direction="vertical" gap={0.5}>
               <Text size="sm" color="secondary">
                 포인트 {pad(d.point)}
