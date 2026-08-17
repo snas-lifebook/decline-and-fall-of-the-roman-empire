@@ -81,40 +81,63 @@ export function Shell({
       }
       sideNav={sidebar ? <SideNav>{itemsOf(navTree(), path)}</SideNav> : undefined}
     >
-      <Stack direction="horizontal" gap={6} padding={6} justify="center" wrap="wrap">
+      {/*
+        **푸터는 본문 칸 밖이다.** 안에 두면 좁은 화면에서 `wrap`이 날개를 본문
+        칸 통째 아래로 내리는데, 그 칸의 맨 끝이 푸터다 — 즉 **폰에서 관계망과
+        관계 목록이 푸터 아래로 밀려났다**(2026-08-17 실측: 푸터 y=1760, 날개
+        y=2338). 푸터 밑까지 내려가 보는 사람은 없으니 674장에서 그 두 칸이
+        사실상 사라져 있었다. 밖으로 빼면 폰에서 본문 → 날개 → 푸터가 된다.
+      */}
+      <Stack direction="vertical" gap={6} padding={6} width="100%" hAlign="center">
+        <Stack direction="horizontal" gap={6} justify="center" wrap="wrap" width="100%">
+          {/*
+            `.doc`는 **본문 칸에만** 붙는 타이포 스코프다. 제목 크기와 여백을
+            `app/globals.css`가 이 클래스 아래로만 건다 — 안 가두면 사이드바·상단바·
+            카드 글자까지 같이 끌려간다. 날개는 이 Stack의 형제라 자동으로 빠진다.
+          */}
+          <Stack className="doc" direction="vertical" gap={4} maxWidth={maxWidth} width="100%">
+            {children}
+          </Stack>
+          {aside ? (
+            /*
+              날개가 본문을 따라 흐르지 않고 **화면에 붙어 있다.** 포인트 본문이
+              길어서, 안 붙이면 관계망이 두 번째 문단쯤에서 위로 사라진다.
+              `top`은 상단 바 높이만큼.
+            */
+            <Stack
+              direction="vertical"
+              gap={4}
+              width={asideWidth}
+              style={{
+                position: 'sticky',
+                top: 24,
+                alignSelf: 'flex-start',
+                // 날개가 화면보다 길면(카이사르는 관계가 41건이다) 붙여둔 채로는
+                // 아래쪽에 손이 안 닿는다. 넘치는 만큼만 안에서 굴린다
+                maxHeight: 'calc(100vh - 48px)',
+                overflowY: 'auto',
+              }}
+            >
+              {aside}
+            </Stack>
+          ) : null}
+        </Stack>
+
         {/*
-          `.doc`는 **본문 칸에만** 붙는 타이포 스코프다. 제목 크기와 여백을
-          `app/globals.css`가 이 클래스 아래로만 건다 — 안 가두면 사이드바·상단바·
-          카드 글자까지 같이 끌려간다. 날개는 이 Stack의 형제라 자동으로 빠진다.
+          푸터 폭은 본문 + 날개를 합친 만큼이다. 본문 폭에만 맞추면 날개가 있는
+          화면에서 푸터가 혼자 좁아 보이고, 전체 폭으로 두면 가운데 정렬된 본문과
+          왼쪽 끝이 어긋난다. `gap={6}`이 24px다.
         */}
-        <Stack className="doc" direction="vertical" gap={4} maxWidth={maxWidth} width="100%">
-          {children}
+        <Stack
+          className="doc"
+          direction="vertical"
+          gap={4}
+          width="100%"
+          maxWidth={aside ? maxWidth + 24 + asideWidth : maxWidth}
+        >
           <Divider />
           <SiteFooter where={where} />
         </Stack>
-        {aside ? (
-          /*
-            날개가 본문을 따라 흐르지 않고 **화면에 붙어 있다.** 포인트 본문이
-            길어서, 안 붙이면 관계망이 두 번째 문단쯤에서 위로 사라진다.
-            `top`은 상단 바 높이만큼.
-          */
-          <Stack
-            direction="vertical"
-            gap={4}
-            width={asideWidth}
-            style={{
-              position: 'sticky',
-              top: 24,
-              alignSelf: 'flex-start',
-              // 날개가 화면보다 길면(카이사르는 관계가 41건이다) 붙여둔 채로는
-              // 아래쪽에 손이 안 닿는다. 넘치는 만큼만 안에서 굴린다
-              maxHeight: 'calc(100vh - 48px)',
-              overflowY: 'auto',
-            }}
-          >
-            {aside}
-          </Stack>
-        ) : null}
       </Stack>
     </AppShell>
   )
