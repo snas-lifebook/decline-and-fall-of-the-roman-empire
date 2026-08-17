@@ -85,7 +85,7 @@ export function renderFamilySvg(layout: FamilyLayout, opts: SvgOptions = {}): st
   a { cursor: pointer; }
   a:hover .person rect { fill: light-dark(#f4f4f4, #22272b); }
   .person text { font: ${fontSize}px Pretendard, "Apple SD Gothic Neo", system-ui, sans-serif; fill: light-dark(#111, #e6e9ec); }
-  .person .note { font-size: ${round(fontSize * 0.72)}px; fill: light-dark(#8a8a8a, #9aa2aa); }
+  .person .note { font-size: ${round(fontSize * 0.72)}px; fill: light-dark(#6a6a6a, #9aa2aa); }
   .union { fill: light-dark(#b8b8b8, #5a6169); }
   path { fill: none; }
   path.family { stroke: light-dark(#c9c9c9, #454b52); stroke-width: 1; }

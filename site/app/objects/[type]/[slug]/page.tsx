@@ -18,6 +18,8 @@ import { TYPE_KO } from '../../../../lib/export/table'
 import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
 import { familyOf } from '../../../../lib/family/build'
+import { timelineOf } from '../../../../lib/timeline/build'
+import { RelationTimeline } from '../../../../components/RelationTimeline'
 
 /**
  * 객체 한 장 × 644.
@@ -25,8 +27,12 @@ import { familyOf } from '../../../../lib/family/build'
  * 뼈대는 `DocPage`와 **똑같은 순서**다 — 빵부스러기 → 배지·제목 → 한 줄 소개 →
  * 페이지 복사 → 본문 → 우측 날개. 화면마다 이 순서가 같은 것이 「퀄리티」의 정체다.
  *
- * 본문은 셋뿐이다. 포인트별 서술 · 등장 포인트 · 속성. 관계는 전부 우측 날개로
- * 보낸다 — 본문은 "이게 무엇인가", 날개는 "무엇과 이어져 있나"다.
+ * 본문은 "이게 무엇인가", 날개는 "무엇과 이어져 있나"다 — 포인트별 서술 · 등장
+ * 포인트 · 속성이 본문이고, 관계 목록과 관계망 그림은 날개다.
+ *
+ * **예외 하나: 관계 연표는 본문에 있다** (2026-08-17). 관계인데도 날개가 아닌 이유는
+ * 폭이다 — 로마의 연표는 2,200년을 가로로 펴야 하고, 300픽셀에 눌러 담으면 막대가
+ * 전부 한 점으로 뭉친다. 관계망을 날개로 옮길 때 배운 것과 같은 계산이다.
  *
  * 644장을 그린다. `loadEntities()`·`loadLinks()`는 **모듈에서 한 번**이다.
  * 페이지 함수 안에서 부르면 파일을 644번 읽고 zod로 41만 번 파싱한다.
@@ -161,6 +167,8 @@ export default async function ObjectPage({
   const crumbs = navCrumbs(`/objects/${type}`)
   const attrs = Object.entries(e.attrs).filter(([k]) => ATTR_KO[k])
   const family = familyOf(e.id)
+  // 날짜 붙은 관계가 2건 미만이면 `null`이다 — 빈 상자를 내보내지 않는다
+  const tl = timelineOf(e.id, LINKS, INDEX)
 
   return (
     <Shell
@@ -229,6 +237,17 @@ export default async function ObjectPage({
               </Text>
             ))}
           </Stack>
+        </Stack>
+      ) : null}
+
+      {/*
+        관계를 시간 위에 깔아 놓는다. **날개가 아니라 본문인 이유는 폭이다** —
+        2,200년을 300픽셀에 눌러 담으면 막대가 전부 한 점으로 뭉친다.
+      */}
+      {tl ? (
+        <Stack direction="vertical" gap={2} as="section">
+          <Heading level={2}>관계 연표</Heading>
+          <RelationTimeline tl={tl} name={e.name} />
         </Stack>
       ) : null}
 

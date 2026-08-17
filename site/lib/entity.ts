@@ -78,7 +78,13 @@ export function entityIndex(root = REPO_ROOT): Map<string, EntityRef> {
 /** 같은 사전에서 나온 id 조회표. 빌드 한 번에 700장 넘게 그려서 매번 다시 만들지 않는다 */
 const byId = new WeakMap<Map<string, EntityRef>, Map<string, EntityRef>>()
 
-function idMap(index: Map<string, EntityRef>): Map<string, EntityRef> {
+/**
+ * **`entityIndex()`의 열쇠는 노트 파일명이지 `person:카이사르` 같은 id가 아니다.**
+ * 링크는 id로 말하므로 id로 찾으려면 반드시 이걸 거쳐야 한다. `timeline/build.ts`가
+ * 이 사실을 모르고 `index.get(l.to)`를 부르는 바람에 연표가 644장 전부 안 그려졌다
+ * (2026-08-17, 테스트가 잡았다).
+ */
+export function idMap(index: Map<string, EntityRef>): Map<string, EntityRef> {
   let m = byId.get(index)
   if (!m) {
     m = new Map([...index.values()].map((r) => [r.id, r]))
