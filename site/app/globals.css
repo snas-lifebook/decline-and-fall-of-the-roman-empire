@@ -512,9 +512,14 @@ html[data-cards]:not([data-cards~='period']) .read-card[data-type='period'] {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   이 대목의 지도
+   이 대목의 지도 — 한 벌을 세 가지로 쓴다
 
-   가계도·관계 연표와 같은 자리다 — SVG를 빌드 때 구워 넣는다.
+   SVG는 빌드 때 한 번만 굽고(가계도·연표와 같은 자리), 어디에 어떻게 놓을지만
+   `html[data-map]`이 정한다. 두 벌을 그리면 한쪽을 고칠 때 다른 쪽이 어긋난다.
+
+     hover  지명에 마우스를 올릴 때만 오른쪽 아래에 뜬다 (기본)
+     top    본문 위에 붙박이로
+     off    안 그린다
    ══════════════════════════════════════════════════════════════════ */
 
 .point-map {
@@ -527,6 +532,139 @@ html[data-cards]:not([data-cards~='period']) .read-card[data-type='period'] {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* 본문 폭에 맞춘다. 인라인 스타일로 주면 호버 패널이 그걸 못 이긴다 */
+.map-slot {
+  width: 100%;
+  max-width: 760px;
+}
+
+/*
+  「본문 위」. DOM에서는 본문 뒤에 있다 — 낭독기와 검색엔진이 본문을 먼저 읽어야
+  하기 때문이다. 눈에 보이는 순서만 `order`로 바꾼다.
+*/
+html[data-map='top'] .map-slot {
+  order: -1;
+}
+
+html[data-map='off'] .map-slot {
+  display: none;
+}
+
+/*
+  호버 패널. **커서를 안 따라간다** — 오른쪽 아래 고정이다. 따라다니면 글자를 가리고
+  눈이 계속 쫓아가야 한다. 그게 「어지러움」의 정체다.
+
+  기본값이라 `data-map`이 아예 없을 때도(저장이 막힌 브라우저) 걸리게
+  `:not([data-map])`를 같이 적는다.
+*/
+html:is(:not([data-map]), [data-map='hover']) .map-slot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 420px;
+  max-width: calc(100vw - 40px);
+  z-index: 20;
+  /* 안 뜬 동안은 눌리지도 읽히지도 않는다 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease,
+    visibility 0.16s;
+  background: light-dark(#ffffff, #161b21);
+  border: 1px solid light-dark(#dfe4e9, #2b3138);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 24px light-dark(rgb(20 30 40 / 0.14), rgb(0 0 0 / 0.45));
+}
+
+html:is(:not([data-map]), [data-map='hover']) .map-slot:has(.point-map[data-on]),
+html:is(:not([data-map]), [data-map='hover']) .map-slot:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* 패널 안에서는 제목이 군더더기다. 지도와 한 줄 설명만 남긴다 */
+html:is(:not([data-map]), [data-map='hover']) .map-slot h2 {
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+/*
+  **패널 안에서는 이름표를 하나만 보여준다.**
+
+  SVG가 760 너비로 그려져 420px 패널에 들어가면 0.55배로 줄고, 11px 글씨가 6px이
+  되어 **아무것도 안 읽힌다**(실측). 전부 키우면 이름표가 서로 겹친다.
+
+  그래서 **올린 자리 하나만** 키워서 읽히게 하고 나머지는 점으로 남긴다. 점을
+  지우지 않는 이유는 주변에 무엇이 있는지가 곧 「어디쯤인가」의 답이기 때문이다.
+*/
+html:is(:not([data-map]), [data-map='hover']) .map-slot .pin-label {
+  display: none;
+}
+
+html:is(:not([data-map]), [data-map='hover']) .map-slot .lit .pin-label {
+  display: block;
+  font-size: 21px;
+  stroke-width: 5;
+}
+
+html:is(:not([data-map]), [data-map='hover']) .map-slot .lit .pin {
+  r: 9;
+}
+
+/*
+  **올린 자리를 켠다.** 나머지는 낮춰서 눈이 한 점으로 간다. 점을 지우지는 않는다 —
+  주변에 무엇이 있는지가 위치를 알려주는 정보다.
+*/
+.point-map[data-on] .pin {
+  opacity: 0.32;
+}
+
+.point-map[data-on] .pin-label {
+  opacity: 0.28;
+}
+
+.point-map .lit .pin {
+  opacity: 1;
+  r: 6;
+}
+
+.point-map .lit .pin-label {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* **「움직임 줄이기」를 존중한다.** 뜨고 지는 것만 남기고 미끄러짐을 없앤다 */
+@media (prefers-reduced-motion: reduce) {
+  html:is(:not([data-map]), [data-map='hover']) .map-slot {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* 좁은 화면·터치에는 호버가 없다. 패널을 띄우지 않고 본문 흐름에 그대로 둔다 */
+@media (max-width: 1100px), (hover: none) {
+  html:is(:not([data-map]), [data-map='hover']) .map-slot {
+    position: static;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+  html:is(:not([data-map]), [data-map='hover']) .map-slot h2 {
+    font-size: inherit;
+    margin: revert;
+  }
 }
 
 /* 객체 화면의 초상. 카드보다 크게 보여줄 자리라 160px */

@@ -2,6 +2,7 @@
 import { describe, it, expect } from 'vitest'
 import { renderPointMap, MAX_LABELS } from './svg'
 import { coordsOfPoint } from './coords'
+import { entityHref } from '../entity'
 
 const svg = (n: number) => renderPointMap(coordsOfPoint(n))
 
@@ -68,5 +69,18 @@ describe('이 대목의 지도', () => {
 
   it('지명이 없으면 빈 문자열 — 빈 상자를 그리지 않는다', () => {
     expect(renderPointMap([])).toBe('')
+  })
+})
+
+describe('본문 링크와 짝이 맞는가', () => {
+  it('**지도 마커의 주소가 본문 링크와 글자까지 같다** — 호버 패널이 이걸로 짝을 찾는다', () => {
+    // 처음엔 지도만 퍼센트 인코딩을 걸어서 짝이 하나도 안 맞았다(2026-08-18).
+    // 화면에서는 지도도 본문도 멀쩡해 보여서 **눈으로는 안 잡혔다**
+    const places = coordsOfPoint(5)
+    const s = renderPointMap(places)
+    for (const p of places) {
+      const want = entityHref({ id: p.id, type: 'place', name: p.name })
+      expect(s, p.name).toContain(`href="${want}"`)
+    }
   })
 })

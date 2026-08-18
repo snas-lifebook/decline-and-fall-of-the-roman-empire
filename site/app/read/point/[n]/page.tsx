@@ -18,7 +18,8 @@ import { pointDoc } from '../../../../lib/text/point'
 import { pageMeta } from '../../../../lib/meta'
 import { PointGraph } from '../../../../components/PointGraph'
 import { ReadGrid } from '../../../../components/ReadGrid'
-import { CardFilter } from '../../../../components/CardFilter'
+import { ReadSettings } from '../../../../components/ReadSettings'
+import { MapHover } from '../../../../components/MapHover'
 import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
 import { loadEntities, loadLinks } from '../../../../lib/ontology'
@@ -112,7 +113,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         (카드 종류). 둘 다 펴기 전에는 한 줄이라 본문을 안 밀어낸다.
       */}
       <Stack direction="horizontal" gap={4} wrap="wrap" style={NARROW}>
-        <CardFilter />
+        <ReadSettings />
       </Stack>
 
       {sections.length > 1 ? (
@@ -130,26 +131,6 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
       ) : null}
 
 
-      {/*
-        **지도가 본문 위에 선다.** 처음엔 맨 아래에 뒀는데 River가 「마지막에 있어서
-        인터랙티브가 안 되는 것 같다」고 했다 — 맞다. 다 읽고 나서 보는 지도는 읽는
-        동안 아무 일도 안 한다. 여기 있으면 **읽기 전에 「어디쯤 이야기인가」를 한 번
-        잡고** 들어가고, 본문에서 지명을 만났을 때 되짚을 자리도 가깝다.
-
-        지명은 카드로 안 세운다 — 카드로 만들면 포인트당 스무 곳이 옆에 줄줄이 서서
-        정작 인물이 묻힌다.
-      */}
-      <div style={NARROW}>
-        <Stack direction="vertical" gap={1.5} as="section">
-          <Heading level={2}>이 대목의 지도</Heading>
-          {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
-          <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
-          <Text size="sm" color="secondary">
-            지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만 있는 점은
-            위치가 추정입니다.
-          </Text>
-        </Stack>
-      </div>
 
       {/* 본문 + 여백 카드. 간격은 `globals.css`의 H2 마진이 정한다 */}
       <ReadGrid layout={layout} />
@@ -167,6 +148,29 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
           </Text>
         </div>
       ) : null}
+
+
+      {/*
+        **지도는 한 벌만 그린다.** 「본문 위」와 「지명에 올릴 때」가 같은 SVG를 쓰고
+        자리만 CSS가 바꾼다 — 두 벌을 그리면 한쪽을 고칠 때 다른 쪽이 조용히 어긋난다.
+
+        DOM 자리는 여기(본문 뒤)다. 「본문 위」로 고른 사람에게는 CSS `order`가 위로
+        올린다. 이 자리에 둬야 **지도가 안 뜨는 설정에서도 본문이 먼저 읽힌다** —
+        낭독기와 검색엔진이 보는 순서가 이것이다.
+      */}
+      {/* 폭은 CSS가 정한다 — 인라인 `maxWidth`를 두면 호버 패널이 그걸 못 이긴다 */}
+      <div className="map-slot">
+        <Stack direction="vertical" gap={1.5} as="section">
+          <Heading level={2}>이 대목의 지도</Heading>
+          {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
+          <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
+          <Text size="sm" color="secondary">
+            지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만 있는 점은 위치가
+            추정입니다.
+          </Text>
+        </Stack>
+      </div>
+      <MapHover />
 
       {/*
         관계망이 날개에서 본문 끝으로 내려왔다 — 그 자리를 여백 카드가 쓴다.

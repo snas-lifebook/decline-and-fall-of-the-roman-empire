@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { textWidth } from '../text/width'
-import { entitySlug } from '../entity'
+import { entityHref } from '../entity'
 import type { PlaceCoord } from './coords'
 
 /**
@@ -141,7 +141,13 @@ export function renderPointMap(places: PlaceCoord[]): string {
 
   for (const p of places) {
     const [x, y] = to(...p.lonLat)
-    const href = `/objects/place/${encodeURIComponent(entitySlug(p.name))}`
+    /*
+     * **본문 링크와 글자 하나까지 같아야 한다.** 호버 패널이 `href`로 짝을 찾기
+     * 때문이다. 처음엔 여기서만 `encodeURIComponent`를 걸었는데, 본문 쪽
+     * `linkifyWikilinks`는 안 걸어서 **짝이 하나도 안 맞았다**(2026-08-18 실측).
+     * 두 곳 다 `entityHref` 하나를 쓴다.
+     */
+    const href = entityHref({ id: p.id, type: 'place', name: p.name })
     const guessed = p.confidence === 'low' ? ' guessed' : ''
     const dot = `<circle cx="${round(x)}" cy="${round(y)}" r="${DOT}" class="pin${guessed}"/>`
 
