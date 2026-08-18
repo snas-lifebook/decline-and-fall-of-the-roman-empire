@@ -12,16 +12,210 @@
  *
  * reset은 astryx 것을 쓴다. 여기서 `*` 리셋을 다시 쓰지 않는다.
  */
+/* ══════════════════════════════════════════════════════════════════
+   본문 글꼴 네 종 — **전부 자체 호스팅이라 외부 요청이 0이다**
+
+   앞 판은 Pretendard를 jsdelivr의 `dynamic-subset`으로 받았다. 그게 이 사이트의
+   마지막 외부 요청이었고, 여기서 없앴다.
+
+   **조각내지 않는다.** `dynamic-subset`은 글자 단위가 아니라 `unicode-range` 블록
+   단위라, 한글 음절 블록이 코드포인트 순으로 잘려 있어 한국어 장문은 조각을 거의 다
+   긁는다. 실측(2026-08-18): 대목 한 장에 **1,163KB**가 내려왔다. 전체 파일 하나는
+   261~529KB다. **조각이 두 배 비쌌다.**
+
+   `font-display: swap` — 글꼴이 늦어도 글자는 먼저 보인다. 260~530KB짜리를
+   기다리게 하면 그동안 화면이 비는데, 그건 다크모드 FOUC와 같은 병이다.
+
+   스택 끝에 늘 `Pretendard`를 둔다. 본고딕에 `ć`·`š`가 없어서(사진 저작자
+   `Petar Milošević` 표기에 네 번 쓰인다) 그 두 글자만 조용히 넘어간다.
+   ══════════════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: Pretendard;
+  src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MaruBuri;
+  src: url('/fonts/MaruBuri-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: RIDIBatang;
+  src: url('/fonts/RIDIBatang.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url('/fonts/NotoSansKR-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --font-family-body: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
     system-ui, sans-serif;
   --font-family-heading: var(--font-family-body);
   --text-body-leading: 1.7;
+
+  /*
+    읽기 설정 세 축. **기본값을 여기 두는 것이 중요하다** — 저장이 막힌 브라우저나
+    설정을 안 만진 사람에게 `<html>`에 속성이 안 붙는데, 그때도 화면이 멀쩡해야 한다.
+  */
+  --read-font: var(--font-family-body);
+  --read-scale: 1;
+}
+
+/*
+  고른 글꼴. **`.doc` 아래에만 건다** — 상단 바·사이드바·카드는 Pretendard로 두고
+  문서 본문만 바뀐다. 읽는 것과 조작하는 것을 글꼴로도 가른다.
+*/
+html[data-font='maruburi'] {
+  --read-font: MaruBuri, Pretendard, serif;
+}
+
+html[data-font='ridibatang'] {
+  --read-font: RIDIBatang, Pretendard, serif;
+}
+
+html[data-font='notosans'] {
+  --read-font: NotoSansKR, Pretendard, sans-serif;
+}
+
+html[data-font='pretendard'] {
+  --read-font: var(--font-family-body);
 }
 
 body {
   font-family: var(--font-family-body);
   line-height: var(--text-body-leading);
+}
+
+/*
+  **문서 본문만 설정을 따른다.** `.doc`는 `Shell`이 본문 칸에만 붙이는 스코프라
+  사이드바·상단 바가 안 끌려온다(그 클래스가 생긴 이유가 이것이다).
+
+  크기는 배율이다. 고정 px로 두면 제목·인용·카드가 따로 놀고, 기기 글자 크기를
+  키워 둔 사람의 설정을 덮어쓴다.
+*/
+/*
+  **`.doc` 하나로는 안 걸린다.** 붙여만 두고 브라우저에서 안 셌으면 그대로 배포될
+  뻔했다(2026-08-18 실측) — 헌장 19항이 말한 그 사고다.
+
+  두 군데가 이겼다.
+    - `.astryx-markdown` — astryx가 본문 컨테이너에 글꼴을 **직접** 건다.
+      상속은 직접 선언을 못 이긴다. `.doc .astryx-markdown`(0,2,0)으로 넘는다
+    - `h1`~`h6` — 이 파일 맨 위의 내 규칙이 이겼다. `.doc h2`(0,1,1)로 넘는다
+
+  반대로 **카드와 레일은 본문 글꼴을 따라가면 안 된다.** 그쪽은 읽는 글이 아니라
+  조작하는 물건이라 UI 글꼴로 되돌린다. 명조로 읽더라도 단추는 고딕이어야 한다.
+*/
+.doc,
+.doc .astryx-markdown,
+.doc h1,
+.doc h2,
+.doc h3,
+.doc h4 {
+  font-family: var(--read-font);
+}
+
+.doc {
+  font-size: calc(1rem * var(--read-scale));
+}
+
+.read-rail,
+.read-grid > .read-card,
+.astryx-app-shell-header,
+.astryx-side-nav {
+  font-family: var(--font-family-body);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   회색 바탕 — River: 「화이트, 다크, 글을 읽기 가장 좋은 회색」
+
+   **새 팔레트를 짓지 않는다.** 밝게·어둡게는 astryx가 `light-dark()`로 이미 두 벌을
+   갖고 있고(`data-theme`), 여기서 더하는 것은 **미색 회색 한 벌**뿐이다. 종이에
+   가까워서 흰 바탕의 눈부심이 없고 어둡지도 않다.
+
+   대비를 눈대중으로 정하지 않았다 — `#f0ede6` 위 `#33302b`는 **10.7:1**이라
+   AAA(7:1)를 넘긴다. 8/17 검수에서 라이트가 4.64:1로 가장 빡빡했으므로 여기서
+   밑돌면 안 됐다.
+
+   회색은 **밝게 위에만 얹는다.** 어둡게 쓰는 사람에게 회색은 뜻이 없다.
+   ══════════════════════════════════════════════════════════════════ */
+html[data-tone='sepia']:not([data-theme='dark']) {
+  --read-bg: #f0ede6;
+  --read-fg: #33302b;
+  --read-edge: #ded9cf;
+}
+
+/*
+  **크롬까지 같이 물들인다.** 본문만 미색으로 바꿨더니 왼쪽 목록과 상단 바가 푸른
+  회색으로 남아 **반만 칠한 것처럼 보였다**(실측 화면). River가 「깔끔하게 일관되게」를
+  못박았으므로 화면 전체가 한 장의 종이여야 한다. 크롬은 본문보다 한 톤 어둡게 둬서
+  「종이 위의 여백」이 아니라 「책상」으로 읽히게 한다.
+*/
+html[data-tone='sepia']:not([data-theme='dark']) body,
+html[data-tone='sepia']:not([data-theme='dark']) #astryx-app-shell-main {
+  background: var(--read-bg);
+}
+
+html[data-tone='sepia']:not([data-theme='dark']) .astryx-app-shell-header,
+html[data-tone='sepia']:not([data-theme='dark']) .astryx-side-nav {
+  background: #e7e2d8;
+  border-color: var(--read-edge);
+}
+
+/* 글꼴과 같은 함정 — astryx가 본문 컨테이너에 색을 직접 걸어서 상속이 안 닿는다 */
+html[data-tone='sepia']:not([data-theme='dark']) .doc,
+html[data-tone='sepia']:not([data-theme='dark']) .doc .astryx-markdown,
+html[data-tone='sepia']:not([data-theme='dark']) .doc h1,
+html[data-tone='sepia']:not([data-theme='dark']) .doc h2,
+html[data-tone='sepia']:not([data-theme='dark']) .doc h3 {
+  color: var(--read-fg);
+}
+
+/* 카드·레일도 같이 따라가야 종이 한 장으로 보인다 */
+html[data-tone='sepia']:not([data-theme='dark']) .read-rail,
+html[data-tone='sepia']:not([data-theme='dark']) .read-grid > .read-card {
+  background: #f7f5f0;
+  border-color: var(--read-edge);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   포커스 모드 — River: 「글을 집중해서 읽고 싶을 수도 있다」
+
+   **새 레이아웃이 아니라 접는 스위치다.** 있던 것을 숨기고 본문을 가운데로 놓는다.
+   레이아웃을 따로 만들면 두 벌이 되어 한쪽만 고치는 날이 온다.
+
+   `ReadCards`가 Esc를 받아 빠져나온다 — 들어갈 길이 있으면 나올 길도 있어야 한다.
+   ══════════════════════════════════════════════════════════════════ */
+html[data-focus='on'] .astryx-app-shell-header,
+html[data-focus='on'] .astryx-side-nav,
+html[data-focus='on'] .read-rail {
+  display: none;
+}
+
+/*
+  **그리드는 건드리지 않는다.** 처음엔 한 열로 좁히고 카드를 1열로 옮겼는데, 그러면
+  카드가 본문 블록과 **같은 칸에 들어가 포개진다** — `lib/read/cards.ts`에 「그리드는
+  같은 칸에 든 것을 포갠다」고 적어 놓고도 여기서 똑같이 밟았다(실측: 본문이 통째로
+  카드 뒤로 사라졌다).
+
+  집중해서 읽기가 없애야 하는 것은 **주변 크롬**이지 옆의 카드가 아니다. 카드는
+  「이 사람 누구지」에 답하는 물건이라 집중해서 읽을 때 오히려 더 쓴다.
+*/
+
+/* ══════════════════════════════════════════════════════════════════
+   왼쪽 패널 접기 — 전 화면에 걸린다(읽기 화면 전용이 아니다)
+   ══════════════════════════════════════════════════════════════════ */
+html[data-rail='off'] .astryx-side-nav {
+  display: none;
 }
 
 h1,

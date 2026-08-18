@@ -43,6 +43,12 @@ describe('첫 페인트 스크립트', () => {
     expect(script).toContain('!==null')
   })
 
+  it('**글자 크기는 CSS 변수까지 칠한다** — 속성만으로는 글자가 안 커진다', () => {
+    // `data-size`는 값을 기억할 뿐이고 실제로 키우는 것은 `--read-scale`이다.
+    // 여기서 빠지면 키워 둔 사람이 페이지마다 기본 크기를 한 번 보고 나서 커진다
+    expect(script).toContain('--read-scale')
+  })
+
   it('한 줄이다 — head에서 동기로 돌아야 한다', () => {
     expect(script).not.toContain('\n')
   })

@@ -3,6 +3,7 @@ import { navTree, type NavNode } from '../lib/nav'
 import { SiteFooter } from './SiteFooter'
 import { Search } from './Search'
 import { ThemeToggle } from './ThemeToggle'
+import { RailToggle } from './RailToggle'
 
 /**
  * 사이트 껍데기 — 상단 바 + 좌측 사이드바 + 본문 + 하단.
@@ -65,6 +66,14 @@ export function Shell({
       topNav={
         <TopNav
           heading={<TopNavHeading heading="로마쇠망사 자료실" headingHref="/" />}
+          startContent={
+            /*
+              왼쪽 목록 접기. **상단 바 왼쪽에 둔다** — 접는 대상 바로 위라 무엇을
+              여닫는 손잡이인지 자리로 말한다. 오른쪽(찾기·밝기)은 화면 전체에
+              대한 행동이고 이건 왼쪽 칸에 대한 것이라 자리를 가른다.
+            */
+            sidebar ? <RailToggle /> : undefined
+          }
           endContent={
             <Stack direction="horizontal" gap={2} vAlign="center">
               {/* 객체가 644장이다. 사이드바 목록만으로는 「하스드루발 어디 나오더라」에 답이 안 된다 */}

@@ -75,7 +75,16 @@ export function bootScript(): string {
       `if(${varOf(attr)}!==null)document.documentElement.dataset.${attr}=${varOf(attr)};`,
   ).join('')
 
-  return `(function(){${theme}${rest}})()`
+  /*
+   * 글자 크기만 속성이 아니라 **CSS 변수**로도 실어야 한다. `data-size="1.26"`은
+   * 값을 기억할 뿐이고, 실제로 글자를 키우는 것은 `--read-scale`이다. 여기서 같이
+   * 안 칠하면 **키워 둔 사람이 페이지마다 기본 크기를 한 번 보고 나서 커진다** —
+   * 테마의 흰 화면 번쩍임과 같은 병이다.
+   */
+  const scale =
+    `if(${varOf('size')}!==null)document.documentElement.style.setProperty('--read-scale',${varOf('size')});`
+
+  return `(function(){${theme}${rest}${scale}})()`
 }
 
 /** 스크립트 안에서 쓸 지역 변수 이름. 속성마다 달라야 서로 안 덮는다 */

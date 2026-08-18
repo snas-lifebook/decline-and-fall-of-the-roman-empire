@@ -133,7 +133,28 @@ export function ReadCards() {
     }
 
     const onKey = (ev: KeyboardEvent) => {
-      if (ev.key === 'Escape') close()
+      if (ev.key !== 'Escape') return
+      /*
+       * **들어갈 길이 있으면 나올 길도 있어야 한다.** 집중해서 읽기는 좌우와 상단
+       * 바를 통째로 숨기므로, 그 상태에서 설정을 여는 톱니마저 안 보인다. Esc가
+       * 유일한 출구다.
+       *
+       * 시트가 열려 있으면 시트를 먼저 닫는다 — 한 번에 둘을 닫으면 무엇이
+       * 닫혔는지 모른다.
+       */
+      if (document.querySelector('.read-card[data-open]')) {
+        close()
+        return
+      }
+      if (document.documentElement.dataset.focus === 'on') {
+        document.documentElement.dataset.focus = 'off'
+        try {
+          localStorage.setItem('read-focus', 'off')
+        } catch {
+          // 저장이 막혀도 이번 화면에서는 빠져나와야 한다
+        }
+        window.dispatchEvent(new StorageEvent('storage', { key: 'read-focus' }))
+      }
     }
 
     const body = document.querySelector('.read-grid') ?? document.body

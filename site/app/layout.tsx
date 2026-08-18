@@ -43,13 +43,21 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
          */}
         <script dangerouslySetInnerHTML={{ __html: bootScript() }} />
         {/*
-         * Pretendard를 실제로 싣는다. `globals.css`가 이름만 적어두고 있었는데,
-         * 그러면 이 폰트가 깔린 사람에게만 보이고 윈도우 팀원은 맑은 고딕을 본다.
-         * dynamic-subset이라 화면에 뜬 글자의 조각만 내려온다.
+         * **글꼴을 자체 호스팅한다 — 이걸로 외부 요청이 0이 됐다.**
+         *
+         * 앞 판은 Pretendard를 jsdelivr의 `dynamic-subset`으로 받았고, 그게 이
+         * 사이트의 마지막 외부 요청이었다. 조각내는 것이 오히려 비싸다는 것을
+         * 실측하고(대목 한 장에 1,163KB) `public/fonts/`로 옮겼다. `globals.css`의
+         * `@font-face` 넷이 정본이다.
+         *
+         * 기본값 Pretendard만 미리 받는다. 나머지 셋은 고를 때 받는다.
          */}
         <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/Pretendard-Regular.subset.woff2"
+          crossOrigin="anonymous"
         />
       </head>
       <body>
