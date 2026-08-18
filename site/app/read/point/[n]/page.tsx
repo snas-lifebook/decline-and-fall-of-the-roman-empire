@@ -18,7 +18,8 @@ import { pointDoc } from '../../../../lib/text/point'
 import { pageMeta } from '../../../../lib/meta'
 import { PointGraph } from '../../../../components/PointGraph'
 import { ReadGrid } from '../../../../components/ReadGrid'
-import { ReadSettings } from '../../../../components/ReadSettings'
+import { ReadRail } from '../../../../components/ReadRail'
+import { ReadCards } from '../../../../components/ReadCards'
 import { MapHover } from '../../../../components/MapHover'
 import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
@@ -48,6 +49,32 @@ import { renderPointMap } from '../../../../lib/place/svg'
 
 const ENTITIES = loadEntities()
 const LINKS = loadLinks()
+
+/**
+ * 앞 대목 · 다음 대목.
+ *
+ * **위아래 양쪽에 둔다**(River 요청). 위의 것은 다 읽자마자 손이 가는 자리이고,
+ * 아래 것은 딸린 자료까지 다 보고 나서 가는 자리다. 같은 것을 두 번 쓰므로 한
+ * 군데서 만든다 — 두 벌로 두면 한쪽만 고치는 날이 온다.
+ */
+function Steps({
+  prev,
+  next,
+}: {
+  prev?: { href: string; title: string }
+  next?: { href: string; title: string }
+}) {
+  return (
+    <Stack direction="horizontal" gap={3} justify="between" wrap="wrap" width="100%">
+      <Text size="sm" color="secondary">
+        {prev ? <a href={prev.href}>← {prev.title}</a> : null}
+      </Text>
+      <Text size="sm" color="secondary">
+        {next ? <a href={next.href}>{next.title} →</a> : null}
+      </Text>
+    </Stack>
+  )
+}
 
 export function generateStaticParams() {
   return Array.from({ length: POINT_COUNT }, (_, i) => ({ n: String(i + 1) }))
@@ -105,35 +132,19 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
       <Divider />
 
       {/*
-        목차가 날개에서 여기로 내려왔다. 접어두면 한 줄이라 본문을 안 밀어내고,
-        절이 어디까지 있는지 궁금할 때만 편다. 포인트 본문은 절이 3~6개다.
+        본문 + 여백 카드 + 오른쪽 붙박이(목차·설정).
+
+        **목차와 설정이 그리드 안으로 들어왔다.** 앞 판은 목차를 본문 위 접힌 블록에,
+        설정을 본문 위에 띄워 뒀는데 River가 「목차가 사이드에서 없어졌는데 스크롤 할
+        때 절도 뜨고 카드 뉴스도 떠야 좋을 것 같은데」·「설정 토글이 디자인적으로 맞는
+        자리도 아닌 것 같고 일관성이 없어서」라고 짚었다. 오른쪽 340px 한 칸이
+        **맥락을 담는 자리**로 정해졌고, 목차·카드·설정이 다 거기 산다.
       */}
-      {/*
-        접힌 것 둘을 나란히 둔다 — 「어디까지 있나」(목차)와 「옆에 무엇을 세울까」
-        (카드 종류). 둘 다 펴기 전에는 한 줄이라 본문을 안 밀어낸다.
-      */}
-      <Stack direction="horizontal" gap={4} wrap="wrap" style={NARROW}>
-        <ReadSettings />
-      </Stack>
-
-      {sections.length > 1 ? (
-        <div style={NARROW}>
-          <Collapsible defaultIsOpen={false} trigger={`이 대목의 절 ${sections.length}개`}>
-            <Stack direction="vertical" gap={1} hAlign="start">
-              {sections.map((s) => (
-                <Text key={s.id} size="sm" color="secondary">
-                  <a href={`#${s.id}`}>{s.title}</a>
-                </Text>
-              ))}
-            </Stack>
-          </Collapsible>
-        </div>
-      ) : null}
-
-
-
-      {/* 본문 + 여백 카드. 간격은 `globals.css`의 H2 마진이 정한다 */}
-      <ReadGrid layout={layout} />
+      <ReadGrid
+        layout={layout}
+        rail={<ReadRail items={sections.map((s) => ({ id: s.id, label: s.title, level: 2 }))} />}
+      />
+      <ReadCards />
 
       {/*
         **말없이 자르지 않는다.** 포인트 13은 27명이 나와서 다 세우면 네 문단 중
@@ -151,24 +162,48 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
 
 
       {/*
-        **지도는 한 벌만 그린다.** 「본문 위」와 「지명에 올릴 때」가 같은 SVG를 쓰고
-        자리만 CSS가 바꾼다 — 두 벌을 그리면 한쪽을 고칠 때 다른 쪽이 조용히 어긋난다.
-
-        DOM 자리는 여기(본문 뒤)다. 「본문 위」로 고른 사람에게는 CSS `order`가 위로
-        올린다. 이 자리에 둬야 **지도가 안 뜨는 설정에서도 본문이 먼저 읽힌다** —
-        낭독기와 검색엔진이 보는 순서가 이것이다.
+        **앞뒤로 넘어가는 길이 딸림 자료보다 먼저다.** 본문을 다 읽은 사람이 제일 자주
+        하는 일은 다음 대목으로 가는 것이지 관계망을 보는 것이 아니다. 앞 판은 지도·
+        관계망·표·FAQ 넷을 다 지나야 나왔다(River 지적).
       */}
-      {/* 폭은 CSS가 정한다 — 인라인 `maxWidth`를 두면 호버 패널이 그걸 못 이긴다 */}
-      <div className="map-slot">
-        <Stack direction="vertical" gap={1.5} as="section">
-          <Heading level={2}>이 대목의 지도</Heading>
-          {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
-          <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
-          <Text size="sm" color="secondary">
-            지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만 있는 점은 위치가
-            추정입니다.
-          </Text>
-        </Stack>
+      <div style={NARROW}>
+        <Steps prev={prev} next={next} />
+      </div>
+
+      <Divider />
+
+      {/*
+        딸린 자료 넷은 **접어 둔다.** 넷 다 펴 두면 본문보다 길어져서, 다 읽고 내려온
+        사람이 「끝」을 못 찾는다. 제목만 남기면 무엇이 있는지는 알면서 자리는 안 먹는다.
+
+        지도만 예외로, 「본문 아래」로 고른 사람에게는 펴진 채 뜬다 — 그 설정을 고른
+        뜻이 곧 「다 읽고 한 번에 훑겠다」이기 때문이다.
+      */}
+      <div style={NARROW}>
+        {/*
+          **지도는 한 벌만 그린다.** 「본문 아래」와 「지명에 올릴 때」가 같은 SVG를 쓰고
+          자리만 CSS가 바꾼다 — 두 벌을 그리면 한쪽을 고칠 때 다른 쪽이 조용히 어긋난다.
+
+          이 자리에 둬야 **지도가 안 뜨는 설정에서도 본문이 먼저 읽힌다** — 낭독기와
+          검색엔진이 보는 순서가 이것이다.
+        */}
+        {/*
+          **지도만 토글이 아니다.** River가 「이 대목의 지도(마지막에는 그냥 뜨게)」라고
+          괄호로 따로 적었다. 접으면 안 되는 실질적 이유도 있다 — 「지명에 올릴 때」
+          모드에서 이 자리가 **호버 패널의 몸통**이라, 접혀 있으면 마우스를 올려도
+          띄울 것이 없다. 한 벌만 그리기로 한 값이다.
+        */}
+        <div className="map-slot">
+          <Stack direction="vertical" gap={1.5} as="section">
+            <Heading level={2}>이 대목의 지도</Heading>
+            {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
+            <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
+            <Text size="sm" color="secondary">
+              지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만 있는 점은 위치가
+              추정입니다.
+            </Text>
+          </Stack>
+        </div>
       </div>
       <MapHover />
 
@@ -178,12 +213,10 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         누가 누구 편이었나」를 되짚는 자리가 더 맞는다.
       */}
       <div style={NARROW}>
-        <Stack direction="vertical" gap={1.5} as="section">
-          <Heading level={2}>이 대목의 관계망</Heading>
+        <Collapsible defaultIsOpen={false} trigger="이 대목의 관계망">
           <PointGraph point={n} entities={ENTITIES} links={LINKS} />
-        </Stack>
+        </Collapsible>
       </div>
-
 
       {/*
         **본문에서 표로 가는 길.** 감사(2026-08-17)가 잡은 동선 결함이다 — 30장
@@ -191,26 +224,29 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         사람이 사이드바 「가져가기」로 나가 포인트를 다시 골라야 했다(+2클릭).
         읽던 자리에서 바로 넘어간다.
       */}
-      <Stack direction="vertical" gap={1} as="section" style={NARROW}>
-        <Heading level={2}>이 대목을 표로 받기</Heading>
-        <Text color="secondary">
-          여기 나온 인물·지명을 <Link href={`/download/${n}`}>표 한 장</Link>으로 받아 시트에
-          붙여넣을 수 있습니다.
-        </Text>
-      </Stack>
-
       <div style={NARROW}>
-        <Faq items={faqFor(href)} />
+        <Collapsible defaultIsOpen={false} trigger="이 대목을 표로 받기">
+          <Text color="secondary">
+            여기 나온 인물·지명을 <Link href={`/download/${n}`}>표 한 장</Link>으로 받아 시트에
+            붙여넣을 수 있습니다.
+          </Text>
+        </Collapsible>
       </div>
 
-      <Stack direction="horizontal" gap={3} justify="between" wrap="wrap" style={NARROW}>
-        <Text size="sm" color="secondary">
-          {prev ? <a href={prev.href}>← {prev.title}</a> : null}
-        </Text>
-        <Text size="sm" color="secondary">
-          {next ? <a href={next.href}>{next.title} →</a> : null}
-        </Text>
-      </Stack>
+      {/*
+        FAQ도 통째로 접는다. **제목은 `Faq`에 안 맡기고 여기서 단다** — 안 그러면
+        「자주 묻는 것」이 토글 이름으로 한 번, 그 안의 제목으로 또 한 번 나온다.
+        `/faq` 화면은 분류마다 제목이 필요해서 그쪽 기본값은 그대로 둔다.
+      */}
+      <div style={NARROW}>
+        <Collapsible defaultIsOpen={false} trigger="자주 묻는 것">
+          <Faq items={faqFor(href)} title={null} />
+        </Collapsible>
+      </div>
+
+      <div style={NARROW}>
+        <Steps prev={prev} next={next} />
+      </div>
     </Shell>
   )
 }

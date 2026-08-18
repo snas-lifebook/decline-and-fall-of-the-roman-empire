@@ -4,6 +4,7 @@ import '@astryxdesign/core/astryx.css'
 import '@astryxdesign/theme-neutral'
 import './globals.css'
 import { Korean } from '../components/Korean'
+import { bootScript } from '../lib/read/boot'
 
 export const metadata: Metadata = {
   title: '산스 인생책 로마쇠망사 자료실',
@@ -33,29 +34,14 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
          * 고른 값이 없으면 기기 설정을 따른다.
          */}
         {/*
-         * **`localStorage`만 따로 감싼다.** 앞 판은 통째로 감싸고 `catch`에서
-         * `light`로 떨어뜨렸는데, 사생활 모드처럼 저장이 막힌 브라우저에서는
-         * **어두운 기기를 쓰는 사람이 밝은 화면을 받았다**(검수 실측). 저장을
-         * 못 읽는 것과 기기 설정을 못 읽는 것은 다른 일이다.
-         */}
-        {/*
-         * 읽기 화면의 「옆에 세울 것」도 같은 자리에서 칠한다. 안 그러면 인물을
-         * 꺼둔 사람이 페이지마다 카드가 떴다가 사라지는 것을 본다 — 테마의 흰
-         * 화면 번쩍임과 같은 병이다.
+         * 무엇을 칠할지는 `lib/read/boot.ts`의 목록 하나가 정한다.
          *
-         * **값이 없으면 속성을 안 단다.** 속성이 없으면 CSS 규칙이 하나도 안 걸려
-         * 전부 보인다. 저장이 막힌 브라우저에서 카드가 통째로 사라지는 쪽보다 낫다.
+         * **손으로 적던 앞 판은 `read-map`을 빠뜨렸다**(2026-08-18). 지도를 「본문
+         * 위에」로 골라둔 사람이 새로고침하면 단추는 그대로인데 화면은 호버로
+         * 돌아갔다 — 카드는 칠하고 지도는 안 칠한 비대칭이라 누락이었다. 설정이
+         * 여덟 개로 늘어나므로 목록을 돌리고 테스트가 목록과 대조한다.
          */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){var m=null;try{m=localStorage.getItem('theme')}catch(e){}" +
-              "var d=m==='dark'||((!m||m==='system')&&matchMedia('(prefers-color-scheme:dark)').matches);" +
-              "document.documentElement.dataset.theme=d?'dark':'light';" +
-              "var c=null;try{c=localStorage.getItem('read-cards')}catch(e){}" +
-              "if(c!==null)document.documentElement.dataset.cards=c})()",
-          }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: bootScript() }} />
         {/*
          * Pretendard를 실제로 싣는다. `globals.css`가 이름만 적어두고 있었는데,
          * 그러면 이 폰트가 깔린 사람에게만 보이고 윈도우 팀원은 맑은 고딕을 본다.

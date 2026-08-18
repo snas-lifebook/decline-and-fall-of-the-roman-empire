@@ -20,7 +20,7 @@ import type { ReadLayout } from '../lib/read/cards'
  * 블록마다 `Markdown`을 따로 부른다. 본문이 문단 1,453 · 제목 168 · 불렛 41뿐이고
  * 표도 코드블록도 없어서(실측 2026-08-18) 빈 줄로 갈라도 마크다운이 안 깨진다.
  */
-export function ReadGrid({ layout }: { layout: ReadLayout }) {
+export function ReadGrid({ layout, rail }: { layout: ReadLayout; rail?: React.ReactNode }) {
   const byRow = new Map<number, ReadLayout['cards']>()
   for (const c of layout.cards) {
     byRow.set(c.row, [...(byRow.get(c.row) ?? []), c])
@@ -33,6 +33,15 @@ export function ReadGrid({ layout }: { layout: ReadLayout }) {
    */
   return (
     <div className="read-grid">
+      {/*
+        **레일은 그리드의 직계 자식이어야 한다.** 감싸면 `grid-column`·`grid-row`가
+        조용히 무시된다(카드가 블록 안에 들어가면 안 되는 것과 같은 이유). 그래서
+        페이지가 만든 것을 여기서 받아 첫 자식으로 낸다.
+
+        DOM에서 본문보다 앞에 있지만 **낭독기 순서는 이게 맞다** — 「이 대목의 절」이
+        먼저 들리고 본문이 뒤따르는 것이 목차의 쓰임이다.
+      */}
+      {rail}
       {layout.blocks.map((block, i) => {
         const h = layout.headings[i]
         return (
