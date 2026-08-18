@@ -26,15 +26,27 @@ import { ReadSettings } from './ReadSettings'
  *
  * ## 붙어 있게 만드는 법 — 그리드의 함정
  *
- * **`position: sticky`인 그리드 항목은 자기 grid area 안에 갇힌다.** 이걸 1행에 두면
- * 그 행 높이만큼만 따라오다가 떨어진다. `grid-row: 1 / -1`로 열 전체를 차지하게
- * 하고 `align-self: start`로 내용 높이만 쓰게 해야 끝까지 따라온다. CSS 쪽에 적어뒀다.
+ * **`position: sticky`인 그리드 항목은 자기 grid area 안에 갇힌다.** 1행에 두면 그
+ * 행 높이만큼만 따라오다 떨어진다.
+ *
+ * 그래서 CSS에 `grid-row: 1 / -1`이라고 적어 뒀는데 **그게 안 듣는다.** 명시 행
+ * (`grid-template-rows`)이 없으면 `-1`이 1번 줄로 풀려서 결국 `1 / 1`, 1행 한 칸이다.
+ * 값은 두 번 치러졌다 — ①레일 키만큼 1행이 늘어 **첫 문단 아래에 빈 자리**가 생겼고
+ * (지도를 이 안에 넣자 253px로 커져서 River가 바로 짚었다) ②붙어 있으라고 만든
+ * `sticky`가 갈 데가 없었다.
+ *
+ * `repeat()`의 반복 횟수에는 변수를 못 쓰고 `grid-row-end`에는 `calc()`를 못 쓴다.
+ * 그래서 **행 수를 여기서 받아 인라인으로 박는다**(`rowCount`가 센다).
  */
-export function ReadRail({ items }: { items: OutlineItem[] }) {
+export function ReadRail({ items, rows }: { items: OutlineItem[]; rows?: number }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <aside className="read-rail" aria-label="읽기 도구">
+    <aside
+      className="read-rail"
+      aria-label="읽기 도구"
+      style={rows ? { gridRow: `1 / ${rows + 1}` } : undefined}
+    >
       <Stack direction="vertical" gap={2} hAlign="start" width="100%">
         <Stack direction="horizontal" gap={2} vAlign="center" justify="between" width="100%">
           <Text size="sm" weight="semibold" color="secondary">

@@ -27,7 +27,7 @@ import { MapFollow } from '../../../../components/MapFollow'
 import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
 import { loadEntities, loadLinks } from '../../../../lib/ontology'
-import { readLayout, TAIL_TITLE } from '../../../../lib/read/cards'
+import { readLayout, rowCount, TAIL_TITLE } from '../../../../lib/read/cards'
 import { coordsOfPoint } from '../../../../lib/place/coords'
 import { renderPointMap } from '../../../../lib/place/svg'
 
@@ -147,6 +147,8 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         layout={layout}
         rail={
           <ReadRail
+            // 레일이 열 전체를 차지해야 첫 문단 아래가 안 벌어지고 sticky도 산다
+            rows={rowCount(layout)}
             /*
               **목차에서도 「등장 객체」를 뺀다.** 그건 절이 아니라 딸린 목록이고,
               이제 본문 밖 토글로 나간다. 안 빼면 목차를 눌렀을 때 아무 데도 안 간다 —

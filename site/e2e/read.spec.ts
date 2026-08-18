@@ -211,6 +211,57 @@ test.describe('지도가 따라온다', () => {
     expect(second, '절이 바뀌었는데 지도가 그대로다').not.toEqual(first)
   })
 
+  /**
+   * River가 화면을 보고 짚었다: 「지도를 사이드 패널에 두니까 이렇게 간격이 생기네?」
+   *
+   * 원인은 지도가 아니라 **그리드였다.** `grid-row: 1 / -1`은 명시 행이 없으면
+   * `1 / 1`로 풀려서 레일이 1행 한 칸에 갇히고, 그 행이 레일 키만큼 늘어난다.
+   * 레일이 짧을 때는 안 보이다가 지도가 들어가자 253px 빈 자리로 드러났다.
+   */
+  test('**첫 문단 아래가 안 벌어진다** — 레일이 1행을 늘리면 안 된다', async ({ page }) => {
+    await page.goto('/read/point/1')
+    await page.evaluate(() => localStorage.setItem('read-map', 'side'))
+    await page.reload()
+    await page.waitForSelector('.read-block')
+    await page.waitForTimeout(400)
+
+    const seen = await page.evaluate(() => {
+      const grid = document.querySelector('.read-grid')!
+      const row1 = parseFloat(getComputedStyle(grid).gridTemplateRows.split(' ')[0])
+      const first = document.querySelector('.read-grid > .read-block')!.getBoundingClientRect()
+      const rail = document.querySelector('.read-rail')!.getBoundingClientRect()
+      return { row1, block: first.height, rail: rail.height }
+    })
+    // 1행은 첫 블록 높이여야 한다. 레일 키를 따라가면 그만큼이 통째로 빈 자리다
+    expect(seen.rail, '지도가 레일에 안 들어갔다').toBeGreaterThan(seen.block)
+    expect(
+      seen.row1,
+      `1행이 첫 블록(${seen.block})이 아니라 레일(${seen.rail})을 따라간다`,
+    ).toBeLessThan(seen.block + 8)
+  })
+
+  test('레일이 본문 끝까지 따라온다 — 붙박이가 중간에 떨어지지 않는다', async ({ page }) => {
+    await page.goto('/read/point/1')
+    await page.evaluate(() => localStorage.setItem('read-map', 'side'))
+    await page.reload()
+    await page.waitForSelector('.read-block')
+
+    /*
+     * **끝까지 굴리면 안 된다.** 그리드가 페이지보다 먼저 끝나므로(아래에 딸린 자료와
+     * 푸터가 있다) 맨 아래에서는 레일이 제 칸을 다 쓰고 놓여난다 — 그게 맞는 동작이다.
+     * 여기서 볼 것은 **본문을 읽는 동안** 붙어 있는가다.
+     */
+    const top = await page.evaluate(async () => {
+      const main = document.getElementById('astryx-app-shell-main')!
+      main.scrollTop = Math.min(1500, main.scrollHeight - main.clientHeight - 400)
+      await new Promise((r) => setTimeout(r, 250))
+      return document.querySelector('.read-rail')!.getBoundingClientRect().top
+    })
+    // 붙어 있으면 화면 위쪽에 남는다(상단 바 아래). 흘러가면 음수로 한참 내려간다
+    expect(top, '레일이 굴러가 버렸다').toBeGreaterThan(0)
+    expect(top, '레일이 화면 아래에 있다').toBeLessThan(120)
+  })
+
   test('모드를 되돌리면 지도가 본문 아래 제자리로 간다', async ({ page }) => {
     await page.goto(POINT)
     await page.evaluate(() => localStorage.setItem('read-map', 'side'))

@@ -16,7 +16,7 @@ import { ReadCards } from '../../../../components/ReadCards'
 import { FocusExit } from '../../../../components/FocusExit'
 import { book, bookHref, textPart, textSlug } from '../../../../lib/book'
 import { readDoc } from '../../../../lib/text/point'
-import { readLayout } from '../../../../lib/read/cards'
+import { readLayout, rowCount } from '../../../../lib/read/cards'
 import { docSections } from '../../../../lib/doc'
 import { navSteps } from '../../../../lib/nav'
 import { pageMeta } from '../../../../lib/meta'
@@ -91,7 +91,12 @@ export default async function BookText({ params }: { params: Promise<{ slug: str
 
       <ReadGrid
         layout={layout}
-        rail={<ReadRail items={sections.map((s) => ({ id: s.id, label: s.title, level: 2 }))} />}
+        rail={
+          <ReadRail
+            rows={rowCount(layout)}
+            items={sections.map((s) => ({ id: s.id, label: s.title, level: 2 }))}
+          />
+        }
       />
       <ReadCards />
       <FocusExit />

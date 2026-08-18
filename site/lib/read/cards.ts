@@ -108,6 +108,21 @@ export type ReadLayout = {
   total: number
 }
 
+/**
+ * 그리드가 실제로 쓰는 행 수.
+ *
+ * **오른쪽 레일이 이 숫자를 알아야 한다.** CSS에 `grid-row: 1 / -1`이라고 적어 두면
+ * 열 전체를 차지할 것 같지만 **안 그렇다** — 명시 행(`grid-template-rows`)이 없으면
+ * `-1`이 1번 줄로 풀려서 `1 / 1`, 즉 **1행 한 칸**이 된다. 그러면 레일 키만큼 1행이
+ * 늘어나 첫 문단 아래에 빈 자리가 생기고(실측 2026-08-19: 첫 블록 135px인데 1행이
+ * 388px — 253px가 빈 자리였다. River가 화면을 보고 짚었다), 붙어 있으라고 만든
+ * `sticky`도 갈 데가 없어진다.
+ *
+ * 카드가 밀려 마지막 블록보다 아래 행에 설 수 있으므로 둘 중 큰 쪽을 쓴다.
+ */
+export const rowCount = (l: Pick<ReadLayout, 'blocks' | 'cards'>) =>
+  Math.max(l.blocks.length, ...l.cards.map((c) => c.row), 1)
+
 const HREF = /\]\(\/objects\/([^/]+)\/([^)]+)\)/g
 
 export function readLayout(
