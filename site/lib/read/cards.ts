@@ -63,9 +63,38 @@ export type Card = {
   line: string
 }
 
+/**
+ * 본문 맨 아래 「### 등장 객체」 절의 제목.
+ *
+ * **이건 읽는 글이 아니라 목록이다.** 인물·지명·사건을 종류별로 늘어놓은 것이라
+ * 본문에 그대로 두면 다 읽고 내려온 사람이 링크 예순 개짜리 벽을 만난다(River가
+ * 화면을 보고 짚었다). 관계망·표·FAQ와 같은 성격이므로 같이 접는다.
+ *
+ * `lib/text/mentions.ts`가 같은 문자열로 이 절을 읽는다 — 거기가 원래 주인이고
+ * 여기는 화면에서 어디까지가 본문인지 가르는 데만 쓴다.
+ */
+/** 이 제목이 곧 「여기부터는 본문이 아니다」는 표시다 */
+export const TAIL_TITLE = '등장 객체'
+
+const TAIL_HEADING = /^#{2,4}\s*등장 객체\s*$/m
+
+/**
+ * **제목 수준을 고정하지 않는다.** 원본 `points/*.md`는 `### 등장 객체`인데
+ * `pointDoc`이 본문을 다듬으면서 `## `로 한 단계 올린다. `'### 등장 객체'`로 찾다가
+ * 30개 대목에서 **하나도 안 걸렸다**(2026-08-18). 글자로 찾고 `#` 수는 안 센다.
+ */
+export const isTailHeading = (block: string) => TAIL_HEADING.test(block.split('\n')[0])
+
 export type ReadLayout = {
   /** 본문 블록. 각각이 그리드 한 행이 된다 */
   blocks: string[]
+  /**
+   * 본문 뒤에 붙은 「등장 객체」 목록. 화면이 접어서 낸다.
+   *
+   * **카드도 여기서는 안 뽑는다.** 목록에만 이름이 나오는 사람에게 카드를 세우면
+   * 그 카드가 본문 어디와도 짝이 안 맞는다 — 여백 카드는 「읽던 자리 옆」이 전부다.
+   */
+  tail: string[]
   /**
    * 블록과 같은 길이. 그 블록이 절 제목이면 `{title, id}`, 아니면 `null`.
    *
@@ -87,10 +116,15 @@ export function readLayout(
   entities: Entity[],
   links: Link[] = [],
 ): ReadLayout {
-  const blocks = md
+  const all = md
     .split(/\n\s*\n/)
     .map((b) => b.trim())
     .filter(Boolean)
+
+  // 「등장 객체」부터 끝까지는 본문이 아니다. 카드도 여기서 안 뽑는다
+  const cut = all.findIndex(isTailHeading)
+  const blocks = cut === -1 ? all : all.slice(0, cut)
+  const tail = cut === -1 ? [] : all.slice(cut)
 
   /*
    * 주소로 되찾는다. `entitySlug`는 이름에서 괄호를 지우고 공백을 밑줄로 바꾸므로
@@ -151,5 +185,5 @@ export function readLayout(
 
   // 밀어낸 카드가 순서를 흐트러뜨릴 수 있다. 행 순으로 세운다
   cards.sort((a, b) => a.row - b.row)
-  return { blocks, headings, cards, total: found.length }
+  return { blocks, tail, headings, cards, total: found.length }
 }

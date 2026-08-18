@@ -8,6 +8,7 @@ import {
   Breadcrumbs,
   BreadcrumbItem,
   Collapsible,
+  Markdown,
 } from '@astryxdesign/core'
 import { Shell } from '../../../../components/Shell'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
@@ -20,11 +21,12 @@ import { PointGraph } from '../../../../components/PointGraph'
 import { ReadGrid } from '../../../../components/ReadGrid'
 import { ReadRail } from '../../../../components/ReadRail'
 import { ReadCards } from '../../../../components/ReadCards'
+import { FocusExit } from '../../../../components/FocusExit'
 import { MapHover } from '../../../../components/MapHover'
 import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
 import { loadEntities, loadLinks } from '../../../../lib/ontology'
-import { readLayout } from '../../../../lib/read/cards'
+import { readLayout, TAIL_TITLE } from '../../../../lib/read/cards'
 import { coordsOfPoint } from '../../../../lib/place/coords'
 import { renderPointMap } from '../../../../lib/place/svg'
 
@@ -53,9 +55,9 @@ const LINKS = loadLinks()
 /**
  * 앞 대목 · 다음 대목.
  *
- * **위아래 양쪽에 둔다**(River 요청). 위의 것은 다 읽자마자 손이 가는 자리이고,
- * 아래 것은 딸린 자료까지 다 보고 나서 가는 자리다. 같은 것을 두 번 쓰므로 한
- * 군데서 만든다 — 두 벌로 두면 한쪽만 고치는 날이 온다.
+ * **한 번만 나온다.** 처음엔 위아래 양쪽에 뒀는데, 딸린 자료 넷이 접혀 있으면
+ * 둘 사이가 170px밖에 안 돼서 **같은 것이 두 번 찍힌 것으로 읽힌다**(River가 화면을
+ * 보고 짚었다). River의 요구는 「딸린 자료보다 먼저」였으므로 앞의 것만 남긴다.
  */
 function Steps({
   prev,
@@ -142,9 +144,21 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
       */}
       <ReadGrid
         layout={layout}
-        rail={<ReadRail items={sections.map((s) => ({ id: s.id, label: s.title, level: 2 }))} />}
+        rail={
+          <ReadRail
+            /*
+              **목차에서도 「등장 객체」를 뺀다.** 그건 절이 아니라 딸린 목록이고,
+              이제 본문 밖 토글로 나간다. 안 빼면 목차를 눌렀을 때 아무 데도 안 간다 —
+              그 id가 본문에 더는 없기 때문이다.
+            */
+            items={sections
+              .filter((s) => s.title !== TAIL_TITLE)
+              .map((s) => ({ id: s.id, label: s.title, level: 2 }))}
+          />
+        }
       />
       <ReadCards />
+      <FocusExit />
 
       {/*
         **말없이 자르지 않는다.** 포인트 13은 27명이 나와서 다 세우면 네 문단 중
@@ -212,6 +226,25 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         카드가 「이 사람이 누구인가」에 답하므로, 그림은 다 읽고 나서 「그래서
         누가 누구 편이었나」를 되짚는 자리가 더 맞는다.
       */}
+      {/*
+        **「등장 객체」도 접는다.** 본문 md의 마지막 절인데 인물·지명·사건을 종류별로
+        늘어놓은 **목록**이라, 그대로 두면 다 읽고 내려온 사람이 링크 예순 개짜리
+        벽을 만난다(River가 화면을 보고 짚었다). 읽는 글이 아니라 딸린 자료이므로
+        아래 셋과 한 줄로 선다.
+      */}
+      {layout.tail.length ? (
+        <div style={NARROW}>
+          <Collapsible defaultIsOpen={false} trigger="이 대목의 등장 객체">
+            <Stack direction="vertical" gap={2}>
+              {layout.tail.map((block, i) => (
+                // 제목 줄은 토글 이름이 이미 말하므로 빼고 목록만 낸다
+                <Markdown key={i}>{i === 0 ? block.replace(/^###[^\n]*\n?/, '') : block}</Markdown>
+              ))}
+            </Stack>
+          </Collapsible>
+        </div>
+      ) : null}
+
       <div style={NARROW}>
         <Collapsible defaultIsOpen={false} trigger="이 대목의 관계망">
           <PointGraph point={n} entities={ENTITIES} links={LINKS} />
@@ -242,10 +275,6 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         <Collapsible defaultIsOpen={false} trigger="자주 묻는 것">
           <Faq items={faqFor(href)} title={null} />
         </Collapsible>
-      </div>
-
-      <div style={NARROW}>
-        <Steps prev={prev} next={next} />
       </div>
     </Shell>
   )

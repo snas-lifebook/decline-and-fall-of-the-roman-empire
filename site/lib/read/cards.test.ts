@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest'
-import { readLayout, CARD_TYPES, MAX_PER_BLOCK, MAX_CARDS, MAX_DENSITY } from './cards'
+import { readLayout, isTailHeading, TAIL_TITLE, CARD_TYPES, MAX_PER_BLOCK, MAX_CARDS, MAX_DENSITY } from './cards'
 import { loadEntities, loadLinks } from '../ontology'
 import { pointDoc } from '../text/point'
 import { docSections } from '../doc'
@@ -22,8 +22,8 @@ describe('본문 쪼개기', () => {
 
   it('블록을 합치거나 잃지 않는다 — 본문 글자가 그대로 남는다', () => {
     const md = pointDoc(5).md
-    const { blocks } = readLayout(5, md, ENTITIES)
-    const lost = md.replace(/\s+/g, '').length - blocks.join('').replace(/\s+/g, '').length
+    const { blocks, tail } = readLayout(5, md, ENTITIES)
+    const lost = md.replace(/\s+/g, '').length - [...blocks, ...tail].join('').replace(/\s+/g, '').length
     expect(lost).toBe(0)
   })
 })
@@ -34,7 +34,11 @@ describe('절 제목', () => {
       const mine = layoutOf(n)
         .headings.filter((h) => h !== null)
         .map((h) => `${h!.id}|${h!.title}`)
-      const theirs = docSections(pointDoc(n).md).sections.map((s) => `${s.id}|${s.title}`)
+      // **「등장 객체」만 빼고** 같아야 한다. 그건 절이 아니라 딸린 목록이라
+      // 본문에서 갈라 냈고, 목차(`ReadRail`)도 같은 기준으로 거른다
+      const theirs = docSections(pointDoc(n).md)
+        .sections.filter((s) => s.title !== TAIL_TITLE)
+        .map((s) => `${s.id}|${s.title}`)
       expect(mine, `포인트 ${n}`).toEqual(theirs)
     }
   })
@@ -137,5 +141,42 @@ describe('상수 두 벌', () => {
       expect(CARD_TYPE_KO[t], t).toBe(TYPE_KO[t])
     }
     expect(Object.keys(CARD_TYPE_KO).sort()).toEqual([...CARD_TYPES].sort())
+  })
+})
+
+describe('「등장 객체」는 본문이 아니다', () => {
+  it('**본문 블록에서 빠진다** — 그대로 두면 링크 예순 개짜리 벽이 된다', () => {
+    for (let n = 1; n <= 30; n += 1) {
+      const { md } = pointDoc(n)
+      const { blocks } = readLayout(n, md, ENTITIES, LINKS)
+      const leaked = blocks.filter(isTailHeading)
+      expect(leaked, `포인트 ${n}`).toEqual([])
+    }
+  })
+
+  it('버리지 않고 `tail`로 넘긴다 — 화면이 접어서 낸다', () => {
+    let withTail = 0
+    for (let n = 1; n <= 30; n += 1) {
+      const { md } = pointDoc(n)
+      if (!/^#{2,4}\s*등장 객체\s*$/m.test(md)) continue
+      withTail += 1
+      const { tail } = readLayout(n, md, ENTITIES, LINKS)
+      expect(tail.length, `포인트 ${n} 의 등장 객체가 사라졌다`).toBeGreaterThan(0)
+      expect(isTailHeading(tail[0])).toBe(true)
+    }
+    expect(withTail, '등장 객체가 있는 대목이 하나도 없다면 이 규칙이 죽은 것이다').toBeGreaterThan(20)
+  })
+
+  it('**목록에만 나오는 사람은 카드가 안 된다** — 본문 어디와도 짝이 안 맞는다', () => {
+    // 여백 카드는 「읽던 자리 옆」이 전부다. 등장 객체 목록에 붙는 카드는 뜻이 없다
+    for (let n = 1; n <= 30; n += 1) {
+      const { md } = pointDoc(n)
+      const { blocks, cards } = readLayout(n, md, ENTITIES, LINKS)
+      for (const c of cards) {
+        expect(c.row, `포인트 ${n} — ${c.entity.name} 카드가 본문 밖에 있다`).toBeLessThanOrEqual(
+          blocks.length + 3,
+        )
+      }
+    }
   })
 })

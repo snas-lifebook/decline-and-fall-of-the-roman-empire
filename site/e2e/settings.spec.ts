@@ -119,6 +119,30 @@ test.describe('설정을 만져서 화면이 바뀐다', () => {
     expect(cityOnly, '레이어를 좁혔는데 점 수가 그대로다').toBeLessThan(withDefaults)
   })
 
+  test('**집중해서 읽기에 눈에 보이는 탈출구가 있다** — River가 못 나갔던 자리', async ({
+    page,
+  }) => {
+    /*
+     * 집중 모드가 상단 바·좌패널·오른쪽 패널을 통째로 숨기므로 **그 설정을 연
+     * 톱니까지 같이 사라진다.** Esc만 있으면 그걸 아는 사람만 나갈 수 있고, 「Esc로
+     * 돌아옵니다」라는 안내문마저 숨겨진 설정 패널 안에 있었다.
+     */
+    await page.goto(POINT)
+    await page.evaluate(() => localStorage.setItem('read-focus', 'on'))
+    await page.reload()
+    await page.waitForSelector('.read-block')
+
+    const exit = page.locator('.focus-exit button')
+    await expect(exit, '나갈 단추가 없다').toBeVisible()
+    await exit.click()
+
+    await expect(page.locator('.read-rail')).toBeVisible()
+    // 나간 것이 기억돼야 한다. 새로고침에 다시 갇히면 나간 게 아니다
+    await page.reload()
+    await page.waitForSelector('.read-block')
+    await expect(page.locator('.read-rail')).toBeVisible()
+  })
+
   test('집중해서 읽기가 좌우를 접고 Esc로 돌아온다', async ({ page }) => {
     await page.goto(POINT)
     await page.evaluate(() => {

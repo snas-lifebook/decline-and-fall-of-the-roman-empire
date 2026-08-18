@@ -1128,3 +1128,34 @@ html:is(:not([data-map]), [data-map='hover']) .map-slot .lit .pin {
   border: 1px solid light-dark(#e3e6ea, #2b3138);
   background: light-dark(#eceff2, #232a31);
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   집중해서 읽기에서 나가는 길
+
+   **모드일 때만 뜬다.** 집중 모드가 상단 바·좌패널·오른쪽 패널을 통째로 숨기므로
+   그 설정을 연 톱니까지 같이 사라진다 — River: 「포커스 모드를 해제할 수가 없다」.
+   Esc가 듣더라도 그걸 아는 사람만 나갈 수 있으면 나갈 길이 없는 것과 같다.
+
+   평소엔 흐릿하고 마우스가 가면 또렷해진다. 읽는 것을 방해하지 않으면서 있다는
+   것은 알린다.
+   ══════════════════════════════════════════════════════════════════ */
+.focus-exit {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 50;
+  opacity: 0.35;
+  transition: opacity 0.16s ease;
+}
+
+.focus-exit:hover,
+.focus-exit:focus-within {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focus-exit {
+    opacity: 1;
+    transition: none;
+  }
+}
