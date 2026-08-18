@@ -20,6 +20,8 @@ import { navCrumbs } from '../../../../lib/nav'
 import { pageMeta } from '../../../../lib/meta'
 import { familyOf } from '../../../../lib/family/build'
 import { portraitOf, lifespanOf } from '../../../../lib/read/people'
+import { Faq } from '../../../../components/Faq'
+import { faqFor } from '../../../../lib/faq'
 import { timelineOf } from '../../../../lib/timeline/build'
 import { RelationTimeline } from '../../../../components/RelationTimeline'
 
@@ -324,6 +326,13 @@ export default async function ObjectPage({
           </Text>
         </Stack>
       ) : null}
+
+      {/*
+        **객체 화면에 FAQ가 없었다.** 644장 어디에도 안 떴다 — 「이름 뒤 괄호는 뭔가」·
+        「사진이 없는데 자료가 부실한 건가」처럼 **바로 이 화면에서 나오는 물음**들이
+        `/faq` 목록에만 있었다(2026-08-18 실측: 이 파일에 `faqFor` 호출 0건).
+      */}
+      <Faq items={faqFor('/objects')} />
 
       {/*
         **저작자를 적어야 하는 그림이 대부분이다.** 퍼블릭 도메인 70장을 빼면 나머지는
