@@ -980,7 +980,16 @@ html[data-layers]:not([data-layers~='strait']) .point-map a[data-kind='strait'] 
 }
 
 .rail-map-slot .at .pin-label,
-.rail-map-slot .lit .pin-label {
+.rail-map-slot .lit .pin-label,
+/*
+  **지명이 하나도 안 나오는 절에서는 이름을 다 되살린다.**
+
+  98개 절 중 9개(9.2%)가 그렇다 — 「폭군에게 어울리는 최후」처럼 사람 이야기만 하는
+  대목이다(실측 2026-08-19). 그때 이름표를 다 숨겨 두면 **점만 남은 지도**가 되고,
+  바로 아래 「이름을 누르면 그 화면으로 갑니다」라는 설명이 거짓말이 된다.
+  켤 것이 없으면 끄지도 않는다.
+*/
+.rail-map-slot .point-map[data-follow='none'] .pin-label {
   display: block;
   font-size: 22px;
   stroke-width: 5;
