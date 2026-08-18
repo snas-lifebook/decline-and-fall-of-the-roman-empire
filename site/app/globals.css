@@ -346,3 +346,167 @@ dd a {
 .ego-graph:active {
   cursor: grabbing;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   읽는 자리 옆의 카드 (Snow Fall 방식)
+
+   본문 블록은 1열, 카드는 2열의 **명시한 행**에 선다. 카드가 그 사람이 처음
+   나오는 문단과 세로로 맞물리는 것이 이 기능의 전부이고, 그걸 그리드가 공짜로
+   해준다 — 스크롤 관찰도 좌표 계산도 없다.
+
+   폭은 본문 760 + 24 + 카드 340이다. `.doc` 밖으로 안 새게 전부 `.read-grid`
+   아래로만 건다.
+   ══════════════════════════════════════════════════════════════════ */
+
+.read-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) 340px;
+  column-gap: 24px;
+  align-items: start;
+  width: 100%;
+}
+
+.read-block {
+  grid-column: 1;
+  min-width: 0;
+}
+
+/*
+  카드가 든 문단은 카드 높이만큼 자리를 벌어야 한다 — 안 벌면 다음 문단의 카드가
+  위 카드를 덮는다. `min-height`가 그 바닥을 잡는다.
+*/
+.read-grid > .read-card {
+  grid-column: 2;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid light-dark(#e3e6ea, #2b3138);
+  border-radius: 10px;
+  background: light-dark(#fbfcfd, #1a1f24);
+  text-decoration: none;
+  color: inherit;
+  /*
+    카드가 문단보다 살짝 위에서 시작해야 눈이 둘을 한 덩어리로 묶는다. 아래 여백은
+    **연달아 선 카드가 서로 붙어 한 덩어리 벽으로 보이는 것**을 막는다(실측: 포인트
+    05는 한 화면에 여섯 장이 붙어 목록처럼 읽혔다).
+  */
+  margin-top: 2px;
+  margin-bottom: 10px;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.read-grid > .read-card:hover {
+  border-color: light-dark(#c3ccd6, #3d4650);
+  background: light-dark(#f3f6f9, #21272e);
+}
+
+.read-card-mark {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--mark-bg);
+  color: var(--mark-fg);
+}
+
+.read-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.read-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.read-card-meta {
+  font-size: 12px;
+  line-height: 1.4;
+  color: light-dark(#6a6a6a, #9aa2aa);
+}
+
+/*
+  두 줄에서 자른다. 서술이 긴 객체가 있어서 안 자르면 카드 하나가 문단 셋 높이가
+  되고, 그러면 아래 카드들이 줄줄이 밀린다.
+*/
+.read-card-line {
+  font-size: 13px;
+  line-height: 1.55;
+  color: light-dark(#4a4a4a, #b6bdc4);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* 한국어는 단어 중간에서 끊기면 안 읽힌다 */
+  word-break: keep-all;
+}
+
+/*
+  타입 표식 색. 열네 장이 한 화면에 서므로 **채도를 낮게** 잡는다 — 원색을 쓰면
+  본문보다 카드가 먼저 눈에 들어와 읽기를 방해한다. 옅은 바탕 + 진한 글자라
+  다크모드에서도 글자 대비가 안 무너진다(흰 글자를 올리면 다크에서 2:1로 떨어진다).
+*/
+.read-card[data-type='person'] {
+  --mark-bg: light-dark(#e8eef4, #24303a);
+  --mark-fg: light-dark(#3a5f7d, #8fb6d2);
+}
+.read-card[data-type='group'] {
+  --mark-bg: light-dark(#efeaf5, #2b2635);
+  --mark-fg: light-dark(#63508a, #ab97d4);
+}
+.read-card[data-type='event'] {
+  --mark-bg: light-dark(#f7ebe7, #362823);
+  --mark-fg: light-dark(#9a4c37, #d59379);
+}
+.read-card[data-type='institution'] {
+  --mark-bg: light-dark(#e8f1ec, #22302a);
+  --mark-fg: light-dark(#3f6f57, #86b79c);
+}
+.read-card[data-type='work'] {
+  --mark-bg: light-dark(#f4eee3, #322b21);
+  --mark-fg: light-dark(#7d6236, #c3a878);
+}
+.read-card[data-type='period'] {
+  --mark-bg: light-dark(#ecedf0, #282b30);
+  --mark-fg: light-dark(#5c6069, #a3a9b3);
+}
+
+/*
+  종류 고르기. **끄고 켜는 것은 CSS다** — 카드는 빌드 때 다 그려져 있고 `<html>`의
+  값에 따라 보이거나 안 보인다. 자바스크립트는 단추 하나뿐이다.
+
+  값이 없으면(설정을 안 만졌거나 저장이 막힌 브라우저) 아무 규칙도 안 걸려 **전부
+  보인다.** 다크모드에서 「저장이 막히면 밝게 뜨던 것」과 같은 실수를 안 하려고
+  기본을 「보임」 쪽에 둔다.
+*/
+html[data-cards]:not([data-cards~='person']) .read-card[data-type='person'],
+html[data-cards]:not([data-cards~='group']) .read-card[data-type='group'],
+html[data-cards]:not([data-cards~='event']) .read-card[data-type='event'],
+html[data-cards]:not([data-cards~='institution']) .read-card[data-type='institution'],
+html[data-cards]:not([data-cards~='work']) .read-card[data-type='work'],
+html[data-cards]:not([data-cards~='period']) .read-card[data-type='period'] {
+  display: none;
+}
+
+/*
+  좁은 화면에서는 그리드를 푼다. DOM 순서가 읽는 순서라 카드가 제 문단 바로 뒤에
+  남는다 — 자리를 옮기는 코드가 따로 없다.
+*/
+@media (max-width: 1100px) {
+  .read-grid {
+    display: block;
+  }
+
+  .read-grid > .read-card {
+    max-width: 520px;
+    margin: 16px 0;
+  }
+}

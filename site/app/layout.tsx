@@ -38,12 +38,22 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
          * **어두운 기기를 쓰는 사람이 밝은 화면을 받았다**(검수 실측). 저장을
          * 못 읽는 것과 기기 설정을 못 읽는 것은 다른 일이다.
          */}
+        {/*
+         * 읽기 화면의 「옆에 세울 것」도 같은 자리에서 칠한다. 안 그러면 인물을
+         * 꺼둔 사람이 페이지마다 카드가 떴다가 사라지는 것을 본다 — 테마의 흰
+         * 화면 번쩍임과 같은 병이다.
+         *
+         * **값이 없으면 속성을 안 단다.** 속성이 없으면 CSS 규칙이 하나도 안 걸려
+         * 전부 보인다. 저장이 막힌 브라우저에서 카드가 통째로 사라지는 쪽보다 낫다.
+         */}
         <script
           dangerouslySetInnerHTML={{
             __html:
               "(function(){var m=null;try{m=localStorage.getItem('theme')}catch(e){}" +
               "var d=m==='dark'||((!m||m==='system')&&matchMedia('(prefers-color-scheme:dark)').matches);" +
-              "document.documentElement.dataset.theme=d?'dark':'light'})()",
+              "document.documentElement.dataset.theme=d?'dark':'light';" +
+              "var c=null;try{c=localStorage.getItem('read-cards')}catch(e){}" +
+              "if(c!==null)document.documentElement.dataset.cards=c})()",
           }}
         />
         {/*
