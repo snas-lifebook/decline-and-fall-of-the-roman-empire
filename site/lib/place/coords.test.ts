@@ -61,6 +61,28 @@ describe('포인트별 좌표', () => {
     }
   })
 
+  it('**본문이 부른 지명까지 센다** — `points` 배열만 보면 지도가 텅 빈다', () => {
+    /*
+     * 포인트 05가 이 함정을 그대로 보여준다. `points` 배열에는 로마 하나뿐인데
+     * 본문은 라인 강·에스파냐·소아시아·카르타고를 부른다. 배열만 보고 그렸더니
+     * 마커가 **한 개** 찍혔다(2026-08-18 브라우저 실측).
+     *
+     * 2026-08-17 감사의 「읽기와 가져가기가 30/30 어긋난다」와 같은 병이다.
+     */
+    const five = coordsOfPoint(5).map((p) => p.name)
+    expect(five.length).toBeGreaterThan(10)
+    for (const must of ['라인 강', '에스파냐', '카르타고', '소아시아']) {
+      expect(five, `포인트 05에 ${must}`).toContain(must)
+    }
+  })
+
+  it('한 대목의 지명이 지도 한 장에 담길 만큼이다', () => {
+    for (let n = 1; n <= 30; n += 1) {
+      // 마흔을 넘으면 이름표가 서로 겹쳐 읽을 수 없는 지도가 된다
+      expect(coordsOfPoint(n).length, `포인트 ${n}`).toBeLessThanOrEqual(40)
+    }
+  })
+
   it('같은 지명을 두 번 담지 않는다', () => {
     const ids = coordsOfPoint(3).map((p) => p.id)
     expect(new Set(ids).size).toBe(ids.length)

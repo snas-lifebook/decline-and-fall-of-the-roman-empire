@@ -19,6 +19,7 @@ import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
 import { pageMeta } from '../../../../lib/meta'
 import { familyOf } from '../../../../lib/family/build'
+import { portraitOf } from '../../../../lib/read/portrait'
 import { timelineOf } from '../../../../lib/timeline/build'
 import { RelationTimeline } from '../../../../components/RelationTimeline'
 
@@ -204,6 +205,7 @@ export default async function ObjectPage({
   const descs = e.descs.filter((d) => d.desc.trim() !== (e.desc ?? '').trim())
   // 날짜 붙은 관계가 2건 미만이면 `null`이다 — 빈 상자를 내보내지 않는다
   const tl = timelineOf(e.id, LINKS, INDEX)
+  const portrait = portraitOf(e.id)
 
   return (
     <Shell
@@ -230,9 +232,17 @@ export default async function ObjectPage({
       </Breadcrumbs>
 
       <Stack direction="vertical" gap={1.5}>
-        <Stack direction="horizontal" gap={1} vAlign="center" wrap="wrap">
+        <Stack direction="horizontal" gap={2} vAlign="center" wrap="wrap">
           <Badge variant="neutral" label={ko} />
         </Stack>
+        {/*
+          초상. 262명 중 164명에게만 있어서(실측 2026-08-18) 없으면 그냥 안 그린다 —
+          자리를 비워두면 화면마다 높이가 달라져 목록처럼 훑을 때 눈이 흔들린다.
+        */}
+        {portrait ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className="entity-face" src={portrait.file} alt={`${e.name} 초상`} loading="lazy" />
+        ) : null}
         <Heading level={1}>{e.name}</Heading>
         {e.desc ? (
           <Text size="lg" color="secondary">
@@ -306,6 +316,18 @@ export default async function ObjectPage({
             </a>
           </Text>
         </Stack>
+      ) : null}
+
+      {/*
+        **저작자를 적어야 하는 그림이 대부분이다.** 퍼블릭 도메인 70장을 빼면 나머지는
+        CC 계열이라 표기가 조건이다. 카드(48px)에는 못 적으므로 여기 한 줄로 적는다.
+      */}
+      {portrait ? (
+        <Text size="sm" color="secondary">
+          초상: <a href={portrait.source} target="_blank" rel="noreferrer">위키미디어</a>
+          {portrait.license ? ` · ${portrait.license}` : ''}
+          {portrait.author ? ` · ${portrait.author}` : ''}
+        </Text>
       ) : null}
 
       {attrs.length ? (

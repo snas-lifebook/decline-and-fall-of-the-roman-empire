@@ -510,3 +510,32 @@ html[data-cards]:not([data-cards~='period']) .read-card[data-type='period'] {
     margin: 16px 0;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   이 대목의 지도
+
+   가계도·관계 연표와 같은 자리다 — SVG를 빌드 때 구워 넣는다.
+   ══════════════════════════════════════════════════════════════════ */
+
+.point-map {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.point-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 객체 화면의 초상. 카드보다 크게 보여줄 자리라 160px */
+.entity-face {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 1px solid light-dark(#e3e6ea, #2b3138);
+  background: light-dark(#eceff2, #232a31);
+}

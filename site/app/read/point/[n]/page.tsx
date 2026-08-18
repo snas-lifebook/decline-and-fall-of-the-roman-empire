@@ -23,6 +23,8 @@ import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
 import { loadEntities, loadLinks } from '../../../../lib/ontology'
 import { readLayout } from '../../../../lib/read/cards'
+import { coordsOfPoint } from '../../../../lib/place/coords'
+import { renderPointMap } from '../../../../lib/place/svg'
 
 /**
  * 포인트 한 장의 본문.
@@ -66,6 +68,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
   const layout = readLayout(n, md, ENTITIES, LINKS)
   // 목차만 여기서 쓴다. 본문 자르기는 `ReadGrid`가 블록 단위로 다시 한다
   const { sections } = docSections(md)
+  const places = coordsOfPoint(n)
 
   // 제목·꼬리는 본문 폭에 맞추고, 본문만 카드 폭까지 넓게 쓴다
   const NARROW = { maxWidth: 760, width: '100%' } as const
@@ -152,6 +155,22 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         <Stack direction="vertical" gap={1.5} as="section">
           <Heading level={2}>이 대목의 관계망</Heading>
           <PointGraph point={n} entities={ENTITIES} links={LINKS} />
+        </Stack>
+      </div>
+
+      {/*
+        지명은 카드로 안 세우고 여기로 모은다 — 카드로 만들면 포인트당 스무 곳이
+        옆에 줄줄이 서서 정작 인물이 묻힌다. 지도는 「어디쯤인가」에 한 번에 답한다.
+      */}
+      <div style={NARROW}>
+        <Stack direction="vertical" gap={1.5} as="section">
+          <Heading level={2}>이 대목의 지도</Heading>
+          {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
+          <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
+          <Text size="sm" color="secondary">
+            이 대목에 나오는 지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만
+            있는 점은 위치가 추정입니다.
+          </Text>
         </Stack>
       </div>
 

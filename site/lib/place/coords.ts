@@ -1,6 +1,8 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { REPO_ROOT, loadEntities } from '../ontology'
+import { mentionedIn } from '../text/mentions'
+import { entityIndex } from '../entity'
 
 /**
  * 지명 좌표 — `entities/place/*.md` 프론트매터에서 읽는다.
@@ -77,9 +79,24 @@ export function placeCoords(root = REPO_ROOT): Map<string, PlaceCoord> {
   return out
 }
 
-/** 한 대목에 나오는 지명들. 포인트당 평균 12.6개(실측) */
+/**
+ * 한 대목에 나오는 지명들.
+ *
+ * **`points` 배열만 보면 안 된다.** 그 배열은 「그 포인트에 딸린 서술이 있다」는
+ * 뜻이지 「그 대목에 나온다」가 아니다. 포인트 05가 그 차이를 그대로 보여준다 —
+ * 본문이 라인 강·에스파냐·소아시아·아프리카를 부르는데 배열에는 로마 하나뿐이라,
+ * 처음 만든 지도에 마커가 **한 개** 찍혔다(2026-08-18 실측).
+ *
+ * 2026-08-17 감사에서 읽기와 가져가기가 30/30 어긋났던 것과 **같은 병**이고, 그때
+ * 만든 `mentionedIn`과의 합집합으로 같이 푼다. 데이터는 안 고친다.
+ */
 export function coordsOfPoint(point: number, root = REPO_ROOT): PlaceCoord[] {
-  return [...placeCoords(root).values()]
-    .filter((p) => p.points.includes(point))
+  const all = placeCoords(root)
+  const ids = new Set([...all.values()].filter((p) => p.points.includes(point)).map((p) => p.id))
+  for (const ref of mentionedIn(point, entityIndex(root))) {
+    if (all.has(ref.id)) ids.add(ref.id)
+  }
+  return [...ids]
+    .map((id) => all.get(id)!)
     .sort((a, b) => a.name.localeCompare(b.name, 'ko'))
 }
