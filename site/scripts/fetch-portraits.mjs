@@ -1,5 +1,5 @@
 /**
- * 위키미디어에서 초상을 받아 레포에 넣는다.
+ * 위키미디어에서 **초상과 생몰 연대**를 받아 레포에 넣는다.
  *
  * **빌드가 이걸 부르지 않는다.** 손으로 가끔 돌리고 결과를 커밋한다. 빌드에 외부
  * 요청을 섞으면 인터넷이 끊긴 자리나 CI에서 사이트가 안 서고, 위키가 느린 날 배포가
@@ -22,7 +22,7 @@ const HERE = dirname(fileURLToPath(import.meta.url))
 const SITE = join(HERE, '..')
 const REPO = join(SITE, '..')
 const OUT_DIR = join(SITE, 'public/portraits')
-const MANIFEST = join(SITE, 'data/portraits.json')
+const MANIFEST = join(SITE, 'data/people.json')
 
 const force = process.argv.includes('--force')
 const dry = process.argv.includes('--dry')
@@ -112,6 +112,46 @@ async function credit(lang, src) {
   }
 }
 
+/**
+ * 생몰 연대는 **위키데이터**에서 온다(P569 태어남 / P570 죽음).
+ *
+ * 우리 데이터에는 사실상 없다 — 262명 중 `birth`가 1명, `death`가 3명이고 그중 둘은
+ * 연도가 아니라 「battle」·「execution」이다(실측 2026-08-18). 위키데이터는 표본
+ * 14명 중 12명에게 있었고, **초상이 없는 사람에게도 연대는 있는 경우가 많다**
+ * (안토니우스·칼리굴라·호노리우스).
+ *
+ * 기원전은 음수다 — 이 저장소의 불변식과 같다(AGENTS 3).
+ */
+async function findYears(name, aliases) {
+  for (const lang of ['ko', 'en']) {
+    for (const title of [name, ...aliases]) {
+      const r = await api(lang, {
+        action: 'query',
+        titles: title,
+        prop: 'pageprops',
+        ppprop: 'wikibase_item',
+        redirects: '1',
+      })
+      const qid = r?.query?.pages?.[0]?.pageprops?.wikibase_item
+      if (!qid) continue
+      const res = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`, {
+        headers: { 'user-agent': UA },
+      })
+      if (!res.ok) continue
+      const claims = (await res.json())?.entities?.[qid]?.claims ?? {}
+      const yearOf = (prop) => {
+        const t = claims[prop]?.[0]?.mainsnak?.datavalue?.value?.time
+        // "+0100-01-01T00:00:00Z" / "-0100-..." — 앞 다섯 글자가 부호와 연도다
+        return t ? Number(t.slice(0, 5)) : null
+      }
+      const born = yearOf('P569')
+      const died = yearOf('P570')
+      if (born !== null || died !== null) return { born, died }
+    }
+  }
+  return { born: null, died: null }
+}
+
 const entities = readFileSync(join(REPO, 'ontology/entities.jsonl'), 'utf8')
   .split('\n')
   .filter(Boolean)
@@ -127,8 +167,27 @@ let miss = 0
 let skip = 0
 
 for (const e of entities) {
-  if (!force && manifest[e.id] !== undefined) {
+  const prev = manifest[e.id]
+  // 이미 초상도 연대도 물어본 것은 건너뛴다. 「없다」도 물어본 것이다
+  if (!force && prev !== undefined && prev !== null && 'born' in prev) {
     skip += 1
+    continue
+  }
+
+  // 연대는 초상이 있든 없든 물어본다 — 초상 없는 사람에게도 연대는 흔하다
+  let years = { born: null, died: null }
+  try {
+    years = await findYears(e.name, e.aliases ?? [])
+  } catch (err) {
+    console.error(`  ! ${e.name} 연대: ${err.message}`)
+  }
+
+  // 초상은 이미 받아 뒀으면 다시 안 받는다
+  if (!force && prev !== undefined) {
+    manifest[e.id] = prev === null ? { portrait: null, ...years } : { ...prev, ...years }
+    if (years.born !== null || years.died !== null) hit += 1
+    else miss += 1
+    await sleep(150)
     continue
   }
 
@@ -141,7 +200,7 @@ for (const e of entities) {
 
   if (!found) {
     // **못 찾았다는 사실도 기록한다.** 안 그러면 돌릴 때마다 없는 것을 다시 묻는다
-    manifest[e.id] = null
+    manifest[e.id] = { portrait: null, ...years }
     miss += 1
     continue
   }
@@ -152,7 +211,7 @@ for (const e of entities) {
   if (!dry) {
     const img = await fetch(found.src, { headers: { 'user-agent': UA } })
     if (!img.ok) {
-      manifest[e.id] = null
+      manifest[e.id] = { portrait: null, ...years }
       miss += 1
       continue
     }
@@ -161,9 +220,12 @@ for (const e of entities) {
 
   const c = await credit(found.lang, found.original)
   manifest[e.id] = {
-    file: `/portraits/${file}`,
-    source: `https://${found.lang}.wikipedia.org/wiki/${encodeURIComponent(found.pageTitle)}`,
-    ...c,
+    portrait: {
+      file: `/portraits/${file}`,
+      source: `https://${found.lang}.wikipedia.org/wiki/${encodeURIComponent(found.pageTitle)}`,
+      ...c,
+    },
+    ...years,
   }
   hit += 1
   console.log(`  + ${e.name}  ${c.license ?? '라이선스 불명'}`)
@@ -176,8 +238,11 @@ if (!dry) {
   writeFileSync(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`)
 }
 
-const total = Object.values(manifest).filter(Boolean).length
+const vals = Object.values(manifest).filter(Boolean)
+const withFace = vals.filter((v) => v.portrait).length
+const withYear = vals.filter((v) => v.born !== null || v.died !== null).length
+const pct = (n) => `${Math.round((n / entities.length) * 100)}%`
 console.log(
-  `\n인물 ${entities.length}명 · 이번에 받음 ${hit} · 못 찾음 ${miss} · 건너뜀 ${skip}` +
-    `\n초상 있는 인물 ${total}명 (${Math.round((total / entities.length) * 100)}%)`,
+  `\n인물 ${entities.length}명 · 이번에 처리 ${hit + miss} · 건너뜀 ${skip}` +
+    `\n초상 ${withFace}명 (${pct(withFace)}) · 생몰 연대 ${withYear}명 (${pct(withYear)})`,
 )

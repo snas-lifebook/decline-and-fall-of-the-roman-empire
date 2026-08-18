@@ -1,7 +1,7 @@
 import { TYPE_KO } from '../lib/export/table'
 import { roleKo } from '../lib/vocab'
 import { entityHref } from '../lib/entity'
-import { portraitOf } from '../lib/read/portrait'
+import { portraitOf, lifespanOf } from '../lib/read/people'
 import type { Card } from '../lib/read/cards'
 
 /**
@@ -23,6 +23,8 @@ export function MentionCard({ card }: { card: Card }) {
   const { entity: e, line, row } = card
   const role = e.attrs.role ? roleKo(String(e.attrs.role)) : null
   const portrait = portraitOf(e.id)
+  // 인물만. 집단·사건에 생몰은 없다
+  const years = e.type === 'person' ? lifespanOf(e.id) : null
 
   return (
     <a
@@ -49,7 +51,14 @@ export function MentionCard({ card }: { card: Card }) {
       )}
       <span className="read-card-body">
         <span className="read-card-name">{e.name}</span>
-        <span className="read-card-meta">{role ? `${role} · ${TYPE_KO[e.type]}` : TYPE_KO[e.type]}</span>
+        {/*
+          역할 · 연대. 스노우폴의 「33, Professional freeskier」 자리다 — **그 사람이
+          누구인지 한 줄**. 연대가 없으면 그 자리를 비우고 종류를 적는다. 262명 중
+          연대가 있는 사람은 위키데이터가 아는 만큼뿐이라, 없는 것을 지어내지 않는다.
+        */}
+        <span className="read-card-meta">
+          {[role ?? TYPE_KO[e.type], years].filter(Boolean).join(' · ')}
+        </span>
         <span className="read-card-line">{line}</span>
       </span>
     </a>

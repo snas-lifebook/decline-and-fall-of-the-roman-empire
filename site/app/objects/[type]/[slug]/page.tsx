@@ -19,7 +19,7 @@ import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
 import { pageMeta } from '../../../../lib/meta'
 import { familyOf } from '../../../../lib/family/build'
-import { portraitOf } from '../../../../lib/read/portrait'
+import { portraitOf, lifespanOf } from '../../../../lib/read/people'
 import { timelineOf } from '../../../../lib/timeline/build'
 import { RelationTimeline } from '../../../../components/RelationTimeline'
 
@@ -206,6 +206,7 @@ export default async function ObjectPage({
   // 날짜 붙은 관계가 2건 미만이면 `null`이다 — 빈 상자를 내보내지 않는다
   const tl = timelineOf(e.id, LINKS, INDEX)
   const portrait = portraitOf(e.id)
+  const years = e.type === 'person' ? lifespanOf(e.id) : null
 
   return (
     <Shell
@@ -234,6 +235,12 @@ export default async function ObjectPage({
       <Stack direction="vertical" gap={1.5}>
         <Stack direction="horizontal" gap={2} vAlign="center" wrap="wrap">
           <Badge variant="neutral" label={ko} />
+          {/* 생몰 연대. 위키데이터가 아는 사람만 뜬다 — 없는 것을 지어내지 않는다 */}
+          {years ? (
+            <Text size="sm" color="secondary">
+              {years}
+            </Text>
+          ) : null}
         </Stack>
         {/*
           초상. 262명 중 164명에게만 있어서(실측 2026-08-18) 없으면 그냥 안 그린다 —

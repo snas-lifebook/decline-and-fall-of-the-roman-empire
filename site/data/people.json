@@ -1,0 +1,2132 @@
+{
+  "person:가비니우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:가이우스그라쿠스": {
+    "portrait": {
+      "file": "/portraits/person_가이우스그라쿠스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%EA%B7%B8%EB%9D%BC%EC%BF%A0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Félix Auvray (1800-1833)"
+    },
+    "born": -154,
+    "died": -122
+  },
+  "person:가이우스마리우스": {
+    "portrait": {
+      "file": "/portraits/person_가이우스마리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%EB%A7%88%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": -157,
+    "died": -86
+  },
+  "person:가이우스카이사르": {
+    "portrait": {
+      "file": "/portraits/person_가이우스카이사르.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4",
+      "license": "Attribution",
+      "author": "Giovanni Dall'Orto"
+    },
+    "born": -20,
+    "died": 4
+  },
+  "person:가이우스테렌티우스바로": {
+    "portrait": null,
+    "born": null,
+    "died": -200
+  },
+  "person:가이우스페트로니우스": {
+    "portrait": {
+      "file": "/portraits/person_가이우스페트로니우스.png",
+      "source": "https://en.wikipedia.org/wiki/Gaius%20Petronius",
+      "license": "CC BY-SA 4.0",
+      "author": "Gigillo83"
+    },
+    "born": 27,
+    "died": 66
+  },
+  "person:가이우스피소": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:갈레리우스": {
+    "portrait": {
+      "file": "/portraits/person_갈레리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%88%EB%A0%88%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY 3.0",
+      "author": "Shinjirod"
+    },
+    "born": 250,
+    "died": 311
+  },
+  "person:갈루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:갈리에누스": {
+    "portrait": {
+      "file": "/portraits/person_갈리에누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%88%EB%A6%AC%EC%97%90%EB%88%84%EC%8A%A4",
+      "license": "CC BY 3.0",
+      "author": "Sailko"
+    },
+    "born": 218,
+    "died": 268
+  },
+  "person:갈바": {
+    "portrait": {
+      "file": "/portraits/person_갈바.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%88%EB%B0%94",
+      "license": "CC BY-SA 3.0",
+      "author": "Wolfgang Sauber"
+    },
+    "born": -3,
+    "died": 69
+  },
+  "person:게르마니쿠스": {
+    "portrait": {
+      "file": "/portraits/person_게르마니쿠스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B2%8C%EB%A5%B4%EB%A7%88%EB%8B%88%EC%BF%A0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Didier Descouens"
+    },
+    "born": -15,
+    "died": 19
+  },
+  "person:고후해": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:그나이우스스키피오": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:그라티아누스": {
+    "portrait": {
+      "file": "/portraits/person_그라티아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9D%BC%ED%8B%B0%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Rasiel Suarez"
+    },
+    "born": 359,
+    "died": 383
+  },
+  "person:기번": {
+    "portrait": {
+      "file": "/portraits/person_기번.jpg",
+      "source": "https://en.wikipedia.org/wiki/Edward%20Gibbon",
+      "license": "Public domain",
+      "author": "Henry Walton"
+    },
+    "born": 1737,
+    "died": 1794
+  },
+  "person:나르세스": {
+    "portrait": {
+      "file": "/portraits/person_나르세스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%82%98%EB%A5%B4%EC%84%B8%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Vahan.hovh"
+    },
+    "born": 478,
+    "died": 574
+  },
+  "person:네로": {
+    "portrait": {
+      "file": "/portraits/person_네로.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%84%A4%EB%A1%9C",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": 37,
+    "died": 68
+  },
+  "person:네르바": {
+    "portrait": {
+      "file": "/portraits/person_네르바.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%84%A4%EB%A5%B4%EB%B0%94",
+      "license": "CC BY-SA 3.0",
+      "author": "sailko"
+    },
+    "born": 30,
+    "died": 98
+  },
+  "person:누메리아누스": {
+    "portrait": {
+      "file": "/portraits/person_누메리아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%88%84%EB%A9%94%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "originally uploaded by CharlesS in 2004"
+    },
+    "born": 254,
+    "died": 284
+  },
+  "person:대카토": {
+    "portrait": {
+      "file": "/portraits/person_대카토.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%20%EC%B9%B4%ED%86%A0",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": -234,
+    "died": -149
+  },
+  "person:데모스테네스": {
+    "portrait": {
+      "file": "/portraits/person_데모스테네스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%8D%B0%EB%AA%A8%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4",
+      "license": "CC BY-SA 2.5",
+      "author": "Copy of Polyeuktos"
+    },
+    "born": -384,
+    "died": -322
+  },
+  "person:데키우스": {
+    "portrait": {
+      "file": "/portraits/person_데키우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%8D%B0%ED%82%A4%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 4.0",
+      "author": "José Luiz"
+    },
+    "born": 201,
+    "died": 251
+  },
+  "person:도미티아누스": {
+    "portrait": {
+      "file": "/portraits/person_도미티아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%8F%84%EB%AF%B8%ED%8B%B0%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY 2.5",
+      "author": null
+    },
+    "born": 51,
+    "died": 96
+  },
+  "person:드루수스": {
+    "portrait": {
+      "file": "/portraits/person_드루수스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%84%A4%EB%A1%9C%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%94%94%EC%9A%B0%EC%8A%A4%20%EB%93%9C%EB%A3%A8%EC%88%98%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": -38,
+    "died": -9
+  },
+  "person:드루실라": {
+    "portrait": {
+      "file": "/portraits/person_드루실라.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%93%9C%EB%A3%A8%EC%8B%A4%EB%9D%BC",
+      "license": "Public domain",
+      "author": "Georges Reverdy"
+    },
+    "born": 38,
+    "died": 79
+  },
+  "person:디오클레티아누스": {
+    "portrait": {
+      "file": "/portraits/person_디오클레티아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%94%94%EC%98%A4%ED%81%B4%EB%A0%88%ED%8B%B0%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "Attribution",
+      "author": "G.dallorto"
+    },
+    "born": 244,
+    "died": 316
+  },
+  "person:라비에누스": {
+    "portrait": null,
+    "born": -100,
+    "died": -45
+  },
+  "person:라이투스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:레굴루스": {
+    "portrait": {
+      "file": "/portraits/person_레굴루스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A0%88%EA%B5%B4%EB%A3%A8%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Leo_constellation_map.png: Torsten Bronger.\nderivative work: Kxx (talk)"
+    },
+    "born": null,
+    "died": null
+  },
+  "person:레오1세": {
+    "portrait": {
+      "file": "/portraits/person_레오1세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9E%90%EC%9E%90%EB%A6%AC%20I%20%EC%99%9C%EC%86%8C%EC%9D%80%ED%95%98",
+      "license": "CC-BY-3.0",
+      "author": "Friendlystar"
+    },
+    "born": null,
+    "died": null
+  },
+  "person:레피두스": {
+    "portrait": {
+      "file": "/portraits/person_레피두스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%EC%95%84%EC%9D%B4%EB%B0%80%EB%A6%AC%EC%9A%B0%EC%8A%A4%20%EB%A0%88%ED%94%BC%EB%91%90%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "CNG"
+    },
+    "born": -90,
+    "died": -13
+  },
+  "person:렌툴루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:로물루스": {
+    "portrait": {
+      "file": "/portraits/person_로물루스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%AC%BC%EB%A3%A8%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Carlo Brogi"
+    },
+    "born": -771,
+    "died": -717
+  },
+  "person:루카누스": {
+    "portrait": {
+      "file": "/portraits/person_루카누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%EC%B9%B4%EB%88%84%EC%8A%A4",
+      "license": "CC BY 3.0",
+      "author": "Cruccone"
+    },
+    "born": 39,
+    "died": 65
+  },
+  "person:루키우스": {
+    "portrait": {
+      "file": "/portraits/person_루키우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%EC%8B%9C%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY 2.0",
+      "author": "Abby Gillardi"
+    },
+    "born": null,
+    "died": null
+  },
+  "person:루키우스베루스": {
+    "portrait": {
+      "file": "/portraits/person_루키우스베루스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%82%A4%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EB%A3%A8%EC%8A%A4",
+      "license": "CC0",
+      "author": "PierreSelim"
+    },
+    "born": 130,
+    "died": 169
+  },
+  "person:루키우스아밀리우스파울루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:루키우스케이오니우스콤모두스": {
+    "portrait": {
+      "file": "/portraits/person_루키우스케이오니우스콤모두스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%82%A4%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EB%A3%A8%EC%8A%A4",
+      "license": "CC0",
+      "author": "PierreSelim"
+    },
+    "born": 130,
+    "died": 169
+  },
+  "person:루킬라": {
+    "portrait": {
+      "file": "/portraits/person_루킬라.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%82%AC%EB%9D%BC",
+      "license": "Public domain",
+      "author": "AlexanderVanLoon"
+    },
+    "born": 150,
+    "died": 182
+  },
+  "person:루피누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:리비아드루실라": {
+    "portrait": {
+      "file": "/portraits/person_리비아드루실라.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A6%AC%EB%B9%84%EC%95%84%20%EB%93%9C%EB%A3%A8%EC%8B%A4%EB%9D%BC",
+      "license": "CC BY-SA 4.0",
+      "author": "George E. Koronaios"
+    },
+    "born": -59,
+    "died": 29
+  },
+  "person:리빌라": {
+    "portrait": {
+      "file": "/portraits/person_리빌라.jpg",
+      "source": "https://en.wikipedia.org/wiki/Livilla",
+      "license": "CC0",
+      "author": "StarTrekker"
+    },
+    "born": -13,
+    "died": 31
+  },
+  "person:리코메레스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:리키니우스": {
+    "portrait": {
+      "file": "/portraits/person_리키니우스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A6%AC%ED%82%A4%EB%8B%88%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Clemchambers"
+    },
+    "born": 263,
+    "died": 325
+  },
+  "person:마누엘2세": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:마르켈루스": {
+    "portrait": {
+      "file": "/portraits/person_마르켈루스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%94%94%EC%9A%B0%EC%8A%A4%20%EB%A7%88%EB%A5%B4%EC%BC%88%EB%A3%A8%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": -270,
+    "died": -208
+  },
+  "person:마르쿠스아그리파": {
+    "portrait": {
+      "file": "/portraits/person_마르쿠스아그리파.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%EB%B9%95%EC%82%AC%EB%8B%88%EC%9A%B0%EC%8A%A4%20%EC%95%84%EA%B7%B8%EB%A6%AC%ED%8C%8C",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": -63,
+    "died": -12
+  },
+  "person:마르쿠스아우렐리우스": {
+    "portrait": {
+      "file": "/portraits/person_마르쿠스아우렐리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%EC%95%84%EC%9A%B0%EB%A0%90%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "미상Unknown artist"
+    },
+    "born": 121,
+    "died": 180
+  },
+  "person:마르쿠스안토니우스": {
+    "portrait": {
+      "file": "/portraits/person_마르쿠스안토니우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%EC%95%88%ED%86%A0%EB%8B%88%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Ancient Roman artist of the 1st century AD (photo taken by Sergey Sosnovskiy)"
+    },
+    "born": -83,
+    "died": -30
+  },
+  "person:마르키아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:마르티니아누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:마리우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:마리우스안토니우스": {
+    "portrait": {
+      "file": "/portraits/person_마리우스안토니우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%EC%95%88%ED%86%A0%EB%8B%88%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Ancient Roman artist of the 1st century AD (photo taken by Sergey Sosnovskiy)"
+    },
+    "born": -83,
+    "died": -30
+  },
+  "person:마시니사": {
+    "portrait": {
+      "file": "/portraits/person_마시니사.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EC%8B%9C%EB%8B%88%EC%82%AC",
+      "license": "CC BY 2.5",
+      "author": "기계가 읽을 수 있는 저자가 제공되지 않았으나, Numidix(으)로 추정됨 (저작권 주장에 근거함)"
+    },
+    "born": -238,
+    "died": -148
+  },
+  "person:마우리키우스": {
+    "portrait": {
+      "file": "/portraits/person_마우리키우스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9A%B0%EB%A6%AC%ED%82%A4%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "original upload 7 September 2012 by Tataryn"
+    },
+    "born": 539,
+    "died": 602
+  },
+  "person:마이케나스": {
+    "portrait": {
+      "file": "/portraits/person_마이케나스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%EB%A7%88%EC%9D%B4%EC%BC%80%EB%82%98%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": null,
+    "died": -8
+  },
+  "person:마크리아누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:마호메트": {
+    "portrait": {
+      "file": "/portraits/person_마호메트.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%AC%B4%ED%95%A8%EB%A7%88%EB%93%9C",
+      "license": "CC BY-SA 4.0",
+      "author": "AishaAbdel"
+    },
+    "born": 571,
+    "died": 632
+  },
+  "person:막센티우스": {
+    "portrait": {
+      "file": "/portraits/person_막센티우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%89%EC%84%BC%ED%8B%B0%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": 278,
+    "died": 312
+  },
+  "person:막시미누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:막시미아누스": {
+    "portrait": {
+      "file": "/portraits/person_막시미아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%89%EC%8B%9C%EB%AF%B8%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 4.0",
+      "author": "Didier Descouens"
+    },
+    "born": 240,
+    "died": 310
+  },
+  "person:메메트2세": {
+    "portrait": {
+      "file": "/portraits/person_메메트2세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A9%94%ED%9D%90%EB%A9%94%ED%8A%B8%202%EC%84%B8",
+      "license": "Public domain",
+      "author": "젠틸레 벨리니"
+    },
+    "born": 1432,
+    "died": 1481
+  },
+  "person:메살리나": {
+    "portrait": {
+      "file": "/portraits/person_메살리나.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A9%94%EC%82%B4%EB%A6%AC%EB%82%98",
+      "license": "CC BY-SA 3.0",
+      "author": "미상Unknown artist"
+    },
+    "born": 20,
+    "died": 48
+  },
+  "person:밀로": {
+    "portrait": {
+      "file": "/portraits/person_밀로.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B0%80%EB%A1%9C%EC%8A%A4%EC%84%AC",
+      "license": "Public domain",
+      "author": "edited by M.Minderhoud"
+    },
+    "born": null,
+    "died": null
+  },
+  "person:바울로": {
+    "portrait": {
+      "file": "/portraits/person_바울로.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%82%AC%EB%8F%84%20%EB%B0%94%EC%9A%B8%EB%A1%9C",
+      "license": "Public domain",
+      "author": "페테르 파울 루벤스"
+    },
+    "born": 5,
+    "died": 66
+  },
+  "person:바쿠리우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:발레리아누스": {
+    "portrait": {
+      "file": "/portraits/person_발레리아누스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B0%9C%EB%A0%88%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": 200,
+    "died": 260
+  },
+  "person:발렌스": {
+    "portrait": {
+      "file": "/portraits/person_발렌스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B0%9C%EB%A0%8C%EC%8A%A4",
+      "license": "Public domain",
+      "author": "기계가 읽을 수 있는 저자가 제공되지 않았으나, Ginolerhino(으)로 추정됨 (저작권 주장에 근거함)"
+    },
+    "born": 328,
+    "died": 378
+  },
+  "person:발렌티니아누스": {
+    "portrait": {
+      "file": "/portraits/person_발렌티니아누스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Valentinian%20I",
+      "license": "CC BY-SA 4.0",
+      "author": "ANS"
+    },
+    "born": 321,
+    "died": 375
+  },
+  "person:베드로": {
+    "portrait": {
+      "file": "/portraits/person_베드로.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B2%A0%EB%93%9C%EB%A1%9C",
+      "license": "Public domain",
+      "author": "페테르 파울 루벤스"
+    },
+    "born": -1,
+    "died": 65
+  },
+  "person:베루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:베르킹게토릭스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:베스파시아누스": {
+    "portrait": {
+      "file": "/portraits/person_베스파시아누스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%8A%A4%ED%8C%8C%EC%8B%9C%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Originally uploaded by user:shakko"
+    },
+    "born": 9,
+    "died": 79
+  },
+  "person:벨리사리우스": {
+    "portrait": {
+      "file": "/portraits/person_벨리사리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B2%A8%EB%A6%AC%EC%82%AC%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 4.0",
+      "author": "Petar Milošević"
+    },
+    "born": 505,
+    "died": 565
+  },
+  "person:부루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:브루투스": {
+    "portrait": {
+      "file": "/portraits/person_브루투스.gif",
+      "source": "https://en.wikipedia.org/wiki/Marcus%20Junius%20Brutus",
+      "license": "CC BY-SA 2.5",
+      "author": "CNG"
+    },
+    "born": -85,
+    "died": -42
+  },
+  "person:브리탄니쿠스": {
+    "portrait": {
+      "file": "/portraits/person_브리탄니쿠스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Britannicus",
+      "license": "Public domain",
+      "author": "Marie-Lan Nguyen"
+    },
+    "born": 41,
+    "died": 55
+  },
+  "person:비비아사비나": {
+    "portrait": {
+      "file": "/portraits/person_비비아사비나.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B9%84%EB%B9%84%EC%95%84%20%EC%82%AC%EB%B9%84%EB%82%98",
+      "license": "CC BY 2.0",
+      "author": null
+    },
+    "born": 86,
+    "died": 136
+  },
+  "person:비탈리아누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:비텔리우스": {
+    "portrait": {
+      "file": "/portraits/person_비텔리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B9%84%ED%85%94%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY 2.5",
+      "author": "미상Unknown artist"
+    },
+    "born": 15,
+    "died": 69
+  },
+  "person:빈덱스": {
+    "portrait": {
+      "file": "/portraits/person_빈덱스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Gaius%20Julius%20Vindex",
+      "license": "CC BY-SA 4.0",
+      "author": "The Portable Antiquities Scheme, Julian Watters, 2005-04-29 13:50:32"
+    },
+    "born": 25,
+    "died": 68
+  },
+  "person:빕사니아": {
+    "portrait": {
+      "file": "/portraits/person_빕사니아.jpg",
+      "source": "https://en.wikipedia.org/wiki/Vipsania%20Agrippina",
+      "license": "PD-Italy",
+      "author": null
+    },
+    "born": null,
+    "died": 20
+  },
+  "person:사투르니누스": {
+    "portrait": {
+      "file": "/portraits/person_사투르니누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%82%A4%EC%9A%B0%EC%8A%A4%20%EC%95%84%ED%92%80%EB%A0%88%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%EC%82%AC%ED%88%AC%EB%A5%B4%EB%8B%88%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "CNG"
+    },
+    "born": -130,
+    "died": -100
+  },
+  "person:살로메": {
+    "portrait": {
+      "file": "/portraits/person_살로메.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%82%B4%EB%A1%9C%EB%A9%94",
+      "license": "Public domain",
+      "author": "Henri Regnault"
+    },
+    "born": 14,
+    "died": 62
+  },
+  "person:샤푸르": {
+    "portrait": {
+      "file": "/portraits/person_샤푸르.gif",
+      "source": "https://en.wikipedia.org/wiki/Shapur%20I",
+      "license": "Public domain",
+      "author": "Unknown after Rawlinson, George, 1812-1902"
+    },
+    "born": 300,
+    "died": 270
+  },
+  "person:세네카": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:세레나": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:세례자요한": {
+    "portrait": {
+      "file": "/portraits/person_세례자요한.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%84%B8%EB%A1%80%EC%9E%90%20%EC%9A%94%ED%95%9C",
+      "license": "Public domain",
+      "author": "안톤 라파엘 멩스"
+    },
+    "born": -6,
+    "died": 30
+  },
+  "person:세르빌리아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:세바스티아누스": {
+    "portrait": {
+      "file": "/portraits/person_세바스티아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%84%B8%EB%B0%94%EC%8A%A4%ED%8B%B0%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "Public domain",
+      "author": "일 소도마"
+    },
+    "born": 255,
+    "died": 287
+  },
+  "person:세베루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:세야누스": {
+    "portrait": {
+      "file": "/portraits/person_세야누스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Sejanus",
+      "license": "Public domain",
+      "author": "Etching by G. Mochetti after drawing by Bartolomeo Pinelli"
+    },
+    "born": -20,
+    "died": 31
+  },
+  "person:섹스투스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:셈프로니우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:셉티미우스세베루스": {
+    "portrait": {
+      "file": "/portraits/person_셉티미우스세베루스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%85%89%ED%8B%B0%EB%AF%B8%EC%9A%B0%EC%8A%A4%20%EC%84%B8%EB%B2%A0%EB%A3%A8%EC%8A%A4",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": 146,
+    "died": 211
+  },
+  "person:소카토": {
+    "portrait": {
+      "file": "/portraits/person_소카토.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%86%8C%20%EC%B9%B4%ED%86%A0",
+      "license": "CC BY-SA 3.0",
+      "author": "Jean-Baptiste Roman &amp; François Rude"
+    },
+    "born": -95,
+    "died": -46
+  },
+  "person:술라": {
+    "portrait": {
+      "file": "/portraits/person_술라.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%82%A4%EC%9A%B0%EC%8A%A4%20%EC%BD%94%EB%A5%B4%EB%84%AC%EB%A6%AC%EC%9A%B0%EC%8A%A4%20%EC%88%A0%EB%9D%BC",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": -138,
+    "died": -78
+  },
+  "person:스크리보니아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:스키피오아이밀리아누스": {
+    "portrait": {
+      "file": "/portraits/person_스키피오아이밀리아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%82%A4%ED%94%BC%EC%98%A4%20%EC%95%84%EC%9D%B4%EB%B0%80%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 2.0",
+      "author": "Carole Raddato from FRANKFURT, Germany"
+    },
+    "born": -185,
+    "died": -129
+  },
+  "person:스키피오아프리카누스": {
+    "portrait": {
+      "file": "/portraits/person_스키피오아프리카누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%82%A4%ED%94%BC%EC%98%A4%20%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Miguel Hermoso Cuesta"
+    },
+    "born": -235,
+    "died": -183
+  },
+  "person:스틸리코": {
+    "portrait": {
+      "file": "/portraits/person_스틸리코.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%8B%B8%EB%A6%AC%EC%BD%94",
+      "license": "CC BY-SA 3.0",
+      "author": "Photographed by User:Bullenwächter"
+    },
+    "born": 359,
+    "died": 408
+  },
+  "person:스파르타쿠스": {
+    "portrait": {
+      "file": "/portraits/person_스파르타쿠스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BF%A0%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": -103,
+    "died": -71
+  },
+  "person:스포루스": {
+    "portrait": null,
+    "born": 49,
+    "died": 69
+  },
+  "person:스푸린나": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:실리우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아그리콜라": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아그리피나": {
+    "portrait": {
+      "file": "/portraits/person_아그리피나.jpg",
+      "source": "https://en.wikipedia.org/wiki/Agrippina%20the%20Younger",
+      "license": "CC0",
+      "author": "Anonymous (Rome)Unknown author"
+    },
+    "born": 15,
+    "died": 59
+  },
+  "person:아그리피나클라우디우스의아내": {
+    "portrait": {
+      "file": "/portraits/person_아그리피나클라우디우스의아내.jpg",
+      "source": "https://en.wikipedia.org/wiki/Agrippina%20the%20Younger",
+      "license": "CC0",
+      "author": "Anonymous (Rome)Unknown author"
+    },
+    "born": 15,
+    "died": 59
+  },
+  "person:아나스타시우스황제": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아르다시르": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아르카디우스": {
+    "portrait": {
+      "file": "/portraits/person_아르카디우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%A5%B4%EC%B9%B4%EB%94%94%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": 377,
+    "died": 408
+  },
+  "person:아르키메데스": {
+    "portrait": {
+      "file": "/portraits/person_아르키메데스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%A5%B4%ED%82%A4%EB%A9%94%EB%8D%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": -287,
+    "died": -212
+  },
+  "person:아리스토불루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아리우스": {
+    "portrait": {
+      "file": "/portraits/person_아리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": 250,
+    "died": 336
+  },
+  "person:아만티우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아반두스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아부바크르": {
+    "portrait": {
+      "file": "/portraits/person_아부바크르.png",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%B6%80%20%EB%B0%94%ED%81%AC%EB%A5%B4%20%EC%95%8C%EC%8B%9C%EB%94%94%ED%81%AC",
+      "license": "CC BY-SA 3.0",
+      "author": "Petermaleh"
+    },
+    "born": 573,
+    "died": 634
+  },
+  "person:아브탈리브": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아브드알무탈리브": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아우구스투스": {
+    "portrait": {
+      "file": "/portraits/person_아우구스투스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EC%9A%B0%EA%B5%AC%EC%8A%A4%ED%88%AC%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Till Niermann"
+    },
+    "born": -63,
+    "died": 14
+  },
+  "person:아우구스티누스": {
+    "portrait": {
+      "file": "/portraits/person_아우구스티누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EC%9A%B0%EA%B5%AC%EC%8A%A4%ED%8B%B0%EB%88%84%EC%8A%A4",
+      "license": "Public domain",
+      "author": "산드로 보티첼리"
+    },
+    "born": 354,
+    "died": 430
+  },
+  "person:아우렐리아누스": {
+    "portrait": {
+      "file": "/portraits/person_아우렐리아누스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EC%9A%B0%EB%A0%90%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "Attribution",
+      "author": "=*File:5305 - Brescia - S. Giulia - Ritratto di Claudio II il Gotico - Foto Giovanni Dall'Orto, 25 Giu 2011.jpg: Giovann"
+    },
+    "born": 214,
+    "died": 275
+  },
+  "person:아우렐리우스코타": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아이밀리아누스": {
+    "portrait": {
+      "file": "/portraits/person_아이밀리아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%84%EC%9D%B4%EB%B0%80%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Rasiel Suarez at en.wikipedia"
+    },
+    "born": 207,
+    "died": 253
+  },
+  "person:아카키우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아킬라스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아프라니우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:아피우스클라우디우스가이쿠스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:악테": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:안쿠스마르키우스": {
+    "portrait": {
+      "file": "/portraits/person_안쿠스마르키우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%88%EC%BF%A0%EC%8A%A4%20%EB%A7%88%EB%A5%B4%ED%82%A4%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Published by Guillaume Rouille (1518?-1589)"
+    },
+    "born": -675,
+    "died": -616
+  },
+  "person:안테미우스": {
+    "portrait": {
+      "file": "/portraits/person_안테미우스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%88%ED%85%8C%EB%AF%B8%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 2.5",
+      "author": "CNG Coins"
+    },
+    "born": 420,
+    "died": 472
+  },
+  "person:안토니누스피우스": {
+    "portrait": {
+      "file": "/portraits/person_안토니누스피우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%88%ED%86%A0%EB%8B%88%EB%88%84%EC%8A%A4%20%ED%94%BC%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown artist"
+    },
+    "born": 86,
+    "died": 161
+  },
+  "person:안토니아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:안티노우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:안티오코스3세": {
+    "portrait": {
+      "file": "/portraits/person_안티오코스3세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%88%ED%8B%B0%EC%98%A4%EC%BD%94%EC%8A%A4%203%EC%84%B8%20%EB%A9%94%EA%B0%80%EC%8A%A4",
+      "license": "CC BY-SA 2.0",
+      "author": "Carole Raddato from FRANKFURT, Germany"
+    },
+    "born": -242,
+    "died": -187
+  },
+  "person:안티파테르": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:알라리크": {
+    "portrait": {
+      "file": "/portraits/person_알라리크.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%8C%EB%9D%BC%EB%A6%AC%EC%BF%A0%EC%8A%A4%201%EC%84%B8",
+      "license": "Public domain",
+      "author": "Allan Stewart"
+    },
+    "born": 400,
+    "died": 410
+  },
+  "person:알렉산드로스대왕": {
+    "portrait": {
+      "file": "/portraits/person_알렉산드로스대왕.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%8C%EB%A0%89%EC%82%B0%EB%93%9C%EB%A1%9C%EC%8A%A4%20%EB%8C%80%EC%99%95",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": -356,
+    "died": -323
+  },
+  "person:암미아누스마르켈리누스": {
+    "portrait": null,
+    "born": 330,
+    "died": 395
+  },
+  "person:에우독수스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:에우독시아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:에우세비오스": {
+    "portrait": {
+      "file": "/portraits/person_에우세비오스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%97%90%EC%9A%B0%EC%84%B8%EB%B9%84%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Desconocido"
+    },
+    "born": 265,
+    "died": 339
+  },
+  "person:에우트로피우스": {
+    "portrait": {
+      "file": "/portraits/person_에우트로피우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%97%90%EC%9A%B0%ED%8A%B8%EB%A1%9C%ED%94%BC%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Unknown author"
+    },
+    "born": null,
+    "died": 370
+  },
+  "person:에클렉투스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:에파프로디투스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:엘라가발루스": {
+    "portrait": {
+      "file": "/portraits/person_엘라가발루스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%97%98%EB%9D%BC%EA%B0%80%EB%B0%9C%EB%A3%A8%EC%8A%A4",
+      "license": "CC BY-SA 4.0",
+      "author": "José Luiz"
+    },
+    "born": 203,
+    "died": 222
+  },
+  "person:예수그리스도": {
+    "portrait": {
+      "file": "/portraits/person_예수그리스도.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%98%88%EC%88%98",
+      "license": "Public domain",
+      "author": "미상Unknown artist"
+    },
+    "born": -7,
+    "died": 30
+  },
+  "person:오다이나투스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:오토": {
+    "portrait": {
+      "file": "/portraits/person_오토.jpg",
+      "source": "https://en.wikipedia.org/wiki/Otho",
+      "license": "CC BY 2.0",
+      "author": "Fred Romero from Paris, France"
+    },
+    "born": 32,
+    "died": 69
+  },
+  "person:옥타비아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:요르다네스": {
+    "portrait": {
+      "file": "/portraits/person_요르다네스.png",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9A%94%EB%A5%B4%EB%8B%A4%EB%84%A4%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Jniemenmaa"
+    },
+    "born": 490,
+    "died": null
+  },
+  "person:요비아누스": {
+    "portrait": {
+      "file": "/portraits/person_요비아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9A%94%EB%B9%84%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "원래 올린이는 영어 위키백과의 Rasiel"
+    },
+    "born": 331,
+    "died": 364
+  },
+  "person:유다": {
+    "portrait": {
+      "file": "/portraits/person_유다.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%A4%20%EC%9D%B4%EC%8A%A4%EC%B9%B4%EB%A6%AC%EC%98%B7",
+      "license": "Public domain",
+      "author": "조토 디 본도네"
+    },
+    "born": null,
+    "died": 30
+  },
+  "person:유바1세": {
+    "portrait": {
+      "file": "/portraits/person_유바1세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%B0%94%201%EC%84%B8",
+      "license": "CC BY-SA 3.0",
+      "author": "미상Unknown author"
+    },
+    "born": -85,
+    "died": -46
+  },
+  "person:유스티누스": {
+    "portrait": {
+      "file": "/portraits/person_유스티누스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Justin%20I",
+      "license": "CC BY-SA 2.5",
+      "author": "CNG"
+    },
+    "born": 450,
+    "died": 527
+  },
+  "person:유스티니아누스": {
+    "portrait": {
+      "file": "/portraits/person_유스티니아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A0%EC%8A%A4%ED%8B%B0%EB%8B%88%EC%95%84%EB%88%84%EC%8A%A4%201%EC%84%B8",
+      "license": "CC BY-SA 4.0",
+      "author": "Petar Milošević"
+    },
+    "born": 482,
+    "died": 565
+  },
+  "person:유스티니아누스2세": {
+    "portrait": {
+      "file": "/portraits/person_유스티니아누스2세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A0%EC%8A%A4%ED%8B%B0%EB%8B%88%EC%95%84%EB%85%B8%EC%8A%A4%202%EC%84%B8",
+      "license": "CC BY-SA 3.0",
+      "author": "Panairjdde"
+    },
+    "born": 669,
+    "died": 711
+  },
+  "person:유스티니아니": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:율리아아우구스투스의딸": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:율리아카이사르가문": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:율리아누스": {
+    "portrait": {
+      "file": "/portraits/person_율리아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A8%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Classical Numismatic Group, Inc. (CNG)"
+    },
+    "born": 331,
+    "died": 363
+  },
+  "person:인게누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:제노비아": {
+    "portrait": {
+      "file": "/portraits/person_제노비아.png",
+      "source": "https://ko.wikipedia.org/wiki/%EC%A0%9C%EB%85%B8%EB%B9%84%EC%95%84",
+      "license": "CC BY-SA 2.5",
+      "author": "CNG"
+    },
+    "born": 240,
+    "died": 275
+  },
+  "person:카라칼라": {
+    "portrait": {
+      "file": "/portraits/person_카라칼라.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%B9%B4%EB%9D%BC%EC%B9%BC%EB%9D%BC",
+      "license": "CC BY 2.5",
+      "author": null
+    },
+    "born": 188,
+    "died": 217
+  },
+  "person:카레소니아": {
+    "portrait": {
+      "file": "/portraits/person_카레소니아.jpg",
+      "source": "https://en.wikipedia.org/wiki/Milonia%20Caesonia",
+      "license": "CC BY-SA 2.5",
+      "author": "Unknown authorUnknown author"
+    },
+    "born": 24,
+    "died": 41
+  },
+  "person:카루스": {
+    "portrait": {
+      "file": "/portraits/person_카루스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%B9%B4%EB%A3%A8%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Rasiel Suarez"
+    },
+    "born": 222,
+    "died": 283
+  },
+  "person:카리누스": {
+    "portrait": {
+      "file": "/portraits/person_카리누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%B9%B4%EB%A6%AC%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Montemartini_-_Carino_1030439.JPG: Lalupa\nderivative work: TcfkaPanairjdde (talk)"
+    },
+    "born": 250,
+    "died": 285
+  },
+  "person:카스카": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:카시우스": {
+    "portrait": {
+      "file": "/portraits/person_카시우스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Gaius%20Cassius%20Longinus",
+      "license": "CC BY 2.5",
+      "author": null
+    },
+    "born": -82,
+    "died": -42
+  },
+  "person:카시우스카이레아": {
+    "portrait": null,
+    "born": -12,
+    "died": 41
+  },
+  "person:카이사르": {
+    "portrait": {
+      "file": "/portraits/person_카이사르.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A8%EB%A6%AC%EC%9A%B0%EC%8A%A4%20%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4",
+      "license": "Public domain",
+      "author": "Ángel M. Felicísimo from Mérida, España"
+    },
+    "born": -100,
+    "died": -44
+  },
+  "person:카이사리온": {
+    "portrait": {
+      "file": "/portraits/person_카이사리온.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%94%84%ED%86%A8%EB%A0%88%EB%A7%88%EC%9D%B4%EC%98%A4%EC%8A%A4%2015%EC%84%B8%20%ED%95%84%EB%A1%9C%ED%8C%8C%ED%86%A0%EB%A5%B4%20%ED%95%84%EB%A1%9C%EB%A9%94%ED%86%A0%EB%A5%B4%20%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4",
+      "license": "Public domain",
+      "author": "기계가 읽을 수 있는 저자가 제공되지 않았으나, Bradipus(으)로 추정됨 (저작권 주장에 근거함)"
+    },
+    "born": -47,
+    "died": -30
+  },
+  "person:카틸리나": {
+    "portrait": {
+      "file": "/portraits/person_카틸리나.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%82%A4%EC%9A%B0%EC%8A%A4%20%EC%84%B8%EB%A5%B4%EA%B8%B0%EC%9A%B0%EC%8A%A4%20%EC%B9%B4%ED%8B%B8%EB%A6%AC%EB%82%98",
+      "license": "Public domain",
+      "author": "Cesare Maccari"
+    },
+    "born": -108,
+    "died": -62
+  },
+  "person:칼리굴라": {
+    "portrait": {
+      "file": "/portraits/person_칼리굴라.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%B9%BC%EB%A6%AC%EA%B5%B4%EB%9D%BC",
+      "license": "CC BY-SA 3.0",
+      "author": "Louis le Grand"
+    },
+    "born": 12,
+    "died": 41
+  },
+  "person:칼비누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:칼푸르니아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:칼푸르니우스피소": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:케드레누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:코르넬리아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:코스로에스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:콘스탄티누스": {
+    "portrait": {
+      "file": "/portraits/person_콘스탄티누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B0%EB%88%84%EC%8A%A4%201%EC%84%B8",
+      "license": "CC BY 2.5",
+      "author": "Jean-Christophe BENOIST"
+    },
+    "born": 272,
+    "died": 337
+  },
+  "person:콘스탄티누스11세": {
+    "portrait": {
+      "file": "/portraits/person_콘스탄티누스11세.png",
+      "source": "https://ko.wikipedia.org/wiki/%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B0%EB%85%B8%EC%8A%A4%2011%EC%84%B8%20%ED%8C%94%EB%A0%88%EC%98%AC%EB%A1%9C%EA%B3%A0%EC%8A%A4",
+      "license": "Public domain",
+      "author": "익명Unknown author"
+    },
+    "born": 1404,
+    "died": 1453
+  },
+  "person:콘스탄티누스2세": {
+    "portrait": {
+      "file": "/portraits/person_콘스탄티누스2세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B0%EB%88%84%EC%8A%A4%202%EC%84%B8",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": 316,
+    "died": 340
+  },
+  "person:콘스탄티아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:콘스탄티우스1세": {
+    "portrait": {
+      "file": "/portraits/person_콘스탄티우스1세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B0%EC%9A%B0%EC%8A%A4%20%ED%81%B4%EB%A1%9C%EB%A3%A8%EC%8A%A4",
+      "license": "CC BY 3.0",
+      "author": "shakko"
+    },
+    "born": 250,
+    "died": 306
+  },
+  "person:콤모두스": {
+    "portrait": {
+      "file": "/portraits/person_콤모두스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%BD%A4%EB%AA%A8%EB%91%90%EC%8A%A4",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": 161,
+    "died": 192
+  },
+  "person:쿠리오": {
+    "portrait": null,
+    "born": -90,
+    "died": -49
+  },
+  "person:크라수스": {
+    "portrait": {
+      "file": "/portraits/person_크라수스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%EB%A6%AC%ED%82%A4%EB%8B%88%EC%9A%B0%EC%8A%A4%20%ED%81%AC%EB%9D%BC%EC%88%98%EC%8A%A4",
+      "license": "CC0",
+      "author": "Diagram Lajard"
+    },
+    "born": -115,
+    "died": -53
+  },
+  "person:크리스푸스": {
+    "portrait": {
+      "file": "/portraits/person_크리스푸스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%91%B8%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": 303,
+    "died": 326
+  },
+  "person:크산티포스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:클라우디우스": {
+    "portrait": {
+      "file": "/portraits/person_클라우디우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%94%94%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY 2.5",
+      "author": null
+    },
+    "born": -10,
+    "died": 54
+  },
+  "person:압피우스클라우디우스카우덱스": {
+    "portrait": null,
+    "born": -300,
+    "died": -300
+  },
+  "person:클레오파트라7세": {
+    "portrait": {
+      "file": "/portraits/person_클레오파트라7세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%81%B4%EB%A0%88%EC%98%A4%ED%8C%8C%ED%8A%B8%EB%9D%BC",
+      "license": "Public domain",
+      "author": "Louis le Grand"
+    },
+    "born": -69,
+    "died": -30
+  },
+  "person:클로디우스": {
+    "portrait": {
+      "file": "/portraits/person_클로디우스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Clodius",
+      "license": "Public domain",
+      "author": "PHGCOM"
+    },
+    "born": null,
+    "died": null
+  },
+  "person:키리아데스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:키케로": {
+    "portrait": {
+      "file": "/portraits/person_키케로.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A5%B4%EC%BF%A0%EC%8A%A4%20%ED%88%B4%EB%A6%AC%EC%9A%B0%EC%8A%A4%20%ED%82%A4%EC%BC%80%EB%A1%9C",
+      "license": "CC BY-SA 4.0",
+      "author": "José Luiz"
+    },
+    "born": -106,
+    "died": -43
+  },
+  "person:킨나": {
+    "portrait": null,
+    "born": -135,
+    "died": -84
+  },
+  "person:타르퀴니우스수페르부스": {
+    "portrait": {
+      "file": "/portraits/person_타르퀴니우스수페르부스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Lucius%20Tarquinius%20Superbus",
+      "license": "Public domain",
+      "author": "Published by Guillaume Rouille (1518?-1589)"
+    },
+    "born": -600,
+    "died": -495
+  },
+  "person:타르퀴니우스프리스쿠스": {
+    "portrait": null,
+    "born": -700,
+    "died": -578
+  },
+  "person:타키투스": {
+    "portrait": {
+      "file": "/portraits/person_타키투스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%83%80%ED%82%A4%ED%88%AC%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown author. Published by the Grolier Society."
+    },
+    "born": 56,
+    "died": 120
+  },
+  "person:테오도라": {
+    "portrait": {
+      "file": "/portraits/person_테오도라.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%85%8C%EC%98%A4%EB%8F%84%EB%9D%BC",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": 500,
+    "died": 548
+  },
+  "person:테오도리쿠스": {
+    "portrait": {
+      "file": "/portraits/person_테오도리쿠스.png",
+      "source": "https://ko.wikipedia.org/wiki/%ED%85%8C%EC%98%A4%EB%8F%84%EB%A6%AC%EC%BF%A0%EC%8A%A4%20%EB%8C%80%EC%99%95",
+      "license": "CC BY 3.0",
+      "author": "미상Unknown author"
+    },
+    "born": 454,
+    "died": 526
+  },
+  "person:테오도시우스1세": {
+    "portrait": {
+      "file": "/portraits/person_테오도시우스1세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%85%8C%EC%98%A4%EB%8F%84%EC%8B%9C%EC%9A%B0%EC%8A%A4%201%EC%84%B8",
+      "license": "CC BY-SA 2.5",
+      "author": "CNG"
+    },
+    "born": 347,
+    "died": 395
+  },
+  "person:테트리쿠스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:트라야누스": {
+    "portrait": {
+      "file": "/portraits/person_트라야누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%9D%BC%EC%95%BC%EB%88%84%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown artist"
+    },
+    "born": 53,
+    "died": 117
+  },
+  "person:티겔리누스": {
+    "portrait": {
+      "file": "/portraits/person_티겔리누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%98%A4%ED%8F%AC%EB%8B%88%EC%9A%B0%EC%8A%A4%20%ED%8B%B0%EA%B2%94%EB%A6%AC%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 4.0",
+      "author": "Gharta1145"
+    },
+    "born": 10,
+    "died": 69
+  },
+  "person:티무르": {
+    "portrait": {
+      "file": "/portraits/person_티무르.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8B%B0%EB%AC%B4%EB%A5%B4",
+      "license": "CC BY-SA 3.0",
+      "author": "user:shakko"
+    },
+    "born": 1336,
+    "died": 1405
+  },
+  "person:티베리우스": {
+    "portrait": {
+      "file": "/portraits/person_티베리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8B%B0%EB%B2%A0%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 2.0",
+      "author": "Carole Raddato from FRANKFURT, Germany"
+    },
+    "born": -42,
+    "died": 37
+  },
+  "person:티베리우스클라우디우스네로": {
+    "portrait": {
+      "file": "/portraits/person_티베리우스클라우디우스네로.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8B%B0%EB%B2%A0%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "CC BY-SA 2.0",
+      "author": "Carole Raddato from FRANKFURT, Germany"
+    },
+    "born": -42,
+    "died": 37
+  },
+  "person:티투스": {
+    "portrait": {
+      "file": "/portraits/person_티투스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8B%B0%ED%88%AC%EC%8A%A4",
+      "license": "CC BY 3.0",
+      "author": "Sailko"
+    },
+    "born": 41,
+    "died": 81
+  },
+  "person:파르나케스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:파비우스막시무스": {
+    "portrait": {
+      "file": "/portraits/person_파비우스막시무스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%80%B8%ED%88%AC%EC%8A%A4%20%ED%8C%8C%EB%B9%84%EC%9A%B0%EC%8A%A4%20%EB%A7%89%EC%8B%9C%EB%AC%B4%EC%8A%A4",
+      "license": "Public domain",
+      "author": "schurl50 (User:schurl50)"
+    },
+    "born": null,
+    "died": -203
+  },
+  "person:파우스티나": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:파울루스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:판테아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:페르티낙스": {
+    "portrait": {
+      "file": "/portraits/person_페르티낙스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8E%98%EB%A5%B4%ED%8B%B0%EB%82%99%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Codrin.B"
+    },
+    "born": 126,
+    "died": 193
+  },
+  "person:포카스": {
+    "portrait": {
+      "file": "/portraits/person_포카스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%B9%B4%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": 547,
+    "died": 610
+  },
+  "person:포티누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:포파이아": {
+    "portrait": {
+      "file": "/portraits/person_포파이아.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8F%AC%ED%8C%8C%EC%9D%B4%EC%95%84%20%EC%82%AC%EB%B9%84%EB%82%98",
+      "license": "CC BY-SA 3.0",
+      "author": "TcfkaPanairjdde"
+    },
+    "born": 30,
+    "died": 65
+  },
+  "person:포파이우스사비누스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:폼페이우스": {
+    "portrait": {
+      "file": "/portraits/person_폼페이우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%82%98%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%ED%8F%BC%ED%8E%98%EC%9D%B4%EC%9A%B0%EC%8A%A4%20%EB%A7%88%EA%B7%B8%EB%88%84%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Didier Descouens"
+    },
+    "born": -106,
+    "died": -48
+  },
+  "person:푸블리우스스키피오": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:푸블리우스코르넬리우스스키피오": {
+    "portrait": {
+      "file": "/portraits/person_푸블리우스코르넬리우스스키피오.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%82%A4%ED%94%BC%EC%98%A4%20%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "Miguel Hermoso Cuesta"
+    },
+    "born": -255,
+    "died": -211
+  },
+  "person:프란자": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:프로코피우스": {
+    "portrait": null,
+    "born": 500,
+    "died": 565
+  },
+  "person:프리스쿠스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:프톨레마이오스": {
+    "portrait": {
+      "file": "/portraits/person_프톨레마이오스.jpg",
+      "source": "https://en.wikipedia.org/wiki/Ptolemy",
+      "license": "Public domain",
+      "author": "Justus van Gent / Pedro Berruguete"
+    },
+    "born": 100,
+    "died": 170
+  },
+  "person:프톨레마이오스13세": {
+    "portrait": {
+      "file": "/portraits/person_프톨레마이오스13세.jpg",
+      "source": "https://en.wikipedia.org/wiki/Ptolemy%20XIII%20Theos%20Philopator",
+      "license": "Public domain",
+      "author": "Tangopaso"
+    },
+    "born": -62,
+    "died": -47
+  },
+  "person:프톨레마이오스14세": {
+    "portrait": {
+      "file": "/portraits/person_프톨레마이오스14세.jpg",
+      "source": "https://en.wikipedia.org/wiki/Ptolemy%20XIV%20Philopator",
+      "license": "Public domain",
+      "author": "Unknown authorUnknown author"
+    },
+    "born": -59,
+    "died": -44
+  },
+  "person:플라미니우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:플로티나": {
+    "portrait": {
+      "file": "/portraits/person_플로티나.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8F%BC%ED%8E%98%EC%9D%B4%EC%95%84%20%ED%94%8C%EB%A1%9C%ED%8B%B0%EB%82%98",
+      "license": "CC BY-SA 3.0",
+      "author": null
+    },
+    "born": 70,
+    "died": 121
+  },
+  "person:피로스": {
+    "portrait": {
+      "file": "/portraits/person_피로스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%94%BC%EB%A1%9C%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Marie-Lan Nguyen"
+    },
+    "born": -318,
+    "died": -272
+  },
+  "person:피소": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:필라테": {
+    "portrait": {
+      "file": "/portraits/person_필라테.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%8F%B0%ED%8B%B0%EC%9A%B0%EC%8A%A4%20%ED%95%84%EB%9D%BC%ED%88%AC%EC%8A%A4",
+      "license": "Public domain",
+      "author": "안토니오 치세리"
+    },
+    "born": -12,
+    "died": null
+  },
+  "person:필리포스5세": {
+    "portrait": {
+      "file": "/portraits/person_필리포스5세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%95%84%EB%A6%AC%ED%8F%AC%EC%8A%A4%205%EC%84%B8",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": -238,
+    "died": -179
+  },
+  "person:필리푸스": {
+    "portrait": {
+      "file": "/portraits/person_필리푸스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%95%84%EB%A6%AC%ED%91%B8%EC%8A%A4%20%EC%95%84%EB%9D%BC%EB%B8%8C%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "sailko"
+    },
+    "born": 204,
+    "died": 249
+  },
+  "person:하드리아누스": {
+    "portrait": {
+      "file": "/portraits/person_하드리아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%95%98%EB%93%9C%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Marie-Lan Nguyen"
+    },
+    "born": 76,
+    "died": 138
+  },
+  "person:하디자": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:하밀카르바르카스": {
+    "portrait": {
+      "file": "/portraits/person_하밀카르바르카스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%95%98%EB%B0%80%EC%B9%B4%EB%A5%B4%20%EB%B0%94%EB%A5%B4%EC%B9%B4",
+      "license": "CC BY-SA 4.0",
+      "author": "Xinstalker"
+    },
+    "born": -275,
+    "died": -228
+  },
+  "person:하스드루발": {
+    "portrait": {
+      "file": "/portraits/person_하스드루발.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%95%98%EC%8A%A4%EB%93%9C%EB%A3%A8%EB%B0%9C%20%EB%B0%94%EB%A5%B4%EC%B9%B4",
+      "license": "Public domain",
+      "author": "The Ogre at en.wikipedia"
+    },
+    "born": -245,
+    "died": -207
+  },
+  "person:하심": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:한나라의고조": {
+    "portrait": {
+      "file": "/portraits/person_한나라의고조.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%B0%A9",
+      "license": "GFDL",
+      "author": null
+    },
+    "born": null,
+    "died": null
+  },
+  "person:한노": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:한니발": {
+    "portrait": {
+      "file": "/portraits/person_한니발.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%95%9C%EB%8B%88%EB%B0%9C",
+      "license": "Public domain",
+      "author": "Sébastien Slodtz (French, 1655–1726)"
+    },
+    "born": -247,
+    "died": -183
+  },
+  "person:헤라클레스": {
+    "portrait": {
+      "file": "/portraits/person_헤라클레스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%97%A4%EB%9D%BC%ED%81%B4%EB%A0%88%EC%8A%A4",
+      "license": "Public domain",
+      "author": "미상Unknown artist"
+    },
+    "born": null,
+    "died": null
+  },
+  "person:헤라클리우스": {
+    "portrait": {
+      "file": "/portraits/person_헤라클리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%9D%BC%ED%81%B4%EB%A6%AC%EC%98%A4%EC%8A%A4",
+      "license": "CC BY-SA 2.5",
+      "author": "CNG"
+    },
+    "born": 575,
+    "died": 641
+  },
+  "person:헤로데대왕": {
+    "portrait": {
+      "file": "/portraits/person_헤로데대왕.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%97%A4%EB%A1%9C%EB%8D%B0%20%EB%8C%80%EC%99%95",
+      "license": "Public domain",
+      "author": "미상Unknown author"
+    },
+    "born": -74,
+    "died": -4
+  },
+  "person:헤로데안티파스": {
+    "portrait": {
+      "file": "/portraits/person_헤로데안티파스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%97%A4%EB%A1%9C%EB%8D%B0%20%EC%95%88%ED%8B%B0%ED%8C%8C%EC%8A%A4",
+      "license": "Public domain",
+      "author": "알브레히트 뒤러"
+    },
+    "born": -20,
+    "died": null
+  },
+  "person:헤로디아": {
+    "portrait": {
+      "file": "/portraits/person_헤로디아.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%97%A4%EB%A1%9C%EB%94%94%EC%95%84",
+      "license": "Public domain",
+      "author": "폴 들라로슈"
+    },
+    "born": -15,
+    "died": 39
+  },
+  "person:헤르시아": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:헨리4세": {
+    "portrait": {
+      "file": "/portraits/person_헨리4세.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%97%A8%EB%A6%AC%204%EC%84%B8",
+      "license": "Public domain",
+      "author": "익명"
+    },
+    "born": 1367,
+    "died": 1413
+  },
+  "person:호노리우스": {
+    "portrait": {
+      "file": "/portraits/person_호노리우스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%98%B8%EB%85%B8%EB%A6%AC%EC%9A%B0%EC%8A%A4",
+      "license": "Public domain",
+      "author": null
+    },
+    "born": 384,
+    "died": 423
+  },
+  "person:호스틸리아누스": {
+    "portrait": {
+      "file": "/portraits/person_호스틸리아누스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%ED%98%B8%EC%8A%A4%ED%8B%B8%EB%A6%AC%EC%95%84%EB%88%84%EC%8A%A4",
+      "license": "CC BY-SA 3.0",
+      "author": "sailko"
+    },
+    "born": 230,
+    "died": 251
+  },
+  "person:황비루피키나": {
+    "portrait": {
+      "file": "/portraits/person_황비루피키나.png",
+      "source": "https://en.wikipedia.org/wiki/Euphemia%20(empress)",
+      "license": "CC BY-SA 4.0",
+      "author": "Gabe the Pianist"
+    },
+    "born": 500,
+    "died": 523
+  },
+  "person:히에론": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:히파티우스": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:흄": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:볼테르": {
+    "portrait": {
+      "file": "/portraits/person_볼테르.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EB%B3%BC%ED%85%8C%EB%A5%B4",
+      "license": "CC0",
+      "author": "Nicolas de Largillière"
+    },
+    "born": 1694,
+    "died": 1778
+  },
+  "person:애덤스미스": {
+    "portrait": {
+      "file": "/portraits/person_애덤스미스.jpg",
+      "source": "https://ko.wikipedia.org/wiki/%EC%95%A0%EB%8D%A4%20%EC%8A%A4%EB%AF%B8%EC%8A%A4",
+      "license": "Public domain",
+      "author": "Etching created by Cadell and Davies (1811), John Horsburgh (1828) or R.C. Bell (1872)."
+    },
+    "born": 1723,
+    "died": 1790
+  },
+  "person:마고": {
+    "portrait": null,
+    "born": null,
+    "died": null
+  },
+  "person:한니발기스코": {
+    "portrait": null,
+    "born": -300,
+    "died": -258
+  }
+}

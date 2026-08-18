@@ -178,7 +178,14 @@ export function renderPointMap(places: PlaceCoord[]): string {
     .pin.guessed { fill: none; stroke: light-dark(#a8543f, #d0806a); stroke-width: 1.2; stroke-dasharray: 2 1.6; }
     .pin-label { font-size: ${FONT}px; fill: light-dark(#33383d, #d4dade); paint-order: stroke;
       stroke: light-dark(#d6e4ee, #0e161d); stroke-width: 3; stroke-linejoin: round; }
-    a:hover .pin-label { fill: light-dark(#000, #fff); }
+    /*
+      **눌린다는 것을 눈으로 알려야 한다.** 처음엔 아무 표시가 없어서 River가
+      「인터랙티브가 안 되는 것 같다」고 했다. 손가락 커서와 hover 강조를 준다.
+    */
+    a { cursor: pointer; }
+    a:hover .pin-label { fill: light-dark(#fff, #0e161d); stroke: light-dark(#a8543f, #d0806a); }
+    a:hover .pin { r: 5; }
+    a:focus-visible .pin { outline: 2px solid light-dark(#a8543f, #d0806a); outline-offset: 2px; }
   `
 
   return (

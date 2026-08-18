@@ -129,6 +129,28 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         </div>
       ) : null}
 
+
+      {/*
+        **지도가 본문 위에 선다.** 처음엔 맨 아래에 뒀는데 River가 「마지막에 있어서
+        인터랙티브가 안 되는 것 같다」고 했다 — 맞다. 다 읽고 나서 보는 지도는 읽는
+        동안 아무 일도 안 한다. 여기 있으면 **읽기 전에 「어디쯤 이야기인가」를 한 번
+        잡고** 들어가고, 본문에서 지명을 만났을 때 되짚을 자리도 가깝다.
+
+        지명은 카드로 안 세운다 — 카드로 만들면 포인트당 스무 곳이 옆에 줄줄이 서서
+        정작 인물이 묻힌다.
+      */}
+      <div style={NARROW}>
+        <Stack direction="vertical" gap={1.5} as="section">
+          <Heading level={2}>이 대목의 지도</Heading>
+          {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
+          <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
+          <Text size="sm" color="secondary">
+            지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만 있는 점은
+            위치가 추정입니다.
+          </Text>
+        </Stack>
+      </div>
+
       {/* 본문 + 여백 카드. 간격은 `globals.css`의 H2 마진이 정한다 */}
       <ReadGrid layout={layout} />
 
@@ -158,21 +180,6 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         </Stack>
       </div>
 
-      {/*
-        지명은 카드로 안 세우고 여기로 모은다 — 카드로 만들면 포인트당 스무 곳이
-        옆에 줄줄이 서서 정작 인물이 묻힌다. 지도는 「어디쯤인가」에 한 번에 답한다.
-      */}
-      <div style={NARROW}>
-        <Stack direction="vertical" gap={1.5} as="section">
-          <Heading level={2}>이 대목의 지도</Heading>
-          {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
-          <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
-          <Text size="sm" color="secondary">
-            이 대목에 나오는 지명 {places.length}곳. 이름을 누르면 그 화면으로 갑니다. 테두리만
-            있는 점은 위치가 추정입니다.
-          </Text>
-        </Stack>
-      </div>
 
       {/*
         **본문에서 표로 가는 길.** 감사(2026-08-17)가 잡은 동선 결함이다 — 30장
