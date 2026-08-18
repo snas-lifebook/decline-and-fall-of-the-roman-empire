@@ -174,7 +174,16 @@ export function EgoGraph({ nodes, edges }: { nodes: GraphNode[]; edges: GraphEdg
     <svg
       viewBox={`${cx - w / 2} ${cy - h / 2} ${w} ${h}`}
       width="100%"
-      role="img"
+      /*
+        **`group`이지 `img`가 아니다.** 안에 `<a>`가 들어 있어서, `img`로 두면 화면
+        낭독기에는 그림 하나로 들리고 **그 링크들이 통째로 가려진다.** 키보드로는
+        여전히 탭이 닿으므로 보이지도 않는 것에 초점만 가는 상태가 된다.
+
+        빌드타임 SVG 셋(`family`·`timeline`·`place`)을 같은 이유로 함께 고쳤다
+        (2026-08-18, axe `nested-interactive`). 여기만 남았던 것은 관계망이 접혀
+        있어서 axe가 못 봤기 때문이지 멀쩡해서가 아니다.
+      */
+      role="group"
       aria-label="이 객체와 이어진 것들의 관계 그림"
       // 끄는 중 커서는 CSS `:active`가 바꾼다. 여기서 ref를 읽으면 렌더 중 접근이 된다
       className="ego-graph"

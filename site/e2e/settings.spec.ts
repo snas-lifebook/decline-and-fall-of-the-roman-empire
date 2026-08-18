@@ -124,9 +124,25 @@ test.describe('설정을 만져서 화면이 바뀐다', () => {
     await page.evaluate(() => {
       document.documentElement.dataset.focus = 'on'
     })
+    // 접히는 것은 CSS라 하이드레이션과 무관하게 바로 된다
     await expect(page.locator('.read-rail')).toBeHidden()
 
-    await page.keyboard.press('Escape')
-    await expect(page.locator('.read-rail')).toBeVisible()
+    /*
+     * **Esc는 하이드레이션이 끝나야 듣는다.** `ReadCards`의 keydown 리스너가 받는데,
+     * 그 전에 누르면 아무 일도 안 일어난다. 한 번만 누르고 기다리면 **바쁜 기기에서만
+     * 빨개지는 테스트**가 된다 — 실제로 혼자 돌리면 통과하고 전체를 돌리면 실패했다
+     * (2026-08-18).
+     *
+     * 될 때까지 누른다. Esc는 여러 번 눌러도 해로운 것이 없다.
+     */
+    await expect
+      .poll(
+        async () => {
+          await page.keyboard.press('Escape')
+          return page.locator('.read-rail').isVisible()
+        },
+        { timeout: 5000, message: '하이드레이션이 끝나도 Esc가 안 듣는다' },
+      )
+      .toBe(true)
   })
 })

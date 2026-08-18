@@ -88,6 +88,35 @@ for (const path of SCREENS) {
   })
 }
 
+test('**접힌 것을 펴서도 본다** — 닫혀 있으면 axe가 통째로 지나간다', async ({ page }) => {
+  /*
+   * 이 테스트가 있는 이유: `EgoGraph`가 `role="img"` 안에 링크를 담고 있었는데,
+   * 읽기 화면에서 관계망이 접혀 있어서 **axe가 못 보고 지나갔다**(2026-08-18).
+   * 빌드타임 SVG 셋은 잡혔는데 그것만 살아남았다 — 멀쩡해서가 아니라 안 보여서였다.
+   *
+   * 접는 것이 늘수록 이 구멍도 는다. 하단 넷을 다 펴고 한 번 더 잰다.
+   */
+  await page.goto('/read/point/5')
+  for (const label of ['이 대목의 관계망', '이 대목을 표로 받기', '자주 묻는 것']) {
+    await page.getByRole('button', { name: label }).click()
+  }
+  // 관계망은 힘 계산이 끝나야 링크가 자리를 잡는다
+  await page.waitForTimeout(1200)
+
+  const { violations } = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+    .analyze()
+
+  const mode = test.info().project.name
+  const allowed = new Set(
+    KNOWN.filter((k) => k.mode === 'both' || k.mode === mode).map((k) => k.rule),
+  )
+  expect(
+    violations.filter((v) => !allowed.has(v.id)).map((v) => `${v.id} ×${v.nodes.length}: ${v.help}`),
+    '펼친 상태에서 새 접근성 위반',
+  ).toEqual([])
+})
+
 test('**고친 것은 목록에서 지웠는가** — 안 지우면 다음 회귀를 못 잡는다', async ({ page }) => {
   // 헌장 5절 4항을 접근성에 옮긴 것이다. `KNOWN`에 있는데 실제로는 안 나오는 규칙이
   // 남아 있으면, 그 자리에서 다시 깨져도 조용히 통과한다.
