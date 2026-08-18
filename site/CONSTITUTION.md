@@ -81,6 +81,7 @@ ontology/*.jsonl · entities/**.md · points/*.md   (레포 루트, 정본)
 | E2E | `@playwright/test` | 1.62.1 | Apache-2.0 |
 | 타입 | `typescript` | 5.9.3 | Apache-2.0 |
 | 린트 | `eslint` · `eslint-config-next` | 9.39.5 · 16.3.0 | MIT |
+| **접근성 검사 (T6.3)** | **`@axe-core/playwright`** | **4.13.0 — 캐럿 금지, 정확히 고정** | **MPL-2.0** |
 
 > **Next.js는 16이다.** 학습 데이터의 15와 다르다. 코드를 쓰기 전에 `node_modules/next/dist/docs/`의 해당 가이드를 읽는다. `site/AGENTS.md` 최상단 블록이 이 경고를 반복한다.
 
@@ -93,7 +94,6 @@ ontology/*.jsonl · entities/**.md · points/*.md   (레포 루트, 정본)
 | 가계도 레이아웃 | `@dagrejs/dagre` | 3.1.1 | MIT | T3.3. **빌드타임 전용, 클라 0KB** |
 | 검색 | `es-hangul` | 최신 | MIT | T3.4. 초성 검색 |
 | 프론트매터 파싱 | `gray-matter` | 4.0.3 | MIT | 엔티티 노트를 읽을 때 |
-| 접근성 검사 | `@axe-core/playwright` | 4.13.0 | **MPL-2.0** | 화면이 생긴 뒤 |
 
 **마크다운 렌더러를 안 넣는다 (2026-08-14, 실측 근거).** `next-mdx-remote`(MPL-2.0)와 `remark-wiki-link`를 넣기로 했다가 뺐다 — **astryx가 `Markdown`을 이미 준다.** 필수 prop은 `children: string` 하나고, GFM 표·코드블록·이미지·체크리스트를 지원하며, 자체 파서라 외부 의존성이 0이다(`package.json` dependencies는 `intl-messageformat` 하나뿐). 위키링크 `[[X]]`만 마크다운이 아니라서 `lib/doc.ts`의 정규식 한 줄이 평문으로 편다.
 

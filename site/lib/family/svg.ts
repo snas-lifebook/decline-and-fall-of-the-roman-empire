@@ -13,9 +13,12 @@ const esc = (s: string) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt
 export type SvgOptions = {
   fontSize?: number
   /**
-   * 그림의 이름. **`role="img"`가 안의 링크를 통째로 가린다** — 화면 낭독기에는
-   * 상자 22개가 아니라 그림 하나로 들린다. 이름이 없으면 「그래픽」이라고만
-   * 읽히므로 반드시 준다(2026-08-17 검수에서 빠져 있던 것).
+   * 그림의 이름. 없으면 「그래픽」이라고만 읽히므로 반드시 준다(2026-08-17 검수에서
+   * 빠져 있던 것).
+   *
+   * **`role`은 `group`이다.** 앞 판은 `img`였는데 그러면 안의 링크가 낭독기에서
+   * 통째로 가려지면서 키보드 초점만 닿는 상태가 된다(axe `nested-interactive`,
+   * 2026-08-18). `group`은 이름을 읽어 주면서 링크를 살려 둔다.
    */
   label?: string
   /** 하이라이트할 인물. 그 사람만 테두리가 굵어진다 */
@@ -69,7 +72,7 @@ export function renderFamilySvg(layout: FamilyLayout, opts: SvgOptions = {}): st
    * ponytail: 자연폭이 칸의 두 배를 넘으면 글자가 작아진다. 지금 여섯 가문 중
    * 그런 것은 없다(최대 1201 대 1100). 생기면 그때 세대별로 접는다.
    */
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${round(layout.width)} ${round(layout.height)}" width="100%" style="max-width:${round(layout.width)}px;height:auto" role="img" aria-label="${esc(opts.label ?? '가계도')}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${round(layout.width)} ${round(layout.height)}" width="100%" style="max-width:${round(layout.width)}px;height:auto" role="group" aria-label="${esc(opts.label ?? '가계도')}">
 <style>
   /*
    * 색을 light-dark()로 짝지어 둔다. 다크모드를 붙이면서 하드코딩 열한 개가

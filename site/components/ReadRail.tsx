@@ -56,15 +56,20 @@ export function ReadRail({ items }: { items: OutlineItem[] }) {
             content={<ReadSettings />}
           >
             {(trigger) => (
-              <span {...trigger} className="read-rail-gear">
-                <IconButton
-                  label="읽기 설정"
-                  size="sm"
-                  variant="ghost"
-                  icon={<GearIcon />}
-                  aria-hidden={false}
-                />
-              </span>
+              /*
+                **여는 표시(`aria-haspopup`·`aria-expanded`)는 단추가 달아야 한다.**
+                처음엔 `<span>`으로 감싸고 거기에 통째로 붙였는데, axe가 critical로
+                잡았다 — 평범한 `<span>`은 그 속성을 가질 수 없다(2026-08-18).
+                낭독기가 「눌러서 여는 것」이라고 말해 주려면 실제 단추에 있어야 한다.
+              */
+              <IconButton
+                {...trigger}
+                className="read-rail-gear"
+                label="읽기 설정"
+                size="sm"
+                variant="ghost"
+                icon={<GearIcon />}
+              />
             )}
           </Popover>
         </Stack>

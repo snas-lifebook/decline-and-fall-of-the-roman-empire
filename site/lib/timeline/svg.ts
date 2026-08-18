@@ -88,7 +88,7 @@ export function renderTimelineSvg(tl: Timeline, opts: TimelineSvgOptions = {}): 
     parts.push('</g>')
   })
 
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;height:auto" xmlns="http://www.w3.org/2000/svg" role="img"${
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;height:auto" xmlns="http://www.w3.org/2000/svg" role="group"${
     opts.label ? ` aria-label="${esc(opts.label)}"` : ''
   }>
 <style>
