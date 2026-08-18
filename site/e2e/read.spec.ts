@@ -130,3 +130,97 @@ test.describe('폰으로 읽기', () => {
     expect(over).toBe(false)
   })
 })
+
+/**
+ * 책 한 권으로 묶은 뒤 (2026-08-19).
+ *
+ * River: 「읽기에는 여러 텍스트를 큰 책 단위로 묶어보자 … 그 책을 눌러 들어갔을 때는
+ * 책과 저자에 대한 소개페이지가 있고, 바로 쉽게 각 목차별로 들어갈 수 있게」.
+ *
+ * 여기서 지키는 것은 **아무도 빠지지 않는 것**이다. 일러두기·책머리에·옮기고 나서는
+ * 파일로 있으면서 사이트 어디에도 안 걸려 있었다 — 그 사고를 다시 안 내려고 본다.
+ */
+test.describe('책으로 들어가기', () => {
+  test('읽기는 책장이고, 책을 누르면 문패가 뜬다', async ({ page }) => {
+    await page.goto('/read')
+    await expect(page.locator('.book')).toBeVisible()
+    // 사이드바에도 같은 이름이 걸려 있다. 책장의 책을 누른다 — 표지를 눌러도
+    // 열려야 하므로 숨은 링크가 아니라 **표지 자체**를 누른다
+    await page.locator('.shelf .book').click()
+    await expect(page.locator('h1')).toContainText('30포인트로 읽어내는')
+  })
+
+  test('차례에 앞뒤 글까지 33편이 있고 종이책 쪽수가 붙는다', async ({ page }) => {
+    await page.goto('/read/rome30')
+    // 차례 줄마다 하나씩 있는 번호칸으로 센다. 사이드바에도 33편이 걸려 있고,
+    // 본문에도 「처음부터 읽기」 같은 링크가 따로 있어서 링크를 세면 안 맞는다
+    await expect(page.locator('.toc-n')).toHaveCount(33)
+    // 앞뒤 글 셋은 이름으로 확인한다. 이게 빠졌던 것이 이 작업의 출발점이다
+    for (const t of ['일러두기', '책머리에', '옮기고 나서']) {
+      await expect(page.locator('.doc').getByRole('link', { name: t }).first()).toBeVisible()
+    }
+    await expect(page.locator('.doc').getByText('317', { exact: true })).toBeVisible()
+  })
+
+  test('앞뒤 글도 읽기 환경을 그대로 쓴다', async ({ page }) => {
+    await page.goto('/read/text/책머리에')
+    await expect(page.locator('h1')).toContainText('책머리에')
+    await expect(page.locator('.read-block').first()).toBeVisible()
+    // 글꼴·크기·바탕을 여는 톱니가 여기에도 있어야 한다
+    await expect(page.locator('.read-rail-gear')).toBeAttached()
+  })
+
+  test('책을 끝까지 읽으면 닫는 글로 이어진다 — 30에서 끊기지 않는다', async ({ page }) => {
+    await page.goto('/read/point/30')
+    await expect(page.getByRole('link', { name: /옮기고 나서/ })).toBeVisible()
+  })
+})
+
+/**
+ * 지도가 읽는 자리를 따라간다 (River, 2026-08-19).
+ *
+ * 「패널이 뜨는 지도 화면은 스크롤 시에 '이 대목의 절'과 함께 움직이며 … 얼추 스크롤이
+ * 되었을 때 해당 지도 위치를 함께 띄워주시오」.
+ */
+test.describe('지도가 따라온다', () => {
+  test('「옆에」는 목차 아래로 들어가고, 절이 바뀌면 켜지는 지명이 바뀐다', async ({ page }) => {
+    await page.goto(POINT)
+    await page.evaluate(() => localStorage.setItem('read-map', 'side'))
+    await page.reload()
+    await page.waitForSelector('.read-block')
+
+    // 목차와 한 몸이어야 스크롤을 같이 탄다
+    await expect(page.locator('.read-rail .map-slot')).toBeVisible()
+
+    const lit = () =>
+      page.evaluate(() =>
+        [...document.querySelectorAll('.point-map .at')].map((a) => a.getAttribute('href')).sort(),
+      )
+
+    const first = await lit()
+    expect(first.length, '첫 절인데 켜진 지명이 없다').toBeGreaterThan(0)
+
+    // 두 번째 절로 굴린다. `AppShell height="fill"`이라 구르는 것은 안쪽 칸이다
+    await page.evaluate(() => {
+      const heads = [...document.querySelectorAll('.read-block[id]')]
+      heads[heads.length - 1]?.scrollIntoView({ block: 'start' })
+    })
+    await page.waitForTimeout(400)
+
+    const second = await lit()
+    expect(second, '절이 바뀌었는데 지도가 그대로다').not.toEqual(first)
+  })
+
+  test('모드를 되돌리면 지도가 본문 아래 제자리로 간다', async ({ page }) => {
+    await page.goto(POINT)
+    await page.evaluate(() => localStorage.setItem('read-map', 'side'))
+    await page.reload()
+    await page.waitForSelector('.read-rail .map-slot')
+
+    await page.evaluate(() => {
+      document.documentElement.dataset.map = 'bottom'
+    })
+    await expect(page.locator('.read-rail .map-slot')).toHaveCount(0)
+    await expect(page.locator('.map-slot .point-map')).toBeVisible()
+  })
+})

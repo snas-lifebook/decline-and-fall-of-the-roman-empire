@@ -38,10 +38,6 @@ function Column({ title, children }: { title: string; children: React.ReactNode 
       <Text size="sm" weight="semibold">
         {title}
       </Text>
-      {/*
-        `hAlign="start"`가 없으면 칸 안의 **버튼이 가운데로 늘어난다**(「한 줄
-        남기기」). 글자 링크는 원래 왼쪽에 붙어 있어서 버튼 하나만 튀어 보였다.
-      */}
       <Stack direction="vertical" gap={1} hAlign="start">
         {children}
       </Stack>
@@ -54,6 +50,16 @@ export function SiteFooter({ where }: { where: string }) {
 
   return (
     <Stack direction="vertical" gap={6} as="footer">
+      {/*
+        **「한 줄 남기기」가 제 줄을 갖는다.** 앞 판은 「이 사이트」 칸의 링크
+        셋 밑에 고스트 단추로 끼어 있었는데, 옆의 것들은 「눌러서 가는 곳」이고
+        이것만 「눌러서 여는 것」이라 같은 줄에 설 물건이 아니었다(River 지적).
+        푸터에서 유일하게 **사람이 뭔가 하는 자리**이므로 맨 위에 혼자 둔다.
+      */}
+      <FeedbackBox where={where} />
+
+      <Divider />
+
       <Grid columns={{ minWidth: 180 }} gap={6}>
         <Column title="자료실">
           {navTree().map((n) => (
@@ -104,7 +110,6 @@ export function SiteFooter({ where }: { where: string }) {
               <a href="/changelog">바뀐 것 {changelog().length}건</a>
             </Text>
           ) : null}
-          <FeedbackBox where={where} />
         </Column>
       </Grid>
 

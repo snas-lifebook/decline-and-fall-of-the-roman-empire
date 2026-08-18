@@ -945,60 +945,62 @@ html[data-layers]:not([data-layers~='strait']) .point-map a[data-kind='strait'] 
   display: none;
 }
 
-/*
-  「옆에 상주」 — **호버 패널을 그대로 띄워 둔 것이다.**
+/* ── 「옆에」 — 읽는 자리를 따라가는 지도 ──────────────────────────
+   River: 「패널이 뜨는 지도 화면은 스크롤 시에 '이 대목의 절'과 함께 움직이며 …
+   얼추 스크롤이 되었을 때 해당 지도 위치를 함께 띄워주시오」.
 
-  처음엔 오른쪽 칸의 그리드 항목으로 만들려 했는데, `.map-slot`은 `.read-grid`의
-  자식이 아니라 형제라 `grid-column: 2`가 조용히 무시됐다(실측: 오른쪽 칸에 가야 할
-  것이 왼쪽 끝 0px에 있었다). 지도를 그리드 안으로 옮기면 「본문 아래」 모드가
-  본문 마지막 행과 겹친다.
+   앞 판은 **호버 패널을 그냥 띄워 둔 것**이었다. 오른쪽 아래 구석에 고정이라
+   스크롤과 아무 관계가 없었고, 지명 서른 개가 처음부터 끝까지 똑같이 켜져 있어
+   지금 읽는 자리를 말하지 않았다. 그 둘이 River가 짚은 것이다.
 
-  호버 패널은 이미 `position: fixed`라 그리드와 무관하고, 340px에서 이름표를 하나만
-  키우는 처리도 되어 있다. **띄워 둘 조건 하나만 더하면 끝난다** — 두 벌을 만들지
-  않는 것이 이 파일의 규칙이다.
-*/
-html[data-map='side'] .map-slot {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 420px;
-  max-width: calc(100vw - 40px);
-  z-index: 20;
-  background: light-dark(#ffffff, #161b21);
-  border: 1px solid light-dark(#dfe4e9, #2b3138);
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 6px 24px light-dark(rgb(20 30 40 / 0.14), rgb(0 0 0 / 0.45));
+   지금은 오른쪽 패널 **안**으로 들어간다(`MapFollow`가 노드를 옮긴다). 그 패널이
+   이미 `sticky`라 「이 대목의 절」과 한 몸으로 움직인다 — 붙이는 장치를 새로 만들지
+   않았다. 여기서 하는 일은 **레일 안에 들어왔을 때의 옷**을 입히는 것뿐이다.
+   ───────────────────────────────────────────────────────────── */
+.rail-map-slot:empty {
+  display: none;
 }
 
-html[data-map='side'] .map-slot h2 {
+.rail-map-slot .map-slot {
+  max-width: none;
+  margin-top: 4px;
+}
+
+.rail-map-slot h2 {
   font-size: 13px;
   margin: 0 0 6px;
 }
 
-/* 420px로 줄면 11px 글씨가 6px이 된다. 켜진 것만 키운다 — 호버 패널과 같은 처리다 */
-html[data-map='side'] .map-slot .pin-label {
+/*
+  340px 칸에서 11px 글씨는 6px이 된다. **이름표는 지금 절의 것만 낸다** — 그게 곧
+  「해당 지도 위치」다. 나머지는 점으로 남아 위치 감각을 준다.
+*/
+.rail-map-slot .pin-label {
   display: none;
 }
 
-html[data-map='side'] .map-slot .lit .pin-label {
+.rail-map-slot .at .pin-label,
+.rail-map-slot .lit .pin-label {
   display: block;
-  font-size: 21px;
+  font-size: 22px;
   stroke-width: 5;
 }
 
-/* 좁은 화면에서는 본문을 덮는다. 흐름 안으로 되돌린다 */
-@media (max-width: 1100px) {
-  html[data-map='side'] .map-slot {
-    position: static;
-    width: auto;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    background: none;
-  }
+/* 지금 절의 지명. 켜진 것을 키우고, 나머지 점은 흐려서 뒤로 물러난다 */
+.rail-map-slot .at .pin {
+  r: 6;
+  fill: var(--color-accent, #2f6feb);
+  stroke: light-dark(#ffffff, #0f1418);
+  stroke-width: 2;
+}
 
-  html[data-map='side'] .map-slot .pin-label {
+.point-map[data-follow='yes'] a:not(.at):not(.lit) .pin {
+  opacity: 0.38;
+}
+
+/* 좁은 화면에서는 레일이 접히므로 이름표를 다 되살린다 */
+@media (max-width: 1100px) {
+  .rail-map-slot .pin-label {
     display: block;
   }
 }
@@ -1158,4 +1160,329 @@ html:is(:not([data-map]), [data-map='hover']) .map-slot .lit .pin {
     opacity: 1;
     transition: none;
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   푸터 — 본문이 끝났다는 것을 화면이 말하게
+
+   River: 「맨 아래 이게 뭔가 본문이랑 같이 붙어 있는 느낌을 받아서 구분이 잘
+   되지 않는다. 다른 사이트들은 이걸 뭔가 다른 섹션처럼 잘 구분하더라고?」
+
+   앞 판은 푸터가 본문과 같은 칸·같은 폭·같은 바탕이었고 사이에 가로줄 하나뿐이었다.
+   **줄 하나는 문단을 가르지 글을 끝내지 않는다.** 그래서 세 가지를 한꺼번에 바꾼다 —
+   하나만으로는 약하고, 셋이 겹쳐야 눈이 「여기서부터 다른 것」으로 읽는다.
+
+     ① 바탕이 다르다 — 본문 칸 밖으로 나와 화면 폭을 다 쓰는 띠
+     ② 글꼴·크기가 다르다 — `.doc`를 떼서 명조·확대 설정을 안 따른다(`Shell` 참조)
+     ③ 여백이 다르다 — 위로 넉넉히 띄운다
+
+   폭은 `AppShell`의 본문 칸을 그대로 쓴다. `100vw`를 쓰면 세로 스크롤바 폭만큼
+   넘쳐서 가로 스크롤이 생긴다 — 흔한 함정이라 안 밟는다.
+   ══════════════════════════════════════════════════════════════════ */
+.site-footer {
+  width: 100%;
+  margin-top: 32px;
+  padding: 48px 24px 56px;
+  background: var(--color-background-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer-in {
+  width: 100%;
+  margin: 0 auto;
+}
+
+html[data-tone='sepia']:not([data-theme='dark']) .site-footer {
+  /* 크롬(상단 바·왼쪽 목록)과 같은 톤이다. 푸터도 종이가 아니라 책상 쪽이다 */
+  background: #e7e2d8;
+  border-color: var(--read-edge);
+}
+
+/* 집중해서 읽기는 크롬을 다 접는다. 푸터도 크롬이다 */
+html[data-focus='on'] .site-footer {
+  display: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   한 줄 남기기 — 푸터에서 유일하게 사람이 뭔가 하는 자리
+
+   River: 「한줄 남기기 인터렉션이랄까 디자인이 뭔가 너무 쌩뚱맞다」.
+   고친 내용은 `components/FeedbackBox.tsx`에 적었다. 여기서 하는 일은 **입력이
+   남은 폭을 다 먹고 단추가 그 옆에 붙는 것**뿐이다.
+
+   좁아지면 세로로 접는다. 그때 단추는 왼쪽에 붙는다 — 폰에서 오른쪽 끝에 혼자
+   떠 있는 단추는 누를 것인지 아닌지가 안 보인다.
+   ══════════════════════════════════════════════════════════════════ */
+.leave-line {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leave-line-form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  max-width: 560px;
+}
+
+.leave-line-form > *:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 560px) {
+  .leave-line-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   읽기 설정 패널 — 넘치지 않게, 그리고 글꼴은 글꼴로 보이게
+
+   River: 「각 폰트 미리보기가 가능해야 하고, 개체들이 속성을 벗어나면 안 된다」.
+   둘은 한 병의 두 증상이었다 — **가로 한 줄에 다 밀어 넣으려 했다.** 글꼴 넷도,
+   카드 여섯도, 지명 아홉도 300px 패널에 한 줄로는 안 들어간다.
+
+   글꼴만 세로 목록으로 바꾸고(미리보기가 그래야 산다) 나머지는 줄을 넘긴다.
+   ══════════════════════════════════════════════════════════════════ */
+
+/*
+  **패널이 화면보다 길다.** 설정이 일곱 묶음이라 1440×900에서 재면 869px이고,
+  노트북(800px)에서는 아래 두 묶음이 화면 밖으로 나간다 — 팝오버는 자기 키를
+  내용에 맞추므로 아무도 막아주지 않는다. 이것도 River가 말한 「개체들이 속성을
+  벗어나는」 것이다. 넘치는 만큼만 안에서 굴린다(`Shell`의 날개와 같은 수법).
+*/
+.read-settings {
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+  /* 패널 끝까지 굴린 뒤에 뒤의 본문이 따라 굴러가지 않게 */
+  overscroll-behavior: contain;
+}
+
+/*
+  단추 묶음이 줄을 넘는다. astryx `ToggleButtonGroup`은 줄바꿈 prop도 `className`도
+  안 받아서, 그것이 스스로 다는 `role="group"`으로 잡는다. StyleX 원자 클래스는
+  (0,1,0)이라 `.read-settings [role='group']`(0,2,0)이 이긴다.
+*/
+.read-settings [role='group'] {
+  flex-wrap: wrap;
+}
+
+/*
+  **각 줄이 자기 글꼴로 그려진다.** 이름과 예문이 그 글꼴로 나와야 「마루 부리」가
+  무엇인지 눈으로 안다.
+
+  `*`까지 가는 이유: astryx가 라벨·설명 조각에 글꼴을 **직접** 걸면 컨테이너에 건
+  것이 상속으로 안 닿는다 — `.doc .astryx-markdown`에서 이미 한 번 밟은 함정이다
+  (2026-08-18, 글꼴 넷이 전부 Pretendard로 나왔다). 자식에게 상속을 강제하고
+  컨테이너에서 값을 정한다.
+
+  값이 `html[data-font=*]`의 것과 **같아야 한다** — 견본과 실제가 다르면 미리보기가
+  거짓말이 된다.
+
+  패널을 열 때 네 글꼴이 다 내려온다(약 1.4MB). 그게 미리보기의 값이고, 여는
+  사람만 치른다 — 팝오버는 열 때 붙는다.
+*/
+.font-pick * {
+  font-family: inherit;
+}
+
+.font-pick-pretendard {
+  font-family: var(--font-family-body);
+}
+
+.font-pick-maruburi {
+  font-family: MaruBuri, Pretendard, serif;
+}
+
+.font-pick-ridibatang {
+  font-family: RIDIBatang, Pretendard, serif;
+}
+
+.font-pick-notosans {
+  font-family: NotoSansKR, Pretendard, sans-serif;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   책 — 30포인트 편역본을 물건으로 그린다
+
+   River: 「마치 디지털에서 책인것처럼 효과를 줘서 텍스트를 하나로 패키징하자」.
+
+   출판사 표지를 긁어다 쓸 수 없으므로(저작권) **글자로 표지를 짠다.** 빠진 그림의
+   자리표가 아니라 작정한 표지로 보여야 해서, 색과 서체를 이 책의 세계에서 가져왔다.
+
+   **색은 반암(porphyry)이다.** 로마 황제의 돌 — 이집트에서 캐서 황제 석관과 사두정치
+   군상에 썼고, 비잔틴의 「자주색에 태어난(포르피로게니투스)」이 여기서 나왔다.
+   이 책이 20장에서 사두정치를, 30장에서 콘스탄티노플 함락을 다룬다.
+   벽돌색이나 크림색은 어느 책에나 얹을 수 있는 색이라 안 쓴다.
+
+   **서체는 리디바탕이다.** 이미 싣고 있는 넷 중 하나라 표지가 글꼴을 새로 안 부른다.
+
+   물성은 셋뿐이다 — 책배(오른쪽 종이 묶음) · 책등 접힘(왼쪽 결) · 놓인 그림자.
+   원근으로 눕히지 않는다. 표지를 위로 놓은 책은 책등이 안 보인다.
+   ══════════════════════════════════════════════════════════════════ */
+.book {
+  --porphyry: #4b2c3b;
+  --porphyry-deep: #351d29;
+  --bone: #efe7dc;
+
+  position: relative;
+  flex: none;
+  width: 132px;
+  aspect-ratio: 1 / 1.48; /* 신국판 152×225에 가깝다 */
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.3, 1),
+    filter 0.22s ease;
+  filter: drop-shadow(0 6px 14px rgb(0 0 0 / 22%));
+}
+
+.book[data-size='lg'] {
+  width: 176px;
+}
+
+.book-face {
+  position: absolute;
+  inset: 0 5px 0 0; /* 오른쪽 5px는 책배 몫이다 */
+  overflow: hidden;
+  border-radius: 2px 1px 1px 2px;
+  background:
+    /* 왼쪽 끝의 책등 접힘. 엎어 놓은 문고본에 늘 있는 결이다 */
+    linear-gradient(90deg, rgb(0 0 0 / 34%) 0, rgb(0 0 0 / 10%) 7px, rgb(0 0 0 / 0%) 14px),
+    /* 위에서 빛이 든다 */ linear-gradient(160deg, #5a3547 0%, var(--porphyry) 45%, var(--porphyry-deep) 100%);
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+  책배. 표지가 속장보다 크므로 위아래로 2px씩 들어가 있고, 종이 결이 줄무늬로 선다.
+  줄 간격을 2px로 두면 화면에서 종이 묶음으로 읽히고, 더 촘촘하면 모아레가 진다.
+*/
+.book-edge {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 2px;
+  width: 5px;
+  border-radius: 0 2px 2px 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #e7ded1 0,
+    #e7ded1 1px,
+    #c9bda9 1px,
+    #c9bda9 2px
+  );
+  box-shadow: inset 1px 0 2px rgb(0 0 0 / 22%);
+}
+
+.book-plate {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 14px 13px 13px;
+  font-family: RIDIBatang, Pretendard, serif;
+  color: var(--bone);
+}
+
+.book[data-size='lg'] .book-plate {
+  padding: 18px 17px 17px;
+}
+
+.book-plate-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  opacity: 0.72;
+}
+
+.book-plate-title {
+  margin-top: 10px;
+  font-size: 21px;
+  line-height: 1.32;
+}
+
+.book[data-size='lg'] .book-plate-title {
+  font-size: 27px;
+}
+
+/* 제목과 지은이 사이를 가르는 선. 표지에서 유일한 장식이다 */
+.book-plate-rule {
+  width: 26px;
+  height: 1px;
+  margin-top: auto;
+  background: currentcolor;
+  opacity: 0.5;
+}
+
+.book-plate-by {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.82;
+}
+
+/*
+  **들림은 카드에 걸고 링크에 안 건다.**
+
+  astryx `ClickableCard`는 빈 `<a>`를 카드 위에 늘려 깔고 내용은 그 **형제**로 둔다.
+  그래서 `.shelf a:hover .book`은 영원히 안 걸린다 — 표지는 그 `<a>`의 자식이 아니다.
+  누름을 받는 카드 자신에 건다.
+*/
+/* 눌러서 여는 물건이라는 것만 말한다. 펼쳐지거나 돌아가지 않는다 */
+.shelf .astryx-clickable-card:hover .book,
+.shelf .astryx-clickable-card:focus-within .book {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 12px 22px rgb(0 0 0 / 28%));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book {
+    transition: none;
+  }
+
+  .shelf .astryx-clickable-card:hover .book,
+  .shelf .astryx-clickable-card:focus-within .book {
+    transform: none;
+  }
+}
+
+/* ── 책장과 책 문패 ─────────────────────────────────────────────── */
+
+/*
+  표지와 서지가 나란히 선다. 좁아지면 표지가 위로 가고 글이 아래로 내려간다 —
+  표지를 줄여서 옆에 붙이면 글자가 안 읽히는 우표가 된다.
+*/
+.shelf-book,
+.book-head {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+@media (max-width: 620px) {
+  .shelf-book,
+  .book-head {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*
+  차례의 번호. **고정폭으로 세운다** — 01과 30이 다른 폭으로 들어가면 제목 시작점이
+  들쭉날쭉해져서 서른 줄이 목록이 아니라 톱니로 보인다. 여는 글·닫는 글은 번호가
+  없지만 같은 폭을 비워 두므로 제목 줄이 하나로 선다.
+*/
+.toc-n {
+  display: inline-block;
+  width: 2.2em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+}
+
+.toc-n-none::before {
+  /* 빈 칸도 줄 높이를 가져야 한다 */
+  content: '';
 }

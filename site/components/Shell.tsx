@@ -1,4 +1,4 @@
-import { AppShell, TopNav, TopNavHeading, SideNav, SideNavItem, Stack, Divider } from '@astryxdesign/core'
+import { AppShell, TopNav, TopNavHeading, SideNav, SideNavItem, Stack } from '@astryxdesign/core'
 import { navTree, type NavNode } from '../lib/nav'
 import { SiteFooter } from './SiteFooter'
 import { Search } from './Search'
@@ -131,23 +131,33 @@ export function Shell({
             </Stack>
           ) : null}
         </Stack>
-
-        {/*
-          푸터 폭은 본문 + 날개를 합친 만큼이다. 본문 폭에만 맞추면 날개가 있는
-          화면에서 푸터가 혼자 좁아 보이고, 전체 폭으로 두면 가운데 정렬된 본문과
-          왼쪽 끝이 어긋난다. `gap={6}`이 24px다.
-        */}
-        <Stack
-          className="doc"
-          direction="vertical"
-          gap={4}
-          width="100%"
-          maxWidth={aside ? maxWidth + 24 + asideWidth : maxWidth}
-        >
-          <Divider />
-          <SiteFooter where={where} />
-        </Stack>
       </Stack>
+
+      {/*
+        **푸터는 화면 끝에서 끝까지 가는 띠다.**
+
+        River: 「맨 아래 이게 뭔가 본문이랑 같이 붙어 있는 느낌을 받아서 구분이 잘
+        되지 않는다」. 맞다 — 앞 판은 푸터가 본문과 **같은 칸, 같은 폭, 같은 바탕**에
+        있었고 사이에 가로줄 하나뿐이었다. 줄 하나는 「여기서 문단이 바뀝니다」라고
+        말하지 「여기서 글이 끝납니다」라고는 말하지 않는다.
+
+        그래서 셋을 바꿨다. 어느 하나만으로는 약하고, 셋이 같이 있어야 눈이 경계로 읽는다.
+          - **바탕색이 다르다** — 본문 칸 밖으로 나와 화면 폭을 다 쓰는 띠가 된다
+          - **글꼴이 다르다** — `.doc`를 뗐다. 명조로 읽던 사람에게 푸터는 고딕으로
+            남고, 글자 크기를 키워도 푸터는 안 커진다. 읽는 글이 아니라 안내판이니까
+          - **여백이 다르다** — 위로 넉넉히 띄운다. 붙어 있던 것이 문제였다
+
+        띠는 화면 폭을 다 쓰되 **안쪽 글은 본문과 같은 폭으로 가둔다** — 왼쪽 끝이
+        본문과 어긋나면 띠가 아니라 사고로 보인다.
+      */}
+      <div className="site-footer">
+        <div
+          className="site-footer-in"
+          style={{ maxWidth: aside ? maxWidth + 24 + asideWidth : maxWidth }}
+        >
+          <SiteFooter where={where} />
+        </div>
+      </div>
     </AppShell>
   )
 }

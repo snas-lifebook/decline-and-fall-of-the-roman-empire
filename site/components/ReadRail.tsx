@@ -81,6 +81,16 @@ export function ReadRail({ items }: { items: OutlineItem[] }) {
             절이 나뉘지 않은 대목입니다
           </Text>
         )}
+
+        {/*
+          지도가 「옆에」일 때 여기로 들어온다. **여기서 그리지 않는다** — 본문 쪽에
+          이미 한 벌이 있고, `MapFollow`가 그 노드를 옮겨 온다. 두 벌을 그리면 한쪽을
+          고칠 때 다른 쪽이 조용히 어긋난다.
+
+          목차 **아래**인 것이 중요하다. River가 「이 대목의 절 아래에서 해당 행의
+          부근에 이르면」이라고 자리까지 짚었다.
+        */}
+        <div className="rail-map-slot" />
       </Stack>
     </aside>
   )

@@ -23,6 +23,7 @@ import { ReadRail } from '../../../../components/ReadRail'
 import { ReadCards } from '../../../../components/ReadCards'
 import { FocusExit } from '../../../../components/FocusExit'
 import { MapHover } from '../../../../components/MapHover'
+import { MapFollow } from '../../../../components/MapFollow'
 import { Faq } from '../../../../components/Faq'
 import { faqFor } from '../../../../lib/faq'
 import { loadEntities, loadLinks } from '../../../../lib/ontology'
@@ -220,6 +221,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         </div>
       </div>
       <MapHover />
+      <MapFollow />
 
       {/*
         관계망이 날개에서 본문 끝으로 내려왔다 — 그 자리를 여백 카드가 쓴다.

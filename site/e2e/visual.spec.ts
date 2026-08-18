@@ -34,6 +34,10 @@ const SCREENS: [string, string][] = [
   ['hub', '/'],
   ['start', '/start'],
   ['read', '/read/point/5'],
+  // 2026-08-19에 생긴 골격 셋. 책장·책 문패·앞뒤 글은 서로 배치가 다르다
+  ['shelf', '/read'],
+  ['book', '/read/rome30'],
+  ['front', '/read/text/책머리에'],
   ['person', '/objects/person/카이사르'],
   ['download', '/download/5'],
   ['use-recipes', '/use/recipes'],
@@ -65,7 +69,7 @@ test.describe('폰에서 접히는 화면', () => {
 
   // 좁아지면 배치가 통째로 바뀌는 넷만. 산문 화면은 폭만 줄어 볼 값이 없다
   for (const [name, path] of SCREENS.filter(([n]) =>
-    ['hub', 'read', 'person', 'download'].includes(n),
+    ['hub', 'read', 'shelf', 'book', 'person', 'download'].includes(n),
   )) {
     test(name, async ({ page }) => {
       await page.goto(path)

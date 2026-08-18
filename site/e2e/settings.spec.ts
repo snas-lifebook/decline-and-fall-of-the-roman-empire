@@ -170,3 +170,127 @@ test.describe('설정을 만져서 화면이 바뀐다', () => {
       .toBe(true)
   })
 })
+
+/**
+ * River 2026-08-19: 「각 폰트 미리보기가 가능해야 하고, 개체들이 속성을 벗어나면 안 된다」.
+ *
+ * 둘은 한 병의 두 증상이었다 — 글꼴 넷도, 카드 여섯도, 지명 아홉도 300px 패널에
+ * 가로 한 줄로 밀어 넣으려 했다.
+ */
+test.describe('설정 패널이 제 그릇 안에 있다', () => {
+  test('글꼴 넷이 각자의 글꼴로 그려진다 — 이름만 보고 고르지 않는다', async ({ page }) => {
+    await page.goto(POINT)
+    await page.click('.read-rail-gear')
+    await page.waitForSelector('.font-pick')
+    await page.evaluate(() => document.fonts.ready)
+
+    const fonts = await page.evaluate(() =>
+      [...document.querySelectorAll('.font-pick')].map((el) => ({
+        // 이름표·예문까지 그 글꼴이어야 미리보기다. 컨테이너만 칠하면 상속이 안 닿는다
+        deep: [...el.querySelectorAll('*')].map(
+          (c) => getComputedStyle(c).fontFamily.split(',')[0],
+        ),
+      })),
+    )
+    expect(fonts).toHaveLength(4)
+    const heads = fonts.map((f) => f.deep[0])
+    expect(heads, '견본이 다 같은 글꼴로 나온다').toEqual([
+      'Pretendard',
+      'MaruBuri',
+      'RIDIBatang',
+      'NotoSansKR',
+    ])
+    for (const f of fonts) {
+      expect(new Set(f.deep).size, '한 줄 안에서 글꼴이 갈렸다').toBe(1)
+    }
+  })
+
+  test('노트북 화면에서도 패널이 화면 밖으로 안 나간다', async ({ page }) => {
+    await page.setViewportSize({ width: 1180, height: 800 })
+    await page.goto(POINT)
+    await page.click('.read-rail-gear')
+    await page.waitForSelector('.read-settings')
+
+    const fit = await page.evaluate(() => {
+      const s = document.querySelector('.read-settings')!
+      const panel = s.parentElement!
+      const b = panel.getBoundingClientRect()
+      const out = [...panel.querySelectorAll('*')].filter((el) => {
+        const r = el.getBoundingClientRect()
+        return r.width > 0 && (r.right > b.right + 1 || r.left < b.left - 1)
+      })
+      return {
+        bottom: Math.round(b.bottom),
+        right: Math.round(b.right),
+        h: window.innerHeight,
+        w: window.innerWidth,
+        escaped: out.map((el) => (el.textContent ?? '').slice(0, 14)),
+      }
+    })
+    expect(fit.escaped, '패널 밖으로 나간 것이 있다').toEqual([])
+    expect(fit.bottom, '패널 아래가 화면 밖이다').toBeLessThanOrEqual(fit.h)
+    expect(fit.right, '패널 오른쪽이 화면 밖이다').toBeLessThanOrEqual(fit.w)
+  })
+})
+
+/**
+ * 푸터와 한 줄 남기기 (River, 2026-08-19).
+ *
+ *   「맨 아래 이게 뭔가 본문이랑 같이 붙어 있는 느낌을 받아서 구분이 잘 되지 않는다」
+ *   「한줄 남기기 인터렉션이랄까 디자인이 뭔가 너무 쌩뚱맞다」
+ */
+test.describe('맨 아래', () => {
+  test('푸터가 본문과 다른 바탕·다른 글꼴이다', async ({ page }) => {
+    await page.goto(POINT)
+    const seen = await page.evaluate(() => {
+      const band = document.querySelector('.site-footer')!
+      const cs = getComputedStyle(band)
+      const doc = document.querySelector('.doc')!
+      return {
+        bg: cs.backgroundColor,
+        border: cs.borderTopWidth,
+        pad: parseFloat(cs.paddingTop),
+        footFont: getComputedStyle(document.querySelector('footer')!).fontFamily.split(',')[0],
+        docFont: getComputedStyle(doc).fontFamily.split(',')[0],
+        // 띠는 본문 칸보다 넓다 — 그게 「다른 섹션」으로 읽히는 첫 신호다
+        wider: band.getBoundingClientRect().width > doc.getBoundingClientRect().width,
+      }
+    })
+    expect(seen.bg, '푸터에 바탕색이 없다').not.toBe('rgba(0, 0, 0, 0)')
+    expect(parseFloat(seen.border), '푸터 위에 경계가 없다').toBeGreaterThan(0)
+    expect(seen.pad, '푸터가 본문에 붙어 있다').toBeGreaterThanOrEqual(32)
+    expect(seen.wider, '푸터가 본문과 같은 폭이다').toBe(true)
+  })
+
+  test('본문을 명조로 키워도 푸터는 안 따라간다 — 읽는 글이 아니라 안내판이다', async ({
+    page,
+  }) => {
+    await page.goto(POINT)
+    await page.evaluate(() => {
+      localStorage.setItem('read-font', 'maruburi')
+      localStorage.setItem('read-size', '1.42')
+    })
+    await page.reload()
+    await page.waitForSelector('.read-block')
+    await page.evaluate(() => document.fonts.ready)
+
+    const f = await page.evaluate(() => ({
+      doc: getComputedStyle(document.querySelector('.doc')!).fontFamily.split(',')[0],
+      foot: getComputedStyle(document.querySelector('footer')!).fontFamily.split(',')[0],
+    }))
+    expect(f.doc).toBe('MaruBuri')
+    expect(f.foot, '푸터까지 명조가 됐다').toBe('Pretendard')
+  })
+
+  test('한 줄 남기기가 늘 열려 있고 열고 닫느라 화면이 안 튄다', async ({ page }) => {
+    await page.goto(POINT)
+    const input = page.locator('.leave-line-form input:not([aria-hidden])').first()
+    await expect(input).toBeVisible()
+
+    // 앞 판은 단추를 누르면 상자가 펼쳐지며 푸터 높이가 튀었다
+    const before = await page.evaluate(() => document.querySelector('footer')!.scrollHeight)
+    await input.fill('테스트로 한 줄 씁니다')
+    const after = await page.evaluate(() => document.querySelector('footer')!.scrollHeight)
+    expect(after, '글을 쓰자 푸터 높이가 바뀌었다').toBe(before)
+  })
+})

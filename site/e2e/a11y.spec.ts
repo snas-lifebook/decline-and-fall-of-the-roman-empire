@@ -53,6 +53,11 @@ const SCREENS = [
   '/',
   '/start',
   '/read/point/5',
+  // 2026-08-19에 생긴 셋. 책장은 카드 안에 링크가 겹쳐 있고(`ClickableCard`),
+  // 책 문패는 목록 33줄에 `startContent`·`endContent`가 붙는다 — 둘 다 새 모양이다
+  '/read',
+  '/read/rome30',
+  '/read/text/책머리에',
   '/objects/person/카이사르',
   '/download/5',
   '/use/recipes',

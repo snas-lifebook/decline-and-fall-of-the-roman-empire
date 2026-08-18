@@ -3,6 +3,8 @@
 import { useSyncExternalStore } from 'react'
 import {
   Divider,
+  RadioList,
+  RadioListItem,
   SegmentedControl,
   SegmentedControlItem,
   Slider,
@@ -69,7 +71,11 @@ const MOVED: Record<string, string> = { top: 'bottom' }
 
 const MAP_MODES = [
   { id: 'hover', label: '올릴 때', hint: '본문에서 지명에 마우스를 올리면 오른쪽 아래에 뜹니다' },
-  { id: 'side', label: '옆에', hint: '오른쪽에 붙박이로 둡니다. 읽는 내내 곁에 두고 싶을 때' },
+  {
+    id: 'side',
+    label: '옆에',
+    hint: '오른쪽 목차 아래에 붙어 따라옵니다. 읽고 있는 절의 지명이 켜집니다',
+  },
   { id: 'bottom', label: '본문 아래', hint: '다 읽고 한 번에 훑습니다. 손가락으로 읽을 때 좋습니다' },
   { id: 'off', label: '안 보기', hint: '지명은 눌러서 그 화면으로 갈 수 있습니다' },
 ] as const
@@ -94,6 +100,14 @@ const LAYERS = [
   { id: 'sea', label: '바다' },
   { id: 'river', label: '강' },
 ] as const
+
+/**
+ * 글꼴 견본에 쓰는 한 줄. 이 책의 첫 물음이다.
+ *
+ * 넷을 **같은 글**로 비교해야 획이 비교된다. 짧게 둔 것은 300px 패널에서 한 줄에
+ * 들어가야 넷이 눈으로 겹쳐지기 때문이다 — 줄이 갈리면 비교가 아니라 읽기가 된다.
+ */
+const FONT_SAMPLE = '로마 제국은 어떻게 쇠망했는가'
 
 const TONES = [
   { id: 'auto', label: '기본', hint: '기기 설정을 따릅니다' },
@@ -188,22 +202,46 @@ export function ReadSettings() {
   const fontNow = READ_FONTS.find((f) => f.id === font) ?? READ_FONTS[0]
 
   return (
-    <Stack direction="vertical" gap={3} hAlign="start">
+    <Stack className="read-settings" direction="vertical" gap={3} hAlign="start" width="100%">
       {/* ── 글 자체 ────────────────────────────────────── */}
       <Stack direction="vertical" gap={1} hAlign="start" width="100%">
+        {/*
+          **글꼴은 이름이 아니라 모양으로 고른다.** 앞 판은 네 이름이 한 줄짜리
+          `SegmentedControl`에 나란히 들어가 있었다. 두 가지가 잘못이었다.
+
+            - **넘쳤다.** 300px 패널에 「Pretendard·마루 부리·리디바탕·본고딕」이
+              한 줄로 들어가지 않는다(River: 「개체들이 속성을 벗어나면 안 된다」)
+            - **미리보기가 없었다.** 「마루 부리」라는 **글자**를 보고 마루 부리를
+              고르는 것은 눈 감고 고르는 것과 같다. 글꼴은 이름이 아니라 획이다
+
+          그래서 세로 목록으로 바꾸고 **각 줄을 그 글꼴로 그린다.** 이름도 예문도
+          자기 글꼴로 나오니, 고르기 전에 무엇을 고르는지가 보인다. 칠하는 것은
+          CSS다(`globals.css`의 `.font-pick-*`) — 이 파일은 값만 바꾼다.
+
+          예문은 이 책의 첫 물음이다. 넷을 같은 글로 비교해야 획이 비교된다 —
+          줄마다 다른 글을 넣으면 견본이 아니라 광고가 된다.
+        */}
         <Text size="sm" weight="semibold">
           글꼴
         </Text>
-        <SegmentedControl
+        <RadioList
           label="본문 글꼴"
+          isLabelHidden
           size="sm"
           value={fontNow.id}
           onChange={(next: string) => paint(KEY.font, 'font', next || FONT_DEFAULT)}
+          width="100%"
         >
           {READ_FONTS.map((f) => (
-            <SegmentedControlItem key={f.id} value={f.id} label={f.label} />
+            <RadioListItem
+              key={f.id}
+              className={`font-pick font-pick-${f.id}`}
+              value={f.id}
+              label={f.label}
+              description={FONT_SAMPLE}
+            />
           ))}
-        </SegmentedControl>
+        </RadioList>
         <Text size="sm" color="secondary">
           {fontNow.kind} · {fontNow.hint}
         </Text>
@@ -252,10 +290,15 @@ export function ReadSettings() {
       <Divider />
 
       {/* ── 옆에 무엇을 세울지 ──────────────────────────── */}
-      <Stack direction="vertical" gap={1} hAlign="start">
+      <Stack direction="vertical" gap={1} hAlign="start" width="100%">
         <Text size="sm" weight="semibold">
           옆에 세울 것
         </Text>
+        {/*
+          **여섯 개가 한 줄에 안 들어간다.** 300px 패널에서 줄을 넘겨야 한다 —
+          안 넘기면 「사건」·「연도」가 패널 밖으로 잘려 나간다(River 지적).
+          `ToggleButtonGroup`은 `className`도 안 받으므로 `role="group"`으로 잡는다.
+        */}
         <ToggleButtonGroup
           type="multiple"
           label="옆에 세울 객체 종류"
@@ -273,7 +316,7 @@ export function ReadSettings() {
         </Text>
       </Stack>
 
-      <Stack direction="vertical" gap={1} hAlign="start">
+      <Stack direction="vertical" gap={1} hAlign="start" width="100%">
         <Text size="sm" weight="semibold">
           지도
         </Text>
@@ -292,10 +335,11 @@ export function ReadSettings() {
         </Text>
       </Stack>
 
-      <Stack direction="vertical" gap={1} hAlign="start">
+      <Stack direction="vertical" gap={1} hAlign="start" width="100%">
         <Text size="sm" weight="semibold">
           지도에 그릴 것
         </Text>
+        {/* 아홉 개다. 한 줄로 두면 절반이 패널 밖에 있다 */}
         <ToggleButtonGroup
           type="multiple"
           label="지도에 그릴 지명 종류"

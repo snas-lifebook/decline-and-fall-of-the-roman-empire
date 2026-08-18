@@ -1,4 +1,4 @@
-import { pointList } from './points'
+import { book, bookHref } from './book'
 import { ENTITY_TYPES, loadEntities, type Entity } from './ontology'
 import { TYPE_KO } from './export/table'
 import { families } from './family/build'
@@ -59,11 +59,28 @@ function build(): NavNode[] {
       href: '/read',
       title: '읽기',
       ready: true,
-      children: pointList().map((p) => ({
-        href: `/read/point/${p.n}`,
-        title: `${String(p.n).padStart(2, '0')} ${p.title}`,
-        ready: true,
-      })),
+      /*
+        **한 겹이 늘었다 — 「읽기 › 책 › 대목」.** 앞 판은 읽기 밑에 30개가 바로
+        걸려 있었는데, 그러면 일러두기·책머리에·옮기고 나서가 갈 자리가 없다.
+        그 셋은 파일로 있으면서 사이트 어디에도 안 걸려 있었다.
+
+        사이드바 이름은 책 제목 전체가 아니라 **「30포인트 편역본」**이다 — 대목마다
+        붙어 있는 배지와 같은 말이라, 사람이 이미 아는 이름으로 걸린다. 책 제목
+        전체는 책 화면의 제목이 진다.
+      */
+      children: [
+        {
+          href: bookHref(),
+          title: '30포인트 편역본',
+          ready: true,
+          children: book().parts.map((p) => ({
+            href: p.href,
+            // 번호는 발표를 맡은 사람이 기억하는 손잡이다. 앞뒤 글에는 번호가 없다
+            title: p.n ? `${String(p.n).padStart(2, '0')} ${p.title}` : p.title,
+            ready: true,
+          })),
+        },
+      ],
     },
     {
       href: '/objects',

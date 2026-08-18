@@ -25,9 +25,23 @@ describe('내비 트리', () => {
     ])
   })
 
-  it('읽기 아래에 30포인트가 다 걸린다', () => {
-    expect(navFind('/read')?.children).toHaveLength(POINT_COUNT)
+  /**
+   * 읽기 밑에 **책이 한 겹 끼었다**(2026-08-19). 앞 판은 30포인트가 읽기에 바로
+   * 걸려 있었는데, 그러면 일러두기·책머리에·옮기고 나서가 갈 자리가 없다 —
+   * 실제로 셋 다 파일로만 있고 사이트 어디에도 안 걸려 있었다.
+   */
+  it('읽기 아래는 책 한 권이고, 책 아래에 앞뒤 글까지 다 걸린다', () => {
+    expect(navFind('/read')?.children?.map((c) => c.href)).toEqual(['/read/rome30'])
+
+    const parts = navFind('/read/rome30')?.children ?? []
+    expect(parts).toHaveLength(POINT_COUNT + 3)
     expect(navFind('/read/point/1')?.title).not.toBe('')
+
+    // 여는 글 둘 → 본문 30 → 닫는 글 하나. 읽는 순서가 곧 이 순서다
+    expect(parts[0].href).toBe('/read/text/일러두기')
+    expect(parts[1].href).toBe('/read/text/책머리에')
+    expect(parts[2].href).toBe('/read/point/1')
+    expect(parts[parts.length - 1].href).toBe('/read/text/옮기고_나서')
   })
 
   it('같은 주소가 두 번 나오지 않는다', () => {
@@ -68,7 +82,9 @@ describe('이전·다음', () => {
 
   it('섹션 끝에서 다음 섹션으로 넘어간다', () => {
     expect(navSteps('/start/links').next).toBeUndefined()
-    expect(navSteps(`/read/point/${POINT_COUNT}`).next?.href).toBe('/objects')
+    // 본문 30 다음은 「옮기고 나서」다 — 책을 끝까지 읽고 나서야 읽기를 벗어난다
+    expect(navSteps(`/read/point/${POINT_COUNT}`).next?.href).toBe('/read/text/옮기고_나서')
+    expect(navSteps('/read/text/옮기고_나서').next?.href).toBe('/objects')
   })
 })
 
