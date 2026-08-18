@@ -47,7 +47,14 @@ export function MapHover() {
       window.clearTimeout(hideTimer)
       // 이미 그 자리가 켜져 있으면 아무것도 안 한다 — 같은 링크 위에서 마우스가
       // 조금 움직일 때마다 다시 그리면 깜빡인다
-      const pin = pop.querySelector(`a[href="${CSS.escape(href)}"]`)
+      /*
+       * `data-also`도 같이 본다. 붙어 있는 지명은 한 점으로 묶이므로(`clusterPlaces`),
+       * `아프리카`처럼 대표에 흡수된 것은 자기 `href`를 가진 점이 지도에 없다. 묶을 때
+       * 그 주소를 대표 점에 적어 뒀으니 여기서 그걸로도 찾는다 — **안 그러면 본문에서
+       * 마우스를 올려도 아무 일이 안 일어난다.**
+       */
+      const esc = CSS.escape(href)
+      const pin = pop.querySelector(`a[href="${esc}"], a[data-also~="${esc}"]`)
       if (!pin || pin === lit) return
       clear()
       pin.classList.add('lit')

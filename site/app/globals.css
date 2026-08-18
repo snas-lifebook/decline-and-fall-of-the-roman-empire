@@ -907,6 +907,91 @@ html[data-map='off'] .map-slot {
   display: none;
 }
 
+/* ── 지도 레이어 — 어떤 종류를 그릴지 ────────────────────────────
+   **카드 종류 끄기와 똑같은 수법이다.** 점은 빌드 때 다 그려져 있고 `data-kind`를
+   달고 있다. `html[data-layers]`가 무엇을 보여줄지 가르고, 자바스크립트는 값을
+   바꾸는 일만 한다.
+
+   기본값에서 **넓은 것(지역·바다·강·호수·해협)이 빠져 있다.** 겹침의 주원인이라서다 —
+   `아프리카`(지역)가 `카르타고`(도시)에서 300m 떨어져 있고 `카파도키아`와
+   `카이사레아`는 좌표가 아예 같다. 그것들을 빼면 최근접 12px 미만인 대목이
+   **29/30에서 8/30으로** 줄어든다(실측 2026-08-18).
+
+   값이 없으면 아무 규칙도 안 걸려 **전부 보인다** — 저장이 막힌 브라우저에서 지도가
+   텅 비는 쪽보다 낫다. 카드가 같은 이유로 같은 기본을 쓴다.
+   ───────────────────────────────────────────────────────────── */
+html[data-layers]:not([data-layers~='city']) .point-map a[data-kind='city'],
+html[data-layers]:not([data-layers~='region']) .point-map a[data-kind='region'],
+html[data-layers]:not([data-layers~='building']) .point-map a[data-kind='building'],
+html[data-layers]:not([data-layers~='battlefield']) .point-map a[data-kind='battlefield'],
+html[data-layers]:not([data-layers~='island']) .point-map a[data-kind='island'],
+html[data-layers]:not([data-layers~='mountain']) .point-map a[data-kind='mountain'],
+html[data-layers]:not([data-layers~='cape']) .point-map a[data-kind='cape'],
+html[data-layers]:not([data-layers~='river']) .point-map a[data-kind='river'],
+html[data-layers]:not([data-layers~='sea']) .point-map a[data-kind='sea'],
+html[data-layers]:not([data-layers~='lake']) .point-map a[data-kind='lake'],
+html[data-layers]:not([data-layers~='strait']) .point-map a[data-kind='strait'] {
+  display: none;
+}
+
+/*
+  「옆에 상주」 — **호버 패널을 그대로 띄워 둔 것이다.**
+
+  처음엔 오른쪽 칸의 그리드 항목으로 만들려 했는데, `.map-slot`은 `.read-grid`의
+  자식이 아니라 형제라 `grid-column: 2`가 조용히 무시됐다(실측: 오른쪽 칸에 가야 할
+  것이 왼쪽 끝 0px에 있었다). 지도를 그리드 안으로 옮기면 「본문 아래」 모드가
+  본문 마지막 행과 겹친다.
+
+  호버 패널은 이미 `position: fixed`라 그리드와 무관하고, 340px에서 이름표를 하나만
+  키우는 처리도 되어 있다. **띄워 둘 조건 하나만 더하면 끝난다** — 두 벌을 만들지
+  않는 것이 이 파일의 규칙이다.
+*/
+html[data-map='side'] .map-slot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 420px;
+  max-width: calc(100vw - 40px);
+  z-index: 20;
+  background: light-dark(#ffffff, #161b21);
+  border: 1px solid light-dark(#dfe4e9, #2b3138);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 24px light-dark(rgb(20 30 40 / 0.14), rgb(0 0 0 / 0.45));
+}
+
+html[data-map='side'] .map-slot h2 {
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+/* 420px로 줄면 11px 글씨가 6px이 된다. 켜진 것만 키운다 — 호버 패널과 같은 처리다 */
+html[data-map='side'] .map-slot .pin-label {
+  display: none;
+}
+
+html[data-map='side'] .map-slot .lit .pin-label {
+  display: block;
+  font-size: 21px;
+  stroke-width: 5;
+}
+
+/* 좁은 화면에서는 본문을 덮는다. 흐름 안으로 되돌린다 */
+@media (max-width: 1100px) {
+  html[data-map='side'] .map-slot {
+    position: static;
+    width: auto;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+  html[data-map='side'] .map-slot .pin-label {
+    display: block;
+  }
+}
+
 /*
   호버 패널. **커서를 안 따라간다** — 오른쪽 아래 고정이다. 따라다니면 글자를 가리고
   눈이 계속 쫓아가야 한다. 그게 「어지러움」의 정체다.

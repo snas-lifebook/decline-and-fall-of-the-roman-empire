@@ -45,7 +45,10 @@ describe('이 대목의 지도', () => {
     }
   })
 
-  it('**모든 점이 그림 안에 있다** — 좌표가 뒤집히면 밖으로 나간다', () => {
+  it('**그려진 점은 전부 그림 안에 있다** — 좌표가 뒤집히면 밖으로 나간다', () => {
+    // 창을 점인 것만으로 잡으면서(2026-08-18) 멀리 있는 지역 대표점이 프레임을
+    // 벗어난다. 그런 것은 아예 안 그리고 화면이 몇 곳인지 적는다 — 그리면
+    // `clipPath`에 잘려 보이지도 눌리지도 않으면서 DOM에만 남는다
     for (let n = 1; n <= 30; n += 1) {
       const s = svg(n)
       const vb = s.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/)!
@@ -57,6 +60,12 @@ describe('이 대목의 지도', () => {
         expect(Number(m[2]), `포인트 ${n} y`).toBeLessThanOrEqual(h)
       }
     }
+  })
+
+  it('**못 그린 곳은 말없이 지나가지 않는다** — 몇 곳인지 그림이 적는다', () => {
+    // 카드가 「몇 중 몇을 세웠습니다」로 밝히는 것과 같은 자리다
+    const withNote = [...Array(30)].filter((_, i) => svg(i + 1).includes('map-note')).length
+    expect(withNote, '프레임 밖으로 나간 대목이 하나도 없다면 이 규칙이 죽은 것이다').toBeGreaterThan(0)
   })
 
   it('색은 light-dark()로만 쓴다', () => {
@@ -73,14 +82,34 @@ describe('이 대목의 지도', () => {
 })
 
 describe('본문 링크와 짝이 맞는가', () => {
-  it('**지도 마커의 주소가 본문 링크와 글자까지 같다** — 호버 패널이 이걸로 짝을 찾는다', () => {
+  it('**본문에서 올릴 수 있는 지명은 지도가 전부 받는다** — 호버 패널이 주소로 짝을 찾는다', () => {
     // 처음엔 지도만 퍼센트 인코딩을 걸어서 짝이 하나도 안 맞았다(2026-08-18).
     // 화면에서는 지도도 본문도 멀쩡해 보여서 **눈으로는 안 잡혔다**
-    const places = coordsOfPoint(5)
-    const s = renderPointMap(places)
-    for (const p of places) {
-      const want = entityHref({ id: p.id, type: 'place', name: p.name })
-      expect(s, p.name).toContain(`href="${want}"`)
+    //
+    // 이제 붙어 있는 지명은 한 점으로 묶이므로 자기 `href`가 없을 수 있다. 그때는
+    // 대표 점의 `data-also`가 그 주소를 들고 있어야 한다 — 없으면 `아프리카`에
+    // 마우스를 올려도 아무 일이 안 일어난다
+    for (const n of [3, 5, 13]) {
+      const places = coordsOfPoint(n)
+      const s = renderPointMap(places)
+      const drawn = new Set([...s.matchAll(/href="([^"]+)"/g)].map((m) => m[1]))
+      const also = new Set(
+        [...s.matchAll(/data-also="([^"]+)"/g)].flatMap((m) => m[1].split(' ')),
+      )
+      // 프레임 밖으로 빠진 것은 화면이 이름으로 밝히므로 그쪽에 있으면 통과다
+      const note = s.match(/class="map-note"[^>]*>([^<]*)</)?.[1] ?? ''
+      for (const p of places) {
+        const want = entityHref({ id: p.id, type: 'place', name: p.name })
+        const reachable = drawn.has(want) || also.has(want) || note.includes(p.name)
+        expect(reachable, `포인트 ${n} — ${p.name} 에 닿을 길이 없다`).toBe(true)
+      }
     }
+  })
+
+  it('묶인 점이 딸린 주소를 들고 있다', () => {
+    const s = renderPointMap(coordsOfPoint(5))
+    // 포인트 05는 `카르타고`가 `아프리카`를, `발칸`이 `발칸 반도`를 흡수한다
+    expect(s).toContain('data-also=')
+    expect(s).toMatch(/\+\d<\/text>/)
   })
 })

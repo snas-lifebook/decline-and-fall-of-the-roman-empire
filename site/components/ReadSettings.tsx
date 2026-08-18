@@ -14,6 +14,7 @@ import {
 } from '@astryxdesign/core'
 import { CARD_TYPES, CARD_TYPE_KO } from '../lib/read/types'
 import { FONT_DEFAULT, READ_FONTS, SIZE_DEFAULT, SIZE_STEPS } from '../lib/read/fonts'
+import { LAYERS_DEFAULT } from '../lib/place/layers'
 
 /**
  * 읽기 설정 — 어떻게 읽을지 한 자리에 모았다.
@@ -46,6 +47,7 @@ const KEY = {
   size: 'read-size',
   tone: 'read-tone',
   focus: 'read-focus',
+  layers: 'read-layers',
 } as const
 
 /**
@@ -67,8 +69,30 @@ const MOVED: Record<string, string> = { top: 'bottom' }
 
 const MAP_MODES = [
   { id: 'hover', label: '올릴 때', hint: '본문에서 지명에 마우스를 올리면 오른쪽 아래에 뜹니다' },
+  { id: 'side', label: '옆에', hint: '오른쪽에 붙박이로 둡니다. 읽는 내내 곁에 두고 싶을 때' },
   { id: 'bottom', label: '본문 아래', hint: '다 읽고 한 번에 훑습니다. 손가락으로 읽을 때 좋습니다' },
   { id: 'off', label: '안 보기', hint: '지명은 눌러서 그 화면으로 갈 수 있습니다' },
+] as const
+
+/**
+ * 지도에 그릴 지명 종류.
+ *
+ * **넓은 것이 기본에서 빠져 있다.** `region`·`sea`·`river`는 점 하나로 찍혀 있는데
+ * 그 점이 대개 그 지역 대표 도시 위다 — `아프리카`가 `카르타고`에서 300m,
+ * `카파도키아`와 `카이사레아`는 좌표가 아예 같다. 켜면 도시 이름이 가려진다.
+ *
+ * 끄면 최근접 두 지명이 12px 미만인 대목이 **29/30 → 8/30**으로 준다(실측).
+ */
+const LAYERS = [
+  { id: 'city', label: '도시' },
+  { id: 'building', label: '건물' },
+  { id: 'battlefield', label: '전장' },
+  { id: 'island', label: '섬' },
+  { id: 'mountain', label: '산' },
+  { id: 'cape', label: '곶' },
+  { id: 'region', label: '지역' },
+  { id: 'sea', label: '바다' },
+  { id: 'river', label: '강' },
 ] as const
 
 const TONES = [
@@ -92,6 +116,7 @@ const DEFAULTS = [
   String(SIZE_DEFAULT),
   'auto',
   'off',
+  LAYERS_DEFAULT.join(' '),
 ]
 
 const watchers = new Set<() => void>()
@@ -118,6 +143,7 @@ function read(): string {
       get(KEY.size, String(SIZE_DEFAULT)),
       get(KEY.tone, 'auto'),
       get(KEY.focus, 'off'),
+      get(KEY.layers, LAYERS_DEFAULT.join(' ')),
     ].join(SEP)
   } catch {
     return FALLBACK
@@ -143,13 +169,14 @@ function paint(key: string, attr: string, value: string) {
 }
 
 export function ReadSettings() {
-  const [cardsRaw, map, font, sizeRaw, tone, focus] = useSyncExternalStore(
+  const [cardsRaw, map, font, sizeRaw, tone, focus, layersRaw] = useSyncExternalStore(
     subscribe,
     read,
     readOnServer,
   ).split(SEP)
 
   const cards = cardsRaw.split(' ').filter(Boolean)
+  const layers = layersRaw.split(' ').filter(Boolean)
   const mode = MAP_MODES.find((m) => m.id === map) ?? MAP_MODES[0]
   const toneNow = TONES.find((t) => t.id === tone) ?? TONES[0]
   // 저장값은 배율(1.12)이지만 슬라이더는 단계(0~4)를 다룬다. 사이에 없는 값이
@@ -262,6 +289,28 @@ export function ReadSettings() {
         </SegmentedControl>
         <Text size="sm" color="secondary">
           {mode.hint}
+        </Text>
+      </Stack>
+
+      <Stack direction="vertical" gap={1} hAlign="start">
+        <Text size="sm" weight="semibold">
+          지도에 그릴 것
+        </Text>
+        <ToggleButtonGroup
+          type="multiple"
+          label="지도에 그릴 지명 종류"
+          size="sm"
+          value={layers}
+          onChange={(next: string[]) => paint(KEY.layers, 'layers', next.join(' '))}
+        >
+          {LAYERS.map((l) => (
+            <ToggleButton key={l.id} value={l.id} label={l.label} />
+          ))}
+        </ToggleButtonGroup>
+        {/* 왜 지역이 꺼져 있는지 묻기 전에 답한다 */}
+        <Text size="sm" color="secondary">
+          지역·바다·강은 점 하나로 찍혀 있어 도시 이름을 가립니다. 그래서 기본으로
+          꺼 뒀습니다.
         </Text>
       </Stack>
     </Stack>

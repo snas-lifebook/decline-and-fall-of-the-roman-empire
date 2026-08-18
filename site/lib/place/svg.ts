@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { textWidth } from '../text/width'
 import { entityHref } from '../entity'
-import type { PlaceCoord } from './coords'
+import { clusterPlaces, WIDE_KINDS, type PlaceCoord, type PlaceGroup } from './coords'
 
 /**
  * 이 대목의 지도를 SVG 한 덩어리로 굽는다. **빌드 때 끝나고 클라이언트 JS는 0줄이다.**
@@ -71,8 +71,22 @@ function loadLand(): Ring[] {
  * 점에 딱 맞추면 배율이 무한대가 된다. 8도면 이탈리아 반도가 화면을 채우는 정도다.
  */
 function windowOf(places: PlaceCoord[]) {
-  const lons = places.map((p) => p.lonLat[0])
-  const lats = places.map((p) => p.lonLat[1])
+  /*
+   * **창은 점인 것만으로 잡는다.**
+   *
+   * `region`·`sea`의 대표점이 대목 밖으로 멀리 나가 있으면 창이 그만큼 부풀고, 정작
+   * 읽는 사람이 찾는 도시들이 가운데 몇 픽셀 안에 뭉친다. 실측(2026-08-18): 28개
+   * 대목 중 6개가 넓은 것 때문에 창이 부풀어 있었고, 포인트 21은 전체 79.6도인데
+   * 점인 것만 보면 17.4도였다 — **네 배 넓게 그리고 있었다.**
+   *
+   * 점인 것이 하나도 없으면(넓은 것만 나오는 대목) 어쩔 수 없이 전부로 잡는다.
+   */
+  const wide = new Set<string>(WIDE_KINDS)
+  const anchors = places.filter((p) => !wide.has(p.kind))
+  const base = anchors.length ? anchors : places
+
+  const lons = base.map((p) => p.lonLat[0])
+  const lats = base.map((p) => p.lonLat[1])
   const midLat = (Math.min(...lats) + Math.max(...lats)) / 2
   const kx = Math.cos((midLat * Math.PI) / 180)
 
@@ -99,8 +113,15 @@ function projector(win: ReturnType<typeof windowOf>) {
   ]
 }
 
-export function renderPointMap(places: PlaceCoord[]): string {
-  if (!places.length) return ''
+export function renderPointMap(input: PlaceCoord[]): string {
+  if (!input.length) return ''
+
+  /*
+   * **붙어 있는 것을 먼저 묶는다.** 5km 이내가 61쌍이고, 최악은 좌표가 완전히 같다
+   * (`카파도키아`↔`카이사레아`). 묶지 않으면 점 반지름 3.5px짜리가 통째로 포개져서
+   * 위엣것 하나만 눌린다 — 아래 것은 화면에 있으면서 못 누르는 상태가 된다.
+   */
+  const places = clusterPlaces(input)
 
   const win = windowOf(places)
   const to = projector(win)
@@ -137,10 +158,27 @@ export function renderPointMap(places: PlaceCoord[]): string {
    */
   const taken: { x1: number; y1: number; x2: number; y2: number }[] = []
   const pins: string[] = []
+  const edged: PlaceGroup[] = []
   let labelled = 0
 
   for (const p of places) {
-    const [x, y] = to(...p.lonLat)
+    const [rawX, rawY] = to(...p.lonLat)
+
+    /*
+     * **창 밖으로 나간 것은 버리지 않고 가장자리에 붙인다.**
+     *
+     * 창을 점인 것만으로 잡으므로 멀리 있는 지역 대표점이 프레임을 벗어난다(포인트
+     * 05의 `독일`은 y=-203이다). 처음엔 안 그렸는데, 그러면 **본문에서 그 지명에
+     * 마우스를 올려도 아무 일이 안 일어나고 눌러서 갈 수도 없다** — 화면에서 통째로
+     * 사라지는 것과 같다.
+     *
+     * 가장자리 점은 「저 바깥 이 방향」이라는 뜻이다. 정확한 자리를 아는 척하지
+     * 않으려고 테두리만 있는 모양(`edge`)으로 그리고 이름표는 안 단다.
+     */
+    const off = rawX < PAD || rawX > W - PAD || rawY < PAD || rawY > H - PAD
+    const x = Math.min(Math.max(rawX, PAD / 2), W - PAD / 2)
+    const y = Math.min(Math.max(rawY, PAD / 2), H - PAD / 2)
+    if (off) edged.push(p)
     /*
      * **본문 링크와 글자 하나까지 같아야 한다.** 호버 패널이 `href`로 짝을 찾기
      * 때문이다. 처음엔 여기서만 `encodeURIComponent`를 걸었는데, 본문 쪽
@@ -149,27 +187,50 @@ export function renderPointMap(places: PlaceCoord[]): string {
      */
     const href = entityHref({ id: p.id, type: 'place', name: p.name })
     const guessed = p.confidence === 'low' ? ' guessed' : ''
-    const dot = `<circle cx="${round(x)}" cy="${round(y)}" r="${DOT}" class="pin${guessed}"/>`
+    const edge = off ? ' edge' : ''
+    const dot = `<circle cx="${round(x)}" cy="${round(y)}" r="${DOT}" class="pin${guessed}${edge}"/>`
 
-    const tw = textWidth(p.name, FONT)
+    /*
+     * **묶인 것을 이름에 드러낸다.** 「비잔티움 +2」처럼 적어야 그 자리에 더 있다는
+     * 것을 알고 눌러 본다. 숨기면 화면에 없는 것과 같아진다.
+     */
+    const label = p.with.length ? `${p.name} +${p.with.length}` : p.name
+    /* 툴팁에는 딸린 이름을 다 적는다 — 「+2」가 무엇인지 답할 데가 여기뿐이다 */
+    const title = p.with.length ? `${p.name} · ${p.with.map((w) => w.name).join(' · ')}` : p.name
+
+    const tw = textWidth(label, FONT)
     const box = { x1: x + 6, y1: y - 7, x2: x + 10 + tw, y2: y + 5 }
     const clash =
+      off ||
       labelled >= MAX_LABELS ||
       box.x2 > W - 4 ||
       box.y1 < 4 ||
       box.y2 > H - 4 ||
       taken.some((t) => !(box.x2 < t.x1 || box.x1 > t.x2 || box.y2 < t.y1 || box.y1 > t.y2))
 
+    /*
+     * `data-kind`가 레이어를 가른다. **카드 종류 끄기와 똑같은 수법** — 빌드 때 다
+     * 그려 두고 `html[data-layers]`가 CSS로 숨긴다. 자바스크립트는 단추뿐이다.
+     *
+     * `data-also`는 **묶여 들어간 것들의 주소**다. 호버 패널이 본문 링크를 `href`로
+     * 찾는데, 묶이면 그 주소를 가진 점이 사라져서 `아프리카`에 마우스를 올려도 아무
+     * 일이 없다. 여기 적어 두면 패널이 대표 점을 켤 수 있다.
+     */
+    const also = p.with.length
+      ? ` data-also="${p.with.map((w) => entityHref({ id: w.id, type: 'place', name: w.name })).join(' ')}"`
+      : ''
+    const open = `<a href="${href}" data-kind="${p.kind}"${also}>`
+
     if (clash) {
-      pins.push(`<a href="${href}"><title>${esc(p.name)}</title>${dot}</a>`)
+      pins.push(`${open}<title>${esc(title)}</title>${dot}</a>`)
       continue
     }
 
     taken.push(box)
     labelled += 1
     pins.push(
-      `<a href="${href}">${dot}` +
-        `<text class="pin-label" x="${round(x + 7)}" y="${round(y + 3.5)}">${esc(p.name)}</text></a>`,
+      `${open}<title>${esc(title)}</title>${dot}` +
+        `<text class="pin-label" x="${round(x + 7)}" y="${round(y + 3.5)}">${esc(label)}</text></a>`,
     )
   }
 
@@ -188,11 +249,23 @@ export function renderPointMap(places: PlaceCoord[]): string {
       **눌린다는 것을 눈으로 알려야 한다.** 처음엔 아무 표시가 없어서 River가
       「인터랙티브가 안 되는 것 같다」고 했다. 손가락 커서와 hover 강조를 준다.
     */
+    .pin.edge { fill: none; stroke: light-dark(#a8543f, #d0806a); stroke-width: 1.2; opacity: .55; }
+    .map-note { font-size: 10px; fill: light-dark(#6a6a6a, #9aa2aa); }
     a { cursor: pointer; }
     a:hover .pin-label { fill: light-dark(#fff, #0e161d); stroke: light-dark(#a8543f, #d0806a); }
     a:hover .pin { r: 5; }
     a:focus-visible .pin { outline: 2px solid light-dark(#a8543f, #d0806a); outline-offset: 2px; }
   `
+
+  /*
+   * 못 그린 곳을 그림 안에 적는다. **말없이 자르지 않는다** — 카드가 「몇 중 몇을
+   * 세웠습니다」로 밝히는 것과 같은 자리다. SVG 안에 두는 것은 이 문자열이 통째로
+   * `dangerouslySetInnerHTML`로 들어가서 밖에 덧붙일 데가 없기 때문이다.
+   */
+  const note = edged.length
+    ? `<text class="map-note" x="${W - 10}" y="${H - 10}" text-anchor="end">` +
+      `테두리에 붙은 점 ${edged.length}곳은 이 화면 밖입니다</text>`
+    : ''
 
   return (
     `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="이 대목에 나오는 지명 ${places.length}곳">` +
@@ -202,6 +275,7 @@ export function renderPointMap(places: PlaceCoord[]): string {
     `<rect class="sea" x="0" y="0" width="${W}" height="${H}"/>` +
     paths.join('') +
     pins.join('') +
+    note +
     `</g></svg>`
   )
 }
