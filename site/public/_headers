@@ -1,0 +1,31 @@
+# Cloudflare Pages 응답 헤더.
+#
+# 이 사이트는 **정적 페이지 818장 + 서버 갈래 하나**(/api/feedback)뿐이고, 글꼴까지
+# 자체 호스팅이라 **바깥에서 불러오는 자원이 0이다**(실측: 빌드 산출물에 외부 origin은
+# 앵커 링크뿐, 로드되는 것은 없다). 그 성질을 브라우저가 강제하게 만든다 — 나중에
+# 누가 무심코 외부 스크립트를 넣으면 화면이 조용히 새는 대신 콘솔에서 막힌다.
+#
+# `script-src`에 `'unsafe-inline'`이 남아 있는 것은 **정적 내보내기의 한계**다.
+# Next가 하이드레이션용 인라인 스크립트를 여러 개 심고(`self.__next_f.push`),
+# 우리도 첫 페인트 스크립트를 인라인으로 넣는다. nonce는 서버가 있어야 하고,
+# 해시는 빌드마다 바뀌는 조각 수만큼 늘어난다. 남은 지시자들이 값을 한다.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; object-src 'none'; form-action 'self'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+
+  # 검색에 안 걸리게 해 둔 사이트다. 나가는 클릭이 목적지에 우리 주소를 알리면
+  # 그 전제가 깨진다 — 링크 카드 18장이 yes24·넷플릭스·구글로 나간다.
+  #
+  # **이걸 컴포넌트가 아니라 여기서 막는다.** 그 18장은 astryx `ClickableCard`가
+  # 그리는데 타입에 `rel`이 없다. 캐스팅으로 우겨 넣을 수도 있지만, 「바깥으로 나갈 때
+  # 어디서 왔는지 안 알린다」는 것은 카드 하나의 사정이 아니라 **사이트의 정책**이라
+  # 헤더가 제자리다. 손으로 쓴 앵커들은 이미 `rel="noreferrer"`를 갖고 있다.
+  Referrer-Policy: no-referrer
+
+  # `<meta name="robots">`가 이미 있지만 헤더가 더 세다. PDF·JSON처럼 메타태그를
+  # 넣을 수 없는 응답까지 덮는다.
+  X-Robots-Tag: noindex, nofollow
