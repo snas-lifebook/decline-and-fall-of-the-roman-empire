@@ -1527,18 +1527,24 @@ html[data-focus='on'] .site-footer {
 /* ── 책장과 책 문패 ─────────────────────────────────────────────── */
 
 /*
-  표지와 서지가 나란히 선다. 좁아지면 표지가 위로 가고 글이 아래로 내려간다 —
-  표지를 줄여서 옆에 붙이면 글자가 안 읽히는 우표가 된다.
+  책 문패는 표지와 서지가 나란히 선다. 좁아지면 표지가 위로 가고 글이 아래로
+  내려간다 — 표지를 줄여서 옆에 붙이면 글자가 안 읽히는 우표가 된다.
 */
-.shelf-book,
 .book-head {
   display: flex;
   gap: 24px;
   align-items: flex-start;
 }
 
+/* 책장은 칸이 좁아서 처음부터 표지가 위다 */
+.shelf-book {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
 @media (max-width: 620px) {
-  .shelf-book,
   .book-head {
     flex-direction: column;
     gap: 20px;
@@ -1639,9 +1645,23 @@ html[data-focus='on'] .site-footer {
   );
 }
 
-/* 두 권이 세로로 선다. 책마다 할 말의 길이가 달라 격자로 깔지 않는다 */
+/*
+  **두 권이 나란히 선다.** 한 권일 때 오른쪽 절반이 비어 있었고 River가 그 자리를
+  두 번째 권에 주라고 했다.
+
+  칸 안에서는 표지가 **위로 간다.** 468px 칸에서 표지를 옆에 두면 글이 268px로
+  눌려 제목이 세 줄로 접힌다 — 책장에서 책 옆에 붙은 설명이 아니라 책 아래 붙은
+  설명이 되는 편이 낫다. 좁아지면 한 줄로 접힌다.
+*/
 .shelf {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .shelf {
+    grid-template-columns: 1fr;
+  }
 }

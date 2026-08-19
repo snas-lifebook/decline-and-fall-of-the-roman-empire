@@ -21,13 +21,26 @@ import { pageMeta } from '../../lib/meta'
 
 export const metadata = pageMeta('읽기')
 
-/** 무게를 숫자로 말한다. 「오늘 한 편을 읽을 수 있나」에 대한 답이 이것이다 */
+/**
+ * 무게를 숫자로 말한다. 「오늘 한 편을 읽을 수 있나」에 대한 답이 이것이다.
+ *
+ * **두 권의 사정이 달라서 문장도 다르다.** 편역본에는 여는 글 둘과 닫는 글 하나가
+ * 있고 종이책 쪽수가 있다. 원전에는 서문 하나뿐이고 쪽수가 없다 — 「앞뒤 글까지」라고
+ * 쓰면 있지도 않은 닫는 글을 있다고 말하는 것이다.
+ */
 function heft(b: Book) {
+  const unit = b.lang === 'en' ? '장' : '편'
   const main = b.parts.filter((p) => p.kind === 'point' || p.kind === 'chapter').length
-  const unit = b.id === 'gibbon' ? '장' : '편'
+  const front = b.parts.filter((p) => p.kind === 'front').length
+  const back = b.parts.filter((p) => p.kind === 'back').length
   const last = b.parts[b.parts.length - 1]
-  const pages = b.id === 'gibbon' ? '' : last.page ? ` · 종이책 ${last.page}쪽` : ''
-  return `본문 ${main}${unit} · 앞뒤 글까지 ${b.parts.length}${unit}${pages}`
+
+  const extra = back
+    ? ` · 여는 글과 닫는 글까지 ${b.parts.length}${unit}`
+    : front
+      ? ` · 서문까지 ${b.parts.length}${unit}`
+      : ''
+  return `본문 ${main}${unit}${extra}${last.page ? ` · 종이책 ${last.page}쪽` : ''}`
 }
 
 export default function Read() {
