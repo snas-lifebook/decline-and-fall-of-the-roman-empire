@@ -1,0 +1,12 @@
+/*
+ * `family-tree`·`point-map`(globals.css)과 같은 처방이다 — 폰에서 글자가 무한히
+ * 작아지는 대신 최소 폭을 주고 넘치면 옆으로 밀게 한다. globals.css는 다른
+ * 담당자가 잡고 있어 여기 컴포넌트 옆에 따로 둔다.
+ */
+.wrap {
+  overflow-x: auto;
+}
+
+.wrap svg {
+  min-width: 420px;
+}

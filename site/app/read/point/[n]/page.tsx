@@ -43,7 +43,7 @@ import { renderPointMap } from '../../../../lib/place/svg'
  *
  * 그래서 셋이 자리를 옮겼다.
  *   - 목차  → 본문 맨 위 접힌 블록. 포인트 본문은 절이 3~6개라 접으면 한 줄이다
- *   - 관계망 → 본문 끝. 「이 대목의 관계망」으로 이름을 달았다
+ *   - 관계망 → 본문 끝. 「이 포인트의 관계망」으로 이름을 달았다
  *   - 본문  → `Shell`의 날개를 안 쓰고 `ReadGrid`가 자기 그리드를 갖는다
  *
  * 관계망을 없애지 않은 것은 2026-08-16에 River가 직접 요청해 넣은 것이기 때문이다.
@@ -169,7 +169,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
       {layout.total > layout.cards.length ? (
         <div style={NARROW}>
           <Text size="sm" color="secondary">
-            이 대목에 서술이 딸린 인물·집단이 {layout.total}이라, 관계가 많이 얽힌{' '}
+            이 포인트에 서술이 딸린 인물·집단이 {layout.total}이라, 관계가 많이 얽힌{' '}
             {layout.cards.length}만 옆에 세웠습니다. 나머지는 본문 링크로 있습니다.
           </Text>
         </div>
@@ -203,14 +203,14 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
           검색엔진이 보는 순서가 이것이다.
         */}
         {/*
-          **지도만 토글이 아니다.** River가 「이 대목의 지도(마지막에는 그냥 뜨게)」라고
+          **지도만 토글이 아니다.** River가 「이 포인트의 지도(마지막에는 그냥 뜨게)」라고
           괄호로 따로 적었다. 접으면 안 되는 실질적 이유도 있다 — 「지명에 올릴 때」
           모드에서 이 자리가 **호버 패널의 몸통**이라, 접혀 있으면 마우스를 올려도
           띄울 것이 없다. 한 벌만 그리기로 한 값이다.
         */}
         <div className="map-slot">
           <Stack direction="vertical" gap={1.5} as="section">
-            <Heading level={2}>이 대목의 지도</Heading>
+            <Heading level={2}>이 포인트의 지도</Heading>
             {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
             <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
             <Text size="sm" color="secondary">
@@ -236,7 +236,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
       */}
       {layout.tail.length ? (
         <div style={NARROW}>
-          <Collapsible defaultIsOpen={false} trigger="이 대목의 등장 객체">
+          <Collapsible defaultIsOpen={false} trigger="이 포인트의 등장 객체">
             <Stack direction="vertical" gap={2}>
               {layout.tail.map((block, i) => (
                 // 제목 줄은 토글 이름이 이미 말하므로 빼고 목록만 낸다
@@ -248,7 +248,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
       ) : null}
 
       <div style={NARROW}>
-        <Collapsible defaultIsOpen={false} trigger="이 대목의 관계망">
+        <Collapsible defaultIsOpen={false} trigger="이 포인트의 관계망">
           <PointGraph point={n} entities={ENTITIES} links={LINKS} />
         </Collapsible>
       </div>
@@ -260,7 +260,7 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         읽던 자리에서 바로 넘어간다.
       */}
       <div style={NARROW}>
-        <Collapsible defaultIsOpen={false} trigger="이 대목을 표로 받기">
+        <Collapsible defaultIsOpen={false} trigger="이 포인트를 표로 받기">
           <Text color="secondary">
             여기 나온 인물·지명을 <Link href={`/download/${n}`}>표 한 장</Link>으로 받아 시트에
             붙여넣을 수 있습니다.

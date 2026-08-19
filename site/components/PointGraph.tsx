@@ -60,7 +60,7 @@ export function PointGraph({
       </Text>
       <EgoGraph nodes={nodes} edges={edges} />
       <Text size="sm" color="secondary">
-        이 대목의 관계 {allEdges.length}건 중{' '}
+        이 포인트의 관계 {allEdges.length}건 중{' '}
         {/* 잘라놓고 말 안 하면 다 그린 것처럼 읽힌다 */}
         {dropped ? `얽힌 갈래가 많은 ${nodes.length}개` : `${nodes.length}개`}를 그렸습니다. 점을
         끌어 옮기고 휠로 확대할 수 있습니다. 나머지는 본문 아래 「등장 객체」에 다 있습니다.

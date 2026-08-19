@@ -50,7 +50,7 @@ export function ReadRail({ items, rows }: { items: OutlineItem[]; rows?: number 
       <Stack direction="vertical" gap={2} hAlign="start" width="100%">
         <Stack direction="horizontal" gap={2} vAlign="center" justify="between" width="100%">
           <Text size="sm" weight="semibold" color="secondary">
-            이 대목의 절
+            이 포인트의 절
           </Text>
           {/*
             설정은 톱니 하나로 접어둔다. **읽는 사람 대부분은 기본값으로 읽고 끝낸다** —
@@ -87,10 +87,10 @@ export function ReadRail({ items, rows }: { items: OutlineItem[]; rows?: number 
         </Stack>
 
         {items.length > 1 ? (
-          <Outline items={items} label="이 대목의 절" density="compact" offset={24} />
+          <Outline items={items} label="이 포인트의 절" density="compact" offset={24} />
         ) : (
           <Text size="sm" color="secondary">
-            절이 나뉘지 않은 대목입니다
+            절이 나뉘지 않은 포인트입니다
           </Text>
         )}
 
@@ -99,7 +99,7 @@ export function ReadRail({ items, rows }: { items: OutlineItem[]; rows?: number 
           이미 한 벌이 있고, `MapFollow`가 그 노드를 옮겨 온다. 두 벌을 그리면 한쪽을
           고칠 때 다른 쪽이 조용히 어긋난다.
 
-          목차 **아래**인 것이 중요하다. River가 「이 대목의 절 아래에서 해당 행의
+          목차 **아래**인 것이 중요하다. River가 「이 포인트의 절 아래에서 해당 행의
           부근에 이르면」이라고 자리까지 짚었다.
         */}
         <div className="rail-map-slot" />

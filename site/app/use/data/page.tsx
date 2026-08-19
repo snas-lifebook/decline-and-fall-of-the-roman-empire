@@ -3,6 +3,7 @@ import { Stack, Text, Banner } from '@astryxdesign/core'
 import { DocShell, type DocSection } from '../../../components/DocShell'
 import { MaterialCards } from '../../../components/MaterialCards'
 import { dataShapeSections } from '../../../components/DataShape'
+import { ChatMockup } from '../../../components/ChatMockup'
 import { RECIPES } from '../../../lib/recipes'
 import { pageMeta } from '../../../lib/meta'
 
@@ -26,6 +27,28 @@ export const metadata = pageMeta('AI에 줄 자료')
 
 function sections(): DocSection[] {
   return [
+    /*
+     * 태봉호(베타 첫 사용자, 2026-08-19)가 짚은 자리다 — "일반인은 아예 그 창이
+     * 어떤식으로 굴러가는지 모를거에요." 아래 재료 카드와 다음 장의 프롬프트
+     * 상자는 이미 있지만, 그게 실제 AI 창의 어느 자리에서 일어나는 일인지는
+     * 아무 데도 없었다. 그 자리 하나만 `ChatMockup`이 채운다.
+     */
+    {
+      id: 'window',
+      title: 'AI 창은 이렇게 움직입니다',
+      body: (
+        <Stack direction="vertical" gap={2}>
+          <Text color="secondary">
+            ChatGPT나 Claude 화면은 모두 이 구조입니다. 아래 입력칸에 자료와 질문을
+            붙여넣고 보내기를 누르면 답이 그 위에 새 말풍선으로 뜹니다.
+          </Text>
+          <ChatMockup />
+          <Text size="sm" color="secondary">
+            서비스마다 색과 배치는 조금씩 다르지만 구조는 같습니다.
+          </Text>
+        </Stack>
+      ),
+    },
     {
       id: 'materials',
       title: '붙여넣을 수 있는 자료',

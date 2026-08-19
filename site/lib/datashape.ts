@@ -122,7 +122,7 @@ export function sampleLink(): { raw: string; fields: SampleField[] } {
     {
       key: 'point',
       value: `포인트 ${l.point}`,
-      means: '몇 번 대목에 나온 이야기인지. 「그거 어디 나온 얘기야」에 답하는 칸입니다',
+      means: '몇 번 포인트에 나온 이야기인지. 「그거 어디 나온 얘기야」에 답하는 칸입니다',
     },
   ]
 

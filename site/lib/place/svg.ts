@@ -268,7 +268,7 @@ export function renderPointMap(input: PlaceCoord[]): string {
     : ''
 
   return (
-    `<svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="이 대목에 나오는 지명 ${places.length}곳">` +
+    `<svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="이 포인트에 나오는 지명 ${places.length}곳">` +
     `<style>${style}</style>` +
     `<clipPath id="map-clip"><rect x="0" y="0" width="${W}" height="${H}" rx="10"/></clipPath>` +
     `<g clip-path="url(#map-clip)">` +

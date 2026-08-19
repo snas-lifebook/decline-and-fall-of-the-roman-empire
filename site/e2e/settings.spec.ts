@@ -428,7 +428,7 @@ test.describe('맨 아래', () => {
  * **14px 대 17.6px**로 갈라져 있었고, 회색 바탕은 객체 화면 서술에 안 닿았다.
  */
 test.describe('객체 화면이 읽기와 같은 눈금을 쓴다', () => {
-  test('서술 크기가 대목 본문과 같다', async ({ page }) => {
+  test('서술 크기가 포인트 본문과 같다', async ({ page }) => {
     const px = async (url: string, sel: string) => {
       await page.goto(url)
       await page.waitForSelector(sel)
@@ -511,7 +511,7 @@ test.describe('객체 화면이 읽기와 같은 눈금을 쓴다', () => {
   test('관계망이 읽기 화면과 같은 색으로 그려진다', async ({ page }) => {
     const fill = async (url: string) => {
       await page.goto(url)
-      if (url.startsWith('/read')) await page.getByRole('button', { name: '이 대목의 관계망' }).click()
+      if (url.startsWith('/read')) await page.getByRole('button', { name: '이 포인트의 관계망' }).click()
       await page.waitForSelector('.ego-graph text')
       return page.evaluate(() => getComputedStyle(document.querySelector('.ego-graph text')!).fill)
     }

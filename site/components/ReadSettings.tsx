@@ -111,7 +111,8 @@ const FONT_SAMPLE = '로마 제국은 어떻게 쇠망했는가'
 
 const TONES = [
   { id: 'auto', label: '기본', hint: '기기 설정을 따릅니다' },
-  { id: 'sepia', label: '회색', hint: '종이에 가까운 미색입니다. 흰 바탕이 눈부실 때' },
+  // 나머지 다섯은 「~합니다」로 맺는데 이것만 「~때」로 끊겨 있었다
+  { id: 'sepia', label: '회색', hint: '종이에 가까운 미색입니다. 흰 바탕이 눈부실 때 씁니다' },
 ] as const
 
 /**

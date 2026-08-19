@@ -173,7 +173,7 @@ export function CoOccurred({
         그 사람들이 12개를 전부로 읽고 있었다.
       */}
       <Text size="sm" color="secondary">
-        같은 대목에 함께 나왔다는 뜻이지 둘 사이에 관계가 있다는 뜻은 아닙니다.
+        같은 포인트에 함께 나왔다는 뜻이지 둘 사이에 관계가 있다는 뜻은 아닙니다.
         {coTotal > co.length
           ? ` 함께 나온 것이 ${coTotal}개인데 자주 겹치는 것부터 ${co.length}개만 뒀습니다.`
           : ''}

@@ -84,9 +84,9 @@ export default async function PointPage({ params }: { params: Promise<{ point: s
           이 포인트에 나오는 인물·지명 {rows.length}개입니다. 복사해서 구글시트나 엑셀에
           붙여넣으면 그대로 표가 됩니다.
         </Text>
-        {/* 표만 보고 온 사람이 「이게 무슨 대목이지」에서 막힌다. 본문으로 돌아가는 길 */}
+        {/* 표만 보고 온 사람이 「이게 무슨 포인트지」에서 막힌다. 본문으로 돌아가는 길 */}
         <Text size="sm" color="secondary">
-          <Link href={`/read/point/${n}`}>이 대목 본문 읽기</Link>
+          <Link href={`/read/point/${n}`}>이 포인트 본문 읽기</Link>
         </Text>
       </Stack>
 

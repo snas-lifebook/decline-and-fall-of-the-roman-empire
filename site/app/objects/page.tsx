@@ -38,7 +38,7 @@ export default function Objects() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>찾아보기</Heading>
         <Text size="lg" color="secondary">
-          이 사람이 누구 편이었는지, 그 도시가 어느 대목에 나왔는지 헷갈리실 때 보는 곳입니다.
+          이 사람이 누구 편이었는지, 그 도시가 어느 포인트에 나왔는지 헷갈리실 때 보는 곳입니다.
         </Text>
       </Stack>
 

@@ -9,7 +9,7 @@ import { test, expect } from '@playwright/test'
 
 const POINT = '/read/point/5'
 
-test.describe('대목 읽기', () => {
+test.describe('포인트 읽기', () => {
   test('**본문이 뜬다** — `serve -s`가 켜져 있으면 여기서 허브가 잡힌다', async ({ page }) => {
     // 이 테스트가 첫 줄에 있는 이유: 앞 판 설정의 `-s`(SPA 모드)가 모든 경로에
     // `index.html`을 줘서, 아래 테스트가 전부 허브를 보고 초록이 될 뻔했다
@@ -74,7 +74,7 @@ test.describe('대목 읽기', () => {
 
   test('딸린 자료 넷이 접혀 있다 — 다 펴 두면 본문보다 길다', async ({ page }) => {
     await page.goto(POINT)
-    for (const label of ['이 대목의 관계망', '이 대목을 표로 받기', '자주 묻는 것']) {
+    for (const label of ['이 포인트의 관계망', '이 포인트를 표로 받기', '자주 묻는 것']) {
       await expect(page.getByRole('button', { name: label })).toBeVisible()
     }
   })
@@ -195,7 +195,7 @@ test.describe('책으로 들어가기', () => {
 /**
  * 지도가 읽는 자리를 따라간다 (River, 2026-08-19).
  *
- * 「패널이 뜨는 지도 화면은 스크롤 시에 '이 대목의 절'과 함께 움직이며 … 얼추 스크롤이
+ * 「패널이 뜨는 지도 화면은 스크롤 시에 '이 포인트의 절'과 함께 움직이며 … 얼추 스크롤이
  * 되었을 때 해당 지도 위치를 함께 띄워주시오」.
  */
 test.describe('지도가 따라온다', () => {

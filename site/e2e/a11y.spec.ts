@@ -102,7 +102,7 @@ test('**접힌 것을 펴서도 본다** — 닫혀 있으면 axe가 통째로 �
    * 접는 것이 늘수록 이 구멍도 는다. 하단 넷을 다 펴고 한 번 더 잰다.
    */
   await page.goto('/read/point/5')
-  for (const label of ['이 대목의 관계망', '이 대목을 표로 받기', '자주 묻는 것']) {
+  for (const label of ['이 포인트의 관계망', '이 포인트를 표로 받기', '자주 묻는 것']) {
     await page.getByRole('button', { name: label }).click()
   }
   // 관계망은 힘 계산이 끝나야 링크가 자리를 잡는다

@@ -228,7 +228,11 @@ export function Shell({
           className="site-footer-in"
           style={{ maxWidth: aside ? maxWidth + 24 + asideWidth : maxWidth }}
         >
-          <SiteFooter where={where} />
+          {/*
+            허브는 푸터의 다섯 장 칸을 접는다. 사이드바를 끄는 것과 같은 이유다 —
+            갈림길에 갈림길을 또 놓지 않는다. `sidebar`가 그 신호를 이미 들고 있다
+          */}
+          <SiteFooter where={where} compact={!sidebar} />
         </div>
       </div>
     </AppShell>
