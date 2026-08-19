@@ -1,6 +1,8 @@
 import { Stack, Grid, Heading, Text, ClickableCard } from '@astryxdesign/core'
 import { Shell } from '../components/Shell'
 import { BookIcon, SearchIcon, DownloadIcon, SparkIcon, FlagIcon } from '../components/icons'
+import { dataCounts } from '../lib/datashape'
+import { book } from '../lib/book'
 
 /**
  * 목적 허브. `/`는 콘텐츠 페이지가 아니라 **갈림길**이다.
@@ -53,6 +55,29 @@ const CARDS = [
   },
 ] as const
 
+/**
+ * 첫 화면이 무엇을 가졌는지 한 줄로 말한다.
+ *
+ * **손으로 안 적는다.** 데이터를 세어 만들므로 자료가 늘면 이 줄이 따라 는다 —
+ * 손으로 적은 숫자는 반드시 낡는다(`/about`의 표가 같은 이유로 빌드 때 채워진다).
+ *
+ * 2026-08-19 실측: 첫 화면은 히어로와 카드 다섯을 합쳐 **220자**였고 「자료를 모아둔
+ * 곳」이라고만 했다 — **어느 자료실에나 해당되는 문장**이다. 무슨 책인지도 얼마나
+ * 있는지도 없어서, 첫 외부 사용자가 스킬 페이지의 존재를 링크를 받고서야 알았다.
+ * 숫자가 산문보다 빠르게 「무엇인가」에 답한다(datasette.io 실측에서 가져온 판단).
+ */
+function scale(): string {
+  const c = dataCounts()
+  // 번호가 붙은 편만 센다 — 목차·일러두기·옮기고 나서는 포인트가 아니다
+  const points = book().parts.filter((p) => p.n).length
+  return [
+    `객체 ${c.entities.toLocaleString()}`,
+    `관계 ${c.links.toLocaleString()}`,
+    `편역본 ${points}포인트`,
+    `기번 원전 ${c.source}장`,
+  ].join(' · ')
+}
+
 export default function Home() {
   return (
     <Shell path="/" where="첫 화면" sidebar={false} maxWidth={960}>
@@ -64,6 +89,9 @@ export default function Home() {
           </Heading>
           <Text size="lg" color="secondary" justify="center">
             발표와 토론에 쓰는 자료를 모아둔 곳입니다. 설치도 로그인도 필요 없습니다.
+          </Text>
+          <Text size="sm" color="secondary" justify="center">
+            {scale()}
           </Text>
         </Stack>
 

@@ -7,6 +7,7 @@ import {
   MetadataListItem,
 } from '@astryxdesign/core'
 import { repoTree, sampleLink, dataCounts } from '../lib/datashape'
+import type { DocSection } from './DocShell'
 
 /**
  * 「자료가 어떻게 생겼나」 — `/download`와 `/use/data`가 **같은 것을 쓴다.**
@@ -81,26 +82,52 @@ export function LinkAnatomy() {
   )
 }
 
-/** 둘을 제목까지 붙여 한 덩어리로. 두 화면이 그대로 꽂아 쓴다 */
+/**
+ * 두 절을 **데이터로** 낸다. 우측 목차가 이 배열을 먹어야 하기 때문이다.
+ *
+ * 앞 판은 `DataShape()`가 제목을 직접 그렸고, 그래서 이 두 절이 **화면에는 있는데
+ * 목차에는 없었다**(2026-08-19 실측). 제목을 두 군데 적을 자리를 아예 없앤다.
+ */
+export function dataShapeSections(): DocSection[] {
+  return [
+    {
+      id: 'sec-shape',
+      title: '자료가 어떻게 생겼나',
+      body: (
+        <>
+          <Text color="secondary">
+            받아서 여셨을 때 그대로 보이는 이름입니다. 개수는 지금 자료를 센 값입니다.
+          </Text>
+          <RepoTree />
+        </>
+      ),
+    },
+    {
+      id: 'sec-record',
+      title: '관계 한 건은 이렇게 생겼습니다',
+      body: (
+        <>
+          <Text color="secondary">
+            설명이 아니라 <strong>진짜 첫 줄</strong>입니다. 이런 줄이{' '}
+            {dataCounts().links.toLocaleString()}개 이어져 있다고 보시면 됩니다.
+          </Text>
+          <LinkAnatomy />
+        </>
+      ),
+    },
+  ]
+}
+
+/** 제목까지 붙여 한 덩어리로. **`DocShell`을 안 쓰는 화면**이 그대로 꽂아 쓴다 */
 export function DataShape() {
   return (
     <>
-      <Stack direction="vertical" gap={0} as="section" id="sec-shape">
-        <Heading level={2}>자료가 어떻게 생겼나</Heading>
-        <Text color="secondary">
-          받아서 여셨을 때 그대로 보이는 이름입니다. 개수는 지금 자료를 센 값입니다.
-        </Text>
-        <RepoTree />
-      </Stack>
-
-      <Stack direction="vertical" gap={0} as="section" id="sec-record">
-        <Heading level={2}>관계 한 건은 이렇게 생겼습니다</Heading>
-        <Text color="secondary">
-          설명이 아니라 <strong>진짜 첫 줄</strong>입니다. 이런 줄이{' '}
-          {dataCounts().links.toLocaleString()}개 이어져 있다고 보시면 됩니다.
-        </Text>
-        <LinkAnatomy />
-      </Stack>
+      {dataShapeSections().map((s) => (
+        <Stack key={s.id} direction="vertical" gap={0} as="section" id={s.id}>
+          <Heading level={2}>{s.title}</Heading>
+          {s.body}
+        </Stack>
+      ))}
     </>
   )
 }

@@ -1,11 +1,9 @@
 import Link from 'next/link'
-import { Stack, Heading, Text, Divider, Banner } from '@astryxdesign/core'
-import { Shell } from '../../../components/Shell'
+import { Stack, Text, Banner } from '@astryxdesign/core'
+import { DocShell, type DocSection } from '../../../components/DocShell'
 import { RecipeCard } from '../../../components/RecipeCard'
 import { MaterialCards } from '../../../components/MaterialCards'
-import { Faq } from '../../../components/Faq'
 import { RECIPES, RECIPE_CATEGORIES } from '../../../lib/recipes'
-import { faqFor } from '../../../lib/faq'
 import { pageMeta } from '../../../lib/meta'
 
 /**
@@ -17,68 +15,70 @@ import { pageMeta } from '../../../lib/meta'
  *
  * 재료 안내는 「무엇을 AI에 주나」와 **같은 카드 한 벌을 쓴다**(`MaterialCards`).
  * 앞 판은 여기서 셋을 따로 적었는데, 한쪽만 고치면 두 화면이 어긋난다.
+ *
+ * 2026-08-19에 `DocShell`로 옮겼다. 「재료 셋」 제목을 손으로 세워 h1 → h3 건너뜀을
+ * 막던 자리가 이제 절 목록의 첫 항목이라, 우측 목차에도 같이 실린다.
  */
 export const metadata = pageMeta('우수 사례')
 
+function sections(): DocSection[] {
+  const cats: DocSection[] = RECIPE_CATEGORIES.flatMap((c, i) => {
+    const items = RECIPES.filter((r) => r.category === c)
+    if (!items.length) return []
+    return [
+      {
+        id: `sec-${i + 1}`,
+        title: c,
+        body: (
+          <Stack direction="vertical" gap={3}>
+            {items.map((r) => (
+              <RecipeCard key={r.id} r={r} />
+            ))}
+          </Stack>
+        ),
+      },
+    ]
+  })
+
+  return [
+    { id: 'materials', title: '재료 셋', body: <MaterialCards /> },
+    ...cats,
+    {
+      id: 'chain',
+      title: '엮어서 쓰기',
+      body: (
+        <Stack direction="vertical" gap={1.5}>
+          <Text color="secondary">
+            한 건씩 따로 쓰셔도 되지만, 이어 붙이면 발표 준비 한 바퀴가 됩니다.
+          </Text>
+          <Text>
+            맡은 포인트의 표를 받아 범위를 잡고 → 본문을 복사해 대본 초안을 만들고 → 헷갈리는
+            인물이 나오면 객체 페이지로 갈라 보고 → 의심되는 서술은 사료와 대조합니다.
+          </Text>
+          <Text size="sm" color="secondary">
+            <Link href="/use/pitfalls">그냥 시키면 틀리는 것</Link>을 먼저 훑어 두시면 어느 자리에서
+            무엇을 의심해야 하는지 보입니다.
+          </Text>
+        </Stack>
+      ),
+    },
+  ]
+}
+
 export default function Recipes() {
   return (
-    <Shell path="/use/recipes" where="우수 사례">
-      <Stack direction="vertical" gap={1.5}>
-        <Heading level={1}>우수 사례</Heading>
-        <Text size="lg" color="secondary">
-          실제로 해서 결과가 나온 것만 모았습니다. 지금 상황에 맞는 것을 골라 그대로 따라 하세요.
-        </Text>
-      </Stack>
-
-      <Divider />
-
-      <Banner
-        status="info"
-        title="재료를 안 주면 AI가 지어냅니다"
-        description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 붙여넣을 것은 아래 셋 중 하나입니다."
-      />
-
-      {/*
-        제목을 하나 세운다. `MaterialCards`가 h3부터 시작해서 이 화면이
-        h1 → h3로 한 단계를 건너뛰고 있었다(2026-08-17 검수). 「무엇을 AI에 주나」
-        쪽에는 이미 같은 제목이 있어서 그쪽과도 말이 맞는다.
-      */}
-      <Heading level={2}>재료 셋</Heading>
-      <MaterialCards />
-
-      {RECIPE_CATEGORIES.map((c) => {
-        const items = RECIPES.filter((r) => r.category === c)
-        if (!items.length) return null
-        return (
-          <Stack key={c} direction="vertical" gap={3} as="section">
-            <Heading level={2}>{c}</Heading>
-            <Stack direction="vertical" gap={3}>
-              {items.map((r) => (
-                <RecipeCard key={r.id} r={r} />
-              ))}
-            </Stack>
-          </Stack>
-        )
-      })}
-
-      <Divider />
-
-      <Stack direction="vertical" gap={1.5}>
-        <Heading level={2}>엮어서 쓰기</Heading>
-        <Text color="secondary">
-          한 건씩 따로 쓰셔도 되지만, 이어 붙이면 발표 준비 한 바퀴가 됩니다.
-        </Text>
-        <Text>
-          맡은 포인트의 표를 받아 범위를 잡고 → 본문을 복사해 대본 초안을 만들고 → 헷갈리는
-          인물이 나오면 객체 페이지로 갈라 보고 → 의심되는 서술은 사료와 대조합니다.
-        </Text>
-        <Text size="sm" color="secondary">
-          <Link href="/use/pitfalls">그냥 시키면 틀리는 것</Link>을 먼저 훑어 두시면 어느 대목에서 무엇을
-          의심해야 하는지 보입니다.
-        </Text>
-      </Stack>
-
-      <Faq items={faqFor('/use/recipes')} />
-    </Shell>
+    <DocShell
+      href="/use/recipes"
+      title="우수 사례"
+      summary="실제로 해서 결과가 나온 것만 모았습니다. 지금 상황에 맞는 것을 골라 그대로 따라 하세요."
+      sections={sections()}
+      intro={
+        <Banner
+          status="info"
+          title="재료를 안 주면 AI가 지어냅니다"
+          description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 붙여넣을 것은 아래 셋 중 하나입니다."
+        />
+      }
+    />
   )
 }

@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import { Stack, Heading, Text, Divider, Banner, List, ListItem } from '@astryxdesign/core'
-import { Shell } from '../../../components/Shell'
+import { Stack, Text, Banner, List, ListItem } from '@astryxdesign/core'
+import { DocShell, type DocSection } from '../../../components/DocShell'
 import { PitfallCard } from '../../../components/PitfallCard'
-import { Faq } from '../../../components/Faq'
 import { pitfallsByCategory } from '../../../lib/pitfalls'
-import { faqFor } from '../../../lib/faq'
 import { pageMeta } from '../../../lib/meta'
 
 /**
@@ -15,6 +13,8 @@ import { pageMeta } from '../../../lib/meta'
  *
  * **읽는 순서를 사람에게 돌려준 것이 이번 판의 요지다.** 앞 판은 위에서부터 다
  * 읽어야 자기에게 걸리는 항목을 찾을 수 있었다.
+ *
+ * 2026-08-19에 `DocShell`로 옮겨 빵부스러기·우측 목차·이전다음을 되찾았다.
  */
 const CLOSING = [
   ['연도는 반드시 원문과 대조하세요', '기원전인지 서기인지부터 확인하시면 절반은 걸러집니다.'],
@@ -25,50 +25,56 @@ const CLOSING = [
 
 export const metadata = pageMeta('그냥 시키면 틀리는 것')
 
+function sections(): DocSection[] {
+  // 갈래는 데이터에서 나오므로 순번 id를 쓴다 — 한글 제목을 슬러그로 만들려는
+  // 시도가 실패하는 자리라 사이트 전체가 이 규약이다(`lib/doc.ts` docSections)
+  const cats: DocSection[] = pitfallsByCategory().map(({ category, items }, i) => ({
+    id: `sec-${i + 1}`,
+    title: category,
+    body: (
+      <Stack direction="vertical" gap={3}>
+        {items.map((p) => (
+          <PitfallCard key={p.id} p={p} />
+        ))}
+      </Stack>
+    ),
+  }))
+
+  return [
+    ...cats,
+    {
+      id: 'closing',
+      title: '그래서 AI에게 시킬 때',
+      body: (
+        <Stack direction="vertical" gap={1.5}>
+          <List density="spacious" hasDividers>
+            {CLOSING.map(([label, description]) => (
+              <ListItem key={label} label={label} description={description} />
+            ))}
+          </List>
+          <Text size="sm" color="secondary">
+            무엇을 시킬 수 있는지는 <Link href="/use/skills">스킬 여덟</Link>에 정리해 두었습니다.
+          </Text>
+        </Stack>
+      ),
+    },
+  ]
+}
+
 export default function Pitfalls() {
   return (
-    <Shell path="/use/pitfalls" where="그냥 시키면 틀리는 것">
-      <Stack direction="vertical" gap={1.5}>
-        <Heading level={1}>그냥 시키면 틀리는 것</Heading>
-        <Text size="lg" color="secondary">
-          AI가 이 자료에서 실제로 틀린 자리 여덟 군데입니다.
-        </Text>
-      </Stack>
-
-      <Divider />
-
-      <Banner
-        status="info"
-        title="일반론이 아닙니다"
-        description="아래는 전부 이 자료를 다루다 실제로 밟은 것입니다. 몇 건이었는지까지 세어 뒀습니다. 어디가 미끄러운지 알고 시키면 덜 틀립니다."
-      />
-
-      {pitfallsByCategory().map(({ category, items }) => (
-        <Stack key={category} direction="vertical" gap={3} as="section">
-          <Heading level={2}>{category}</Heading>
-          <Stack direction="vertical" gap={3}>
-            {items.map((p) => (
-              <PitfallCard key={p.id} p={p} />
-            ))}
-          </Stack>
-        </Stack>
-      ))}
-
-      <Divider />
-
-      <Stack direction="vertical" gap={1.5} as="section">
-        <Heading level={2}>그래서 AI에게 시킬 때</Heading>
-        <List density="spacious" hasDividers>
-          {CLOSING.map(([label, description]) => (
-            <ListItem key={label} label={label} description={description} />
-          ))}
-        </List>
-        <Text size="sm" color="secondary">
-          무엇을 시킬 수 있는지는 <Link href="/use/skills">스킬 여덟</Link>에 정리해 두었습니다.
-        </Text>
-      </Stack>
-
-      <Faq items={faqFor('/use/pitfalls')} />
-    </Shell>
+    <DocShell
+      href="/use/pitfalls"
+      title="그냥 시키면 틀리는 것"
+      summary="AI가 이 자료에서 실제로 틀린 자리 여덟 군데입니다."
+      sections={sections()}
+      intro={
+        <Banner
+          status="info"
+          title="일반론이 아닙니다"
+          description="아래는 전부 이 자료를 다루다 실제로 밟은 것입니다. 몇 건이었는지까지 세어 뒀습니다. 어디가 미끄러운지 알고 시키면 덜 틀립니다."
+        />
+      }
+    />
   )
 }

@@ -24,7 +24,7 @@ export default function Changelog() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>바뀐 것</Heading>
         <Text size="lg" color="secondary">
-          이 사이트가 언제 무엇이 달라졌는지입니다. 자료 자체가 바뀐 날짜는 화면 아래 「데이터
+          이 사이트가 언제 무엇이 달라졌는지입니다. 자료 자체가 바뀐 날짜는 화면 아래 「자료
           기준일」에 있습니다.
         </Text>
       </Stack>
