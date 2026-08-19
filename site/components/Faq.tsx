@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+import Link from 'next/link'
 import { Stack, Text, Heading, Collapsible } from '@astryxdesign/core'
 import type { FaqItem } from '../lib/faq'
 
@@ -35,6 +37,22 @@ export function Faq({
           <Collapsible key={f.id} defaultIsOpen={false} trigger={f.q}>
             <div className="faq-answer">
               <Text color="secondary">{f.a}</Text>
+              {/*
+                답을 읽고 나서 갈 자리. **답이 화면 이름을 부르면 여기 링크가 있어야
+                한다** — 실측에서 답변 열 개가 「갱신 받는 법에 세 경로가 있는데」처럼
+                이름만 부르고 길을 안 열어 주고 있었다.
+              */}
+              {f.see?.length ? (
+                <Text size="sm" color="secondary">
+                  이어서{' '}
+                  {f.see.map((s, i) => (
+                    <Fragment key={s.href}>
+                      {i > 0 ? ' · ' : ''}
+                      <Link href={s.href}>{s.label}</Link>
+                    </Fragment>
+                  ))}
+                </Text>
+              ) : null}
             </div>
           </Collapsible>
         ))}
