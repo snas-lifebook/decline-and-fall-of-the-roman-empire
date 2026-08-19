@@ -69,6 +69,24 @@
   */
   --read-font: var(--font-family-body);
   --read-scale: 1;
+
+  /*
+    **읽기 기준 크기.** 앞 판은 본문이 16px 고정이었는데, River가 「전체적인 글자
+    크기를 조금 크게, 1~2포인트」라고 했다. 17.6px이면 16px에서 약 1.2포인트 큰
+    것이고, 한국어 장문에서 흔히 쓰는 자리다.
+
+    **배율과 곱해지는 밑값이라 여기 한 곳에만 둔다.** 본문·표·FAQ가 각자 px를 들고
+    있으면 크기 설정이 그중 하나에만 닿는다 — 실제로 그래서 안 닿았다.
+  */
+  --read-base: 1.1rem;
+
+  /*
+    실제로 칠할 크기. **`em`이 아니라 이 변수를 쓴다** — `1em`은 **부모**를 따라가는데
+    astryx가 본문 컨테이너(`.astryx-markdown`)에 크기를 직접 걸어 두어서, `1em`으로
+    두면 그 14px을 물려받고 배율은 영영 안 닿는다(실측 2026-08-19: `.doc` 17.6px /
+    문단 14px). 글꼴 때 밟은 함정을 크기에서 그대로 다시 밟았다.
+  */
+  --read-size: calc(var(--read-base) * var(--read-scale));
 }
 
 /*
@@ -125,7 +143,7 @@ body {
 }
 
 .doc {
-  font-size: calc(1rem * var(--read-scale));
+  font-size: var(--read-size);
 }
 
 .read-rail,
@@ -262,10 +280,17 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 본문 — 14px는 한국어 문서 본문으로 작다 */
+/*
+   본문 — 14px는 한국어 문서 본문으로 작다.
+
+   **`1em`이다. `16px`이면 안 된다.** 고정 px로 두면 `.doc`에 걸린 `--read-scale`이
+   여기까지 안 내려온다 — 슬라이더를 142%로 올려도 **본문은 16px 그대로였다**
+   (실측 2026-08-19: `.doc` 22.72px / 문단 16px). e2e가 `.doc`을 재고 있어서 그
+   결함을 초록으로 통과시켰다. 글꼴 때와 같은 사고다.
+*/
 .doc .astryx-markdown-paragraph,
 .doc .astryx-markdown-list li {
-  font-size: 16px;
+  font-size: var(--read-size);
   line-height: 1.8;
 }
 
@@ -289,6 +314,37 @@ h6 {
 .doc h2,
 .doc h3 {
   letter-spacing: -0.01em;
+}
+
+/*
+ * **제목도 같이 커진다.**
+ *
+ * 본문만 배율을 타면 126%에서 **본문이 h2를 따라잡는다**(실측: 문단 22.2px vs h2
+ * 20px). 그러면 제목이 제목으로 안 보이고 글 전체가 평평해진다.
+ *
+ * 비율은 원래 것을 지킨다 — astryx 기본이 16px 본문에 h1 24 · h2 20이었으므로
+ * 1.5배와 1.25배다. 크기를 새로 정하는 게 아니라 **있던 비율을 배율에 태우는** 것이다.
+ *
+ * `--read-size`를 직접 쓴다. `em`은 부모를 따라가는데 그 부모를 astryx가 잡고 있다.
+ */
+/*
+ * **카드 안의 제목은 뺀다.** 카드는 읽는 글이 아니라 조작하는 물건이라 본문 배율을
+ * 안 따른다 — 여백에서 이미 한 번 그은 경계를 크기에서도 지킨다.
+ *
+ * 처음엔 카드 쪽에 `font-size: revert`로 되돌리려 했는데 **`revert`는 astryx 값이
+ * 아니라 브라우저 기본값으로 돌아간다** — 허브 카드 제목이 h2인데 UA 기본 1.5em을
+ * 받아 37px이 됐다(실측). 되돌리는 대신 **애초에 안 거는** 쪽이 맞다.
+ */
+.doc h1:not(:is(.astryx-card, .astryx-clickable-card) *) {
+  font-size: calc(var(--read-size) * 1.5);
+}
+
+.doc h2:not(:is(.astryx-card, .astryx-clickable-card) *) {
+  font-size: calc(var(--read-size) * 1.25);
+}
+
+.doc :is(h3, .astryx-markdown-heading):not(:is(.astryx-card, .astryx-clickable-card) *) {
+  font-size: calc(var(--read-size) * 1.1);
 }
 
 /*
@@ -342,7 +398,8 @@ h6 {
 
 .doc .astryx-markdown-table th,
 .doc .astryx-markdown-table td {
-  font-size: 14px;
+  /* 본문보다 한 단계 작게. 배율은 같이 따라간다 */
+  font-size: calc(var(--read-size) * 0.875);
   line-height: 1.6;
   padding: 10px 12px 10px 0;
 }
@@ -430,7 +487,7 @@ h6 {
 .doc .faq .astryx-collapsible-trigger {
   width: 100%;
   padding-block: 14px;
-  font-size: 16px;
+  font-size: var(--read-size);
   font-weight: 500;
   line-height: 1.6;
   text-align: left;
@@ -442,7 +499,7 @@ h6 {
 
 .doc .faq-answer {
   padding-block: 0 18px;
-  font-size: 16px;
+  font-size: var(--read-size);
   line-height: 1.8;
 }
 
@@ -1503,4 +1560,88 @@ html[data-focus='on'] .site-footer {
 .toc-n-none::before {
   /* 빈 칸도 줄 높이를 가져야 한다 */
   content: '';
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   두 번째 권 — 기번 원전
+
+   편역본 표지가 반암(로마 황제의 돌)이라면, 원전은 **18세기 영국 제본**이다.
+   1776년 초판은 송아지 가죽에 금박을 눌러 맸고, 짙은 초록 가죽과 금선 두 줄이
+   그 관습이다. 나란히 놓았을 때 **한눈에 다른 시대의 물건으로** 보여야 한다 —
+   같은 색으로 두 권을 만들면 책장이 아니라 시리즈가 된다.
+
+   서체도 가른다. 편역본 표지는 리디바탕(한글 명조), 원전은 시스템 세리프다.
+   영문 제목에 한글 명조를 쓰면 라틴 글자가 곁다리로 그려진 모양이 나온다.
+   ══════════════════════════════════════════════════════════════════ */
+.book[data-book='gibbon'] {
+  --bone: #d8c9a3;
+}
+
+.book[data-book='gibbon'] .book-face {
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 38%) 0, rgb(0 0 0 / 12%) 7px, rgb(0 0 0 / 0%) 14px),
+    linear-gradient(160deg, #2e4535 0%, #22352a 45%, #16221b 100%);
+}
+
+/* 금선 두 줄. 가죽 표지에 눌러 찍던 그 테두리다 */
+.book[data-book='gibbon'] .book-plate {
+  font-family: Georgia, 'Times New Roman', serif;
+  margin: 7px;
+  padding: 12px 11px 11px;
+  border: 1px solid rgb(201 169 97 / 55%);
+  outline: 1px solid rgb(201 169 97 / 28%);
+  outline-offset: 2px;
+  height: auto;
+  flex: 1;
+}
+
+.book[data-size='lg'][data-book='gibbon'] .book-plate {
+  margin: 9px;
+  padding: 15px 14px 14px;
+}
+
+.book[data-book='gibbon'] .book-plate-eyebrow {
+  font-size: 7px;
+  letter-spacing: 0.14em;
+}
+
+.book[data-size='lg'][data-book='gibbon'] .book-plate-eyebrow {
+  font-size: 8px;
+}
+
+.book[data-book='gibbon'] .book-plate-title {
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.book[data-size='lg'][data-book='gibbon'] .book-plate-title {
+  font-size: 25px;
+}
+
+.book[data-book='gibbon'] .book-plate-by {
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+
+.book[data-size='lg'][data-book='gibbon'] .book-plate-by {
+  font-size: 9px;
+}
+
+/* 속장도 오래된 종이다. 편역본보다 누렇다 */
+.book[data-book='gibbon'] .book-edge {
+  background: repeating-linear-gradient(
+    90deg,
+    #e3d8c2 0,
+    #e3d8c2 1px,
+    #c2b393 1px,
+    #c2b393 2px
+  );
+}
+
+/* 두 권이 세로로 선다. 책마다 할 말의 길이가 달라 격자로 깔지 않는다 */
+.shelf {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

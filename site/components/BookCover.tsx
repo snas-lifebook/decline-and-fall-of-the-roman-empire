@@ -9,18 +9,19 @@ import type { Book } from '../lib/book'
  * ## 표지 그림이 없다 — 그래서 글자로 짠다
  *
  * 출판사 표지를 긁어다 쓰지 않는다(저작권). 대신 **글자로 표지를 짠다.** 빠진 그림의
- * 자리표가 아니라 **작정하고 만든 표지**로 보여야 하므로, 이 책의 세계에서 색과
- * 서체를 가져왔다.
+ * 자리표가 아니라 **작정하고 만든 표지**로 보여야 하므로, 두 권 각각의 세계에서
+ * 색과 서체를 가져왔다.
  *
- *   - **색은 반암(斑巖, porphyry)이다.** 로마 황제의 돌이다 — 이집트에서 캐서 황제
- *     석관과 사두정치 군상에 썼고, 비잔틴에서 「자주색에 태어난(포르피로게니투스)」
- *     이라는 말이 여기서 나왔다. 이 책이 20장에서 사두정치를, 30장에서 콘스탄티노플
- *     함락을 다룬다. 벽돌색·크림색은 어느 책에나 쓸 수 있는 색이라 안 쓴다
- *   - **서체는 리디바탕이다.** 전자책 본문용으로 만든 명조라 이 사이트가 이미 싣고
- *     있다(설정에서 고를 수 있는 넷 중 하나). 표지에 새 글꼴을 부르지 않는다
+ *   - **편역본은 반암(斑巖, porphyry)이다.** 로마 황제의 돌 — 이집트에서 캐서 황제
+ *     석관과 사두정치 군상에 썼고, 「자주색에 태어난(포르피로게니투스)」이라는 말이
+ *     여기서 나왔다. 이 책이 20장에서 사두정치를, 30장에서 콘스탄티노플 함락을
+ *     다룬다. 벽돌색·크림색은 어느 책에나 쓸 수 있는 색이라 안 쓴다
+ *   - **원전은 18세기 영국 제본이다.** 1776년 초판은 송아지 가죽에 금박을 눌러
+ *     맸다. 짙은 초록 가죽과 금선 두 줄이 그 관습이고, 편역본 옆에 세웠을 때
+ *     **한눈에 다른 시대의 물건으로** 보인다
  *
  * 나중에 `public/covers/<id>.jpg`에 진짜 표지를 넣으면 **같은 물성 안에서 그림만
- * 갈린다** — 책등·책배·그림자는 그대로다. `lib/book.ts`의 `cover`가 그 스위치다.
+ * 갈린다** — 책배·책등 접힘·그림자는 그대로다. `lib/book.ts`의 `cover`가 그 스위치다.
  *
  * ## 무엇이 책처럼 보이게 하는가
  *
@@ -36,28 +37,52 @@ import type { Book } from '../lib/book'
  * 책등에 제목을 세로로 앉히는 안을 만들었다가 뺐다 — 표지를 위로 놓은 책은 책등이
  * 안 보인다. **한 화면에 앞뒤를 다 그리면 그때부터 목업이다.**
  *
- * 마우스를 올리면 살짝 들린다. 펼쳐지거나 돌아가지 않는다 — 눌러서 여는 물건이라는
- * 것만 말하면 된다.
+ * 마우스를 올리면 살짝 들린다. 펼쳐지거나 돌아가지 않는다.
  */
+
+/** 표지에 앉는 글자. 책마다 손으로 짠다 — 두 권뿐이고, 표지는 자동으로 잘 안 된다 */
+const PLATES: Record<string, { eyebrow: string; title: React.ReactNode; by: string }> = {
+  rome30: {
+    eyebrow: '30포인트로 읽어내는',
+    title: (
+      <>
+        로마 제국
+        <br />
+        쇠망사
+      </>
+    ),
+    by: '에드워드 기번',
+  },
+  gibbon: {
+    eyebrow: 'THE HISTORY OF THE',
+    title: (
+      <>
+        Decline
+        <br />
+        and Fall
+      </>
+    ),
+    by: 'EDWARD GIBBON · 1776',
+  },
+}
+
 export function BookCover({ book, size = 'md' }: { book: Book; size?: 'md' | 'lg' }) {
+  const plate = PLATES[book.id]
+
   return (
-    <div className="book" data-size={size} aria-hidden="true">
+    <div className="book" data-size={size} data-book={book.id} aria-hidden="true">
       <div className="book-face">
         {book.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={book.cover} alt="" className="book-image" />
-        ) : (
+        ) : plate ? (
           <div className="book-plate">
-            <span className="book-plate-eyebrow">30포인트로 읽어내는</span>
-            <span className="book-plate-title">
-              로마 제국
-              <br />
-              쇠망사
-            </span>
+            <span className="book-plate-eyebrow">{plate.eyebrow}</span>
+            <span className="book-plate-title">{plate.title}</span>
             <span className="book-plate-rule" />
-            <span className="book-plate-by">에드워드 기번</span>
+            <span className="book-plate-by">{plate.by}</span>
           </div>
-        )}
+        ) : null}
       </div>
       <div className="book-edge" />
     </div>

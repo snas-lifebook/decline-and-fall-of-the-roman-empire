@@ -2,6 +2,7 @@ import { Stack, Heading, Text, Divider, Breadcrumbs, BreadcrumbItem } from '@ast
 import { Shell } from '../../../../components/Shell'
 import { FamilyTree } from '../../../../components/FamilyTree'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
+import { FocusExit } from '../../../../components/FocusExit'
 import { families, familyBySlug } from '../../../../lib/family/build'
 import { entityHref } from '../../../../lib/entity'
 import { loadEntities } from '../../../../lib/ontology'
@@ -69,6 +70,9 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
           })}
         </Stack>
       </Stack>
+
+      {/* 집중해서 읽기에서 나가는 길. 사연은 `app/objects/[type]/[slug]/page.tsx`에 적었다 */}
+      <FocusExit />
     </Shell>
   )
 }

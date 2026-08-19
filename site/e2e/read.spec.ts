@@ -143,10 +143,10 @@ test.describe('폰으로 읽기', () => {
 test.describe('책으로 들어가기', () => {
   test('읽기는 책장이고, 책을 누르면 문패가 뜬다', async ({ page }) => {
     await page.goto('/read')
-    await expect(page.locator('.book')).toBeVisible()
-    // 사이드바에도 같은 이름이 걸려 있다. 책장의 책을 누른다 — 표지를 눌러도
-    // 열려야 하므로 숨은 링크가 아니라 **표지 자체**를 누른다
-    await page.locator('.shelf .book').click()
+    // 책장에 두 권이 선다 — 편역본과 기번 원전
+    await expect(page.locator('.shelf .book')).toHaveCount(2)
+    // 표지를 눌러도 열려야 하므로 숨은 링크가 아니라 **표지 자체**를 누른다
+    await page.locator('.shelf .book').first().click()
     await expect(page.locator('h1')).toContainText('30포인트로 읽어내는')
   })
 
@@ -168,6 +168,22 @@ test.describe('책으로 들어가기', () => {
     await expect(page.locator('.read-block').first()).toBeVisible()
     // 글꼴·크기·바탕을 여는 톱니가 여기에도 있어야 한다
     await expect(page.locator('.read-rail-gear')).toBeAttached()
+  })
+
+  test('원전이 두 번째 권으로 선다 — 장을 열면 부가 목차가 된다', async ({ page }) => {
+    await page.goto('/read/gibbon')
+    await expect(page.locator('h1')).toContainText('Decline and Fall')
+
+    // 15장은 부가 여럿이라 목차가 서고, 그 목차가 실제로 뛰어야 한다
+    await page.goto('/read/source/15')
+    const links = page.locator('.read-rail a[href^="#sec-"]')
+    const n = await links.count()
+    expect(n, '부가 목차로 안 올라왔다').toBeGreaterThan(1)
+
+    const anchors = await page.evaluate(
+      () => document.querySelectorAll('.read-block[id^="sec-"]').length,
+    )
+    expect(anchors, `목차 ${n}줄인데 앵커가 ${anchors}개다`).toBe(n)
   })
 
   test('책을 끝까지 읽으면 닫는 글로 이어진다 — 30에서 끊기지 않는다', async ({ page }) => {

@@ -6,12 +6,19 @@ import {
   Badge,
   Breadcrumbs,
   BreadcrumbItem,
+  Collapsible,
   MetadataList,
   MetadataListItem,
 } from '@astryxdesign/core'
 import { Shell } from '../../../../components/Shell'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
-import { EntityAside, EntityGraph, CO_SHOWN } from '../../../../components/EntityAside'
+import { FocusExit } from '../../../../components/FocusExit'
+import {
+  EntityAside,
+  EntityGraph,
+  CoOccurred,
+  CO_SHOWN,
+} from '../../../../components/EntityAside'
 import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
 import { entityIndex, entitySlug, neighbors, coOccurring } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
@@ -31,12 +38,27 @@ import { RelationTimeline } from '../../../../components/RelationTimeline'
  * 뼈대는 `DocPage`와 **똑같은 순서**다 — 빵부스러기 → 배지·제목 → 한 줄 소개 →
  * 페이지 복사 → 본문 → 우측 날개. 화면마다 이 순서가 같은 것이 「퀄리티」의 정체다.
  *
- * 본문은 "이게 무엇인가", 날개는 "무엇과 이어져 있나"다 — 포인트별 서술 · 등장
- * 포인트 · 속성이 본문이고, 관계 목록과 관계망 그림은 날개다.
+ * 본문은 "이게 무엇인가", 날개는 "무엇과 직접 이어져 있나"다 — 포인트별 서술 ·
+ * 등장 포인트 · 동석 · 연표 · 속성이 본문이고, 관계망 그림과 관계 목록이 날개다.
  *
  * **예외 하나: 관계 연표는 본문에 있다** (2026-08-17). 관계인데도 날개가 아닌 이유는
  * 폭이다 — 로마의 연표는 2,200년을 가로로 펴야 하고, 300픽셀에 눌러 담으면 막대가
  * 전부 한 점으로 뭉친다. 관계망을 날개로 옮길 때 배운 것과 같은 계산이다.
+ *
+ * ## 2026-08-19 — 읽기 화면이 8/18에 정한 것을 여기까지 끌고 온다
+ *
+ * 읽기 화면을 이틀에 걸쳐 다시 짜는 동안 객체 644장은 검수를 안 받았고, 그래서
+ * 세 군데가 **읽기 화면과 반대로** 서 있었다. 셋 다 실측으로 잡았다.
+ *
+ *   - **스크롤이 둘이었다.** 날개가 990px인데 상자가 852px이라 안에서 혼자 굴렀다.
+ *     읽기 화면은 8/18에 이걸 하나로 줄였다. 넘치는 몫인 동석을 본문으로 내렸다
+ *   - **「자주 묻는 것」이 본문 한가운데 461px 벽으로 펴져 있었다.** 읽기 화면은
+ *     같은 것을 17px 접힌 줄로 맨 끝에 둔다. 그 벽 **뒤에** 「속성」이 있어서,
+ *     이 객체의 사실이 사이트 공통 물음 아래로 밀려 있었다
+ *   - **집중해서 읽기에서 나갈 길이 없었다.** `data-focus`는 화면을 안 가리는
+ *     전역 설정이라 객체 화면에서도 상단 바·좌패널·푸터가 사라지는데, 그걸 되돌릴
+ *     단추(`FocusExit`)도 Esc를 받는 `ReadCards`도 여기엔 없었다. 읽기에서 켜고
+ *     본문 링크를 한 번 누르면 **644장 어디에서도 못 빠져나온다**
  *
  * 644장을 그린다. `loadEntities()`·`loadLinks()`는 **모듈에서 한 번**이다.
  * 페이지 함수 안에서 부르면 파일을 644번 읽고 zod로 41만 번 파싱한다.
@@ -215,13 +237,24 @@ export default async function ObjectPage({
       path={href}
       where={`객체 ${e.name}`}
       asideWidth={300}
-      // 관계망도 날개다 (River 요청, 2026-08-16). 읽기 화면과 같은 자리에 둔다 —
-      // 화면마다 같은 것이 같은 자리에 있는 것이 「퀄리티」의 정체다
+      /*
+        관계망은 날개다 (River 요청, 2026-08-16).
+
+        **관계가 0이면 날개를 아예 안 넘긴다.** 객체 217개(33.7%)가 그렇다. 앞 판은
+        그 217장에도 300px 칸을 세우고 동석만 넣었는데, 동석이 본문으로 내려간
+        지금은 **빈 칸을 하나 세우는 것**이 된다. `Shell`은 `aside`가 없으면 2단을
+        안 만들므로, 그 화면들은 본문 한 칸으로 조용히 넓어진다.
+
+        `.entity-aside`는 CSS가 잡는 손잡이다 — `Shell`이 붙박이·높이·폭을
+        **인라인으로** 박아서 좁은 화면에서 그걸 풀려면 이름이 하나 있어야 한다.
+      */
       aside={
-        <>
-          <EntityGraph e={e} nbrs={nbrs} co={co} />
-          <EntityAside nbrs={nbrs} co={co} coTotal={coAll.length} />
-        </>
+        nbrs.length ? (
+          <Stack className="entity-aside" direction="vertical" gap={4}>
+            <EntityGraph e={e} nbrs={nbrs} co={co} />
+            <EntityAside nbrs={nbrs} />
+          </Stack>
+        ) : undefined
       }
     >
       <Breadcrumbs variant="supporting">
@@ -274,7 +307,15 @@ export default async function ObjectPage({
                 포인트 {pad(d.point)}
               </Text>
               {/* 원문에 마크다운이 없다. `Markdown`을 태우면 없는 문법을 발명하게 된다 */}
-              <Text>{d.desc}</Text>
+              {/*
+                **읽기 본문과 같은 크기로 읽힌다.** astryx `Text` 기본은 14px/1.7이고
+                읽기 화면의 문단은 16px/1.8이다(`.doc .astryx-markdown-paragraph`).
+                같은 책에서 뽑은 같은 한국어 산문인데 두 픽셀 작고 다섯 픽셀 좁게
+                조판돼 있었다 — 그 규칙의 근거("14px는 한국어 문서 본문으로 작다")가
+                마크다운이라서 성립하는 게 아니다. 클래스만 달고 값은 `globals.css`가
+                읽기 문단과 **같은 자리에서** 정한다.
+              */}
+              <Text className="entity-desc">{d.desc}</Text>
             </Stack>
           ))}
         </Stack>
@@ -305,6 +346,13 @@ export default async function ObjectPage({
       ) : null}
 
       {/*
+        「이게 어디 나왔나」 바로 뒤에 「거기 또 누가 있었나」가 온다. 둘 다 **같은
+        대목**이라는 한 축이라 붙여 둔다. 날개에서 여기로 내려온 경위는
+        `EntityAside.tsx`의 `CoOccurred`에 적었다.
+      */}
+      <CoOccurred co={co} coTotal={coAll.length} />
+
+      {/*
         관계를 시간 위에 깔아 놓는다. **날개가 아니라 본문인 이유는 폭이다** —
         2,200년을 300픽셀에 눌러 담으면 막대가 전부 한 점으로 뭉친다.
       */}
@@ -328,11 +376,43 @@ export default async function ObjectPage({
       ) : null}
 
       {/*
+        **속성이 FAQ 뒤에 있었다.** 이 객체에 대해 우리가 아는 사실(재위·지역·출생)이
+        사이트 공통 물음 열 줄 아래로 밀려 있었다는 뜻이다. 461px 벽 뒤라 실제로는
+        안 읽혔다. 딸린 자료보다 본문이 먼저다 — 읽기 화면이 앞뒤 링크를 딸린 자료
+        위로 올린 것과 같은 규칙이다.
+      */}
+      {attrs.length ? (
+        <Stack direction="vertical" gap={2} as="section">
+          <Heading level={2}>속성</Heading>
+          <MetadataList columns="single">
+            {attrs.map(([k, v]) => (
+              <MetadataListItem key={k} label={ATTR_KO[k]}>
+                {attrText(k, v)}
+              </MetadataListItem>
+            ))}
+          </MetadataList>
+        </Stack>
+      ) : null}
+
+      <Divider />
+
+      {/*
         **객체 화면에 FAQ가 없었다.** 644장 어디에도 안 떴다 — 「이름 뒤 괄호는 뭔가」·
         「사진이 없는데 자료가 부실한 건가」처럼 **바로 이 화면에서 나오는 물음**들이
         `/faq` 목록에만 있었다(2026-08-18 실측: 이 파일에 `faqFor` 호출 0건).
       */}
-      <Faq items={faqFor('/objects')} />
+      {/*
+        **접어 둔다.** 붙일 때 접는 걸 잊었다 — 물음 하나하나는 이미 접혀 있어도
+        제목 열 줄이 그대로 서서 **461px 벽**이 됐고, 644장에 똑같은 벽이 하나씩
+        붙었다. 가벼운 객체(가비니우스, 본문 961px)에서는 그 벽이 화면의 절반이다.
+        읽기 화면이 같은 것을 17px 접힌 줄로 두는 것을 그대로 따른다.
+
+        제목은 `Faq`에 안 맡기고 토글 이름으로 단다 — 안 그러면 「자주 묻는 것」이
+        두 번 나온다(읽기 화면이 밟고 적어 둔 함정이다).
+      */}
+      <Collapsible defaultIsOpen={false} trigger="자주 묻는 것">
+        <Faq items={faqFor('/objects')} title={null} />
+      </Collapsible>
 
       {/*
         **저작자를 적어야 하는 그림이 대부분이다.** 퍼블릭 도메인 70장을 빼면 나머지는
@@ -346,18 +426,16 @@ export default async function ObjectPage({
         </Text>
       ) : null}
 
-      {attrs.length ? (
-        <Stack direction="vertical" gap={2} as="section">
-          <Heading level={2}>속성</Heading>
-          <MetadataList columns="single">
-            {attrs.map(([k, v]) => (
-              <MetadataListItem key={k} label={ATTR_KO[k]}>
-                {attrText(k, v)}
-              </MetadataListItem>
-            ))}
-          </MetadataList>
-        </Stack>
-      ) : null}
+      {/*
+        집중해서 읽기에서 나가는 길. **`data-focus`는 화면을 안 가리는 전역 설정이라
+        객체 화면에서도 크롬이 통째로 사라진다.** 읽기에서 켜고 본문의 인물 링크를
+        누르면 여기로 오는데, 앞 판에는 이 단추도 Esc를 받는 `ReadCards`도 없어서
+        **644장 어디에서도 못 빠져나왔다.** River가 읽기 화면에서 짚었던 그 사고가
+        (「포커스 모드를 해제할 수가 없다」) 여기 그대로 남아 있었다.
+
+        모드가 꺼져 있으면 아무것도 안 그린다 — 평소 화면에는 없는 것과 같다.
+      */}
+      <FocusExit />
     </Shell>
   )
 }

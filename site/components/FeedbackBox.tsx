@@ -88,7 +88,12 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
           label="한 줄 남기기"
           isLabelHidden
           size="sm"
-          placeholder="여기에 쓰세요"
+          /*
+            **시키지 않는다.** 「여기에 쓰세요」는 빈칸을 채우라는 지시고, 지시를
+            받으면 안 쓴다. 문턱을 낮추는 말이어야 한다 — 한 줄이면 된다고 먼저
+            말해주는 쪽이 실제로 한 줄을 받는다.
+          */
+          placeholder="한 줄이면 충분합니다"
           value={text}
           onChange={(v: string) => setText(v.slice(0, MAX_BODY))}
           width="100%"

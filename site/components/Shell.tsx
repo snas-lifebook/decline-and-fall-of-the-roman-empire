@@ -4,6 +4,7 @@ import { SiteFooter } from './SiteFooter'
 import { Search } from './Search'
 import { ThemeToggle } from './ThemeToggle'
 import { RailToggle } from './RailToggle'
+import { ReadSize } from './ReadSize'
 
 /**
  * 사이트 껍데기 — 상단 바 + 좌측 사이드바 + 본문 + 하단.
@@ -122,6 +123,12 @@ export function Shell({
                 「바뀐 것」·자료 기준일까지 같이 놓는다. 위아래에 같은 링크가
                 두 번 있으면 상단 바만 붐빈다. 위에는 **행동**(찾기·밝기)만 둔다.
               */}
+              {/*
+                글자 크기. **읽는 도중에 만지는 것**이라 상단 바에 낸다 — 톱니를
+                찾아 패널을 열고 슬라이더를 끄는 세 동작이 한 동작이 된다.
+                `-` `=` 키로도 된다(River 요청).
+              */}
+              <ReadSize />
               <Search />
               <ThemeToggle />
             </Stack>

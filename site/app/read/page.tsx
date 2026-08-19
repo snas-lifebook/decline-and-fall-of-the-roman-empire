@@ -1,7 +1,7 @@
 import { Stack, Heading, Text, Divider, ClickableCard } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
 import { BookCover } from '../../components/BookCover'
-import { book, bookHref } from '../../lib/book'
+import { books, bookHref, type Book } from '../../lib/book'
 import { pageMeta } from '../../lib/meta'
 
 /**
@@ -15,17 +15,22 @@ import { pageMeta } from '../../lib/meta'
  * 두면 화면이 그 사실을 말하지 않고, 그러면 일러두기·책머리에·옮기고 나서가 갈
  * 자리도 없다(실제로 셋 다 걸려 있지 않았다).
  *
- * 지금은 책이 한 권이다. **여러 권이 설 수 있는 자리로 짰다** — 격자에 두 번째
- * 권이 오면 그대로 옆에 선다. 없는 책을 미리 그리지는 않는다.
+ * **그릇을 만든 값이 바로 돌아왔다.** 두 번째 권을 얹는 데 든 것은 로더 하나뿐이다 —
+ * 기번 원전 72편이 `source/`에 이미 있었고, 없던 것은 그것을 책으로 볼 자리였다.
  */
 
 export const metadata = pageMeta('읽기')
 
-export default function Read() {
-  const b = book()
-  const points = b.parts.filter((p) => p.kind === 'point').length
+/** 무게를 숫자로 말한다. 「오늘 한 편을 읽을 수 있나」에 대한 답이 이것이다 */
+function heft(b: Book) {
+  const main = b.parts.filter((p) => p.kind === 'point' || p.kind === 'chapter').length
+  const unit = b.id === 'gibbon' ? '장' : '편'
   const last = b.parts[b.parts.length - 1]
+  const pages = b.id === 'gibbon' ? '' : last.page ? ` · 종이책 ${last.page}쪽` : ''
+  return `본문 ${main}${unit} · 앞뒤 글까지 ${b.parts.length}${unit}${pages}`
+}
 
+export default function Read() {
   return (
     <Shell path="/read" where="읽기" maxWidth={960}>
       <Stack direction="vertical" gap={1.5}>
@@ -40,35 +45,38 @@ export default function Read() {
       {/*
         책 전체가 하나의 누를 것이다. 표지만 누르게 하면 「어디를 눌러야 하나」를
         사람이 재야 한다 — 물건 하나면 과녁도 하나다.
+
+        두 권이 세로로 선다. 격자로 깔지 않는 이유는 **책마다 할 말의 길이가 다르기
+        때문**이다 — 칸을 맞추면 짧은 쪽이 텅 비고 긴 쪽이 잘린다.
       */}
       <div className="shelf">
-        <ClickableCard
-          href={bookHref(b)}
-          label={`${b.title} 펼치기`}
-          padding={5}
-          variant="transparent"
-        >
-          <div className="shelf-book">
-            <BookCover book={b} size="lg" />
-            <Stack direction="vertical" gap={2} hAlign="start">
-              <Heading level={2}>{b.title}</Heading>
-              <Text color="secondary">
-                {b.by.map((x) => `${x.name} ${x.role}`).join(' · ')}
-                {' · '}
-                {b.publisher}
-              </Text>
-              <Text>{b.blurb}</Text>
-              {/*
-                무게를 숫자로 말한다. 「몇 편이고 종이로는 몇 쪽인가」가 곧 「오늘
-                한 편을 읽을 수 있나」에 대한 답이다
-              */}
-              <Text size="sm" color="secondary">
-                본문 {points}편 · 여는 글과 닫는 글까지 {b.parts.length}편
-                {last.page ? ` · 종이책 ${last.page}쪽` : ''}
-              </Text>
-            </Stack>
-          </div>
-        </ClickableCard>
+        {books().map((b) => (
+          <ClickableCard
+            key={b.id}
+            href={bookHref(b)}
+            label={`${b.title} 펼치기`}
+            padding={5}
+            variant="transparent"
+          >
+            <div className="shelf-book">
+              <BookCover book={b} size="lg" />
+              <Stack direction="vertical" gap={2} hAlign="start">
+                <Heading level={2}>
+                  {b.lang ? <span lang={b.lang}>{b.title}</span> : b.title}
+                </Heading>
+                <Text color="secondary">
+                  {b.by.map((x) => `${x.name} ${x.role}`).join(' · ')}
+                  {' · '}
+                  {b.publisher}
+                </Text>
+                <Text>{b.blurb}</Text>
+                <Text size="sm" color="secondary">
+                  {heft(b)}
+                </Text>
+              </Stack>
+            </div>
+          </ClickableCard>
+        ))}
       </div>
     </Shell>
   )

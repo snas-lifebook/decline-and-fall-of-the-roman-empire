@@ -1,4 +1,4 @@
-import { book, bookHref } from './book'
+import { books, bookHref } from './book'
 import { ENTITY_TYPES, loadEntities, type Entity } from './ontology'
 import { TYPE_KO } from './export/table'
 import { families } from './family/build'
@@ -68,19 +68,17 @@ function build(): NavNode[] {
         붙어 있는 배지와 같은 말이라, 사람이 이미 아는 이름으로 걸린다. 책 제목
         전체는 책 화면의 제목이 진다.
       */
-      children: [
-        {
-          href: bookHref(),
-          title: '30포인트 편역본',
+      children: books().map((b) => ({
+        href: bookHref(b),
+        title: b.short,
+        ready: true,
+        children: b.parts.map((p) => ({
+          href: p.href,
+          // 번호는 발표를 맡은 사람이 기억하는 손잡이다. 앞뒤 글에는 번호가 없다
+          title: p.n ? `${String(p.n).padStart(2, '0')} ${p.title}` : p.title,
           ready: true,
-          children: book().parts.map((p) => ({
-            href: p.href,
-            // 번호는 발표를 맡은 사람이 기억하는 손잡이다. 앞뒤 글에는 번호가 없다
-            title: p.n ? `${String(p.n).padStart(2, '0')} ${p.title}` : p.title,
-            ready: true,
-          })),
-        },
-      ],
+        })),
+      })),
     },
     {
       href: '/objects',

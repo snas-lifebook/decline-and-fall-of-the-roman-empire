@@ -30,8 +30,13 @@ describe('내비 트리', () => {
    * 걸려 있었는데, 그러면 일러두기·책머리에·옮기고 나서가 갈 자리가 없다 —
    * 실제로 셋 다 파일로만 있고 사이트 어디에도 안 걸려 있었다.
    */
-  it('읽기 아래는 책 한 권이고, 책 아래에 앞뒤 글까지 다 걸린다', () => {
-    expect(navFind('/read')?.children?.map((c) => c.href)).toEqual(['/read/rome30'])
+  it('읽기 아래는 책 두 권이고, 책 아래에 앞뒤 글까지 다 걸린다', () => {
+    expect(navFind('/read')?.children?.map((c) => c.href)).toEqual([
+      '/read/rome30',
+      '/read/gibbon',
+    ])
+    // 원전은 서문 + 71장
+    expect(navFind('/read/gibbon')?.children).toHaveLength(72)
 
     const parts = navFind('/read/rome30')?.children ?? []
     expect(parts).toHaveLength(POINT_COUNT + 3)
@@ -82,9 +87,12 @@ describe('이전·다음', () => {
 
   it('섹션 끝에서 다음 섹션으로 넘어간다', () => {
     expect(navSteps('/start/links').next).toBeUndefined()
-    // 본문 30 다음은 「옮기고 나서」다 — 책을 끝까지 읽고 나서야 읽기를 벗어난다
+    // 본문 30 다음은 「옮기고 나서」다 — 책을 끝까지 읽고 나서야 그 책을 벗어난다
     expect(navSteps(`/read/point/${POINT_COUNT}`).next?.href).toBe('/read/text/옮기고_나서')
-    expect(navSteps('/read/text/옮기고_나서').next?.href).toBe('/objects')
+    // 편역본을 다 읽으면 두 번째 권으로 넘어간다
+    expect(navSteps('/read/text/옮기고_나서').next?.href).toBe('/read/gibbon')
+    // 읽기를 벗어나는 것은 원전 마지막 장 다음이다
+    expect(navSteps('/read/source/71').next?.href).toBe('/objects')
   })
 })
 

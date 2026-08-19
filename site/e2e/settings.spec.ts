@@ -38,14 +38,87 @@ test.describe('설정이 새로고침을 넘어 남는다', () => {
     })
   }
 
-  test('**글자 크기는 CSS 변수까지 칠한다** — 속성만으로는 글자가 안 커진다', async ({ page }) => {
+  /**
+   * **재는 자리를 틀리면 안 된다.**
+   *
+   * 앞 판은 `.doc`을 쟀고 그건 잘 커졌다. 그런데 정작 **본문 문단은 16px에 고정**되어
+   * 있어서 슬라이더를 142%로 올려도 글자가 안 커졌다(실측 2026-08-19: `.doc`
+   * 22.72px / 문단 16px). 테스트가 결함을 초록으로 통과시킨 것이다 — 글꼴 때와
+   * 같은 사고다. 이제 **사람이 실제로 읽는 글자**를 잰다.
+   */
+  test('**글자 크기가 본문 문단까지 닿는다** — `.doc`만 커지는 것은 안 커진 것이다', async ({
+    page,
+  }) => {
     await page.goto(POINT)
+    await page.waitForSelector('.read-block')
+    const para = () =>
+      page.evaluate(
+        () =>
+          parseFloat(
+            getComputedStyle(document.querySelector('.read-block .astryx-markdown-paragraph')!)
+              .fontSize,
+          ),
+      )
+
+    const before = await para()
     await page.evaluate(() => localStorage.setItem('read-size', '1.42'))
     await page.reload()
-    await page.waitForSelector('.doc')
+    await page.waitForSelector('.read-block')
+    const after = await para()
 
-    const size = await page.evaluate(() => getComputedStyle(document.querySelector('.doc')!).fontSize)
-    expect(parseFloat(size), '본문이 안 커졌다').toBeGreaterThan(20)
+    expect(after, `문단이 ${before}px에서 그대로다`).toBeGreaterThan(before + 3)
+  })
+
+  test('기본 크기가 16px보다 크다 — River가 「1~2포인트 크게」라고 했다', async ({ page }) => {
+    await page.goto(POINT)
+    await page.waitForSelector('.read-block')
+    const px = await page.evaluate(() =>
+      parseFloat(
+        getComputedStyle(document.querySelector('.read-block .astryx-markdown-paragraph')!).fontSize,
+      ),
+    )
+    expect(px).toBeGreaterThan(16.5)
+    expect(px, '너무 키우면 한 줄에 들어가는 글자가 줄어 오히려 읽기 나쁘다').toBeLessThan(19)
+  })
+
+  /** River: 「`-` `=` 로 오른쪽 상단에서 설정할 수 있도록」 */
+  test('상단 바에서 크기를 바꾸고, `-` `=` 키로도 바뀐다', async ({ page }) => {
+    await page.goto(POINT)
+    await page.waitForSelector('.read-size')
+    const scale = () =>
+      page.evaluate(() =>
+        getComputedStyle(document.documentElement).getPropertyValue('--read-scale').trim(),
+      )
+
+    const start = await scale()
+    await page.locator('.read-size button').last().click()
+    const bigger = await scale()
+    expect(Number(bigger), '단추로 안 커졌다').toBeGreaterThan(Number(start))
+
+    await page.keyboard.press('-')
+    expect(Number(await scale()), '`-` 키로 안 작아졌다').toBe(Number(start))
+
+    await page.keyboard.press('=')
+    expect(Number(await scale()), '`=` 키로 안 커졌다').toBeGreaterThan(Number(start))
+  })
+
+  test('글을 쓰는 중에는 `-`가 안 듣는다 — 하이픈을 치는 사람 화면이 커지면 안 된다', async ({
+    page,
+  }) => {
+    await page.goto(POINT)
+    await page.waitForSelector('.leave-line-form input')
+    const scale = () =>
+      page.evaluate(() =>
+        getComputedStyle(document.documentElement).getPropertyValue('--read-scale').trim(),
+      )
+
+    const before = await scale()
+    const input = page.locator('.leave-line-form input:not([aria-hidden])').first()
+    await input.click()
+    await input.type('가-나=다')
+
+    expect(await scale(), '입력 중에 화면이 커졌다').toBe(before)
+    await expect(input).toHaveValue('가-나=다')
   })
 
   test('저장이 막혀도 화면이 안 죽는다 — 사생활 모드', async ({ page, context }) => {

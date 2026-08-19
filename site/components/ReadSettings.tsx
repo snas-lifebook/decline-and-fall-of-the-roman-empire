@@ -180,6 +180,12 @@ function paint(key: string, attr: string, value: string) {
     // 저장이 막혀도 이번 화면에서는 바뀌어야 한다
   }
   watchers.forEach((w) => w())
+  /*
+    **바깥에도 알린다.** 크기는 상단 바(`ReadSize`)에서도 만지므로, 여기서 바꾼 것을
+    저쪽이 모르면 숫자가 어긋난 채로 남는다. 서로의 내부(구독자 집합)를 모른 채
+    `storage` 이벤트로만 만난다.
+  */
+  window.dispatchEvent(new StorageEvent('storage', { key }))
 }
 
 export function ReadSettings() {

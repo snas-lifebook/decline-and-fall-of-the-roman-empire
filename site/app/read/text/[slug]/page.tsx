@@ -67,7 +67,7 @@ export default async function BookText({ params }: { params: Promise<{ slug: str
       <Breadcrumbs variant="supporting" style={NARROW}>
         <BreadcrumbItem href="/">자료실</BreadcrumbItem>
         <BreadcrumbItem href="/read">읽기</BreadcrumbItem>
-        <BreadcrumbItem href={bookHref(b)}>30포인트 편역본</BreadcrumbItem>
+        <BreadcrumbItem href={bookHref(b)}>{b.short}</BreadcrumbItem>
         <BreadcrumbItem isCurrent>{part.title}</BreadcrumbItem>
       </Breadcrumbs>
 

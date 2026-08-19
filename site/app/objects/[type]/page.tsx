@@ -10,6 +10,7 @@ import {
   ListItem,
 } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
+import { FocusExit } from '../../../components/FocusExit'
 import { ENTITY_TYPES, loadEntities, type Entity } from '../../../lib/ontology'
 import { entityHref } from '../../../lib/entity'
 import { TYPE_KO } from '../../../lib/export/table'
@@ -112,6 +113,9 @@ export default async function ObjectType({ params }: { params: Promise<{ type: s
           </List>
         </Stack>
       ))}
+
+      {/* 집중해서 읽기에서 나가는 길. 사연은 `app/objects/[type]/[slug]/page.tsx`에 적었다 */}
+      <FocusExit />
     </Shell>
   )
 }

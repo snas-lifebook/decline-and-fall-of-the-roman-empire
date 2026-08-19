@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest'
-import { book, bookHref, textPart, textSlug } from './book'
+import { book, books, bookById, bookHref, textPart, textSlug } from './book'
 import { POINT_COUNT } from './points'
 
 /**
@@ -71,5 +71,61 @@ describe('책 한 권', () => {
 
   it('책 주소가 하나다', () => {
     expect(bookHref()).toBe('/read/rome30')
+  })
+})
+
+/**
+ * 두 번째 권 — 기번 원전 (2026-08-19).
+ *
+ * 여기서 지키는 것은 **두 권이 섞이지 않는 것**이다. 온톨로지의 서술은 포인트
+ * 번호에 묶여 있고 장 번호에는 안 묶여 있어서, 장에 카드를 붙이면 그 즉시
+ * 화면이 거짓말을 한다.
+ */
+describe('기번 원전', () => {
+  const g = () => bookById('gibbon')!
+
+  it('책장에 두 권이 있고 편역본이 먼저다', () => {
+    expect(books().map((b) => b.id)).toEqual(['rome30', 'gibbon'])
+  })
+
+  it('서문 하나와 71장이다 — 서문에 장 번호를 붙이지 않는다', () => {
+    const parts = g().parts
+    expect(parts).toHaveLength(72)
+    expect(parts[0]).toMatchObject({ kind: 'front', href: '/read/source/0' })
+    expect(parts[0].n).toBeUndefined()
+
+    const chapters = parts.filter((p) => p.kind === 'chapter')
+    expect(chapters).toHaveLength(71)
+    expect(chapters.map((p) => p.n)).toEqual(Array.from({ length: 71 }, (_, i) => i + 1))
+  })
+
+  /**
+   * 제목은 원문 H1에서 깎아 온다. 「Chapter XV:」는 번호가 이미 말하고
+   * 「—Part I.」은 그 장의 첫 부라는 뜻일 뿐이라 둘 다 떨어져야 한다.
+   */
+  it('장 제목에서 장 번호와 Part 꼬리를 뗀다', () => {
+    const titles = g().parts.filter((p) => p.kind === 'chapter').map((p) => p.title)
+    expect(titles.some((t) => /^Chapter\s/i.test(t)), '「Chapter N:」이 남았다').toBe(false)
+    expect(titles.some((t) => /Part\s+[IVXLC]+/i.test(t)), '「Part I」이 남았다').toBe(false)
+    expect(titles.every((t) => t.length > 0), '제목이 빈 장이 있다').toBe(true)
+    expect(g().parts.find((p) => p.n === 15)?.title).toBe('Progress Of The Christian Religion')
+  })
+
+  it('두 권의 주소가 안 겹친다', () => {
+    const all = books().flatMap((b) => b.parts.map((p) => p.href))
+    expect(new Set(all).size).toBe(all.length)
+  })
+
+  it('원전에는 종이책 쪽수가 없다 — 그 데이터는 편역본 차례에만 있다', () => {
+    expect(g().parts.every((p) => p.page === undefined)).toBe(true)
+  })
+
+  it('영어 책이라고 밝힌다 — 낭독기가 알아야 한다', () => {
+    expect(g().lang).toBe('en')
+    expect(book().lang).toBeUndefined()
+  })
+
+  it('짧은 이름이 둘 다 있다 — 긴 제목은 사이드바에 안 들어간다', () => {
+    expect(books().every((b) => b.short.length > 0 && b.short.length <= 12)).toBe(true)
   })
 })

@@ -12,7 +12,7 @@ import {
 } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
 import { BookCover } from '../../../components/BookCover'
-import { book, bookHref, type BookPart } from '../../../lib/book'
+import { books, bookById, bookHref, type Book, type BookPart } from '../../../lib/book'
 import { pointLead } from '../../../lib/text/point'
 import { pageMeta } from '../../../lib/meta'
 
@@ -31,17 +31,16 @@ import { pageMeta } from '../../../lib/meta'
  */
 
 export function generateStaticParams() {
-  return [{ id: book().id }]
+  return books().map((b) => ({ id: b.id }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
-  const b = book()
-  if ((await params).id !== b.id) return pageMeta('읽기')
-  return pageMeta(b.title, b.blurb)
+  const b = bookById((await params).id)
+  return b ? pageMeta(b.title, b.blurb) : pageMeta('읽기')
 }
 
 /** 차례 한 묶음. 세 덩어리가 같은 모양이라 한 번만 적는다 */
-function Contents({ parts }: { parts: BookPart[] }) {
+function Contents({ parts, lang }: { parts: BookPart[]; lang?: Book['lang'] }) {
   return (
     <List density="spacious" hasDividers>
       {parts.map((p) => (
@@ -59,8 +58,13 @@ function Contents({ parts }: { parts: BookPart[] }) {
               <span className="toc-n toc-n-none" />
             )
           }
-          label={p.title}
-          description={p.n ? pointLead(p.n) || undefined : undefined}
+          label={lang ? <span lang={lang}>{p.title}</span> : p.title}
+          /*
+            **부제는 편역본에만 있다.** `p.n`으로 가르면 원전 31장이 자기 부제를
+            `points/31_.md`에서 찾다가 빌드를 죽인다(실제로 죽였다) — 두 책이 번호를
+            따로 쓰는데 번호만 보고 같은 서랍을 연 것이다. 종류로 가른다.
+          */
+          description={p.kind === 'point' ? pointLead(p.n!) || undefined : undefined}
           // 종이책 쪽수. 책을 펴 놓고 같은 자리를 찾을 수 있다
           endContent={
             p.page ? (
@@ -76,19 +80,20 @@ function Contents({ parts }: { parts: BookPart[] }) {
 }
 
 export default async function BookPage({ params }: { params: Promise<{ id: string }> }) {
-  const b = book()
-  if ((await params).id !== b.id) notFound()
+  const b = bookById((await params).id)
+  if (!b) notFound()
 
   const front = b.parts.filter((p) => p.kind === 'front')
-  const points = b.parts.filter((p) => p.kind === 'point')
+  const main = b.parts.filter((p) => p.kind === 'point' || p.kind === 'chapter')
   const back = b.parts.filter((p) => p.kind === 'back')
+  const gibbon = b.id === 'gibbon'
 
   return (
     <Shell path={bookHref(b)} where={`읽기 ${b.title}`} maxWidth={880}>
       <Breadcrumbs variant="supporting">
         <BreadcrumbItem href="/">자료실</BreadcrumbItem>
         <BreadcrumbItem href="/read">읽기</BreadcrumbItem>
-        <BreadcrumbItem isCurrent>30포인트 편역본</BreadcrumbItem>
+        <BreadcrumbItem isCurrent>{b.short}</BreadcrumbItem>
       </Breadcrumbs>
 
       <div className="book-head">
@@ -139,25 +144,36 @@ export default async function BookPage({ params }: { params: Promise<{ id: strin
       <Stack direction="vertical" gap={4}>
         <Stack direction="vertical" gap={1}>
           <Heading level={2}>차례</Heading>
-          <Text size="sm" color="secondary">
-            오른쪽 숫자는 종이책 쪽수입니다. 책을 펴 놓고 같은 자리를 찾을 수 있습니다.
-          </Text>
+          {gibbon ? (
+            <Text size="sm" color="secondary">
+              한 장이 평균 12만 자입니다. 장 안에서는 오른쪽 목차의 부(Part)로 이동하시면
+              됩니다.
+            </Text>
+          ) : (
+            <Text size="sm" color="secondary">
+              오른쪽 숫자는 종이책 쪽수입니다. 책을 펴 놓고 같은 자리를 찾을 수 있습니다.
+            </Text>
+          )}
         </Stack>
 
         <Stack direction="vertical" gap={2}>
           <Heading level={3}>여는 글</Heading>
-          <Contents parts={front} />
+          <Contents parts={front} lang={b.lang} />
         </Stack>
 
         <Stack direction="vertical" gap={2}>
-          <Heading level={3}>본문 {points.length}포인트</Heading>
-          <Contents parts={points} />
+          <Heading level={3}>
+            {gibbon ? `본문 ${main.length}장` : `본문 ${main.length}포인트`}
+          </Heading>
+          <Contents parts={main} lang={b.lang} />
         </Stack>
 
-        <Stack direction="vertical" gap={2}>
-          <Heading level={3}>닫는 글</Heading>
-          <Contents parts={back} />
-        </Stack>
+        {back.length ? (
+          <Stack direction="vertical" gap={2}>
+            <Heading level={3}>닫는 글</Heading>
+            <Contents parts={back} lang={b.lang} />
+          </Stack>
+        ) : null}
       </Stack>
     </Shell>
   )
