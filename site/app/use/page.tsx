@@ -1,26 +1,30 @@
-import { Stack, Heading, Text, Divider, List, ListItem, Banner } from '@astryxdesign/core'
+import {
+  Stack,
+  Grid,
+  Heading,
+  Text,
+  Divider,
+  List,
+  ListItem,
+  Banner,
+  ClickableCard,
+} from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
 import { navFind } from '../../lib/nav'
 import { pageMeta } from '../../lib/meta'
+import { RECIPES, RECIPE_CATEGORIES, categoryId } from '../../lib/recipes'
 
 /**
- * 활용하기 랜딩 — 목록이지 설명 페이지가 아니다(PLAN 「섹션 랜딩」).
+ * 활용하기 랜딩 — 어디로 갈지 고르는 자리다.
  *
- * 앞 판은 364줄 TSX에 표 두 개와 프롬프트 코드블록 여덟 개를 늘어놓았고 River가
- * 반려했다. 원인은 개수가 아니라 **작동하지 않는다는 것**이었다 — 여덟이 전부
- * "깃허브의 X 레시피를 따라"로 시작하는데 그중 일곱이 로컬 파일을 읽어야 돌아간다.
- * 웹 ChatGPT에 붙이면 AI는 파일을 못 읽고 지어낸다. 화면이 「쓰던 챗 서비스 그대로」를
- * 약속해놓고 재료를 안 줬다.
+ * **두 번 뒤집힌 화면이다.** 첫 판은 364줄 TSX에 표 둘과 프롬프트 여덟 개를
+ * 늘어놓았다가 반려됐다 — 여덟 중 일곱이 로컬 파일을 요구하는데 화면은 「쓰던 챗
+ * 서비스 그대로」를 약속했기 때문이다. 그래서 재료 → 사례 → 스킬 → 함정 순서로
+ * 바꿨다.
  *
- * 그래서 순서를 논리로 바꿨다 — **재료 → 사례 → 스킬 → 함정.** 재료가 1번인
- * 이유가 이 화면의 전부다.
- *
- * 네 장이 모두 `app/use/<이름>/`에서 카드로 그려진다. `content/use/*.md`는 없앴다 —
- * 프론트매터 한 줄을 읽으려고 남겨둔 마크다운 361줄은 카드와 어긋나기만 한다.
- */
-/**
- * 부제만으로는 "그 안에 뭐가 있나"를 모른다. 몇 개짜리인지까지 적으면
- * 눌러도 되는지가 목록에서 끝난다 (RESEARCH R-E 「펼치기에 개수를 적는다」).
+ * **그 순서도 우리 것이었다.** 자료를 정리한 사람의 순서지 읽는 사람의 순서가
+ * 아니다. 읽는 사람은 「나는 지금 발표를 준비한다」로 온다. 2026-08-19에 상황
+ * 넷을 먼저 고르게 바꿨다.
  */
 /**
  * 네 장을 한 줄씩 소개한다.
@@ -66,16 +70,64 @@ export default function Use() {
         description="「로마제국쇠망사 3번 포인트 정리해줘」라고만 물으면 그럴듯한 답이 나오지만 이 책 내용이 아닙니다. 먼저 자료를 붙여넣고 물어보세요."
       />
 
-      <List listStyle="decimal" density="spacious" hasDividers>
-        {(navFind('/use')?.children ?? []).map((p) => (
-          <ListItem
-            key={p.href}
-            label={p.title}
-            description={ABOUT[p.href] ?? ''}
-            href={p.href}
-          />
-        ))}
-      </List>
+      {/*
+        **상황을 먼저 고르게 한다.** 앞 판은 네 장을 번호 매겨 늘어놓았는데,
+        그 순서(재료 → 사례 → 스킬 → 함정)는 **만드는 사람이 자료를 정리한 순서**지
+        읽는 사람의 순서가 아니다. 읽는 사람은 「나는 지금 발표를 준비한다」로 온다.
+
+        상황 넷은 지어낸 것이 아니라 `RECIPE_CATEGORIES`가 이미 갖고 있던 갈래다 —
+        랜딩으로 끌어올렸을 뿐이다. `learn.chatgpt.com/use-cases`도 낱개 사례 앞에
+        컬렉션을 먼저 세운다(2026-08-19 실측).
+
+        갈래마다 **웹에서 바로 되는 것이 몇 건인지**를 같이 적는다. 자료를 아직 안
+        받은 사람이 자기 몫을 셀 수 있어야 한다 — 여덟 중 일곱이 자료를 요구한다는
+        사실이 지금까지 경고 상자 안에만 있었다.
+      */}
+      <Stack direction="vertical" gap={3} as="section">
+        <Heading level={2}>무엇을 하시려는지 고르세요</Heading>
+        <Grid columns={{ minWidth: 240 }} gap={3}>
+          {RECIPE_CATEGORIES.map((c) => {
+            const items = RECIPES.filter((r) => r.category === c)
+            const web = items.filter((r) => r.needs === 'web').length
+            return (
+              <ClickableCard
+                key={c}
+                href={`/use/recipes#${categoryId(c)}`}
+                label={c}
+                padding={4}
+              >
+                <Stack direction="vertical" gap={0.5}>
+                  <Heading level={3}>{c}</Heading>
+                  {/*
+                    **0을 「0건」이라고 적지 않는다.** 웹에서 되는 것이 없는 갈래가
+                    둘이라 그대로 쓰면 카드 둘이 「0건」을 달고 선다. 같은 사실을
+                    할 일로 뒤집어 적는다 — 읽는 사람이 알아야 할 것은 개수가 아니라
+                    「지금 되나, 준비가 필요한가」다.
+                  */}
+                  <Text size="sm" color="secondary">
+                    사례 {items.length}건 ·{' '}
+                    {web > 0 ? `웹에서 바로 되는 것 ${web}건` : '모두 자료를 받아야 합니다'}
+                  </Text>
+                </Stack>
+              </ClickableCard>
+            )
+          })}
+        </Grid>
+      </Stack>
+
+      <Stack direction="vertical" gap={1.5} as="section">
+        <Heading level={2}>먼저 볼 것</Heading>
+        <List listStyle="decimal" density="spacious" hasDividers>
+          {(navFind('/use')?.children ?? []).map((p) => (
+            <ListItem
+              key={p.href}
+              label={p.title}
+              description={ABOUT[p.href] ?? ''}
+              href={p.href}
+            />
+          ))}
+        </List>
+      </Stack>
     </Shell>
   )
 }

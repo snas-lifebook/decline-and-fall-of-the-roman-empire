@@ -34,7 +34,28 @@ export function RecipeCard({ r }: { r: Recipe }) {
           <Badge variant="neutral" label={r.needs === 'web' ? '웹만으로' : '자료 연결 필요'} />
         </Stack>
 
-        <Text color="secondary">{r.when}</Text>
+        {/*
+          **메타 줄.** `learn.chatgpt.com` 낱개 화면이 제목 바로 아래 `Easy | 5m`을
+          박는다 — 고르기 전에 알아야 하는 값이라 카드 안쪽이 아니라 머리에 있다
+          (2026-08-19 크롬으로 실측). 우리는 난이도 대신 「어디서 되나」가 그 자리를
+          겸한다. 배지가 이미 답하므로 여기서는 시간만 말한다.
+        */}
+        <Text size="sm" color="secondary">
+          {r.needs === 'web' ? '웹에서 바로' : '자료를 받아야 함'} · 약 {r.minutes}분
+        </Text>
+
+        {/*
+          **「언제 쓰나」에 라벨을 세운다.** 앞 판은 `when` 값이 라벨 없이 홀로 떠서
+          「포인트를 배정받았는데 무엇을 준비할지 막막할 때.」가 서술어 없는 조각으로
+          읽혔다 — 아래 형제 행(「1 넣는 것」·「3 나오는 것」)은 전부 라벨이 있는데
+          이것만 없었다(River 카피 반려, 2026-08-19).
+
+          같은 것을 `learn.chatgpt.com`은 `Best for`라는 이름 붙은 칸으로 세운다.
+          **조각은 라벨이 붙어 있을 때만 허용한다**는 것이 [[CONTENT]]의 판정 기준이다.
+        */}
+        <MetadataList columns="single" label={{ position: 'start', width: 88 }}>
+          <MetadataListItem label="언제 쓰나">{r.when}</MetadataListItem>
+        </MetadataList>
 
         <Divider />
 

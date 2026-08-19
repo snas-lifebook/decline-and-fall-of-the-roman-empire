@@ -159,7 +159,7 @@ export function SiteFooter({
           암호 없이 열리지만 검색에는 안 걸립니다.
         </Text>
         {/* 날짜 둘은 서로 다른 것이라 반드시 붙여 놓는다 — 떨어지면 헷갈린다 */}
-        <Text size="sm" color="secondary">
+        <Text size="sm" color="secondary" className="footer-varies">
           자료 기준일 <strong>{dataDate()}</strong>
           {updated ? (
             <>
@@ -251,7 +251,9 @@ function FooterGrid({ compact, updated }: { compact: boolean; updated?: string |
         </Text>
         {updated ? (
           <Text size="sm" color="secondary">
-            <a href="/changelog">바뀐 것 {changelog().length}건</a>
+            <a href="/changelog" className="footer-varies">
+              바뀐 것 {changelog().length}건
+            </a>
           </Text>
         ) : null}
       </Column>

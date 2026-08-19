@@ -3,7 +3,7 @@ import { Stack, Text, Banner } from '@astryxdesign/core'
 import { DocShell, type DocSection } from '../../../components/DocShell'
 import { RecipeCard } from '../../../components/RecipeCard'
 import { MaterialCards } from '../../../components/MaterialCards'
-import { RECIPES, RECIPE_CATEGORIES } from '../../../lib/recipes'
+import { RECIPES, RECIPE_CATEGORIES, categoryId } from '../../../lib/recipes'
 import { pageMeta } from '../../../lib/meta'
 
 /**
@@ -22,12 +22,12 @@ import { pageMeta } from '../../../lib/meta'
 export const metadata = pageMeta('활용 사례')
 
 function sections(): DocSection[] {
-  const cats: DocSection[] = RECIPE_CATEGORIES.flatMap((c, i) => {
+  const cats: DocSection[] = RECIPE_CATEGORIES.flatMap((c) => {
     const items = RECIPES.filter((r) => r.category === c)
     if (!items.length) return []
     return [
       {
-        id: `sec-${i + 1}`,
+        id: categoryId(c),
         title: c,
         body: (
           <Stack direction="vertical" gap={3}>
