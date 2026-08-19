@@ -224,9 +224,21 @@ export function Shell({
       <FocusExit />
 
       <div className="site-footer">
+        {/*
+          **푸터 안쪽은 본문보다 넓다.** 앞 판은 본문 폭(760)을 그대로 물려받았는데,
+          그건 산문 한 줄에 맞춘 값이지 링크 격자에 맞춘 값이 아니다. 일곱 묶음을
+          760 안에 넣으면 칸이 세 개로 쪼그라들어 줄이 들쭉날쭉해진다.
+
+          `code.claude.com` 푸터도 본문보다 넓은 띠에 네 칸을 편다. 최소 1040으로
+          두되 가운데 정렬은 그대로다(`.site-footer-in { margin: 0 auto }`).
+
+          **앞선 결정을 뒤집은 것이다.** 「안쪽 글은 본문과 같은 폭으로 가둔다 —
+          왼쪽 끝이 본문과 어긋나면 띠가 아니라 사고로 보인다」였는데, 그 판단은
+          푸터가 링크 다섯 줄이던 때 것이다. 지금은 격자라 사정이 다르다.
+        */}
         <div
           className="site-footer-in"
-          style={{ maxWidth: aside ? maxWidth + 24 + asideWidth : maxWidth }}
+          style={{ maxWidth: Math.max(aside ? maxWidth + 24 + asideWidth : maxWidth, 1040) }}
         >
           {/*
             허브는 푸터의 다섯 장 칸을 접는다. 사이드바를 끄는 것과 같은 이유다 —

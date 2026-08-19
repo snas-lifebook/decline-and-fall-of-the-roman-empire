@@ -44,6 +44,32 @@ import { linkById } from '../lib/links'
 /** 작업 공간. 회차에 딸린 것부터 — 지금 쓰는 것이 위에 온다 */
 const OUTSIDE = ['drive-01', 'sheet', 'repo']
 
+/**
+ * 묶음 여럿을 칸 `n`개에 **높이가 고르게** 나눠 담는다.
+ *
+ * 앞 판은 묶음 하나가 격자 칸 하나였다. 그러면 격자 줄 높이가 그 줄에서 가장 긴
+ * 묶음을 따라가서, 「찾아보기」(8개) 옆의 「읽기」(2개) 아래에 여섯 줄짜리 구멍이
+ * 뚫린다. 그리고 일곱 묶음이 네 칸에 안 떨어져 둘째 줄에 하나가 혼자 남는다
+ * (River 스크린샷, 2026-08-19).
+ *
+ * `code.claude.com` 푸터는 **넷이 한 줄**이고 칸마다 높이가 비슷하다. 그렇게
+ * 하려면 칸 하나가 묶음을 둘까지 쌓을 수 있어야 한다. 큰 것부터 꺼내 그때그때
+ * 가장 짧은 칸에 얹는다 — 짐 싣기에서 쓰는 그 방법이고, 일곱 개쯤이면 이걸로
+ * 충분히 고르게 떨어진다.
+ */
+function pack<T extends { weight: number }>(groups: T[], n: number): T[][] {
+  const cols: { load: number; items: T[] }[] = Array.from({ length: n }, () => ({
+    load: 0,
+    items: [],
+  }))
+  for (const g of [...groups].sort((a, b) => b.weight - a.weight)) {
+    const lightest = cols.reduce((a, b) => (b.load < a.load ? b : a))
+    lightest.items.push(g)
+    lightest.load += g.weight
+  }
+  return cols.map((c) => c.items)
+}
+
 function Column({
   title,
   href,
@@ -110,74 +136,17 @@ export function SiteFooter({
         자료가 처음이면 <Link href="/start">{navLabel('/start')}</Link>부터 보세요.
       </Text>
 
-      <Grid columns={{ minWidth: 180 }} gap={6}>
-        {/*
-          다섯 장을 각자 칸으로 편다. 깊이는 자식 한 겹까지만 보여준다 — 「읽기」
-          밑에는 책이 둘(30포인트 편역본·기번 원전)뿐이라 한 겹으로 끝나지만,
-          그 책 밑에는 포인트가 서른셋 더 있다. `navTree()`가 [장 → 자식] 두 겹
-          구조라 `.children`만 읽으면 손자(서른셋)는 저절로 안 걸린다 — 그
-          포인트들을 보고 싶으면 칸 제목을 눌러 그 책 화면으로 가면 된다.
-          `ready: false`인 장·항목은 아직 없는 화면이라 뺀다.
+      {/*
+        **칸 수를 고정한다.** 앞 판은 `minWidth: 180` 자동 흐름이라 폭에 따라 칸 수가
+        3~4로 바뀌었고, 그러면 항목 수가 제각각인 일곱 묶음이 들쭉날쭉하게 흘렀다 —
+        「찾아보기」 여덟 개가 한 줄을 통째로 늘리고 자식이 없는 「가져가기」가 그
+        옆에 빈 칸으로 남았다(River 스크린샷, 2026-08-19).
 
-          허브에서는 이 칸들을 통째로 접는다(`compact`) — 이유는 위 prop 주석에.
-        */}
-        {(compact ? [] : navTree())
-          .filter((n) => n.ready)
-          .map((n) => (
-            <Column key={n.href} title={n.title} href={n.href}>
-              {(n.children ?? [])
-                .filter((c) => c.ready)
-                .map((c) => (
-                  <Text key={c.href} size="sm" color="secondary">
-                    <a href={c.href}>{c.title}</a>
-                  </Text>
-                ))}
-            </Column>
-          ))}
-
-        <Column title="작업 공간">
-          {OUTSIDE.map((id) => {
-            const l = linkById(id)
-            return (
-              <Stack key={id} direction="horizontal" gap={2} vAlign="center">
-                {/* 아이콘이 있으면 목록에서 즉시 갈린다. 없는 것은 안 그린다 */}
-                {l.icon ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={l.icon} alt="" width={16} height={16} />
-                ) : null}
-                <Text size="sm" color="secondary">
-                  <a href={l.href} target="_blank" rel="noreferrer">
-                    {l.title}
-                  </a>
-                </Text>
-              </Stack>
-            )
-          })}
-          <Text size="sm" color="secondary">
-            <Link href="/start/links">작업 공간 전체</Link>
-          </Text>
-        </Column>
-
-        <Column title="이 사이트">
-          {/*
-            **`/faq`는 어디서도 안 걸려 있었다** — 739장 통틀어 수신 링크 0건에
-            사이드바에도 검색 색인에도 없었다(감사 2026-08-17). 24문답이 팀원 질문
-            대부분을 이미 답하는데 아무도 못 찾으니, 같은 질문이 단톡방에 다시 올라온다.
-            푸터가 가장 싼 자리다 — 전 화면에 붙는다.
-          */}
-          <Text size="sm" color="secondary">
-            <a href="/faq">자주 묻는 것</a>
-          </Text>
-          <Text size="sm" color="secondary">
-            <a href="/about">이 자료실은</a>
-          </Text>
-          {updated ? (
-            <Text size="sm" color="secondary">
-              <a href="/changelog">바뀐 것 {changelog().length}건</a>
-            </Text>
-          ) : null}
-        </Column>
-      </Grid>
+        `code.claude.com` 푸터를 보면 네 칸이 고정이고 칸마다 3~7개가 들어 있다.
+        같은 모양으로 넷을 고정하고, **항목이 많은 묶음을 앞에 둬서** 각 줄이 위에서
+        아래로 짧아지게 한다. 빈 칸이 줄 가운데 뚫리는 일이 없어진다.
+      */}
+      <FooterGrid compact={compact} updated={updated} />
 
       <Divider />
 
@@ -200,5 +169,107 @@ export function SiteFooter({
         </Text>
       </Stack>
     </Stack>
+  )
+}
+
+/** 링크 묶음 격자. 넷을 한 줄에 세우고 높이를 고르게 맞춘다 */
+function FooterGrid({ compact, updated }: { compact: boolean; updated?: string | null }) {
+  const groups: { key: string; weight: number; node: React.ReactNode }[] = []
+
+  /*
+    다섯 장을 편다. 깊이는 자식 한 겹까지만 — 「읽기」 밑에는 책이 둘(30포인트
+    편역본·기번 원전)뿐이지만 그 책 밑에는 포인트가 서른셋 더 있다. `navTree()`가
+    [장 → 자식] 두 겹 구조라 `.children`만 읽으면 손자는 저절로 안 걸린다.
+    `ready: false`인 장·항목은 아직 없는 화면이라 뺀다.
+
+    허브에서는 통째로 접는다(`compact`) — 이유는 `SiteFooter`의 prop 주석에.
+  */
+  if (!compact) {
+    for (const n of navTree().filter((x) => x.ready)) {
+      const kids = (n.children ?? []).filter((c) => c.ready)
+      groups.push({
+        key: n.href,
+        weight: kids.length + 1,
+        node: (
+          <Column title={n.title} href={n.href}>
+            {kids.map((c) => (
+              <Text key={c.href} size="sm" color="secondary">
+                <a href={c.href}>{c.title}</a>
+              </Text>
+            ))}
+          </Column>
+        ),
+      })
+    }
+  }
+
+  groups.push({
+    key: 'outside',
+    weight: OUTSIDE.length + 2,
+    node: (
+      <Column title="작업 공간">
+          {OUTSIDE.map((id) => {
+            const l = linkById(id)
+            return (
+              <Stack key={id} direction="horizontal" gap={2} vAlign="center">
+                {/* 아이콘이 있으면 목록에서 즉시 갈린다. 없는 것은 안 그린다 */}
+                {l.icon ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={l.icon} alt="" width={16} height={16} />
+                ) : null}
+                <Text size="sm" color="secondary">
+                  <a href={l.href} target="_blank" rel="noreferrer">
+                    {l.title}
+                  </a>
+                </Text>
+              </Stack>
+            )
+          })}
+        <Text size="sm" color="secondary">
+          <Link href="/start/links">작업 공간 전체</Link>
+        </Text>
+      </Column>
+    ),
+  })
+
+  groups.push({
+    key: 'site',
+    weight: (updated ? 3 : 2) + 1,
+    node: (
+      <Column title="이 사이트">
+        {/*
+          **`/faq`는 어디서도 안 걸려 있었다** — 739장 통틀어 수신 링크 0건에
+          사이드바에도 검색 색인에도 없었다(감사 2026-08-17). 24문답이 팀원 질문
+          대부분을 이미 답하는데 아무도 못 찾으니, 같은 질문이 단톡방에 다시 올라온다.
+          푸터가 가장 싼 자리다 — 전 화면에 붙는다.
+        */}
+        <Text size="sm" color="secondary">
+          <a href="/faq">자주 묻는 것</a>
+        </Text>
+        <Text size="sm" color="secondary">
+          <a href="/about">이 자료실은</a>
+        </Text>
+        {updated ? (
+          <Text size="sm" color="secondary">
+            <a href="/changelog">바뀐 것 {changelog().length}건</a>
+          </Text>
+        ) : null}
+      </Column>
+    ),
+  })
+
+  // 허브는 묶음이 둘뿐이라 넷으로 벌리면 절반이 빈다
+  const cols = compact ? 2 : 4
+
+  return (
+    <Grid columns={cols} gap={6}>
+      {pack(groups, cols).map((bucket, i) => (
+        <Stack key={i} direction="vertical" gap={6}>
+          {bucket.map((g) => (
+            <div key={g.key}>{g.node}</div>
+          ))}
+        </Stack>
+      ))}
+    </Grid>
   )
 }
