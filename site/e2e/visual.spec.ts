@@ -17,6 +17,11 @@ import { test, expect } from '@playwright/test'
  * **`/changelog`은 뺐다.** `git log -- site`에서 만들어지므로 **커밋할 때마다 화면이
  * 바뀐다.** 기준선을 걸면 매번 썩는다. 접근성 검사는 그 화면도 본다.
  *
+ * 같은 이유로 **푸터를 가린다.** 푸터가 「바뀐 것 N건」을 싣는데 그 N이 커밋마다
+ * 늘어서, 푸터가 화면에 들어오는 짧은 장(`/start`·`/404`·책장)은 **커밋할 때마다
+ * 빨개진다**(실측 2026-08-19: `/start`가 3,618px 차이, 전부 푸터 자리였다).
+ * 푸터가 깨졌는지는 `settings.spec.ts`가 바탕색·경계·글꼴로 따로 본다.
+ *
  * ## 흔들리는 것을 설정이 잡는다
  *
  * `playwright.config.ts`가 `reducedMotion`으로 `EgoGraph`를 가라앉히고, `colorScheme`
@@ -46,6 +51,11 @@ const SCREENS: [string, string][] = [
   ['notfound', '/404'],
 ]
 
+/** 날짜와 커밋 수를 싣는 자리. 화면이 아니라 시간이 바꾸는 것이라 가린다 */
+const masked = (page: import('@playwright/test').Page) => ({
+  mask: [page.locator('.site-footer')],
+})
+
 /** 글꼴이 늦게 오면 글자 폭이 달라져 전부 빨개진다 */
 async function settle(page: import('@playwright/test').Page) {
   await page.waitForLoadState('load')
@@ -59,7 +69,7 @@ test.describe('화면 골격', () => {
       await page.setViewportSize({ width: 1440, height: 900 })
       await page.goto(path)
       await settle(page)
-      await expect(page).toHaveScreenshot(`${name}.png`)
+      await expect(page).toHaveScreenshot(`${name}.png`, masked(page))
     })
   }
 })
@@ -74,7 +84,7 @@ test.describe('폰에서 접히는 화면', () => {
     test(name, async ({ page }) => {
       await page.goto(path)
       await settle(page)
-      await expect(page).toHaveScreenshot(`${name}-390.png`)
+      await expect(page).toHaveScreenshot(`${name}-390.png`, masked(page))
     })
   }
 })
@@ -92,7 +102,7 @@ test.describe('읽기 설정을 바꾼 화면', () => {
       await page.evaluate(([k, v]) => localStorage.setItem(k, v), [key, value])
       await page.reload()
       await settle(page)
-      await expect(page).toHaveScreenshot(`read-${name}.png`)
+      await expect(page).toHaveScreenshot(`read-${name}.png`, masked(page))
     })
   }
 })

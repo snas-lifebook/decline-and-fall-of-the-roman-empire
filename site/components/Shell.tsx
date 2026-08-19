@@ -17,9 +17,49 @@ import { RailToggle } from './RailToggle'
  * 허브 `/`는 이 껍데기를 안 쓴다. 갈림길이지 문서가 아니다.
  */
 
+/**
+ * 이 묶음 **안에** 지금 화면이 있는가. 자기 자신은 안 친다.
+ *
+ * 앞 판은 주소 앞부분만 봤다(`path.startsWith(n.href + '/')`). 책이 생기면서 그게
+ * 두 군데서 깨졌다 — 책의 주소는 `/read/rome30`인데 그 안의 글은 `/read/point/5`·
+ * `/read/text/책머리에`라 **주소로는 책 밑이 아니다.** 값은 두 번 치러졌다.
+ *
+ *   - **대목을 읽는 동안 사이드바에서 차례가 통째로 사라졌다.** 5장을 읽다 20장으로
+ *     건너뛸 길이 없어졌다는 뜻이다(내가 만든 회귀다)
+ *   - **책 화면에서는 반대로 33편이 다 펼쳐졌다.** 본문이 이미 차례인 화면에서 같은
+ *     33줄이 왼쪽에 또 서서 **사이드바에 스크롤이 하나 더 생겼다**(River 지적)
+ *
+ * 그래서 「자기 자신」과 「자기 안」을 가른다. 차례가 본문인 화면에서는 접히고,
+ * 그 차례로 이동한 뒤에는 펴진다.
+ */
+function holds(n: NavNode, path: string): boolean {
+  return (n.children ?? []).some(
+    (c) => c.href === path || path.startsWith(`${c.href}/`) || holds(c, path),
+  )
+}
+
+/**
+ * 저절로 펴지는 묶음의 한도.
+ *
+ * **한눈에 들어오는 만큼만 저절로 편다.** 33편짜리 차례가 펴지면 사이드바가 화면보다
+ * 길어져 **스크롤이 하나 더 생긴다** — 본문 스크롤 옆에 나란히(River 지적). 찾아보기
+ * 8·시작하기 6·활용하기 4는 그 아래라 그대로 펴진다.
+ *
+ * 차례를 잃는 것은 아니다. 「30포인트 편역본」을 한 번 누르면 33편이 다 나온다 —
+ * **스크롤 두 줄을 늘 지고 다니는 대신 필요할 때 한 번 누른다.**
+ */
+const AUTO_OPEN_MAX = 12
+
 function itemsOf(nodes: NavNode[], path: string) {
   return nodes.map((n) => {
-    const inside = path === n.href || path.startsWith(`${n.href}/`)
+    /*
+      「이 묶음이 지금 화면을 담고 있나」 + 「한눈에 들어오는 크기인가」.
+
+      앞의 것만으로는 안 된다 — 33편짜리 차례는 담고 있어도 펴면 안 된다. 뒤의 것만
+      으로도 안 된다 — 지금 안 보고 있는 묶음까지 다 펴진다.
+    */
+    const inside =
+      (path === n.href || holds(n, path)) && (n.children?.length ?? 0) <= AUTO_OPEN_MAX
     return (
       <SideNavItem
         key={n.href}
@@ -27,8 +67,8 @@ function itemsOf(nodes: NavNode[], path: string) {
         href={n.ready ? n.href : undefined}
         isSelected={path === n.href}
         isDisabled={!n.ready}
-        // 30포인트가 늘 펼쳐져 있으면 사이드바가 본문보다 길어진다.
-        // 그 안에 들어와 있을 때만 연다
+        // 33편이 늘 펼쳐져 있으면 사이드바가 본문보다 길어져 스크롤이 하나 더 생긴다.
+        // 그 안에 들어와 있을 때만 연다 — 「안」의 뜻은 `holds`가 정한다
         collapsible={n.children ? { defaultIsCollapsed: !inside } : undefined}
       >
         {n.children ? itemsOf(n.children, path) : undefined}
