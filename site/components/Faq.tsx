@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Stack, Text, Heading, Collapsible } from '@astryxdesign/core'
 import type { FaqItem } from '../lib/faq'
+import { navLabel } from '../lib/nav'
 
 /**
  * 자주 묻는 것 — 화면 맨 아래.
@@ -45,10 +46,10 @@ export function Faq({
               {f.see?.length ? (
                 <Text size="sm" color="secondary">
                   이어서{' '}
-                  {f.see.map((s, i) => (
-                    <Fragment key={s.href}>
+                  {f.see.map((href, i) => (
+                    <Fragment key={href}>
                       {i > 0 ? ' · ' : ''}
-                      <Link href={s.href}>{s.label}</Link>
+                      <Link href={href}>{navLabel(href)}</Link>
                     </Fragment>
                   ))}
                 </Text>

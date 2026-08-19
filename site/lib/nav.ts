@@ -28,17 +28,30 @@ export type NavNode = {
  * 스킬을 알고, 함정을 안다. 앞 판은 표 두 개에 프롬프트 여덟 개를 늘어놓았는데
  * 그 여덟이 전부 로컬 파일을 요구해 웹에서는 작동하지 않았다.
  */
+/*
+  **이름에 수사를 붙이지 않는다.** 앞 판은 「스킬 여덟」·「재료 셋」이었는데 River가
+  「이런 말 안 쓴다」고 했다. 맞다 — 「스킬 여덟」은 한국어 관용이 아니다. 개수는
+  제목이 아니라 부제나 본문이 진다.
+
+  **형제끼리 문법을 맞춘다.** 앞 판 넷은 의문절(「무엇을 AI에 주나」)·명사구(「우수
+  사례」)·명사+수(「스킬 여덟」)·관형절(「그냥 시키면 틀리는 것」)로 넷 다 형태가
+  달랐다. 지금은 전부 명사구다.
+
+  docs.claude.com 한국어판의 항목 이름이 기준이다 — 「개요」·「할 수 있는 것」·
+  「다음 단계」처럼 **평범한 말**을 쓴다. 조어를 만들지 않는다.
+*/
 const USE: [string, string][] = [
-  ['/use/data', '무엇을 AI에 주나'],
-  ['/use/recipes', '우수 사례'],
-  ['/use/skills', '스킬 여덟'],
+  ['/use/data', 'AI에 줄 자료'],
+  ['/use/recipes', '활용 사례'],
+  ['/use/skills', '스킬'],
   ['/use/pitfalls', '그냥 시키면 틀리는 것'],
 ]
 
 /** 시작하기 여섯 장. 순서가 곧 초보자가 밟는 순서다 */
 const START: [string, string][] = [
   ['/start/install', '옵시디언 설치하고 자료 받기'],
-  ['/start/open', '볼트로 열고 어디부터 보나'],
+  // 「볼트로 열고 어디부터 보나」였다. 제목 자리에 의문절을 쓰지 않는다
+  ['/start/open', '옵시디언에서 자료 열기'],
   ['/start/plugins', '플러그인 두 개 켜기'],
   ['/start/ai', 'AI에 자료 연결하기'],
   ['/start/update', '갱신 받는 법'],
@@ -138,6 +151,24 @@ export function navFlat(tree: NavNode[] = navTree(), opts: { readyOnly?: boolean
 
 export function navFind(href: string, tree: NavNode[] = navTree()): NavNode | undefined {
   return navFlat(tree, { readyOnly: false }).find((n) => n.href === href)
+}
+
+/**
+ * 트리 밖에 있는 화면의 이름. 사이드바에는 안 걸리지만 본문에서 링크로 불린다.
+ *
+ * 이 표가 있는 이유는 하나다 — **이름을 두 군데 적지 않기 위해서다.** 자주 묻는 것의
+ * 「이어서」 링크가 라벨을 직접 들고 있었더니, 2026-08-19에 「스킬 여덟」을 「스킬」로
+ * 고치는 순간 여섯 자리가 옛 이름을 부르게 됐다.
+ */
+const OFF_TREE: Record<string, string> = {
+  '/about': '이 자료실은',
+  '/changelog': '바뀐 것',
+  '/faq': '자주 묻는 것',
+}
+
+/** 주소로 화면 이름을 찾는다. 못 찾으면 주소를 그대로 낸다 — 빈 링크보다 낫다 */
+export function navLabel(href: string): string {
+  return navFind(href)?.title ?? OFF_TREE[href] ?? href
 }
 
 /** 루트부터 자기까지. 못 찾으면 빈 배열 — 화면이 죽는 것보다 빵부스러기가 없는 게 낫다 */

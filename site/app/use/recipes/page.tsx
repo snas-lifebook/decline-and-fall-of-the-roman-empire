@@ -19,7 +19,7 @@ import { pageMeta } from '../../../lib/meta'
  * 2026-08-19에 `DocShell`로 옮겼다. 「재료 셋」 제목을 손으로 세워 h1 → h3 건너뜀을
  * 막던 자리가 이제 절 목록의 첫 항목이라, 우측 목차에도 같이 실린다.
  */
-export const metadata = pageMeta('우수 사례')
+export const metadata = pageMeta('활용 사례')
 
 function sections(): DocSection[] {
   const cats: DocSection[] = RECIPE_CATEGORIES.flatMap((c, i) => {
@@ -41,7 +41,7 @@ function sections(): DocSection[] {
   })
 
   return [
-    { id: 'materials', title: '재료 셋', body: <MaterialCards /> },
+    { id: 'materials', title: '붙여넣을 자료 고르기', body: <MaterialCards /> },
     ...cats,
     {
       id: 'chain',
@@ -69,14 +69,14 @@ export default function Recipes() {
   return (
     <DocShell
       href="/use/recipes"
-      title="우수 사례"
-      summary="실제로 해서 결과가 나온 것만 모았습니다. 지금 상황에 맞는 것을 골라 그대로 따라 하세요."
+      title="활용 사례"
+      summary="실제로 해보고 결과가 나온 방법만 모았습니다. 지금 상황에 맞는 것을 골라 그대로 따라 하시면 됩니다."
       sections={sections()}
       intro={
         <Banner
           status="info"
-          title="재료를 안 주면 AI가 지어냅니다"
-          description="아래 사례는 전부 「무엇을 붙여넣는지」부터 적었습니다. 붙여넣을 것은 아래 셋 중 하나입니다."
+          title="자료를 붙여넣지 않으면 AI가 없는 내용을 만들어 냅니다"
+          description="아래 사례는 모두 무엇을 붙여넣는지부터 적어 두었습니다. 붙여넣을 자료는 아래 세 가지 중 하나입니다."
         />
       }
     />

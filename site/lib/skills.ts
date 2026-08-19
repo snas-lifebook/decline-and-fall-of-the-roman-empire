@@ -53,7 +53,7 @@ export const SKILLS: Skill[] = [
   },
   {
     id: 'point-context',
-    title: '포인트 하나를 통째로 브리핑',
+    title: '포인트 하나를 통째로 정리하기',
     tier: 'local',
     does: '포인트 하나에 필요한 재료를 한 덩어리로 모읍니다.',
     input: '포인트 번호 하나',
@@ -63,7 +63,7 @@ export const SKILLS: Skill[] = [
   },
   {
     id: 'entity-lookup',
-    title: '인물·장소·사건 하나의 전모',
+    title: '인물·장소·사건 한 건 모아 보기',
     tier: 'local',
     does: '이름 하나를 받아 그 대상에 관한 모든 것을 모읍니다.',
     input: '찾을 이름 하나',
@@ -93,7 +93,7 @@ export const SKILLS: Skill[] = [
   },
   {
     id: 'homonym-check',
-    title: '같은 이름 두 사람 가르기',
+    title: '같은 이름의 두 인물 구별하기',
     tier: 'local',
     does: '이름이 같은 두 인물이 같은 사람인지 판정합니다.',
     input: '의심되는 인물 이름 둘',
@@ -103,7 +103,7 @@ export const SKILLS: Skill[] = [
   },
   {
     id: 'propose-change',
-    title: '고치자고 제안하기',
+    title: '자료 수정 제안서 만들기',
     tier: 'operator',
     does: '원본을 건드리지 않고 인물·관계 수정 제안서를 만듭니다.',
     input: '무엇을 왜 바꾸고 싶은지와 근거 — 본문 줄 번호나 사료까지',

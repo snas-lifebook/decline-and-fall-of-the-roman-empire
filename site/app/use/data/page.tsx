@@ -22,17 +22,17 @@ const WEB_ONLY = RECIPES.filter((r) => r.needs === 'web').length
  *
  * 2026-08-19에 `DocShell`로 옮겼다. 이 화면은 절이 다섯인데 우측 목차가 없었다.
  */
-export const metadata = pageMeta('무엇을 AI에 주나')
+export const metadata = pageMeta('AI에 줄 자료')
 
 function sections(): DocSection[] {
   return [
     {
       id: 'materials',
-      title: '이 사이트가 주는 재료 셋',
+      title: '붙여넣을 수 있는 자료',
       body: (
         <Stack direction="vertical" gap={3}>
           <Text size="sm" color="secondary">
-            셋 다 버튼 하나입니다. 설치도 로그인도 필요 없습니다.
+            셋 다 버튼 한 번으로 복사됩니다.
           </Text>
           <MaterialCards />
           <Text color="secondary">
@@ -55,7 +55,7 @@ function sections(): DocSection[] {
 
     {
       id: 'orphans',
-      title: '관계가 없는 객체가 3분의 1입니다',
+      title: '관계가 없는 객체도 있습니다',
       body: (
         <Banner
           status="info"
@@ -72,11 +72,11 @@ function sections(): DocSection[] {
           <Text>
             매번 복사하는 대신 컴퓨터에 받아두고 AI에 물려둘 수 있습니다.{' '}
             <Link href="/start/ai">AI에 자료 연결하기</Link>에 방법이 있고, 그러면{' '}
-            <Link href="/use/skills">스킬 여덟</Link> 중 웹에서 안 되던 것들이 열립니다.
+            <Link href="/use/skills">스킬</Link> 중 웹에서는 안 되던 작업이 열립니다.
           </Text>
           <Text size="sm" color="secondary">
-            급하지 않으시면 안 하셔도 됩니다. 위 재료 셋만으로{' '}
-            <Link href="/use/recipes">우수 사례</Link> {RECIPES.length}건 중 {WEB_ONLY}건이 됩니다.
+            급하지 않으시면 안 하셔도 됩니다. 위 자료 세 가지만으로{' '}
+            <Link href="/use/recipes">활용 사례</Link> {RECIPES.length}건 중 {WEB_ONLY}건이 됩니다.
           </Text>
         </Stack>
       ),
@@ -88,14 +88,14 @@ export default function Data() {
   return (
     <DocShell
       href="/use/data"
-      title="무엇을 AI에 주나"
-      summary="재료를 먼저 줘야 합니다. 안 주면 AI는 아는 척하고 지어냅니다."
+      title="AI에 줄 자료"
+      summary="AI에게 먼저 붙여넣을 자료 세 가지입니다. 상황에 맞는 것을 골라 쓰시면 됩니다."
       sections={sections()}
       intro={
         <Banner
           status="warning"
-          title="「포인트 3 정리해줘」라고만 하면 우리 책 내용이 안 나옵니다"
-          description="그럴듯한 글은 나옵니다. 다만 AI가 원래 알던 것으로 채운 글입니다. 재료를 먼저 주고 그다음에 시키세요."
+          title="「포인트 3 정리해줘」라고만 물으면 이 책 내용이 나오지 않습니다"
+          description="답은 그럴듯하게 나오지만 AI가 원래 알고 있던 내용으로 채운 것입니다. 자료를 먼저 붙여넣은 다음에 물어보세요."
         />
       }
     />

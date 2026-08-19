@@ -46,7 +46,7 @@ export const RECIPES: Recipe[] = [
   {
     id: 'scope',
     category: '발표 준비',
-    title: '준비 범위부터 잡기',
+    title: '발표 준비 범위 정하기',
     when: '포인트를 배정받았는데 무엇을 준비할지 막막할 때.',
     needs: 'web',
     material: '가져가기에서 포인트를 고르고 「시트에 붙여넣기용 복사」',
@@ -75,7 +75,7 @@ export const RECIPES: Recipe[] = [
   {
     id: 'same-name',
     category: '인물 확인',
-    title: '같은 이름이 두 사람인지 가르기',
+    title: '같은 이름의 두 인물 구별하기',
     when: '하스드루발처럼 같은 이름이 둘로 보일 때.',
     needs: 'web',
     material: '찾아보기에서 후보 둘을 각각 열고 「이 페이지 복사」',
@@ -91,7 +91,7 @@ export const RECIPES: Recipe[] = [
   {
     id: 'person-arc',
     category: '인물 확인',
-    title: '한 인물이 어디에 걸쳐 있는지 훑기',
+    title: '한 인물이 나오는 포인트 모아 보기',
     when: '내 장의 인물이 전체 흐름에서 어디쯤인지 모를 때.',
     needs: 'web',
     material: '찾아보기에서 그 인물을 열고 「이 페이지 복사」',
@@ -123,7 +123,7 @@ export const RECIPES: Recipe[] = [
   {
     id: 'gap-find',
     category: '사실 확인',
-    title: '본문엔 있는데 자료엔 없는 것 찾기',
+    title: '본문에 있는데 자료에 없는 것 찾기',
     when: '발표에서 다뤄야 할 사건이 인물·관계 자료에 안 보일 때.',
     needs: 'local',
     material: '자료를 연결한 AI 창에 포인트 번호만 말하기',
@@ -153,7 +153,7 @@ export const RECIPES: Recipe[] = [
   {
     id: 'relation-query',
     category: '흐름 잡기',
-    title: '관계 조건으로 뽑기',
+    title: '조건을 걸어 관계 찾기',
     when: '「카르타고 장군 가계」처럼 조건으로 묶어 봐야 할 때.',
     needs: 'local',
     material: '자료를 연결한 AI 창에 조건을 말하기',

@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Stack, Text, Button, TextInput, useToast } from '@astryxdesign/core'
 import { MAX_BODY, type FeedbackContext } from '../lib/feedback'
-import { ro } from '../lib/korean'
 
 /**
  * 한 줄 남기기. 폼도 계정도 이동도 없다.
@@ -80,15 +79,23 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
         <Text size="sm" weight="semibold">
           한 줄 남기기
         </Text>
+        {/*
+          **앞 판은 한국어가 아니었다.** 「틀린 것도, 있으면 좋겠는 것도. 어느 화면인지는
+          {here}로 같이 갑니다.」 — 첫 문장은 서술어가 없고, 둘째 문장은 무생물이 주어라
+          번역기를 돌린 것처럼 읽힌다(River 지적, 2026-08-19).
+
+          고친 원칙 둘. **무엇을 써야 하는지를 먼저 말하고**, 화면 이름이 따라간다는
+          사실은 **독자의 이득으로 뒤집어 적는다** — 「같이 갑니다」가 아니라 「따로
+          적지 않으셔도 됩니다」다. 같은 기능을 말하지만 앞의 것은 시스템 사정이고
+          뒤의 것은 읽는 사람 사정이다.
+        */}
         <Text size="sm" color="secondary">
-          {(() => {
-            const here = subject ? `${where} · ${subject}` : where
-            return `틀린 것도, 있으면 좋겠는 것도. 어느 화면인지는 ${here}${ro(here)} 같이 갑니다.`
-          })()}
+          잘못된 곳이나 있었으면 하는 기능을 알려 주세요. 어느 화면에서 보셨는지는 따로 적지
+          않으셔도 됩니다.
         </Text>
         {/* 두 경로 다 열어 둔다 — 깃허브 이슈는 팀원 다수가 못 쓰는 도구라 뺐다(태봉호님, 2026-08-19) */}
         <Text size="sm" color="secondary">
-          편하신 쪽으로 남겨 주세요 — 주용에게 개인적으로 보내셔도 되고, 바로 아래에 남기셔도 됩니다.
+          주용에게 직접 보내셔도 됩니다.
         </Text>
       </Stack>
 

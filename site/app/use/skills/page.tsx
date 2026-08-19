@@ -24,7 +24,13 @@ import { pageMeta } from '../../../lib/meta'
  */
 export const metadata = pageMeta('스킬')
 
-const SUMMARY = 'AI에게 시킬 일이 절차서로 적혀 있습니다. 어느 것이 지금 바로 되는지부터 가릅니다.'
+/**
+ * 앞 판은 「AI에게 시킬 일이 절차서로 적혀 있습니다. 어느 것이 지금 바로 되는지부터
+ * 가릅니다.」였다. 「가릅니다」는 만드는 쪽 동작이지 읽는 쪽 동작이 아니다 —
+ * 읽는 사람은 **자기가 지금 쓸 수 있는지**를 알고 싶다. 그 순서로 다시 썼다.
+ */
+const SUMMARY =
+  'AI에게 시킬 수 있는 작업을 절차로 정리했습니다. 웹 화면만으로 되는 것부터 나옵니다.'
 
 function sections(): DocSection[] {
   const tiers: DocSection[] = SKILL_TIERS.flatMap((t) => {
@@ -77,14 +83,14 @@ export default function Skills() {
   return (
     <DocShell
       href="/use/skills"
-      title="스킬 여덟"
+      title="스킬"
       summary={SUMMARY}
       sections={sections()}
       intro={
         <Banner
           status="warning"
-          title="여덟 중 일곱은 자료를 받아두어야 돌아갑니다"
-          description="인물·관계 파일을 AI가 직접 열어 읽어야 하는 절차입니다. 파일 없이 문장만 붙여넣으면 읽을 것이 없으니 또 지어냅니다."
+          title="대부분은 자료를 컴퓨터에 받아두어야 씁니다"
+          description="AI가 인물·관계 파일을 직접 열어 읽어야 하는 작업이라, 파일 없이 문장만 붙여넣으면 읽을 것이 없어 없는 내용을 만들어 냅니다."
         />
       }
     />

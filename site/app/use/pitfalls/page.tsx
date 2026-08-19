@@ -53,7 +53,7 @@ function sections(): DocSection[] {
             ))}
           </List>
           <Text size="sm" color="secondary">
-            무엇을 시킬 수 있는지는 <Link href="/use/skills">스킬 여덟</Link>에 정리해 두었습니다.
+            무엇을 시킬 수 있는지는 <Link href="/use/skills">스킬</Link>에 정리해 두었습니다.
           </Text>
         </Stack>
       ),
@@ -66,13 +66,13 @@ export default function Pitfalls() {
     <DocShell
       href="/use/pitfalls"
       title="그냥 시키면 틀리는 것"
-      summary="AI가 이 자료에서 실제로 틀린 자리 여덟 군데입니다."
+      summary="이 자료를 다루면서 AI가 실제로 틀렸던 곳과, 그럴 때 어떻게 하면 되는지입니다."
       sections={sections()}
       intro={
         <Banner
           status="info"
-          title="일반론이 아닙니다"
-          description="아래는 전부 이 자료를 다루다 실제로 밟은 것입니다. 몇 건이었는지까지 세어 뒀습니다. 어디가 미끄러운지 알고 시키면 덜 틀립니다."
+          title="일반적인 주의사항이 아니라 여기서 실제로 겪은 일입니다"
+          description="어디에서 틀리는지 미리 알고 물어보시면 훨씬 덜 틀립니다."
         />
       }
     />
