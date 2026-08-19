@@ -70,11 +70,22 @@ const SECTIONS: { title: string; note?: string; ids: string[] }[] = [
     note: '깃허브 안에서 자주 열어보게 되는 두 폴더입니다.',
     ids: ['repo-ontology', 'repo-skills'],
   },
+  {
+    title: '원전을 더 읽고 싶을 때',
+    note: '우리가 읽는 30포인트는 기번의 여섯 권을 줄인 것입니다. 원문이 궁금할 때 여기로 갑니다.',
+    ids: ['gutenberg', 'gutenberg-web', 'book-kachi', 'book-dongseo'],
+  },
   { title: '도구', ids: ['obsidian', 'figma'] },
   {
     title: '참고자료',
     note: '발표를 준비하다 막힐 때 열어보시면 좋은 곳입니다.',
-    ids: ['youtube-sans', 'yt-kingsandgenerals', 'yt-historymarche', 'yt-epichistory'],
+    ids: [
+      'youtube-sans',
+      'netflix-roman-empire',
+      'yt-kingsandgenerals',
+      'yt-historymarche',
+      'yt-epichistory',
+    ],
   },
 ]
 

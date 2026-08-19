@@ -11,7 +11,15 @@
  * 없고, 문의는 전 화면 하단의 「한 줄 남기기」(텔레그램 공유)로 일원화했다.
  */
 
-export const LINK_CATEGORIES = ['작업공간', '원본데이터', '발표', '디자인', '도구', '참고자료'] as const
+export const LINK_CATEGORIES = [
+  '작업공간',
+  '원본데이터',
+  '원전',
+  '발표',
+  '디자인',
+  '도구',
+  '참고자료',
+] as const
 
 export type LinkCategory = (typeof LINK_CATEGORIES)[number]
 
@@ -134,6 +142,51 @@ export const SITE_LINKS: SiteLink[] = [
   },
 
   // 참고자료
+  /*
+    원전 — **우리가 읽는 것은 줄인 판이다.**
+
+    30포인트 편역본은 기번의 여섯 권을 서른 개 물음으로 압축한 것이라, 「원문은
+    뭐라고 썼나」가 필요한 자리가 생긴다. 영문 원전은 레포 `source/`에 71장이
+    다 들어 있지만, 그건 발표를 준비하는 사람에게 바로 읽을 수 있는 모양이 아니다.
+
+    영문은 구텐베르크, 한국어는 종이책 두 종을 걸어 둔다. 한국어 완역본은 여섯
+    권이라 다들 부담스러워하므로 **한 권으로 줄인 판**만 골랐다.
+  */
+  {
+    id: 'gutenberg',
+    href: 'https://www.gutenberg.org/ebooks/25717',
+    title: '기번 원전 (영문)',
+    desc: '여섯 권 전체와 밀먼 주석이 든 프로젝트 구텐베르크 판입니다',
+    category: '원전',
+  },
+  {
+    id: 'gutenberg-web',
+    href: 'https://www.gutenberg.org/cache/epub/25717/pg25717-images.html',
+    title: '기번 원전 — 웹으로 바로 읽기',
+    desc: '내려받지 않고 브라우저에서 그대로 여는 판입니다. 그림이 함께 있습니다',
+    category: '원전',
+  },
+  {
+    id: 'book-kachi',
+    href: 'https://www.yes24.com/product/goods/3822207',
+    title: '로마 제국 쇠망사 (까치)',
+    desc: '여섯 권을 한 권으로 줄인 축약본입니다. 608쪽, 그림이 함께 실려 있습니다',
+    category: '원전',
+  },
+  {
+    id: 'book-dongseo',
+    href: 'https://www.yes24.com/product/goods/33150654',
+    title: '로마제국쇠망사 (동서문화사)',
+    desc: '544쪽 한 권짜리입니다',
+    category: '원전',
+  },
+  {
+    id: 'netflix-roman-empire',
+    href: 'https://www.netflix.com/title/80096545',
+    title: '넷플릭스 「로마 제국」',
+    desc: '콤모두스·카이사르·칼리굴라를 한 시즌씩 다룬 다큐드라마입니다',
+    category: '참고자료',
+  },
   {
     id: 'yt-kingsandgenerals',
     href: 'https://www.youtube.com/@KingsandGenerals',
