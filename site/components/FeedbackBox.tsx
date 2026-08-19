@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Stack, Text, Button, TextInput } from '@astryxdesign/core'
 import { MAX_BODY, type FeedbackContext } from '../lib/feedback'
+import { ro } from '../lib/korean'
 
 /**
  * 한 줄 남기기. 폼도 계정도 이동도 없다.
@@ -30,6 +31,7 @@ import { MAX_BODY, type FeedbackContext } from '../lib/feedback'
  * 보내고 나서도 **자리 크기가 그대로**라 화면이 안 튄다.
  */
 type State = 'idle' | 'sending' | 'done' | 'error'
+
 
 export function FeedbackBox({ where, subject }: FeedbackContext) {
   const [text, setText] = useState('')
@@ -70,7 +72,10 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
         <Text size="sm" color="secondary">
           {state === 'done'
             ? '남겼습니다. 고맙습니다.'
-            : `틀린 것도, 있으면 좋겠는 것도. 어느 화면인지는 ${subject ? `${where} · ${subject}` : where}로 같이 갑니다.`}
+            : (() => {
+                const here = subject ? `${where} · ${subject}` : where
+                return `틀린 것도, 있으면 좋겠는 것도. 어느 화면인지는 ${here}${ro(here)} 같이 갑니다.`
+              })()}
         </Text>
       </Stack>
 
