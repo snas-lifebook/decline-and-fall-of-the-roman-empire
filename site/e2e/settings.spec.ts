@@ -443,4 +443,52 @@ test.describe('객체 화면이 읽기와 같은 눈금을 쓴다', () => {
     })
     expect(n, '스크롤이 둘 이상이다').toBe(1)
   })
+
+  /**
+   * **한 그림이 두 화면에서 다른 색이었다.**
+   *
+   * `EgoGraph`는 선·점·이름을 전부 `currentColor`로 그린다. 읽기 화면에서는 그림이
+   * `.doc` 안이라 상속이 닿는데 객체 화면의 날개는 그 밖이라 아무도 색을 안 걸었고,
+   * `color`의 초기값이 그대로 내려왔다 — 라이트 순검정 · 다크 순백.
+   *
+   * 처음 지적받았을 때 **나는 재현이 안 된다고 답했다.** SVG가 아니라 옆의 이름표를
+   * 쟀기 때문이다(`rgb(106,106,106)`). 그래서 이 테스트는 컨테이너의 `color`가 아니라
+   * **실제로 칠에 쓰이는 `fill`을 잰다** — 같은 실수를 다음 사람이 반복하지 않도록.
+   */
+  test('관계망이 읽기 화면과 같은 색으로 그려진다', async ({ page }) => {
+    const fill = async (url: string) => {
+      await page.goto(url)
+      if (url.startsWith('/read')) await page.getByRole('button', { name: '이 대목의 관계망' }).click()
+      await page.waitForSelector('.ego-graph text')
+      return page.evaluate(() => getComputedStyle(document.querySelector('.ego-graph text')!).fill)
+    }
+    const entity = await fill('/objects/person/카이사르')
+    expect(entity, '순검정·순백으로 그려진다 — 아무 토큰도 안 닿았다').not.toMatch(
+      /^rgb\((0, 0, 0|255, 255, 255)\)$/,
+    )
+    expect(entity, `읽기와 다른 색이다`).toBe(await fill('/read/point/5'))
+  })
+
+  /**
+   * 폰에서 날개가 본문과 어긋나지 않는다.
+   *
+   * 읽기 레일은 좁은 화면에서 폭을 놓고 붙박이를 푸는데 `Shell`의 날개는 그 규칙
+   * 밖이었다 — 인라인 `style`로 박혀 있어서다. 390px 실측에서 본문 342px 옆에
+   * 날개만 300px로 서 있었고, `sticky`가 살아 있어 화면에 눌어붙었다.
+   */
+  test('좁은 화면에서 날개가 본문 폭을 따른다', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/objects/person/카이사르')
+    await page.waitForSelector('.entity-aside')
+    const seen = await page.evaluate(() => {
+      const box = document.querySelector('.shell-aside')!
+      return {
+        날개: box.clientWidth,
+        본문: document.querySelector('.doc')!.clientWidth,
+        붙박이: getComputedStyle(box).position,
+      }
+    })
+    expect(seen.날개, `본문 ${seen.본문}px인데 날개가 ${seen.날개}px이다`).toBe(seen.본문)
+    expect(seen.붙박이, '폰에서도 붙박이라 본문 밑에서 화면에 눌어붙는다').toBe('static')
+  })
 })

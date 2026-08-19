@@ -183,15 +183,23 @@ html[data-tone='sepia']:not([data-theme='dark']) #astryx-app-shell-main {
   background: var(--read-bg);
 }
 
+/* 초상 액자도 같은 「책상」 톤이다 — 미색 종이 위에 푸른 회색 액자가 하나 남으면
+   그 한 장만 다른 화면에서 오려 붙인 것으로 보인다 */
 html[data-tone='sepia']:not([data-theme='dark']) .astryx-app-shell-header,
-html[data-tone='sepia']:not([data-theme='dark']) .astryx-side-nav {
+html[data-tone='sepia']:not([data-theme='dark']) .astryx-side-nav,
+html[data-tone='sepia']:not([data-theme='dark']) .entity-face {
   background: #e7e2d8;
   border-color: var(--read-edge);
 }
 
-/* 글꼴과 같은 함정 — astryx가 본문 컨테이너에 색을 직접 걸어서 상속이 안 닿는다 */
+/* 글꼴과 같은 함정 — astryx가 본문 컨테이너에 색을 직접 걸어서 상속이 안 닿는다.
+   `.astryx-text.primary`가 객체 화면 몫이다. 거기 본문은 마크다운이 아니라 `Text`라
+   위의 다섯 선택자에 하나도 안 걸렸고, 「포인트 05」 같은 이름표 21개가 미색 종이
+   위에 찬 먹색(`#0a1317`)으로 남아 있었다(실측 2026-08-19).
+   **`.secondary`는 일부러 뺀다** — 이름표와 본문이 같은 색이 되면 위계가 죽는다 */
 html[data-tone='sepia']:not([data-theme='dark']) .doc,
 html[data-tone='sepia']:not([data-theme='dark']) .doc .astryx-markdown,
+html[data-tone='sepia']:not([data-theme='dark']) .doc .astryx-text.primary,
 html[data-tone='sepia']:not([data-theme='dark']) .doc h1,
 html[data-tone='sepia']:not([data-theme='dark']) .doc h2,
 html[data-tone='sepia']:not([data-theme='dark']) .doc h3 {
@@ -590,9 +598,21 @@ dd a {
   text-decoration: none;
 }
 
-/* 관계 그래프 — 끌 수 있다는 것을 커서로 말한다 */
+/* 관계 그래프 — 끌 수 있다는 것을 커서로 말한다.
+
+   **색을 여기서 못 박는다.** `EgoGraph`는 선도 점도 이름도 전부 `currentColor`로
+   그린다. 읽기 화면에서는 그림이 `.doc` 안이라 상속으로 `#0a1317`이 닿았는데,
+   객체 화면의 날개는 `.doc` 밖이라 **아무도 색을 안 걸어 `color`의 초기값이 그대로
+   내려왔다** — 라이트 순검정 `rgb(0,0,0)` · 다크 순백 `rgb(255,255,255)`(실측
+   2026-08-19). 한 그림이 두 화면에서 다른 색이었고 다크에서는 눈을 찔렀다.
+   토큰으로 박으면 세 벌이 한 값에서 나온다 — 읽기 화면의 계산값은 안 바뀐다. */
 .ego-graph {
   cursor: grab;
+  color: var(--color-text-primary);
+}
+
+html[data-tone='sepia']:not([data-theme='dark']) .ego-graph {
+  color: var(--read-fg);
 }
 .ego-graph:active {
   cursor: grabbing;
@@ -866,6 +886,19 @@ html[data-cards]:not([data-cards~='period']) .read-card[data-type='period'] {
     grid-row: auto;
     max-height: none;
     margin-bottom: 20px;
+  }
+
+  /* **날개만 안 따라오고 있었다.** 읽기 레일은 바로 위에서 폭을 놓고 붙박이를 푸는데,
+     `Shell`의 날개는 붙박이·폭·최대높이를 **인라인으로** 박아서 그 규칙 밖에 있었다.
+     390px 실측(2026-08-19): 폭이 300px로 고정이라 본문(342px)보다 42px 좁아 오른쪽
+     끝이 어긋났고, `sticky`가 살아 있어 본문 밑으로 내려온 칸이 화면에 눌어붙었다.
+     인라인은 특이성으로 못 이기므로 **여기서만** `!important`를 쓴다 — 취향이 아니라
+     사정이다. 경계값은 위와 같아야 한다. 둘이면 그 사이 폭에서 한쪽만 접힌다 */
+  .shell-aside {
+    width: 100% !important;
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   .read-grid > .read-card {
@@ -1686,8 +1719,4 @@ html[data-focus='on'] .site-footer {
 .entity-desc {
   font-size: var(--read-size);
   line-height: 1.8;
-}
-
-html[data-tone='sepia']:not([data-theme='dark']) .entity-desc {
-  color: var(--read-fg);
 }

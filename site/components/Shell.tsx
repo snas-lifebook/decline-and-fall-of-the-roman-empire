@@ -162,6 +162,7 @@ export function Shell({
               `top`은 상단 바 높이만큼.
             */
             <Stack
+              className="shell-aside"
               direction="vertical"
               gap={4}
               width={asideWidth}
@@ -175,9 +176,13 @@ export function Shell({
                 overflowY: 'auto',
                 /*
                   **유령 스크롤바를 없앤다.** 날개가 596px인데 `scrollHeight`가 602로
-                  나와 스크롤바가 섰다. 실제로 잘리는 요소는 하나도 없다(실측: 날개
-                  아래로 삐져나온 자식 0개) — `scrollHeight`가 상자마다 올림하면서
-                  쌓인 **서브픽셀 6px**이다. 여백으로 흡수한다.
+                  나와 스크롤바가 섰다.
+
+                  처음엔 서브픽셀이 쌓인 것으로 적었는데 **틀렸다.** 범인은 astryx
+                  `Collapsible`의 트리거다 — 「관계 N건 더 보기」 한 줄이 상자는 17px인데
+                  안의 줄상자가 23px이라 **6px이 밖으로 삐져나온다.** 트리거가 없는
+                  객체에서는 0px이라 범인이 갈린다(실측 2026-08-19: 카이사르 6 · 키케로
+                  379px 0 · 원로원 506px 0). 여백으로 흡수한다.
                 */
                 paddingBottom: 8,
               }}
