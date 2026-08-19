@@ -20,7 +20,7 @@ import { linkById } from '../lib/links'
  *
  * 그래서 세 칸 + 바닥 한 줄이다.
  *   자료실   — 이 사이트 안에서 갈 곳 (허브에는 사이드바가 없어 여기가 유일한 목록이다)
- *   바깥 자리 — 사이트 밖으로 나가는 곳
+ *   바로가기 — 사이트 밖 자료로 곧장 가는 길
  *   이 사이트  — 사이트 자신에 대한 것
  *   바닥      — 누가 만들었고 언제 것인가. **날짜 둘을 나란히 둔다** — 서로
  *              다른 날짜라 떨어뜨려 놓으면 어느 게 어느 것인지 안 보인다
@@ -29,7 +29,7 @@ import { linkById } from '../lib/links'
  * 푸터 제목이 화면 목차(`Outline`)에 끼면 안 되기 때문이다.
  */
 
-/** 바깥 자리. 회차에 딸린 것부터 — 지금 쓰는 것이 위에 온다 */
+/** 바로가기. 회차에 딸린 것부터 — 지금 쓰는 것이 위에 온다 */
 const OUTSIDE = ['drive-01', 'sheet', 'repo']
 
 function Column({ title, children }: { title: string; children: React.ReactNode }) {
@@ -69,7 +69,7 @@ export function SiteFooter({ where }: { where: string }) {
           ))}
         </Column>
 
-        <Column title="바깥 자리">
+        <Column title="바로가기">
           {OUTSIDE.map((id) => {
             const l = linkById(id)
             return (

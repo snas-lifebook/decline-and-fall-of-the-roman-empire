@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Stack, Text, Button, TextInput } from '@astryxdesign/core'
+import { Stack, Text, Button, TextInput, useToast } from '@astryxdesign/core'
 import { MAX_BODY, type FeedbackContext } from '../lib/feedback'
 import { ro } from '../lib/korean'
 
@@ -29,14 +29,23 @@ import { ro } from '../lib/korean'
  * 그래서 접는 것을 없앴다. 푸터 맨 위의 **제 줄**을 차지하고 늘 열려 있다.
  * 한 줄 쓰는 칸이니 한 줄짜리 입력이고(`TextInput`), 다 쓰면 옆의 단추를 누른다.
  * 보내고 나서도 **자리 크기가 그대로**라 화면이 안 튄다.
+ *
+ * ## 보낸 결과는 `Toast`로 안내한다 (2026-08-19)
+ *
+ * 앞 판은 상자 위 안내문을 "남겼습니다. 고맙습니다."로 갈아 끼웠는데, 그 줄은
+ * 누르는 단추에서 멀고 색도 옅어서 **정말 보내졌는지 못 보고 지나치기 좋았다**
+ * (태봉호님 요청, 2026-08-19). astryx `Toast`는 `useToast()`만으로 뜨고
+ * (Provider가 없어도 자기 뜰 자리를 스스로 만든다) 화면 레이아웃을 안 밀어내니
+ * "자리 크기가 그대로"라는 원래 원칙과도 안 부딪힌다. 실패는 기본이 자동으로
+ * 안 닫히는 `error` 타입이라 — 성공만 알리고 실패는 조용한 폼이 되는 것을 막는다.
  */
-type State = 'idle' | 'sending' | 'done' | 'error'
-
+type State = 'idle' | 'sending'
 
 export function FeedbackBox({ where, subject }: FeedbackContext) {
   const [text, setText] = useState('')
   const [trap, setTrap] = useState('')
   const [state, setState] = useState<State>('idle')
+  const toast = useToast()
 
   const empty = !text.trim()
 
@@ -55,11 +64,13 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
         }),
       })
       if (!res.ok) throw new Error(String(res.status))
-      setState('done')
+      toast({ body: '남겼습니다. 고맙습니다.' })
       setText('')
     } catch {
       // 글은 상자에 그대로 둔다. 안 보내진 마당에 쓴 것까지 날리지 않는다
-      setState('error')
+      toast({ body: '안 보내졌습니다. 쓴 글은 그대로 있으니 다시 눌러 주세요.', type: 'error' })
+    } finally {
+      setState('idle')
     }
   }
 
@@ -70,12 +81,14 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
           한 줄 남기기
         </Text>
         <Text size="sm" color="secondary">
-          {state === 'done'
-            ? '남겼습니다. 고맙습니다.'
-            : (() => {
-                const here = subject ? `${where} · ${subject}` : where
-                return `틀린 것도, 있으면 좋겠는 것도. 어느 화면인지는 ${here}${ro(here)} 같이 갑니다.`
-              })()}
+          {(() => {
+            const here = subject ? `${where} · ${subject}` : where
+            return `틀린 것도, 있으면 좋겠는 것도. 어느 화면인지는 ${here}${ro(here)} 같이 갑니다.`
+          })()}
+        </Text>
+        {/* 두 경로 다 열어 둔다 — 깃허브 이슈는 팀원 다수가 못 쓰는 도구라 뺐다(태봉호님, 2026-08-19) */}
+        <Text size="sm" color="secondary">
+          편하신 쪽으로 남겨 주세요 — 주용에게 개인적으로 보내셔도 되고, 바로 아래에 남기셔도 됩니다.
         </Text>
       </Stack>
 
@@ -120,12 +133,6 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
           onClick={send}
         />
       </div>
-
-      {state === 'error' ? (
-        <Text size="sm" color="secondary">
-          안 보내졌습니다. 쓴 글은 그대로 있으니 다시 눌러 주세요.
-        </Text>
-      ) : null}
     </div>
   )
 }

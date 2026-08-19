@@ -16,7 +16,7 @@ import { pageMeta } from '../../lib/meta'
  * 카드와 두 벌로 갈라진다(헌장 17 후단). 활용하기 랜딩이 쓰는 것과 같은 방식이다.
  */
 const ABOUT: Record<string, string> = {
-  '/start/links': '편데 운영에 쓰는 바깥 자리들입니다. 흩어진 곳으로 여기서 들어가시면 됩니다.',
+  '/start/links': '편데 운영에 쓰는 바로가기 모음입니다. 흩어져 있던 곳을 여기서 바로 찾아가시면 됩니다.',
 }
 
 export const metadata = pageMeta('시작하기')

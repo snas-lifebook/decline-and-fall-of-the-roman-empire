@@ -1,0 +1,20 @@
+/*
+ * `LinkCards`의 카드가 홀수 개일 때 마지막 줄에 하나만 남는 경우.
+ *
+ * 컨테이너 폭이 2열이 되는 지점(2 * 280px + gap 12px = 572px — 12px은
+ * astryx `--spacing-3` 토큰과 같다, `Grid gap={3}`이 쓰는 것과 동일)에서만
+ * 그 카드를 줄 전체로 펼치고 형제 카드와 같은 폭(줄의 절반)으로 가운데 둔다.
+ * 그 아래(1열)에서는 원래 카드처럼 폭 전체를 그대로 채운다 — 손대지 않는다.
+ *
+ * globals.css는 건드리지 않는다. 이 규칙은 `LinkCards.tsx`에만 쓰인다.
+ */
+.loneLastRow {
+  grid-column: 1 / -1;
+}
+
+@container link-cards (min-width: 572px) {
+  .loneLastRow {
+    justify-self: center;
+    width: calc((100% - var(--spacing-3)) / 2);
+  }
+}

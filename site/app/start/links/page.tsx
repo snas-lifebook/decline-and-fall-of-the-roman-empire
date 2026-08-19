@@ -46,7 +46,7 @@ const WHERE: { what: string; to: string; id?: string; note?: string }[] = [
     note: '이 사이트가 여기서 나옵니다',
   },
   { what: '발표 당일 함께 보는 화면', to: '회차 캠페인 사이트', id: 'campaign-01' },
-  // 「한 줄 남기기」는 바깥 자리가 아니라 이 화면 아래 붙어 있는 칸이라 걸 주소가 없다
+  // 「한 줄 남기기」는 바로가기가 아니라 이 화면 아래 붙어 있는 칸이라 걸 주소가 없다
   { what: '물어볼 것, 고칠 것', to: '화면 아래 「한 줄 남기기」' },
 ]
 
@@ -109,7 +109,7 @@ export default function Links() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>작업 공간</Heading>
         <Text size="lg" color="secondary">
-          편데 운영에 쓰는 바깥 자리들입니다. 흩어진 곳으로 여기서 들어가시면 됩니다.
+          편데 운영에 쓰는 바로가기 모음입니다. 흩어져 있던 곳을 여기서 바로 찾아가시면 됩니다.
         </Text>
       </Stack>
 

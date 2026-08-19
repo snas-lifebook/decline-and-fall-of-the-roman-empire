@@ -69,7 +69,19 @@ test.describe('설정이 새로고침을 넘어 남는다', () => {
     expect(after, `문단이 ${before}px에서 그대로다`).toBeGreaterThan(before + 3)
   })
 
-  test('기본 크기가 16px보다 크다 — River가 「1~2포인트 크게」라고 했다', async ({ page }) => {
+  /**
+   * 기본 크기의 **바닥과 천장.**
+   *
+   * 바닥은 16px에서 시작했고(River: 「1~2포인트 크게」) 천장은 19px이었다. 그
+   * 천장을 **첫 외부 사용자가 밀어냈다** — 태봉호님, 2026-08-19 13:29: 「가능하면
+   * 기본 글자 크기도 조금 키워주실 수 있을까요?」 「AI가 만들면 항상 크기가 작게
+   * 나오더라구요」. 17.6px도 작다는 뜻이라 눈금 한 칸(1.12배)을 더 올렸다.
+   *
+   * **천장을 없애지는 않는다.** 키우는 데도 끝이 있어야 한다 — 한 줄에 들어가는
+   * 글자가 줄면 눈이 줄바꿈을 더 자주 타서 오히려 읽기 나빠진다. 21px은 다음 눈금
+   * 칸(22.1px)이 걸리는 자리라, **또 키우려면 이 줄을 보고 한 번 더 생각하게 된다.**
+   */
+  test('기본 크기가 바닥과 천장 사이에 있다', async ({ page }) => {
     await page.goto(POINT)
     await page.waitForSelector('.read-block')
     const px = await page.evaluate(() =>
@@ -77,8 +89,8 @@ test.describe('설정이 새로고침을 넘어 남는다', () => {
         getComputedStyle(document.querySelector('.read-block .astryx-markdown-paragraph')!).fontSize,
       ),
     )
-    expect(px).toBeGreaterThan(16.5)
-    expect(px, '너무 키우면 한 줄에 들어가는 글자가 줄어 오히려 읽기 나쁘다').toBeLessThan(19)
+    expect(px, '16px으로 되돌아갔다').toBeGreaterThan(16.5)
+    expect(px, '너무 키우면 한 줄에 들어가는 글자가 줄어 오히려 읽기 나쁘다').toBeLessThan(21)
   })
 
   /** River: 「`-` `=` 로 오른쪽 상단에서 설정할 수 있도록」 */
@@ -366,6 +378,47 @@ test.describe('맨 아래', () => {
     const after = await page.evaluate(() => document.querySelector('footer')!.scrollHeight)
     expect(after, '글을 쓰자 푸터 높이가 바뀌었다').toBe(before)
   })
+
+  /**
+   * 태봉호님(베타 테스터, 2026-08-19): 「남기기」를 눌러도 보낸 건지 알 수가
+   * 없었다. 앞 판은 상자 위 안내문을 "남겼습니다."로 갈아 끼웠는데, 그 줄은
+   * 단추에서 멀고 색도 옅어서 지나치기 좋았다. 이제 `Toast`로 알린다.
+   *
+   * `/api/feedback`는 Cloudflare Pages Function이라 이 정적 서버(`serve.mjs`)
+   * 에는 없다 — `page.route`로 흉내 낸다.
+   */
+  test('「남기기」를 보내면 토스트로 알려주고 입력칸을 비운다', async ({ page }) => {
+    await page.route('**/api/feedback', (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ ok: true }),
+      }),
+    )
+    await page.goto(POINT)
+    const input = page.locator('.leave-line-form input:not([aria-hidden])').first()
+    await input.fill('e2e 성공 경로')
+    await page.locator('.leave-line-form button', { hasText: '남기기' }).click()
+
+    // `.astryx-toast`로 좁힌다 — astryx가 같은 글을 낭독기용 live region에도
+    // 한 벌 더 그려서 `getByText`가 둘을 다 잡고 strict mode 위반을 낸다
+    await expect(page.locator('.astryx-toast')).toContainText('남겼습니다. 고맙습니다.')
+    await expect(input).toHaveValue('')
+  })
+
+  /** 성공만 알리고 실패는 조용한 폼이 제일 나쁘다. 쓴 글도 지우지 않아야 다시 눌러 보낼 수 있다 */
+  test('보내다 실패하면 토스트로 알리고 쓴 글은 그대로 둔다', async ({ page }) => {
+    await page.route('**/api/feedback', (route) => route.fulfill({ status: 500, body: 'err' }))
+    await page.goto(POINT)
+    const input = page.locator('.leave-line-form input:not([aria-hidden])').first()
+    await input.fill('e2e 실패 경로')
+    await page.locator('.leave-line-form button', { hasText: '남기기' }).click()
+
+    await expect(page.locator('.astryx-toast')).toContainText(
+      '안 보내졌습니다. 쓴 글은 그대로 있으니 다시 눌러 주세요.',
+    )
+    await expect(input).toHaveValue('e2e 실패 경로')
+  })
 })
 
 /**
@@ -490,5 +543,66 @@ test.describe('객체 화면이 읽기와 같은 눈금을 쓴다', () => {
     })
     expect(seen.날개, `본문 ${seen.본문}px인데 날개가 ${seen.날개}px이다`).toBe(seen.본문)
     expect(seen.붙박이, '폰에서도 붙박이라 본문 밑에서 화면에 눌어붙는다').toBe('static')
+  })
+})
+
+/**
+ * 작업 공간(`/start/links`)의 바로가기 카드 (River 2026-08-19).
+ *
+ * 2열 그리드에 카드가 홀수 개면 마지막 줄에 하나만 남아 1열에 붙고 오른쪽이
+ * 통째로 빈다 — "카드들이 페이지 좌측에 붙어 있다"는 지적이 이 자리였다.
+ */
+test.describe('작업 공간 바로가기 카드', () => {
+  test('홀수 개로 남는 마지막 카드가 왼쪽에 붙지 않고 줄 가운데로 온다', async ({ page }) => {
+    // 1280px 뷰포트면 사이드바를 빼도 그리드 컨테이너 폭이 `LinkCards.module.css`의
+    // `@container` 기준점(572px)을 넘는다 — 2열이 된다. 실제 데이터에서 홀수 개인
+    // 묶음을 찾는다
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.goto('/start/links')
+    await page.waitForSelector('.doc')
+
+    const gap = await page.evaluate(() => {
+      const doc = document.querySelector('.doc')!
+      const docRect = doc.getBoundingClientRect()
+      const grids = [...document.querySelectorAll('.doc div')].filter(
+        (el) => getComputedStyle(el).display === 'grid',
+      )
+      const odd = grids.find((g) => g.children.length > 1 && g.children.length % 2 === 1)
+      if (!odd) return null
+      const last = odd.children[odd.children.length - 1]
+      const r = last.getBoundingClientRect()
+      return {
+        left: Math.round(r.left - docRect.left),
+        right: Math.round(docRect.right - r.right),
+      }
+    })
+
+    expect(gap, '홀수 개인 카드 묶음을 못 찾았다 — 데이터가 바뀌었는지 본다').not.toBeNull()
+    expect(
+      Math.abs(gap!.left - gap!.right),
+      `왼쪽 여백 ${gap!.left}px, 오른쪽 여백 ${gap!.right}px — 가운데가 아니다`,
+    ).toBeLessThanOrEqual(2)
+  })
+
+  test('좁은 화면(1열)에서는 손대지 않는다 — 모든 카드가 같은 폭이다', async ({ page }) => {
+    // 컨테이너 쿼리 기준점(572px) 아래라 2열이 될 수 없다. 이 폭에서 홀수 번째
+    // 마지막 카드만 줄어들면 회귀다(2026-08-19, 첫 구현에서 실제로 이렇게 깨졌었다)
+    await page.setViewportSize({ width: 390, height: 900 })
+    await page.goto('/start/links')
+    await page.waitForSelector('.doc')
+
+    const widths = await page.evaluate(() => {
+      const doc = document.querySelector('.doc')!
+      const docWidth = Math.round(doc.getBoundingClientRect().width)
+      const grids = [...document.querySelectorAll('.doc div')].filter(
+        (el) => getComputedStyle(el).display === 'grid',
+      )
+      return grids.flatMap((g) =>
+        [...g.children].map((c) => Math.round(c.getBoundingClientRect().width) - docWidth),
+      )
+    })
+    expect(widths.every((d) => Math.abs(d) <= 1), `카드 폭이 본문 폭과 다른 것이 있다: ${widths}`).toBe(
+      true,
+    )
   })
 })

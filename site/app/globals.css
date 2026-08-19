@@ -71,14 +71,23 @@
   --read-scale: 1;
 
   /*
-    **읽기 기준 크기.** 앞 판은 본문이 16px 고정이었는데, River가 「전체적인 글자
-    크기를 조금 크게, 1~2포인트」라고 했다. 17.6px이면 16px에서 약 1.2포인트 큰
-    것이고, 한국어 장문에서 흔히 쓰는 자리다.
+    **읽기 기준 크기.** 16px → 17.6px → **19.7px**으로 두 번 올라왔다.
+
+    두 번째는 첫 외부 사용자가 짚었다 — 태봉호님, 2026-08-19 13:29: 「가능하면 기본
+    글자 크기도 조금 키워주실 수 있을까요?」 「AI가 만들면 항상 크기가 작게
+    나오더라구요」. **17.6px도 작다는 뜻이다.**
+
+    **`1.232rem`은 임의의 값이 아니라 눈금 한 칸이다** — `lib/read/fonts.ts`의
+    `SIZE_STEPS`에서 기본 다음 칸이 1.12배고, 1.1 × 1.12 = 1.232다. 조절기가 쓰는
+    비율과 밑값이 같은 사다리를 타야 「한 단계」가 두 곳에서 같은 뜻이 된다.
+
+    **astryx 토큰(`--font-size-base` 등 12종)을 안 덮는 이유** — 그걸 덮으면 상단
+    바·카드·단추까지 같이 커진다. 여기서 키우려는 것은 **읽는 글**이다.
 
     **배율과 곱해지는 밑값이라 여기 한 곳에만 둔다.** 본문·표·FAQ가 각자 px를 들고
     있으면 크기 설정이 그중 하나에만 닿는다 — 실제로 그래서 안 닿았다.
   */
-  --read-base: 1.1rem;
+  --read-base: 1.232rem;
 
   /*
     실제로 칠할 크기. **`em`이 아니라 이 변수를 쓴다** — `1em`은 **부모**를 따라가는데
@@ -596,6 +605,36 @@ dd a {
 .astryx-app-shell-header .astryx-text a {
   color: inherit;
   text-decoration: none;
+}
+
+/*
+  **반전 표면에서 글자색을 되돌린다.**
+
+  astryx `Toast`처럼 어두운 표면을 쓰는 컴포넌트는 `data-astryx-media="dark|light"`를
+  심고, 색을 뒤집는 일은 `@astryxdesign/theme-neutral/theme.css`가 맡는다. **그런데
+  이 사이트는 그 파일을 안 부른다** — `app/layout.tsx`가 JS 등록만 import한다.
+  그래서 토스트 배경은 뒤집히는데(코어 `astryx.css`의 자체 토큰) 글자색은 안 뒤집혀
+  **어두운 바탕에 같은 어두운 글자**가 얹혔다(실측 2026-08-19: 배경 `rgb(10,19,23)`에
+  글자 `rgb(10,19,23)` — 보이지 않는다).
+
+  `theme.css`를 통째로 부르지 않는 이유는 그 안에 `data-astryx-theme="neutral"`
+  스코프의 다른 규칙(제목 글꼴·크기 등)이 같이 들어 있어서다. **지금 DOM 어디에도
+  없는 속성**이라 켜지는 순간 사이트 전체 타이포가 새로 흔들린다. 필요한 두 줄만
+  옮겨 쓴다.
+
+  전역 규칙이라 여기 둔다. 처음엔 `FeedbackBox.module.css`에 `:global()`로 들어
+  있었는데, **컴포넌트 이름을 단 파일 안의 전역 규칙은 다음 사람이 못 찾는다.**
+*/
+[data-astryx-media='dark'] {
+  --color-text-primary: var(--color-on-dark);
+  --color-icon-primary: var(--color-on-dark);
+  --color-accent: var(--color-on-dark);
+}
+
+[data-astryx-media='light'] {
+  --color-text-primary: var(--color-on-light);
+  --color-icon-primary: var(--color-on-light);
+  --color-accent: var(--color-on-light);
 }
 
 /* 관계 그래프 — 끌 수 있다는 것을 커서로 말한다.
