@@ -5,6 +5,7 @@ import { Search } from './Search'
 import { ThemeToggle } from './ThemeToggle'
 import { RailToggle } from './RailToggle'
 import { ReadSize } from './ReadSize'
+import { FocusExit } from './FocusExit'
 
 /**
  * 사이트 껍데기 — 상단 바 + 좌측 사이드바 + 본문 + 하단.
@@ -172,6 +173,13 @@ export function Shell({
                 // 아래쪽에 손이 안 닿는다. 넘치는 만큼만 안에서 굴린다
                 maxHeight: 'calc(100vh - 48px)',
                 overflowY: 'auto',
+                /*
+                  **유령 스크롤바를 없앤다.** 날개가 596px인데 `scrollHeight`가 602로
+                  나와 스크롤바가 섰다. 실제로 잘리는 요소는 하나도 없다(실측: 날개
+                  아래로 삐져나온 자식 0개) — `scrollHeight`가 상자마다 올림하면서
+                  쌓인 **서브픽셀 6px**이다. 여백으로 흡수한다.
+                */
+                paddingBottom: 8,
               }}
             >
               {aside}
@@ -197,6 +205,19 @@ export function Shell({
         띠는 화면 폭을 다 쓰되 **안쪽 글은 본문과 같은 폭으로 가둔다** — 왼쪽 끝이
         본문과 어긋나면 띠가 아니라 사고로 보인다.
       */}
+      {/*
+        **집중해서 읽기의 탈출구는 껍데기에 있어야 한다.**
+
+        앞 판은 읽기 세 화면에만 붙어 있었다. 그런데 집중 모드는 `<html>` 속성이라
+        **화면을 옮겨도 켜진 채로 따라간다** — 켜 놓고 객체나 FAQ로 넘어가면 상단
+        바도 좌우도 없고 나갈 단추도 없어서 **644장 어디서도 못 빠져나온다**(객체
+        화면을 검수하던 중 잡혔다). Esc를 받는 `ReadCards`도 읽기 화면에만 있다.
+
+        페이지마다 한 줄씩 심는 대신 여기 한 번 둔다. 꺼져 있으면 아무것도 안 그리므로
+        (`FocusExit`가 `null`을 낸다) 나머지 화면이 치르는 값이 없다.
+      */}
+      <FocusExit />
+
       <div className="site-footer">
         <div
           className="site-footer-in"

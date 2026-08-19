@@ -13,7 +13,6 @@ import { CopyPageButton } from '../../../../components/CopyPageButton'
 import { ReadGrid } from '../../../../components/ReadGrid'
 import { ReadRail } from '../../../../components/ReadRail'
 import { ReadCards } from '../../../../components/ReadCards'
-import { FocusExit } from '../../../../components/FocusExit'
 import { book, bookHref, textPart, textSlug } from '../../../../lib/book'
 import { readDoc } from '../../../../lib/text/point'
 import { readLayout, rowCount } from '../../../../lib/read/cards'
@@ -99,7 +98,6 @@ export default async function BookText({ params }: { params: Promise<{ slug: str
         }
       />
       <ReadCards />
-      <FocusExit />
 
       <div style={NARROW}>
         <Stack direction="horizontal" gap={3} justify="between" wrap="wrap" width="100%">

@@ -367,3 +367,80 @@ test.describe('맨 아래', () => {
     expect(after, '글을 쓰자 푸터 높이가 바뀌었다').toBe(before)
   })
 })
+
+/**
+ * 객체 화면도 같은 읽기 환경을 쓴다 (River: 「디자인 정합성과 통일성」).
+ *
+ * 읽기 화면을 이틀 갈아엎는 동안 객체 644장은 그대로였다. 실측하니 본문이
+ * **14px 대 17.6px**로 갈라져 있었고, 회색 바탕은 객체 화면 서술에 안 닿았다.
+ */
+test.describe('객체 화면이 읽기와 같은 눈금을 쓴다', () => {
+  test('서술 크기가 대목 본문과 같다', async ({ page }) => {
+    const px = async (url: string, sel: string) => {
+      await page.goto(url)
+      await page.waitForSelector(sel)
+      return page.evaluate(
+        (s) => parseFloat(getComputedStyle(document.querySelector(s)!).fontSize),
+        sel,
+      )
+    }
+    const read = await px('/read/point/5', '.read-block .astryx-markdown-paragraph')
+    const entity = await px('/objects/person/카이사르', '.entity-desc')
+    expect(entity, `읽기 ${read}px인데 객체가 ${entity}px이다`).toBe(read)
+  })
+
+  test('크기를 키우면 객체 서술도 같이 커진다', async ({ page }) => {
+    await page.goto('/objects/person/카이사르')
+    await page.waitForSelector('.entity-desc')
+    const size = () =>
+      page.evaluate(() => parseFloat(getComputedStyle(document.querySelector('.entity-desc')!).fontSize))
+
+    const before = await size()
+    await page.keyboard.press('=')
+    expect(await size(), '상단 바 크기 조절이 객체 화면에 안 닿는다').toBeGreaterThan(before)
+  })
+
+  /**
+   * **회색은 밝게 위에만 얹는다**(`globals.css`의 원래 판단 — 어둡게 쓰는 사람에게
+   * 회색은 뜻이 없다). 그래서 다크 프로젝트에서는 **안 걸리는 것이 맞다.** 처음엔
+   * 그걸 모르고 두 모드에 같은 값을 요구해 다크에서 빨개졌다.
+   *
+   * 양쪽을 다 본다 — 밝게에서는 물들고, 어둡게에서는 안 물든다. 한쪽만 보면
+   * 「회색이 어둡게까지 새는」 회귀를 못 잡는다.
+   */
+  test('회색 바탕이 객체 서술까지 물들인다 — 어둡게에서는 안 걸린다', async ({ page }) => {
+    await page.goto('/objects/person/카이사르')
+    await page.evaluate(() => localStorage.setItem('read-tone', 'sepia'))
+    await page.reload()
+    await page.waitForSelector('.entity-desc')
+
+    const seen = await page.evaluate(() => ({
+      bg: getComputedStyle(document.body).backgroundColor,
+      fg: getComputedStyle(document.querySelector('.entity-desc')!).color,
+    }))
+
+    if (test.info().project.name === 'dark') {
+      expect(seen.fg, '어둡게인데 회색이 새어 들어왔다').not.toBe('rgb(51, 48, 43)')
+      return
+    }
+    expect(seen.bg, '바탕이 회색이 아니다').toBe('rgb(240, 237, 230)')
+    // 읽기 화면과 같은 먹색이어야 한다. 미색 종이 위에 원래 먹색이면 안 물든 것이다
+    expect(seen.fg, '서술이 회색 바탕을 안 따라간다').toBe('rgb(51, 48, 43)')
+  })
+
+  test('날개가 유령 스크롤바를 안 만든다', async ({ page }) => {
+    await page.goto('/objects/person/카이사르')
+    await page.waitForSelector('.entity-desc')
+    const n = await page.evaluate(() => {
+      let count = 0
+      const walk = (el: Element) => {
+        const cs = getComputedStyle(el)
+        if (el.scrollHeight > el.clientHeight + 2 && /(auto|scroll)/.test(cs.overflowY)) count += 1
+        for (const k of el.children) walk(k)
+      }
+      walk(document.body)
+      return count
+    })
+    expect(n, '스크롤이 둘 이상이다').toBe(1)
+  })
+})

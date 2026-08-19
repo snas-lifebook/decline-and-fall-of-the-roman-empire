@@ -12,7 +12,6 @@ import { Shell } from '../../../../components/Shell'
 import { ReadGrid } from '../../../../components/ReadGrid'
 import { ReadRail } from '../../../../components/ReadRail'
 import { ReadCards } from '../../../../components/ReadCards'
-import { FocusExit } from '../../../../components/FocusExit'
 import { bookById, bookHref, sourcePart } from '../../../../lib/book'
 import { sourceDoc } from '../../../../lib/text/source'
 import { readLayout, rowCount } from '../../../../lib/read/cards'
@@ -104,7 +103,6 @@ export default async function SourceChapter({ params }: { params: Promise<{ n: s
         />
       </div>
       <ReadCards />
-      <FocusExit />
 
       <div style={NARROW}>
         <Stack direction="horizontal" gap={3} justify="between" wrap="wrap" width="100%">

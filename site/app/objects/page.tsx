@@ -1,6 +1,5 @@
 import { Stack, Grid, Heading, Text, Divider, ClickableCard } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
-import { FocusExit } from '../../components/FocusExit'
 import { ENTITY_TYPES, loadEntities, type Entity } from '../../lib/ontology'
 import { TYPE_KO } from '../../lib/export/table'
 import { pageMeta } from '../../lib/meta'
@@ -67,7 +66,6 @@ export default function Objects() {
       </Grid>
 
       {/* 집중해서 읽기에서 나가는 길. 사연은 `app/objects/[type]/[slug]/page.tsx`에 적었다 */}
-      <FocusExit />
     </Shell>
   )
 }

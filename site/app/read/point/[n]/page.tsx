@@ -21,7 +21,6 @@ import { PointGraph } from '../../../../components/PointGraph'
 import { ReadGrid } from '../../../../components/ReadGrid'
 import { ReadRail } from '../../../../components/ReadRail'
 import { ReadCards } from '../../../../components/ReadCards'
-import { FocusExit } from '../../../../components/FocusExit'
 import { MapHover } from '../../../../components/MapHover'
 import { MapFollow } from '../../../../components/MapFollow'
 import { Faq } from '../../../../components/Faq'
@@ -161,7 +160,6 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         }
       />
       <ReadCards />
-      <FocusExit />
 
       {/*
         **말없이 자르지 않는다.** 포인트 13은 27명이 나와서 다 세우면 네 문단 중

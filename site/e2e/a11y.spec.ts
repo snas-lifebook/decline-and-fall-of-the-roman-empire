@@ -147,3 +147,38 @@ test('**고친 것은 목록에서 지웠는가** — 안 지우면 다음 회�
   ).map((k) => `${k.rule} (${k.mode})`)
   expect(stale, '이미 고쳐진 규칙이 목록에 남아 있다. 지워야 다음 회귀를 잡는다').toEqual([])
 })
+
+/**
+ * 집중해서 읽기에서 **어느 화면에서든** 빠져나온다.
+ *
+ * 앞 판은 나갈 단추가 읽기 세 화면에만 있었다. 그런데 집중 모드는 `<html>` 속성이라
+ * **화면을 옮겨도 켜진 채로 따라간다** — 켜 놓고 객체나 FAQ로 넘어가면 상단 바도
+ * 좌우도 없고 나갈 단추도 없어서 **644장 어디서도 못 빠져나왔다**(객체 화면을
+ * 검수하다 잡혔다). Esc를 받는 것도 읽기 화면에만 있었다.
+ */
+test.describe('집중해서 읽기에 갇히지 않는다', () => {
+  for (const path of [
+    '/objects/person/카이사르',
+    '/faq',
+    '/about',
+    '/download/5',
+    '/use/recipes',
+    '/read/point/5',
+    '/read/source/15',
+    '/start/links',
+  ]) {
+    test(`나갈 길이 있다 — ${path}`, async ({ page }) => {
+      await page.goto(path)
+      await page.evaluate(() => localStorage.setItem('read-focus', 'on'))
+      await page.reload()
+      await page.waitForLoadState('load')
+
+      // 정확히 하나. 없으면 갇히고, 둘이면 겹쳐 그려진다
+      await expect(page.locator('.focus-exit')).toHaveCount(1)
+      const exit = page.locator('.focus-exit button')
+      await expect(exit).toBeVisible()
+      await exit.click()
+      await expect(page.locator('.astryx-app-shell-header')).toBeVisible()
+    })
+  }
+})

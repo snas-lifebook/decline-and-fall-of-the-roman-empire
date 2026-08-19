@@ -1,6 +1,5 @@
 import { Stack, Heading, Text, Divider, List, ListItem } from '@astryxdesign/core'
 import { Shell } from '../../../components/Shell'
-import { FocusExit } from '../../../components/FocusExit'
 import { FamilyGap } from '../../../components/FamilyTree'
 import { families } from '../../../lib/family/build'
 import { pageMeta } from '../../../lib/meta'
@@ -39,7 +38,6 @@ export default function FamilyIndex() {
       <FamilyGap />
 
       {/* 집중해서 읽기에서 나가는 길. 사연은 `app/objects/[type]/[slug]/page.tsx`에 적었다 */}
-      <FocusExit />
     </Shell>
   )
 }

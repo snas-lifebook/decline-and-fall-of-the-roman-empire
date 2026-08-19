@@ -12,7 +12,6 @@ import {
 } from '@astryxdesign/core'
 import { Shell } from '../../../../components/Shell'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
-import { FocusExit } from '../../../../components/FocusExit'
 import {
   EntityAside,
   EntityGraph,
@@ -435,7 +434,6 @@ export default async function ObjectPage({
 
         모드가 꺼져 있으면 아무것도 안 그린다 — 평소 화면에는 없는 것과 같다.
       */}
-      <FocusExit />
     </Shell>
   )
 }
