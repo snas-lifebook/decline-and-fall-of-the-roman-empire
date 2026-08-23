@@ -96,7 +96,7 @@ export function ThemeToggle() {
       label={LABEL[mode]}
       onClick={click}
       // 「시스템」만으로는 지금 밝은지 어두운지를 안 알려준다(검수 지적)
-      aria-label={`화면 밝기 — 지금 ${LABEL[mode]}${mode === 'system' ? ' (기기 설정을 따릅니다)' : ''}. 눌러서 바꿉니다`}
+      aria-label={`화면 밝기: 지금 ${LABEL[mode]}${mode === 'system' ? ' (기기 설정을 따릅니다)' : ''}. 눌러서 바꿉니다`}
     />
   )
 }

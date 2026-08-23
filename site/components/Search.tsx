@@ -157,7 +157,7 @@ export function Search({ variant = 'button' }: { variant?: 'button' | 'box' }) {
             </Stack>
           </CommandPaletteFooter>
         }
-        emptyBootstrapText="인물·지명·포인트 이름을 치세요. 초성도 됩니다 — ㅋㅇㅅㄹ"
+        emptyBootstrapText="인물·지명·포인트 이름을 치세요. 초성도 됩니다 (ㅋㅇㅅㄹ)"
         emptySearchText={ready ? '그런 이름은 없습니다' : '자료를 불러오는 중입니다'}
         renderItem={(item) => (
           <Stack direction="horizontal" gap={1.5} vAlign="center" justify="between" width="100%">
