@@ -1,4 +1,4 @@
-import { Stack, Grid, Heading, Text, ClickableCard, Link, Divider } from '@astryxdesign/core'
+import { Stack, Grid, Heading, Text, ClickableCard, Link, Divider, Badge } from '@astryxdesign/core'
 import { Shell } from '../components/Shell'
 import { Manifesto } from '../components/Manifesto'
 import { FlipNumber } from '../components/FlipNumber'
@@ -30,36 +30,48 @@ import { book } from '../lib/book'
  * 사이드바는 안 단다. 갈림길에 갈림길을 또 놓으면 그게 헷갈림이다.
  */
 
+/*
+  **활용하기 카드에만 배지 하나**(#2, 첫 외부 사용자 「온보딩 스킬 만들자」 — 있는 걸
+  못 찾았다). 새 카드·배너를 얹지 않는다. 「처음 오셨다면 →」이 이미 /start를 가리키는
+  주 CTA라 겹치는 안내는 새 헷갈림이다. ChoiceCards가 쓰는 배지 문법을 그대로 빌려
+  제목 옆에 「스킬」 낱말을 세우면 훑는 눈이 걸린다. badge 키는 다섯 다 두어 타입을
+  고르게 한다.
+*/
 const CARDS = [
   {
     href: '/read',
     title: '읽기',
     desc: '맡은 포인트를 지금 바로 읽으실 수 있습니다.',
     Icon: BookIcon,
+    badge: undefined,
   },
   {
     href: '/objects',
     title: '찾아보기',
     desc: '이 인물이 누구 편이었는지 헷갈릴 때 찾아보세요.',
     Icon: SearchIcon,
+    badge: undefined,
   },
   {
     href: '/download',
     title: '가져가기',
     desc: '발표용 표를 시트에 붙여넣을 수 있게 받아 가세요.',
     Icon: DownloadIcon,
+    badge: undefined,
   },
   {
     href: '/use',
     title: '활용하기',
     desc: '쓰시던 AI에 이 자료를 붙여넣어 쓰는 방법을 안내합니다.',
     Icon: SparkIcon,
+    badge: '스킬까지',
   },
   {
     href: '/start',
     title: '시작하기',
     desc: '자료를 처음 받으시거나 갱신이 밀렸을 때 보세요.',
     Icon: FlagIcon,
+    badge: undefined,
   },
 ] as const
 
@@ -130,9 +142,10 @@ export default function Home() {
           {CARDS.map((c) => (
             <ClickableCard key={c.title} href={c.href} label={c.title} padding={4}>
               <Stack direction="vertical" gap={0.5}>
-                <Stack direction="horizontal" gap={2} vAlign="center">
+                <Stack direction="horizontal" gap={2} vAlign="center" wrap="wrap">
                   <c.Icon />
                   <Heading level={2}>{c.title}</Heading>
+                  {c.badge ? <Badge variant="neutral" label={c.badge} /> : null}
                 </Stack>
                 <Text size="sm" color="secondary">
                   {c.desc}

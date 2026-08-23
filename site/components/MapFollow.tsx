@@ -123,14 +123,29 @@ export function MapFollow() {
     })
     watch.observe(document.documentElement, { attributeFilter: ['data-map'] })
 
+    /*
+     * 뒤로가기로 bfcache에서 되살아나면 아무 코드도 안 돈다 — 얼린 시점의 배치가
+     * 그대로 남아 지도가 꼬인다(#2, 읽기→객체→되돌아오기). DevTools를 열면 bfcache가
+     * 꺼져서(그 세션은 늘 새로고침 경로라) 소유자는 재현이 안 됐다. `pageshow`가
+     * 해동 때 발화하므로, 그 순간 자리(`place`)와 절(`measure`)을 다시 잡는다.
+     */
+    const onShow = (e: PageTransitionEvent) => {
+      if (e.persisted) {
+        at = null
+        onScroll()
+      }
+    }
+
     measure()
     scroller.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
+    window.addEventListener('pageshow', onShow)
     return () => {
       cancelAnimationFrame(raf)
       watch.disconnect()
       scroller.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
+      window.removeEventListener('pageshow', onShow)
       // 자리를 되돌려 놓고 나간다 — 안 그러면 다른 화면으로 갔다가 돌아왔을 때 꼬인다
       if (slot.parentElement === rail) home.parent.insertBefore(slot, home.before)
     }

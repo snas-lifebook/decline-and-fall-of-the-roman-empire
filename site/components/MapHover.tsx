@@ -87,11 +87,21 @@ export function MapHover() {
       if (a && !pop.contains(a)) hide()
     }
 
+    // 뒤로가기로 bfcache에서 되살아나면 마우스를 올린 채 얼린 패널이 그대로 남는다(#2).
+    // 해동(pageshow persisted) 순간 알려진 기본값(패널 숨김)으로 되돌린다
+    const onShow = (e: PageTransitionEvent) => {
+      if (e.persisted) {
+        delete pop.dataset.on
+        clear()
+      }
+    }
+
     const body = document.querySelector('.read-grid') ?? document.body
     body.addEventListener('mouseover', onOver)
     body.addEventListener('mouseout', onOut)
     body.addEventListener('focusin', onOver)
     body.addEventListener('focusout', onOut)
+    window.addEventListener('pageshow', onShow)
     // 패널 위에 마우스를 올리면 안 사라진다 — 지도에서 다른 지명을 눌러 갈 수 있게
     pop.addEventListener('mouseenter', () => window.clearTimeout(hideTimer))
     pop.addEventListener('mouseleave', hide)
@@ -103,6 +113,7 @@ export function MapHover() {
       body.removeEventListener('mouseout', onOut)
       body.removeEventListener('focusin', onOver)
       body.removeEventListener('focusout', onOut)
+      window.removeEventListener('pageshow', onShow)
     }
   }, [])
 

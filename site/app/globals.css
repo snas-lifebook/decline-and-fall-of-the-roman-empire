@@ -1433,6 +1433,20 @@ html[data-layers]:not([data-layers~='strait']) .point-map a[data-kind='strait'] 
   margin-top: 4px;
 }
 
+/*
+  스크롤을 따라 지도가 움직인다는 안내 (#2). 「옆에」로 옮겨졌을 때만 뜬다.
+  호버·본문 아래·안 보기는 스크롤과 무관하므로 기본은 숨기고, MapFollow가 노드를
+  레일로 옮기는 순간과 같은 조건(.rail-map-slot 조상)에서만 켠다. JS 0줄.
+*/
+.map-follow-hint {
+  display: none;
+}
+
+.rail-map-slot .map-follow-hint {
+  display: block;
+  margin: -4px 0 2px;
+}
+
 .rail-map-slot h2 {
   /* 「이 포인트의 절」 라벨과 같은 계급이다 — 레일 칸 이름표지 절 제목이 아니다.
      13px은 스케일 밖이었고, 특이도 (0,1,1) < .doc h2(0,2,1)라 한 번도 안 걸렸다 (#23) */

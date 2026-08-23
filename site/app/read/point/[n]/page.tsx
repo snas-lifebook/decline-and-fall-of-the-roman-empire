@@ -193,6 +193,10 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         <div className="map-slot">
           <Stack direction="vertical" gap={1.5} as="section">
             <Heading level={2}>이 포인트의 지도</Heading>
+            {/* 「옆에」로 옮겨졌을 때만 보인다. globals.css .map-follow-hint가 켠다 (#2) */}
+            <Text size="sm" color="secondary" className="map-follow-hint">
+              스크롤을 따라 지도가 움직여요
+            </Text>
             {/* 가계도·연표와 같은 방식으로 빌드 때 굽는다. 클라이언트 JS 0줄 */}
             <div className="point-map" dangerouslySetInnerHTML={{ __html: renderPointMap(places) }} />
             <Text size="sm" color="secondary">
