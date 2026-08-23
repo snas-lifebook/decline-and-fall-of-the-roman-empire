@@ -274,3 +274,23 @@ export const RECIPE_CATEGORIES: RecipeCategory[] = ['발표 준비', '인물 확
  * 같은 규약이다.
  */
 export const categoryId = (c: RecipeCategory) => `sec-${RECIPE_CATEGORIES.indexOf(c) + 1}`
+
+/**
+ * 컬렉션 카드에 붙는 갈래 메타 (#17).
+ *
+ * **글(blurb)만 여기 둔다.** 아이콘·색은 표현이라 `components/`·`globals.css`가 쥔다.
+ * `key`는 CSS 색과 아이콘을 잇는 안정 키 — 한글 분류명은 슬러그가 안 선다.
+ * blurb는 지어낸 카피가 아니라 그 갈래에 실제로 든 사례들을 한 줄로 줄인 것이다.
+ * `Record<RecipeCategory, …>`라 네 갈래가 다 안 채워지면 컴파일에서 막힌다(빌드 게이트).
+ */
+export type RecipeCategoryMeta = {
+  key: 'prep' | 'people' | 'facts' | 'flow'
+  blurb: string
+}
+
+export const RECIPE_CATEGORY_META: Record<RecipeCategory, RecipeCategoryMeta> = {
+  '발표 준비': { key: 'prep', blurb: '포인트로 발표 범위와 대본을 잡고, 도시별 전황을 모읍니다.' },
+  '인물 확인': { key: 'people', blurb: '같은 이름을 가르고, 한 인물의 등장 대목과 소속을 모읍니다.' },
+  '사실 확인': { key: 'facts', blurb: '책 서술을 사료와 대조하고, 자료에 빠진 것을 찾습니다.' },
+  '흐름 잡기': { key: 'flow', blurb: '연도 구간·계승 사슬·편이 뒤집힌 자리를 관계 자료로 잡습니다.' },
+}

@@ -130,7 +130,9 @@ export function Shell({
                 `-` `=` 키로도 된다(River 요청).
               */}
               <ReadSize />
-              <Search />
+              {/* 검색 박스는 밝기·글자크기와 같은 줄에 선다 — 화면 전체에 대한 행동이라
+                  (River: 「검색은 맨 위 라인에 있어야」). 「찾기」 단추가 아니라 박스다(#9) */}
+              <Search variant="box" />
               <ThemeToggle />
             </Stack>
           }
@@ -244,7 +246,7 @@ export function Shell({
             허브는 푸터의 다섯 장 칸을 접는다. 사이드바를 끄는 것과 같은 이유다 —
             갈림길에 갈림길을 또 놓지 않는다. `sidebar`가 그 신호를 이미 들고 있다
           */}
-          <SiteFooter where={where} compact={!sidebar} />
+          <SiteFooter where={where} />
         </div>
       </div>
     </AppShell>

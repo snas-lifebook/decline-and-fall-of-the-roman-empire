@@ -41,6 +41,8 @@ export type NavNode = {
   「다음 단계」처럼 **평범한 말**을 쓴다. 조어를 만들지 않는다.
 */
 const USE: [string, string][] = [
+  // 읽고 보는 법이 먼저, AI로 쓰는 법이 나중 (Stage B, 2026-08-20)
+  ['/use/reading', '화면 보는 법'],
   ['/use/data', 'AI에 줄 자료'],
   ['/use/recipes', '활용 사례'],
   ['/use/skills', '스킬'],
@@ -68,6 +70,19 @@ function typeCounts(): { type: Entity['type']; count: number }[] {
 
 function build(): NavNode[] {
   return [
+    /*
+      **시작하기가 맨 앞이다**(River #12, 2026-08-20). 앞 판은 읽기가 첫 갈래라
+      이전·다음 사슬이 곧장 본문으로 떨어졌는데, 자료를 **처음 받는 사람**이 밟는
+      순서는 「깔고 → 열고 → 읽고 → 찾고 → 받고 → 쓴다」다. learn.chatgpt·대다수 문서
+      사이트가 퀵스타트를 첫 그룹에 둔다 — 사슬도 시작하기 여섯 장을 다 지나야
+      읽기로 넘어간다(그래서 `/start/links` 다음이 이제 `/read`다).
+    */
+    {
+      href: '/start',
+      title: '시작하기',
+      ready: true,
+      children: START.map(([href, title]) => ({ href, title, ready: true })),
+    },
     {
       href: '/read',
       title: '읽기',
@@ -111,18 +126,27 @@ function build(): NavNode[] {
         })),
       ],
     },
-    { href: '/download', title: '가져가기', ready: true },
+    {
+      href: '/download',
+      title: '가져가기',
+      ready: true,
+      /*
+        받는 단위 셋(River #6). 자식이 없어 푸터 「가져가기」 칸이 비고 사이드바도
+        형제 중 혼자 단항이었다. 이 셋은 별도 라우트가 아니라 `/download` 한 장의
+        절 앵커다 — `app/download/page.tsx`가 같은 id로 `<section>`을 굽는다.
+        해시 앵커는 `navSteps`의 이전·다음에서 뺀다(같은 페이지로 튀지 않게).
+      */
+      children: [
+        { href: '/download#bundle', title: '전체 자료 한 묶음', ready: true },
+        { href: '/download#data', title: '인물·관계 데이터만', ready: true },
+        { href: '/download#points', title: '포인트별 표', ready: true },
+      ],
+    },
     {
       href: '/use',
       title: '활용하기',
       ready: true,
       children: USE.map(([href, title]) => ({ href, title, ready: true })),
-    },
-    {
-      href: '/start',
-      title: '시작하기',
-      ready: true,
-      children: START.map(([href, title]) => ({ href, title, ready: true })),
     },
   ]
 }
@@ -188,7 +212,9 @@ export function navSteps(
   href: string,
   tree: NavNode[] = navTree(),
 ): { prev?: NavNode; next?: NavNode } {
-  const flat = navFlat(tree)
+  // 해시 앵커(가져가기의 절들)는 별도 화면이 아니라 한 페이지 안 자리다 — 이전·다음이
+  // 같은 페이지로 튀지 않게 뺀다. 사이드바·푸터에는 그대로 남는다(navFlat은 안 거른다)
+  const flat = navFlat(tree).filter((n) => !n.href.includes('#'))
   const i = flat.findIndex((n) => n.href === href)
   if (i === -1) return {}
   return { prev: flat[i - 1], next: flat[i + 1] }

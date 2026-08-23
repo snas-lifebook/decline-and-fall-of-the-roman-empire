@@ -2,8 +2,9 @@ import Link from 'next/link'
 import { Stack, Text, Banner } from '@astryxdesign/core'
 import { DocShell, type DocSection } from '../../../components/DocShell'
 import { RecipeCard } from '../../../components/RecipeCard'
+import { CategoryCards } from '../../../components/CategoryCards'
 import { MaterialCards } from '../../../components/MaterialCards'
-import { RECIPES, RECIPE_CATEGORIES, categoryId } from '../../../lib/recipes'
+import { RECIPES, RECIPE_CATEGORIES, RECIPE_CATEGORY_META, categoryId } from '../../../lib/recipes'
 import { pageMeta } from '../../../lib/meta'
 
 /**
@@ -31,6 +32,8 @@ function sections(): DocSection[] {
         title: c,
         body: (
           <Stack direction="vertical" gap={3}>
+            {/* 컬렉션 격자에서 뛰어온 자리 — 같은 한 줄로 무슨 갈래인지 다시 세운다 */}
+            <Text color="secondary">{RECIPE_CATEGORY_META[c].blurb}</Text>
             {items.map((r) => (
               <RecipeCard key={r.id} r={r} />
             ))}
@@ -73,11 +76,15 @@ export default function Recipes() {
       summary="실제로 해보고 결과가 나온 방법만 모았습니다. 지금 상황에 맞는 것을 골라 그대로 따라 하시면 됩니다."
       sections={sections()}
       intro={
-        <Banner
-          status="info"
-          title="자료를 붙여넣지 않으면 AI가 없는 내용을 만들어 냅니다"
-          description="아래 사례는 모두 무엇을 붙여넣는지부터 적어 두었습니다. 붙여넣을 자료는 아래 세 가지 중 하나입니다."
-        />
+        <Stack direction="vertical" gap={4}>
+          <Banner
+            status="info"
+            title="자료를 붙여넣지 않으면 AI가 없는 내용을 만들어 냅니다"
+            description="아래 사례는 모두 무엇을 붙여넣는지부터 적어 두었습니다. 붙여넣을 자료는 아래 세 가지 중 하나입니다."
+          />
+          {/* learn.chatgpt/use-cases식 컬렉션 격자 — 갈래로 뛰는 시각 입구 (#17) */}
+          <CategoryCards />
+        </Stack>
       }
     />
   )

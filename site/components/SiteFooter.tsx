@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { Stack, Text, Divider, Grid } from '@astryxdesign/core'
+import NextLink from 'next/link'
+import { Stack, Text, Divider, Grid, Link } from '@astryxdesign/core'
 import { FeedbackBox } from './FeedbackBox'
 import { dataDate } from '../lib/datadate'
-import { siteUpdated, changelog } from '../lib/changelog'
+import { siteUpdated } from '../lib/changelog'
 import { navTree, navLabel } from '../lib/nav'
 import { linkById } from '../lib/links'
 
@@ -44,31 +44,9 @@ import { linkById } from '../lib/links'
 /** 작업 공간. 회차에 딸린 것부터 — 지금 쓰는 것이 위에 온다 */
 const OUTSIDE = ['drive-01', 'sheet', 'repo']
 
-/**
- * 묶음 여럿을 칸 `n`개에 **높이가 고르게** 나눠 담는다.
- *
- * 앞 판은 묶음 하나가 격자 칸 하나였다. 그러면 격자 줄 높이가 그 줄에서 가장 긴
- * 묶음을 따라가서, 「찾아보기」(8개) 옆의 「읽기」(2개) 아래에 여섯 줄짜리 구멍이
- * 뚫린다. 그리고 일곱 묶음이 네 칸에 안 떨어져 둘째 줄에 하나가 혼자 남는다
- * (River 스크린샷, 2026-08-19).
- *
- * `code.claude.com` 푸터는 **넷이 한 줄**이고 칸마다 높이가 비슷하다. 그렇게
- * 하려면 칸 하나가 묶음을 둘까지 쌓을 수 있어야 한다. 큰 것부터 꺼내 그때그때
- * 가장 짧은 칸에 얹는다 — 짐 싣기에서 쓰는 그 방법이고, 일곱 개쯤이면 이걸로
- * 충분히 고르게 떨어진다.
- */
-function pack<T extends { weight: number }>(groups: T[], n: number): T[][] {
-  const cols: { load: number; items: T[] }[] = Array.from({ length: n }, () => ({
-    load: 0,
-    items: [],
-  }))
-  for (const g of [...groups].sort((a, b) => b.weight - a.weight)) {
-    const lightest = cols.reduce((a, b) => (b.load < a.load ? b : a))
-    lightest.items.push(g)
-    lightest.load += g.weight
-  }
-  return cols.map((c) => c.items)
-}
+// 무게 기반 짐싣기 재배치(`pack`)를 버렸다 — 링크가 늘면 묶음이 다른 칸으로 튀어
+// 불안정했고 둘째 줄 묶음(가져가기·읽기·이 사이트)이 안 맞았다(River #24, 2026-08-20).
+// 이제 각 갈래가 자기 격자 칸에 고정된다 — 행이 저절로 맞고, 링크가 늘어도 그 칸만 자란다.
 
 function Column({
   title,
@@ -81,40 +59,28 @@ function Column({
   children: React.ReactNode
 }) {
   return (
-    <Stack direction="vertical" gap={1.5}>
-      <Text size="sm" weight="semibold">
-        {href ? <a href={href}>{title}</a> : title}
-      </Text>
-      <Stack direction="vertical" gap={1} hAlign="start">
+    // 헤더(14px/600/primary)와 링크(12px/secondary)를 크기·굵기·색 세 축으로 가른다
+    // (Claude 실측). astryx Link를 써야 globals.css:634의 accent+밑줄이 안 걸린다(헌장15)
+    <Stack direction="vertical" gap={3}>
+      {href ? (
+        <Link href={href} color="primary" weight="semibold">
+          {title}
+        </Link>
+      ) : (
+        <Text weight="semibold">{title}</Text>
+      )}
+      <Stack direction="vertical" gap={2} hAlign="start">
         {children}
       </Stack>
     </Stack>
   )
 }
 
-export function SiteFooter({
-  where,
-  /**
-   * 다섯 장 칸을 접는다. **허브에서만 켠다.**
-   *
-   * 푸터를 편 뒤 실측했더니 갈래 비중이 화면마다 갈렸다. 안쪽 화면은 원래
-   * 사이드바가 138개를 이고 있어서 푸터 30개가 더해져도 티가 안 나는데,
-   * **허브만 본문 비중이 26%에서 13%로 반토막 났다.** 갈림길 다섯을 고르라는
-   * 화면에서 푸터가 같은 다섯을 자식까지 달고 또 세우기 때문이다.
-   *
-   * 이 화면은 이미 같은 이유로 사이드바를 끈다 — 「갈림길에 갈림길을 또 놓으면
-   * 그게 헷갈림이다」(`app/page.tsx`). 푸터도 같은 규율을 따른다.
-   *
-   * 접는 것은 다섯 장 칸뿐이다. 「작업 공간」과 「이 사이트」는 허브 본문에
-   * 없으므로 그대로 둔다.
-   */
-  compact = false,
-}: {
-  where: string
-  compact?: boolean
-}) {
+export function SiteFooter({ where }: { where: string }) {
   const updated = siteUpdated()
 
+  // 허브도 다른 문서와 **같은 구성**의 푸터를 쓴다(River, 2026-08-20). 앞서 허브만
+  // 접고 가운데 정렬하던 `compact`를 걷었다 — 전 화면 푸터가 한 모양이라야 한다.
   return (
     <Stack direction="vertical" gap={6} as="footer">
       {/*
@@ -133,7 +99,7 @@ export function SiteFooter({
         정하지 않아도 되게, 칸을 펼치기 전에 갈 곳을 먼저 하나 준다.
       */}
       <Text size="sm" color="secondary">
-        자료가 처음이면 <Link href="/start">{navLabel('/start')}</Link>부터 보세요.
+        자료가 처음이면 <NextLink href="/start">{navLabel('/start')}</NextLink>부터 보세요.
       </Text>
 
       {/*
@@ -146,35 +112,33 @@ export function SiteFooter({
         같은 모양으로 넷을 고정하고, **항목이 많은 묶음을 앞에 둬서** 각 줄이 위에서
         아래로 짧아지게 한다. 빈 칸이 줄 가운데 뚫리는 일이 없어진다.
       */}
-      <FooterGrid compact={compact} updated={updated} />
+      <FooterGrid updated={updated} />
 
       <Divider />
 
-      <Stack direction="vertical" gap={1}>
-        <Text size="sm" weight="semibold">
-          산스 인생책 편데
-        </Text>
-        <Text size="sm" color="secondary">
-          기번 『로마제국쇠망사』 편역본과 인물·관계 자료를 발표와 토론에 쓰려고 모아둔 곳입니다.
-          암호 없이 열리지만 검색에는 안 걸립니다.
-        </Text>
-        {/* 날짜 둘은 서로 다른 것이라 반드시 붙여 놓는다 — 떨어지면 헷갈린다 */}
-        <Text size="sm" color="secondary" className="footer-varies">
-          자료 기준일 <strong>{dataDate()}</strong>
-          {updated ? (
-            <>
-              {' · '}화면 갱신 <strong>{updated}</strong>
-            </>
-          ) : null}
-        </Text>
-      </Stack>
+      {/*
+        Apple 저작권 행 — 「Copyright © 2026 … All rights reserved. Terms · Privacy」
+        형식(River, 2026-08-20). 우리에게 없는 약관·개인정보 페이지는 안 만들고, 실재하는
+        것(자료 기준일·화면 갱신·출처와 저작권)만 12px muted 한 줄에 「·」로 잇는다.
+        연도는 자료 기준일에서 뽑아 손으로 안 적는다. 날짜 둘은 서로 다른 것이라 붙인다.
+      */}
+      <Text size="sm" color="secondary" className="footer-varies">
+        © {dataDate().slice(0, 4)} 산스 인생책 편데{' · '}자료 기준일 <strong>{dataDate()}</strong>
+        {updated ? (
+          <>
+            {' · '}화면 갱신 <strong>{updated}</strong>
+          </>
+        ) : null}
+        {' · '}
+        <NextLink href="/about">출처와 저작권</NextLink>
+      </Text>
     </Stack>
   )
 }
 
 /** 링크 묶음 격자. 넷을 한 줄에 세우고 높이를 고르게 맞춘다 */
-function FooterGrid({ compact, updated }: { compact: boolean; updated?: string | null }) {
-  const groups: { key: string; weight: number; node: React.ReactNode }[] = []
+function FooterGrid({ updated }: { updated?: string | null }) {
+  const groups: { key: string; node: React.ReactNode }[] = []
 
   /*
     다섯 장을 편다. 깊이는 자식 한 겹까지만 — 「읽기」 밑에는 책이 둘(30포인트
@@ -184,28 +148,25 @@ function FooterGrid({ compact, updated }: { compact: boolean; updated?: string |
 
     허브에서는 통째로 접는다(`compact`) — 이유는 `SiteFooter`의 prop 주석에.
   */
-  if (!compact) {
-    for (const n of navTree().filter((x) => x.ready)) {
-      const kids = (n.children ?? []).filter((c) => c.ready)
-      groups.push({
-        key: n.href,
-        weight: kids.length + 1,
-        node: (
-          <Column title={n.title} href={n.href}>
-            {kids.map((c) => (
-              <Text key={c.href} size="sm" color="secondary">
-                <a href={c.href}>{c.title}</a>
-              </Text>
-            ))}
-          </Column>
-        ),
-      })
-    }
+  // 다섯 장을 편다(허브도 다른 문서와 같은 구성). 깊이는 자식 한 겹까지만
+  for (const n of navTree().filter((x) => x.ready)) {
+    const kids = (n.children ?? []).filter((c) => c.ready)
+    groups.push({
+      key: n.href,
+      node: (
+        <Column title={n.title} href={n.href}>
+          {kids.map((c) => (
+            <Link key={c.href} href={c.href} size="sm" color="secondary">
+              {c.title}
+            </Link>
+          ))}
+        </Column>
+      ),
+    })
   }
 
   groups.push({
     key: 'outside',
-    weight: OUTSIDE.length + 2,
     node: (
       <Column title="작업 공간">
           {OUTSIDE.map((id) => {
@@ -217,24 +178,22 @@ function FooterGrid({ compact, updated }: { compact: boolean; updated?: string |
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={l.icon} alt="" width={16} height={16} />
                 ) : null}
-                <Text size="sm" color="secondary">
-                  <a href={l.href} target="_blank" rel="noreferrer">
-                    {l.title}
-                  </a>
-                </Text>
+                {/* isExternalLink가 target+rel+새창 아이콘+낭독기 안내를 한 번에 준다(헌장15) */}
+                <Link href={l.href} isExternalLink size="sm" color="secondary">
+                  {l.title}
+                </Link>
               </Stack>
             )
           })}
-        <Text size="sm" color="secondary">
-          <Link href="/start/links">작업 공간 전체</Link>
-        </Text>
+        <Link href="/start/links" size="sm" color="secondary">
+          작업 공간 전체
+        </Link>
       </Column>
     ),
   })
 
   groups.push({
     key: 'site',
-    weight: (updated ? 3 : 2) + 1,
     node: (
       <Column title="이 사이트">
         {/*
@@ -243,34 +202,27 @@ function FooterGrid({ compact, updated }: { compact: boolean; updated?: string |
           대부분을 이미 답하는데 아무도 못 찾으니, 같은 질문이 단톡방에 다시 올라온다.
           푸터가 가장 싼 자리다 — 전 화면에 붙는다.
         */}
-        <Text size="sm" color="secondary">
-          <a href="/faq">자주 묻는 것</a>
-        </Text>
-        <Text size="sm" color="secondary">
-          <a href="/about">이 자료실은</a>
-        </Text>
+        <Link href="/faq" size="sm" color="secondary">
+          FAQ
+        </Link>
+        <Link href="/about" size="sm" color="secondary">
+          About
+        </Link>
         {updated ? (
-          <Text size="sm" color="secondary">
-            <a href="/changelog" className="footer-varies">
-              바뀐 것 {changelog().length}건
-            </a>
-          </Text>
+          <Link href="/changelog" size="sm" color="secondary">
+            Update
+          </Link>
         ) : null}
       </Column>
     ),
   })
 
-  // 허브는 묶음이 둘뿐이라 넷으로 벌리면 절반이 빈다
-  const cols = compact ? 2 : 4
-
+  // 각 갈래가 자기 격자 칸이다 — 행 정렬이 저절로 맞고(같은 행 칸은 같은 높이),
+  // 링크가 늘어도 그 칸만 자라지 다른 칸이 안 뒤섞인다 (River #24, pack() 폐기)
   return (
-    <Grid columns={cols} gap={6}>
-      {pack(groups, cols).map((bucket, i) => (
-        <Stack key={i} direction="vertical" gap={6}>
-          {bucket.map((g) => (
-            <div key={g.key}>{g.node}</div>
-          ))}
-        </Stack>
+    <Grid columns={4} gap={8}>
+      {groups.map((g) => (
+        <div key={g.key}>{g.node}</div>
       ))}
     </Grid>
   )

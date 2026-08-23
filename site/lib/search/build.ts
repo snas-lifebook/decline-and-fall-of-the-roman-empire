@@ -1,7 +1,7 @@
 import { loadEntities } from '../ontology'
 import { pointList } from '../points'
 import { entityHref } from '../entity'
-import { navFlat } from '../nav'
+import { navFlat, navLabel } from '../nav'
 import { TYPE_KO } from '../export/table'
 import { choseong, type SearchItem } from './match'
 
@@ -44,5 +44,22 @@ export function buildSearchIndex(): SearchItem[] {
     cho: choseong(n.title),
   }))
 
-  return [...objects, ...points, ...docs]
+  // 트리 밖 문서(About·FAQ·Update)도 색인한다 — navFlat은 navTree만 훑어 이 셋을
+  // 빠뜨렸다. 「About이 묻혔다」의 절반이 이것 — 푸터에만 있는 게 아니라 검색에도 안
+  // 잡혔다(감사 2026-08-20). 영문 별칭도 걸어 `about`·`faq`로도 찾히게 한다.
+  const offTree: SearchItem[] = [
+    { href: '/about', alias: ['About', '소개'] },
+    { href: '/faq', alias: ['FAQ', '자주 묻는 질문'] },
+    { href: '/changelog', alias: ['Update', '업데이트', '바뀐 것'] },
+  ].map(({ href, alias }) => ({
+    id: `doc:${href}`,
+    name: navLabel(href),
+    group: '안내',
+    kind: 'doc',
+    href,
+    alias,
+    cho: choseong(navLabel(href)),
+  }))
+
+  return [...objects, ...points, ...docs, ...offTree]
 }

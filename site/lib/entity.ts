@@ -34,6 +34,25 @@ export function entityHref(ref: EntityRef): string {
   return `/objects/${ref.type}/${entitySlug(ref.name)}`
 }
 
+/**
+ * 객체 상세의 앞뒤 — 같은 타입 목록에서 가나다순 ±1.
+ *
+ * 객체 상세 644장은 `navTree`에 없어 `navSteps`가 못 푼다(감사 2026-08-20). 목록
+ * 화면(`app/objects/[type]`)이 쓰는 것과 같은 `localeCompare('ko')`로 이웃을 정한다.
+ */
+export function entitySteps(
+  e: Entity,
+  root = REPO_ROOT,
+): { prev?: { href: string; title: string }; next?: { href: string; title: string } } {
+  const sib = loadEntities(root)
+    .filter((x) => x.type === e.type)
+    .sort((a, b) => a.name.localeCompare(b.name, 'ko'))
+  const i = sib.findIndex((x) => x.id === e.id)
+  const step = (x?: Entity) =>
+    x ? { href: entityHref({ id: x.id, type: x.type, name: x.name }), title: x.name } : undefined
+  return { prev: step(sib[i - 1]), next: step(sib[i + 1]) }
+}
+
 /** 주소에서 객체로 되돌아온다. `app/objects/[type]/[slug]`가 쓴다 */
 export function entityBySlug(type: string, slug: string, root = REPO_ROOT): Entity | undefined {
   return loadEntities(root).find((e) => e.type === type && entitySlug(e.name) === slug)

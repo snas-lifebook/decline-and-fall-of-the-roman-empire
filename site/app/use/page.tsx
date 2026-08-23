@@ -39,6 +39,7 @@ import { RECIPES, RECIPE_CATEGORIES, categoryId } from '../../lib/recipes'
  * 평서형, 독자가 할 일 중심**이다.
  */
 const ABOUT: Record<string, string> = {
+  '/use/reading': '본문·인물 카드·지도·글자 설정을 화면에서 어떻게 보는지 안내합니다.',
   '/use/data': 'AI에게 먼저 붙여넣을 자료 세 가지를 고르는 법입니다.',
   '/use/recipes': '실제로 해보고 결과가 나온 방법만 모았습니다. 프롬프트는 복사해서 쓰시면 됩니다.',
   '/use/skills': 'AI에게 시킬 수 있는 작업을 절차로 정리했습니다. 웹에서 바로 되는 것부터 나옵니다.',
@@ -53,7 +54,7 @@ export default function Use() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>활용하기</Heading>
         <Text size="lg" color="secondary">
-          쓰시던 ChatGPT나 Claude에 이 자료를 붙여넣어 쓰는 방법입니다.
+          이 자료를 화면에서 읽고 보는 법과, 쓰시던 ChatGPT나 Claude에 붙여넣어 쓰는 법입니다.
         </Text>
       </Stack>
 

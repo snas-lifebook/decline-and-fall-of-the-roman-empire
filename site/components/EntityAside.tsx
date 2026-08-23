@@ -161,7 +161,7 @@ export function CoOccurred({
   if (!co.length) return null
   return (
     <Stack direction="vertical" gap={2} as="section">
-      <Heading level={2}>같은 포인트에 함께 나온</Heading>
+      <Heading level={2}>같은 포인트의 객체</Heading>
       {/*
         관계 0인 객체가 217개(33.7%)다. 그 화면들은 날개가 아예 없어 이 칸이
         유일한 「이어진 것」이므로, 못 박는 한 줄이 여기 있어야 한다

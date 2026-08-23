@@ -126,6 +126,23 @@ html[data-font='pretendard'] {
   --read-font: var(--font-family-body);
 }
 
+/*
+  **더블 스크롤바 방지** (River 보고 2026-08-20, 크롬).
+
+  `AppShell height="fill"`가 내부 `#astryx-app-shell-main`을 100dvh로 가두고
+  `overflow:auto`로 자체 스크롤을 만든다(실측: main scrollHeight 1005 > clientHeight
+  919). 그런데 `html/body`엔 overflow 제약이 없어 최상위에도 스크롤바가 하나 더 섰다 —
+  화면 오른쪽에 나란히 둘. 셸이 스크롤을 쥐는 레이아웃에선 body는 절대 안 굴러야 한다.
+
+  전 화면이 같은 fill 셸을 쓰므로(허브도 `Shell` 사용) 안전하다 — 안쪽 스크롤러가
+  이미 도므로 body를 잠가도 내용이 잘리지 않는다.
+  ponytail: 모든 페이지가 fill 셸을 쓴다는 전제. 셸 밖 페이지가 생기면 그 페이지는 스크롤을 잃는다.
+*/
+html,
+body {
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-family-body);
   line-height: var(--text-body-leading);
@@ -164,10 +181,292 @@ body {
 }
 
 .read-rail,
+.shell-aside,
 .read-grid > .read-card,
 .astryx-app-shell-header,
 .astryx-side-nav {
   font-family: var(--font-family-body);
+}
+
+/*
+  **컨테이너가 자기 스케일을 선언한다** (감사 2026-08-20, #23).
+  위 규칙이 폰트만 되돌리고 크기를 안 되돌린 게 사이드 패널·날개의 위계가 튀던 공통
+  뿌리다 — 자식이 크기를 안 박으면 본문 17.6px을 물려받는다. 레일·날개는 UI 스케일
+  (14px)에 산다. 상단바·사이드바는 자기 컴포넌트가 크기를 쥐므로 건드리지 않는다.
+*/
+.read-rail,
+.shell-aside {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+/* 좁은 칸의 토글 트리거는 그 칸 계급(12px)을 따른다 — 기본 17px이라 12px 라벨 옆에서
+   튀고 줄상자가 6px 삐져 Shell.tsx의 paddingBottom 땜질을 낳았다 */
+.read-rail .astryx-collapsible-trigger,
+.shell-aside .astryx-collapsible-trigger {
+  font-size: var(--font-size-sm);
+  line-height: var(--text-supporting-leading);
+}
+
+/*
+  **토글 안은 딸린 자료다** (감사 2026-08-20). 어떤 것도 자기 트리거(17px)보다 크지
+  않다. 같은 Collapsible이 /faq에선 본문이고 포인트 화면 토글 안에선 딸린 자료다 —
+  계급은 컴포넌트가 아니라 자리(container)가 정한다.
+*/
+.doc .astryx-collapsible-content :is(h1, h2, h3, h4, .astryx-markdown-heading) {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-block: 0 8px;
+}
+
+.doc .astryx-collapsible-content :is(.astryx-markdown-paragraph, .astryx-markdown-list li) {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+
+.doc .astryx-collapsible-content .astryx-collapsible-trigger,
+.doc .astryx-collapsible-content .faq-answer {
+  font-size: var(--font-size-base);
+}
+
+/*
+  **히어로 CTA — 프리미엄 알약 단추** (River #25, 2026-08-20).
+  primary는 반전 채움(밝게=검정 알약·흰 글씨, 어둡게=자동 반전), ghost는 조용한 텍스트.
+  `.doc a`로 특이도를 올려 `.astryx-text a`(accent+밑줄)에 안 진다.
+*/
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-block-start: 8px;
+}
+
+.doc a.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 140ms ease,
+    opacity 140ms ease,
+    color 140ms ease;
+}
+
+.doc a.hero-btn-primary {
+  padding: 11px 22px;
+  background: var(--color-text-primary);
+  color: var(--color-background-body);
+}
+
+.doc a.hero-btn-primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.doc a.hero-btn-primary .hero-arrow {
+  transition: transform 140ms ease;
+}
+
+.doc a.hero-btn-primary:hover .hero-arrow {
+  transform: translateX(3px);
+}
+
+.doc a.hero-btn-ghost {
+  padding: 11px 6px;
+  color: var(--color-text-secondary);
+}
+
+.doc a.hero-btn-ghost:hover {
+  color: var(--color-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc a.hero-btn,
+  .doc a.hero-btn-primary .hero-arrow {
+    transition: none;
+  }
+  .doc a.hero-btn-primary:hover {
+    transform: none;
+  }
+}
+
+/* 상단 바 검색 박스 (#9, River: 「검색은 맨 위 라인에」). 겉은 입력 상자, 속은
+   팔레트를 여는 단추 — border/padding은 입력을 흉내 내되 커서·포커스링은 단추의 것.
+   밝기·글자크기 단추와 같은 줄에 서므로 높이를 그들에 맞춰 컴팩트하게 잡는다. */
+.search-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-background-body);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  cursor: text;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.search-box:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.search-box:focus-visible {
+  outline: none;
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 3px var(--color-border);
+}
+
+/* 돋보기 아이콘은 currentColor를 타므로 자동으로 회색이 된다 */
+.search-box svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.search-box-ph {
+  /* 「검색」 글자 뒤로 살짝 벌려 ⌘K를 오른쪽에 붙인다 */
+  padding-inline-end: 4px;
+}
+
+.search-box-kbd {
+  flex: none;
+  padding: 1px 6px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* 좁은 화면: 상단 바가 붐빈다. 글자·⌘K를 접고 돋보기만 남겨 아이콘 단추가 된다 */
+@media (max-width: 640px) {
+  .search-box-ph,
+  .search-box-kbd {
+    display: none;
+  }
+  .search-box {
+    padding: 7px;
+  }
+}
+
+/* 문서 하단 앞뒤 페이지네이션 (#8). Mintlify·Nextra·OpenAI가 쓰는 카드 한 줄 —
+   왼쪽 이전, 오른쪽 다음. 「다음」 카드가 곧 다음 단계라 따로 부르지 않는다. */
+.doc-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-block-start: 8px;
+}
+
+.doc-pager-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 140ms ease;
+}
+
+.doc-pager-card:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.doc-pager-prev {
+  align-items: flex-start;
+  text-align: start;
+}
+
+/* 다음 카드는 오른끝에 붙고 글자도 오른쪽 정렬 — 넘어가는 방향과 눈이 같이 간다 */
+.doc-pager-next {
+  align-items: flex-end;
+  text-align: end;
+}
+
+.doc-pager-dir {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.doc-pager-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* 좁으면 카드가 세로로 쌓인다 — 이전이 위, 다음이 아래 */
+@media (max-width: 560px) {
+  .doc-pager {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc-pager-card {
+    transition: none;
+  }
+}
+
+/* 「이 자료실은」 팝업 트리거 (#5). 갈림길 아래 조용한 한 줄 — 눌러서 여는 것이라
+   본문 링크의 파란 밑줄을 안 쓰고, 화살표만 살짝 밀린다. */
+.manifesto-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 4px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: color 140ms ease;
+}
+
+.manifesto-trigger:hover {
+  color: var(--color-text-primary);
+}
+
+.manifesto-trigger span {
+  transition: transform 140ms ease;
+}
+
+.manifesto-trigger:hover span {
+  transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manifesto-trigger span {
+    transition: none;
+  }
+}
+
+/* 바뀐 것 다이제스트 (#12). 날짜 칸 + 내용 — learn.chatgpt whats-new 타임라인 꼴 */
+.update-entry {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  gap: 16px;
+  padding-block: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.update-entry:first-child {
+  border-top: none;
+  padding-top: 4px;
+}
+
+/* 좁으면 날짜가 제목 위로 쌓인다 */
+@media (max-width: 560px) {
+  .update-entry {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -375,7 +674,7 @@ h6 {
   font-size: calc(var(--read-base) * 1.5);
 }
 
-.doc h2:not(:is(.astryx-card, .astryx-clickable-card) *) {
+.doc h2:not(:is(.astryx-card, .astryx-clickable-card, .rail-map-slot, .map-slot) *) {
   font-size: calc(var(--read-base) * 1.25);
 }
 
@@ -518,6 +817,17 @@ h6 {
 
 .doc .faq .astryx-collapsible:first-child {
   border-top: 1px solid light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.12));
+}
+
+/*
+ * 문서 말미 정리 (#14). FAQ 아코디언 바로 아래 앞뒤 카드가 오면, 아코디언의 마지막
+ * 줄 밑줄과 카드 앞 구분선이 겹쳐 **나란한 두 줄**이 됐다(River: 「말미가 정리·통일이
+ * 안 됐다」, /use/recipes 실측: 41px 간격에 hairline 둘). 구분선은 제 몫의 여백을 가진
+ * 진짜 분리선이라 그걸 남기고, 아코디언의 닫는 줄만 뗀다. FAQ가 문서 끝일 때(뒤에
+ * 구분선이 없을 때, 예: /faq)는 그 밑줄이 그대로 그룹을 닫으므로 건드리지 않는다.
+ */
+.doc section:has(.faq):has(+ .astryx-divider) .astryx-collapsible:last-child {
+  border-bottom: none;
 }
 
 .doc .faq .astryx-collapsible-trigger {
@@ -1124,7 +1434,12 @@ html[data-layers]:not([data-layers~='strait']) .point-map a[data-kind='strait'] 
 }
 
 .rail-map-slot h2 {
-  font-size: 13px;
+  /* 「이 포인트의 절」 라벨과 같은 계급이다 — 레일 칸 이름표지 절 제목이 아니다.
+     13px은 스케일 밖이었고, 특이도 (0,1,1) < .doc h2(0,2,1)라 한 번도 안 걸렸다 (#23) */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--text-supporting-leading);
+  color: var(--color-text-secondary);
   margin: 0 0 6px;
 }
 
@@ -1209,7 +1524,10 @@ html:is(:not([data-map]), [data-map='hover']) .map-slot:hover {
 
 /* 패널 안에서는 제목이 군더더기다. 지도와 한 줄 설명만 남긴다 */
 html:is(:not([data-map]), [data-map='hover']) .map-slot h2 {
-  font-size: 13px;
+  /* 캡션(12px)에 맞춘다. 13px은 스케일 밖이라 캡션 위에 반 칸 어긋나 있었다 */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
   margin: 0 0 6px;
 }
 
@@ -1370,37 +1688,311 @@ html[data-focus='on'] .site-footer {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   한 줄 남기기 — 푸터에서 유일하게 사람이 뭔가 하는 자리
+   피드백 컴포저 (#13) — 둥근 입력 상자 + 원형 보내기 단추
 
-   River: 「한줄 남기기 인터렉션이랄까 디자인이 뭔가 너무 쌩뚱맞다」.
-   고친 내용은 `components/FeedbackBox.tsx`에 적었다. 여기서 하는 일은 **입력이
-   남은 폭을 다 먹고 단추가 그 옆에 붙는 것**뿐이다.
-
-   좁아지면 세로로 접는다. 그때 단추는 왼쪽에 붙는다 — 폰에서 오른쪽 끝에 혼자
-   떠 있는 단추는 누를 것인지 아닌지가 안 보인다.
+   learn.chatgpt·Claude·Apple의 입력 꼴을 옮겼다: 입력과 단추가 한 상자에 들고,
+   포커스하면 링이 상자를 감싼다. 보내기는 원형 화살표 — 비면 흐려지고 글이 있으면
+   또렷해진다. 나머지 동작은 `components/FeedbackBox.tsx`에 적었다.
    ══════════════════════════════════════════════════════════════════ */
-.leave-line {
+.feedback {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.leave-line-form {
+.feedback-composer {
   display: flex;
+  align-items: center;
   gap: 8px;
-  align-items: flex-end;
   max-width: 560px;
+  padding: 6px 6px 6px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-background-body);
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
 }
 
-.leave-line-form > *:first-child {
+/* 포커스는 입력이 받지만 링은 상자가 두른다 — 그래야 「이 상자가 지금 켜졌다」로 읽힌다 */
+.feedback-composer:focus-within {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 4px var(--color-border);
+}
+
+.feedback-input {
   flex: 1 1 auto;
   min-width: 0;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font: inherit;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
 }
 
-@media (max-width: 560px) {
-  .leave-line-form {
-    flex-direction: column;
-    align-items: stretch;
+.feedback-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+/* 벌통은 눈·낭독기·탭 모두에서 빠진다 */
+.feedback-trap {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.feedback-send {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-text-primary);
+  color: var(--color-background-body);
+  cursor: pointer;
+  transition:
+    opacity 140ms ease,
+    transform 140ms ease;
+}
+
+.feedback-send:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.feedback-send:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.feedback-spin {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 999px;
+  animation: feedback-spin 0.7s linear infinite;
+}
+
+@keyframes feedback-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-send,
+  .feedback-composer {
+    transition: none;
+  }
+  .feedback-spin {
+    animation: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   프롬프트 탭 (#16) — 알약 탭 한 줄 + 컴포저 꼴 상자
+
+   learn.chatgpt「Send your first message」를 옮겼다. 상자·링·원형 단추는
+   피드백 컴포저(`.feedback-*`)와 같은 토큰을 써서 한 식구로 읽힌다 — 다른 것은
+   오른쪽 단추가 보내기가 아니라 복사라는 것뿐. 동작은 `components/PromptTabs.tsx`.
+   ══════════════════════════════════════════════════════════════════ */
+.prompt-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prompt-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prompt-tab {
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-background-body);
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    color 140ms ease;
+}
+
+.prompt-tab:hover {
+  border-color: var(--color-text-secondary);
+}
+
+/* 켜진 알약 = 피드백 컴포저가 포커스일 때와 같은 처방(primary 테두리 + border 색 링) */
+.prompt-tab[aria-selected='true'] {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 3px var(--color-border);
+  color: var(--color-text-primary);
+}
+
+/* 상자. `.feedback-composer`와 같은 토큰. 여러 줄 프롬프트라 단추는 아래에 붙는다 */
+.prompt-composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 560px;
+  padding: 12px 12px 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-background-body);
+}
+
+.prompt-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+/* `.feedback-send`와 같은 원형. 아이콘만 화살표 → 복사 */
+.prompt-copy {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-text-primary);
+  color: var(--color-background-body);
+  cursor: pointer;
+  transition: transform 140ms ease;
+}
+
+.prompt-copy:hover {
+  transform: translateY(-1px);
+}
+
+.prompt-copy-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prompt-tab,
+  .prompt-copy {
+    transition: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   AI 연결 절차 (#15 Part 2) — 알약 토글 + 동그라미 번호 스텝
+
+   토글 알약은 `.prompt-tab`과 같은 처방(같은 토큰·같은 켜짐 링)이라 화면마다
+   고르는 방식이 어긋나지 않는다. 스텝은 왼쪽 동그라미 번호 + 오른쪽 본문·스크린샷.
+   ══════════════════════════════════════════════════════════════════ */
+.platform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.platform-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.platform-pill {
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-background-body);
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    color 140ms ease;
+}
+
+.platform-pill:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.platform-pill[aria-selected='true'] {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 3px var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-num {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--color-text-primary);
+  color: var(--color-background-body);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.step-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step-text {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  padding-top: 3px;
+}
+
+.step-shot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-pill {
+    transition: none;
   }
 }
 

@@ -13,7 +13,8 @@ import {
 import { Shell } from '../../../../components/Shell'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
 import { docSections } from '../../../../lib/doc'
-import { navCrumbs, navSteps } from '../../../../lib/nav'
+import { navCrumbs } from '../../../../lib/nav'
+import { DocFooterNav } from '../../../../components/DocFooterNav'
 import { POINT_COUNT } from '../../../../lib/points'
 import { pointDoc } from '../../../../lib/text/point'
 import { pageMeta } from '../../../../lib/meta'
@@ -59,25 +60,6 @@ const LINKS = loadLinks()
  * 둘 사이가 170px밖에 안 돼서 **같은 것이 두 번 찍힌 것으로 읽힌다**(River가 화면을
  * 보고 짚었다). River의 요구는 「딸린 자료보다 먼저」였으므로 앞의 것만 남긴다.
  */
-function Steps({
-  prev,
-  next,
-}: {
-  prev?: { href: string; title: string }
-  next?: { href: string; title: string }
-}) {
-  return (
-    <Stack direction="horizontal" gap={3} justify="between" wrap="wrap" width="100%">
-      <Text size="sm" color="secondary">
-        {prev ? <a href={prev.href}>← {prev.title}</a> : null}
-      </Text>
-      <Text size="sm" color="secondary">
-        {next ? <a href={next.href}>{next.title} →</a> : null}
-      </Text>
-    </Stack>
-  )
-}
-
 export function generateStaticParams() {
   return Array.from({ length: POINT_COUNT }, (_, i) => ({ n: String(i + 1) }))
 }
@@ -94,7 +76,6 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
   const { title, lead, md } = pointDoc(n)
 
   const crumbs = navCrumbs(href)
-  const { prev, next } = navSteps(href)
   const layout = readLayout(n, md, ENTITIES, LINKS)
   // 목차만 여기서 쓴다. 본문 자르기는 `ReadGrid`가 블록 단위로 다시 한다
   const { sections } = docSections(md)
@@ -182,7 +163,8 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
         관계망·표·FAQ 넷을 다 지나야 나왔다(River 지적).
       */}
       <div style={NARROW}>
-        <Steps prev={prev} next={next} />
+        {/* 앞뒤 링크는 딸린 자료보다 위다. 앞뒤 카드 한 줄이 그 「먼저 넘어가는 길」이다 */}
+        <DocFooterNav href={href} />
       </div>
 
       <Divider />
@@ -239,8 +221,10 @@ export default async function Point({ params }: { params: Promise<{ n: string }>
           <Collapsible defaultIsOpen={false} trigger="이 포인트의 등장 객체">
             <Stack direction="vertical" gap={2}>
               {layout.tail.map((block, i) => (
-                // 제목 줄은 토글 이름이 이미 말하므로 빼고 목록만 낸다
-                <Markdown key={i}>{i === 0 ? block.replace(/^###[^\n]*\n?/, '') : block}</Markdown>
+                // 제목 줄은 토글 이름이 이미 말하므로 빼고 목록만 낸다.
+                // pointDoc이 `###`을 `##`로 한 단 올리므로 `#{2,4}`로 찾는다 —
+                // `###`만 찾다가 30개 대목에서 하나도 안 걸렸다(감사 2026-08-20, cards.ts와 같은 함정)
+                <Markdown key={i}>{i === 0 ? block.replace(/^#{2,4}[^\n]*\n?/, '') : block}</Markdown>
               ))}
             </Stack>
           </Collapsible>

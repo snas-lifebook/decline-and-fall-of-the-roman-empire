@@ -79,3 +79,50 @@ export function FlagIcon() {
     </Icon>
   )
 }
+
+/* 활용 사례 갈래 아이콘 (#17). 같은 24×24·1.5 두께 규약을 상속한다 */
+
+/** 발표 준비 — 화면과 받침 */
+export function PresentIcon() {
+  return (
+    <Icon>
+      <rect x="3.5" y="4.5" width="17" height="11" rx="1.5" />
+      <path d="M12 15.5v3" />
+      <path d="M8.5 20.5l3.5-2 3.5 2" />
+    </Icon>
+  )
+}
+
+/** 인물 확인 — 두 사람(앞뒤로 겹친다) */
+export function PeopleIcon() {
+  return (
+    <Icon>
+      <circle cx="9" cy="8.5" r="3" />
+      <path d="M3.5 19.5c0-3 2.4-5 5.5-5s5.5 2 5.5 5" />
+      <path d="M16 6.2a3 3 0 0 1 0 5.6" />
+      <path d="M17.5 14.6c2.2.5 3.5 2.3 3.5 4.9" />
+    </Icon>
+  )
+}
+
+/** 사실 확인 — 원 안의 체크(대조해 맞음) */
+export function VerifyIcon() {
+  return (
+    <Icon>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M8.5 12.5l2.5 2.5 4.5-5" />
+    </Icon>
+  )
+}
+
+/** 흐름 잡기 — 이어진 관계 노드(ego 그래프 계열) */
+export function FlowIcon() {
+  return (
+    <Icon>
+      <circle cx="6" cy="7" r="2.2" />
+      <circle cx="6" cy="17" r="2.2" />
+      <circle cx="17.5" cy="12" r="2.2" />
+      <path d="M8 8.2l7.5 2.9M8 15.8l7.5-2.9" />
+    </Icon>
+  )
+}

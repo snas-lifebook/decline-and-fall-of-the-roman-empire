@@ -6,11 +6,11 @@ import {
   Breadcrumbs,
   BreadcrumbItem,
   Outline,
-  Item,
 } from '@astryxdesign/core'
 import { Shell } from './Shell'
 import { CopyPageButton } from './CopyPageButton'
-import { navCrumbs, navSteps } from '../lib/nav'
+import { DocFooterNav } from './DocFooterNav'
+import { navCrumbs } from '../lib/nav'
 import { Faq } from './Faq'
 import { faqFor } from '../lib/faq'
 
@@ -71,7 +71,6 @@ export function DocShell({
   copyMarkdown?: string
 }) {
   const crumbs = navCrumbs(href)
-  const { prev, next } = navSteps(href)
 
   return (
     <Shell
@@ -132,24 +131,7 @@ export function DocShell({
       {/* 본문 다음, 이동 링크 앞. 읽고 나서 남는 물음이 여기서 풀린다 */}
       <Faq items={faqFor(href)} />
 
-      {next ? (
-        <>
-          <Divider />
-          <Stack direction="vertical" gap={1.5}>
-            <Text weight="semibold">다음 단계</Text>
-            <Item label={next.title} href={next.href} description="이어서 하시면 됩니다" />
-          </Stack>
-        </>
-      ) : null}
-
-      <Stack direction="horizontal" gap={3} justify="between" wrap="wrap">
-        <Text size="sm" color="secondary">
-          {prev ? <a href={prev.href}>← {prev.title}</a> : null}
-        </Text>
-        <Text size="sm" color="secondary">
-          {next ? <a href={next.href}>{next.title} →</a> : null}
-        </Text>
-      </Stack>
+      <DocFooterNav href={href} />
     </Shell>
   )
 }

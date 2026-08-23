@@ -4,11 +4,22 @@ import { DocShell, type DocSection } from '../../../components/DocShell'
 import { MaterialCards } from '../../../components/MaterialCards'
 import { dataShapeSections } from '../../../components/DataShape'
 import { ChatMockup } from '../../../components/ChatMockup'
+import { PromptTabs } from '../../../components/PromptTabs'
 import { RECIPES } from '../../../lib/recipes'
 import { pageMeta } from '../../../lib/meta'
 
 /** 손으로 「대부분」이라고 적지 않는다. 사례가 늘면 이 숫자도 같이 는다 */
 const WEB_ONLY = RECIPES.filter((r) => r.needs === 'web').length
+
+/**
+ * 「첫 메시지」 쇼케이스 프롬프트 (#16). 세팅 없이 웹만으로 되고 프롬프트가 있는
+ * 세 건 — learn.chatgpt "Send your first message" 탭에 그대로 대응한다. 프롬프트
+ * 원문은 `lib/recipes.ts`가 단일 소스라 여기서 다시 적지 않고 id로 뽑는다.
+ */
+const SHOWCASE = ['script-draft', 'same-name', 'person-arc']
+const promptTabs = SHOWCASE.map((id) => RECIPES.find((r) => r.id === id))
+  .filter((r): r is NonNullable<typeof r> => Boolean(r))
+  .map((r) => ({ label: r.title, prompt: r.prompt }))
 
 /**
  * 무엇을 AI에 주나 — 활용하기의 1번이고, 나머지 셋이 전부 여기에 기댄다.
@@ -61,6 +72,23 @@ function sections(): DocSection[] {
           <Text color="secondary">
             포인트 한 장이 5천 토큰쯤 됩니다. 어느 AI 창에나 한 번에 들어가니 잘라 붙이실 일은
             없습니다.
+          </Text>
+        </Stack>
+      ),
+    },
+
+    {
+      id: 'prompt',
+      title: '자료를 붙여넣었으면 이렇게 물어봅니다',
+      body: (
+        <Stack direction="vertical" gap={2}>
+          <Text color="secondary">
+            아래는 웹 화면만으로 해본 프롬프트입니다. 탭을 눌러 바꿔 보시고, 복사해서 AI 창에
+            붙여넣으시면 됩니다.
+          </Text>
+          <PromptTabs tabs={promptTabs} label="해볼 수 있는 프롬프트" />
+          <Text size="sm" color="secondary">
+            더 많은 사례는 <Link href="/use/recipes">활용 사례</Link>에 있습니다.
           </Text>
         </Stack>
       ),

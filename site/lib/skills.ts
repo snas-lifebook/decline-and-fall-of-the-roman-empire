@@ -1,3 +1,8 @@
+import { readFileSync, readdirSync } from 'node:fs'
+import { join } from 'node:path'
+import { REPO_ROOT } from './ontology'
+import { splitFrontmatter, unwikilink } from './doc'
+
 /**
  * 스킬 여덟 벌 — **산문이 아니라 필드로 둔다.**
  *
@@ -144,3 +149,54 @@ export const SKILL_TIERS: { tier: SkillTier; title: string; who: string; note: s
     note: '자료를 고치거나 다시 만들어내는 일이라 원본을 잘못 건드리면 되돌릴 수단이 없습니다.',
   },
 ]
+
+/**
+ * 스킬 정의 원문 — **빌드 때 `.agent/skills/<id>/SKILL.md`에서 읽어 온다.**
+ * `changelog.ts`가 git log를, `doc.ts`가 content/를 읽는 것과 같은 수법이다.
+ * 위 `SKILLS`는 사람이 다듬은 카드(요약)고, 이건 절차서 원문이다.
+ */
+export type SkillSource = { id: string; description: string; body: string }
+
+/**
+ * 위 카드가 가리키는 여덟 벌만 읽는다. `site/.agents`·`site/.claude`의 개발용
+ * 스킬은 사용자 스킬이 아니라 화면에 안 올린다.
+ */
+const SKILLS_DIR = join(REPO_ROOT, '.agent/skills')
+
+/** 맨 위 `# <id>` 한 줄은 카드 제목과 겹친다. 뗀다. */
+const stripH1 = (md: string) => md.replace(/^#\s+.*\n+/, '')
+
+/**
+ * 절차서 코드블록에 박힌 로컬 절대경로에서 OS 사용자 이름을 지운다.
+ * `/Users/…` → `~/…`. 깃허브 원문엔 그대로 있지만 다듬은 화면엔 안 싣는다.
+ */
+const stripHome = (md: string) => md.replace(/\/Users\/[^/\s]+\//g, '~/')
+
+let cachedSkillSources: SkillSource[] | undefined
+
+export function skillSources(): SkillSource[] {
+  if (cachedSkillSources) return cachedSkillSources
+  try {
+    cachedSkillSources = readdirSync(SKILLS_DIR, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name)
+      .sort()
+      .flatMap((id) => {
+        try {
+          const raw = readFileSync(join(SKILLS_DIR, id, 'SKILL.md'), 'utf8')
+          const { meta, body } = splitFrontmatter(raw)
+          return [{ id, description: meta.description ?? '', body: stripHome(unwikilink(stripH1(body))) }]
+        } catch {
+          return [] // 이 한 벌만 못 읽어도 나머지는 산다
+        }
+      })
+  } catch {
+    cachedSkillSources = [] // .agent/skills 없는 빌드 환경. 화면이 스스로 숨는다
+  }
+  return cachedSkillSources
+}
+
+/** id → 절차서 원문. 페이지가 카드마다 붙일 때 쓴다. */
+export function skillBodyById(): Map<string, string> {
+  return new Map(skillSources().map((s) => [s.id, s.body]))
+}

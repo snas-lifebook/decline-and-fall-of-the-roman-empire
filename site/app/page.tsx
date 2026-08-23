@@ -1,5 +1,7 @@
-import { Stack, Grid, Heading, Text, ClickableCard } from '@astryxdesign/core'
+import { Stack, Grid, Heading, Text, ClickableCard, Link, Divider } from '@astryxdesign/core'
 import { Shell } from '../components/Shell'
+import { Manifesto } from '../components/Manifesto'
+import { FlipNumber } from '../components/FlipNumber'
 import { BookIcon, SearchIcon, DownloadIcon, SparkIcon, FlagIcon } from '../components/icons'
 import { dataCounts } from '../lib/datashape'
 import { book } from '../lib/book'
@@ -7,32 +9,27 @@ import { book } from '../lib/book'
 /**
  * 목적 허브. `/`는 콘텐츠 페이지가 아니라 **갈림길**이다.
  *
- * 카드를 독자층이 아니라 **동사**로 가른 이유: 사람은 자기가 몇 층 독자인지보다
- * 지금 뭘 하려는지를 훨씬 잘 안다 (SPEC 「진입 구조」).
+ * 2026-08-20 재설계(v2, 롤모델 리서치 기반 — 볼트 [[롤모델_리서치_findings_20260820]]).
+ * 앞 판의 진단은 「구조가 뒤집혔다」였다 — 답은 전부 아래층에 있는데 첫 화면이 그
+ * 존재를 안 알린다. 실측: 첫 화면 사이드바 0개 vs 나머지 130개, 3질문(무엇을 다루나·
+ * 어떻게 쓰나·유용한가) 셋 다 첫 화면 미답. 그래서 이 화면이 바뀐다.
  *
- * 초보자 규율 둘이 이 화면에 걸린다.
- *   1. **되는 것을 먼저**, 준비 중인 것을 그 자리에 회색으로. 404보다 정직하다
- *   2. 설명은 기능이 아니라 **상황**으로 쓴다 — "언제 여기 오나"
+ *   1. **증상으로 연다** — 물건 이름("산스 인생책…")이 아니라 사람들이 실제로 겪는
+ *      헷갈림으로. Obsidian·Notion·Anthropic이 전부 증상 먼저다(findings P4).
+ *   2. **숫자를 stat row가 아니라 문장 안 링크로** — 「644」를 던지지 않고 "인물·지명·
+ *      사건 644개"에 링크를 걸어 자랑이 아니라 이정표로 만든다(Datasette·OWID·Vercel,
+ *      findings P2).
+ *   3. **선언 블록** — About의 앞 4문단을 끌어올린다. About 링크가 푸터에만 있어
+ *      묻혔던 문제도 같이 푼다(findings P8·§3.5).
  *
- * 사이드바를 달지 않는다. 갈림길에 갈림길을 또 놓으면 그게 헷갈림이다. 대신
- * 가운데로 모아 첫 화면이 왼쪽 1/3에 몰리지 않게 한다.
+ * 카드는 독자층이 아니라 **동사/상황**으로 가른다(사람은 자기가 몇 층 독자인지보다
+ * 지금 뭘 하려는지를 잘 안다, SPEC 「진입 구조」). 5장 유지는 River 결정 대기 —
+ * findings는 3문(읽는다/찾아본다/가져가서 쓴다)으로 접기를 권하지만 그건 라우팅
+ * 재편이라 River가 실물을 보고 정한다(PLAN v2 「열어둔 것」).
+ *
+ * 사이드바는 안 단다. 갈림길에 갈림길을 또 놓으면 그게 헷갈림이다.
  */
 
-/*
-  다섯을 한 격자에 나란히 둔다. 2026-08-16에 「찾아보기」가 붙어 다섯이 다 살았다.
-
-  **다섯 다 문장으로 끝맺는다.** 앞 판은 「맡은 대목을 지금 바로 읽고 싶으실 때」처럼
-  전부 「~할 때」로 끊긴 조각이었다. 서술어가 없으니 읽다 멈칫하고, 같은 리듬이 다섯 번
-  반복되니 더 안 읽힌다(River 지적, 2026-08-19).
-
-  **언제 오는지로 쓰는 원칙은 그대로다.** 사람은 자기가 몇 층 독자인지보다 지금 뭘
-  하려는지를 훨씬 잘 안다(SPEC 「진입 구조」). 바꾼 것은 관점이 아니라 문장이다.
-
-  「대목」은 「포인트」로 바꿨다 — 같은 것을 두 이름으로 부르지 않는다(River 확정).
-
-  아이콘은 제목을 대신하지 않고 **거든다**. 다섯 장이 한눈에 구별되면 두 번째 방문부터
-  글을 안 읽고도 손이 간다 (2026-08-16 River 요구)
-*/
 const CARDS = [
   {
     href: '/read',
@@ -67,60 +64,72 @@ const CARDS = [
 ] as const
 
 /**
- * 첫 화면이 무엇을 가졌는지 한 줄로 말한다.
+ * 히어로 숫자 줄. **손으로 안 적는다** — 데이터를 세어 만들므로 자료가 늘면 따라 는다.
  *
- * **손으로 안 적는다.** 데이터를 세어 만들므로 자료가 늘면 이 줄이 따라 는다 —
- * 손으로 적은 숫자는 반드시 낡는다(`/about`의 표가 같은 이유로 빌드 때 채워진다).
- *
- * 2026-08-19 실측: 첫 화면은 히어로와 카드 다섯을 합쳐 **220자**였고 「자료를 모아둔
- * 곳」이라고만 했다 — **어느 자료실에나 해당되는 문장**이다. 무슨 책인지도 얼마나
- * 있는지도 없어서, 첫 외부 사용자가 스킬 페이지의 존재를 링크를 받고서야 알았다.
- * 숫자가 산문보다 빠르게 「무엇인가」에 답한다(datasette.io 실측에서 가져온 판단).
+ * 앞 판은 「객체 644 · 관계 667 · …」 가운뎃점 나열(stat row)이었다. 그건 "우리가
+ * 이만큼 만들었다"는 자랑이지 "어디로 가면 되는지"가 아니라, 헌장0 판정질문("헷갈림을
+ * 더는가, 만든 걸 보여주는가")에 걸린다. Datasette이 `44 tools`·`154 plugins`를 문장
+ * 한복판에 링크로 박은 것처럼, 같은 숫자를 **이정표**로 바꾼다.
  */
-function scale(): string {
+function counts() {
   const c = dataCounts()
-  // 번호가 붙은 편만 센다 — 목차·일러두기·옮기고 나서는 포인트가 아니다
-  const points = book().parts.filter((p) => p.n).length
-  return [
-    `객체 ${c.entities.toLocaleString()}`,
-    `관계 ${c.links.toLocaleString()}`,
-    `편역본 ${points}포인트`,
-    `기번 원전 ${c.source}장`,
-  ].join(' · ')
+  return {
+    // 번호가 붙은 편만 센다 — 목차·일러두기·옮기고 나서는 포인트가 아니다
+    points: book().parts.filter((p) => p.n).length,
+    source: c.source,
+    entities: c.entities,
+    links: c.links,
+  }
 }
 
 export default function Home() {
+  const n = counts()
   return (
     <Shell path="/" where="첫 화면" sidebar={false} maxWidth={960}>
       <Stack direction="vertical" gap={8}>
         {/* 첫 화면이 상단에 딱 붙으면 급해 보인다. 위를 비워 숨을 준다 */}
-        <Stack direction="vertical" gap={1.5} hAlign="center" paddingBlock={10}>
-          <Heading level={1} type="display-1" justify="center">
-            산스 인생책 로마쇠망사 자료실
-          </Heading>
+        <Stack direction="vertical" gap={2} hAlign="center" paddingBlock={10}>
           {/*
-            **무엇인지를 먼저 말한다.** 앞 판 둘째 문장은 「설치도 로그인도 필요
-            없습니다」였는데, River가 「이런 말을 왜 넣냐」고 했다. 맞다 — 없는 것을
-            세어 봐야 이 자리가 무엇인지는 안 나온다.
-
-            docs.claude.com 한국어 문서가 여는 방식을 그대로 따랐다: 「Claude Code는
-            코드베이스를 읽고, 파일을 편집하고 … 에이전트 코딩 도구입니다.」 **대상을
-            한 문장으로 못박고 시작한다.** 우리 첫 화면에는 그 문장이 없었다.
+            **증상 먼저.** h1이 물건 이름이면 헷갈림을 못 짚는다. 이 문장은 지어낸
+            카피가 아니라 「찾아보기」 카드에 이미 있던 우리 문장을 끌어올린 것이다.
+            (문구 최종안은 River 결정 — PLAN v2 「열어둔 것」)
           */}
+          <Heading level={1} type="display-1" justify="center">
+            『로마제국쇠망사』, 발표와 토론을 위한 자료실
+          </Heading>
           <Text size="lg" color="secondary" justify="center">
-            발표와 토론에 쓰는 자료를 모아둔 곳입니다. 기번 『로마제국쇠망사』 편역본과 거기
-            나오는 인물·지명·사건을 함께 봅니다.
+            인물이 헷갈릴 때 찾아보고, 발표 표는 받아 가고, 쓰시던 AI에는 붙여 씁니다.
           </Text>
+          {/* 숫자 줄 — 문장 안 링크(이정표). 굵은 숫자마다 그 목록으로 간다 */}
           <Text size="sm" color="secondary" justify="center">
-            {scale()}
+            편역본 <Link href="/read"><FlipNumber n={n.points} />포인트</Link>와 기번 원전{' '}
+            <Link href="/read"><FlipNumber n={n.source} />장</Link>을 담았고, 거기 나오는 인물·지명·사건{' '}
+            <Link href="/objects"><FlipNumber n={n.entities} />개</Link>와 그 사이 관계{' '}
+            <Link href="/objects"><FlipNumber n={n.links} />개</Link>를 정리했습니다.
           </Text>
+          {/*
+            **주 CTA 하나 + 조용한 보조 하나**(findings P6, Von Restorff). 다섯 카드가
+            시각으로 다 똑같아 아무것도 안 도드라지던 것을 여기서 하나 세운다.
+          */}
+          {/* 퀵스타트가 주 CTA다(River #4) — 처음 오는 사람을 시작하기로 먼저 보낸다.
+              알약 채움은 그쪽에, 「맡은 포인트 읽기」는 조용한 ghost로. */}
+          <div className="hero-cta">
+            <a className="hero-btn hero-btn-primary" href="/start">
+              처음 오셨다면{' '}
+              <span className="hero-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a className="hero-btn hero-btn-ghost" href="/read">
+              맡은 포인트 읽기
+            </a>
+          </div>
         </Stack>
 
         <Grid columns={{ minWidth: 280 }} gap={3}>
           {CARDS.map((c) => (
             <ClickableCard key={c.title} href={c.href} label={c.title} padding={4}>
               <Stack direction="vertical" gap={0.5}>
-                {/* 아이콘 → 글자 간격은 링크 카드와 같은 8px이다. 화면마다 다르면 아이콘이 붙었다 떨어졌다 한다 */}
                 <Stack direction="horizontal" gap={2} vAlign="center">
                   <c.Icon />
                   <Heading level={2}>{c.title}</Heading>
@@ -134,15 +143,16 @@ export default function Home() {
         </Grid>
 
         {/*
-          「바로 가는 곳」 카드 줄을 여기서 뺐다 (2026-08-17).
-
-          푸터가 이제 **전 화면에** 「바로가기」 칸으로 같은 링크를 아이콘까지
-          달아 놓는다. 허브에만 따로 두면 같은 링크가 한 화면에 두 번 나오고,
-          카드 줄과 푸터가 구분선 하나를 사이에 두고 붙어 있어서 **아래쪽이
-          통째로 「뭔가 잔뜩 있는 곳」으로 뭉개졌다** — River가 지적한 자리다.
-
-          한 종류는 한 자리에 둔다. 허브는 갈림길 다섯만 남는다.
+          **선언 블록은 이제 팝업이다**(River #5, Round2 「팝업으로 뜨게」). 앞 판은
+          「이 자료실은 01·02·03 + 무엇이 아닌가」를 카드 밑에 펼쳐 뒀는데, 첫 화면에서
+          제일 먼저 할 일은 갈림길을 고르는 것이지 선언을 읽는 것이 아니다. 갈림길
+          아래 한 줄로 접고, 누르면 `Dialog`로 뜬다. 내용은 `lib/manifesto.ts` 단일
+          소스 — `/about`도 같은 것을 먹는다.
         */}
+        <Divider />
+        <Stack direction="vertical" hAlign="center" paddingBlock={2}>
+          <Manifesto />
+        </Stack>
       </Stack>
     </Shell>
   )

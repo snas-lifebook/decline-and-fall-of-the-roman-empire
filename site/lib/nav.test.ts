@@ -4,13 +4,13 @@ import { navTree, navFlat, navFind, navCrumbs, navSteps } from './nav'
 import { POINT_COUNT } from './points'
 
 describe('내비 트리', () => {
-  it('다섯 갈래가 전부 있다', () => {
+  it('다섯 갈래가 전부 있고, 시작하기가 맨 앞이다 (#12)', () => {
     expect(navTree().map((n) => n.href)).toEqual([
+      '/start',
       '/read',
       '/objects',
       '/download',
       '/use',
-      '/start',
     ])
   })
 
@@ -86,7 +86,8 @@ describe('이전·다음', () => {
   })
 
   it('섹션 끝에서 다음 섹션으로 넘어간다', () => {
-    expect(navSteps('/start/links').next).toBeUndefined()
+    // 시작하기가 맨 앞이라, 작업 공간(시작하기 끝) 다음은 읽기다 (#12)
+    expect(navSteps('/start/links').next?.href).toBe('/read')
     // 본문 30 다음은 「옮기고 나서」다 — 책을 끝까지 읽고 나서야 그 책을 벗어난다
     expect(navSteps(`/read/point/${POINT_COUNT}`).next?.href).toBe('/read/text/옮기고_나서')
     // 편역본을 다 읽으면 두 번째 권으로 넘어간다
@@ -96,10 +97,11 @@ describe('이전·다음', () => {
   })
 })
 
-describe('활용하기 — 네 장', () => {
-  it('재료가 먼저다. 안 주면 AI가 지어낸다', () => {
+describe('활용하기 — 다섯 장', () => {
+  it('화면 보는 법이 먼저다. 읽고 보는 법이 AI로 쓰는 법보다 앞이다 (Stage B, 2026-08-20)', () => {
     const kids = navFind('/use')?.children ?? []
     expect(kids.map((c) => c.href)).toEqual([
+      '/use/reading',
       '/use/data',
       '/use/recipes',
       '/use/skills',

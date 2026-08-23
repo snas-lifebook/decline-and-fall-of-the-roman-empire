@@ -1,6 +1,7 @@
-import { Stack, Grid, Heading, Text, Divider, List, ListItem, ClickableCard } from '@astryxdesign/core'
+import { Stack, Heading, Text, Divider, List, ListItem } from '@astryxdesign/core'
 import { Shell } from '../../components/Shell'
-import { navFind, navLabel } from '../../lib/nav'
+import { ChoiceCards, type ChoicePath } from '../../components/ChoiceCards'
+import { navFind } from '../../lib/nav'
 import { loadDoc } from '../../lib/doc'
 import { pageMeta } from '../../lib/meta'
 
@@ -28,26 +29,32 @@ import { pageMeta } from '../../lib/meta'
  * `steps`는 주소만 적는다. 이름은 `navLabel()`이 `lib/nav.ts`에서 끌어온다 —
  * 이름을 두 군데 적으면 바뀔 때 한쪽이 낡는다.
  */
-const PATHS = [
+const PATHS: readonly ChoicePath[] = [
   {
     href: '/read',
     title: '웹에서 보기만 하기',
     desc: '설치도 로그인도 없습니다. 지금 바로 읽으실 수 있습니다.',
-    steps: [] as string[],
+    badge: '설치 없이 바로',
+    mock: 'browser',
+    steps: [],
   },
   {
     href: '/start/install',
     title: '자료를 내 컴퓨터에 두기',
     desc: '옵시디언으로 열면 인물 노트와 지도를 함께 볼 수 있습니다.',
+    badge: '인물 노트·지도까지',
+    mock: 'vault',
     steps: ['/start/install', '/start/open', '/start/plugins'],
   },
   {
     href: '/start/ai',
     title: 'AI에 물려 쓰기',
     desc: '받아둔 자료를 쓰시던 ChatGPT나 Claude에 붙여 씁니다.',
+    badge: '쓰던 AI에 연결',
+    mock: 'chat',
     steps: ['/start/install', '/start/ai', '/use'],
   },
-] as const
+]
 
 /**
  * 마크다운이 없는 장의 한 줄. **「작업 공간」은 카드 화면이 되면서
@@ -56,6 +63,7 @@ const PATHS = [
  */
 const ABOUT: Record<string, string> = {
   '/start/links': '편데 운영에 쓰는 바로가기 모음입니다. 흩어져 있던 곳을 여기서 바로 찾아가시면 됩니다.',
+  '/start/ai': '쓰시던 ChatGPT나 Claude에 이 자료를 물려둡니다. 매번 붙여넣지 않아도 됩니다.',
 }
 
 export const metadata = pageMeta('시작하기')
@@ -74,23 +82,8 @@ export default function Start() {
 
       <Divider />
 
-      <Grid columns={{ minWidth: 260 }} gap={3}>
-        {PATHS.map((p) => (
-          <ClickableCard key={p.href} href={p.href} label={p.title} padding={4}>
-            <Stack direction="vertical" gap={1}>
-              <Heading level={2}>{p.title}</Heading>
-              <Text size="sm" color="secondary">
-                {p.desc}
-              </Text>
-              {p.steps.length ? (
-                <Text size="sm" color="secondary">
-                  {p.steps.map((s, i) => `${i + 1}. ${navLabel(s)}`).join('  →  ')}
-                </Text>
-              ) : null}
-            </Stack>
-          </ClickableCard>
-        ))}
-      </Grid>
+      {/* learn.chatgpt 퀵스타트식 — 카드 맨 위 창 목업 + 배지로 갈래를 눈으로 가른다 (#15) */}
+      <ChoiceCards items={PATHS} />
 
       <Stack direction="vertical" gap={1.5} as="section" id="all">
         <Heading level={2}>전체 순서</Heading>

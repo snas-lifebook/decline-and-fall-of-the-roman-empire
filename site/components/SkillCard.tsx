@@ -8,6 +8,8 @@ import {
   CodeBlock,
   MetadataList,
   MetadataListItem,
+  Collapsible,
+  Markdown,
 } from '@astryxdesign/core'
 import type { Skill } from '../lib/skills'
 
@@ -21,7 +23,7 @@ import type { Skill } from '../lib/skills'
  * 셋을 고쳤다 — 제목은 한국어로 하고 코드 이름은 작게 옆에, 라벨은 왼쪽 칸으로,
  * 붙여넣을 말은 복사 버튼 달린 상자로.
  */
-export function SkillCard({ s }: { s: Skill }) {
+export function SkillCard({ s, body }: { s: Skill; body?: string }) {
   return (
     <Card padding={4}>
       <Stack direction="vertical" gap={2}>
@@ -67,6 +69,13 @@ export function SkillCard({ s }: { s: Skill }) {
           <MetadataList columns="single" label={{ position: 'start', width: 88 }}>
             <MetadataListItem label="조심할 것">{s.caution}</MetadataListItem>
           </MetadataList>
+        ) : null}
+
+        {/* 카드는 요약, 여기는 절차서 그 자체다. 빌드 때 SKILL.md에서 읽어 온다(#18) */}
+        {body ? (
+          <Collapsible defaultIsOpen={false} trigger="이 절차서 전문 보기">
+            <Markdown>{body}</Markdown>
+          </Collapsible>
         ) : null}
       </Stack>
     </Card>

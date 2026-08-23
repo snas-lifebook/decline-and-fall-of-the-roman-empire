@@ -55,9 +55,8 @@ export function PointGraph({
 
   return (
     <Stack direction="vertical" gap={1} as="section">
-      <Text size="sm" weight="semibold">
-        이 포인트의 관계망
-      </Text>
+      {/* 제목은 감싼 Collapsible 트리거(「이 포인트의 관계망」)가 이미 말한다 —
+          여기 또 두면 같은 글자가 트리거 바로 밑에 두 번 뜬다 (감사 2026-08-20) */}
       <EgoGraph nodes={nodes} edges={edges} />
       <Text size="sm" color="secondary">
         이 포인트의 관계 {allEdges.length}건 중{' '}

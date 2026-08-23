@@ -11,6 +11,7 @@ import {
   Text,
 } from '@astryxdesign/core'
 import { searchItems, type SearchItem } from '../lib/search/match'
+import { SearchIcon } from './icons'
 
 /**
  * 이름으로 찾기 (T3.4) — `⌘K`.
@@ -21,13 +22,22 @@ import { searchItems, type SearchItem } from '../lib/search/match'
  *
  * 색인은 **처음 열 때 한 번** 받는다(124KB). 컴포넌트에 import하면 739장 전부의
  * 번들에 붙으므로 정적 파일로 굽고 `fetch`한다. 두 번째부터는 캐시에서 온다.
+ *
+ * **트리거는 겉모습만 둘, 팔레트는 하나**(River #9). 진짜 입력을 하나 더 만들면
+ * 상태·초성매칭이 갈라지니, 겉만 입력창처럼 보이는 단추로 같은 팔레트를 연다
+ * (Stripe·Algolia DocSearch가 쓰는 방식).
+ *
+ * `variant="box"`는 상단 바에 서는 검색 박스다(River: 「검색은 맨 위 라인에 있어야
+ * 할듯」). 앞서 첫 화면 본문 한복판에 큰 박스를 뒀다가 상단 바로 올렸다 — 검색은
+ * 화면 전체에 대한 행동이라 밝기·글자크기와 같은 줄에 선다. `button`(ghost)은 남겨
+ * 두되 지금은 안 쓴다.
  */
 
 type Item = { id: string; label: string; auxiliaryData: SearchItem }
 
 const toItem = (s: SearchItem): Item => ({ id: s.id, label: s.name, auxiliaryData: s })
 
-export function Search() {
+export function Search({ variant = 'button' }: { variant?: 'button' | 'box' }) {
   const [isOpen, setIsOpen] = useState(false)
   const index = useRef<SearchItem[] | null>(null)
   const [ready, setReady] = useState(false)
@@ -100,13 +110,30 @@ export function Search() {
 
   return (
     <>
-      <Button
-        variant="ghost"
-        size="sm"
-        label="찾기"
-        onClick={() => setIsOpen(true)}
-        aria-keyshortcuts="Meta+K Control+K"
-      />
+      {variant === 'box' ? (
+        <button
+          type="button"
+          className="search-box"
+          onClick={() => setIsOpen(true)}
+          aria-keyshortcuts="Meta+K Control+K"
+          aria-label="이름으로 찾기"
+        >
+          <SearchIcon />
+          <span className="search-box-ph">검색</span>
+          {/* 초성도 된다는 것을 팔레트를 열기 전 귀띔 — 좁으면 CSS가 감춘다 */}
+          <kbd className="search-box-kbd" aria-hidden="true">
+            ⌘K
+          </kbd>
+        </button>
+      ) : (
+        <Button
+          variant="ghost"
+          size="sm"
+          label="찾기"
+          onClick={() => setIsOpen(true)}
+          aria-keyshortcuts="Meta+K Control+K"
+        />
+      )}
       <CommandPalette<Item>
         isOpen={isOpen}
         onOpenChange={setIsOpen}

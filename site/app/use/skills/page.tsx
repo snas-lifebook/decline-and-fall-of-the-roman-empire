@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { Stack, Text, Banner } from '@astryxdesign/core'
+import { Stack, Text, Banner, MetadataList, MetadataListItem } from '@astryxdesign/core'
 import { DocShell, type DocSection } from '../../../components/DocShell'
 import { SkillCard } from '../../../components/SkillCard'
-import { SKILLS, SKILL_TIERS } from '../../../lib/skills'
+import { SKILLS, SKILL_TIERS, skillBodyById } from '../../../lib/skills'
 import { linkById } from '../../../lib/links'
 import { pageMeta } from '../../../lib/meta'
 
@@ -33,6 +33,51 @@ const SUMMARY =
   'AI에게 시킬 수 있는 작업을 절차로 정리했습니다. 웹 화면만으로 되는 것부터 나옵니다.'
 
 function sections(): DocSection[] {
+  const bodies = skillBodyById()
+
+  /*
+    **스킬 하나가 어떻게 생겼는지 먼저 보여준다**(River #18, learn.chatgpt build-skills).
+    앞 판은 요약 카드만 있고 「무엇으로 이뤄지나」가 없었다. 여덟 벌이 다 같은 뼈대라
+    한 번만 설명하면 된다 — 그 뼈대를 알고 나면 아래 카드의 「전문 보기」가 읽힌다.
+  */
+  const anatomy: DocSection = {
+    id: 'anatomy',
+    title: '스킬 하나는 어떻게 생겼나',
+    body: (
+      <Stack direction="vertical" gap={3}>
+        <Text color="secondary">
+          스킬 하나는 SKILL.md 파일 한 장이에요. 맨 위 몇 줄에 이름표가 붙고 그 아래로
+          절차가 이어집니다. 아래 여덟 벌이 모두 같은 뼈대를 씁니다.
+        </Text>
+        <Text size="sm" color="secondary">
+          맨 위 — 이름표
+        </Text>
+        <MetadataList columns="single" label={{ position: 'start', width: 120 }}>
+          <MetadataListItem label="name">스킬의 코드 이름이에요.</MetadataListItem>
+          <MetadataListItem label="description">
+            무엇을 하는지 한 줄과, AI가 이 스킬을 언제 꺼낼지 알려주는 트리거 문구예요.
+          </MetadataListItem>
+          <MetadataListItem label="version">판 번호예요.</MetadataListItem>
+        </MetadataList>
+        <Text size="sm" color="secondary">
+          본문 — 다섯 마디
+        </Text>
+        <MetadataList columns="single" label={{ position: 'start', width: 120 }}>
+          <MetadataListItem label="언제 쓰는가">어떤 상황에서 부르는지 적어요.</MetadataListItem>
+          <MetadataListItem label="입력">무엇을 주어야 도는지예요.</MetadataListItem>
+          <MetadataListItem label="절차">순서대로 밟는 단계예요.</MetadataListItem>
+          <MetadataListItem label="하지 말 것">
+            틀리기 쉬운 지점이에요. 이 절차서들이 있는 이유이기도 해요.
+          </MetadataListItem>
+          <MetadataListItem label="출력 형태">무엇이 어떤 모양으로 나오는지예요.</MetadataListItem>
+        </MetadataList>
+        <Text color="secondary">
+          아래 카드마다 「이 절차서 전문 보기」를 열면 그 스킬의 SKILL.md 원문이 그대로 나옵니다.
+        </Text>
+      </Stack>
+    ),
+  }
+
   const tiers: DocSection[] = SKILL_TIERS.flatMap((t) => {
     const items = SKILLS.filter((s) => s.tier === t.tier)
     if (!items.length) return []
@@ -52,7 +97,7 @@ function sections(): DocSection[] {
             ) : null}
             <Stack direction="vertical" gap={3}>
               {items.map((s) => (
-                <SkillCard key={s.id} s={s} />
+                <SkillCard key={s.id} s={s} body={bodies.get(s.id)} />
               ))}
             </Stack>
           </Stack>
@@ -62,17 +107,18 @@ function sections(): DocSection[] {
   })
 
   return [
+    anatomy,
     ...tiers,
     {
       id: 'source',
       title: '원문을 보시려면',
       body: (
         <Text color="secondary">
-          각 절차가 무엇을 하지 말라고 적어두었는지까지 보시려면{' '}
+          여덟 벌 모두 위에서 「전문 보기」로 펼쳐 볼 수 있어요. 원본 파일은{' '}
           <a href={linkById('repo-skills').href} target="_blank" rel="noreferrer">
-            스킬 원문 여덟 벌
+            깃허브 저장소
           </a>
-          이 깃허브에 있습니다. 「하지 말 것」 때문에 만든 절차서들입니다.
+          에 있습니다.
         </Text>
       ),
     },

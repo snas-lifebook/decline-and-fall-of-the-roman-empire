@@ -12,6 +12,7 @@ import {
 } from '@astryxdesign/core'
 import { Shell } from '../../../../components/Shell'
 import { CopyPageButton } from '../../../../components/CopyPageButton'
+import { DocFooterNav } from '../../../../components/DocFooterNav'
 import {
   EntityAside,
   EntityGraph,
@@ -19,7 +20,7 @@ import {
   CO_SHOWN,
 } from '../../../../components/EntityAside'
 import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
-import { entityIndex, entitySlug, neighbors, coOccurring } from '../../../../lib/entity'
+import { entityIndex, entitySlug, neighbors, coOccurring, entitySteps } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
 import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
@@ -226,6 +227,7 @@ export default async function ObjectPage({
    * 이미 말한다.
    */
   const descs = e.descs.filter((d) => d.desc.trim() !== (e.desc ?? '').trim())
+  const steps = entitySteps(e)
   // 날짜 붙은 관계가 2건 미만이면 `null`이다 — 빈 상자를 내보내지 않는다
   const tl = timelineOf(e.id, LINKS, INDEX)
   const portrait = portraitOf(e.id)
@@ -276,19 +278,32 @@ export default async function ObjectPage({
             </Text>
           ) : null}
         </Stack>
-        {/*
-          초상. 262명 중 164명에게만 있어서(실측 2026-08-18) 없으면 그냥 안 그린다 —
-          자리를 비워두면 화면마다 높이가 달라져 목록처럼 훑을 때 눈이 흔들린다.
-        */}
-        {portrait ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="entity-face" src={portrait.file} alt={`${e.name} 초상`} loading="lazy" />
-        ) : null}
         <Heading level={1}>{e.name}</Heading>
         {e.desc ? (
           <Text size="lg" color="secondary">
             {e.desc}
           </Text>
+        ) : null}
+        {/*
+          **초상은 이름·소개 뒤다** (감사 2026-08-20). 앞에 두면 제목이 160px 초상
+          뒤로 밀려 다른 644장(제목이 머리 블록 첫 자식)과 순서가 어긋난다.
+          저작자 표기는 그림에 붙어 있어야 캡션으로 읽힌다 — 페이지 끝에 두면 「자주
+          묻는 것」 토글 뒤 2,640px 아래라 푸터로 읽혔다. 262명 중 164명만 초상이 있어
+          없으면 안 그린다 — 자리를 비우면 목록처럼 훑을 때 높이가 흔들린다.
+        */}
+        {portrait ? (
+          <Stack direction="vertical" gap={0.5}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="entity-face" src={portrait.file} alt={`${e.name} 초상`} loading="lazy" />
+            <Text size="sm" color="secondary">
+              초상:{' '}
+              <a href={portrait.source} target="_blank" rel="noreferrer">
+                위키미디어
+              </a>
+              {portrait.license ? ` · ${portrait.license}` : ''}
+              {portrait.author ? ` · ${portrait.author}` : ''}
+            </Text>
+          </Stack>
         ) : null}
         <Stack direction="horizontal" gap={1}>
           <CopyPageButton markdown={toMarkdown(e, nbrs, descs)} />
@@ -364,7 +379,7 @@ export default async function ObjectPage({
 
       {/* 가문에 속한 사람이면 여기서 가계도로 넘어간다. 동명이인이 갈리는 자리다 */}
       {family ? (
-        <Stack direction="vertical" gap={1.5} as="section">
+        <Stack direction="vertical" gap={2} as="section">
           <Heading level={2}>가계도</Heading>
           <Text color="secondary">
             <a href={`/objects/family/${family.slug}`}>
@@ -413,17 +428,10 @@ export default async function ObjectPage({
         <Faq items={faqFor('/objects')} title={null} />
       </Collapsible>
 
-      {/*
-        **저작자를 적어야 하는 그림이 대부분이다.** 퍼블릭 도메인 70장을 빼면 나머지는
-        CC 계열이라 표기가 조건이다. 카드(48px)에는 못 적으므로 여기 한 줄로 적는다.
-      */}
-      {portrait ? (
-        <Text size="sm" color="secondary">
-          초상: <a href={portrait.source} target="_blank" rel="noreferrer">위키미디어</a>
-          {portrait.license ? ` · ${portrait.license}` : ''}
-          {portrait.author ? ` · ${portrait.author}` : ''}
-        </Text>
-      ) : null}
+      {/* 앞뒤는 같은 타입 목록의 가나다순 이웃 — 객체 상세는 navTree 밖이라 직접 준다.
+          구분선은 DocFooterNav가 스스로 긋는다(앞서 여기 있던 Divider는 겹쳐서 뺐다) */}
+      <DocFooterNav prev={steps.prev} next={steps.next} />
+
 
       {/*
         집중해서 읽기에서 나가는 길. **`data-focus`는 화면을 안 가리는 전역 설정이라
