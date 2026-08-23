@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Stack, Text, Heading, Banner } from '@astryxdesign/core'
 import { DocShell, type DocSection } from '../../../components/DocShell'
+import { ReadingShot } from '../../../components/ReadingShot'
 import { pageMeta } from '../../../lib/meta'
 
 /**
@@ -20,9 +21,10 @@ import { pageMeta } from '../../../lib/meta'
  *   - **정직한 데모 = 실제 화면**(우리는 앱이 아니라 텍스트를 파는 곳이라 원문 자체가
  *     목업보다 낫다). 그래서 각 절 끝에 「직접 열어보기」로 진짜 화면을 연다
  *
- * ponytail: 주석 얹은 화면 이미지(정보카드·지도)는 아직 없다 — 만들려면 Figma
- * 파이프라인(public/guide/SOURCE.md)이 필요하다. v1은 글 + 실제 화면 링크로 가고,
- * 주석 이미지는 v2에서 기존 31장과 같은 무드로 얹는다.
+ * 2026-08-23: 절마다 **주석 SVG 목업**을 얹었다(`components/ReadingShot`,
+ * `lib/readingmock.ts`) — 파란 이름·인물 카드·지도·설정을 번호 주석으로 도식화한다.
+ * 빌드타임 SVG라 이미지·의존성이 0이고, **실제 스크린샷이 준비되면 `img`만 채워
+ * 교체**된다(`/guide/reading/*.webp`). 지금은 도식으로 먼저 보이고 나중에 실사로.
  */
 export const metadata = pageMeta('화면 보는 법')
 
@@ -53,9 +55,10 @@ function QA({ q, children }: { q: string; children: React.ReactNode }) {
 const SECTIONS: DocSection[] = [
   {
     id: 'text',
-    title: '본문 — 파란 이름을 눌러 보세요',
+    title: '본문: 파란 이름을 눌러 보세요',
     body: (
       <Stack direction="vertical" gap={2}>
+        <ReadingShot kind="text" alt="읽기 화면 본문에서 인물 이름이 파랗게 표시되고, 누르면 열립니다" />
         <Text color="secondary">
           읽기로 들어가면 맡으신 포인트의 본문이 나옵니다. 본문 안에서 <strong>파랗게 뜨는
           글씨</strong>는 인물이나 지명입니다. 누르면 그게 누구인지, 어디인지가 곧바로 옆에
@@ -69,9 +72,10 @@ const SECTIONS: DocSection[] = [
   },
   {
     id: 'card',
-    title: '인물 카드 — 이름 옆에 열립니다',
+    title: '인물 카드: 이름 옆에 열립니다',
     body: (
       <Stack direction="vertical" gap={2}>
+        <ReadingShot kind="card" alt="파란 이름을 누르면 오른쪽에 인물 카드가 열리고, 편·포인트·관계가 담깁니다" />
         <Text color="secondary">
           본문의 파란 이름을 누르면 그 인물·지명의 카드가 열립니다. 누구 편이었는지, 어느
           포인트에 나오는지, 누구와 어떤 사이인지가 거기 담겨 있습니다. 「이 사람이 누구
@@ -86,12 +90,13 @@ const SECTIONS: DocSection[] = [
   },
   {
     id: 'map',
-    title: '지도 — 스크롤을 따라 움직입니다',
+    title: '지도: 스크롤을 따라 움직입니다',
     body: (
       <Stack direction="vertical" gap={2}>
+        <ReadingShot kind="map" alt="본문을 내려 읽으면 오른쪽 지도가 그 대목의 장소로 저절로 움직입니다" />
         <Text color="secondary">
           본문을 내려 읽으시면, 지도가 그 대목의 무대가 된 곳으로 <strong>저절로</strong>{' '}
-          함께 움직입니다. 카르타고 이야기를 읽는 동안엔 지도가 카르타고를 비춥니다 — 지도를
+          함께 움직입니다. 카르타고 이야기를 읽는 동안엔 지도가 카르타고를 비춥니다. 지도를
           직접 끌어 옮기실 필요가 없습니다.
         </Text>
         <Text color="secondary">
@@ -103,9 +108,10 @@ const SECTIONS: DocSection[] = [
   },
   {
     id: 'settings',
-    title: '글자 크기와 밝기 — 상단 바 오른쪽에서',
+    title: '글자 크기와 밝기: 상단 바 오른쪽에서',
     body: (
       <Stack direction="vertical" gap={2}>
+        <ReadingShot kind="settings" alt="상단 바 오른쪽의 빼기·100%·더하기와 시스템 단추로 글자 크기와 밝기를 바꿉니다" />
         <Text color="secondary">화면 오른쪽 위에서 다음 중 하나를 하시면 됩니다.</Text>
         <Stack direction="vertical" gap={1}>
           <Goal goal="글자 크게 하기">

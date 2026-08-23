@@ -6,6 +6,8 @@ import { ThemeToggle } from './ThemeToggle'
 import { RailToggle } from './RailToggle'
 import { ReadSize } from './ReadSize'
 import { FocusExit } from './FocusExit'
+import { Tour } from './Tour'
+import { UPDATES } from '../lib/updates'
 
 /**
  * 사이트 껍데기 — 상단 바 + 좌측 사이드바 + 본문 + 하단.
@@ -224,6 +226,13 @@ export function Shell({
         (`FocusExit`가 `null`을 낸다) 나머지 화면이 치르는 값이 없다.
       */}
       <FocusExit />
+
+      {/*
+        첫 접속 워크스루도 껍데기에 한 번 심는다(#2 후속). 안 본 사람에게만 마운트 후
+        뜨고, 본 뒤엔 `null`이라 나머지 화면이 치르는 값이 없다(FocusExit와 같은 결).
+        버전은 UPDATES 최신 날짜 — 주요 변화가 생기면 그 항목이 재노출을 켠다.
+      */}
+      <Tour version={UPDATES[0]?.date ?? ''} />
 
       <div className="site-footer">
         {/*

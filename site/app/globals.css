@@ -2401,3 +2401,52 @@ html[data-focus='on'] .site-footer {
   font-variant-numeric: tabular-nums;
   color: var(--color-text-primary);
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   컬렉션 아이콘 타일 (#17 마감) — 색 있는 배경 타일 + 아이콘
+
+   CategoryCards의 `.collection-mark--{key}`가 정의만 없어 맨 아이콘으로 떴다.
+   read-card 타입 팔레트(저채도, 다크 대비 안전)를 그대로 빌려 갈래 넷을 색으로
+   가른다. 아이콘은 stroke=currentColor라 color만 주면 따라온다.
+   ══════════════════════════════════════════════════════════════════ */
+.collection-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.collection-mark svg {
+  width: 22px;
+  height: 22px;
+}
+.collection-mark--prep {
+  background: light-dark(#f7ebe7, #362823);
+  color: light-dark(#9a4c37, #d59379);
+}
+.collection-mark--people {
+  background: light-dark(#e8eef4, #24303a);
+  color: light-dark(#3a5f7d, #8fb6d2);
+}
+.collection-mark--facts {
+  background: light-dark(#e8f1ec, #22302a);
+  color: light-dark(#3f6f57, #86b79c);
+}
+.collection-mark--flow {
+  background: light-dark(#efeaf5, #2b2635);
+  color: light-dark(#63508a, #ab97d4);
+}
+/* /use 랜딩 다섯 카드 — 갈래가 아니라 도구 목록이라 색을 안 가르고 중립 타일 한 벌 */
+.collection-mark--plain {
+  background: light-dark(#f1f2f4, #262a30);
+  color: light-dark(#4a5058, #aab0b8);
+}
+
+/* 선택지·화면 목업 SVG 래퍼 — svg가 width=100%라 인라인 여백만 없앤다 */
+.choice-mock,
+.reading-shot {
+  display: block;
+  line-height: 0;
+}

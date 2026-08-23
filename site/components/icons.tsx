@@ -126,3 +126,14 @@ export function FlowIcon() {
     </Icon>
   )
 }
+
+/** AI에 줄 자료 — 모서리 접힌 문서에 줄 */
+export function DocIcon() {
+  return (
+    <Icon>
+      <path d="M6 3.5h7l5 5v12H6z" />
+      <path d="M13 3.5v5h5" />
+      <path d="M9 13h6M9 16.5h6" />
+    </Icon>
+  )
+}
