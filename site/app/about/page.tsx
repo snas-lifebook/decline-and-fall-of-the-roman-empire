@@ -1,4 +1,4 @@
-import { Stack, Grid, Heading, Text, Link, ClickableCard, Markdown } from '@astryxdesign/core'
+import { Stack, Grid, Text, Link, ClickableCard, Markdown } from '@astryxdesign/core'
 import { DocShell, type DocSection } from '../../components/DocShell'
 import { FlipNumber } from '../../components/FlipNumber'
 import { loadDoc, docSections } from '../../lib/doc'
@@ -61,9 +61,10 @@ function covers(): DocSection {
           {types.map(({ type, count }) => (
             <ClickableCard key={type} href={`/objects/${type}`} label={TYPE_KO[type]} padding={4}>
               <Stack direction="vertical" gap={0.5}>
-                <Heading level={3}>
+                {/* 큰 숫자 한 벌 — 기업 About의 스탯 타일. h3로 재면 목차가 흔들려 span으로 */}
+                <span className="about-stat-num">
                   <FlipNumber n={count} />
-                </Heading>
+                </span>
                 <Text size="sm" color="secondary">
                   {TYPE_KO[type]}
                 </Text>

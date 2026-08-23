@@ -2384,3 +2384,20 @@ html[data-focus='on'] .site-footer {
   font-size: var(--read-size);
   line-height: 1.8;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   About 「다루는 것」 스탯 타일 (#10) — 기업 About처럼 개수를 크게
+
+   개수는 자랑이 아니라 이정표라, 큰 숫자 + 작은 라벨로 「무엇이 얼마나」를 한눈에
+   보인다. h3로 재면 우측 목차가 흔들려 span에 직접 크기를 준다. 자릿수가 흔들리지
+   않게 tabular-nums.
+   ══════════════════════════════════════════════════════════════════ */
+.about-stat-num {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}

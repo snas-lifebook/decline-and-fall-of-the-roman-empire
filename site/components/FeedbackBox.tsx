@@ -87,9 +87,14 @@ export function FeedbackBox({ where, subject }: FeedbackContext) {
         <Text size="sm" color="secondary">
           잘못된 곳이나 있었으면 하는 기능을 알려 주세요.
         </Text>
-        {/* 두 경로 다 열어 둔다 — 깃허브 이슈는 팀원 다수가 못 쓰는 도구라 뺐다(#11에서 링크로) */}
+        {/* 두 경로 다 열어 둔다. 깃허브 이슈는 팀원 다수가 못 쓰는 도구라 뺐고, 대신
+            주용 개인 텔레그램 DM을 건다(#11). 그룹방 초대 링크는 여전히 안 넣는다 */}
         <Text size="sm" color="secondary">
-          주용에게 직접 보내셔도 됩니다.
+          주용에게{' '}
+          <a href="https://t.me/river181" target="_blank" rel="noreferrer">
+            텔레그램으로 직접
+          </a>{' '}
+          보내셔도 됩니다.
         </Text>
       </Stack>
 
