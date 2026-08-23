@@ -62,8 +62,8 @@ const START: [string, string][] = [
 
 const familyCount = () => families().length
 
-/** 타입별 객체 수. 사이드바 라벨에 그대로 실린다 */
-function typeCounts(): { type: Entity['type']; count: number }[] {
+/** 타입별 객체 수. 사이드바 라벨에 그대로 실린다. /about 「다루는 것」 그리드도 같은 값을 쓴다 */
+export function typeCounts(): { type: Entity['type']; count: number }[] {
   const all = loadEntities()
   return ENTITY_TYPES.map((type) => ({ type, count: all.filter((e) => e.type === type).length }))
 }
@@ -185,7 +185,9 @@ export function navFind(href: string, tree: NavNode[] = navTree()): NavNode | un
  * 고치는 순간 여섯 자리가 옛 이름을 부르게 됐다.
  */
 const OFF_TREE: Record<string, string> = {
-  '/about': '이 자료실은',
+  // nav·푸터·빵부스러기 이름은 「About」(River #10 개명 지시). 온페이지 H1은 한국어
+  // 문장("이 자료실은")으로 남긴다 — 전한국어 톤에 영문 제목 한 줄이 튀지 않게
+  '/about': 'About',
   '/changelog': '바뀐 것',
   '/faq': '자주 묻는 것',
 }
