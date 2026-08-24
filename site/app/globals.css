@@ -2450,3 +2450,338 @@ html[data-focus='on'] .site-footer {
   display: block;
   line-height: 0;
 }
+
+/* ────────────────────────────────────────────────────────────
+   활용 사례 카드 v2 (프로토타입, 롤모델 리서치 2026-08-24)
+   색은 새로 안 짓고 read-card 팔레트 재사용:
+   파랑=넣는 것(person), 회색=시키는 것(period), 초록=나오는 것(institution),
+   살몬=주의(event). 라이트/다크/세피아는 그 값이 이미 검증돼 있다.
+   ──────────────────────────────────────────────────────────── */
+
+/* 왕복 도식 */
+.recipe-flow {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0.25rem auto 0.25rem;
+}
+.rf-node {
+  stroke: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
+  stroke-width: 1;
+}
+.rf-node--in {
+  fill: light-dark(#e8eef4, #24303a);
+}
+.rf-node--do {
+  fill: light-dark(#ecedf0, #282b30);
+}
+.rf-node--out {
+  fill: light-dark(#e8f1ec, #22302a);
+}
+.rf-label {
+  fill: light-dark(#2c333b, #d4dade);
+  font-size: 15px;
+  font-weight: 600;
+}
+.rf-sub {
+  fill: light-dark(#5c636b, #9aa2aa);
+  font-size: 11px;
+}
+.rf-arrow {
+  stroke: light-dark(#9aa4ae, #5a636d);
+  stroke-width: 1.5;
+}
+.rf-head {
+  fill: light-dark(#9aa4ae, #5a636d);
+}
+
+/* 카드 셸 — details가 곧 카드다(summary가 전 폭을 쓰게) */
+.recipe-v2 {
+  border: 1px solid light-dark(#e3e6ea, #2b3138);
+  border-radius: 14px;
+  background: light-dark(#fbfcfd, #1a1f24);
+  overflow: hidden;
+}
+.recipe-v2[open] {
+  background: light-dark(#ffffff, #161b21);
+  box-shadow: 0 2px 10px light-dark(rgb(20 30 40 / 0.06), rgb(0 0 0 / 0.3));
+}
+.recipe-v2-head {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.recipe-v2-head::-webkit-details-marker {
+  display: none;
+}
+.recipe-v2-titlerow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.recipe-v2-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: light-dark(#1c2126, #e7ecf0);
+}
+.recipe-chips {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+.recipe-chip {
+  font-size: 0.72rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  background: light-dark(#f1f2f4, #262a30);
+  color: light-dark(#4a5058, #aab0b8);
+  white-space: nowrap;
+}
+.recipe-chip[data-kind='web'] {
+  background: light-dark(#e8f1ec, #22302a);
+  color: light-dark(#3f6f57, #86b79c);
+}
+.recipe-chip[data-kind='local'] {
+  background: light-dark(#e8eef4, #24303a);
+  color: light-dark(#3a5f7d, #8fb6d2);
+}
+.recipe-v2-chevron {
+  margin-left: auto;
+  color: light-dark(#8a929b, #7a828b);
+  display: inline-flex;
+  transition: transform 0.15s ease;
+}
+.recipe-v2[open] .recipe-v2-chevron {
+  transform: rotate(180deg);
+}
+.recipe-v2-when {
+  font-size: 0.9rem;
+  color: light-dark(#5a616b, #9aa2aa);
+}
+
+/* 본문 */
+.recipe-v2-body {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid light-dark(#eef1f4, #23282e);
+}
+.recipe-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid transparent;
+}
+.recipe-step[data-kind='in'] {
+  border-left-color: light-dark(#3a5f7d, #8fb6d2);
+}
+.recipe-step[data-kind='do'] {
+  border-left-color: light-dark(#5c6069, #a3a9b3);
+}
+.recipe-step[data-kind='out'] {
+  border-left-color: light-dark(#3f6f57, #86b79c);
+}
+.recipe-step-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.recipe-step[data-kind='in'] .recipe-step-label {
+  color: light-dark(#3a5f7d, #8fb6d2);
+}
+.recipe-step[data-kind='do'] .recipe-step-label {
+  color: light-dark(#5c6069, #a3a9b3);
+}
+.recipe-step[data-kind='out'] .recipe-step-label {
+  color: light-dark(#3f6f57, #86b79c);
+}
+
+/* 주의 콜아웃 한 줄(살몬) */
+.recipe-caution {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  background: light-dark(#f7ebe7, #362823);
+  color: light-dark(#7a3c2b, #d59379);
+}
+.recipe-caution-tag {
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+/* ────────────────────────────────────────────────────────────
+   화면을 따라가는 안내 (Tour v2, 2026-08-24)
+   화면을 가리지 않는 하단 카드. 실제 뷰를 보면서 읽고 「다음」이 다음 뷰로 데려간다.
+   ──────────────────────────────────────────────────────────── */
+.tour-tip {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(440px, calc(100vw - 2rem));
+  background: light-dark(#ffffff, #161b21);
+  border: 1px solid light-dark(#dfe4e9, #2b3138);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px light-dark(rgb(20 30 40 / 0.18), rgb(0 0 0 / 0.5));
+  padding: 1rem 1.15rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.tour-tip-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour-tip-count {
+  font-size: 0.8rem;
+  color: light-dark(#6a727b, #98a0a8);
+}
+.tour-tip-skip {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: light-dark(#6a727b, #98a0a8);
+  padding: 0.2rem 0.3rem;
+}
+.tour-tip-skip:hover {
+  color: light-dark(#1c2126, #e7ecf0);
+}
+.tour-tip-headrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tour-tip-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: light-dark(#1c2126, #e7ecf0);
+}
+.tour-tip-body {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: light-dark(#41474e, #b6bdc4);
+}
+.tour-tip-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+.tour-btn {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid light-dark(#dfe4e9, #2b3138);
+  background: light-dark(#f7f9fb, #1f252b);
+  color: light-dark(#2c333b, #d4dade);
+  cursor: pointer;
+}
+.tour-btn:hover {
+  background: light-dark(#eef2f6, #262d34);
+}
+.tour-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.tour-btn--primary {
+  background: light-dark(#2f6f9e, #3a80b5);
+  border-color: transparent;
+  color: #ffffff;
+}
+.tour-btn--primary:hover {
+  background: light-dark(#2a628c, #4a90c5);
+}
+
+/* ────────────────────────────────────────────────────────────
+   활용 사례: 웹/데이터 필터 + 선택 표 (2026-08-24 롤아웃)
+   ──────────────────────────────────────────────────────────── */
+
+/* 필터 세그먼트 컨트롤 */
+.recipe-filter {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 10px;
+  background: light-dark(#f1f2f4, #22272d);
+}
+.recipe-filter-btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  color: light-dark(#4a5058, #aab0b8);
+  cursor: pointer;
+}
+.recipe-filter-btn:hover {
+  color: light-dark(#1c2126, #e7ecf0);
+}
+.recipe-filter-btn[data-active] {
+  background: light-dark(#ffffff, #2f363d);
+  color: light-dark(#1c2126, #e7ecf0);
+  box-shadow: 0 1px 3px light-dark(rgb(20 30 40 / 0.1), rgb(0 0 0 / 0.3));
+}
+
+/* 필터가 걸리면 안 맞는 카드·표 행·빈 갈래 섹션을 숨긴다.
+   read-card의 `html[data-cards]` 관용과 같은 결. 빈 섹션은 :has()로 통째로.
+   `section:has(.recipe-v2)`가 갈래 섹션만 잡아 materials·chooser 섹션은 안 건드린다 */
+html[data-recipe-filter='web'] .recipe-v2[data-needs='local'],
+html[data-recipe-filter='local'] .recipe-v2[data-needs='web'],
+html[data-recipe-filter='web'] .recipe-chooser tr[data-needs='local'],
+html[data-recipe-filter='local'] .recipe-chooser tr[data-needs='web'] {
+  display: none;
+}
+html[data-recipe-filter='web'] section:has(.recipe-v2):not(:has(.recipe-v2[data-needs='web'])),
+html[data-recipe-filter='local'] section:has(.recipe-v2):not(:has(.recipe-v2[data-needs='local'])) {
+  display: none;
+}
+
+/* 선택 표 */
+.recipe-chooser {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.recipe-chooser th,
+.recipe-chooser td {
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid light-dark(#eef1f4, #23282e);
+  vertical-align: top;
+}
+.recipe-chooser th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: light-dark(#6a727b, #98a0a8);
+  border-bottom-color: light-dark(#dfe4e9, #2b3138);
+}
+.recipe-chooser td:first-child {
+  color: light-dark(#41474e, #b6bdc4);
+}
+.recipe-chooser td:nth-child(2) {
+  white-space: nowrap;
+}
+.recipe-chooser tr:last-child td {
+  border-bottom: none;
+}
+/* 좁은 화면: 「어디서」 칩 칸을 접어 두 칸만 남긴다 */
+@media (max-width: 560px) {
+  .recipe-chooser th:last-child,
+  .recipe-chooser td:last-child {
+    display: none;
+  }
+  .recipe-chooser td:nth-child(2) {
+    white-space: normal;
+  }
+}
