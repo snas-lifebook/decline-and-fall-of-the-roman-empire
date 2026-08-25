@@ -17,10 +17,13 @@ import { BookIcon, SearchIcon, DownloadIcon, SparkIcon } from './icons'
  * 곧 다음 뷰로 데려간다(별도 링크가 없어 안 사라진다). 마지막에서 마치면 `tour-seen`에
  * 버전을 적어 다음 접속부터 안 뜬다(업데이트되면 다시).
  *
- * 요소를 화살표로 가리키는 스포트라이트는 페이지마다 앵커 셀렉터가 필요해 v2로 둔다.
- * ponytail: 지금은 뷰별 텍스트 안내 + 데려가기까지. 지목 화살표는 River가 원하면 다음에.
+ * 요소 지목(2026-08-25). 뷰마다 그 화면에서 진짜 만지는 컨트롤에 `anchor` 셀렉터를
+ * 걸어, 도착하면 그 요소에 펄스 링을 두르고 가운데로 스크롤한다. 절대좌표 화살표를
+ * 그리는 대신 **실제 요소에 클래스 하나**를 붙이는 방식이라 레이아웃이 바뀌어도 안 깨지고,
+ * 요소를 못 찾으면(모바일에서 숨었거나 아직 안 그려졌으면) 조용히 텍스트 안내만 남는다.
+ * 소개(0)와 마무리(활용하기)는 특정 컨트롤이 없어 링을 안 건다.
  */
-type Step = { route: string; Icon: typeof BookIcon | null; title: string; body: string }
+type Step = { route: string; Icon: typeof BookIcon | null; title: string; body: string; anchor?: string }
 
 const STEPS: Step[] = [
   {
@@ -33,19 +36,22 @@ const STEPS: Step[] = [
     route: '/read',
     Icon: BookIcon,
     title: '읽기',
-    body: '편역본 30포인트와 기번 원전을 화면에서 바로 읽어요. 지금 이 화면에서 본문의 파란 이름을 누르면 그 인물이 옆에 열려요.',
+    body: '여기 책장에서 한 편을 고르면 본문이 나와요. 본문에서 파란 이름을 누르면 그 인물이 옆에 열려요.',
+    anchor: '.shelf',
   },
   {
     route: '/objects',
     Icon: SearchIcon,
     title: '찾아보기',
-    body: '인물·지명·사건을 이름으로 찾고, 누가 누구와 어떤 사이였는지 봐요. 상단 검색창에 이름을 치면 바로 그 자리로 가요.',
+    body: '인물·지명·사건을 이름으로 찾고, 누가 누구와 어떤 사이였는지 봐요. 여기 상단 검색창에 이름을 치면 바로 그 자리로 가요.',
+    anchor: '.search-box',
   },
   {
     route: '/download',
     Icon: DownloadIcon,
     title: '가져가기',
-    body: '포인트별 인물 표를 시트에 붙여넣을 수 있게 받아 가요. 발표에 필요한 만큼만 골라 받으시면 돼요.',
+    body: '포인트를 고르면 그 포인트의 인물 표를 시트에 붙여넣게 받아 가요. 발표에 필요한 만큼만 골라 받으시면 돼요.',
+    anchor: '#points',
   },
   {
     route: '/use',
@@ -89,6 +95,34 @@ export function Tour({ version }: { version: string }) {
     setStep(s)
     setReady(true)
   }, [version])
+
+  // 도착한 화면의 컨트롤에 펄스 링을 두르고 가운데로 스크롤한다. 요소를 못 찾으면
+  // 다음 프레임에 다시 본다(클라 전환 직후 아직 안 그려졌을 수 있다). ponytail: 30프레임(~0.5초)
+  // 안에 안 뜨면 포기하고 텍스트 안내만 남긴다.
+  useEffect(() => {
+    if (step === null) return
+    const s = STEPS[step]
+    const onView = step === 0 || s.route === path
+    if (!onView || !s.anchor) return
+    const sel = s.anchor
+    let el: Element | null = null
+    let raf = 0
+    let tries = 0
+    const mark = () => {
+      el = document.querySelector(sel)
+      if (!el) {
+        if (tries++ < 30) raf = requestAnimationFrame(mark)
+        return
+      }
+      el.classList.add('tour-target')
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    }
+    mark()
+    return () => {
+      if (raf) cancelAnimationFrame(raf)
+      el?.classList.remove('tour-target')
+    }
+  }, [step, path])
 
   const persist = (s: number | null) => {
     try {

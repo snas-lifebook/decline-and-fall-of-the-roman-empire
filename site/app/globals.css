@@ -2703,6 +2703,33 @@ html[data-focus='on'] .site-footer {
   background: light-dark(#2a628c, #4a90c5);
 }
 
+/* 지목 링 (2026-08-25). Tour가 도착한 화면의 컨트롤에 이 클래스를 붙인다.
+   요소의 제 모서리를 따라 펄스가 퍼지게 border-radius는 안 건드린다. */
+.tour-target {
+  --tour-ring: light-dark(rgba(47, 111, 158, 0.55), rgba(90, 150, 200, 0.6));
+  --tour-ring-0: light-dark(rgba(47, 111, 158, 0), rgba(90, 150, 200, 0));
+  position: relative;
+  z-index: 1;
+  animation: tour-pulse 1.8s ease-out infinite;
+}
+@keyframes tour-pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--tour-ring);
+  }
+  70% {
+    box-shadow: 0 0 0 10px var(--tour-ring-0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--tour-ring-0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tour-target {
+    animation: none;
+    box-shadow: 0 0 0 3px var(--tour-ring);
+  }
+}
+
 /* ────────────────────────────────────────────────────────────
    활용 사례: 웹/데이터 필터 + 선택 표 (2026-08-24 롤아웃)
    ──────────────────────────────────────────────────────────── */
