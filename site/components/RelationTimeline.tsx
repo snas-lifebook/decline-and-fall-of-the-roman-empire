@@ -23,7 +23,7 @@ export function RelationTimeline({ tl, name }: { tl: Timeline; name: string }) {
     낭독기에 「오른쪽」은 처음부터 뜻이 없기도 하다.
   */
   const svg = renderTimelineSvg(tl, {
-    label: `${name} 관계 연표 — ${tl.spans.length}건. 같은 내용이 「연결」 목록에 글자로 있습니다`,
+    label: `${name} 관계 연표, ${tl.spans.length}건. 같은 내용이 「연결」 목록에 글자로 있습니다`,
     hrefOf: (id) => {
       const s = tl.spans.find((x) => x.ref.id === id)
       return s ? entityHref(s.ref) : undefined

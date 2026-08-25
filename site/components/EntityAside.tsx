@@ -42,7 +42,7 @@ const pad = (n: number) => String(n).padStart(2, '0')
 function NeighborRow({ n }: { n: Neighbor }) {
   return (
     <Text size="sm">
-      {n.label} — <a href={entityHref(n.ref)}>{n.ref.name}</a>
+      {n.label}: <a href={entityHref(n.ref)}>{n.ref.name}</a>
       <Text size="sm" color="secondary" as="span">
         {' '}
         (포인트 {pad(n.point)})

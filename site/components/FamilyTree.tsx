@@ -22,7 +22,7 @@ export function FamilyTree({ family, focus }: { family: Family; focus?: string }
   const svg = renderFamilySvg(layout, {
     focus,
     // 낭독기에는 그림 하나로 들린다. 이름 목록은 바로 아래 글자 링크로 따로 있다
-    label: `${family.title} 가계도 — ${family.people.length}명. 같은 이름 목록이 그림 아래에 있습니다`,
+    label: `${family.title} 가계도, ${family.people.length}명. 같은 이름 목록이 그림 아래에 있습니다`,
     sexOf: (id) => {
       const e = BY_ID.get(id)
       return e ? sexOf(e) : undefined

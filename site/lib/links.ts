@@ -127,7 +127,7 @@ export const SITE_LINKS: SiteLink[] = [
     // 텍스트 한 줄이라 열어도 가이드가 안 보인다 — 2026-08-14 피그마 실측
     id: 'figma',
     href: 'https://www.figma.com/design/AgGpqrga65nbd1SpAfzm91/%EC%9D%B8%EC%83%9D%EC%B1%85%ED%8E%B8%EB%8D%B0?node-id=79-192',
-    title: '피그마 — 옵시디언 설치 가이드',
+    title: '피그마: 옵시디언 설치 가이드',
     desc: '이 사이트의 설치 그림이 원래 있던 곳입니다',
     category: '디자인',
     icon: '/icons/figma.png',
@@ -164,7 +164,7 @@ export const SITE_LINKS: SiteLink[] = [
   {
     id: 'gutenberg-web',
     href: 'https://www.gutenberg.org/cache/epub/25717/pg25717-images.html',
-    title: '기번 원전 — 웹으로 바로 읽기',
+    title: '기번 원전: 웹으로 바로 읽기',
     desc: '내려받지 않고 브라우저에서 그대로 여는 판입니다. 그림이 함께 있습니다',
     category: '원전',
   },

@@ -39,7 +39,7 @@ function callout(x: number, y: number, w: number, label: string): string {
 }
 
 export function renderChatMockupSvg(): string {
-  const label = 'AI 채팅창 구조 — 아래 입력칸에 자료와 질문을 붙여넣고 보내기를 누르면 위에 답이 뜹니다'
+  const label = 'AI 채팅창 구조: 아래 입력칸에 자료와 질문을 붙여넣고 보내기를 누르면 위에 답이 뜹니다'
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px;height:auto" role="img" aria-label="${esc(label)}">
 <style>

@@ -73,9 +73,9 @@ function build(): TreeNode[] {
   return [
     { path: 'points/', label: '편역본 본문', count: `${c.points}개 파일 (30포인트 + 목차 등)`, depth: 0 },
     { path: 'source/', label: '기번 영문 원전', count: `${c.source}개 (71장 + 서문)`, depth: 0 },
-    { path: 'entities/', label: '인물·지명·사건 — 사람이 읽는 쪽', count: `${countRecursive('entities')}개 파일`, depth: 0 },
-    { path: 'ontology/entities.jsonl', label: '같은 것을 한 줄씩 — AI가 읽는 쪽', count: `${c.entities}줄`, depth: 1 },
-    { path: 'ontology/links.jsonl', label: '관계 — 누가 누구와 어떤 사이인지', count: `${c.links}줄`, depth: 1 },
+    { path: 'entities/', label: '인물·지명·사건 (사람이 읽는 쪽)', count: `${countRecursive('entities')}개 파일`, depth: 0 },
+    { path: 'ontology/entities.jsonl', label: '같은 것을 한 줄씩 (AI가 읽는 쪽)', count: `${c.entities}줄`, depth: 1 },
+    { path: 'ontology/links.jsonl', label: '관계 (누가 누구와 어떤 사이인지)', count: `${c.links}줄`, depth: 1 },
   ]
 }
 
@@ -112,8 +112,8 @@ export function sampleLink(): { raw: string; fields: SampleField[] } {
   }
 
   const fields: SampleField[] = [
-    { key: 'from', value: name(String(l.from)), means: '누가 — 관계를 거는 쪽입니다' },
-    { key: 'to', value: name(String(l.to)), means: '누구와 — 관계를 받는 쪽입니다' },
+    { key: 'from', value: name(String(l.from)), means: '누가: 관계를 거는 쪽입니다' },
+    { key: 'to', value: name(String(l.to)), means: '누구와: 관계를 받는 쪽입니다' },
     {
       key: 'rel',
       value: REL_KO[String(l.rel)]?.out ?? String(l.rel),

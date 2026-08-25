@@ -43,7 +43,7 @@ const ko = {
   '@astryx.commandPalette.input.placeholder': '이름을 치세요. 초성도 됩니다',
   '@astryx.commandPalette.emptyBootstrap': '이름을 쳐 보세요',
   '@astryx.commandPalette.emptySearch': '그런 이름은 없습니다',
-  '@astryx.commandPalette.noResultsFor': '{query} — 그런 이름은 없습니다',
+  '@astryx.commandPalette.noResultsFor': '{query}: 그런 이름은 없습니다',
   '@astryx.commandPalette.loading': '불러오는 중',
   // 코드·표
   '@astryx.codeBlock.copyCode': '복사',

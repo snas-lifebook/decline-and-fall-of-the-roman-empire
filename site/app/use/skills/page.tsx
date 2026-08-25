@@ -50,7 +50,7 @@ function sections(): DocSection[] {
           절차가 이어집니다. 아래 여덟 벌이 모두 같은 뼈대를 씁니다.
         </Text>
         <Text size="sm" color="secondary">
-          맨 위 — 이름표
+          맨 위: 이름표
         </Text>
         <MetadataList columns="single" label={{ position: 'start', width: 120 }}>
           <MetadataListItem label="name">스킬의 코드 이름이에요.</MetadataListItem>
@@ -60,7 +60,7 @@ function sections(): DocSection[] {
           <MetadataListItem label="version">판 번호예요.</MetadataListItem>
         </MetadataList>
         <Text size="sm" color="secondary">
-          본문 — 다섯 마디
+          본문: 다섯 마디
         </Text>
         <MetadataList columns="single" label={{ position: 'start', width: 120 }}>
           <MetadataListItem label="언제 쓰는가">어떤 상황에서 부르는지 적어요.</MetadataListItem>

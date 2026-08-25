@@ -41,7 +41,7 @@ export function PromptTabs({
       setNote('복사가 막혔습니다')
       return
     }
-    setNote('복사했습니다 — AI 창에 붙여넣으세요')
+    setNote('복사했습니다. AI 창에 붙여넣으세요')
   }
 
   return (

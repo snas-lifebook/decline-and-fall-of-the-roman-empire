@@ -189,7 +189,7 @@ function toMarkdown(
     parts.push(
       [
         '## 관계',
-        ...nbrs.map((n) => `- ${n.label} — ${n.ref.name} (포인트 ${n.point})`),
+        ...nbrs.map((n) => `- ${n.label}: ${n.ref.name} (포인트 ${n.point})`),
       ].join('\n'),
     )
   if (e.points.length) parts.push(`## 등장 포인트\n${e.points.join(', ')}`)

@@ -50,11 +50,14 @@ function parse(line: string): Change | null {
   if (!date || !hash || !subject) return null
 
   const m = /^([a-z]+)(?:\([^)]*\))?:\s*(.+)$/.exec(subject)
+  // 화면에 뜨는 제목의 작대기는 콜론으로 바꾼다(River 표기 규칙). git 이력은 그대로 두고
+  // 여기 렌더에서만 정규화하므로 과거 커밋과 앞으로의 커밋이 함께 정리된다.
+  const rawTitle = m ? m[2] : subject
   return {
     date,
     hash,
     kind: m ? (KIND[m[1]] ?? '바뀐 것') : '바뀐 것',
-    title: m ? m[2] : subject,
+    title: rawTitle.replace(/\s*(?:—|--)\s*/g, ': '),
   }
 }
 
