@@ -56,9 +56,8 @@ export function LinkCards({ ids, category }: { ids?: string[]; category?: LinkCa
                 {/* eslint-disable-next-line @next/next/no-img-element -- 20px 파비콘이다. next/image의 리사이즈·lazy가 얻을 게 없고, 정적 export라 최적화도 안 돈다 */}
                 {l.icon ? <img src={l.icon} alt="" width={20} height={20} /> : null}
                 <Text weight="semibold">{l.title}</Text>
-                {/* ponytail: 회차 번호는 지금 하나뿐이라 문자열로 박는다. 02회차가 생기면
-                    `lib/links.ts`와 여기 한 줄이 같이 바뀐다 */}
-                {l.perSession ? <Badge variant="neutral" label="01회차" /> : null}
+                {/* 회차 라벨은 `lib/links.ts`의 perSession 글자를 그대로 쓴다 (02회차부터, 2026-09-16) */}
+                {l.perSession ? <Badge variant="neutral" label={l.perSession} /> : null}
               </Stack>
               <Text size="sm" color="secondary">
                 {l.desc}

@@ -31,8 +31,11 @@ export type SiteLink = {
   title: string
   desc: string
   category: LinkCategory
-  /** 회차에 딸린 것. 회차가 늘면 이 표시가 붙은 것만 늘어난다 */
-  perSession?: boolean
+  /**
+   * 회차에 딸린 것. 회차 라벨을 그대로 적는다(`'01회차'`). 카드 배지가 이 글자를 쓴다.
+   * 회차가 늘면 이 표시가 붙은 것만 늘어난다 (2026-09-16: 02회차 카이사르 팩 추가)
+   */
+  perSession?: string
   /**
    * 카드에 붙는 서비스 아이콘. `public/` 기준 경로다 (예: `/icons/github.png`).
    *
@@ -58,7 +61,17 @@ export const SITE_LINKS: SiteLink[] = [
     desc: '구글드라이브입니다. 그 회차에 쓴 자료가 모입니다',
     category: '작업공간',
     icon: '/icons/googledrive.png',
-    perSession: true,
+    perSession: '01회차',
+  },
+  {
+    // 01회차_자료함과 같은 드라이브 루트에 형제로 있는 「카이사르팩」 폴더다 (2026-09-16 rclone 실측)
+    id: 'drive-02',
+    href: 'https://drive.google.com/drive/folders/1JP9lj4RSyjESnQYJ1zCt2xH_SVSf5Kfq',
+    title: '02회차 자료함 (카이사르 팩)',
+    desc: '지도와 배경, 초상, 아이콘 원본이 폴더째 있습니다. 게임에 쓴 그림은 여기서 나왔습니다',
+    category: '작업공간',
+    icon: '/icons/googledrive.png',
+    perSession: '02회차',
   },
   {
     id: 'sheet',
@@ -67,6 +80,14 @@ export const SITE_LINKS: SiteLink[] = [
     desc: '일정과 담당이 적히는 편데 운영 시트입니다',
     category: '작업공간',
     icon: '/icons/googlesheets.png',
+  },
+  {
+    id: 'asset-library',
+    href: 'https://drive.google.com/drive/folders/1fu_-JmBHpJyJTNewwIxtw4yGyw75Flkl',
+    title: '공용 에셋 라이브러리',
+    desc: '회차와 상관없이 다시 쓰는 그림과 소스 파일입니다. 출처와 라이선스 대장도 여기 있습니다',
+    category: '작업공간',
+    icon: '/icons/googledrive.png',
   },
 
   // 원본데이터
@@ -110,7 +131,27 @@ export const SITE_LINKS: SiteLink[] = [
     title: '01회차 캠페인 사이트',
     desc: '발표 그 자리에서 함께 보는 화면입니다. 지도와 전투 브리핑, 표결까지',
     category: '발표',
-    perSession: true,
+    perSession: '01회차',
+  },
+  {
+    // 태봉호가 호스팅한다. 9/10 판 주소이고 9/12 리허설 뒤 재배포분 주소는 확인되지 않았다.
+    // 2026-09-16 200 응답 확인. 주소가 바뀌면 여기 한 줄만 고친다
+    id: 'game-02',
+    href: 'https://caesar-chronicle-0910.barocompany1994.chatgpt.site/',
+    title: '02회차 게임 「로마토탈워: 카이사르 팩」',
+    desc: '발표 그 자리에서 함께 한 게임 화면입니다. 미션 다섯과 히든 엔딩이 있습니다',
+    category: '발표',
+    perSession: '02회차',
+  },
+  {
+    // 공유 링크에 layers=를 붙이면 장면 레이어를 덮어써 전투·이동 경로가 꺼진 채 열린다.
+    // present=1&scene=… 두 항목만 쓴다 (chronoatlas src/state.ts:71)
+    id: 'chronoatlas-02',
+    href: 'https://snas-lifebook.github.io/chronoatlas/?present=1&scene=pack-intro-med',
+    title: '02회차 발표 지도 (카이사르의 길)',
+    desc: '발표 순서대로 장면을 넘기는 지도입니다. 대괄호 키 [ ]로 앞뒤 장면을 오갑니다',
+    category: '발표',
+    perSession: '02회차',
   },
   {
     id: 'youtube-sans',
@@ -141,6 +182,22 @@ export const SITE_LINKS: SiteLink[] = [
     desc: '자료를 폴더째 열어 읽는 프로그램입니다. 무료이고 계정이 없어도 됩니다',
     category: '도구',
     icon: '/icons/obsidian.png',
+  },
+  {
+    // GitHub Pages 자체 배포라 파비콘이 없다. 규칙대로 아이콘을 비운다
+    id: 'chronoatlas',
+    href: 'https://snas-lifebook.github.io/chronoatlas/',
+    title: '크로노아틀라스',
+    desc: '연도를 움직이면 판도와 도시, 인물, 전투가 따라 바뀌는 지중해 지도입니다. 발표가 아니어도 열어 두면 좋습니다',
+    category: '도구',
+  },
+  {
+    id: 'chronoatlas-repo',
+    href: 'https://github.com/snas-lifebook/chronoatlas',
+    title: '크로노아틀라스 코드',
+    desc: '지도 프로그램의 코드와 설계 문서입니다. docs/00-START.md부터 읽으면 됩니다',
+    category: '도구',
+    icon: '/icons/github.png',
   },
 
   // 참고자료
