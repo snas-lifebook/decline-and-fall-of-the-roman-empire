@@ -2,9 +2,10 @@ import { Stack, Grid, Heading, Text, ClickableCard, Link, Divider, Badge } from 
 import { Shell } from '../components/Shell'
 import { Manifesto } from '../components/Manifesto'
 import { FlipNumber } from '../components/FlipNumber'
-import { BookIcon, SearchIcon, DownloadIcon, SparkIcon, FlagIcon } from '../components/icons'
+import { BookIcon, SearchIcon, DownloadIcon, SparkIcon, FlagIcon, MapIcon } from '../components/icons'
 import { dataCounts } from '../lib/datashape'
 import { book } from '../lib/book'
+import { linkById } from '../lib/links'
 
 /**
  * 목적 허브. `/`는 콘텐츠 페이지가 아니라 **갈림길**이다.
@@ -34,8 +35,12 @@ import { book } from '../lib/book'
   **활용하기 카드에만 배지 하나**(#2, 첫 외부 사용자 「온보딩 스킬 만들자」 — 있는 걸
   못 찾았다). 새 카드·배너를 얹지 않는다. 「처음 오셨다면 →」이 이미 /start를 가리키는
   주 CTA라 겹치는 안내는 새 헷갈림이다. ChoiceCards가 쓰는 배지 문법을 그대로 빌려
-  제목 옆에 「스킬」 낱말을 세우면 훑는 눈이 걸린다. badge 키는 다섯 다 두어 타입을
+  제목 옆에 「스킬」 낱말을 세우면 훑는 눈이 걸린다. badge 키는 여섯 다 두어 타입을
   고르게 한다.
+
+  **여섯째 카드 「지도 보기」는 바깥으로 나간다**(River 2026-09-17, 크로노아틀라스).
+  주소는 `lib/links.ts` 레지스트리의 `chronoatlas` 한 줄에만 산다. 다른 다섯은 이
+  사이트 안이라, 밖으로 나가는 것만 새 탭으로 연다(작업 공간 카드와 같은 규칙).
 */
 const CARDS = [
   {
@@ -71,6 +76,13 @@ const CARDS = [
     title: '시작하기',
     desc: '자료를 처음 받으시거나 갱신이 밀렸을 때 보세요.',
     Icon: FlagIcon,
+    badge: undefined,
+  },
+  {
+    href: linkById('chronoatlas').href,
+    title: '지도 보기',
+    desc: '그 해에 누가 어디까지 다스렸는지 지도에서 보세요.',
+    Icon: MapIcon,
     badge: undefined,
   },
 ] as const
@@ -140,7 +152,7 @@ export default function Home() {
 
         <Grid columns={{ minWidth: 280 }} gap={3}>
           {CARDS.map((c) => (
-            <ClickableCard key={c.title} href={c.href} label={c.title} padding={4}>
+            <ClickableCard key={c.title} href={c.href} label={c.title} padding={4} target={c.href.startsWith('http') ? '_blank' : undefined}>
               <Stack direction="vertical" gap={0.5}>
                 <Stack direction="horizontal" gap={2} vAlign="center" wrap="wrap">
                   <c.Icon />
