@@ -285,6 +285,20 @@ body {
   color: var(--color-text-primary);
 }
 
+/* 객체 화면 → 크로노아틀라스 역링크(2026-09-17). 복사 단추 옆의 조용한 글자 링크 */
+a.atlas-link {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+a.atlas-link:hover {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .doc a.hero-btn,
   .doc a.hero-btn-primary .hero-arrow {

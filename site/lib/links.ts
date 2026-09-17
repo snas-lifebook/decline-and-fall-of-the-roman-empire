@@ -272,6 +272,15 @@ export const SITE_LINKS: SiteLink[] = [
   },
 ]
 
+/**
+ * 객체 → 크로노아틀라스 역링크 (TASKS 3.6, 2026-09-17). 지도가 같은 정본 온톨로지를 읽으므로
+ * 객체 id(`person:카이사르`)가 그대로 지도의 선택(`?sel=`)이 된다. 지도에 없는 유형은 없다:
+ * 정본 일곱 유형(person·place·event·group·institution·work·period) 전부 그래프에 실린다.
+ */
+export function atlasUrl(entityId: string): string {
+  return `${linkById('chronoatlas').href}?sel=${encodeURIComponent(entityId)}`
+}
+
 export function linkById(id: string): SiteLink {
   const hit = SITE_LINKS.find((l) => l.id === id)
   // 조용히 빈 주소를 내보내면 화면에 죽은 링크가 남는다. 빌드에서 멈춘다

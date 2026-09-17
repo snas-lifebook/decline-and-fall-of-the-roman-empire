@@ -20,6 +20,7 @@ import {
   CO_SHOWN,
 } from '../../../../components/EntityAside'
 import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
+import { atlasUrl } from '../../../../lib/links'
 import { entityIndex, entitySlug, neighbors, coOccurring, entitySteps } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
 import { roleKo } from '../../../../lib/vocab'
@@ -305,8 +306,12 @@ export default async function ObjectPage({
             </Text>
           </Stack>
         ) : null}
-        <Stack direction="horizontal" gap={1}>
+        <Stack direction="horizontal" gap={1} vAlign="center">
           <CopyPageButton markdown={toMarkdown(e, nbrs, descs)} />
+          {/* 크로노아틀라스 역링크(TASKS 3.6, 2026-09-17): 지도가 같은 정본을 읽어 객체 id가 곧 지도의 선택(?sel=)이다. 바깥이라 새 탭 */}
+          <a className="atlas-link" href={atlasUrl(e.id)} target="_blank" rel="noreferrer">
+            지도에서 보기 ↗
+          </a>
         </Stack>
       </Stack>
 

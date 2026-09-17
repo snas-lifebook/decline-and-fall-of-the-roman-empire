@@ -1,6 +1,12 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest'
-import { SITE_LINKS, linkById, linksByCategory, LINK_CATEGORIES, REPO, ZIP_URL } from './links'
+import { SITE_LINKS, linkById, linksByCategory, LINK_CATEGORIES, REPO, ZIP_URL, atlasUrl } from './links'
+
+describe('크로노아틀라스 역링크', () => {
+  it('객체 id가 그대로 지도의 선택이 된다 (한글은 인코딩)', () => {
+    expect(atlasUrl('person:카이사르')).toBe(`${linkById('chronoatlas').href}?sel=person%3A%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4`)
+  })
+})
 
 describe('링크 레지스트리 — 주소는 여기 한 곳에만 산다', () => {
   it('id가 겹치지 않는다', () => {
