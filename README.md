@@ -22,6 +22,17 @@ up:
 - [Project Gutenberg #25717 — 본문 (HTML)](https://www.gutenberg.org/cache/epub/25717/pg25717-images.html)
 - [Project Gutenberg 홈](https://www.gutenberg.org/) — 퍼블릭 도메인 원서 검색 사이트, 이 책 저본 출처
 
+## 웹에서 보기
+
+이 레포의 온톨로지로 만든 두 사이트다. 설치·가입 없이 브라우저에서 열린다.
+
+| 사이트 | 주소 | 소개 영상 |
+|------|------|------|
+| 로마쇠망사 자료실 (30포인트 읽기·객체 672·관계 730·가계도·가져가기) | <https://roma-library.pages.dev/> · [바뀐 것](https://roma-library.pages.dev/changelog) | <https://youtu.be/GbSREkowpN0> |
+| 크로노아틀라스 (연도별 역사 지도·발표 장면·세부 지도) | <https://snas-lifebook.github.io/chronoatlas/> · [소개](https://snas-lifebook.github.io/chronoatlas/about.html) · [바뀐 것](https://snas-lifebook.github.io/chronoatlas/updates.html) | <https://youtu.be/aZ5N3bqi4Tw> |
+
+자료실 코드는 이 레포 `site/`(Next.js 정적 내보내기, Cloudflare Pages), 지도는 [snas-lifebook/chronoatlas](https://github.com/snas-lifebook/chronoatlas).
+
 ## 폴더 구성
 
 | 폴더 | 내용 |
@@ -77,12 +88,13 @@ GitHub 웹 화면에서는 위키링크·Dataview 쿼리·Leaflet 지도가 코�
 
 이 자료는 **앞으로도 계속 갱신·개선된다.** 여러 AI 세션이 이어서 작업하므로, 손대기 전에 아래를 읽고 끝나면 아래에 남긴다.
 
-- **운영 정본은 [[운영_온톨로지_리포_동기화]]** (`Admin/Runbooks/`, 볼트에만 있음). 볼트가 정본이고 이 레포는 자동 동기화 장치가 없는 수동 사본이라는 점, 올릴 것과 볼트에만 둘 것, 푸시 절차, 결정 대기 중인 rel 신설 5건이 거기 있다. **온톨로지를 고치기 전에 먼저 본다.**
+- **운영 정본은 [[운영_온톨로지_리포_동기화]]** (`Admin/로마제국쇠망사_온톨로지_운영/`, 볼트에만 있음). 볼트가 정본이고 이 레포는 자동 동기화 장치가 없는 수동 사본이라는 점, 올릴 것과 볼트에만 둘 것, 푸시 절차, 결정 대기 중인 rel 신설 5건이 거기 있다. **온톨로지를 고치기 전에 먼저 본다.**
 - **작업 이력과 인수인계**는 `산업스터디/.agent/`에 있다 — `memory.md`(현황·결정), `handoff.md`(직전 세션), `weekly/YYYY-WNN.md`(주간 로그). 특정 AI 도구에 묶이지 않은 평문 마크다운이라 아무 세션이나 읽고 쓸 수 있다. 작업을 마치면 여기 남긴다.
 - **진입점 둘** — 책을 읽으려면 [[00_목차]](`points/`), 데이터를 다루려면 [[로마제국쇠망사_온톨로지]](루트). 설계 근거는 [[로마제국쇠망사_온톨로지_설계]].
 - **온톨로지 불변식** — 깨지면 되돌린다.
 	- 객체 하나에 노트 하나. `entities.jsonl`의 모든 객체는 `entities/<type>/<이름>.md`를 갖는다. 동명이 타입이 겹칠 때만 파일명에 접미사를 붙이고(`그리스 (지명).md`·`그리스 (집단).md`), `entities.jsonl`은 접미사 없는 이름을 쓴다.
-	- rel은 정의된 11종만 쓴다 — `child_of`·`succeeded`·`allied_with`·`opposed`·`participated_in`·`occurred_at`·`ruled`·`member_of`·`married`·`conquered`·`created`. 새 rel이 필요하면 [[로마제국쇠망사_온톨로지_설계]]를 먼저 고친다.
+	- rel은 정의된 16종만 쓴다 — `child_of`·`succeeded`·`allied_with`·`opposed`·`participated_in`·`occurred_at`·`ruled`·`member_of`·`married`·`conquered`·`created`, 그리고 2026-08-13 신설분 `located_in`·`protected`·`held_office`·`decided`·`applied_to`. 새 rel이 필요하면 [[로마제국쇠망사_온톨로지_설계]]를 먼저 고친다.
+	- `rome30_merge.py`는 다시 돌리지 않는다. 1회용 부트스트랩이고, 현재 jsonl이 아니라 `_parts/`(2026-07-28에 멈춤)를 읽어 통째로 덮어쓴다. 하류 재생성 순서는 `geo → maps → routes → territory → backlink`.
 	- 기원전은 음수다. 양수는 서기다. 실제로 포인트 02의 연도 13건이 양수로 기록돼 제1차 포에니 전쟁이 군인 황제 시대에 찍혀 있었다.
 	- `occurred_at`의 주어는 사건(event)이고, `participated_in`의 방향은 인물·집단 → 사건이다.
 	- 끊어진 링크 0. `from`·`to`가 모두 실재하는 id여야 한다.
