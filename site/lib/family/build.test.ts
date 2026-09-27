@@ -11,8 +11,8 @@ describe('가문 추리기', () => {
     expect(all.every((f) => f.people.length >= 3)).toBe(true)
   })
 
-  it('가장 큰 가문이 22명이다 (실측)', () => {
-    expect(Math.max(...all.map((f) => f.people.length))).toBe(22)
+  it('가장 큰 가문이 24명이다 (실측)', () => {
+    expect(Math.max(...all.map((f) => f.people.length))).toBe(24)
   })
 
   it('큰 것부터 준다', () => {

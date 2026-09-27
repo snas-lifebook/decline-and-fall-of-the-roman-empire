@@ -79,14 +79,14 @@ describe('사례가 적어 둔 숫자가 자료와 맞는다', () => {
       })
       .filter((c) => c.length >= 3)
     expect(chains, '사례 본문이 「네 개」라고 적고 있다').toHaveLength(4)
-    expect(Math.max(...chains.map((c) => c.length)), '가장 긴 사슬이 여섯이라고 적었다').toBe(6)
+    expect(Math.max(...chains.map((c) => c.length)), '가장 긴 사슬이 다섯이라고 적었다').toBe(5)
   })
 
-  it('로마에 걸린 것이 열세 건이다 — place-roll', () => {
+  it('로마에 걸린 것이 열여섯 건이다 — place-roll', () => {
     const here = links.filter(
       (l) => (l.rel === 'occurred_at' || l.rel === 'located_in') && nameOf(l.to) === '로마',
     )
-    expect(here, '사례 본문이 「로마에 13건」이라고 적고 있다').toHaveLength(13)
+    expect(here, '사례 본문이 「로마에 16건」이라고 적고 있다').toHaveLength(16)
   })
 
   it('바르카스 삼형제가 한 무리로 묶인다 — faction', () => {

@@ -174,7 +174,7 @@
 {"from": "person:마르쿠스안토니우스", "to": "place:타르수스", "rel": "located_in", "point": 9, "src": "point"}
 {"from": "person:클레오파트라7세", "to": "place:타르수스", "rel": "located_in", "point": 9, "src": "point"}
 {"from": "person:아우구스투스", "to": "event:악티움해전", "rel": "participated_in", "point": 9, "from_year": -31, "to_year": -31, "year_basis": "text", "src": "point"}
-{"from": "person:마르쿠스안토니우스", "to": "event:악티움해전", "rel": "participated_in", "point": 9, "src": "point", "from_year": -31, "to_year": -31, "year_basis": "manual"}
+{"from": "person:마르쿠스안토니우스", "to": "event:악티움해전", "rel": "participated_in", "point": 9, "src": "point", "from_year": -31, "to_year": -31, "year_basis": "text"}
 {"from": "person:마르쿠스아그리파", "to": "person:아우구스투스", "rel": "member_of", "point": 9, "src": "point"}
 {"from": "person:헤르시아", "to": "place:아르메니아", "rel": "ruled", "point": 9, "src": "point"}
 {"from": "person:티베리우스", "to": "person:아우구스투스", "rel": "succeeded", "point": 9, "from_year": 14, "to_year": 14, "year_basis": "chronology", "src": "point"}
@@ -305,7 +305,7 @@
 {"from": "group:로마시민", "to": "event:모의해전", "rel": "participated_in", "point": 14, "src": "point"}
 {"from": "event:전차경주", "to": "place:원형대경기장", "rel": "occurred_at", "point": 14, "src": "point"}
 {"from": "event:검투시합", "to": "place:콜로세움", "rel": "occurred_at", "point": 14, "from_year": 80, "to_year": null, "year_basis": "chronology", "src": "point"}
-{"from": "event:모의해전", "to": "place:푸키누스호수", "rel": "occurred_at", "point": 14, "src": "point", "from_year": 52, "to_year": 52, "year_basis": "manual"}
+{"from": "event:모의해전", "to": "place:푸키누스호수", "rel": "occurred_at", "point": 14, "src": "point", "from_year": 52, "to_year": 52, "year_basis": "text"}
 {"from": "person:베스파시아누스", "to": "place:로마제국", "rel": "ruled", "point": 15, "from_year": 69, "to_year": 79, "year_basis": "chronology", "src": "point"}
 {"from": "person:티투스", "to": "person:베스파시아누스", "rel": "child_of", "point": 15, "src": "point"}
 {"from": "person:티투스", "to": "place:유대", "rel": "conquered", "point": 15, "from_year": 66, "to_year": 70, "year_basis": "chronology", "src": "point"}
@@ -665,66 +665,66 @@
 {"from": "person:마고", "to": "group:젊은사자들", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null, "src": "point"}
 {"from": "person:크산티포스", "to": "place:스파르타", "rel": "member_of", "point": 2, "from_year": null, "to_year": null, "year_basis": null, "src": "point"}
 {"from": "person:한니발기스코", "to": "event:밀라이해전", "rel": "participated_in", "point": 2, "from_year": -260, "to_year": -260, "year_basis": "text", "src": "point"}
-{"from": "person:폼페이우스", "to": "person:크라수스", "rel": "allied_with", "point": 6, "from_year": -60, "to_year": -53, "year_basis": "book", "src": "point"}
-{"from": "person:소카토", "to": "group:원로원", "rel": "member_of", "point": 6, "from_year": -63, "to_year": -46, "year_basis": "book", "src": "point"}
-{"from": "group:민중파", "to": "group:원로원", "rel": "opposed", "point": 6, "from_year": -133, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:클로디우스", "to": "person:키케로", "rel": "opposed", "point": 6, "from_year": -58, "to_year": -52, "year_basis": "book", "src": "point"}
-{"from": "person:베르킹게토릭스", "to": "person:카이사르", "rel": "opposed", "point": 6, "from_year": -52, "to_year": -52, "year_basis": "book", "src": "point"}
-{"from": "person:베르킹게토릭스", "to": "place:갈리아", "rel": "member_of", "point": 6, "from_year": -52, "to_year": -52, "year_basis": "book", "src": "point"}
-{"from": "person:카이사르", "to": "group:원로원", "rel": "opposed", "point": 8, "from_year": -49, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:포티누스", "to": "person:폼페이우스", "rel": "opposed", "point": 7, "from_year": -48, "to_year": -48, "year_basis": "book", "src": "point"}
-{"from": "person:카이사르", "to": "place:이집트", "rel": "conquered", "point": 7, "from_year": -48, "to_year": -47, "year_basis": "book", "src": "point"}
-{"from": "person:포티누스", "to": "person:클레오파트라7세", "rel": "opposed", "point": 7, "from_year": -48, "to_year": -48, "year_basis": "book", "src": "point"}
-{"from": "person:프톨레마이오스13세", "to": "place:이집트", "rel": "ruled", "point": 7, "from_year": -51, "to_year": -47, "year_basis": "book", "src": "point"}
-{"from": "person:클레오파트라7세", "to": "place:이집트", "rel": "ruled", "point": 7, "from_year": -51, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:브루투스", "to": "group:원로원", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카시우스", "to": "group:원로원", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카이사르", "to": "institution:종신독재관", "rel": "held_office", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카이사르", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:브루투스", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카시우스", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카스카", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "event:카이사르암살", "to": "place:마르스광장", "rel": "occurred_at", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카이사르", "to": "work:일보", "rel": "created", "point": 6, "from_year": -59, "to_year": -59, "year_basis": "book", "src": "point"}
-{"from": "group:카이사르군단", "to": "person:카이사르", "rel": "allied_with", "point": 6, "from_year": -58, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "group:카이사르군단", "to": "place:갈리아", "rel": "member_of", "point": 6, "from_year": -58, "to_year": -49, "year_basis": "book", "src": "point"}
-{"from": "person:소카토", "to": "group:보수파", "rel": "member_of", "point": 6, "from_year": -63, "to_year": -46, "year_basis": "book", "src": "point"}
-{"from": "group:보수파", "to": "group:원로원", "rel": "member_of", "point": 6, "from_year": -63, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "group:민중파", "to": "group:보수파", "rel": "opposed", "point": 6, "from_year": -63, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:브루투스", "to": "group:암살음모단", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카시우스", "to": "group:암살음모단", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "person:카스카", "to": "group:암살음모단", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "group:암살음모단", "to": "group:원로원", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "group:암살음모단", "to": "person:카이사르", "rel": "opposed", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "book", "src": "point"}
-{"from": "event:악티움해전", "to": "place:악티움", "rel": "occurred_at", "point": 9, "from_year": -31, "to_year": -31, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:알레시아포위전", "to": "place:알레시아", "rel": "occurred_at", "point": 6, "from_year": -52, "to_year": -52, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:카우디움협곡전투", "to": "place:카우디움", "rel": "occurred_at", "point": 1, "from_year": -321, "to_year": -321, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:밀라이해전", "to": "place:밀라이", "rel": "occurred_at", "point": 2, "from_year": -260, "to_year": -260, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:아이가테스해전", "to": "place:아이가테스제도", "rel": "occurred_at", "point": 2, "from_year": -241, "to_year": -241, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:자마전투", "to": "place:자마", "rel": "occurred_at", "point": 4, "from_year": -202, "to_year": -202, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:트라시메노전투", "to": "place:트라시메노호수", "rel": "occurred_at", "point": 3, "from_year": -217, "to_year": -217, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:한니발", "to": "event:트라시메노전투", "rel": "participated_in", "point": 3, "from_year": -217, "to_year": -217, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:스키피오아프리카누스", "to": "event:제2차포에니전쟁", "rel": "participated_in", "point": 4, "from_year": -218, "to_year": -201, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:스파르타쿠스의반란", "to": "place:카푸아", "rel": "occurred_at", "point": 5, "from_year": -73, "to_year": -73, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:스파르타쿠스의반란", "to": "place:실라루스강", "rel": "occurred_at", "point": 5, "from_year": -71, "to_year": -71, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:아피아가도십자가형", "to": "place:로마", "rel": "occurred_at", "point": 5, "from_year": -71, "to_year": -71, "year_basis": "manual", "src": "manual", "confidence": "medium"}
-{"from": "event:카틸리나사건", "to": "place:로마", "rel": "occurred_at", "point": 5, "from_year": -63, "to_year": -63, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:카틸리나사건", "to": "place:피스토리아", "rel": "occurred_at", "point": 5, "from_year": -62, "to_year": -62, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:아라우시오전투", "to": "place:아라우시오", "rel": "occurred_at", "point": 5, "from_year": -105, "to_year": -105, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:아쿠아이섹스티아이전투", "to": "place:아쿠아이섹스티아이", "rel": "occurred_at", "point": 5, "from_year": -102, "to_year": -102, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:가이우스마리우스", "to": "event:아쿠아이섹스티아이전투", "rel": "participated_in", "point": 5, "from_year": -102, "to_year": -102, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:베르첼라이전투", "to": "place:베르첼라이", "rel": "occurred_at", "point": 5, "from_year": -101, "to_year": -101, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:가이우스마리우스", "to": "event:베르첼라이전투", "rel": "participated_in", "point": 5, "from_year": -101, "to_year": -101, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:필리피전투", "to": "place:필리피", "rel": "occurred_at", "point": 9, "from_year": -42, "to_year": -42, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:마르쿠스안토니우스", "to": "event:필리피전투", "rel": "participated_in", "point": 7, "from_year": -42, "to_year": -42, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:아우구스투스", "to": "event:필리피전투", "rel": "participated_in", "point": 8, "from_year": -42, "to_year": -42, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:브루투스", "to": "event:필리피전투", "rel": "participated_in", "point": 7, "from_year": -42, "to_year": -42, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:카시우스", "to": "event:필리피전투", "rel": "participated_in", "point": 7, "from_year": -42, "to_year": -42, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:아우구스투스", "to": "event:제2차삼두정치", "rel": "participated_in", "point": 8, "from_year": -43, "to_year": -43, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:마르쿠스안토니우스", "to": "event:제2차삼두정치", "rel": "participated_in", "point": 7, "from_year": -43, "to_year": -43, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:레피두스", "to": "event:제2차삼두정치", "rel": "participated_in", "point": 9, "from_year": -43, "to_year": -43, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "event:브리타니아정복", "to": "place:카물로두눔", "rel": "occurred_at", "point": 11, "from_year": 43, "to_year": 43, "year_basis": "manual", "src": "manual", "confidence": "medium"}
-{"from": "person:클라우디우스", "to": "event:브리타니아정복", "rel": "participated_in", "point": 11, "from_year": 43, "to_year": 43, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:마르쿠스아그리파", "to": "event:악티움해전", "rel": "participated_in", "point": 9, "from_year": -31, "to_year": -31, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:티베리우스", "to": "place:카프리섬", "rel": "located_in", "point": 9, "from_year": 27, "to_year": 37, "year_basis": "manual", "src": "manual", "confidence": "high"}
-{"from": "person:세야누스", "to": "place:로마", "rel": "located_in", "point": 11, "from_year": 23, "to_year": 31, "year_basis": "manual", "src": "manual", "confidence": "high"}
+{"from": "person:폼페이우스", "to": "person:크라수스", "rel": "allied_with", "point": 6, "from_year": -60, "to_year": -53, "year_basis": "text", "src": "point"}
+{"from": "person:소카토", "to": "group:원로원", "rel": "member_of", "point": 6, "from_year": -63, "to_year": -46, "year_basis": "text", "src": "point"}
+{"from": "group:민중파", "to": "group:원로원", "rel": "opposed", "point": 6, "from_year": -133, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:클로디우스", "to": "person:키케로", "rel": "opposed", "point": 6, "from_year": -58, "to_year": -52, "year_basis": "text", "src": "point"}
+{"from": "person:베르킹게토릭스", "to": "person:카이사르", "rel": "opposed", "point": 6, "from_year": -52, "to_year": -52, "year_basis": "text", "src": "point"}
+{"from": "person:베르킹게토릭스", "to": "place:갈리아", "rel": "member_of", "point": 6, "from_year": -52, "to_year": -52, "year_basis": "text", "src": "point"}
+{"from": "person:카이사르", "to": "group:원로원", "rel": "opposed", "point": 8, "from_year": -49, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:포티누스", "to": "person:폼페이우스", "rel": "opposed", "point": 7, "from_year": -48, "to_year": -48, "year_basis": "text", "src": "point"}
+{"from": "person:카이사르", "to": "place:이집트", "rel": "conquered", "point": 7, "from_year": -48, "to_year": -47, "year_basis": "text", "src": "point"}
+{"from": "person:포티누스", "to": "person:클레오파트라7세", "rel": "opposed", "point": 7, "from_year": -48, "to_year": -48, "year_basis": "text", "src": "point"}
+{"from": "person:프톨레마이오스13세", "to": "place:이집트", "rel": "ruled", "point": 7, "from_year": -51, "to_year": -47, "year_basis": "text", "src": "point"}
+{"from": "person:클레오파트라7세", "to": "place:이집트", "rel": "ruled", "point": 7, "from_year": -51, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:브루투스", "to": "group:원로원", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카시우스", "to": "group:원로원", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카이사르", "to": "institution:종신독재관", "rel": "held_office", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카이사르", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:브루투스", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카시우스", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카스카", "to": "event:카이사르암살", "rel": "participated_in", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "event:카이사르암살", "to": "place:마르스광장", "rel": "occurred_at", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카이사르", "to": "work:일보", "rel": "created", "point": 6, "from_year": -59, "to_year": -59, "year_basis": "text", "src": "point"}
+{"from": "group:카이사르군단", "to": "person:카이사르", "rel": "allied_with", "point": 6, "from_year": -58, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "group:카이사르군단", "to": "place:갈리아", "rel": "member_of", "point": 6, "from_year": -58, "to_year": -49, "year_basis": "text", "src": "point"}
+{"from": "person:소카토", "to": "group:보수파", "rel": "member_of", "point": 6, "from_year": -63, "to_year": -46, "year_basis": "text", "src": "point"}
+{"from": "group:보수파", "to": "group:원로원", "rel": "member_of", "point": 6, "from_year": -63, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "group:민중파", "to": "group:보수파", "rel": "opposed", "point": 6, "from_year": -63, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:브루투스", "to": "group:암살음모단", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카시우스", "to": "group:암살음모단", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "person:카스카", "to": "group:암살음모단", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "group:암살음모단", "to": "group:원로원", "rel": "member_of", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "group:암살음모단", "to": "person:카이사르", "rel": "opposed", "point": 8, "from_year": -44, "to_year": -44, "year_basis": "text", "src": "point"}
+{"from": "event:악티움해전", "to": "place:악티움", "rel": "occurred_at", "point": 9, "from_year": -31, "to_year": -31, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:알레시아포위전", "to": "place:알레시아", "rel": "occurred_at", "point": 6, "from_year": -52, "to_year": -52, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:카우디움협곡전투", "to": "place:카우디움", "rel": "occurred_at", "point": 1, "from_year": -321, "to_year": -321, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:밀라이해전", "to": "place:밀라이", "rel": "occurred_at", "point": 2, "from_year": -260, "to_year": -260, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:아이가테스해전", "to": "place:아이가테스제도", "rel": "occurred_at", "point": 2, "from_year": -241, "to_year": -241, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:자마전투", "to": "place:자마", "rel": "occurred_at", "point": 4, "from_year": -202, "to_year": -202, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:트라시메노전투", "to": "place:트라시메노호수", "rel": "occurred_at", "point": 3, "from_year": -217, "to_year": -217, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:한니발", "to": "event:트라시메노전투", "rel": "participated_in", "point": 3, "from_year": -217, "to_year": -217, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:스키피오아프리카누스", "to": "event:제2차포에니전쟁", "rel": "participated_in", "point": 4, "from_year": -218, "to_year": -201, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:스파르타쿠스의반란", "to": "place:카푸아", "rel": "occurred_at", "point": 5, "from_year": -73, "to_year": -73, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:스파르타쿠스의반란", "to": "place:실라루스강", "rel": "occurred_at", "point": 5, "from_year": -71, "to_year": -71, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:아피아가도십자가형", "to": "place:로마", "rel": "occurred_at", "point": 5, "from_year": -71, "to_year": -71, "year_basis": "text", "src": "manual", "confidence": "medium"}
+{"from": "event:카틸리나사건", "to": "place:로마", "rel": "occurred_at", "point": 5, "from_year": -63, "to_year": -63, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:카틸리나사건", "to": "place:피스토리아", "rel": "occurred_at", "point": 5, "from_year": -62, "to_year": -62, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:아라우시오전투", "to": "place:아라우시오", "rel": "occurred_at", "point": 5, "from_year": -105, "to_year": -105, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:아쿠아이섹스티아이전투", "to": "place:아쿠아이섹스티아이", "rel": "occurred_at", "point": 5, "from_year": -102, "to_year": -102, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:가이우스마리우스", "to": "event:아쿠아이섹스티아이전투", "rel": "participated_in", "point": 5, "from_year": -102, "to_year": -102, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:베르첼라이전투", "to": "place:베르첼라이", "rel": "occurred_at", "point": 5, "from_year": -101, "to_year": -101, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:가이우스마리우스", "to": "event:베르첼라이전투", "rel": "participated_in", "point": 5, "from_year": -101, "to_year": -101, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:필리피전투", "to": "place:필리피", "rel": "occurred_at", "point": 9, "from_year": -42, "to_year": -42, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:마르쿠스안토니우스", "to": "event:필리피전투", "rel": "participated_in", "point": 7, "from_year": -42, "to_year": -42, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:아우구스투스", "to": "event:필리피전투", "rel": "participated_in", "point": 8, "from_year": -42, "to_year": -42, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:브루투스", "to": "event:필리피전투", "rel": "participated_in", "point": 7, "from_year": -42, "to_year": -42, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:카시우스", "to": "event:필리피전투", "rel": "participated_in", "point": 7, "from_year": -42, "to_year": -42, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:아우구스투스", "to": "event:제2차삼두정치", "rel": "participated_in", "point": 8, "from_year": -43, "to_year": -43, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:마르쿠스안토니우스", "to": "event:제2차삼두정치", "rel": "participated_in", "point": 7, "from_year": -43, "to_year": -43, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:레피두스", "to": "event:제2차삼두정치", "rel": "participated_in", "point": 9, "from_year": -43, "to_year": -43, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "event:브리타니아정복", "to": "place:카물로두눔", "rel": "occurred_at", "point": 11, "from_year": 43, "to_year": 43, "year_basis": "text", "src": "manual", "confidence": "medium"}
+{"from": "person:클라우디우스", "to": "event:브리타니아정복", "rel": "participated_in", "point": 11, "from_year": 43, "to_year": 43, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:마르쿠스아그리파", "to": "event:악티움해전", "rel": "participated_in", "point": 9, "from_year": -31, "to_year": -31, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:티베리우스", "to": "place:카프리섬", "rel": "located_in", "point": 9, "from_year": 27, "to_year": 37, "year_basis": "text", "src": "manual", "confidence": "high"}
+{"from": "person:세야누스", "to": "place:로마", "rel": "located_in", "point": 11, "from_year": 23, "to_year": 31, "year_basis": "text", "src": "manual", "confidence": "high"}

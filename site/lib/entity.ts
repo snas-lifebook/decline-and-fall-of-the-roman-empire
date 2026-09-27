@@ -76,6 +76,7 @@ function build(root: string): Map<string, EntityRef> {
       const key = f.slice(0, -3)
       // 정확 일치가 먼저다. `그리스 (집단)`처럼 뒤에 타입이 붙은 것만 접두로 잡는다
       const hit =
+        sameType.find((e) => e.note === key) ??   // 파일명의 정본은 note 필드(ontology.test 불변식 1과 같은 규칙)
         sameType.find((e) => e.name === key) ?? sameType.find((e) => key.startsWith(`${e.name} (`))
       if (hit) out.set(key, { id: hit.id, type: hit.type, name: hit.name })
       else missed.push(`${type}/${f}`)

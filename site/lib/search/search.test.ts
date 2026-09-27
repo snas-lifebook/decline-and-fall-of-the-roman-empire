@@ -55,7 +55,7 @@ describe('찾기', () => {
     expect(hit(withAlias!.alias[0])).toContain(withAlias!.name)
   })
 
-  it('빈 질의는 아무것도 안 준다 — 644개를 쏟지 않는다', () => {
+  it('빈 질의는 아무것도 안 준다 — 672개를 쏟지 않는다', () => {
     expect(searchItems(INDEX, '')).toEqual([])
     expect(searchItems(INDEX, '   ')).toEqual([])
   })
@@ -70,8 +70,8 @@ describe('찾기', () => {
 })
 
 describe('색인', () => {
-  it('객체 644개가 다 들어 있다', () => {
-    expect(INDEX.filter((i) => i.kind === 'object')).toHaveLength(644)
+  it('객체 672개가 다 들어 있다', () => {
+    expect(INDEX.filter((i) => i.kind === 'object')).toHaveLength(672)
   })
 
   it('포인트 30장과 문서도 같이 찾힌다 — 사람이 「설치」를 칠 수도 있다', () => {
@@ -88,7 +88,7 @@ describe('색인', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
-  it('초성이 미리 구워져 있다 — 브라우저에서 644번 다시 계산하지 않는다', () => {
+  it('초성이 미리 구워져 있다 — 브라우저에서 672번 다시 계산하지 않는다', () => {
     const caesar = INDEX.find((i) => i.name === '카이사르')!
     expect(caesar.cho).toBe('ㅋㅇㅅㄹ')
   })

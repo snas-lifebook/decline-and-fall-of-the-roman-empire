@@ -59,8 +59,8 @@ describe('연결 — 이 객체가 무엇과 이어져 있나', () => {
   const caesar = neighbors('person:카이사르', links, index)
 
   it('실측한 개수와 맞는다', () => {
-    expect(caesar).toHaveLength(41)
-    expect(neighbors('place:로마', links, index)).toHaveLength(64)
+    expect(caesar).toHaveLength(49)
+    expect(neighbors('place:로마', links, index)).toHaveLength(67)
   })
 
   it('한 줄마다 포인트 번호를 단다 — "이거 어디 나온 얘기야"의 답', () => {
@@ -89,14 +89,14 @@ describe('연결 — 이 객체가 무엇과 이어져 있나', () => {
   })
 })
 
-describe('같은 포인트에 함께 나온 객체 — 관계가 0인 217장을 위한 것', () => {
+describe('같은 포인트에 함께 나온 객체 — 관계가 0인 213장을 위한 것', () => {
   const lonely = entities.filter((e) => !links.some((l) => l.from === e.id || l.to === e.id))
 
-  it('관계 0인 객체가 실제로 217개다', () => {
-    expect(lonely).toHaveLength(217)
+  it('관계 0인 객체가 실제로 213개다', () => {
+    expect(lonely).toHaveLength(213)
   })
 
-  it('그 217개도 동석은 비어 있지 않다 — 빈 상자를 보여주지 않는다', () => {
+  it('그 213개도 동석은 비어 있지 않다 — 빈 상자를 보여주지 않는다', () => {
     const empty = lonely.filter((e) => coOccurring(e, entities).length === 0)
     expect(empty).toEqual([])
   })
