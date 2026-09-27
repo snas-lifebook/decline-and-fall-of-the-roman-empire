@@ -139,7 +139,17 @@ export default function About() {
       href="/about"
       title="이 자료실은"
       summary={doc.summary}
-      intro={<Markdown>{intro}</Markdown>}
+      intro={
+        <>
+          {/* 소개 영상(2026-09-27). 첫 화면 팝업(components/Promo.tsx)과 같은 파일 */}
+          <video className="about-video" src="/promo/library.mp4" poster="/promo/library-poster.jpg" controls playsInline preload="metadata" />
+          <Markdown>{intro}</Markdown>
+          <p>
+            지도로 보는 쪽은 <a href="https://snas-lifebook.github.io/chronoatlas/about.html" target="_blank" rel="noreferrer">크로노아틀라스</a>입니다.
+            같은 자료 한 벌을 쓰고, 객체 화면의 「지도에서 보기」로 건너갑니다(소개 영상도 그쪽에 있습니다).
+          </p>
+        </>
+      }
       sections={sections()}
     />
   )

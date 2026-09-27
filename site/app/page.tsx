@@ -67,7 +67,7 @@ const CARDS = [
   {
     href: '/use',
     title: '활용하기',
-    desc: '쓰시던 AI에 이 자료를 붙여넣어 쓰는 방법을 안내합니다.',
+    desc: '쓰던 AI에 이 자료를 붙여넣어 쓰는 방법을 안내합니다.',
     Icon: SparkIcon,
     badge: '스킬까지',
   },
@@ -122,7 +122,7 @@ export default function Home() {
             『로마제국쇠망사』, 발표와 토론을 위한 자료실
           </Heading>
           <Text size="lg" color="secondary" justify="center">
-            인물이 헷갈릴 때 찾아보고, 발표 표는 받아 가고, 쓰시던 AI에는 붙여 씁니다.
+            인물이 헷갈릴 때 찾아보고, 발표 표는 받아 가고, 쓰던 AI에는 붙여 씁니다.
           </Text>
           {/* 숫자 줄 — 문장 안 링크(이정표). 굵은 숫자마다 그 목록으로 간다 */}
           <Text size="sm" color="secondary" justify="center">

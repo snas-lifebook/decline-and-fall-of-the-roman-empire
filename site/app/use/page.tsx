@@ -55,7 +55,7 @@ export default function Use() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>활용하기</Heading>
         <Text size="lg" color="secondary">
-          이 자료를 화면에서 읽고 보는 법과, 쓰시던 ChatGPT나 Claude에 붙여넣어 쓰는 법입니다.
+          이 자료를 화면에서 읽고 보는 법과, 쓰던 ChatGPT나 Claude에 붙여넣어 쓰는 법입니다.
         </Text>
       </Stack>
 

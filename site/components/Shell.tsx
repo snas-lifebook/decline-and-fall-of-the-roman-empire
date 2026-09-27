@@ -1,3 +1,4 @@
+import { Promo } from './Promo'
 import { AppShell, TopNav, TopNavHeading, SideNav, SideNavItem, Stack } from '@astryxdesign/core'
 import { navTree, type NavNode } from '../lib/nav'
 import { SiteFooter } from './SiteFooter'
@@ -232,6 +233,7 @@ export function Shell({
         뜨고, 본 뒤엔 `null`이라 나머지 화면이 치르는 값이 없다(FocusExit와 같은 결).
         버전은 UPDATES 최신 날짜 — 주요 변화가 생기면 그 항목이 재노출을 켠다.
       */}
+      <Promo />
       <Tour version={UPDATES[0]?.date ?? ''} />
 
       <div className="site-footer">

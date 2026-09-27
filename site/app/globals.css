@@ -2826,3 +2826,14 @@ html[data-recipe-filter='local'] section:has(.recipe-v2):not(:has(.recipe-v2[dat
     white-space: normal;
   }
 }
+
+/* 첫 화면 홍보 영상 팝업(components/Promo.tsx). 닫으면 첫 접속 투어가 이어진다 */
+.promo-backdrop { position: fixed; inset: 0; z-index: 1000; background: color-mix(in srgb, var(--color-background-surface, #fff) 55%, transparent); backdrop-filter: blur(2px); display: flex; align-items: center; justify-content: center; padding: 24px; }
+.promo-card { width: min(960px, 100%); background: var(--color-background-surface, #fff); border-radius: 14px; padding: 14px; box-shadow: 0 24px 80px rgba(0,0,0,.25); display: grid; gap: 10px; }
+.promo-card video { width: 100%; aspect-ratio: 16 / 9; display: block; border-radius: 8px; background: #000; }
+.promo-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.promo-note { font-size: 14px; color: var(--color-text-secondary, #666); }
+.promo-actions { display: flex; gap: 8px; }
+.promo-btn { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 8px; border: 1px solid transparent; background: var(--color-text-primary, #111); color: var(--color-background-surface, #fff); cursor: pointer; text-decoration: none; }
+.promo-btn.alt { background: transparent; color: var(--color-text-primary, #111); border-color: currentColor; }
+.about-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #000; display: block; margin: 8px 0 4px; }

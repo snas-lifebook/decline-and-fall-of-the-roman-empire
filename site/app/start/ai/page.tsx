@@ -112,7 +112,7 @@ export default function AiConnect() {
       <Stack direction="vertical" gap={1.5}>
         <Heading level={1}>AI에 자료 연결하기</Heading>
         <Text size="lg" color="secondary">
-          쓰시던 ChatGPT나 Claude에 이 자료를 물려둡니다. 매번 붙여넣지 않아도 됩니다.
+          쓰던 ChatGPT나 Claude에 이 자료를 물려둡니다. 매번 붙여넣지 않아도 됩니다.
         </Text>
       </Stack>
 

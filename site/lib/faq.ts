@@ -189,7 +189,7 @@ export const FAQ: FaqItem[] = [
     id: 'which-ai',
     category: 'AI 활용',
     q: 'ChatGPT를 쓰는데도 되나요?',
-    a: '됩니다. 쓰시던 것 그대로 쓰시면 됩니다. 재료를 붙여넣는 방식이라 어느 서비스인지는 상관이 없습니다.',
+    a: '됩니다. 쓰던 것 그대로 쓰시면 됩니다. 재료를 붙여넣는 방식이라 어느 서비스인지는 상관이 없습니다.',
     pages: ['/use', '/start'],
     see: ['/start/ai', '/use/data'],
   },

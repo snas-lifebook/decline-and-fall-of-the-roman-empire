@@ -49,7 +49,7 @@ const PATHS: readonly ChoicePath[] = [
   {
     href: '/start/ai',
     title: 'AI에 물려 쓰기',
-    desc: '받아둔 자료를 쓰시던 ChatGPT나 Claude에 붙여 씁니다.',
+    desc: '받아둔 자료를 쓰던 ChatGPT나 Claude에 붙여 씁니다.',
     badge: '쓰던 AI에 연결',
     mock: 'chat',
     steps: ['/start/install', '/start/ai', '/use'],
@@ -63,7 +63,7 @@ const PATHS: readonly ChoicePath[] = [
  */
 const ABOUT: Record<string, string> = {
   '/start/links': '편데 운영에 쓰는 바로가기 모음입니다. 흩어져 있던 곳을 여기서 바로 찾아가시면 됩니다.',
-  '/start/ai': '쓰시던 ChatGPT나 Claude에 이 자료를 물려둡니다. 매번 붙여넣지 않아도 됩니다.',
+  '/start/ai': '쓰던 ChatGPT나 Claude에 이 자료를 물려둡니다. 매번 붙여넣지 않아도 됩니다.',
 }
 
 export const metadata = pageMeta('시작하기')

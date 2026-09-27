@@ -1,5 +1,6 @@
 'use client'
 
+import { promoPending } from '../lib/promo'
 import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { BookIcon, SearchIcon, DownloadIcon, SparkIcon } from './icons'
@@ -57,7 +58,7 @@ const STEPS: Step[] = [
     route: '/use',
     Icon: SparkIcon,
     title: '활용하기',
-    body: '쓰시던 ChatGPT나 Claude에 이 자료를 붙여 써요. 여기까지가 한 바퀴예요.',
+    body: '쓰던 ChatGPT나 Claude에 이 자료를 붙여 써요. 여기까지가 한 바퀴예요.',
   },
 ]
 
@@ -73,27 +74,35 @@ export function Tour({ version }: { version: string }) {
   // 마운트 때 한 번: 진행 중이면 그 단계를, 아니면 안 본 사람에게 0단계를 연다.
   // 페이지 전환은 usePathname 재렌더로 처리한다(상태는 아래 go/finish가 즉시 갱신).
   useEffect(() => {
-    let s: number | null = null
-    try {
-      const raw = localStorage.getItem(STEP_KEY)
-      if (raw !== null && raw !== '') {
-        const n = Number(raw)
-        s = Number.isFinite(n) ? n : null
-      } else {
-        const seen = localStorage.getItem(SEEN_KEY) ?? ''
-        const focused = document.documentElement.dataset.focus === 'on'
-        if (seen !== version && !focused) {
-          s = 0
-          localStorage.setItem(STEP_KEY, '0')
+    const start = () => {
+      let s: number | null = null
+      try {
+        const raw = localStorage.getItem(STEP_KEY)
+        if (raw !== null && raw !== '') {
+          const n = Number(raw)
+          s = Number.isFinite(n) ? n : null
+        } else {
+          const seen = localStorage.getItem(SEEN_KEY) ?? ''
+          const focused = document.documentElement.dataset.focus === 'on'
+          if (seen !== version && !focused) {
+            s = 0
+            localStorage.setItem(STEP_KEY, '0')
+          }
         }
+      } catch {
+        // 저장이 막힌 브라우저: 집중 모드가 아니면 이번 세션에서만 처음부터
+        const focused = document.documentElement.dataset.focus === 'on'
+        if (!focused) s = 0
       }
-    } catch {
-      // 저장이 막힌 브라우저: 집중 모드가 아니면 이번 세션에서만 처음부터
-      const focused = document.documentElement.dataset.focus === 'on'
-      if (!focused) s = 0
+      setStep(s)
+      setReady(true)
     }
-    setStep(s)
-    setReady(true)
+    // 첫 화면에 홍보 영상 팝업이 뜨는 사람은 영상을 닫은 뒤에 투어를 연다(두 창이 겹치지 않게, lib/promo.ts)
+    if (promoPending(path)) {
+      addEventListener('promo-closed', start, { once: true })
+      return () => removeEventListener('promo-closed', start)
+    }
+    start()
   }, [version])
 
   // 도착한 화면의 컨트롤에 펄스 링을 두르고 가운데로 스크롤한다. 요소를 못 찾으면
