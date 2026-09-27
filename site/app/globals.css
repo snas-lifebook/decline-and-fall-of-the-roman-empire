@@ -2837,3 +2837,5 @@ html[data-recipe-filter='local'] section:has(.recipe-v2):not(:has(.recipe-v2[dat
 .promo-btn { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 8px; border: 1px solid transparent; background: var(--color-text-primary, #111); color: var(--color-background-surface, #fff); cursor: pointer; text-decoration: none; }
 .promo-btn.alt { background: transparent; color: var(--color-text-primary, #111); border-color: currentColor; }
 .about-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #000; display: block; margin: 8px 0 4px; }
+
+.about-video-cap { margin: 6px 0 0; font-size: 14px; color: var(--color-text-secondary); }
