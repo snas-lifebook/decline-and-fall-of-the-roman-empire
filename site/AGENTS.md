@@ -35,15 +35,20 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 | 검색 | Pagefind (postbuild) 예정 |
 | 유닛 | Vitest. `npm test` |
 | E2E | Playwright. `npm run test:e2e` — `out/`을 정적 서버로 띄운다(`next start`는 export 모드에서 안 된다) |
-| 배포 | Vercel, 기본 `*.vercel.app` 주소 |
+| 배포 | Cloudflare Pages `roma-library.pages.dev`. git push로는 안 뜬다: `npx wrangler@4 pages deploy out --project-name=roma-library --commit-dirty=true`. 정본 병합 뒤엔 크로노아틀라스 레포 `scripts/publish-library.sh` 한 번 |
 
 ## 데이터 계약이 이 사이트의 급소다
 
-깨지는 자리는 버튼이 아니라 데이터다. 644개 객체와 667개 관계가 페이지로 변환되는 길목을 `lib/ontology.ts`가 지킨다.
+깨지는 자리는 버튼이 아니라 데이터다. 672개 객체와 730개 관계(2026-09-22 정본)가 페이지로 변환되는 길목을 `lib/ontology.ts`가 지킨다.
 
 - **스키마 정본은 `lib/ontology.ts` 하나다.** 빌드 게이트와 테스트가 같은 것을 import 한다. 둘이 갈라지면 로컬에서 통과한 게 배포에서 깨진다
 - `npm run build`가 `npm run validate`를 먼저 돌린다. **불변식이 깨지면 빌드가 멈춘다** — 팀이 틀린 데이터를 볼 일이 없다
 - 알려진 위반 12건은 `lib/ontology.test.ts`의 `KNOWN_VIOLATIONS`에 이유와 함께 적혀 있다. 목적은 "위반 0"이 아니라 **새 위반이 늘지 않는 것**이다. 고쳤으면 목록에서 지운다 — 안 지우면 다음 회귀를 못 잡는다
+
+## 화면이 바뀌면
+
+- `lib/updates.ts`(「바뀐 것」 다이제스트) 맨 앞에 한 줄을 같은 커밋에 더한다. 화면에서 사람이 겪는 변화만, 제목은 평서, 본문은 해요체. 커밋 전체 기록은 빌드 때 `lib/changelog.ts`가 알아서 읽는다
+- 첫 화면 홍보 팝업은 `components/Promo.tsx`·`lib/promo.ts`(`promo-seen-v1`, `?promo=1|0`). 닫으면 `promo-closed` 이벤트로 첫 접속 안내(`Tour`)가 이어진다. 영상 `public/promo/library.mp4`, 유튜브 https://youtu.be/GbSREkowpN0
 
 ## 하지 말 것
 
