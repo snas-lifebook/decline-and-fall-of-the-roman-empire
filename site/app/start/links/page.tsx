@@ -37,7 +37,7 @@ import { pageMeta } from '../../../lib/meta'
  * 오른쪽 칸이 그 자리로 바로 나가므로 표를 읽고 다시 아래에서 카드를 찾을 일이 없다.
  */
 const WHERE: { what: string; to: string; id?: string; note?: string }[] = [
-  { what: '발표 슬라이드, 회차 자료', to: '02회차 자료함', id: 'drive-02', note: '01회차는 아래 카드' },
+  { what: '발표 슬라이드, 회차 자료', to: '03회차 자료함', id: 'drive-03', note: '지난 회차는 아래 카드' },
   { what: '일정, 담당, 진행 상황', to: '운영 스프레드시트', id: 'sheet' },
   {
     what: '책 본문, 인물·지명 자료',
@@ -45,7 +45,7 @@ const WHERE: { what: string; to: string; id?: string; note?: string }[] = [
     id: 'repo',
     note: '이 사이트가 여기서 나옵니다',
   },
-  { what: '발표 당일 함께 보는 화면', to: '02회차 게임', id: 'game-02', note: '01회차는 캠페인 사이트' },
+  { what: '발표 당일 함께 보는 화면', to: '03회차 발표 지도', id: 'chronoatlas-03', note: '지난 회차는 아래 카드' },
   { what: '연도별 판도, 인물, 전투 지도', to: '크로노아틀라스', id: 'chronoatlas' },
   // 「한 줄 남기기」는 바로가기가 아니라 이 화면 아래 붙어 있는 칸이라 걸 주소가 없다
   { what: '물어볼 것, 고칠 것', to: '화면 아래 「한 줄 남기기」' },
@@ -59,7 +59,7 @@ const SECTIONS: { title: string; note?: string; ids: string[] }[] = [
   {
     title: '회차에 딸린 것',
     note: '회차마다 생기는 자리입니다. 최근 회차가 앞에 옵니다.',
-    ids: ['game-02', 'chronoatlas-02', 'drive-02', 'campaign-01', 'drive-01'],
+    ids: ['chronoatlas-04', 'chronoatlas-03', 'drive-03', 'game-02', 'chronoatlas-02', 'drive-02', 'campaign-01', 'drive-01'],
   },
   {
     title: '늘 쓰는 것',

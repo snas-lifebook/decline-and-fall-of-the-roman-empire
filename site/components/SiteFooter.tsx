@@ -42,7 +42,7 @@ import { linkById } from '../lib/links'
  */
 
 /** 작업 공간. 회차에 딸린 것부터 — 지금 쓰는 것이 위에 온다 (02회차 자료함으로 교체, 2026-09-16) */
-const OUTSIDE = ['drive-02', 'sheet', 'repo']
+const OUTSIDE = ['drive-03', 'sheet', 'repo']
 
 // 무게 기반 짐싣기 재배치(`pack`)를 버렸다 — 링크가 늘면 묶음이 다른 칸으로 튀어
 // 불안정했고 둘째 줄 묶음(가져가기·읽기·이 사이트)이 안 맞았다(River #24, 2026-08-20).

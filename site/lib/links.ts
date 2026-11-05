@@ -74,6 +74,16 @@ export const SITE_LINKS: SiteLink[] = [
     perSession: '02회차',
   },
   {
+    // 1팀 텔레그램 10/24 22:50 「3회차 작업 링크 모음」의 자료 폴더(음원·이미지)
+    id: 'drive-03',
+    href: 'https://drive.google.com/drive/folders/1Rdo9bmC-lJ9FTFs5580y75Qlvt_1eeiv',
+    title: '03회차 자료함 (팔라티노의 부장들)',
+    desc: '정치극 발표에 쓴 음원과 이미지가 모여 있습니다',
+    category: '작업공간',
+    icon: '/icons/googledrive.png',
+    perSession: '03회차',
+  },
+  {
     id: 'sheet',
     href: 'https://docs.google.com/spreadsheets/d/12J8h12OY_DyqUNF3L6OdND4e9-K7hC0SEc8vYBDjTuk',
     title: '운영 스프레드시트',
@@ -142,6 +152,22 @@ export const SITE_LINKS: SiteLink[] = [
     desc: '발표 그 자리에서 함께 한 게임 화면입니다. 미션 다섯과 히든 엔딩이 있습니다',
     category: '발표',
     perSession: '02회차',
+  },
+  {
+    id: 'chronoatlas-04',
+    href: 'https://snas-lifebook.github.io/chronoatlas/?present=1&scene=p1820-crisis-253',
+    title: '04회차 지도 (발레리아누스에서 디오클레티아누스까지, 준비 중)',
+    desc: '12월 6일 발표를 위해 만드는 중인 장면 다섯입니다. 셋으로 갈린 제국(260~274)을 색으로 볼 수 있어요',
+    category: '발표',
+    perSession: '04회차',
+  },
+  {
+    id: 'chronoatlas-03',
+    href: 'https://snas-lifebook.github.io/chronoatlas/?present=1&scene=p1214-fire-64',
+    title: '03회차 발표 지도 (네로에서 콘스탄티누스까지)',
+    desc: '로마 대화재부터 새 수도까지 핵심 장면 아홉을 차례로 넘깁니다. 아래 장면 이름을 누르면 나머지 장면도 바로 열려요',
+    category: '발표',
+    perSession: '03회차',
   },
   {
     // 공유 링크에 layers=를 붙이면 장면 레이어를 덮어써 전투·이동 경로가 꺼진 채 열린다.
