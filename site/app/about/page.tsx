@@ -142,7 +142,7 @@ export default function About() {
       intro={
         <>
           {/* 소개 영상(2026-09-27). 첫 화면 팝업(components/Promo.tsx)과 같은 파일 */}
-          <video className="about-video" src="/promo/library.mp4" poster="/promo/library-poster.jpg" controls playsInline preload="metadata" />
+          <video className="about-video" src="/promo/library.mp4" poster="/promo/library-poster.jpg" controls playsInline preload="none" />
           <p className="about-video-cap">
             1분 소개 영상 ·{' '}
             <a href="https://youtu.be/GbSREkowpN0" target="_blank" rel="noreferrer">유튜브에서 보기</a>

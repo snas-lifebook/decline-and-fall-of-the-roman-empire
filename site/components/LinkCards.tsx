@@ -1,6 +1,7 @@
 import { Grid, Stack, Text, Badge, ClickableCard } from '@astryxdesign/core'
 import { linkById, linksByCategory, type LinkCategory } from '../lib/links'
 import styles from './LinkCards.module.css'
+import { resolveFacts } from '../lib/doc'
 
 /**
  * 바깥 링크 카드 묶음. **주소는 안 받는다** — `lib/links.ts`의 id만 받는다.
@@ -60,7 +61,7 @@ export function LinkCards({ ids, category }: { ids?: string[]; category?: LinkCa
                 {l.perSession ? <Badge variant="neutral" label={l.perSession} /> : null}
               </Stack>
               <Text size="sm" color="secondary">
-                {l.desc}
+                {resolveFacts(l.desc)}
               </Text>
             </Stack>
           </ClickableCard>

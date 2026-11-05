@@ -15,10 +15,30 @@ import type { Metadata } from 'next'
  * 하기 위해서다. 탭은 좁고 잘리는 쪽은 늘 뒤다.
  */
 const SITE = '산스 인생책 로마쇠망사 자료실'
+const SITE_DESC = '기번 『로마제국쇠망사』 편역본과 지식그래프를 편데 운영팀이 쓰는 자리'
+
+/**
+ * 공유 미리보기 한 벌. 자식 라우트의 `openGraph`는 부모 것을 **통째로 덮으므로**
+ * 이미지까지 매번 같이 넘긴다(layout과 pageMeta가 이 함수를 같이 쓴다)
+ */
+export function openGraphOf(title: string, description: string): Metadata['openGraph'] {
+  return {
+    type: 'website',
+    siteName: SITE,
+    locale: 'ko_KR',
+    title,
+    description,
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: SITE }],
+  }
+}
 
 export function pageMeta(name: string, desc?: string): Metadata {
+  const title = `${name} · ${SITE}`
+  const description = desc || SITE_DESC
   return {
-    title: `${name} · ${SITE}`,
-    ...(desc ? { description: desc } : {}),
+    title,
+    description,
+    openGraph: openGraphOf(title, description),
+    twitter: { card: 'summary_large_image', title, description },
   }
 }

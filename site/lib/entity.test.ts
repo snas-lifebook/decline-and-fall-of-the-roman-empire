@@ -24,7 +24,7 @@ describe('위키링크 사전 — 본문의 [[X]]가 무엇을 가리키나', ()
     expect(index.get('로마제국쇠망사_온톨로지')).toBeUndefined()
   })
 
-  it('객체 644개가 다 들어온다', () => {
+  it('객체가 다 들어온다', () => {
     expect(new Set([...index.values()].map((r) => r.id)).size).toBe(entities.length)
   })
 })

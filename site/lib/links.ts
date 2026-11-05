@@ -121,7 +121,7 @@ export const SITE_LINKS: SiteLink[] = [
     id: 'repo-ontology',
     href: `${REPO}/tree/main/ontology`,
     title: '인물·관계 데이터',
-    desc: '객체 644개와 관계 667개가 들어 있는 폴더입니다',
+    desc: '객체 {{객체수}}개와 관계 {{관계수}}개가 들어 있는 폴더입니다',
     category: '원본데이터',
     icon: '/icons/github.png',
   },

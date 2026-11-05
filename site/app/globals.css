@@ -2839,3 +2839,10 @@ html[data-recipe-filter='local'] section:has(.recipe-v2):not(:has(.recipe-v2[dat
 .about-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #000; display: block; margin: 8px 0 4px; }
 
 .about-video-cap { margin: 6px 0 0; font-size: 14px; color: var(--color-text-secondary); }
+
+/* 모바일: 첫 방문 팝업이 본문을 가리지 않게. 영상 카드는 스크롤되고, 안내 카드는 낮게 눌러 앉는다 (2026-11-06) */
+.promo-backdrop { overflow-y: auto; }
+@media (max-width: 640px) {
+  .promo-backdrop { align-items: flex-end; padding: 12px; }
+  .tour-tip { bottom: 0.5rem; padding: 0.7rem 0.9rem 0.8rem; gap: 0.4rem; max-height: 34vh; overflow-y: auto; }
+}

@@ -21,7 +21,7 @@ import {
 } from '../../../../components/EntityAside'
 import { loadEntities, loadLinks, type Entity } from '../../../../lib/ontology'
 import { atlasUrl } from '../../../../lib/links'
-import { entityIndex, entitySlug, neighbors, coOccurring, entitySteps } from '../../../../lib/entity'
+import { entityIndex, entityHref, entitySlug, neighbors, coOccurring, entitySteps } from '../../../../lib/entity'
 import { TYPE_KO } from '../../../../lib/export/table'
 import { roleKo } from '../../../../lib/vocab'
 import { navCrumbs } from '../../../../lib/nav'
@@ -338,7 +338,34 @@ export default async function ObjectPage({
             </Stack>
           ))}
         </Stack>
-      ) : null}
+      ) : (
+        /*
+          포인트별 서술이 없는 객체(2026-11-06 실측 480장 / 672장). 지어내지 않고 그 사실을 말하고,
+          이미 가진 것(이어진 객체, 지도)으로 길을 낸다. 한 줄 소개조차 없으면 문장만 낸다.
+        */
+        <Stack direction="vertical" gap={1} as="section" data-thin="1">
+          <Text color="secondary">
+            이 객체는 아직 {e.desc ? '위의 한 줄 소개' : '이름과 등장 포인트'}뿐이에요. 포인트별 서술은
+            자료를 더 모으는 대로 채워요.
+          </Text>
+          {nbrs.length ? (
+            <Text size="sm">
+              이어진 객체:{' '}
+              {[...new Map(nbrs.map((n) => [n.ref.id, n.ref])).values()].slice(0, 6).map((r, i) => (
+                <span key={r.id}>
+                  {i ? ' · ' : ''}
+                  <a href={entityHref(r)}>{r.name}</a>
+                </span>
+              ))}
+            </Text>
+          ) : null}
+          <Text size="sm">
+            <a href={atlasUrl(e.id)} target="_blank" rel="noreferrer">
+              크로노아틀라스 지도에서 보기 ↗
+            </a>
+          </Text>
+        </Stack>
+      )}
 
       {/*
         **포인트 0은 링크하지 않는다.** 읽기는 01~30만 굽는데 데이터에는 `point: 0`이
